@@ -1,0 +1,582 @@
+---
+title: "Lesson 11"
+output: 
+  html_document:
+    theme: cerulean
+    toc: true
+    toc_float: true
+---
+
+<iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+
+{{YouTubeLesson|url=http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-eXvWi8id9S0NiKSyGYr6j}}
+## Lesson Outcomes
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+By the end of this lesson, you should be able to:
+:* Confidence Intervals for a single mean with σ unknown: 
+:** Calculate and interpret a confidence interval for a population mean given a confidence level.
+:** Identify a point estimate and margin of error for the confidence interval.
+:** Show the appropriate connections between the numerical and graphical summaries that support the confidence interval. 
+:** Check the requirements the confidence interval.
+:* Hypothesis Testing for a single mean with σ unknown:
+:** State the null and alternative hypothesis. 
+:** Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.
+:** Assess the statistical significance by comparing the p-value to the α-level.
+:** Check the requirements for the hypothesis test.
+:** Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
+:** Draw a correct conclusion for the hypothesis test.
+
+
+
+</div>
+
+<br>
+
+## What If We Don't Know $\sigma$?
+
+<img src="./Images/WilliamSealyGosset-NoCopyright.png">
+
+In practice, we almost never know the population standard deviation, $ \sigma $.  So, it is generally not appropriate to use the formula
+$$
+z = \frac{ \bar x - \mu }{ \sigma / \sqrt{n} }
+$$
+In 1908, William Sealy Gosset published a solution to this problem <!--<cite>Gosset08</cite>-->.  He found a way to appropriately compute the confidence interval for the mean when $\sigma$ is not known.  The basic idea is to use the sample standard deviation, $s$ in the place of the true population standard deviation, $\sigma$.  If $\sigma$ is not known, we cannot base the calculations on the standard normal distribution, and we cannot use the formula above to conduct hypothesis tests.
+
+In a remarkable piece of work, Gosset found the appropriate distribution to use when $\sigma$ is unknown. At the time of this discovery, Gosset worked for the Guinness brewery.  To avoid problems with industrial espionage, Guinness prohibited employees from publishing any research results.  Knowing his work provided a significant contribution to Statistics, Gosset chose convinced his employer to allow him to publish under a pseudonum.  He chose the pseudonym "Student".  Gosset's test statistic was denoted by the letter $t$, this distribution has come to be known as **Student's t-distribution**.
+
+$$
+t = \frac{ \bar x - \mu }{ s / \sqrt{n} }
+$$
+
+The $t$-distribution is bell-shaped and symmetrical.  The $t$-distribution has a mean of 0, but it has more area in the tails than the standard normal distribution.    The exact shape of the $t$-distribution depends on a parameter called the **degrees of freedom** (abbreviated $df$).  The degrees of freedom is related to the sample size.  As the sample size goes up, the degrees of freedom increase accordingly.  For the procedures discussed in this lesson, the degrees of freedom equal the sample size minus one: $df = n-1$.
+
+[http://byuimath.com/apps/normprobwitht.html Click here] to explore how the shape of the $t$-distribution changes with the degrees of freedom.  Notice that as the degrees of freedom increases, the shape of the $t$-distribution (black curve) gets closer to the standard normal distribution (red curve).  The red curve is identical in the three images below.
+
+<center>
+{| class="wikitable"
+|- 
+! $t$-distribution <br> with $df = 1$
+! $t$-distribution <br> with $df = 5$
+! $t$-distribution <br> with $df = 15$
+|- 
+| [[File:T-dist-df-01.png">
+| [[File:T-dist-df-05.png">
+| [[File:T-dist-df-15.png">
+|- 
+| align="center" colspan="3" | (Image credit: Webster West, http://www.stat.tamu.edu/~west/applets/tdemo1.html) <!-- We do not have permission to use these images....-->
+|}
+</center>
+
+## Hypothesis Tests
+
+
+<img src="./Images/StepsAll.png">
+
+### Body Temperatures Revisited
+
+We will apply the $t$-distribution to the body temperature data we explored previously.  
+
+This hypothesis test is conducted in a manner similar to a test for a single mean where $\sigma$ is known, except that instead of using the population standard deviation, $\sigma$, in the calculations, we estimate this value using the sample standard deviation, $s$.  This leads to a $t$-distribution, rather than a normal distribution for the test statistic. We will not need to compute the value of this test statistic by hand.  It will be done using Software.
+
+
+<img src="./Images/Step1.png">
+
+**Summarize the relevant background information**
+
+We want to conduct a hypothesis test to determine if the mean body temperature is different from 98.6&deg; Fahrenheit.  Previously, we assumed that we knew the value of $\sigma$.  Actually, this value is not known.
+
+**State the null and alternative hypotheses and the level of significance**
+
+$$
+\begin{array}{rl}
+H_0: \mu = 98.6\\
+H_a: \mu \ne 98.6\\
+\end{array}
+$$
+$$
+\alpha = 0.05
+$$
+
+
+<img src="./Images/Step2.png">
+
+**Describe the data collection procedures**
+
+We will use the body temperature data, <span class=Link>[[Data|BodyTemp]]</span>, collected by Dr. Mackowiak and his colleagues to conduct the test. <!-- <cite>Mackowiak92</cite> -->
+
+
+<img src="./Images/Step3.png">
+
+**Give the relevant summary statistics**
+
+$$
+\begin{array}{l}
+\bar x = 98.23\\
+s = 0.738\\
+n = 148
+\end{array}
+$$
+
+**Make an appropriate graph (e.g. a histogram) to illustrate the data**
+
+<img src="./Images/BodyTemp-Histogram-LoRes.png">
+
+
+<img src="./Images/Step4.png">
+  
+**Verify the requirements have been met**
+
+:*We assume that the individuals chosen to participate in the study represent a (simple) random sample from the population.
+:*$\bar x$ will be normally distributed, because the sample size is large.  (Note: We could have also noticed that the body temperature data appears to be normally distributed, so even with a small sample size, $\bar x$ would be normal.)
+        
+**Give the test statistic and its value**
+
+We will need to conduct the analysis using software, so we can report this value.
+
+**Instructions for conducting a test for one mean with $sigma$ unknown:**
+
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+{{Software_Filter | PageName=OneSampleTtest }}
+
+The interpretation of the results will follow the pattern established in the previous hypothesis tests.  If the $P$-value is less than the $\alpha$ level, we reject the null hypothesis. If the $P$-value is greater than the $\alpha$ level, we fail to reject the null hypothesis.  This is true for every hypothesis test.
+
+The test statistic is $t$ and its value is $-6.029$.  So, we have $t = -6.029$.
+
+Notice this is the same number we get if we use the formula:
+$$
+\begin{align}
+t &= \frac{ \bar x - \mu }{ s / \sqrt{n} } \\
+&\approx \frac{ 98.234 - 98.6 }{ 0.738 / \sqrt{148} } \\
+&\approx -6.03
+\end{align}
+$$
+Any differences are due to rounding.
+
+**State the degrees of freedom**
+
+{{Course_Filter|course=A|content=In Excel, the degrees of freedom ($df$) are given in cell E21.}}
+
+$$df = 147$$
+<!-- **Mark the test statistic and $P$-value on a graph of the sampling distribution** --> <!-- CONSOLIDATED and UPDATED -->
+
+**Find the $P$-value and compare it to the level of significance**
+
+The $P$-value is given in the software as "1.2723E-08".  Writing this properly and comparing it to $\alpha$, we have:
+$$
+P\text{-value} = 1.2723 \times 10^{-8} = 0.000~000~012~723 < 0.05 = \alpha
+$$
+
+**State your decision**
+
+The interpretation of the results will follow the pattern established in the previous hypothesis tests.  If the $P$-value is less than the $\alpha$ level, we reject the null hypothesis. If the $P$-value is greater than the $\alpha$ level, we fail to reject the null hypothesis.  This is true for every hypothesis test.  
+
+Since the $P$-value was less than $\alpha$, we reject the null hypothesis.
+
+
+<img src="./Images/Step5.png">
+
+**Present your conclusion in an English sentence, relating the result to the context of the problem**
+
+There is sufficient evidence to suggest that the mean body temperature is not 98.6&deg; Fahrenheit.
+
+<img src="./Images/StepsAll.png">
+
+### Baby Boom
+
+
+<img src="./Images/Step1.png">
+
+**Summarize the relevant background information**
+
+The birth weight of a child is an important indicator of their neonatal health.  It is important that pediatric health care providers track changes in the birth weights over time.  The birth weight of children in Australia has historically had a population mean of 3373 grams.<!--<cite>Steele97,JSEdunn99</cite>-->  Is this still the mean birth weight of Australian children, or has there been a change?  We will use the 0.05 level of significance.
+
+**State the null and alternative hypotheses and the level of significance**
+
+$$
+\begin{align}
+H_0: &~ \mu=3373 \\
+H_a: &~ \mu \ne 3373
+\end{align}
+$$
+$$ \alpha = 0.05 $$
+
+
+<img src="./Images/Step2.png">
+
+**Describe the data collection procedures**
+
+The birth weights of all children born on December 18, 1997 at the Mater Mothers' Hospital in Brisbane, Australia were recorded <!--<cite>JSEdunn99</cite>-->.  The time of birth (on a 24 hour clock), gender, and birth weight of each child are given in the file <span class=Link>[[Data|BabyBoom]]</span>.
+
+Using this data set, test the hypothesis that the mean weight of babies born in Australia is 3373 grams. Use the $\alpha=0.05$ level of significance for this problem.  Make an appropriate graph of the data.
+
+
+<img src="./Images/Step3.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:1. **Give the relevant summary statistics**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+
+<div class="stats A">
+::{{:Software:Excel-OneSampleTtestOutput}}
+</div>
+
+
+::The relevant summary statistics are:
+<center>$
+\begin{align}
+\bar x &= 3275.95 \textrm{g}\\
+s &= 528.03 \textrm{g}\\
+n &= 44
+\end{align}
+$
+</center>
+
+</div>
+
+
+:2. **Make an appropriate graph to illustrate the data**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+
+<img src="./Images/BabyBoom-JSE-Histogram.png">
+
+</div>
+&nbsp;
+</div>
+
+
+<img src="./Images/Step4.png">
+
+**Verify the requirements have been met**
+
+The data show a left-skewed shape, however the sample size is large.  Using the Central Limit Theorem, we can conclude that the sample mean is normally distributed and the requirements are satisfied.
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:3. **Give the test statistic and its value**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::The test statistic is a $t$.  The value of the test statistic is $-1.219$.  This was taken from the output above.  We have $t = -1.219$. 
+</div>
+
+
+:4. **State the degrees of freedom**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::The degrees of freedom are given in the output above:
+<center>$
+df = 43$</center>
+::Notice that this is one less than than sample size.  For a test for a single mean, the degrees of freedom are always equal to one less than the sample size.
+</div>
+&nbsp;
+</div>
+
+
+**Mark the test statistic and $P$-value on a graph of the sampling distribution**  <!-- CONSOLIDATED and UPDATED -->
+
+The $P$-value is shaded in green:
+
+<img src="./Images/BabyBoom-JSE-TwoSidedT1-2.png">
+
+**Find the $P$-value and compare it to the level of significance**
+
+$$P\text{-value}=0.228 > 0.05 = \alpha$$
+
+**State your decision**
+
+Since the $P$-value is greater than the level of significance, we fail to reject the null hypothesis.
+
+
+<img src="./Images/Step5.png">
+
+**Present your conclusion in an English sentence, relating the result to the context of the problem**
+
+There is insufficient evidence to suggest that the mean weight of babies born in Australia is different from 3373 grams.
+
+## Confidence Intervals
+
+The procedure for finding confidence intervals when $\sigma$ is not known is very similar to the process when $\sigma$ is known. As a reminder, here is the confidence interval (from Lesson 10) when $\sigma$ is known.
+$$
+\left( \bar x - z^* \frac{\sigma}{\sqrt{n}}, ~ \bar x + z^* \frac{\sigma}{\sqrt{n}} \right)
+$$
+
+To construct the confidence interval when $\sigma$ is not known, we replace the population standard deviation, $\sigma$, with its point estimate, $s$. The appropriate distribution is a $t$, rather than a $z$.  So, we replace $z^*$ with $t^*$. So the confidence interval when $\sigma$ is not known is
+$$
+\left( \bar x - t^* \frac{s}{\sqrt{n}}, ~ \bar x + t^* \frac{s}{\sqrt{n}} \right)
+$$
+where $t^*$ is the $t$-score corresponding to the confidence level and $s$ is the sample standard deviation.
+
+We will use {{Name}} to construct confidence intervals when $\sigma$ is unknown. The values of $t^*$ and $s$ will be computed for us. Examples of this are given below. You can see the details by clicking on [Show Hand Calculations] in Step 4.
+
+
+<img src="./Images/StepsAll.png">
+
+### Automatic Language Translation Programs
+
+
+<img src="./Images/Step1.png">
+
+**Summarize the relevant background information**
+
+Computer software is commonly used to translate text from one language to another.  As part of his Ph.D. thesis, Philipp Koehn developed a phrase-based translation program called Pharaoh. <!--<cite>Koehn04Pharaoh</cite>-->
+
+The quality of the translation can vary.  A good translation system should match a professional human translation. <!--<cite>Papineni02</cite>--> It is important to be able to quantify how good the translations produced by Pharaoh are.
+
+The IBM T. J. Watson Research Center developed methods to measure the quality of a translation from one language to another. <!--<cite>Brown90</cite>-->  One of these is the the BiLingual Evaluation Understudy (BLEU). <!--<cite>Papineni02</cite>--> BLEU is a score ranging from 0 to 1 that indicates how well a computer translation matches a professional human translation of the same text.  Higher scores indicate a better match. BLEU helps companies who develop translation software "to monitor the effect of daily changes to their systems in order to weed out bad ideas from good ideas". <!--<cite>Papineni02</cite>-->
+
+
+<img src="./Images/Step2.png">
+
+**Describe the data collection procedures**
+
+To test Pharaoh's ability to translate, Koehn took a random sample of 100 blocks of Spanish text, each of which contained 300 sentences, and used Pharaoh to translate each of these to English.  The BLEU score was calculated for each of the 100 blocks.  The data were extracted from Figure 2 in a paper Koehn published. <!--<cite>Koehn04</cite>-->  The 100 BLEU scores are given in <span class=Link>[[Data|BLEU-Scores]]</span>.
+
+Koehn wants to find an estimate of the true mean BLEU score for text translated by the Pharaoh computer program.  He would like to compute a confidence interval, but he does not know the true population standard deviation, $\sigma$.
+
+
+<img src="./Images/Step3.png">
+
+**Give the relevant summary statistics**
+
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+{{Software_Filter | PageName=BLEUscores-SummaryStats }}
+
+The summary statistics are:
+
+$$
+\begin{align}
+\bar x =& 0.2876 \\ 
+s =& 0.0264 \\
+n =& 100
+\end{align}
+$$
+
+**Make an appropriate graph to illustrate the data**
+
+Here is a histogram of the data showing 10 bins.
+
+<img src="./Images/BLEUscores-Histogram-Excel.png">
+
+
+<img src="./Images/Step4.png">
+
+**Verify the requirements have been met**
+
+The requirements for creating a confidence interval for a mean with $\sigma$ unknown are the same as the requirements for this procedure when $\sigma$ is known:
+
+#### Requirements
+
+There are two requirements that need to be checked when computing a confidence interval for a mean with $\sigma$ unknown:
+
+:1. A simple random sample was drawn from the population
+:2. $ \bar x$ is normally distributed
+
+Recall the requirement of normality is satisfied if the data are approximately normally distributed or if the sample size is large.
+
+The data are bell-shaped and fairly symmetric.  So, the sample mean, $\bar x$, is approximately normally distributed.  
+
+**Find the confidence interval**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+The formula for the confidence interval where $\sigma$ is known was given in the reading titled [[Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)|Inference for One Mean: Sigma Known (Confidence Interval)#11:CIformula-SigmaKnown|Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)|Inference for One Mean: Sigma Known (Confidence Interval)]] as
+$$
+\left( \bar x - z^* \frac{\sigma}{\sqrt{n}}, ~ \bar x + z^* \frac{\sigma}{\sqrt{n}} \right)
+$$ 
+It is impossible to know the true standard deviation of the BLEU scores for a new translation program like Pharaoh. Replacing $\sigma$ with $s$ and replacing $z^*$ with $t^*$, we get:
+$$
+\left( \bar x - t^* \frac{s}{\sqrt{n}}, ~ \bar x + t^* \frac{s}{\sqrt{n}} \right)
+$$ 
+The value of $t^*$ depends on the level of confidence and the sample size.  It must be computed using software or looked up on a table.  If you are asked to compute a confidence interval for a mean where the population standard deviation is unknown, the value of $t^*$ will be given to you.  The other numbers ($\bar x$, $s$, and $n$) can all be obtained directly from your data.
+
+If we want to create a 95% confidence interval for $\mu$, with 99 degrees of freedom, then $ t^* = 1.9842 $.
+
+Using the sample statistics:
+$$
+\begin{align}
+\bar x =& 0.2876 \\ 
+s =& 0.0264 \\
+n =& 100
+\end{align}
+$$
+
+The 95% confidence interval for $\mu$ is:
+$$
+\left( 0.2876 - 1.9842 \frac{0.0264}{\sqrt{100}}, ~ 0.2876 + 1.9842 \frac{0.0264}{\sqrt{100}} \right)
+$$ 
+which reduces to:
+$$
+\left( 0.2824, ~ 0.2928 \right)
+$$ 
+</div>
+
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+{{Software_Filter | PageName=CI-OneMeanSigmaUnknown }}
+
+The 95% confidence interval for the true mean BLEU score is:
+
+$$ (0.282, 0.293) $$
+
+
+<img src="./Images/Step5.png">
+
+**Present your observations in an English sentence, relating the result to the context of the problem**
+
+We are 95% confident that the true mean BLEU score for all translations by the Pharaoh program is between 0.2824 and 0.2928.
+
+Answer the following questions using the data set <span class=Link>[[Data|BLEU-Scores]]</span>, which gives the BLEU scores for $n=100$ translations from Spanish to English by the computer program Pharaoh.
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:5. Use {{Name}} to find a 90% confidence interval for the true mean BLEU score for translations by the Pharaoh program. Give your answer accurate to 3 decimal places. Interpret this confidence interval in a complete sentence.
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::$(0.283, 0.292)$<br>We are 90% confident that the true mean BLEU score for translations by the Pharaoh program lies between 0.283 and 0.292.
+</div>
+
+
+:6. Use {{Name}} to find a 99% confidence interval for the true mean BLEU score for translations by the Pharaoh program. Give your answer accurate to 3 decimal places. Interpret this confidence interval in a complete sentence.
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::$(0.281, 0.295)$<br>We are 99% confident that the true mean BLEU score for translations by the Pharaoh program lies between 0.281 and 0.295.
+</div>
+
+
+:7. What do you notice about the confidence interval as the confidence level increased from 90% to 99%?
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::As the confidence level increases, the width of the confidence interval increases.  We could also say, as the confidence level increases, the margin of error increases.  The center of the confidence interval (the sample mean) is unchanged.
+</div>
+&nbsp;
+</div>
+
+
+<img src="./Images/StepsAll.png">
+
+### Euro Weights
+
+
+<img src="./Images/Step1.png">
+
+**Summarize the relevant background information**
+
+A group of statisticians measured the weights of 2000 Belgian one Euro coins in eight batches.  Each batch contains coins that were all minted together. <!--<cite>JSEeuros</cite>--> You can learn more about these data at: 
+[http://www.amstat.org/publications/jse/datasets/euroweight.txt http://www.amstat.org/publications/jse/datasets/euroweight.txt]
+
+
+<img src="./Images/Step2.png">
+
+**Describe the data collection procedures**
+
+The coins were "borrowed" from a bank in Belgium, one batch at a time. The weights (in grams) of the coins are given in the file <span class=Link>[[Data|EuroWeight]]</span>. 
+
+
+<img src="./Images/Step3.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:8. **Give the relevant summary statistics**.
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+
+<div class="stats A">
+::{{:Software:Excel-EuroWeightOutput}}
+</div>
+
+
+::When we do this, we get the following summary statistics:
+<center>$
+\begin{align}
+\bar x =& 7.521 \\ 
+s =& 0.034 \\
+n =& 2000
+\end{align}
+$</center>
+</div>
+
+
+:9. **Make an appropriate graph to illustrate the data**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+
+<img src="./Images/EuroWeights-Histogram-SPSS.png">
+
+</div>
+&nbsp;
+</div>
+
+
+<img src="./Images/Step4.png">
+
+**Verify the requirements have been met**
+
+We need to check the following two requirements:
+
+:1. A simple random sample was drawn from the population
+:2. $ \bar x$ is normally distributed
+
+The coins were taken in batches, but we can think of the batches as a random sample of the possible coins that could be chosen.  
+
+The data follow a bell-shaped distribution.  There are a few potential outliers, but they are not too frequent or extreme.  We can conclude that $ \bar x$ is normally distributed.
+
+<div class="QuestionsHeading">Answer the following question:</div>
+<div class="Questions">
+:10. **Find the confidence interval**:  Use {{Name}} to create a 99% confidence interval for the true mean.
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+$
+(7.519, ~ 7.523) 
+$
+</center>
+</div>
+&nbsp;
+</div>
+
+
+<img src="./Images/Step5.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:11. **Present your observations in an English sentence, relating the result to the context of the problem**.
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::We are 99% confident that the true mean weight of all Belgian Euros is between 7.519 grams and 7.523 grams.
+</div>
+&nbsp;
+</div>
+
+## Summary
+
+<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
+{{Summary|11}}
+
+## Navigation
+
+<center>
+{| 
+|- align="center"
+| **Previous Reading**: <br> Lesson 10:  <br> [[Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)|Inference for One Mean: Sigma Known (Confidence Interval)]]
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| **This Reading**: <br> Lesson 11:  <br> Inference for One Mean: Sigma Unknown
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| **Next Reading**: <br> Lesson 12:  <br> [[Lesson 12: Inference for Two Means: Paired Data|Inference for Two Means: Paired Data]]
+|}
+</center>

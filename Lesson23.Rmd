@@ -1,0 +1,312 @@
+---
+title: "Lesson 20"
+output: 
+  html_document:
+    theme: cerulean
+    toc: true
+    toc_float: true
+---
+
+<iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<div style="clear:both"></div>
+
+
+{{YouTubeLesson|url=https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC8-A6W3DcLXUyoR8x0dpTgs}}
+==Lesson Outcomes==
+
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Lesson Outcomes" data-expandtext="Click Here to Show Outcomes for this Lesson">
+By the end of this lesson, you should be able to:
+:* Confidence Intervals for the slope of the regression line: 
+:** Calculate and interpret a confidence interval for the slope of the regression line given a confidence level.
+:** Identify a point estimate and margin of error for the confidence interval.
+:** Show the appropriate connections between the numerical and graphical summaries that support the confidence interval. 
+:** Check the requirements for the confidence interval.
+:* Hypothesis Testing for the slope of the regression line:
+:** State the null and alternative hypothesis. 
+:** Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.
+:** Assess the statistical significance by comparing the p-value to the α-level.
+:** Check the requirements for the hypothesis test.
+:** Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
+:** Draw a correct conclusion for the hypothesis test.
+
+
+</div>
+
+<br>
+
+==Theory of Simple Linear Regression==
+
+[[File:line on coordinate plane.jpg|right|link=]]
+When we compute an estimated regression equation, we assume that there is some true equation that describes the relationship between $X$ and the mean value of $Y$.  This equation is unknown to us. In particular, we don't know what the coefficients are in this equation. In the estimated regression equation, we used $b_0$ and $b_1$ to represent the $Y$-intercept and slope, respectively.  These two coefficients are estimates of the unknown regression coefficients in the true equation.  We will use the Greek letter $\beta$ (pronounced "beta") to denote these true unknown coefficients.
+
+The true regression line is written as:
+$$
+\textrm{Expected value of }~Y = \beta_0 + \beta_1 X
+$$
+where $\beta_0$ and $\beta_1$ are parameters.  These are unknown constants representing the true values for the population.
+
+We know that $Y$ will not fall exactly on this line.  There will be some randomness in the observed values of $Y$.  So, we add a term, called the ''error term'', to this equation.  This is a random variable, and we denote it by the Greek letter $\epsilon$ (pronounced "epsilon".)  The true regression equation is:
+$$
+Y = \beta_0 + \beta_1 X + \epsilon
+$$
+where $\beta_0$ and $\beta_1$ are parameters, and $\epsilon$ is a (normal) random variable.
+
+==Checking Requirements of Simple Linear Regression==
+
+In order to do hypothesis tests and confidence intervals using a regression line, we need to be sure that certain conditions are satisfied.  There are five requirements for a linear regression model:
+:1.<span id='linear'><span> There is a linear relationship between $X$ and $Y$.
+:2.<span id='normal'><span> The error term ($\epsilon$) is normally distributed.
+:3.<span id='const'><span> The variance of the error terms is constant for all values of $X$.
+:4.<span id='fixed'><span> The $X$'s are fixed and measured without error.  (In other words, the $X$'s can be considered as known constants.)
+:5.<span id='indep'><span> The observations are independent.
+These must be satisfied in order to conduct a hypothesis test or create confidence intervals involving regression lines.
+
+We will illustrate the process of checking requirements using the estuarine crocodile data.
+
+===Scatterplot===
+
+To check requirement 1, we do two things.  The first is to make a scatterplot and to visually check to see if there is a linear relationship between $X$ and $Y$.  This has been referred to as a "hot dog" shape in the data.
+
+We want to make sure that there is no distinct curvature or other nonlinear characteristics.  This is simply a visual check of the data.
+
+Consider the scatterplot of the estuarine crocodile data (<span class=Link>[[Data|EstuarineCrocodile(Modified)]]</span>):
+
+[[File:EstuarineCrocodile-Scatterplot-RegLine-SPSS.png|link=|center]]
+
+Notice how the data follow a linear shape.  This data set shows a particularly strong linear relationship.  In many cases, the data will show more spread than is illustrated here.
+
+===Residuals===
+
+The ''residual'' for an observation is defined as the difference between the observed value of $Y$ and the value that would have been predicted by the regression line.  As an equation, this is expressed as:
+$$
+Residual = Y - \hat Y = Y - (b_0 + b_1 X)
+$$
+
+It is tedious to calculate the residuals by hand, but software can be used to find the residuals.
+
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+{{Software_Filter | PageName=CalculateResiduals }}
+
+===Residual Plot===
+
+The residual is calculated for each data point, so you have one residual for every observation in the data set.  It is hard to use so many numbers to make decisions.  How do you comprehend so much information at once? To help us understand the information in the residuals, we make what is called a ''residual plot''. A residual plot is a scatterplot where the $X$-axis shows the independent variable ($X$) and the $Y$-axis presents the residuals for each value of $X$.
+
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+{{Software_Filter | PageName=ResidualPlot }}
+
+The following image shows the residual plot for the estuarine crocodile data.
+
+[[File:EstuarineCrocodile-ResidualPlot-SPSS.png|link=|center]]
+
+This residual plot shows random scatter. There is no obvious pattern in the data.  If linear regression is appropriate, then the residual plot will show no patterns and will consist of random scatter. If there is a pattern in the residuals, it suggests that linear regression is not appropriate.  
+
+There are several patterns that could arise in a residual plot:
+
+:*'''Curvature'''  If the residual plot shows curvature, that suggests that the data are not linearly related.
+:*'''Megaphone'''  A megaphone shape occurs when points tend to be close together on one side of the graph and farther apart on the other side of the graph.  If there is a megaphone shape apparent in the residuals, it suggests that the variance of the error terms is not constant for all values of $X$.  It suggests that there is a difference in the spread of the residuals depending on the value of $X$.
+:*'''Outliers'''  If there are outliers in the residual plot, that suggests that the error terms are not normally distributed.  This should also be apparent in the Q-Q plot of the residuals.
+
+===Q-Q Plot of the Residuals===
+
+Once the residuals have been calculated in Excel, we can assess if they are normally distributed using a Q-Q plot.  We simply make a Q-Q plot of the residuals.  If the points in the Q-Q plot are close to the line, then we conclude that the residuals are normally distributed.
+
+[[File:EstuarineCrocodile-QQplot-Residuals-SPSS.png|link=|center]]
+
+The Q-Q plot of the residuals for the estuarine crocodile data show a straight line.  We do not have evidence of nonnormality in the residuals.  We conclude that the residuals are normally distributed.
+
+===Requirements Summary===
+
+The following table describes how to check each of the requirements above.
+
+
+{| class="basic" style="text-align:left"
+! !! Requirement                      !! How to Check      !! What you hope to see
+|-
+|1. || Linear Relationship           || Scatterplot || "Hot dog" shape  
+|-
+| ||            || Residual Plot|| No pattern in the residuals 
+|-
+|2. || Normal Error Term             || Q-Q Plot of the Residuals  || Points in the Q-Q plot are close to the line 
+|-
+|3.  || Constant Variance             || Residual Plot              || No megaphone shape in the residuals 
+|-
+|4.  || $X$'s are Known <br> Constants|| Cannot be checked directly || $X$'s should be measured <br> accurately and precisely 
+|-
+|5.  || Observations are <br> Independent|| Cannot be checked directly || Knowing the value of one of the $Y$'s <br> tells you nothing about any other points 
+|-
+|}
+
+
+If these requirements are met, then it is reasonable to assume that the use of regression with the data is appropriate.
+
+==Hypothesis Test for Regression Coefficients==
+
+===Estuarine Crocodiles===
+
+We want to know if there is a linear relationship between $X$ and $Y$.  To test for this, we need to determine if the slope is different from zero.  If the slope is zero, then that suggests that there is no linear relationship between the two variables.  If the slope is not zero, that suggests that there is a linear relationship between the two variables.
+
+The regression output will include all the calculations you need to conduct a hypothesis test for the regression slope:
+ 
+[[File:SPSS_Estuarine_Croc_Regression_output.PNG|link=|center]]
+
+In this course, we will test if the true slope is different from zero.  If the slope equals zero, then the regression line reduces from:
+$$ Y = \beta_0 + \beta_1 X + \epsilon $$
+
+to:
+$$ Y = \beta_0 + \epsilon $$
+
+In other words, the independent variable $X$ does not affect the value of the dependent variable $Y$.
+
+The null and alternative hypotheses for this test are:
+$$
+\begin{array}{ll}
+H_0: & \beta_1  =  0\\
+H_a: & \beta_1 \ne 0\\
+\end{array}
+$$
+
+We will assume the $0.05$ level of significance.
+
+The relevant summary statistics include the sample size and the estimated regression equation ($ \hat Y = b_0 + b_1 X $).  For the estuarine crocodile data, we get:
+$$
+\begin{array}{c}
+n=28 \\
+\hat Y = -18.274 + 7.660 X \\
+\end{array}
+$$
+
+The test statistic follows a $t$-distribution. We are conducting a test for the slope.  The information related to the slope is given in the second row of the "Coefficients" table, which is labeled "Head Length (cm)".  Looking across the second row, we find the value of $t$ is given as 35.588.
+$$
+t=35.588
+$$
+
+This is a tremendously large value for t.  This indicates that there is a lot of evidence against the null hypothesis.
+
+The degrees of freedom are given in the ANOVA table in the "Residual" row under the "df" column:
+
+[[File:SPSS Estuarine Croc Regression output df.PNG|center|link=]]
+
+Remember, the $t$ has one number describing its degrees of freedom.  The degrees of freedom equals 26 for the estuarine crocodile data.
+$$
+df=26
+$$
+
+The $P$-value is given under the "Sig." column of the Coefficients table.  With a test statistic of $t=35.588$, we get a very small $P$-value.  
+
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+{{Software_Filter | PageName=EstuarineCrocodilePvalue }}
+
+We reject the null hypothesis, since the $P$-value is less than the level of significance.  There is sufficient evidence to suggest that there is a linear relationship between the head length and the body length of estuarine crocodiles.
+
+It was appropriate to conduct this analysis, since the requirements of simple linear regression were satisfied.
+
+===Manatees===
+
+Here is an excerpt from the output for the <span class=Link>[[Data|Manatees]]</span> data set:  <!--<cite>Manatees06</cite>-->
+
+[[File:Manatees-RegressionOutput-SPSS.png|link=|center]]
+
+The null and alternative hypotheses for this test are:
+$$
+\begin{array}{ll}
+H_0: & \beta_1  =  0\\
+H_a: & \beta_1 \ne 0\\
+\end{array}
+$$
+
+The relevant summary statistics include the sample size and the estimated regression equation ($ \hat Y = b_0 + b_1 X $).
+$$
+\begin{array}{c}
+n=30 \\
+\hat Y = -42.542 + 0.129 X \\
+\end{array}
+$$
+
+The test statistic follows a $t$-distribution.
+Remember, we are conducting a test for the slope, so the information we need is given in the second row of the table labeled "Power Boats (in 1000's)".  Looking across the second row, we find the value of $t$ is given as 15.491.
+$$
+t=15.491
+$$
+
+Think about this result.  Is this a large or a small value for $t$?  What does this say about the conclusion to our test?
+
+The degrees of freedom are given in the ANOVA table:
+
+[[File:Manatees-RegressionOutput-SPSS.png|link=|center]]
+
+Remember, the $t$ has one number describing its degrees of freedom.  For this test, the degrees of freedom are listed in the "Residual" row under the "df" column.  For the manatees example, the degrees of freedom equals 28.
+$$
+df=28
+$$
+
+The $P$-value is given under the "Sig." column of the Coefficients table.  With a test statistic of $t=15.491$, we get a very small $P$-value.  
+
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+{{Software_Filter | PageName=ManateePvalue }}
+
+Our decision rule is to reject the null hypothesis, since the $P$-value is less than the level of significance.  There is sufficient evidence to suggest that there is a linear relationship between the number of powerboats registered in Florida and the number of manatees killed by powerboats.
+This conclusion fits our intuition. If there are more boats on the water, it seems plausible that this will affect the number of manatees killed. If any statistical conclusion is counterintuitive, you should always be very wary!
+
+==Confidence Intervals for Regression Coefficients==
+
+===Manatees===
+
+We are often interested in the range of plausible values for the true regression coefficients.  We can create a confidence interval for the slope and the $Y$-intercept in Excel.  
+
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+{{Software_Filter | PageName=ManateeCIforRegressionCoefficients }}
+
+The confidence intervals will be presented in the Coefficients box in the output.
+
+[[File:Manatees-RegressionOutputCIs-SPSS.png|link=|center]]
+
+In this case, the 95% confidence interval for the true slope of the regression line relating the number of thousand powerboats registered in Florida to the number of manatees killed is $(0.112, 0.146)$.  Remember the slope is the amount that $Y$ is expected to change if $X$ changes by one unit.  Also, recall that $X$ is given in terms of thousands of powerboats registered.  If an additional one thousand powerboats are registered (one unit increase in $X$,) we are 95% confident that the number of manatees killed will increase between 0.112 and 0.146.  Or in other words, if 100 thousand additional powerboats are registered in Florida, we expect 11.2 to 14.6 manatees will be killed.
+
+The 95% confidence interval for the $Y$-intercept is $(-55.460, -29.623)$.  We are 95% confident that the expected number of manatees that will be killed if there are zero powerboats registered in Florida is between $-55.5$ and $-29.6$.  This is illogical.  There cannot be a negative number of manatees killed.  The $Y$-intercept is not interpretable.
+
+Sometimes the $Y$-intercept makes sense in the context of the problem, but in many cases it is just used to get the best fit for the regression equation.
+
+===Estuarine Crocodiles===
+
+We can compute a 95% confidence interval for the estuarine crocodile data in a similar manner.  
+  
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:1. Find a 95% confidence interval for the slope of the regression line relating the head lengths and body lengths of estuarine crocodiles.
+
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<center>
+$
+(7.218,~8.103)
+$
+</center>
+</div>
+
+
+:2. Interpret the confidence interval you created in the previous problem.
+
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::We are 95% confident that the true slope of the regression line relating the head length and the body length of estuarine crocodiles is between 7.218 and 8.103.  So, we are 95% confident that if the length of the head increases by 1 cm, then the mean increase in the body length is expected to be between 7.218 and 8.103.
+</div>
+&nbsp;
+</div>
+
+==Summary==
+
+<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
+{{Summary|23}}
+
+==Navigation==
+
+{| 
+|- align="center"
+| '''Previous Reading''': <br> Lesson 22:  <br> [[Lesson 22: Simple Linear Regression|Simple Linear Regression]]
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| '''This Reading''': <br> Lesson 23:  <br> Inference for Bivariate Data
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| '''Next Reading''': <br> Lesson 24:  <br> [[Lesson 24: Review for Exam 4|Review for Exam 4]]
+|}

@@ -1,0 +1,314 @@
+---
+title: "Lesson 16"
+output: 
+  html_document:
+    theme: cerulean
+    toc: true
+    toc_float: true
+---
+
+<iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<div style="clear:both"></div>
+
+{{YouTubeLesson|url=http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC_379i2-P7s9yhiqN2Vt6zD}}
+==Lesson Outcomes==
+
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Lesson Outcomes" data-expandtext="Click Here to Show Outcomes for this Lesson">
+By the end of this lesson, you should be able to:
+:* Calculate and interpret a sample proportion.
+:* Summarize categorical data with a bar or pie chart. 
+:* Determine the mean, standard deviation and shape of a distribution of sample proportions.
+:* Calculate probabilities using a distribution of sample proportions.
+
+</div>
+
+==Numerical and Graphical Summaries of Categorical Data==
+<span id='21:Proportions'></span>
+
+===Proportions===
+
+====Political Polls====
+
+During political elections in the United States, residents are inundated with polls.  Many people conduct polls to estimate the proportion of the population that will vote for each candidate.  The pollsters report the number of people who were contacted and the proportion who said they would favor a particular candidate.  The poll results are a prediction of the future election results.
+
+In these polls, individuals are asked the question, "If the election were held today, which candidate would you most likely support?"  In one survey, $n=1024$ people were polled, and $x=565$ of the respondents said that they would vote for the Republican candidate. In this case, the "proportion" of people who favored the Republican candidate was:
+$$
+\hat p = \frac{x}{n} = \frac{565}{1024} = 0.552
+$$
+That suggests that 55.2% of the people polled plan to vote for the Republican.  This does not mean that this candidate will win the election.  However, it looks like they might be in the lead at this point.
+
+====Web Searches====
+
+A study was conducted on web searches of computer science students.  If these students did not click on one of the links that came up in the search, the researchers asked them to record the reason.  908 trials conducted and there were 116 searches in which the students did not click on any links.  The reasons the students gave for not clicking on any links are summarized in the data file <span class=Link>[[Data|NoClickQuery]]</span>.
+
+Note that the data taken for this study are categorical.  Each of the student's responses is a categorization of their reason for not clicking on any of the links.  Even though we can summarize the data by counting the number of each type of response, the individual responses are categorical, not quantitative. Up to this point in the course we have discussed methods for describing and understanding only quantitative data. In this unit we will learn how to describe categorical data and make inferences from it.
+
+===Pie charts===
+
+Pie charts are a popular way to display categorical data.  These are used extensively in practice.  Typically, pie charts are used when you want to represent the observations as part of a whole, where each slice (sector) of the pie chart represents a proportion or percentage of the whole.
+
+We can represent the reasons the students did not click in their searches using a pie chart.
+
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+{{Software_Filter | PageName=PieCharts }}
+
+===Bar charts and Pareto charts===
+
+Bar charts can be considered a companion plot to the pie chart. They present the same basic information but are not, however, interchangeable. We typically use bar charts if our data represent counts. In contrast, pie charts are used to represent parts of a whole.
+
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+{{Software_Filter | PageName=BarCharts }}
+
+A Pareto chart is a bar chart where the bars are presented in descending order.
+
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+{{Software_Filter | PageName=ParetoCharts }}
+
+We conclude that the main reason that people do not click on any of the search results is that the results were not relevant.  The next two most common reasons were that they did not find any new results or they made a spelling error in their search query.
+
+Pareto charts are often used to display causes of problems in an industry.  For example, in health care administration, it may be causes of patient deaths.  In business, it may be used to display common reasons employees are terminated.
+
+There is an idea, called the Pareto Principle, which states that 80% of your problems come from 20% of the causes.  Many Pareto charts display a few very tall columns with several much shorter ones.  This can give you an idea of where you should focus your energy in your business or organization.
+
+==Sampling Distribution of the Sample Proportion==
+
+===Example: Tossing a Coin===
+
+Answer the following questions. For this exercise, you will need a coin.
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:1. Toss a coin $n=25$ times.  Keep track of the proportion of heads you observe. Please complete this before continuing.
+
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::In this example, we tossed heads 12/25 times, which is equivalent to a 0.48 proportion. Your proportion may vary.
+</div>
+
+
+:2. The data file <span class=Link>[[Data|CoinTossHeads]]</span> contains data representing a collection of 900 students' results, where each tossed a coin $n=25$ times and calculated the proportion of heads.  The following histogram illustrates these data.  How would you describe the shape of the distribution of the observed proportions?
+
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::Judging just from the histogram it shows that the observed proportions are normally distributed.
+</div>
+&nbsp;
+</div>
+
+
+[[File:Histogram-PropHeadsIn25CoinTosses.png|link=|center]]
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:3. Find the spot on the horizontal axis of the histogram indicating the proportion of heads that ''you'' observed in Question 1.  Based on your visual observation, would you say your proportion of heads is unusual?
+
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::Answers will vary.  This depends on your proportion of heads.  If the observed value is far to the right or left, then you would say that it was unusual.  Most students will observe values in the middle of the distribution.
+</div>
+
+
+:4. Visually, estimate the mean and standard deviation of the observed data. Please write your answer to this question before continuing.
+
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::We estimate the mean at 0.5 and the standard deviation at 0.1. Almost all data is found between .2 and .8, which represents the mean plus or minus three standard deviations of the mean.  Your answers may vary.
+</div>
+
+
+:5. The proportion of heads that you will observe in $n=25$ tosses of a fair coin, $\hat p$, is a random variable.  The true theoretical mean for this random variable is $p=0.5$.  Explain why this value would make sense.
+
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::Since getting a "heads" is just as likely as getting a "tails", you should end up with half your flips landing as "tails". The theoretical mean of  $ p=0.5$ is logical.
+</div>
+
+
+:6. The true theoretical standard deviation of $\hat p$ in this case is 0.1.  This can be obtained using the formula
+<center>$
+\displaystyle{\text{Standard deviation of}~\hat{p} = \sqrt{ \frac{p(1-p)}{n} } }
+$</center>
+:where $p$ is the true population proportion, which is also the mean of the distribution of $\hat{p}$.
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<center>
+$
+\text{Standard deviation of}~\hat{p} = \sqrt{ \frac{p(1-p)}{n} } = \sqrt{ \frac{0.5(1-0.5)}{25} } = 0.1
+$
+</center>
+</div>
+
+
+:7. Remember that the $z$-score for an observed data value can be computed as:
+<div style="clear:both"></div>
+<center>$
+\displaystyle { z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}} }
+$</center>
+::Use the mean and standard deviation given in question 6, to find the $z$-score corresponding to ''your'' sample proportion.
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<center>
+$
+\displaystyle { z = \frac{\text{_____} - 0.5}{0.1} = \text{_____} }
+$
+</center>
+</div>
+
+
+:8. Based on the $z$-score you computed in question 7, is your observed proportion considered unusual?
+
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::Answers will vary.  $z$-scores between -2 and 2 are not unusual.  If your $z$-score is less than -2 or greater than 2, then it is considered unusual.
+</div>
+&nbsp;
+</div>
+
+
+{{Tip|You may want to refresh your memory on our definition of "unusual events" in the [[Lesson 5: Normal Distributions|Normal Distributions]] lesson}}
+
+===Sampling Distribution of the Sample Proportion===
+
+If the sample size is large, the sample proportion, $\hat p$, will be approximately normally distributed.  This is a direct consequence of the Central Limit Theorem.
+
+====How Large is Large Enough?====
+
+We can apply the Central Limit Theorem to a sample proportion (and conclude that $\hat p$ follows a normal distribution) if both of the following conditions are satisfied:
+:*$np \ge 10$
+:*$n(1-p) \ge 10$
+
+It is important to check both conditions.  If one of them is not satisfied, we cannot conclude that $\hat p$ follows a normal distribution. Observe that the effect of these two conditions is that if $p$ is very close to 0 or 1, then $\hat{p}$ isn't close to normal unless $n$ is very large.
+
+====Mean and Standard Deviation====
+
+The sample proportion, $\hat p$, is normally distributed if $n$ is large.  The true population mean of the random variable $\hat p$ is:
+$$
+\textrm{Mean of}~\hat p = p
+$$
+and the true population standard deviation is:
+$$
+\textrm{Standard Deviation of}~\hat p = \sqrt{\frac{p \cdot (1-p)}{n}}
+$$
+
+Answer the following questions.  Consider exercise 1, in which you tossed a coin $n=25$ times and recorded the proportion of heads.
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:9. What is the true proportion of heads that would be expected to occur if a coin was tossed many, many times?  (This is the mean, $p$.)
+
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::If we tossed a coin many, many times, we would expect to see 0.5 as the proportion of heads (the mean of $\hat p = p$, and $p$ was shown earlier to be 0.5)
+</div>
+
+
+:10. Use the equation for the standard deviation (given above) to verify that the true population standard deviation for the proportion of heads that will occur when a coin is tossed $n=25$ times is 0.1.
+
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::Standard deviation of $\displaystyle { \hat p = \sqrt{\frac{0.5 \cdot (0.5)}{25}} = \sqrt{\frac{.25}{25}} = \sqrt{.01} =.1}$
+</div>
+&nbsp;
+</div>
+
+===Probability Calculations for a Sample Proportion===
+
+{{Note|'''Remember:'''  We can use the Normal Probability Applet to find probabilities associated with any normally distributed random variable with known mean and standard deviation.}}
+
+If the sample size is sufficiently large, we can use the Normal Probability Applet to make probability calculations for proportions, just as we did for means.  First, we need to find the $z$-score.  This can be done with the equation:
+
+$$
+z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}}
+= \frac{\hat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}
+$$
+
+Then, we can enter this $z$-score in the Normal Probability Applet to find the area more extreme than the $z$-score.
+
+====Worked Example====
+
+{| class="basic"
+|-
+Note:  If a coin is tossed $n=25$ times, and heads is observed 17 times, the sample proportion of heads is
+$\displaystyle{\hat p = \frac{x}{n} = \frac{17}{25} = 0.68}$
+The proportion of heads tossed by the first student in the file <span class=Link>[[Data|CoinTossHeads]]</span> is $\hat p = 0.68$.
+We will find the probability that a sample proportion will exceed 0.68.
+
+First, we compute the $z$-score corresponding to $\hat p = 0.68$.  We can use the mean and standard deviation, which were given in questions 9 and 10, or simply substitute the values of $p=0.5$ and $n=25$ in the equation for the $z$-score.
+
+$$
+z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}}
+= \frac{\hat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}
+= \frac{0.68 - 0.5}{\sqrt{\frac{0.5 (1-0.5)}{25}}}
+= \frac{0.18}{0.1}
+= 1.800
+$$
+
+Next, we enter the $z$-score (1.800) in the Normal Probability Applet and shade the area to the right of this value.
+
+[[File:SampDist-25CoinTosses-Applet.png|link=|center]]
+
+The area to the right of $z=1.800$ is $0.0359$.
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:11. The second student with data listed in the file <span class=Link>[[Data|CoinTossHeads]]</span> had $\hat p = 0.44$, or 44% of their coin tosses resulted in heads.  Find the $z$-score corresponding to this value.
+
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::$z$-score = $-0.60$
+</div>
+
+
+:12. Use the $z$-score you computed in question 11 to find the probability that the proportion of successes, $\hat p$, will be greater than 0.44 if a coin is tossed $n=25$ times.  In other words, find $P(\hat p > 0.44)$.
+
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::$P(\hat p > 0.44)= 0.7257$
+</div>
+
+
+:13. For $n=25$ coin tosses, find the probability that $P(0.44 < \hat p < 0.68)$.
+
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::$0.7257 - 0.0359 = 0.6898$
+</div>
+&nbsp;
+</div>
+
+
+[[File:Political-symbols-democrat-republican-o.png|right|270px|link=]]
+
+====Example: Political Elections====
+
+Consider the following question:
+
+"If the true proportion of people who support a particular political candidate is $p=0.48$, and if $n=1041$ people are surveyed, what is the probability that the results of the survey will suggest that the candidate will win the election?"
+
+To address this question, we first note that the survey will suggest that the candidate will win if more than 50% of the people surveyed favor the candidate. So, we need to find the following probability: $P(\hat p > 0.5)$.  First we find the $z$ score:
+
+$$
+z = \frac{\hat p - p}{\sqrt{\frac{p(1-p)}{n}}} = \frac{0.5-0.48}{\sqrt{\frac{0.48(1-0.48)}{1041}}} = 1.292
+$$
+
+Now, we look up this value using the Normal Probability Applet and find the area to the right. Using the Normal Probability Applet, we find that $P(\hat p > 0.5)=0.0982$.  So, even though this candidate is actually behind in the popular vote, there is a chance of 0.0982 that they will appear to be winning!
+
+This calculation was done in the same way we have done normal calculations in the past.  The only difference is that instead of using $\bar x$ and its mean and standard deviation, we used $\hat p$ and its mean and standard deviation.  Otherwise, they are the same.
+
+==Summary==
+
+<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
+<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
+{{Summary|16}}
+
+==Navigation==
+
+{|
+|- align="center"
+| '''Previous Reading''': <br> Lesson 15:  <br> [[Lesson 15: Review for Exam 2|Review for Exam 2]]
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| '''This Reading''': <br> Lesson 16:  <br> Describing Categorical Data: Proportions; <br> Sampling Distribution of a Sample Proportion
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| '''Next Reading''': <br> Lesson 17:  <br> [[Lesson 17: Inference for One Proportion|Inference for One Proportion]]
+|}

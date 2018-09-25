@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Lesson 10</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 221B</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 4: Rules of Probability</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 5: Normal Distributions</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 6: The Central Limit Theorem</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 7: Probability Calculations for a Sample Mean</a>
+    </li>
+    <li class="dropdown-header">Lesson 8: Unit 1 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson09.html">Lesson 9: Hypothesis Test for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson10.html">Lesson 10: Confidence Interval for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson11.html">Lesson 11: Inference for One Mean (Sigma Unknown)</a>
+    </li>
+    <li>
+      <a href="Lesson12.html">Lesson 12: Inference for Match Pairs</a>
+    </li>
+    <li>
+      <a href="Lesson13.html">Lesson 13: Inference for Two Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson14.html">Lesson 14: Inference for Several Independent Samples</a>
+    </li>
+    <li class="dropdown-header">Lesson 15: Unit 2 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson16.htlm">Lesson 16: Describing Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson17.html">Lesson 17: Inference for One Proportion</a>
+    </li>
+    <li>
+      <a href="Lesson18.html">Lesson 18: Inference for Two Proportions</a>
+    </li>
+    <li>
+      <a href="Lesson19.html">Lesson 19: Inference for Independence of Categorical Data</a>
+    </li>
+    <li class="dropdown-header">Lesson 20: Unit 3 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson21.html">Lesson 21: Describing Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson22.html">Lesson 22: Simple Linear Regression</a>
+    </li>
+    <li>
+      <a href="Lesson23.html">Lesson 23: Inference for Bivariate Data</a>
+    </li>
+    <li class="dropdown-header">Lesson 24: Unit 4 Review</li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="Data.html">Data</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lesson 10</h1>
+
+</div>
+
+
+<iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+<div style="clear:both">
+
+</div>
+<p>{{YouTubeLesson|url=<a href="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC8E_EF_nnT7x4EmCnEcvY9A" class="uri">http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC8E_EF_nnT7x4EmCnEcvY9A</a>}} ==Lesson Outcomes==</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Lesson Outcomes" data-expandtext="Click Here to Show Outcomes for this Lesson">
+<p>By the end of this lesson, you should be able to: :* Confidence Intervals for a single mean with σ known: :** Calculate and interpret a confidence interval for a population mean given a confidence level. :** Explain how the margin of error changes with the sample size and the level of confidence. :** Identify a point estimate and margin of error for the confidence interval. :** Show the appropriate connections between the numerical and graphical summaries that support this confidence interval. :** Check the requirements the confidence interval. :** Calculate a desired sample size given a level of confidence and margin of error.</p>
+</div>
+<p><br></p>
+<p>==Political Polls==</p>
+<p>[[<a href="File:Step4.png%7Clink" class="uri">File:Step4.png|link</a>=]]</p>
+<p>During an election in the United States, many polls are conducted to determine the attitudes of likely voters. Poll results are usually reported as percentages. For example, a poll might state that 49% favor the Republican candidate and 51% favor the Democratic candidate.</p>
+<p>Polls always include a ‘’’margin of error’’’. The margin of error gives an estimate of the variability in the responses. A common value for the margin of error in political polls is 3%.</p>
+<p>When we incorporate the margin of error, we estimate that the true proportion of people who favor the Republican candidate is 49% ± 3%, or in other words between 46% and 52%. For the Democratic candidate, we get 48% to 54%. There is a lot of overlap in these numbers. In this case, the political race is too close to know who might win.</p>
+<p>In this reading, we will explore the margin of error and its role in estimating a parameter.</p>
+<p>==Background==</p>
+<p>===Point Estimators===</p>
+<p>We have learned about several statistics. Remember, a statistic is any number computed based on data. The sample statistics we have discussed are used to estimate population parameters.</p>
+<center>
+{| class=“wikitable” ! ! Sample Statistic ! Population Parameter |- | Mean | align=“center” | $ x $ | align=“center” | $ $ |- | Standard Deviation | align=“center” | $ s $ | align=“center” | $ $ |- | Variance | align=“center” | $ s^2 $ | align=“center” | $ ^2 $ |- | align=“center” | $ $ | align=“center” | $ $ | align=“center” | $ $ |}
+</center>
+<p>The statistics above are called ‘’’point estimators’’’ because they are just one number (one point on a number line) that is used to estimate a parameter. Parameters are generally unknown values. Think about the mean. If <span class="math inline">\(\mu\)</span> is unknown, how do we know if $ x $ is close to it?</p>
+<p>The short answer is that we will never know ‘’for sure’’ if $ x $ is close to $ $. This does not mean that we are helpless. The laws of probability and the normal distribution provide a way for us to create a range of plausible values for a parameter (e.g. $ $) based on a statistic (e.g. $ x $).</p>
+<p>===Interval Estimators===</p>
+<p>A point estimator gives one specific value as an estimate of a parameter. An ‘’’interval estimator’’’ is a range of plausible values for a parameter. We can create an interval estimate by starting with a point estimate and adding or subtracting the margin of error.</p>
+<p>In the political poll mentioned above, the point estimate for the support of the Republican candidate is 49%. By adding and subtracting the margin of error, we get the interval estimate: 46% to 52%.</p>
+<p>A ‘’’confidence interval’’’ is a commonly used interval estimator. In this reading, we will explore how to create a confidence interval for the mean when <span class="math inline">\(\sigma\)</span> is known.</p>
+<p>===The Margin of Error===</p>
+<p>====Properties of Bell-shaped Curves====</p>
+<p>The following questions will help you review your understanding of the normal distribution.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<p>:1. Fill in the blank in the following sentence.<br> “The 68-95-99.7% rule only applies for distributions that are _________.”</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::The 68-95-99.7% rule only applies for distributions that are bell-shaped. ::In the past, some students have answered that the data must be normally distributed. Actually, the 68-95-99.7% rule will work for any distribution that is mound-shaped and symmetrical. As long as the data are unimodal and not skewed left or skewed right, this rule works well.</p>
+</div>
+<p>:2. Approximately what percentage of data from a bell-shaped distribution will lie within two standard deviations of the mean?</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::Using the 68-95-99.7% rule, about 95% of the observations will lie within two standard deviations of the mean.</p>
+</div>
+<p> </p>
+</div>
+<p>====The Distribution of the Sample Mean====</p>
+<p>We learned in the reading [[Lesson 6: Distribution of Sample Means &amp; The Central Limit Theorem|Distribution of Sample Means &amp; The Central Limit Theorem]] about the characteristics of the sample mean, $ x $. Specifically, if the population from which the data are drawn is (i) approximately normal or (ii) if the sample size is large, then $ x $ will be approximately normally distributed. Furthermore, if the original population has mean $ $ and standard deviation $ $, then the sampling distribution of $ x $ will have mean $ $ and standard deviation $ / $.</p>
+<p>So, if either condition (i) or (ii) is met, then we can consider the sample mean $ x $ as a normal random variable with mean $ $ and standard deviation $ / <span class="math inline">\(. According to the 68-95-99.7% rule for symmetric bell-shaped distributions, about 95% of the time, the sample mean (\)</span> x <span class="math inline">\() will lie within two standard deviations of the population mean (\)</span> $).</p>
+<p>This is an important concept. Make sure that you understand the logic above before you continue reading.</p>
+<p>====How Far is <span class="math inline">\(\bar x\)</span> from <span class="math inline">\(\mu\)</span>, or in other words, How Far is <span class="math inline">\(\mu\)</span> from <span class="math inline">\(\bar x\)</span>?====</p>
+<p>Assuming that <span class="math inline">\(\bar x\)</span> is approximately normally distributed, about 95% of the time, it will be within two standard deviations of $ $.</p>
+<p>[[<a href="File:SamplingDistOfXbar-Sketch.png%7Clink" class="uri">File:SamplingDistOfXbar-Sketch.png|link</a>=|center]]</p>
+<p>Remember, the standard deviation of $ x $ is $  $. For the variable $ x $, two standard deviations would be equal to $ 2  $.</p>
+<p>If we collect a random sample from a population and $ x $ is normally distributed, then about 95% of the time the sample mean $ x $ will be less than $ 2  $ units away from the population mean $ $. Notice that this is true, whether or not we know $ $.</p>
+<p>We can express this as a probability statement:</p>
+<p><span class="math display">\[ 
+P\left( \mu - 2 \frac{\sigma}{\sqrt{n}} &lt; \bar X &lt; \mu + 2 \frac{\sigma}{\sqrt{n}} \right) \approx 0.95
+\]</span></p>
+<p>Here is the magic: If $ x $ is within 2 standard deviations of $ $, then $ $ is within 2 standard deviations of $ x $. It may seem silly to state it, but this is very important.</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide the math" data-expandtext="Click here if you love math">
+<p>{| width=“100%” bgcolor=“#000000” border=“0” cellpadding=“3px” cellspacing=“2px” style=“margin:auto;” |- valign=“top” align=“left” style=“background: #ffffff;”</p>
+<p>| Starting with <span class="math display">\[ \mu - 2 \frac{\sigma}{\sqrt{n}} &lt; \bar X &lt; \mu + 2 \frac{\sigma}{\sqrt{n}} \]</span> We subtract $ $ from all parts of the inequality: <span class="math display">\[ \mu - 2 \frac{\sigma}{\sqrt{n}} - \mu &lt; \bar X - \mu  &lt; \mu + 2 \frac{\sigma}{\sqrt{n}} - \mu \]</span> Which reduces to <span class="math display">\[ - 2 \frac{\sigma}{\sqrt{n}}  &lt; \bar X - \mu  &lt;  2 \frac{\sigma}{\sqrt{n}}  \]</span> Now, subtract $ X $ from all the terms: <span class="math display">\[ - 2 \frac{\sigma}{\sqrt{n}} - \bar X &lt; \bar X - \mu -\bar X &lt;  2 \frac{\sigma}{\sqrt{n}} -\bar X \]</span> And this simplifies to <span class="math display">\[ - 2 \frac{\sigma}{\sqrt{n}}-\bar X &lt; -\mu &lt;  2 \frac{\sigma}{\sqrt{n}}-\bar X \]</span> Multiplying all the terms by $ -1 $, we get <span class="math display">\[  2 \frac{\sigma}{\sqrt{n}}+\bar X &gt; \mu &gt;  -2 \frac{\sigma}{\sqrt{n}}+\bar X \]</span> Rewriting this reversing the order of the terms, we get <span class="math display">\[ \bar X - 2 \frac{\sigma}{\sqrt{n}} &lt; \mu &lt;  \bar X + 2 \frac{\sigma}{\sqrt{n}} \]</span> |}</p>
+</div>
+<p>So, the statement <span class="math display">\[ 
+P\left( \mu - 2 \frac{\sigma}{\sqrt{n}} &lt; \bar X &lt; \mu + 2 \frac{\sigma}{\sqrt{n}} \right) \approx 0.95
+\]</span> is equivalent to the statement <span class="math display">\[ 
+P\left( \bar X - 2 \frac{\sigma}{\sqrt{n}} &lt; \mu &lt; \bar X + 2 \frac{\sigma}{\sqrt{n}} \right) \approx 0.95
+\]</span></p>
+<p>==Putting It All Together: Confidence Intervals for <span class="math inline">\(\mu\)</span> when <span class="math inline">\(\sigma\)</span> is Known==</p>
+<p>Notice that if we know $ $, then with approximately 95% confidence, $ $ will be between the following two values: <span class="math display">\[ \left( \bar X - 2 \frac{\sigma}{\sqrt{n}}, ~ \bar X + 2 \frac{\sigma}{\sqrt{n}} \right) \]</span> This equation gives a confidence interval for $ $.</p>
+<p>A confidence interval is actually a point estimate $ ( x ) $ plus or minus the margin of error $ ( 2  ) $.</p>
+<p>We use the letter $ m $ to denote the margin of error: <span class="math display">\[ m = 2 \frac{\sigma}{\sqrt{n}} \]</span> Using this definition for <span class="math inline">\(m\)</span>, our confidence interval can be written as <span class="math display">\[ ( \bar x - m, ~ \bar x + m ) \]</span> or <span class="math display">\[ \bar x \pm m \]</span> This pattern will be repeated throughout the course as we create confidence intervals of the form: <span class="math display">\[ 
+\left( 
+\begin{align}
+point~ ~ ~ &amp;      &amp; margin~  &amp;        &amp; point~ ~ ~ &amp;      &amp; margin~  \\
+estimate   &amp; ~ ~- &amp; of~error &amp; ~ ~,   &amp; estimate   &amp; ~ ~+ &amp; of~error
+\end{align}
+\right) 
+\]</span> or <span class="math display">\[ (\text{point estimate}) \pm (\text{margin of error}) \]</span></p>
+<p>===A Little More Precision===</p>
+<p>====What <span class="math inline">\(z\)</span> Corresponds to 95% of the Area?====</p>
+<p>The 68-95-99.7% Rule for bell-shaped distribution is just a quick approximation. This is useful for estimation, but more precision is usually required.</p>
+<div class="QuestionsHeading">
+Answer the following question:
+</div>
+<div class="Questions">
+<p>:3. For a standard normal distribution, between what two <span class="math inline">\(z\)</span>-scores will 95% of the data fall? In other words, find the values <span class="math inline">\(-z\)</span> and <span class="math inline">\(z\)</span> such that the area between them is equal to 0.95. Use the [<a href="http://statistics.byuimath.com/index.php?title=Normal_Probability_Applet" class="uri">http://statistics.byuimath.com/index.php?title=Normal_Probability_Applet</a> Normal Probability Applet].</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Instructions" data-expandtext="Click here for a hint">
+<p>::To find the value of <span class="math inline">\(z^*\)</span>, given a specific confidence level, do the following: :::<em>Open the applet at [<a href="http://statistics.byuimath.com/index.php?title=Normal_Probability_Applet" class="uri">http://statistics.byuimath.com/index.php?title=Normal_Probability_Applet</a> Normal Probability Applet] :::</em>Shade the area between the two red lines (the middle portion of the graph) only and enter the decimal value for the desired percentage (e.g. 0.95 for 95%) in the ‘’Area’’ box. :::*The value of <span class="math inline">\(z^*\)</span> will be displayed below. Two numbers will be given along the horizontal axis. The only difference in these numbers is their sign: one is positive and one is negative. The positive value is the desired <span class="math inline">\(z^*\)</span>.</p>
+</div>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::95% of the area under the standard normal curve is between <span class="math inline">\(z=-1.96\)</span> and <span class="math inline">\(z=1.96\)</span></p>
+<p>[[<a href="File:Applet0.95-middle-LoRes.png%7Clink" class="uri">File:Applet0.95-middle-LoRes.png|link</a>=|center]]</p>
+<p>::For normally distributed data, 95% of the observations will fall within 1.96 standard deviations of the mean.</p>
+</div>
+<p> </p>
+</div>
+<p>The actual formula for a 95% confidence interval for <span class="math inline">\(\mu\)</span> (when <span class="math inline">\(\sigma\)</span> is known) is: <span class="math display">\[
+\left( \bar x - 1.96 \frac{\sigma}{\sqrt{n}}, \bar x + 1.96 \frac{\sigma}{\sqrt{n}} \right)
+\]</span> Please notice that the number 2 was used as an approximation for the actual value of 1.96. When computing a 95% confidence interval for a mean with <span class="math inline">\(\sigma\)</span> known, please use 1.96 in the equation.</p>
+<p>====Worked Example: Rolling a Die 25 Times====</p>
+<p>[[<a href="File:Step4.png%7Clink" class="uri">File:Step4.png|link</a>=]]</p>
+<p>We will compute a 95% confidence interval for the mean of <span class="math inline">\(n=25\)</span> rolls of a fair die. A die was rolled 25 times. The values rolled were: <span class="math display">\[
+3 ~ ~ ~ 1 ~ ~ ~ 2 ~ ~ ~ 1 ~ ~ ~ 1 ~ ~ ~ 2 ~ ~ ~ 4 ~ ~ ~ 1 ~ ~ ~ 1 ~ ~ ~ 2 ~ ~ ~ 6 ~ ~ ~ 5 ~ ~ ~ 6 ~ ~ ~ 3 ~ ~ ~ 4 ~ ~ ~ 2 ~ ~ ~ 2 ~ ~ ~ 5 ~ ~ ~ 6 ~ ~ ~ 2 ~ ~ ~ 6 ~ ~ ~ 4 ~ ~ ~ 1 ~ ~ ~ 1 ~ ~ ~ 5
+\]</span> The mean of these values is <span class="math inline">\(\bar x = 3.04\)</span>. It is a fact that for the outcome of a six-sided die, <span class="math inline">\(\sigma=\sqrt{\frac{35}{12}} \approx 1.7078\)</span>.</p>
+<p>Applying the formula for a 95% confidence interval, <span class="math display">\[
+\left( \bar x - z^* \frac{\sigma}{\sqrt{n}}, ~ \bar x + z^* \frac{\sigma}{\sqrt{n}} \right)
+\]</span> we get: <span class="math display">\[
+\left( 3.04 - 1.96 \frac{1.7078}{\sqrt{25}}, ~ 3.04 + 1.96 \frac{1.7078}{\sqrt{25}} \right)\]</span> or <span class="math display">\[
+(2.37, ~ 3.71)\]</span></p>
+<p>====What about Other Confidence Levels?====</p>
+<p>Most of the time, researchers report 95% confidence intervals. The number 95% is called the ‘’’confidence level’’’. Sometimes it is desirable to use a level of confidence that is different than 95%. In that case, we need to use a number besides 1.96 in the calculations.</p>
+<p>Suppose we want to create a 90% confidence interval. What value would we put in the blanks in the confidence interval formula below? <span class="math display">\[
+\left( \bar x - \underline{~ ~ ~ ? ~ ~ ~} \frac{\sigma}{\sqrt{n}}, ~ \bar x + \underline{~ ~ ~ ? ~ ~ ~} \frac{\sigma}{\sqrt{n}} \right)
+\]</span> Another way to state this question is to ask, between what two <span class="math inline">\(z\)</span>-scores will 90% of the data in a standard normal distribution fall? We need to find the values of <span class="math inline">\(-z\)</span> and <span class="math inline">\(z\)</span> such that the area between them is equal to 0.90. Again, we use the [<a href="http://statistics.byuimath.com/index.php?title=Normal_Probability_Applet" class="uri">http://statistics.byuimath.com/index.php?title=Normal_Probability_Applet</a> Normal Probability Applet].</p>
+<p>[[<a href="File:updated" class="uri">File:updated</a> z-score curve.JPG|link=|400px|center]]</p>
+<p>So, for a 90% confidence interval, the value of <span class="math inline">\(z*\)</span> would be 1.645. Note: We use an asterisk (<span class="math inline">\(*\)</span>) to indicate that <span class="math inline">\(z\)</span> was not computed from data, but was determined based on a ‘’chosen’’ confidence level, 90%.</p>
+<p>The formula for a 90% confidence interval for a mean when $ $ is known is: <span class="math display">\[
+\left( \bar x - 1.645 \frac{\sigma}{\sqrt{n}}, ~ \bar x + 1.645 \frac{\sigma}{\sqrt{n}} \right)
+\]</span></p>
+<p>When $ $ is known, we use <span class="math inline">\(z^* = 1.96\)</span> to create 95% confidence intervals, and we use $ z^* = 1.645 $ to create 90% confidence intervals.</p>
+<p>====Formula for the Confidence Interval for <span class="math inline">\(\mu\)</span> (<span class="math inline">\(\sigma\)</span> Known)====</p>
+<p>With this notation, the confidence interval formula generalizes to: <span class="math display">\[
+\left( \bar x - z^* \frac{\sigma}{\sqrt{n}}, ~ \bar x + z^* \frac{\sigma}{\sqrt{n}} \right)
+\]</span> where <span class="math inline">\(z^*\)</span> is determined by the level of confidence. If you want a 90% confidence interval, then <span class="math inline">\(z^*\)</span> is the number of standard deviations on either side of the mean that you must go to capture 90% of the data.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+:4. If $ x $ follows a normal distribution and $ $ is known, what is the equation for a 99% confidence interval for the true population mean?
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::For a 99% confidence level, $ z^* = 2.576 <span class="math inline">\(. The equation for the 99% confidence interval becomes: &lt;center&gt;\)</span> ( x - 2.576 , ~ x + 2.576  ) $
+</center>
+</div>
+:5. Apply the equation from the previous problem to find a 99% confidence interval for the mean value rolled on the die. Use the data given above. For convenience, they are reproduced here:
+<center>
+$ 3 ~ ~ ~ 1 ~ ~ ~ 2 ~ ~ ~ 1 ~ ~ ~ 1 ~ ~ ~ 2 ~ ~ ~ 4 ~ ~ ~ 1 ~ ~ ~ 1 ~ ~ ~ 2 ~ ~ ~ 6 ~ ~ ~ 5 ~ ~ ~ 6 ~ ~ ~ 3 ~ ~ ~ 4 ~ ~ ~ 2 ~ ~ ~ 2 ~ ~ ~ 5 ~ ~ ~ 6 ~ ~ ~ 2 ~ ~ ~ 6 ~ ~ ~ 4 ~ ~ ~ 1 ~ ~ ~ 1 ~ ~ ~ 5 $
+</center>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::If we were making a 99% confidence interval, we follow the same procedure as for a 95% confidence interval, only we use <span class="math inline">\(z^*=2.576\)</span>. The 99% confidence interval for the true mean is:
+<center>
+$ ( 3.04 - 2.576 , ~ 3.04 + 2.576  )<span class="math inline">\(&lt;/center&gt; ::which simplifies to: &lt;center&gt;\)</span> (2.16, ~ 3.92) $
+</center>
+</div>
+<p> </p>
+</div>
+<span id="z"></span> The most commonly used values for <span class="math inline">\(z^*\)</span> are:
+<center>
+{| class=“wikitable” style=“text-align:center” ! Confidence <br> Level || <span class="math inline">\(z^*\)</span> |- |90% || 1.645 |- |95% || 1.960 |- |99% || 2.576 |- |}
+</center>
+<p>Any other values that you need can be determined using the Normal Probability Applet.</p>
+<!--
+====Example: Confidence Interval for a Mean of Die Rolls====
+
+[[File:Step4.png|link=]]
+
+Roll a fair, six sided die 25 times.  Find the mean of the values you rolled. Record your results and find the mean $\bar x$.
+
+<center>
+{| class="wikitable"
+|-
+|
+'''Note:''' ``die'' is the singular form for ``dice.''
+|}
+</center>
+
+
+The parameter $\mu$ is the mean of all the values you would roll with your die if you continued rolling it forever.  Usually, we do not know the value of $\mu$, so we estimate it by the value $\bar x$.
+
+For the roll of a fair six-sided die, the standard deviation is $\sigma=\sqrt{\frac{35}{12}} \approx 1.7078$.  In order to do this computation, we must know $\sigma$, the population standard deviation.  This number will be given to you when needed.
+
+SPSS does not have a built-in routine to compute a confidence interval for a mean when $\sigma$ is unknown.  This is not a flaw in SPSS, but it reflects the fact that in practice, we never know $\sigma$.
+-->
+<p>===Factors Affecting the Width of the Confidence Interval===</p>
+<p>Recall that the formula to compute the confidence interval for a mean, where <span class="math inline">\(\sigma\)</span> is known is: <span class="math display">\[
+\left( \bar x - z^* \frac{\sigma}{\sqrt{n}}, ~ \bar x + z^* \frac{\sigma}{\sqrt{n}} \right)
+\]</span></p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+:6. What would happen to the confidence interval if the sample size <span class="math inline">\(n\)</span> was increased, but the other values were still the same?
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::Since the sample size <span class="math inline">\(n\)</span> is in the denominator, if <span class="math inline">\(n\)</span> is increased, <span class="math inline">\(\sqrt{n}\)</span> would increase, and the fraction <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span> would decrease, which would lead to a smaller margin of error. In other words, if the sample size is increased, the width of a confidence interval will decrease–it will become narrower.</p>
+</div>
+:7. What would happen to the confidence interval if the confidence level were increased, say from 95% to 99%?
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::Increasing the confidence level will lead to larger values of <span class="math inline">\(z^*\)</span>. If <span class="math inline">\(z^*\)</span> is increased, then the margin of error <span class="math inline">\(z^* \frac{\sigma}{\sqrt{n}}\)</span> would increase. This would lead to a wider confidence interval.</p>
+</div>
+<p> </p>
+</div>
+<p>===Interpretation of Confidence Intervals===</p>
+<p>[[<a href="File:Step5.png%7Clink" class="uri">File:Step5.png|link</a>=]]</p>
+<p>How do we interpret confidence intervals? What do they really mean?</p>
+<center>
+<table>
+<thead>
+<tr class="header">
+<th>{</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+</tr>
+<tr class="even">
+<td>[[<a href="File:CoinToss.png" class="uri">File:CoinToss.png</a></td>
+</tr>
+</tbody>
+</table>
+<br> (Image source: Flickr/ICMA Photos) |}
+</center>
+<p>Consider a coin with two sides: one called “heads” and the other called “tails”. Imagine that you flipped this coin, but you have not looked at it yet. What is the probability that the coin shows heads?</p>
+<p>Strangely enough, the answer is, it depends! If the head is facing up, then the probability that the coin shows heads is 1. If the head is facing down, then the probability that it shows heads is 0.</p>
+<p>The coin has been tossed. There is no randomness left in the process. So, either the head is facing up or it is facing down. So, the probability that the coin shows heads is either 1 or 0. (We just don’t know which.) The fact that we do not know the outcome does not change it or make it random.</p>
+<p>Before we toss the coin, the probability that the coin will show heads is <span class="math inline">\(\frac{1}{2}=0.5\)</span>. After we toss the coin, the probability that we get heads is 1 or 0.</p>
+<p>Transferring this reasoning to confidence intervals, we get a similar result.</p>
+<p>Once we have collected data on something, there is no randomness in the system. Any confidence interval that is created using that data will either contain the true parameter (<span class="math inline">\(\mu\)</span>) or it will not. After collecting data, the probability that a specific confidence interval will contain <span class="math inline">\(\mu\)</span> is either 1 or 0.</p>
+<p>{{Tip|The correct interpretation of a 95% confidence interval is to say, “We are 95% confident that the true mean lies within the lower and upper bounds of the confidence interval.”}}</p>
+<p>Consider the 95% confidence interval for the true mean of 25 rolls of a fair die. We found the 95% confidence interval to be: <span class="math inline">\((2.37, 3.71)\)</span>.<br />
+When we interpret this confidence interval, we say, “We are 95% ‘’confident’’ that the true mean is between 2.37 and 3.71.”</p>
+<p>The word, “confident” implies that if we repeated this process many, many times, 95% of the confidence intervals we would get would contain the true mean <span class="math inline">\(\mu\)</span>. It does not imply anything about whether or not one specific confidence interval will contain the true mean.</p>
+<p>We do not say that “there is a 95% probability (or chance) that the true mean is between 2.37 and 3.71.” The probability that the true mean <span class="math inline">\(\mu\)</span> is between 2.37 and 3.71 is either 1 or 0.</p>
+<p>===Requirements===</p>
+<p>There are three requirements that need to be checked when computing a confidence interval for a mean with <span class="math inline">\(\sigma\)</span> known:</p>
+<p>:1. A simple random sample was drawn from the population :2. $ x$ is normally distributed :3. $ $ is assumed to be known</p>
+<p>The requirement of normality is satisfied if (a) the raw data are normally distributed or (b) the sample size is large. This procedure is robust to moderate departures from normality. Even if the requirement that <span class="math inline">\(\bar x\)</span> is normally distributed is not satisfied perfectly, it is usually okay to conduct the test.</p>
+<p>In practice, we never really know $ $. This procedure is primarily used to help you understand the idea of confidence intervals. When <span class="math inline">\(\sigma\)</span> is unknown, we use a slightly different computation.</p>
+<p>===Example: Costs of CABG Surgery===</p>
+<center>
+{| class=“wikitable” |- align=“center” | [[<a href="File:Surgery-Flickr-1517206758" class="uri">File:Surgery-Flickr-1517206758</a> c7412.png|link=]]<br>(Photo credit: Vanderbilt Photo/Neil Brake) |}
+</center>
+<p>This reading focuses on an important aspect of designing a study: determining the sample size.</p>
+<p>[[<a href="File:Step1.png%7Clink" class="uri">File:Step1.png|link</a>=]]</p>
+<p>It is important for health care administrators to know the mean hospital costs for patients who have <u>c</u>oronary <u>a</u>rtery <u>b</u>ypass <u>g</u>raft (CABG) surgery. A large hospital is planning a study to determine their mean costs for patients who have CABG surgery.</p>
+<p>A study will be conducted in which the charts of patients who had CABG surgery will be sampled, and their hospital costs will be recorded. For budgetary reasons, the hospital administrators do not want to collect a sample that is too large. However, if the sample size is not large enough, the confidence interval will be too wide to be useful as a planning tool.</p>
+<p>After a discussion among the senior administration, they have determined that they want to estimate the mean hospital costs of CABG surgery within <nomathjax><span class="math inline">\(&lt;/nomathjax&gt;2000 (i.e., plus or minus &lt;nomathjax&gt;\)</span></nomathjax>2000.) In other words, they want the confidence interval for the true mean to have a margin of error of <nomathjax>$</nomathjax>2000 dollars.</p>
+<p>Recall the equation for the confidence interval is: <span class="math display">\[
+\left( \bar x - z^* \frac{\sigma}{\sqrt{n}}, \bar x + z^* \frac{\sigma}{\sqrt{n}} \right)
+\]</span> The part of the equation that is added to and subtracted from <span class="math inline">\(\bar x\)</span> is called the ‘’’margin of error’’’. We will denote the margin of error by the letter <span class="math inline">\(m\)</span>. <span class="math display">\[
+m=z^* \frac{\sigma}{\sqrt{n}}
+\]</span> To use this formula, the parameter <span class="math inline">\(\sigma\)</span> must be given to us. It is the true standard deviation of the data you are observing. If you do not know <span class="math inline">\(\sigma\)</span>, you can estimate it using the standard deviation reported in a previous study or by conducting a pilot study. A study published by another hospital reported that the standard deviation of the costs for CABG surgery was <nomathjax>$</nomathjax>28,705 <!--<cite>Chu09</cite>-->.</p>
+<p>In the following questions, you will compute the margin of error, <span class="math inline">\(m\)</span>, for a future study of the hospital costs for CABG surgery. The hospital administrators want to use a 95% level of confidence. Assume the standard deviation can be estimated to be <span class="math inline">\(\sigma = \$28,705\)</span>.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<p>:8. If the hospital administrators want to be 95% confident in the results, what should the value of <span class="math inline">\(z^*\)</span> be?</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<center>
+$
+<span class="math display">\[\begin{align}
+z^*=1.96
+\end{align}\]</span>
+$
+</center>
+</div>
+<p>:9. If the hospital collects a sample of <span class="math inline">\(n=100\)</span> patients’ costs, what would the margin of error be?</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<center>
+$
+<span class="math display">\[\begin{array}{1cl}
+m &amp;= z^* \frac{\sigma}{\sqrt{n}} \\
+&amp;= 1.96 \cdot \frac{28705}{\sqrt{100}} \\
+&amp;= \$5626.18
+\end{array}\]</span>
+$
+</center>
+</div>
+<p>:10. If the hospital collects a sample of <span class="math inline">\(n=1000\)</span> patients’ costs, what would the margin of error be?</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<center>
+$
+<span class="math display">\[\begin{array}{1cl}
+m &amp;= z^* \frac{\sigma}{\sqrt{n}} \\
+&amp;= 1.96 \cdot \frac{28705}{\sqrt{1000}} \\
+&amp;= \$1779.15
+\end{array}\]</span>
+$
+</center>
+</div>
+<p>:11. Choose any other value for the sample size, <span class="math inline">\(n\)</span>. Find the margin of error for your sample size.</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::Answers will vary.</p>
+</div>
+<p>:12. Repeat Question 11 until you find the sample size that will yield a margin of error as close to <nomathjax>$</nomathjax>2000 as possible, without going over.</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<center>
+$ n = 792 $
+</center>
+</div>
+<p> </p>
+</div>
+<p>==Sample Size Calculations==</p>
+<p>The process you followed in Questions 8 - 12 is effective, but tedious. There must be an easier way! The trick is to solve the margin of error equation <span class="math inline">\(m = z^* \frac{\sigma}{\sqrt{n}}\)</span> for <span class="math inline">\(n\)</span>.</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide the math" data-expandtext="Click here if you love math">
+<p>{| width=“100%” bgcolor=“#000000” border=“0” cellpadding=“3px” cellspacing=“2px” style=“margin:auto;” |- valign=“top” align=“left” style=“background: #ffffff;”</p>
+<p>| Starting with <span class="math display">\[ m = z^* \frac{\sigma}{\sqrt{n}} \]</span> Multiply both sides of the equation by <span class="math inline">\(\sqrt{n}\)</span>: <span class="math display">\[ m \cdot \sqrt{n} = z^* \frac{\sigma}{\sqrt{n}} \cdot \sqrt{n} \]</span> Which reduces to: <span class="math display">\[ m \cdot \sqrt{n} = z^* \cdot \sigma \]</span> Divide both sides of the equation by <span class="math inline">\(m\)</span>. Cancelling the <span class="math inline">\(m\)</span>’s on the left hand side: <span class="math display">\[ \sqrt{n} = \frac{z^* \cdot \sigma}{m} \]</span> Squaring both sides: <span class="math display">\[ \left( \sqrt{n} \right)^2 = \left( \frac{z^* \cdot \sigma}{m} \right)^2 \]</span> Which simplifies to the desired result: <span class="math display">\[ n  = \left( \frac{z^* \cdot \sigma}{m} \right)^2 \]</span> |}</p>
+</div>
+<p>This gives us the ‘’’sample size formula’’’, which tells the number of observations required in order to obtain a specified margin of error: <span class="math display">\[
+n = \left( \frac{z^*\sigma}{m} \right)^2
+\]</span></p>
+<p>Once the level of confidence is selected, <span class="math inline">\(z^*\)</span> is automatically determined. In practice, the most common level of confidence is 95%, which means that <span class="math inline">\(z^*\)</span> would equal 1.96.</p>
+<p>{{Note|If you need a reminder on finding the value of <span class="math inline">\(z^*\)</span>, click [[#z|here]].}}</p>
+<div class="QuestionsHeading">
+Answer the following question:
+</div>
+<div class="Questions">
+<p>:13. In Question 12, you used the process of guess-and-check to find the sample size. For this question, use the sample size formula to compute the sample size required to estimate the mean cost of CABG surgery, <span class="math inline">\(\mu\)</span>, within <nomathjax>$</nomathjax>2000 with 95% confidence. Recall that in a previous study, the standard deviation was found to be <span class="math inline">\(\sigma = \$28,705\)</span> <!--<cite>Chu09</cite>-->.</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<center>
+$
+<span class="math display">\[\begin{align}
+n &amp;= \left( \frac{z^*\sigma}{m} \right)^2 \\
+&amp;= \left( \frac{1.96 \cdot 28705}{2000} \right)^2 \\
+&amp;= 791.3
+\end{align}\]</span>
+$
+</center>
+</div>
+<p> </p>
+</div>
+<p>===Rounding Up===</p>
+<p>In Question 13, you computed the sample size required to get a margin of error of <nomathjax>$</nomathjax>2000. Notice that the result was 791.3, which is not a whole number. What does that mean? Does that suggest that you will survey only a fraction of the last patient’s costs? Of course not!</p>
+<p>When doing sample size calculations, if the answer is not a whole number, you ‘’always round up to the next highest whole number’’. This will allow you to get a sample size that is large enough to attain your desired margin of error. If you want to estimate the mean cost of CABG surgery within <nomathjax>$</nomathjax>2000 with 95% confidence, you will need to survey the files of 792 patients.</p>
+<p>{{Tip|When doing sample size calculations, you ‘’always’‘round’‘up’’.}}</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<p>:14. Answer this question without doing any computations. If the hospital administrators wanted to estimate the mean cost of CABG surgery with a margin of error of <nomathjax>$</nomathjax>1000 at the 95% confidence level, should the sample size be larger or smaller than <span class="math inline">\(n=792\)</span>?</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::In question 5, we determined that the sample size required to have a margin of error of <nomathjax>$</nomathjax>2000 is 792. The margin of error is in the denominator of the sample size formula. If we want to reduce the margin of error, we need to increase the sample size. The sample size should be larger than <span class="math inline">\(n=792\)</span>.</p>
+</div>
+<p>:15. Find the sample size required to estimate the mean cost of CABG surgery with a margin of error of <nomathjax>$</nomathjax>1000 and with a 95% confidence level.</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<center>
+$
+<span class="math display">\[\begin{array}{1cl}
+n &amp;= \left( \frac{z^*\sigma}{m} \right)^2 \\
+&amp;= \left( \frac{1.96 \cdot 28705}{1000} \right)^2 \\
+&amp;= 3165.4
+\end{array}\]</span>
+$
+</center>
+<p>: We always round up in sample size calculations, so the required sample size is $ n=3166$.</p>
+</div>
+<p>:16. What happened to the sample size required when the margin of error is cut in half from <nomathjax><span class="math inline">\(&lt;/nomathjax&gt;2000 to &lt;nomathjax&gt;\)</span></nomathjax>1000?</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::If we divide the two sample sizes, we get:
+<center>
+$  4 $
+</center>
+<p>::In order to reduce the margin of error by half, we need to quadruple the sample size.</p>
+</div>
+<p>:17. Remember the sample size required to have a margin of error of <nomathjax>$</nomathjax>2000 at the 95% level of confidence is <span class="math inline">\(n=792\)</span>. If we wanted to estimate the mean cost with the same margin of error at the 99% level of confidence, would the sample size be larger or smaller?</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::The value of <span class="math inline">\(z^*\)</span> would increase from 1.96 to 2.576, which would increase the required sample size.</p>
+</div>
+<p>:18. Find the sample size required to estimate the mean cost of CABG surgery with a margin of error of <nomathjax>$</nomathjax>2000 and at the 99% confidence level.</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<center>
+$
+<span class="math display">\[\begin{array}{1cl}
+n &amp;= \left( \frac{z^*\sigma}{m} \right)^2 \\
+&amp;= \left( \frac{2.576 \cdot 28705}{2000} \right)^2 \\
+&amp;= 1366.7
+\end{array}\]</span>
+$
+</center>
+<p>:We always round up in sample size calculations, so the required sample size is $ n=1367$.</p>
+</div>
+<p>:19. If we increase the confidence level, what happens to the required sample size?</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::If we increase the confidence level the required sample size also increases.</p>
+</div>
+<p> </p>
+</div>
+<p>===Example: Grade Inflation===</p>
+<p>The administration at BYU-Idaho is concerned about the possibility of grade inflation in their courses. Grades in a course are coded on a scale from 0 to 4, as given in the following table:</p>
+<center>
+{| class=“wikitable” style=“text-align:center” |colspan=“12” | Grade Point Scale at BYU-Idaho |- |A || A- || B+ || B || B- || C+ || C || C- || D+ || D || D- || F |- | 4.0 || 3.7 || 3.3 || 3.0 || 2.7 || 2.3 || 2.0 || 1.7 || 1.3 || 1.0 || 0.7 || 0.0 |- |}
+</center>
+<p>Historical records indicate that the standard deviation of the numerical value for the grades students’ receive in a course is <span class="math inline">\(\sigma = 0.68\)</span>.</p>
+<p>Due to the confidential nature of grades, the administration will not release the current value of the mean grade earned on campus. An old reference indicates that the true mean value of the grades earned at BYU-Idaho students is 3.15. It would be interesting to estimate the current mean grade point average at BYU-Idaho.</p>
+<p>You have been asked to help study the issue of grade inflation at BYU-Idaho. A certain number of individual grades will need to be sampled to estimate the mean grade earned at BYU-Idaho.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<p>:20. What sample size would be required to estimate the true mean grade earned at BYU-Idaho with 95% confidence and a margin of error of 0.2 grade points?</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<center>
+$
+<span class="math display">\[\begin{array}{1cl}
+n &amp;= \left( \frac{z^*\sigma}{m} \right)^2 \\
+&amp;= \left( \frac{1.96 \cdot 0.68}{0.2} \right)^2 \\
+&amp;= 44.4
+\end{array}\]</span>
+$
+</center>
+<p>::We always round up in sample size calculations, so the required sample size is $ n=45 $.</p>
+</div>
+<p>:21. What sample size would be required to estimate the true mean grade earned at BYU-Idaho with 98% confidence and a margin of error of 0.2 grade points?</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::Using the Normal Probability Applet, we find that <span class="math inline">\(z^* = 2.3263\)</span> for a 98% confidence level.<br />
+
+<center>
+$
+<span class="math display">\[\begin{array}{1cl}
+n &amp;= \left( \frac{z^*\sigma}{m} \right)^2 \\
+&amp;= \left( \frac{2.3263 \cdot 0.68}{0.2} \right)^2 \\
+&amp;= 62.6 
+\end{array}\]</span>
+$
+</center>
+<p>::We always round up in sample size calculations, so the required sample size is $ n=63 $.</p>
+</div>
+<p>:22. What sample size would be required to estimate the true mean grade earned at BYU-Idaho with 95% confidence and a margin of error of 0.1 grade points?</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<center>
+$
+<span class="math display">\[\begin{array}{1cl}
+n &amp;= \left( \frac{z^*\sigma}{m} \right)^2 \\
+&amp;= \left( \frac{1.96 \cdot 0.68}{0.1} \right)^2 \\
+&amp;= 177.6
+\end{array}\]</span>
+$
+</center>
+<p>:We always round up in sample size calculations, so the required sample size is $ n=178 $.</p>
+</div>
+<p>:23. What sample size would be required to estimate the true mean grade earned at BYU-Idaho with 98% confidence and a margin of error of 0.1 grade points?</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<center>
+$
+<span class="math display">\[\begin{array}{1cl}
+n &amp;= \left( \frac{z^*\sigma}{m} \right)^2 \\
+&amp;= \left( \frac{2.326 \cdot 0.68}{0.1} \right)^2 \\
+&amp;= 250.2
+\end{array}\]</span>
+$
+</center>
+<p>:We always round up in sample size calculations, so the required sample size is $ n=251 $.</p>
+</div>
+<p> </p>
+</div>
+<p>==Comments==</p>
+<p>What confidence level should be used? The most common choice for the confidence level is 95%. Other values are occasionally used, but this tends to meet the needs of most researchers.</p>
+<p>How do we find the value of <span class="math inline">\(\sigma\)</span>? In a statistics class, this number will be given to you in the problem. In real life, you will need to estimate this value based on either (<span class="math inline">\(i\)</span>) a previous study, (<span class="math inline">\(ii\)</span>) the results of a pilot study, or (<span class="math inline">\(iii\)</span>) your best professional judgement (an educated guess). Sometimes it is not possible to use data from a previous study or to easily conduct a pilot study. In these cases, the only thing a researcher can do is to use their understanding of the process to make a good guess of the value of <span class="math inline">\(\sigma\)</span>. Ultimately, sample size calculations are nothing more than a good estimate of the actual sample size that will be required.</p>
+<p>In many cases, budgets will limit the sample size that can be drawn. A researcher must assess whether a smaller-than-ideal sample will suffice for their needs. This is one of the difficult issues that arises in the actual practice of statistics.</p>
+<p>==Summary==</p>
+<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
+<p>{{Summary|10}}</p>
+<p>==Navigation==</p>
+<center>
+{| |- align=“center” | ‘’’Previous Reading’‘’: <br> Lesson 09: <br> [[Lesson 9: Inference for One Mean: Sigma Known (Hypothesis Test)|Inference for One Mean: Sigma Known (Hypothesis Test)]] |                    |’‘’This Reading’‘’: <br> Lesson 10: <br> Inference for One Mean: Sigma Known (Confidence Interval) |                    |’‘’Next Reading’’’: <br> Lesson 11: <br> [[Lesson 11: Inference for One Mean: Sigma Unknown|Inference for One Mean: Sigma Unknown]] |}
+</center>
+
+<br />
+<hr />
+<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

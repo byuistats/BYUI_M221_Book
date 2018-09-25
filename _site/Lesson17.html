@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Lesson 17</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 221B</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 4: Rules of Probability</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 5: Normal Distributions</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 6: The Central Limit Theorem</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 7: Probability Calculations for a Sample Mean</a>
+    </li>
+    <li class="dropdown-header">Lesson 8: Unit 1 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson09.html">Lesson 9: Hypothesis Test for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson10.html">Lesson 10: Confidence Interval for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson11.html">Lesson 11: Inference for One Mean (Sigma Unknown)</a>
+    </li>
+    <li>
+      <a href="Lesson12.html">Lesson 12: Inference for Match Pairs</a>
+    </li>
+    <li>
+      <a href="Lesson13.html">Lesson 13: Inference for Two Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson14.html">Lesson 14: Inference for Several Independent Samples</a>
+    </li>
+    <li class="dropdown-header">Lesson 15: Unit 2 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson16.htlm">Lesson 16: Describing Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson17.html">Lesson 17: Inference for One Proportion</a>
+    </li>
+    <li>
+      <a href="Lesson18.html">Lesson 18: Inference for Two Proportions</a>
+    </li>
+    <li>
+      <a href="Lesson19.html">Lesson 19: Inference for Independence of Categorical Data</a>
+    </li>
+    <li class="dropdown-header">Lesson 20: Unit 3 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson21.html">Lesson 21: Describing Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson22.html">Lesson 22: Simple Linear Regression</a>
+    </li>
+    <li>
+      <a href="Lesson23.html">Lesson 23: Inference for Bivariate Data</a>
+    </li>
+    <li class="dropdown-header">Lesson 24: Unit 4 Review</li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="Data.html">Data</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lesson 17</h1>
+
+</div>
+
+
+<iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+<div style="clear:both">
+
+</div>
+<p>{{:Tidbit:9}}</p>
+<p>==Lesson Outcomes==</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Lesson Outcomes" data-expandtext="Click Here to Show Outcomes for this Lesson">
+<p>By the end of this lesson, you should be able to: :* Confidence Intervals for a single proportion: :** Calculate and interpret a confidence interval for a single proportion given a confidence level. :** Identify a point estimate and margin of error for the confidence interval. :** Show the appropriate connections between the numerical and graphical summaries that support the confidence interval. :** Check the requirements for the confidence interval. :** Calculate a desired sample size given a level of confidence and margin of error (with or without a prior estimate of the population proportion).</p>
+<p>:* Hypothesis Testing for a single proportion: :** State the null and alternative hypothesis. :** Calculate the test-statistic and p-value of the hypothesis test. :** Assess the statistical significance by comparing the p-value to the α-level. :** Check the requirements for the hypothesis test. :** Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. :** Draw a correct conclusion for the hypothesis test.</p>
+</div>
+<p><br></p>
+<p>==Confidence Interval for One Proportion==</p>
+<p>===Honesty at Medical School=== [[<a href="File:Medical" class="uri">File:Medical</a> Symbol.png|right|150px|link=]]</p>
+<p>Frederick Sierles and his colleagues distributed an anonymous survey to students at two American medical schools. The questionnaire was given during class without any prior announcement to students. The authors of the study personally supervised the distribution and collection of the surveys. 95% of the students completed the survey, and students from all four years of medical school training were represented. A total of 428 individuals participated in the survey. Among this group, 249 people indicated that they had cheated in some way during medical school. The results were published in a journal article in 1980.</p>
+<p>We want to use the data from this study to generalize to a larger population. We are not usually interested in the ‘’particular’‘individuals’ responses. The reason the study was conducted is to provide an estimate of the true population proportion, <span class="math inline">\(p\)</span>. <span class="math inline">\(\hat p\)</span> is called a ‘’’point estimate’’’ of <span class="math inline">\(p\)</span>. The sample proportion, <span class="math inline">\(\hat p\)</span> is one point on the number line that estimates the value of the true proportion, <span class="math inline">\(p\)</span>.</p>
+<p>A point estimate like <span class="math inline">\(\hat p\)</span> is helpful, but it does not give us direct information on ‘’how close’’ it is to the true parameter, <span class="math inline">\(p\)</span>. We use a confidence interval to find a range of plausible values for the parameter.</p>
+<p>===Confidence Intervals===</p>
+<p>{{:Lesson_17:Content/F2F}}</p>
+<p>==Sample Size Calculations==</p>
+<p>{{Note|‘’’Think about it:’’’ What happens to the margin of error in a confidence interval if the sample size is increased?}}</p>
+<p>If you can reduce the margin of error by increasing the sample size, then you can achieve a specific margin of error by choosing a large enough sample. So, if you are planning a future study, you can estimate the sample size you need to obtain a desired margin of error, <span class="math inline">\(m\)</span>.</p>
+<p>The formula for the margin of error is: <span class="math display">\[
+m = z^* \sqrt{\frac{\hat{p} (1- \hat{p})}{n}}
+\]</span> If we solve this equation for <span class="math inline">\(n\)</span>, we get: <span class="math display">\[
+n = \left( \frac{z^*}{m} \right)^2 \hat{p} (1-\hat{p})
+\]</span> Note that this equation requires us to know the value of <span class="math inline">\(\hat{p}\)</span>. Unless we do a study, we do not know the value of <span class="math inline">\(\hat{p}\)</span>. Sometimes we have a prior estimate of the true proportion of successes, denoted <span class="math inline">\(p^*\)</span>.</p>
+<p>‘’’If we have a prior estimate for <span class="math inline">\(\hat{p}\)</span>,’‘’ (namely <span class="math inline">\(p^*\)</span>,) we can plug this value into the equation above to compute the sample size required to obtain our desired margin of error: <span class="math display">\[
+n = \left( \frac{z^*}{m} \right)^2 p^* (1-p^*)
+\]</span> where <span class="math inline">\(z^*\)</span> is determined by your confidence level, <span class="math inline">\(m\)</span> is your desired margin of error, and <span class="math inline">\(p^*\)</span> is an estimate of the true proportion of successes.’‘’If no prior estimate for <span class="math inline">\(p\)</span> is available’’’, we can use the following formula to compute our sample size: <span class="math display">\[
+n = \left( \frac{z^*}{2m} \right)^2
+\]</span> The latter formula (where no prior estimate for <span class="math inline">\(p\)</span> is available) will result in excessively large sample sizes if <span class="math inline">\(p\)</span> is small (say, less than 0.3) or large (say, greater than 0.7.) Otherwise, the results for the two equations will be fairly similar.</p>
+<p>No matter what value you obtain for the sample size, if it is not a whole number ‘’’round it up’’’ to the nearest whole number.</p>
+<p>===Example===</p>
+<p>If you want to find the sample size required to get a margin of error of <span class="math inline">\(m=0.03\)</span> with 95% confidence, and previous studies have shown that the true proportion is approximately equal to <span class="math inline">\(p^*=0.82\)</span>, then the sample size required would be: <span class="math display">\[
+\displaystyle {
+n = \left( \frac{z^*}{m} \right)^2 p^* (1-p^*) = \left( \frac{1.96}{0.03} \right)^2 (0.82) (1-0.82) = 630.02
+}
+\]</span> We need to round this answer up to the next larger whole number. So, you would need to collect <span class="math inline">\(n=631\)</span> observations to obtain the desired margin of error.</p>
+<p>==Hypothesis Test for One Proportion==</p>
+<p>[[<a href="File:StepsAll.png%7Clink" class="uri">File:StepsAll.png|link</a>=|center]]</p>
+<p>===Can You Taste PTC?===</p>
+<p>[[<a href="File:Step1.png%7Clink" class="uri">File:Step1.png|link</a>=]]</p>
+<p>The ability to taste the chemical Phenylthiocarbamide (PTC) is hereditary. Some people can taste it, while others cannot. The ability to taste PTC is typically assessed using paper test strips. When a PTC test strip is placed on the tongue, it will either taste like regular paper or else have a bitter taste.</p>
+<p>[[<a href="File:Step2.png%7Clink" class="uri">File:Step2.png|link</a>=]]</p>
+<p>It is believed that 70% of all people are able to taste PTC. Data were collected by Elise Johnson to investigate this claim. Volunteers were provided with PTC test strips and asked if they could taste anything besides paper.</p>
+<p>[[<a href="File:Step3.png%7Clink" class="uri">File:Step3.png|link</a>=]]</p>
+<p>Out of the 118 people who participated in the research, 89 indicated that they can taste PTC. The proportion of people in the sample who could taste PTC is <span class="math display">\[
+\hat p = \frac{89}{118} = 0.754
+\]</span> In other words, 75.4% of the people surveyed could taste the chemical.</p>
+<p>[[<a href="File:PTC" class="uri">File:PTC</a> Pie Graph Excel.PNG|300px|link=|center]]</p>
+<p>{{Tip|‘’’Review:’’’ For a review of how to make pie graphs and bar charts in {{Name}}, read [[Lesson 16: Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion|Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion]]}}</p>
+<p>[[<a href="File:Step4.png%7Clink" class="uri">File:Step4.png|link</a>=]]</p>
+<p>The empirical research suggested that the proportion of people who can taste PTC is <span class="math inline">\(\frac{89}{118} = 0.754\)</span>, or 75.4%. Is this significantly different from the assumed value of 0.70 (i.e., 70%)? We can test this question using a hypothesis test.</p>
+<p>If the following conditions are satisfied: :<em><span class="math inline">\(np \ge 10\)</span> :</em><span class="math inline">\(n(1-p) \ge 10\)</span></p>
+<p>then the sample size is large enough that the Central Limit Theorem suggests the sample proportion, <span class="math inline">\(\hat p\)</span>, is approximately normal. Also, the true mean of <span class="math inline">\(\hat p\)</span> is <span class="math inline">\(p\)</span>, and the standard deviation is <span class="math inline">\(\sqrt{\frac{p \cdot (1-p)}{n}}\)</span>.</p>
+<p>Notice that the requirements are satisfied for the PTC data: <span class="math display">\[
+\begin{array}{ll}
+np = 118 \cdot 0.70 = 82.6 \ge 10                &amp; \surd \\
+n(1-p) = 118 \cdot (1-0.70) = 35.4 \ge 10 &amp; \surd
+\end{array}
+\]</span></p>
+<p>We can use a procedure that mimics the test for a single mean with <span class="math inline">\(\sigma\)</span> known from the lesson titled [[Lesson 9: Inference for One Mean: Sigma Known (Hypothesis Test)|Inference for One Mean: Sigma Known (Hypothesis Test)]] to conduct a test for a single proportion.</p>
+<p>It is assumed that the true proportion of people who can taste PTC is 0.70. This is the null hypothesis. The alternative hypothesis is that the true proportion is different from 0.70. <span class="math display">\[
+\begin{align}
+H_0: &amp; p = 0.70 \\
+H_a: &amp; p \ne 0.70
+\end{align}
+\]</span> We will use the <span class="math inline">\(\alpha=0.05\)</span> level of significance in this test.</p>
+<p>If the requirements are satisfied, then <span class="math inline">\(\hat p\)</span> is approximately normal with mean <span class="math inline">\(p\)</span> and standard deviation <span class="math inline">\(\sqrt{\frac{p \cdot (1-p)}{n}}\)</span>. The test can be based on the standard normal (<span class="math inline">\(z\)</span>) distribution. The test statistic is: <span class="math display">\[
+z = \frac{\textrm{value}-\textrm{mean}}{\textrm{standard deviation}} = \frac{\hat p - p}{\sqrt{\frac{p(1-p)}{n}}} = \frac{\frac{89}{118} - 0.70}{\sqrt{\frac{0.70(1-0.70)}{118}}} = 1.286
+\]</span></p>
+<p>Remember, we assume that the null hypothesis is true, so we use the value given in the null hypothesis for <span class="math inline">\(p\)</span>. Using the NormalApplet, you can find the <span class="math inline">\(P\)</span>-value. This is a two-tailed test, since the alternative hypothesis includes both values above 0.70 and below 0.70. In the applet, make sure both tails are shaded, then enter the <span class="math inline">\(z\)</span>-score of 1.286.</p>
+<p>[[<a href="File:ZShadeBothTails-1-286.png%7Clink" class="uri">File:ZShadeBothTails-1-286.png|link</a>=|center]]</p>
+<p>The combined area in the two tails is 0.1984, which is greater than <span class="math inline">\(\alpha = 0.05\)</span>. We fail to reject the null hypothesis.</p>
+<p>[[<a href="File:Step5.png%7Clink" class="uri">File:Step5.png|link</a>=]]</p>
+<p>We conclude that there is insufficient evidence to suggest that the true proportion of the population that can taste PTC is different from 0.70. There is no reason to revise existing perspectives on the prevalence of the ability to taste PTC.</p>
+<div class="QuestionsHeading">
+Answer the following question:
+</div>
+<div class="Questions">
+<p>:14. Compare and contrast the test for one mean with <span class="math inline">\(\sigma\)</span> known and the test for one proportion. Give at least two similarities and two differences.</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::Similarities: There is one population. Both test are based on the <span class="math inline">\(z\)</span> statistic. Both tests require the use of the normal probability applet.</p>
+<p>::Differences: The test for means involves quantitative data, the test for a proportion involves categorical data. The formulas for the <span class="math inline">\(z\)</span>-score differ.</p>
+</div>
+<p> </p>
+</div>
+<p>===Using Excel to perform these calculations===</p>
+<p>{{<a href="Content:Excel/SPSS-One" class="uri">Content:Excel/SPSS-One</a> Proportion HT}}</p>
+<p>===Water Quality===</p>
+<p>[[<a href="File:Gorges_du_Verdon_River_from_Bottom_0364.jpg%7Cframe%7Clink" class="uri">File:Gorges_du_Verdon_River_from_Bottom_0364.jpg|frame|link</a>=|From [<a href="http://commons.wikimedia.org/wiki/File:Gorges_du_Verdon_River_from_Bottom_0364.jpg" class="uri">http://commons.wikimedia.org/wiki/File:Gorges_du_Verdon_River_from_Bottom_0364.jpg</a> commons.wikimedia.com] ]][[<a href="File:Step1.png%7Clink" class="uri">File:Step1.png|link</a>=]]</p>
+<p>Macroinvertebrates are small insects (without an internal skeleton) that live on the bottom of a stream. These insects are ideal for monitoring changes in water quality, because they (1) live nearly all their life in the water, (2) are easy to collect and identify, (3) often live for several years, (4) have a limited ability to migrate, and (5) they are influenced by environmental conditions.</p>
+<p>In any population of macroinvertebrates, there will be indicators of good health and indicators of poor health. Data are collected by capturing macroinvertebrates and recording whether they indicate good health or poor health for the river. In particular sections of a small river near Bozeman, Montana, about 60% of the indicators observed have historically been associated with good health.</p>
+<p>[[<a href="File:Step2.png%7Clink" class="uri">File:Step2.png|link</a>=]]</p>
+<p>Researchers suspect that the water quality in the area has decreased, suggesting that less than 60% of the indicators will show good health. A random sample of macroinvertebrates were captured from the river.</p>
+<p>[[<a href="File:Step3.png%7Clink" class="uri">File:Step3.png|link</a>=]]</p>
+<p>Among the <span class="math inline">\(n=40\)</span> observed indicators of health, <span class="math inline">\(x=19\)</span> suggested good health. Use this information to answer the following question.</p>
+<div class="QuestionsHeading">
+Answer the following question:
+</div>
+<div class="Questions">
+<p>:15. What is the proportion of the observed indicators that suggested good health? Express your answer as a decimal and a percentage.</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<center>
+$  $
+</center>
+<p>{{Course_Filter_Two|A=[[<a href="File:Water" class="uri">File:Water</a> quality pie graph Excel.PNG|300px|link=|center]]|B=[[<a href="File:Water" class="uri">File:Water</a> quality pie graph SPSS.PNG|300px|link=|center]]}}</p>
+</div>
+<p> </p>
+</div>
+<p>[[<a href="File:Step4.png%7Clink" class="uri">File:Step4.png|link</a>=]]</p>
+<p>The following questions will guide you through the process of conducting a hypothesis test to determine if the water quality has decreased. Use <span class="math inline">\(\alpha=0.05\)</span> for this test.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+:16. The two requirements required to conduct a hypothesis test for one proportion are
+<center>
+$
+<span class="math display">\[\begin{array}{l}
+np \ge 10  \\
+n(1-p) \ge 10
+\end{array}\]</span>
+$
+</center>
+<p>::Are these requirements satisfied?</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::Yes, the requirements are satisfied.
+<center>
+$
+<span class="math display">\[\begin{array}{ll}
+np = 40 \cdot 0.6 = 24 \ge 10 &amp; \surd  \\
+n(1-p) = 40 \cdot (1-0.6) = 16  \ge 10  &amp; \surd
+\end{array}\]</span>
+$
+</center>
+</div>
+<p>:17. The null hypothesis is <span class="math inline">\(H_0: p = 0.6\)</span> What is the alternative hypothesis?</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<center>
+<span class="math inline">\(H_a: p &lt; 0.6\)</span>
+</center>
+</div>
+:18. Fill in the blanks to compute the <span class="math inline">\(z\)</span>-score.<br />
+<center>
+$  $
+</center>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+::The missing value is: <br />
+<center>
+<span class="math inline">\(\displaystyle{\hat p = \frac{19}{40}=0.475}\)</span>
+</center>
+</div>
+<p>:19. The <span class="math inline">\(P\)</span>-value will be the area under the normal curve to the left of <span class="math inline">\(z\)</span>. Why will you only shade the left tail?</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::We want to test if the water quality has ‘’decreased’’. ::The alternative hypothesis is that the proportion of healthy indicators is less than 0.6.</p>
+</div>
+<p>:20. Using the Normal Probability Applet, it is determined that the area to the left of <span class="math inline">\(z=-1.614\)</span> is 0.053. [[<a href="File:ShadeLeftZ-1-614.png%7Clink" class="uri">File:ShadeLeftZ-1-614.png|link</a>=|center]] :The shaded area in this figure (0.053) represents the <span class="math inline">\(P\)</span>-value for this test. What is the decision for this test, do we reject the null hypothesis or fail to reject the null hypothesis? Give an English sentence summarizing the conclusion.</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::<span class="math inline">\(P\textrm{-value} = 0.053 &gt; 0.05 = \alpha\)</span>. ::We fail to reject the null hypothesis. ::There is insufficient evidence to suggest that the true proportion of indicators that suggest good health is less than 0.6.</p>
+</div>
+<p> </p>
+</div>
+<p>[[<a href="File:Step5.png%7Clink" class="uri">File:Step5.png|link</a>=]]</p>
+<p>Even though the proportion of indicators that suggested good health was less that 60%, it was not statistically significantly less than 60%. Unless future research indicates to the contrary, we cannot say that the water quality in this river has decreased.</p>
+<p>==Summary==</p>
+<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
+<p>{{Summary|17}}</p>
+<p>==Navigation==</p>
+<p>{| |- align=“center” | ‘’’Previous Reading’‘’: <br> Lesson 16: <br> [[Lesson 16: Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion|Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion]] |                    |’‘’This Reading’‘’: <br> Lesson 17: <br> Inference for One Proportion |                    |’‘’Next Reading’’’: <br> Lesson 18: <br> [[Lesson 18: Inference for Two Proportions|Inference for Two Proportions]] |}</p>
+
+<br />
+<hr />
+<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

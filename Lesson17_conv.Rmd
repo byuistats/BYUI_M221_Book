@@ -1,0 +1,328 @@
+---
+title: "Lesson 17"
+output: 
+  html_document:
+    theme: cerulean
+    toc: true
+    toc_float: true
+---
+
+<iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<div style="clear:both"></div>
+
+{{:Tidbit:9}}
+
+
+## Lesson Outcomes
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+By the end of this lesson, you should be able to:
+:* Confidence Intervals for a single proportion: 
+:** Calculate and interpret a confidence interval for a single proportion given a confidence level.
+:** Identify a point estimate and margin of error for the confidence interval.
+:** Show the appropriate connections between the numerical and graphical summaries that support the confidence interval. 
+:** Check the requirements for the confidence interval.
+:** Calculate a desired sample size given a level of confidence and margin of error (with or without a prior estimate of the population proportion). 
+
+:* Hypothesis Testing for a single proportion:
+:** State the null and alternative hypothesis. 
+:** Calculate the test-statistic and p-value of the hypothesis test.
+:** Assess the statistical significance by comparing the p-value to the α-level.
+:** Check the requirements for the hypothesis test.
+:** Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
+:** Draw a correct conclusion for the hypothesis test.
+
+</div>
+
+<br>
+
+## Confidence Interval for One Proportion
+
+### Honesty at Medical School
+<img src="./Images/Medical Symbol.png|right|150px">
+
+Frederick Sierles and his colleagues distributed an anonymous survey to students at two American medical schools.  The questionnaire was given during class without any prior announcement to students.  The authors of the study personally supervised the distribution and collection of the surveys.  95% of the students completed the survey, and students from all four years of medical school training were represented.  A total of 428 individuals participated in the survey.  Among this group, 249 people indicated that they had cheated in some way during medical school. The results were published in a journal article in 1980.
+
+We want to use the data from this study to generalize to a larger population.  We are not usually interested in the *particular* individuals' responses.  The reason the study was conducted is to provide an estimate of the true population proportion, $p$.  $\hat p$ is called a **point estimate** of $p$.  The sample proportion, $\hat p$ is one point on the number line that estimates the value of the true proportion, $p$.
+
+A point estimate like $\hat p$ is helpful, but it does not give us direct information on *how close* it is to the true parameter, $p$.  We use a confidence interval to find a range of plausible values for the parameter.
+
+### Confidence Intervals
+
+{{:Lesson_17:Content/F2F}}
+
+## Sample Size Calculations
+
+{{Note|**Think about it:** What happens to the margin of error in a confidence interval if the sample size is increased?}}
+
+If you can reduce the margin of error by increasing the sample size, then you can achieve a specific margin of error by choosing a large enough sample.  So, if you are planning a future study, you can estimate the sample size you need to obtain a desired margin of error, $m$.
+
+The formula for the margin of error is:
+$$
+m = z^* \sqrt{\frac{\hat{p} (1- \hat{p})}{n}}
+$$
+If we solve this equation for $n$, we get:
+$$
+n = \left( \frac{z^*}{m} \right)^2 \hat{p} (1-\hat{p})
+$$
+Note that this equation requires us to know the value of $\hat{p}$.  Unless we do a study, we do not know the value of $\hat{p}$.
+Sometimes we have a prior estimate of the true proportion of successes, denoted $p^*$.
+
+**If we have a prior estimate for $\hat{p}$,** (namely $p^*$,) we can plug this value into the equation above to compute the sample size required to obtain our desired margin of error:
+$$
+n = \left( \frac{z^*}{m} \right)^2 p^* (1-p^*)
+$$
+where $z^*$ is determined by your confidence level, $m$ is your desired margin of error, and $p^*$ is an estimate of the true proportion of successes.
+**If no prior estimate for $p$ is available**, we can use the following formula to compute our sample size:
+$$
+n = \left( \frac{z^*}{2m} \right)^2
+$$
+The latter formula (where no prior estimate for $p$ is available) will result in excessively large sample sizes if $p$ is small (say, less than 0.3) or large (say, greater than 0.7.)  Otherwise, the results for the two equations will be fairly similar.
+
+No matter what value you obtain for the sample size, if it is not a whole number **round it up** to the nearest whole number.
+
+### Example
+
+If you want to find the sample size required to get a margin of error of $m=0.03$ with 95% confidence, and previous studies have shown that the true proportion is approximately equal to $p^*=0.82$, then the sample size required would be:
+$$
+\displaystyle {
+n = \left( \frac{z^*}{m} \right)^2 p^* (1-p^*) = \left( \frac{1.96}{0.03} \right)^2 (0.82) (1-0.82) = 630.02
+}
+$$
+We need to round this answer up to the next larger whole number.  So, you would need to collect $n=631$ observations to obtain the desired margin of error.
+
+## Hypothesis Test for One Proportion
+
+<img src="./Images/StepsAll.png">
+
+
+### Can You Taste PTC?
+
+<img src="./Images/Step1.png">
+
+The ability to taste the chemical Phenylthiocarbamide (PTC) is hereditary.  Some people can taste it, while others cannot.  The ability to taste PTC is typically assessed using paper test strips. When a PTC test strip is placed on the tongue, it will either taste like regular paper or else have a bitter taste.
+
+
+<img src="./Images/Step2.png">
+
+It is believed that 70% of all people are able to taste PTC. Data were collected by Elise Johnson to investigate this claim. Volunteers were provided with PTC test strips and asked if they could taste anything besides paper.
+
+
+<img src="./Images/Step3.png">
+
+Out of the 118 people who participated in the research, 89 indicated that they can taste PTC.  The proportion of people in the sample who could taste PTC is
+$$
+\hat p = \frac{89}{118} = 0.754
+$$
+In other words, 75.4% of the people surveyed could taste the chemical.
+
+<img src="./Images/PTC Pie Graph Excel.PNG|300px">
+
+{{Tip|**Review:**  For a review of how to make pie graphs and bar charts in {{Name}}, read [[Lesson 16: Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion|Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion]]}}
+
+<img src="./Images/Step4.png">
+
+The empirical research suggested that the proportion of people who can taste PTC is $\frac{89}{118} = 0.754$, or 75.4%.
+Is this significantly different from the assumed value of 0.70 (i.e., 70%)?  We can test this question using a hypothesis test.
+
+If the following conditions are satisfied:
+:*$np \ge 10$
+:*$n(1-p) \ge 10$
+
+then the sample size is large enough that the Central Limit Theorem suggests the sample proportion, $\hat p$, is approximately normal.
+Also, the true mean of $\hat p$ is $p$, and the standard deviation is $\sqrt{\frac{p \cdot (1-p)}{n}}$.
+
+Notice that the requirements are satisfied for the PTC data:
+$$
+\begin{array}{ll}
+np = 118 \cdot 0.70 = 82.6 \ge 10 				 & \surd \\
+n(1-p) = 118 \cdot (1-0.70) = 35.4 \ge 10 & \surd
+\end{array}
+$$
+
+We can use a procedure that mimics the test for a single mean with $\sigma$ known from the lesson titled [[Lesson 9: Inference for One Mean: Sigma Known (Hypothesis Test)|Inference for One Mean: Sigma Known (Hypothesis Test)]] to conduct a test for a single proportion.
+
+It is assumed that the true proportion of people who can taste PTC is 0.70.  This is the null hypothesis.  The alternative hypothesis is that the true proportion is different from 0.70.
+$$
+\begin{align}
+H_0: & p = 0.70 \\
+H_a: & p \ne 0.70
+\end{align}
+$$
+We will use the $\alpha=0.05$ level of significance in this test.
+
+If the requirements are satisfied, then $\hat p$ is approximately normal with mean $p$ and standard deviation $\sqrt{\frac{p \cdot (1-p)}{n}}$.  The test can be based on the standard normal ($z$) distribution.  The test statistic is:
+$$
+z = \frac{\textrm{value}-\textrm{mean}}{\textrm{standard deviation}} = \frac{\hat p - p}{\sqrt{\frac{p(1-p)}{n}}} = \frac{\frac{89}{118} - 0.70}{\sqrt{\frac{0.70(1-0.70)}{118}}} = 1.286
+$$
+
+Remember, we assume that the null hypothesis is true, so we use the value given in the null hypothesis for $p$.
+Using the NormalApplet, you can find the $P$-value.  This is a two-tailed test, since the alternative hypothesis includes both values above 0.70 and below 0.70.  In the applet, make sure both tails are shaded, then enter the $z$-score of 1.286.
+
+<img src="./Images/ZShadeBothTails-1-286.png">
+
+The combined area in the two tails is 0.1984, which is greater than $\alpha = 0.05$.  We fail to reject the null hypothesis.
+
+
+<img src="./Images/Step5.png">
+
+We conclude that there is insufficient evidence to suggest that the true proportion of the population that can taste PTC is different from 0.70.
+There is no reason to revise existing perspectives on the prevalence of the ability to taste PTC.
+
+<div class="QuestionsHeading">Answer the following question:</div>
+<div class="Questions">
+:14. Compare and contrast the test for one mean with $\sigma$ known and the test for one proportion.  Give at least two similarities and two differences.
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::Similarities: There is one population. Both test are based on the $z$ statistic. Both tests require the use of the normal probability applet.
+
+::Differences: The test for means involves quantitative data, the test for a proportion involves categorical data. The formulas for the $z$-score differ.
+</div>
+&nbsp;
+</div>
+
+### Using Excel to perform these calculations
+
+{{Content:Excel/SPSS-One Proportion HT}}
+
+### Water Quality
+
+<img src="./Images/Gorges_du_Verdon_River_from_Bottom_0364.jpg|frame">
+<img src="./Images/Step1.png">
+
+Macroinvertebrates are small insects (without an internal skeleton) that live on the bottom of a stream. These insects are ideal for monitoring changes in water quality, because they (1) live nearly all their life in the water, (2) are easy to collect and identify, (3) often live for several years, (4) have a limited ability to migrate, and (5) they are influenced by environmental conditions.
+
+In any population of macroinvertebrates, there will be indicators of good health and indicators of poor health. Data are collected by capturing macroinvertebrates and recording whether they indicate good health or poor health for the river.  In particular sections of a small river near Bozeman, Montana, about 60% of the indicators observed have historically been associated with good health.
+
+
+<img src="./Images/Step2.png">
+
+Researchers suspect that the water quality in the area has decreased, suggesting that less than 60% of the indicators will show good health.  A random sample of macroinvertebrates were captured from the river.
+
+
+<img src="./Images/Step3.png">
+
+Among the $n=40$ observed indicators of health, $x=19$ suggested good health. Use this information to answer the following question.
+
+<div class="QuestionsHeading">Answer the following question:</div>
+<div class="Questions">
+:15. What is the proportion of the observed indicators that suggested good health?  Express your answer as a decimal and a percentage.
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+$ \displaystyle {\hat p = \frac{x}{n} = \frac{19}{40} = 0.475~\text{or}~47.5\%} $
+</center> 
+
+{{Course_Filter_Two|A=[[File:Water quality pie graph Excel.PNG|300px|link=|center]]|B=[[File:Water quality pie graph SPSS.PNG|300px|link=|center]]}}
+</div>
+&nbsp;
+</div>
+
+
+<img src="./Images/Step4.png">
+
+The following questions will guide you through the process of conducting a hypothesis test to determine if the water quality has decreased.  Use $\alpha=0.05$ for this test.
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:16.  The two requirements required to conduct a hypothesis test for one proportion are
+<center>
+$
+\begin{array}{l}
+np \ge 10  \\
+n(1-p) \ge 10
+\end{array}
+$
+</center>
+::Are these requirements satisfied?
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::Yes, the requirements are satisfied.
+<center>
+$
+\begin{array}{ll}
+np = 40 \cdot 0.6 = 24 \ge 10 & \surd  \\
+n(1-p) = 40 \cdot (1-0.6) = 16  \ge 10  & \surd
+\end{array}
+$
+</center>
+</div>
+
+
+:17. The null hypothesis is $H_0: p = 0.6$ What is the alternative hypothesis?
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+$H_a: p < 0.6$
+</center>
+</div>
+
+
+:18. Fill in the blanks to compute the $z$-score.<br />
+<center>
+$
+\displaystyle{
+z = \frac{\hat p - p}{\sqrt{\frac{p(1-p)}{n}}}
+= \frac{()-0.60}{\sqrt{\frac{0.60(1-0.60)}{40}}}
+= -1.614}
+$
+</center>
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::The missing value is: <br />
+<center>
+$\displaystyle{\hat p = \frac{19}{40}=0.475}$
+</center>
+</div>
+
+
+:19. The $P$-value will be the area under the normal curve to the left of $z$. Why will you only shade the left tail?
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::We want to test if the water quality has *decreased*.
+::The alternative hypothesis is that the proportion of healthy indicators is less than 0.6.
+</div>
+
+
+:20. Using the Normal Probability Applet, it is determined that the area to the left of $z=-1.614$ is 0.053.
+<img src="./Images/ShadeLeftZ-1-614.png">
+:The shaded area in this figure (0.053) represents the $P$-value for this test. What is the decision for this test, do we reject the null hypothesis or fail to reject the null hypothesis? Give an English sentence summarizing the conclusion.
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::$P\textrm{-value} = 0.053 > 0.05 = \alpha$.
+::We fail to reject the null hypothesis.
+::There is insufficient evidence to suggest that the true proportion of indicators that suggest good health is less than 0.6.
+</div>
+&nbsp;
+</div>
+
+
+
+<img src="./Images/Step5.png">
+
+Even though the proportion of indicators that suggested good health was less that 60%, it was not statistically significantly less than 60%.  Unless future research indicates to the contrary, we cannot say that the water quality in this river has decreased.
+
+## Summary
+
+<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
+{{Summary|17}}
+
+## Navigation
+
+{|
+|- align="center"
+| **Previous Reading**: <br> Lesson 16:  <br> [[Lesson 16: Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion|Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion]]
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| **This Reading**: <br> Lesson 17:  <br> Inference for One Proportion
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| **Next Reading**: <br> Lesson 18:  <br> [[Lesson 18: Inference for Two Proportions|Inference for Two Proportions]]
+|}

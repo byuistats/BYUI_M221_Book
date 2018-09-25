@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Lesson 5</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 221B</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 4: Rules of Probability</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 5: Normal Distributions</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 6: The Central Limit Theorem</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 7: Probability Calculations for a Sample Mean</a>
+    </li>
+    <li class="dropdown-header">Lesson 8: Unit 1 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson09.html">Lesson 9: Hypothesis Test for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson10.html">Lesson 10: Confidence Interval for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson11.html">Lesson 11: Inference for One Mean (Sigma Unknown)</a>
+    </li>
+    <li>
+      <a href="Lesson12.html">Lesson 12: Inference for Match Pairs</a>
+    </li>
+    <li>
+      <a href="Lesson13.html">Lesson 13: Inference for Two Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson14.html">Lesson 14: Inference for Several Independent Samples</a>
+    </li>
+    <li class="dropdown-header">Lesson 15: Unit 2 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson16.htlm">Lesson 16: Describing Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson17.html">Lesson 17: Inference for One Proportion</a>
+    </li>
+    <li>
+      <a href="Lesson18.html">Lesson 18: Inference for Two Proportions</a>
+    </li>
+    <li>
+      <a href="Lesson19.html">Lesson 19: Inference for Independence of Categorical Data</a>
+    </li>
+    <li class="dropdown-header">Lesson 20: Unit 3 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson21.html">Lesson 21: Describing Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson22.html">Lesson 22: Simple Linear Regression</a>
+    </li>
+    <li>
+      <a href="Lesson23.html">Lesson 23: Inference for Bivariate Data</a>
+    </li>
+    <li class="dropdown-header">Lesson 24: Unit 4 Review</li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="Data.html">Data</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lesson 5</h1>
+
+</div>
+
+
+<script type="text/javascript">
+ function showhide(id) {
+    var e = document.getElementById(id);
+    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+ }
+</script>
+<iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+<div style="clear:both">
+
+</div>
+<p>{{YouTubeLesson|url=<a href="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC94-G9-36oCixDqF97LTx6S" class="uri">http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC94-G9-36oCixDqF97LTx6S</a>}}</p>
+<div id="lesson-outcomes" class="section level2">
+<h2>Lesson Outcomes</h2>
+<p>By the end of this lesson, you should be able to: :* State the properties of a normal density curve. :* Calculate the z-score of an individual observation, given the mean and standard deviation. :* Interpret a z-score. :* Calculate probability as area under a normal density curve. :* Assess normality using a QQ-plot.</p>
+</div>
+<div id="normal-distributions-and-normal-computations" class="section level2">
+<h2>Normal Distributions and Normal Computations</h2>
+<div id="baseball-batting-averages" class="section level3">
+<h3>Baseball Batting Averages</h3>
+<p><img src="Images/Baseball.jpg"></p>
+<p>In baseball, a player called the “pitcher” throws a ball to a player called the “batter.” The batter swings a wooden or metal bat and tries to hit the ball. A “hit” is made when the batter successfully hits the ball and runs to a point in the field called first base. A player’s batting average is calculated as the ratio of the number of hits a player makes divided by the number of times the player has attempted to hit the ball or in other words, been “at bat.” Sean Lahman reported the batting averages of several professional baseball players in the United States. (Lahman, 2010) The file <span class="Link">[[Data|BattingAverages]]</span> contains his data.</p>
+<p>The following histogram summarizes the batting averages for these professional baseball players:</p>
+<p><img src="Images/Lesson_03_Activity_06_Reading_1.jpg"></p>
+<p>Notice the bell-shaped distribution of the data.</p>
+<p>Suppose we want to estimate the probability that a randomly selected player will have a batting average that is greater than 0.280. One way to do this would be to find the proportion of players in the data set who have a batting average above 0.280. We can do this by finding the number of players who fall into each of the red-colored bins below and dividing this number by the total number of players.</p>
+<p><img src="Images/L03_A06_R02.jpg"></p>
+<p>In other words, we could find the proportion of the total area of the bars that is shaded red out of the combined area of all the bars. This gives us the proportion of players whose batting averages are greater than 0.280.</p>
+<p>Out of the 446 players listed, there are a total of 133 players with batting averages over 0.280. This suggests that the proportion of players whose batting average exceeds 0.280 is:</p>
+<p><span class="math display">\[\displaystyle{\frac{133}{446}} = 0.298\]</span></p>
+<p>Alternatively, we can use the fact that the data follow a bell-shaped distribution to find the probability that a player has a batting average above 0.280.</p>
+</div>
+<div id="density-curves" class="section level3">
+<h3>Density Curves</h3>
+<p>The bell-shaped curve superimposed on the histogram above is called a density curve. It is essentially a smooth histogram. Notice how closely this curve follows the observed data.</p>
+<p>The density curve illustrated on the histogram of the batting average data is special. It is called a <strong>normal density curve</strong>. This density curve is symmetric and has a bell-shape.</p>
+<p>The normal density curve is also referred to as a normal distribution or a “Gaussian” distribution (after Carl Friedrich Gauss.)</p>
+<p>The normal density curve appears in many applications in business, nature, medicine, psychology, sociology, and more. We will use the normal density curve extensively in this course.</p>
+<p>All density curves, including normal density curves, have two basic properties:</p>
+<p>:1. The total area under the curve equals 1. :2. The density curve always lies on or above the horizontal axis.</p>
+<p>Because of these two properties, the area under the curve can be treated as a probability. If we want to find the probability that a randomly selected baseball player will have a batting average between some range of values, we only need to find the area under the curve in that range. This is illustrated by the region shaded in blue in the figure below.</p>
+<p><img src="Images/L03_A06_R03.jpg"></p>
+<p>A normal density curve is uniquely determined by its mean, <span class="math inline">\(\mu\)</span>, and its standard deviation, <span class="math inline">\(\sigma\)</span>. So, if random variables follow a normal distribution with a known mean and standard deviation, then we can calculate any probabilities related to that variable by finding the area under the curve.</p>
+<p>When the mean of a normal distribution is 0 and its standard deviation is 1, we call it the <strong>standard normal distribution</strong>.</p>
+<p>We will return to this example later, and we will find the area shaded in blue.</p>
+<div id="characteristics-of-the-normal-curve" class="section level4">
+<h4>Characteristics of the Normal Curve</h4>
+</div>
+<div id="introduction-to-z-scores" class="section level4">
+<h4>=Introduction to <span class="math inline">\(z\)</span>-scores=</h4>
+<p>In Ghana, the mean height of young adult women is normally distributed with mean <span class="math inline">\(159.0\)</span> cm and standard deviation <span class="math inline">\(4.9\)</span> cm. (Monden &amp; Smits, 2009) Serwa, a female BYU-Idaho student from Ghana, is <span class="math inline">\(169.0\)</span> cm tall. Her height is <span class="math inline">\(169.0 - 159.0 = 10\)</span> cm greater than the mean. When compared to the standard deviation, she is about two standard deviations (<span class="math inline">\(\approx 2 \times 4.9\)</span> cm) taller than the mean. <!-- Two standard deviations is only an approximate.  Since $10/4.9 = 2.041$, she is 2.04 standard deviations greater than the mean.--></p>
+<p>The heights of men are also normally distributed. The mean height of young adult men in Brazil is <span class="math inline">\(173.0\)</span> cm (“Orçamento,” 2010), and the standard deviation for the population is <span class="math inline">\(6.3\)</span> cm. (Castilho &amp; Lahr, 2001) A Brazilian BYU-Idaho student, Gustavo, is <span class="math inline">\(182.5\)</span> cm tall. Compared to other Brazilians, he is taller than the mean height of Brazilian men.</p>
+<div class="QuestionsHeading">
+Answer the following question:
+</div>
+<div class="Questions">
+<p>:1. Approximately how many standard deviations above the mean is Gustavo’s height?</p>
+<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q1" style="display:none;">
+<p>
+Gustavo’s height is $ 182.5 − 173.0 = 9.5   $ above the mean. The standard deviation of the height of Brazilian men is 6.3 cm, so his height is $   $ standard deviations above the mean.
+</p>
+</div>
+<p> </p>
+</div>
+<p><br/></p>
+</div>
+<div id="computing-z-scores" class="section level4">
+<h4>=Computing <span class="math inline">\(z\)</span>-scores=</h4>
+<p>When we examined the heights of Serwa and Gustavo, we compared their height to the standard deviation. If we look carefully at the steps we did, we subtracted each individual’s height from the mean height for people of the same gender and nationality.</p>
+<p>This shows how much taller or shorter the person is than the mean height. In order to compare the height difference to the standard deviation, we divide the difference by the standard deviation. This gives the number of standard deviations the individual is above or below the mean.</p>
+<p>For example, Serwa’s height is 169.0 cm. If we subtract the mean and divide by the standard deviation, we get <span class="math display">\[z = \frac{169.0 - 159.0}{4.9} = 2.041.\]</span> We call this number a <span class="math inline">\(z\)</span>-score. The <span class="math inline">\(z\)</span>-score for a data value tells how many standard deviations away from the mean the observation lies. If the <span class="math inline">\(z\)</span>-score is positive, then the observed value lies above the mean. A negative <span class="math inline">\(z\)</span>-score implies that the value was below the mean.</p>
+<p>We compute the <span class="math inline">\(z\)</span>-score for Gustavo’s height similarly, and obtain <span class="math display">\[z = \frac{182.5 - 173.0}{6.3} = 1.508.\]</span> Gustavo’s <span class="math inline">\(z\)</span>-score is 1.508. As noted above, this is about one-and-a-half standard deviations above the mean. In general, if an observation <span class="math inline">\(x\)</span> is taken from a random process with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>, then the <span class="math inline">\(z\)</span>-score is <span class="math display">\[z = \frac{x -\mu }{\sigma}.\]</span></p>
+<p>The <span class="math inline">\(z\)</span>-score can be computed for data from any distribution, but it is most commonly applied to normally distributed data.</p>
+</div>
+<div id="rule-for-bell-shaped-distributions" class="section level4">
+<h4>=68-95-99.7% Rule for Bell-shaped Distributions=</h4>
+<p>Heights of women (or men) in a particular population follow a normal distribution. Most people’s heights are close to the mean. A few are very tall or very short. We would like to make a more precise statement than this.</p>
+<div class="Emphasis">
+<p>:For any bell-shaped distribution, :<em>68% of the data will lie within 1 standard deviation of the mean, :</em>95% of the data will lie within 2 standard deviations of the mean, and :*99.7% of the data will lie within 3 standard deviations of the mean.</p>
+<p>:This is called the 68-95-99.7% Rule for Bell-shaped Distributions. Some statistics books refer to this as the Empirical Rule.</p>
+</div>
+<p><img src="Images/L03_A06_R04.jpg"></p>
+<p>Approximately 68% of the observations from a bell-shaped distribution will be between the values of <span class="math inline">\(\mu -~\sigma~\)</span>and <span class="math inline">\(\mu +~\sigma~\)</span>. Consider the heights of young adult women in Ghana. We expect that about 68% of Ghanian women have a height between the values of <span class="math display">\[\mu -~\sigma = 159.0 − 4.9 = 154.1~\text{cm}\]</span> and <span class="math display">\[\mu +~\sigma = 159.0 + 4.9 = 163.9~\text{cm}.\]</span></p>
+<p>So, if a female is chosen at random from all the young adult women in Ghana, about 68% of those chosen will have a height between 154.1 and 163.9 cm. Similarly, 95% of the women’s heights will be between the values of <span class="math display">\[\mu − 2\sigma = 159.0 − 2(4.9) = 149.2~\text{cm}\]</span> and <span class="math display">\[\mu + 2\sigma = 159.0 + 2(4.9) = 168.8~\text{cm}.\]</span></p>
+<p>Finally, 99.7% of the women’s heights will be between <span class="math display">\[\mu − 3\sigma = 159.0 − 3(4.9) = 144.3~\text{cm}\]</span> and <span class="math display">\[\mu + 3\sigma = 159.0 + 3(4.9) = 173.7~\text{cm}.\]</span></p>
+</div>
+<div id="unusual-events" class="section level4">
+<h4>Unusual Events</h4>
+<p>If a <span class="math inline">\(z\)</span>-score is extreme (either a large positive number or a large negative number), then that suggests that that observed value is very far from the mean. The 68-95-99.7% rule states that 95% of the observed data values will be within two standard deviations of the mean. This means that 5% of the observations will be more than 2 standard deviations away from the mean (either to the left or to the right).</p>
+<p>We define an <strong>unusual observation</strong> to be something that happens less than 5% of the time. For normally distributed data, we determine if an observation is unusual based on its <span class="math inline">\(z\)</span>-score. We call an observation unusual if <span class="math inline">\(z &lt; –2\)</span> or if <span class="math inline">\(z &gt; 2\)</span>. In other words, we will call an event unusual if the absolute value of its <span class="math inline">\(z\)</span>-score is greater than 2.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<p>:2. Out of Serwa and Gustavo, who is physically taller?</p>
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<p>::Gustavo is taller. He is 182.5 cm tall, and Serwa is 169.0 cm tall.</p>
+</div>
+<p><br/></p>
+<p>:3. Relative to their own gender and nationality, who is relatively taller?</p>
+<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q3" style="display:none;">
+<p>::Relative to other Ghanian women, Serwa is very tall. Gustavo is tall relative to Brazilian men, but relative to people of his gender and nationality, he is not relatively taller than Serwa. Serwa has a higher <span class="math inline">\(z\)</span>-score.</p>
+</div>
+<p><br/></p>
+<p>:4. Are either of these heights unusual?</p>
+<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q4" style="display:none;">
+<p>::Serwa’s height is unusual. Her <span class="math inline">\(z\)</span>-score is: $ z = 2.041. $ This is more than two standard deviations away from the mean. Gustavo’s height is not unusual. His <span class="math inline">\(z\)</span>-score is less than two standard deviations away from the mean.</p>
+</div>
+<p> </p>
+</div>
+<p><br/></p>
+<center>
+“Piled Higher and Deeper” by Jorge Cham
+</center>
+<p><br></p>
+<p><img src="Images/Phd1030.png"></p>
+</div>
+</div>
+</div>
+<div id="normal-probability-computations" class="section level2">
+<h2>Normal Probability Computations</h2>
+<p>An important part of the practice of statistics is finding areas under a normal curve. The area under a normal curve, say, to the left of a value, gives the probability of obtaining an observation less than (or equal to) that value. This is an example of converting a value to an area. It is also important to convert an area to a value. For example, if you want to find the 40th percentile for data that follow a normal distribution, you find the value of the observation such that the area (under the curve) to the left of this value is 0.40.</p>
+<div id="introduction-to-the-normal-probability-applet" class="section level3">
+<h3>Introduction to the Normal Probability Applet</h3>
+<p>{{Help:Normal_Probability_Applet_Instructions|}}</p>
+</div>
+<div id="converting-a-z-score-to-a-probability" class="section level3">
+<h3>Converting a <span class="math inline">\(z\)</span>-score to a Probability</h3>
+<p>Using this applet we can calculate proportions and probabilities based on the area under the normal curve. For the following examples, please open the <a href="http://byuimath.com/apps/normprob.html">Normal Probability Applet</a> and practice using it to find areas under the curve.</p>
+<div id="heights-of-ghanian-women" class="section level4">
+<h4>Heights of Ghanian Women</h4>
+<p>We will use the example of Serwa’s height to find the proportion of young Ghanian women who are shorter than Serwa. Recall that for the height of young Ghanian women, the population mean is 159.0 cm and the population standard deviation is 4.9 cm. Serwa’s height is 169.0 cm. We found the <span class="math inline">\(z\)</span>-score of Serwa’s height as:</p>
+<p><span class="math display">\[z = \frac{x – \mu}{\sigma} = \frac{169.0 – 159.0}{4.9} = 2.041\]</span></p>
+<p>What proportion of young Ghanian women reach a height that is at or below 169 cm? To answer this question, we need to find the area under a normal density curve (i.e. the probability) that is to the left of <span class="math inline">\(z = 2.041\)</span>.</p>
+<p>To find the area under a normal curve corresponding to a <span class="math inline">\(z\)</span>-score of <span class="math inline">\(2.041\)</span>, do the following:</p>
+<ul>
+<li><p>Type the <span class="math inline">\(z\)</span>-score of <span class="math inline">\(2.041\)</span> into one of the two boxes along the horizontal axis of the graph.</p></li>
+<li><p>Click on the areas under the curve until only the areas left of the <span class="math inline">\(z\)</span>-score are shaded blue.</p></li>
+<li><p>The total shaded area under the normal distribution, 0.979*, is given above the graph. This is the proportion of young Ghanian women who are shorter than Serwa.</p></li>
+</ul>
+<p><img src="./Images/Serwa_z-score.PNG|400px"></p>
+<p>The area to the left of our chosen <span class="math inline">\(z\)</span>-score is also the probability that a randomly selected woman will be shorter than Serwa. The probability that a randomly selected Ghanaian woman will be shorter than Serwa is <span class="math inline">\(0.979\)</span>, or <span class="math inline">\(97.9\%\)</span>.</p>
+<p><nowiki>*</nowiki>Remember that in this course, unless otherwise specified, we round to three decimal places.</p>
+</div>
+<div id="baseball-averages" class="section level4">
+<h4>Baseball Averages</h4>
+<p>We now return to the example of the baseball batting averages. We want to find the probability that a randomly selected player will have a batting average that is above 0.280. The population mean is 0.261 and the population standard deviation is 0.034. We can use this information to find a <span class="math inline">\(z\)</span>-score. Then we use the applet to find the area under the normal curve to the right of this <span class="math inline">\(z\)</span>-score.</p>
+<p><span class="math display">\[z = \frac{x – \mu}{\sigma} = \frac{0.280 – 0.261}{0.034} = 0.559\]</span></p>
+<p>Type the <span class="math inline">\(z\)</span>-score of <span class="math inline">\(0.559\)</span> in one of the boxes below the horizontal axis in the applet. Click on the areas under the curve until only the region on the right is highlighted in blue.</p>
+<p><img src="./Images/Batting_average_z-score.PNG|400px|center"></p>
+<p>The area under the curve to the right of <span class="math inline">\(z = 0.559\)</span> is <span class="math inline">\(0.288\)</span>. This is the probability that a randomly selected player will have a batting average that is greater than 0.280. (Note: It is a coincidence that the area, 0.288, is close to the batting average of 0.280. There is no significance in this.)</p>
+<p>Notice that the area shaded in blue above 0.288 is very close to the area we found when we looked at the area represented by the bars of the histogram 0.298 that was shaded in red above.</p>
+</div>
+</div>
+<div id="finding-the-probability-of-being-between-two-values" class="section level3">
+<h3>Finding the Probability of Being Between Two Values</h3>
+<p>The applet does not allow us to find the probability of being between two values directly, but we can calculate these probabilities with the applet as follows.</p>
+<div id="heights-of-ghanian-women-1" class="section level4">
+<h4>Heights of Ghanian Women</h4>
+<p>We illustrate the procedure for finding the probability that the height of a randomly selected young Ghanian woman is between two values. For example, “What is the probability that a randomly selected young Ghanian women will be between 155.0 cm and 165.0 cm tall?” Recall that for the height of young Ghanian women, the population mean is <span class="math inline">\(159.0\)</span> cm and the population standard deviation is <span class="math inline">\(4.9\)</span> cm. We want to find the probability that a randomly selected woman’s height is between <span class="math inline">\(155.0\)</span> cm and <span class="math inline">\(165.0\)</span> cm. To do this we find the <span class="math inline">\(z\)</span>-score for both values:</p>
+<p><span class="math display">\[z_1 = \frac{x – \mu}{\sigma} = \frac{155.0 – 159.0}{4.9} = -0.82\]</span> <span class="math display">\[z_2 = \frac{x – \mu}{\sigma} = \frac{165.0 – 159.0}{4.9} = 1.22\]</span></p>
+<p>We now answer the question by finding the area under the normal density curve (i.e. the probability) to the left of <span class="math inline">\(z = 1.22\)</span> which is <span class="math inline">\(0.8888\)</span> and also the area under the normal density curve to the left of <span class="math inline">\(z = -0.82\)</span> which is <span class="math inline">\(0.2061\)</span>. To find the area between <span class="math inline">\(z = 1.22\)</span> and <span class="math inline">\(z = -0.82\)</span>, we subtract the smaller area from the larger.</p>
+<p><span class="math display">\[0.8888 - 0.2061 = 0.6827\]</span></p>
+<p>So the probability that the height of a randomly selected young Ghanian woman will be between 155.0 cm and 165.0 cm is <span class="math inline">\(0.6827\)</span>. This is the same as the proportion of all young Ghanian women who are between 155.0 and 165.0 cm tall.</p>
+</div>
+</div>
+<div id="calculating-percentiles-using-a-normal-distribution" class="section level3">
+<h3>Calculating Percentiles using a Normal Distribution</h3>
+<p>A percentile is a number such that a specified percentage of the data are at or below this number. For example, the 25<sup>th</sup> percentile is the number in a data set that is greater than or equal to 25% of all the values in the data set. (For a more complete definition of percentiles, see [[Lesson_3#Percentiles_and_Quartiles|Lesson 3]].) We can find the values of percentiles for a normal distribution by using the applet to calculate the <span class="math inline">\(z\)</span>-score corresponding to a specified area and then plugging that <span class="math inline">\(z\)</span>-score into our <span class="math inline">\(z\)</span>-score equation and solving for <span class="math inline">\(x\)</span>. The following instructions show how to find the 90<sup>th</sup> percentile of the distribution of batting averages.</p>
+<p>First, we need to find the <span class="math inline">\(z\)</span>-score that corresponds to the 90<sup>th</sup> percentile using the [<a href="http://byuimath.com/apps/normprob.html" class="uri">http://byuimath.com/apps/normprob.html</a> Normal Probability Applet].</p>
+<p>:<em>Click on the areas under the curve until only the areas </em>left* of the positive <span class="math inline">\(z\)</span>-score are shaded blue. :<em>Type the desired area (or percentile) in the box at the top of the graph. (Type in a number between 0 and 1. A 90<sup>th</sup> percentile would be entered as “0.900”.) :</em>The <span class="math inline">\(z\)</span>-score corresponding to this area will be displayed in the bottom right box.</p>
+<p>For example, to find the <span class="math inline">\(z\)</span>-score corresponding to the 90<sup>th</sup> percentile, click on the regions of the graph so that the area to the left of one of the bars is shaded and nothing is shaded to the right. Then, type the number 0.9 in the box at the top of the applet and press [Enter]. The value 1.282 is the <span class="math inline">\(z\)</span>-score such that 90% of the area is to the left.</p>
+<p><img src="./Images/Batting_average_percentiles.PNG|400px|center"></p>
+<p>So, <span class="math inline">\(z = 1.282\)</span> is the <span class="math inline">\(z\)</span>-score that corresponds to the 90th percentile of a normal distribution. How do we find the batting average that corresponds to the 90<sup>th</sup> percentile? We can solve for <span class="math inline">\(x\)</span> in the equation for the <span class="math inline">\(z\)</span>-score.</p>
+<p><span class="math display">\[\displaystyle{z=\frac{x – \mu}{\sigma}}\]</span></p>
+<p>We know <span class="math inline">\(z = 1.282\)</span>, <span class="math inline">\(\mu = 0.261\)</span>, and <span class="math inline">\(\sigma = 0.034\)</span>. Substituting these values into the equation for the <span class="math inline">\(z\)</span>-score, we have:</p>
+<p><span class="math display">\[1.282 = \frac{x – 0.261}{0.034 }\]</span></p>
+<p>Solve for <span class="math inline">\(x\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th>{</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Original Equation</td>
+</tr>
+<tr class="even">
+<td>align=“right”</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(=\)</span></td>
+</tr>
+<tr class="even">
+<td>$  $</td>
+</tr>
+<tr class="odd">
+<td>-</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(~\)</span></td>
+</tr>
+<tr class="odd">
+<td>-</td>
+</tr>
+<tr class="even">
+<td>Multiply both sides by 0.034</td>
+</tr>
+<tr class="odd">
+<td>align=“right”</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(=\)</span></td>
+</tr>
+<tr class="odd">
+<td>$  $</td>
+</tr>
+<tr class="even">
+<td>-</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(~\)</span></td>
+</tr>
+<tr class="even">
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>Simplify the right-hand side</td>
+</tr>
+<tr class="even">
+<td>align=“right”</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(=\)</span></td>
+</tr>
+<tr class="even">
+<td>$  $</td>
+</tr>
+<tr class="odd">
+<td>-</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(~\)</span></td>
+</tr>
+<tr class="odd">
+<td>-</td>
+</tr>
+<tr class="even">
+<td>Add 0.261 to both sides</td>
+</tr>
+<tr class="odd">
+<td>align=“right”</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(=\)</span></td>
+</tr>
+<tr class="odd">
+<td>$  $</td>
+</tr>
+<tr class="even">
+<td>-</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(~\)</span></td>
+</tr>
+<tr class="even">
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>Simplify the right-hand side</td>
+</tr>
+<tr class="even">
+<td>align=“right”</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(=\)</span></td>
+</tr>
+<tr class="even">
+<td>$  $</td>
+</tr>
+<tr class="odd">
+<td>-</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(~\)</span></td>
+</tr>
+<tr class="odd">
+<td>-</td>
+</tr>
+<tr class="even">
+<td>Simplify the left-hand side</td>
+</tr>
+<tr class="odd">
+<td>align=“right”</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(=\)</span></td>
+</tr>
+<tr class="odd">
+<td>$  $</td>
+</tr>
+<tr class="even">
+<td>-</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(~\)</span></td>
+</tr>
+<tr class="even">
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>Swap the left- and right-hand sides     </td>
+</tr>
+<tr class="even">
+<td>align=“right”</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(=\)</span></td>
+</tr>
+<tr class="even">
+<td>$  $</td>
+</tr>
+<tr class="odd">
+<td>-</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+</tbody>
+</table>
+<p>The 90<sup>th</sup> percentile of the batting averages is 0.305. That means that 90% of the players have a batting average that is 0.305 or less.</p>
+<p>The ability to use the Normal Probability Applet to find probabilities is very important in this course. Take some time to familiarize yourself with the applet and to practice using it.</p>
+</div>
+</div>
+<div id="assessing-normality-using-a-q-q-plot" class="section level2">
+<h2>Assessing Normality Using a Q-Q Plot</h2>
+<div id="baseball-batting-averages-1" class="section level3">
+<h3>Baseball Batting Averages</h3>
+<p>Recall the data on the batting averages of Major League Baseball players. The histogram of the batting averages showed a distinct bell-shaped curve.</p>
+<p><img src="Images/Picture6.jpg"></p>
+<p>To help us visually assess if data are normally distributed, statisticians have developed Q-Q plots. A <strong>Q-Q plot</strong> is a graph that is used to assess if data are normally distributed. If the points in the Q-Q plot are essentially in a straight line, then we conclude that the data are normally distributed.</p>
+<p>In a Q-Q plot, the <span class="math inline">\(z\)</span>-scores for the observed values in the data set are plotted on the horizontal axis. The <span class="math inline">\(z\)</span>-scores of the expected values (assuming the data are normally distributed) are plotted on the vertical axis. If the data follow a normal distribution, then we would expect these points to lie in a straight line. If the data are non-normal, we expect to see a distinct curve in the Q-Q plot.</p>
+<p><img src="Images/L04_QQ_Plot_01.jpg"></p>
+<p>Notice that the points fall in a fairly straight line. These data appear to follow a normal distribution.</p>
+<p>In any Q-Q plot, we expect little “wiggles” in the points. If the points in the Q-Q plot are essentially in a line, then we conclude that the data are normally distributed.</p>
+<p><strong>Instructions for creating a Q-Q Plot:</strong></p>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<p>{{Software_Filter | PageName=QQ-plot }}</p>
+<p>Make sure you can create the Q-Q plot shown above on your own.</p>
+</div>
+<div id="body-temperatures" class="section level3">
+<h3>Body Temperatures</h3>
+<p>A group of researchers led by Philip A. Mackowiak, MD, conducted a study to assess the true mean body temperatures of healthy adults. They selected n = 148 subjects between the ages of 18 and 40 years old, representative of the general population.</p>
+<p>Each volunteer was given a physical to assure that they were not ill at the time of the data collection. Their axillary (under the arm) body temperature was measured and reported in a paper published in the Journal of the American Medical Association. [1] These data were extracted and are presented in the file <span class="Link">[[Data|BodyTemp]]</span>. The body temperatures are given in degrees Fahrenheit.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<p>:5. Make a *histogram of the body temperature data.</p>
+<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q5" style="display:none;">
+<!--
+{{Course_Filter_Two|A=[[File:BodyTemperatures-Histogram.png|link=|400 px]]|B=[[File:Histogram Example.jpg|link=|400px]]}}
+-->
+<p><br/></p>
+<p><img src="Images/BodyTemperatures-Histogram.png"></p>
+<p>Note that the mean is 98.23, standard deviation is 0.738, and sample size is n = 148.</p>
+</div>
+<p>:6. Based on your histogram, what is the shape of the distribution of these data?</p>
+<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q6" style="display:none;">
+<p>::The data appear to be normally distributed.</p>
+</div>
+<p>:7. Create a Q-Q plot of the body temperature data.</p>
+<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q7" style="display:none;">
+<!--
+{{Course_Filter_Two|A=[[File:BodyTemperatures-QQ.png|link=|400 px]]|B=[[File:SPSS QQ-Plot Body Temp.jpg|link=|400 px]]}}
+-->
+<p><img src="Images/BodyTemperatures-QQ.png"></p>
+</div>
+<p><br/></p>
+<p>::<nowiki>*</nowiki>Click the link at right for a review of how to create a histogram.</p>
+<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q8" style="display:none;">
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<p>{{Software_Filter|PageName=Histogram-Condensed}}</p>
+</div>
+<p><br>  </p>
+</div>
+<p><br/></p>
+<p>You may notice some jagged jumps in the in Q-Q plot of the body temperature data. This is called granularity. It occurs here because the body temperatures were only reported to the nearest tenth of a degree. If we had more precision in the data, this would not occur.</p>
+<p>The points in the Q-Q plot distinctly follow a line. We conclude the body temperature data are normally distributed.</p>
+</div>
+<div id="wages-of-byu-idaho-students" class="section level3">
+<h3>Wages of BYU-Idaho Students</h3>
+<p>The following Q-Q plot represents the wages of a random sample of BYU-Idaho students. Here is the Q-Q plot for the wages data:</p>
+<p><img src="Images/L04_QQ_Plot_02.jpg"></p>
+<p>Notice the distinct curvature in the data. This suggests that the data are not normal. Here is a histogram of the wage data:</p>
+<p><img src="Images/L04_QQ_Plot_03.jpg"></p>
+<p>In this case, it is easy to spot the right-skewed shape of the histogram. Sometimes, especially when sample sizes are small, the histogram can be misleading. The Q-Q plot usually gives a better measure of whether or not the data are normally distributed.</p>
+</div>
+<div id="other-examples" class="section level3">
+<h3>Other Examples</h3>
+<p>We will consider additional Q-Q Plots that illustrate data that are not normal.</p>
+<p>Notice the S-shape in the following plot.</p>
+<p><img src="Images/L04_QQ_Plot_04.jpg"></p>
+<p>Here is an example of a plot representing data that are not normal. When the Q-Q plot curves in this manner, it suggests a left-skewed distribution.</p>
+<p><img src="Images/L04_QQ_Plot_05.jpg"></p>
+<p>The following Q-Q plot represents right-skewed data. The data are not normal.</p>
+<p><img src="Images/L04_QQ_Plot_06.jpg"></p>
+<p>When assessing a Q-Q plot, you should be a little “forgiving” of the points on the two ends. If there are some points that are slight outliers, you do not need to worry very much about them. If there is not a sustained curve—either upward or downward—or an S-shape in the data, then you can conclude the data are normally distributed.</p>
+<p>The ability to determine if data follow a normal distribution will be important later in the course.</p>
+</div>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
+<p>{{Summary|05}}</p>
+</div>
+<div id="alumni-spotlight-adam-andersen" class="section level2">
+<h2>Alumni Spotlight: Adam Andersen</h2>
+<center>
+<img src="Images/AdamAndersen-Portrait.png">
+</center>
+<!-- Adam has a copyright release for these photos -->
+<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q9" style="display:none;">
+<p>:Statistics have been useful in multiple aspects of my work in Human Resources and Diversity. I created a dynamic spreadsheet model for analyzing workforce salaries, both company-wide and for discrete job functions within various levels of the organization. This model utilizes averages and sets thresholds that trigger flags for anomalies in proposed salary offer decisions, including those beyond two standard deviations of the internal peer average. These flags prompt review, discussion, and provide opportunities to vet offer decisions and to substantiate and document the basis for any outlier salary decisions. This has proved to promote and maintain salary equity among women and minorities and their majority peers.</p>
+<p>:I also use statistics in developing metrics for our management team to assess the human-capital health of the organization. With the looming retirement of the baby-boomer bubble, I analyzed the distribution of our current workforce by age. Further, I broke out a subset of mission critical disciplines and compared it to the entire workforce. This allowed a view into where we were, at least in terms of headcount, in developing a human capital pipeline to backfill these areas. I then compared this to the weighted average historical percentage of retirements by age, all things equal, to predict approximately what percent of the current workforce, including these mission critical disciplines, would retire and by when. This data has been presented to our management council, the corporate office, and will be utilized at an upcoming leadership strategy session.</p>
+<p>:Despite having studied statistics at BYU-Idaho several years ago (in fact, I nearly took the course twice), I have felt the Holy Ghost bring these basic concepts to my remembrance and teach me how to apply them at work. And for that, I am grateful.</p>
+<div style="font-size:75%">
+<p>Biography:<br> Adam D. Andersen is the Human Capital Management System Lead for Battelle Energy Alliance, LLC at the U.S. Department of Energy’s Idaho National Laboratory in Idaho Falls, Idaho. He is responsible for creating and revising employment policies and procedures; coordinating human capital assurance; leading measurement and reporting; managing contract and regulatory requirements; and assisting in-house legal counsel in employee disciplinary advisory groups and in representing the company in disputes involving its five labor unions. <br> Adam has served as a full-time missionary for The Church of Jesus Christ of Latter-Day Saints in the Philippines Tacloban Mission, twice as a counselor in Elders Quorum Presidencies, as a leader in the Cub and Boy Scouts, and as a counselor in a student-ward Bishopric at BYU-Idaho. He currently serves as a counselor in the Bishopric in his home ward in Idaho Falls, Idaho. <br> Adam holds a Bachelor of Science in Accounting, Cum Laude, from BYU-Idaho, a Juris Doctor, Honors, from Washburn University School of Law, and is admitted to practice law in the state of Idaho. He is married to Katarzyna Zamarlik of Bielsko-Biała, Poland. They have three children, Spencer, Lea, and Scott.</p>
+</div>
+</div>
+<p><br></p>
+</div>
+<div id="references" class="section level2">
+<h2>References</h2>
+<p>Castilho, L. V., &amp; Lahr, M. M. (2001). Secular trends in growth among urban Brazilian children of European descent. Human Biology, 28, 564.</p>
+<p>Lahman, S.Sean lahman’s baseball archive. Retrieved November, 2010, from <a href="http://www.baseball1.com/" class="uri">http://www.baseball1.com/</a></p>
+<p>Monden, C. W. S., &amp; Smits, J. (2009). Maternal height and child mortality in 42 developing countries. American Journal of Human Biology, 21(3), 305.</p>
+<p>Orçamento e Gestão Ministério do Planejamento. Pesquisa de orçamentos familiars 2008-2009: Antropometria e estado nutricional de crianças, adolescentes e adultos no brasil. Technical report, Instituto Brasileiro de Geografi a e Estatística – IBGE, Rio de Janeiro, Brazil 2010.</p>
+</div>
+<div id="navigation" class="section level2">
+<h2>Navigation</h2>
+<center>
+{| |- align=“center” | <strong>Previous Reading</strong>: <br> Lesson 04: <br> [[Lesson 4: Probability; Discrete Random Variables|Probability; Discrete Random Variables]] |                    | <strong>This Reading</strong>: <br> Lesson 05: <br> Normal Distributions |                    | <strong>Next Reading</strong>: <br> Lesson 06: <br> [[Lesson 6: Distribution of Sample Means &amp; The Central Limit Theorem|Distribution of Sample Means &amp; The Central Limit Theorem]] |}
+</center>
+</div>
+
+<br />
+<hr />
+<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

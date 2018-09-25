@@ -1,0 +1,1142 @@
+---
+title: "Lesson 12"
+output: 
+  html_document:
+    theme: cerulean
+    toc: true
+    toc_float: true
+---
+
+<iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+
+
+{{YouTubeLesson|url=http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-jykAMUjbIFLALZmXRadUa}}
+## Lesson Outcomes
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+By the end of this lesson, you should be able to:
+:* Confidence Intervals for the mean of differences with dependent samples: 
+:** Calculate and interpret a confidence interval for the mean of differences given a confidence level.
+:** Identify a point estimate and margin of error for the confidence interval.
+:** Show the appropriate connections between the numerical and graphical summaries that support the confidence interval. 
+:** Check the requirements for the confidence interval.
+:* Hypothesis Testing for the mean of differences with dependent samples:
+:** State the null and alternative hypothesis. 
+:** Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.
+:** Assess the statistical significance by comparing the p-value to the α-level.
+:** Check the requirements for the hypothesis test.
+:** Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
+:** Draw a correct conclusion for the hypothesis test.
+
+
+
+</div>
+
+<br>
+
+## Example of Paired Data: Pre- and Post-test Scores
+
+In education, it is very common for researchers to conduct studies in which they administer a pre-test, provide some instruction, and then give a post-test.  The difference between the post- and pre-test scores is a measure of the student's progress.  In this case, it would not make much sense to only look at the mean score on the pre-test and compare it to the mean score on the post-test.
+
+This is called a **matched-pairs** design or we say we have **dependent samples**.  Matched-pairs (or **paired-data**) designs typically involve only one population, and a pair of observations is drawn on the individuals selected for the sample. In the context of the educational study, the two observations are student's scores on (1) the pre-test and (2) the post-test. If a student is selected to participate in the pre-test (i.e., they are selected to be part of group 1), they are automatically selected to participate in the post-test (i.e., they are chosen to be in group 2 automatically.)
+
+There is a lot of merit in subtracting the individual scores and looking at the mean *gain*.
+The researchers are not really interested in the students knowledge before the instruction.  This is used as a baseline to measure how much was gained during the instruction.  There is great value in looking at the difference.  This removes the effect of the individual students' ability, and it measures their learning during the unit.
+
+To analyze the data, the researchers first find the difference in the post- and pre-test scores.  At that point, the data have been reduced to a list of numbers (representing the increase in scores.)  Now, the researchers can conduct inference on the mean of these values.  In other words, they can do a hypothesis test for the mean of the difference in the post- and pre-test scores.  
+
+A hypothesis test for two means with paired data (dependent samples) is conducted in the same way as a hypothesis test for a single mean with $\sigma$ unknown.  The only exception is that the pairs of data must be subtracted before you start any computations. From a practical perspective, after you subtract, then you apply the one-sample procedures you have already learned.  So, there is nothing new that you need to learn to compute a confidence interval for two means with paired data...except how to subtract in {{Name}}.
+
+We will first explore an application of pre- and post-testing in a weight loss study.
+
+## Hypothesis Tests
+
+<img src="./Images/StepsAll.png">
+
+### Mahon's Weight Loss Study
+
+**Background**
+
+Annie Mahon and other researchers in Wayne Campbell's nutrition lab studied the weight loss of $n=27$ middle aged women who consumed a prescribed low-calorie diet. <!--<cite>Mahon07</cite>-->  The women's weights were recorded (in kilograms) at the beginning of the study and after the nine-week diet period. The data are given in the file <span class=Link>[[Data|Mahon]]</span>.  An excerpt of the data is given below.
+
+{| class="basic"
+! Subject !! Pre !! Post 
+|-
+|1 || 62.5 || 56.1 
+|-
+|2 || 88.8 || 80.2 
+|-
+|3 || 74.7 || 70.8 
+|-
+|$\vdots$ || $\vdots$ || $\vdots$ 
+|-
+|26 || 76.3 || 73.8 
+|-
+|27 || 82.1 || 77.9 
+|-
+|}
+
+Notice the structure of the data.  The weight of each subject was measured before the study and at the conclusion of the study.  Each person provided a pre-study weight and a post-study weight.  Stated differently, the pre-study weights and the post-study weights are paired.  For each row of data, both of these numbers came from the same person.  When we collect two observations of the same measurement on each subject, we call it **paired data**.  Sometimes paired data are called **dependent samples**.  
+
+<div class="QuestionsHeading">Answer the following question:</div>
+<div class="Questions">
+:1. The researchers measured the initial weights of the women prior to the study, even though they were not particularly interested in this value.  What was the purpose of measuring the pre-study weights?
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::The goal of the study is to determine how much the women's weight change as as result of the study.  The researchers must measure the women's weights at the beginning of the study, so they can subtract the initial (pre-study) weight of each woman from her final (post-study) weight. 
+</div>
+&nbsp;
+</div>
+
+
+**Computing New Variables in {{Name}}**
+
+Annie Mahon and her research team are interested in the difference of the weights after the study compared with before:
+$$ \text{Difference} = \text{Post} - \text{Pre} $$
+
+Appending the column of differences to the table above, we have:
+
+{| class="basic"
+! Subject !! Post !! Pre !! Difference
+|-
+| 1 || 56.1 || 62.5 || 56.1 $-$ 62.5 = -6.4
+|- 						
+| 2 || 80.2 || 88.8 || 80.2 $-$ 88.8 = -8.6
+|- 							
+| 3 || 70.8 || 74.7 || 70.8 $-$ 74.7 = -3.9
+|- 							
+| $\vdots$  || $\vdots$ || $\vdots$ || $\vdots$ 
+|-							
+| 26 || 73.8 || 76.3 || 73.8 $-$ 76.3 = -2.5
+|-							
+| 27 || 77.9 || 82.1 || 77.9 $-$ 82.1 = -4.2
+|}
+
+
+<div id="SubtractDifferences"></div>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+{{Software_Filter | PageName=SubtractDifferences }}
+
+The researchers are not interested in the weights of the women, they are more interested in the *change* in the women's weights.  This will give them a measure of the effectiveness of the low-calorie diet.  Notice that in this weight loss study, the change in the weights is negative.  This indicates that the final weight was lower than the initial weight.
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:2. Following the directions above, compute the difference in the women's weights by subtracting the pre-study weights from the post-study weights using software.  Call this new column *Difference*.
+
+:3. What is the mean of the values in the *Difference* column?  
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+$
+-6.80 \text{ kg} 
+$
+</center>
+</div>
+
+
+:4. Interpret the value you calculated in Question 3.
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::The mean weight change experienced by the women in the study was $-6.80$ kg.  In other words, the mean weight loss was $6.80$ kg.
+</div>
+&nbsp;
+</div>
+
+
+**Relationship to a One Sample t-test**
+
+After you have subtracted the pre-study weights from the post-study weights, you are left with a column of differences.  We will denote the pre-study weights by $ x_1 $ and the post-study weights by $ x_2 $.  Then, the differences can be denoted as $ d = x_2 - x_1 $.  The difference, $d$, is defined as the change in the volunteer's weight during the study.  
+
+After computing the differences, we do not use the data for the individual groups at all. The researchers are not interested in the values of the women's weights at the beginning of the study or at the end of the study.  They are mostly interested in the difference in the weights after the participants complete the study.
+
+After we subtract, we can conduct a hypothesis test to determine if the mean of the differences is less than zero.  We use the symbol $ \mu_d $ to represent the true mean difference in the weights of the women who follow the diet prescribed in this study. The null hypotheses is that the true mean difference is zero  ($\mu_d = 0$).  The alternative hypothesis is that there is a decrease in the weights, in other words, that the true mean difference is less than zero ($\mu_d < 0$).
+
+Notice that this is essentially a one-sample t-test where the data are the differences in the women's weights.  We have one column of data, the differences.  We are testing whether the true mean difference is less than zero.  After subtracting, a test for a difference of two means with paired data is just like a test for one mean with $ \sigma $ unknown.
+
+In the hypothesis test, we will refer to the variable representing the differences as $d$. We will use this notation throughout the hypothesis test. For example, the true population mean will be labeled $\mu_d$ and the sample mean will be labeled $\bar d$.  The sample standard deviation of the differences is denoted $s_d$.
+
+**Hypothesis Test for Mahon's Weight Loss Data**
+
+
+<img src="./Images/Step1.png">
+
+**Summarize the relevant background information**
+
+Twenty-seven women participated in a nine week weight loss study.  During the study period, the participants were provided a reduced calorie diet.  Their weights were recorded at the beginning of the study and nine weeks later.  The difference of the weights is defined as the post-study weights minus the pre-study weights.  The researchers expected that the mean difference in the weights would be negative--in other words, that the women would tend to lose weight.
+
+**State the null and alternative hypotheses and the level of significance**
+
+$$
+\begin{align}
+H_0: &~~ \mu_d=0 \\
+H_a: &~~ \mu_d < 0
+\end{align}
+$$
+
+We will use the $ \alpha = 0.05 $ level of significance.
+
+
+<img src="./Images/Step2.png">
+
+**Describe the data collection procedures**
+
+The women's weights were recorded at the beginning of the study.  The women were provided a reduced calorie diet for nine weeks.  Then, their weights were measured again at the end of the study.  A calibrated scale was used to provide an accurate weight.
+
+
+<img src="./Images/Step3.png">
+
+**Give the relevant summary statistics**
+
+From the Excel output illustrated above, we get the following:
+
+$$
+\begin{align}
+\bar d &= -6.80 \\
+s_d &= 3.17 \\
+n &= 27 
+\end{align}
+$$
+
+The mean and standard deviation are rounded to one decimal place more than the original data.
+
+**Make an appropriate graph (histogram) to illustrate the data**
+
+This histogram was created in Excel with seven bins:
+<center>
+<img src="./Images/Mahon-Histogram-Excel.png">
+</center>
+
+
+<img src="./Images/Step4.png">
+
+**Verify the requirements have been met**
+
+Like the one-sample t-test, this procedure is robust, meaning that it is not very sensitive to the requirements.  If they are violated, it will probably still give reasonably good results.  
+
+The requirements for this procedure are the same as the requirements for a one-sample t-test:
+:* the data represent a simple random sample from the population
+:* the mean of the differences follows a normal distribution
+
+The subjects were recruited via advertisements for a research study.  The participants volunteered to participate.  It is not a simple random sample of all middle-aged women, but there is nothing about the selection of the sample that would invalidate the results.  
+
+From a practical perspective, it is impossible to get a simple random sample of people in the general population.  When research trials are conducted, people must volunteer to participate.  This can lead to a selection bias, but it is usually negligible.
+
+The requirement of normality is satisfied for Mahon's data.  The differences appear to follow a normal distribution, so $\bar d$ will be approximately normal.  
+
+The sample size (n=27) is fairly large.  The histogram shows a mound shape.  Here is a Q-Q plot of the differences:
+
+<center>
+<img src="./Images/Mahon-Differences-QQ-SPSS.png">
+</center>
+
+With this Q-Q plot, we could conclude that the data follow a normal distribution.  Even if we had had a small sample size, we could still conduct this test.
+
+**Give the test statistic and its value**
+
+The test statistic for a test involving paired data when $\sigma$ is unknown is a $t$.  For this situation, the value is:
+$$ t= \frac{-6.8 - 0}{3.17/\sqrt{27}} =-11.145 $$
+
+**State the degrees of freedom**
+
+$$ df = 26 $$
+
+**Mark the test statistic and $P$-value on a graph of the sampling distribution** 
+
+The test statistic, $t$, is labeled on the horizontal axis.  The $P$-value is the area to the left of $t$ under the curve.  This area is so small, it is not illustrated on this plot.  Please note that this image was taken from the normal probability applet.  The test statistic for two means with paired data is a $t$.  This image was designed for a $z$-curve.  This is not the right image for this procedure.  For this reason, we labeled the image, "For illustrative purposes only".
+
+<img src="./Images/Mahon-Applet.png">
+
+It is important to note that only the left tail is shaded, even though we cannot see it in this illustration.
+
+**Find the $P$-value and compare it to the level of significance**
+
+$$
+P\text{-value} = 1.06 \times 10^{-11} < 0.05 = \alpha
+$$
+
+**State your decision**
+
+Since the $P$-value is less than the level of significance, we reject the null hypothesis.
+
+
+<img src="./Images/Step5.png">
+
+**Present your conclusion in an English sentence, relating the result to the context of the problem**
+
+There is sufficient evidence to suggest that the reduced calorie diet used in this study results in weight loss for middle-aged women.
+
+
+<img src="./Images/StepsAll.png">
+
+### Nosocomial Infections
+<span id='17:IntroToNosocomialInfections'></span>
+
+<img src="./Images/Step1.png">
+
+**Summarize the relevant background information**
+
+Matched-pairs designs are not just used in pre- and post-test situations.  They are often used in situations where it is not possible to randomly assign subjects to groups (for example, by a coin toss.)  Nosocomial (pronounced: NO-suh-KOH-MEE-uhl) infections are infections that occur in hospitals, but are not a result of the original condition. An example of a nosocomial infection is when a heart attack patient develops a staph infection at the site of an IV injection.  The infection was not caused by the heart attack, but it was acquired in the hospital.  Nosocomial infections are very dangerous and may result in longer recovery times or increased death rates.
+
+<img src="./Images/Pneumonia-CDC-5803.png">
+
+Health care providers suspect that nosocomial infections increase the amount of time required to recover from an illness or injury. In controlled experiments, subjects (e.g., patients) are randomly assigned to treatments.  However, it is not ethical to give patients a nosocomial infection in order to determine if it increases the duration of their hospital stay!  At best, we can collect information on the duration of hospital stays for patients who acquire nosocomial infections and compare them to the duration of the stays for patients who do not.
+
+There are many factors that affect the amount of time that a patient will need to stay in the hospital, including: nature of illness, types of procedures conducted, overall health, gender, age, etc.  How can health care practitioners assess the effect of a nosocomial infection in the presence of so many other variables?  
+
+One way is to match a patient who develops a nosocomial infection with another one who has similar characteristics (illness, procedures, health, gender, age group, etc.) but does not develop a nosocomial infection.  Now, the patients are matched into pairs with similar characteristics, where the principle difference between the members of each pair is whether or not they acquired a nosocomial infection.
+
+By pairing the patients according to specific characteristics, the researchers can now subtract to observe a difference in their recovery times.  In this way, it is possible to assess if nosocomial infections increase the mean duration of a hospital stay.  Some researchers conducted such a study  in which 52 pairs of patients were matched based on clinical characteristics.  A patient with a nosocomial infection was matched as closely as possible to a similar case where there was no nosocomial infection. Patients who died were excluded from the study <!--<cite>Vegas93</cite>-->.  The lengths of the hospital stays (in days) for these patients are given in the file <span class=Link>[[Data|NosocomialInfections]]</span>.
+
+The difference, $d$, is defined as the duration of the hospital stay of the individual in the pair with the nosocomial infection minus the duration of the stay for the individual who did not get a nosocomial infection:
+$$
+Difference=Infected - NotInfected$$
+After computing the differences, we do not use the data for the individual groups at all.  In fact, after we subtract, the hypothesis test is conducted (essentially) like a one-sample test for a single mean with $\sigma$ unknown.
+
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:5. **State the null and alternative hypotheses and the level of significance**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+$
+\begin{align}
+H_0: &~~ \mu_d = 0 \\
+H_a: &~~ \mu_d > 0 \\
+\end{align}
+$
+</center>
+::The level of significance was not specified in the problem.  You can choose any value you wish.  The most common choices are 0.05, 0.01 and 0.1.  We will illustrate this example with $\alpha = 0.05$. 
+
+</div>
+&nbsp;
+</div>
+
+
+
+<img src="./Images/Step2.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:6. **Describe the data collection procedures**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::Data were collected by matching hospital records of individuals who were admitted to the hospital.  Patient records were matched based on their overall health and the reason they were admitted to the hospital.  In each pair, one patient developed a nosocomial infection and one did not.  Since the characteristics of the patients in the first group determined which patients would be paired with them in the second group, the data represent dependent samples.
+</div>
+&nbsp;
+</div>
+
+
+
+<img src="./Images/Step3.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:7. **Give the relevant summary statistics**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+$
+\begin{align}
+\bar d &= 11.38 \\ 
+s_d &= 13.83 \\
+n &= 52
+\end{align}
+$
+</center>
+</div>
+
+
+:8. **Make an appropriate graph to illustrate the data**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::*Present a graph showing the differences.
+<center>
+<img src="./Images/Nosocomial-Differences-Histogram.png">
+</center>
+</div>
+&nbsp;
+</div>
+
+
+
+<img src="./Images/Step4.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:9. **Verify the requirements have been met**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::The data represent a random sample of patients, who have been matched based on their overall health and their current ailment.  The sample size is large, so the mean of the differences $ \bar d $ will be approximately normally distributed.
+</div>
+
+
+:10. **Give the test statistic and its value**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::The test statistic for a test for two means with paired data is a $t$.
+$$ t = 5.935 $$
+</div>
+
+
+:11. **State the degrees of freedom**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+$
+df = 51 
+$
+</center>
+</div>
+
+
+:12. **Mark the test statistic and $P$-value on a graph of the sampling distribution** 
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::Your sketch should show the value of $t=5.935$ on the horizontal axis, with only the tiny area to the right of 5.935 shaded.
+</div>
+
+
+:13. **Find the $P$-value and compare it to the level of significance**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+$
+P\textrm{-value}=\frac{\textrm{Sig. (2-tailed)}}{2}=\frac{2.592\times 10^{-7}}{2}=1.296 \times 16^{-7} = 0.0000001296 < 0.05 = \alpha
+$
+</center>
+</div>
+
+
+:14. **State your decision**
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::Since the $P$-value is less than the level of significance, we reject the null hypothesis.
+</div>
+&nbsp;
+</div>
+
+
+<img src="./Images/Step5.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:15. **Present your conclusion in an English sentence, relating the result to the context of the problem**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::There is sufficient evidence to suggest that the mean duration of hospital stays is increased when a patient develops a nosocomial infection.
+</div>
+&nbsp;
+</div>
+
+### Additional Worked Examples
+
+Viewing additional examples can help your understanding.  Click on the link at right to see two more examples of hypothesis tests.
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+
+
+<img src="./Images/StepsAll.png">
+
+#### Effect of Stressful Classical Music on Your Metabolism
+
+<img src="./Images/Step1.png">
+
+**Summarize the relevant background information**
+
+Obesity is a growing problem worldwide.  Many scientists are seeking creative solutions to trim down this epidemic.  Reduced energy expenditure is a potential cause of obesity.
+
+Resting Energy Expenditure (REE) is defined as the amount of energy a person would use if resting for 24 hours.  In essence, this is the amount of energy that a person's body will consume if they do not do any physical activity.  REE is measured in terms of kilo-Joules per day (kJ/d).
+
+REE accounts for approximately 70 to 80% of all energy that a person will expend in a day. <!--<cite>Carlsson05</cite>-->  If researchers can find simple, enjoyable activities that will increase REE, it may be possible to minimize the spread of obesity around the world.
+
+Ebba Carlsson and other researchers in Sweden investigated whether listening to stressful classical music increases a person's REE. <!--<cite>Carlsson05</cite>-->  Each subject's REE was measuring during silence and again while listening to stressful classical music.  Data representing their results are given in the file <span class=Link>[[Data|REE-ClassicalMusic]]</span>.  
+
+Notice that this is not a pre- and post-test, but it is still a test involving paired data.  Two REE measurements were made for each subject:  (1) in silence ($REE_1$) and (2) while listening to stressful classical music ($REE_2$).
+
+**State the null and alternative hypotheses and the level of significance**
+
+Since we are testing for an increase in the mean REE, we let $d = REE_2 - REE_1$. Our alternative hypothesis will be that $ \mu_d > 0 $.  The null and alternative hypotheses are:
+$$
+\begin{align}
+H_0: &~~ \mu_d = 0 \\
+H_a: &~~ \mu_d > 0 
+\end{align}
+$$
+
+We will use the $ \alpha = 0.1 $ level of significance.
+
+{{Content:Excel-PairedTypeOfTest-GreaterThan}}
+
+
+<img src="./Images/Step2.png">
+
+**Describe the data collection procedures**
+
+The REE was measured by a technique called "indirect calorimetry" using a Deltatrac II Metabolic Monitor. <!--<cite>Carlsson05</cite>-->  The REE was measured twice for each person: while the person was (1) resting in silence or (2) resting while listening to stressful classical music.  These trials were conducted in random order.  Some of the subjects had the "silence" treatment first, and others had the "stressful" treatment first.
+
+
+<img src="./Images/Step3.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:16. We will define the difference in REE by subtracting the REE in silence from the REE while listening to stressful classical music. If listening to stressful classical music actually increases the mean REE, would you expect the value of the difference to be typically positive or negative?
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::If the REE is higher while listening to classical music than while resting in silence, we would expect the value of the difference to be positive.  In other words the following difference would tend to be positive:
+$$
+Difference = Stressful - Silence
+$$
+</div>
+
+
+:17. Compute the difference in REE for each person.  What is the value of the difference for the first person listed in the data file?
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::50 kJ/d
+
+::Here is an illustration of an excerpt of the data in Excel:
+<center>
+<img src="./Images/REE-Data-Excel.png">
+</center>
+</div> 
+
+
+**Give the relevant summary statistics**
+
+:18. Report the number of subjects ($n$), the mean difference ($\bar d$), and the standard deviation of the differences ($s_d$).
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+:The following image illustrates the Excel file used to get the summary statistics.
+<center>
+<img src="./Images/REE-Output-Excel.png">
+</center>
+
+$$
+\begin{align}
+n&=40\\
+\bar d &= 20~\text{kJ}\\
+s_d &= 160~\text{kJ}
+\end{align}
+$$
+</div>
+
+
+:19. **Make an appropriate graph to illustrate the data**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>[[File:REE-Histogram-Excel.png|link=]]</center>
+</div>
+&nbsp;
+</div>
+
+
+
+<img src="./Images/Step4.png">
+
+**Verify the requirements have been met**
+
+We can consider the sample representative of the population.  The "difference" data appear to follow a normal distribution.  This is illustrated in the following Q-Q plot:
+
+<center>
+<img src="./Images/REE-QQ-SPSS.png">
+</center>
+
+The requirements for this test appear to have been satisfied.
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:20. **Give the test statistic and its value**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::The test statistic for a test for two means with paired data is a $t$.
+$$t=0.793$$
+</div>
+
+
+:21. **State the degrees of freedom**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+$ 
+df = 39 
+$
+</center>
+</div>
+
+
+:22. **Mark the test statistic and $P$-value on a graph of the sampling distribution** 
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::The test statistic is plotted on the horizontal axis.  The $P$-value is shaded in blue.  This image was copied from the normal probability applet.  Since the test statistic is a $t$, not a $z$, this is not the exact image for this procedure.  We label the image, "For illustrative purposes only":
+<center>[[File:REE-Applet.png|link=]]</center>
+</div>
+
+
+:23. **Find the $P$-value and compare it to the level of significance**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+<!--$$ P\textrm{-value}=\frac{0.433}{2}=0.216$$-->
+$ P\textrm{-value}=0.2163 > 0.1 = \alpha $
+</center>
+::Notice that the $P$-value is half as large for a one-tailed test as it would have been for a two-tailed test.  Since we have a one-sided alternative hypothesis, we are only interested in the right tail of the $t$-distribution.
+</div>
+
+
+:24. **State your decision**
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::Since the $P$-value is greater than the level of significance, we fail to reject the null hypothesis. 
+</div>
+&nbsp;
+</div>
+
+
+
+<img src="./Images/Step5.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:25. **Present your conclusion in an English sentence, relating the result to the context of the problem**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::There is insufficient evidence to suggest that the mean REE is *increased* by listening to stressful classical music.  Lying still and listening to stressful classical music is probably not the best way to increase your metabolism!
+</div>
+&nbsp;
+</div>
+
+
+Note that we did not say we "accept" the null hypothesis.  We do not know that listening to stressful classical music has no effect on a person's REE.  Based on the data available to us, we were not able to reject the requirement that this type of music does not increase the mean REE.
+
+<img src="./Images/StepsAll.png">
+
+#### Cost of Airline Tickets
+
+<img src="./Images/Step1.png">
+
+**Summarize the relevant background information**
+
+Pressures of supply and demand act directly on the prices for an airline ticket.  As the seats available on the plane begin to fill, airlines raise the price.  If seats on a flight do not sell well, an airline may discount the tickets or even cancel the flight.  Business travelers frequently demand travel booked on short notice.  They must pay the current price.  Typically, tourists book their flights well in advance, hoping to buy tickets before the price rises.  We will consider the cost of a one-way ticket from London's Heathrow Airport to a variety of destinations in Europe.
+
+Allie Henrich, a BYU-Idaho student, compared the lowest published ticket prices of one-way flights from Heathrow to various destinations in Europe.  Using Travelocity.com, she recorded the lowest published fares for nonstop midweek flights booked either 14 days in advance or 90 days in advance.  The prices (in US dollars) are given in the file <span class=Link>[[Data|DirectFlightCosts]]</span>.  Notice that for some destinations, flights were not available.
+
+The data are paired, because measuring the costs twice for each city.  The 14-day ticket price is paired with the 90-day price for each city.
+
+We will conduct a hypothesis test to determine if there is a difference in the cost of the nonstop flights when tickets are purchased 14 days in advance compared to 90 days in advance. We will use the 0.01 level of significance.
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:26. **State the null and alternative hypotheses and the level of significance**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+$
+\begin{array}{1cl}
+H_0:\mu_d = 0 \\
+H_a:\mu_d \ne 0 \\
+\alpha = 0.01 
+\end{array}
+$
+</center>
+</div>
+&nbsp;
+</div>
+
+
+
+<img src="./Images/Step2.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:27. **Describe the data collection procedures**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::The data were collected using the website Travelocity.com. The lowest advertized ticket prices were recorded for nonstop flights from Heathrow Airport. All prices were recorded in US dollars. Data are provided on the cost of a nonstop ticket purchased with 14 days notice compared to 90 days notice.
+::We will compute the difference in the costs for each destination.  Some destinations did not include both flight options.  In this case, the difference is not computed and the data are omitted from the analysis.
+</div>
+&nbsp;
+</div>
+
+
+
+<img src="./Images/Step3.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:28. **Give the relevant summary statistics**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::The differences were computed by subtracting the 90-day price from the 14-day price.  For example, for the Adnan Menderes Airport, we have
+$$ 202.09 - 234.19 = -32.10 $$
+::You may have chosen to subtract in the opposite order.  If so, you would have obtained a value of $ 32.10 $ dollars.
+$$
+\begin{align}
+n&=87\\
+\bar d &= 24.612\\
+s_d &= 136.267
+\end{align}
+$$
+
+{{Note|If you defined your difference as the 90-day price minus the 14-day price, then you would have observed a value of $ \bar d = -24.612 $ dollars for the mean of the differences.  You were not instructed on the order in which to subtract, so this is a correct response.  The value for the standard deviation of the difference and the number of observations (pairs) will be the same as is given above.}}
+</div>
+
+
+:29. **Make an appropriate graph to illustrate the data**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::The histogram is presented with 16 bins.
+<center>[[File:DirectFlightCosts-Histogram1-Excel.png|link=]]</center>
+
+::If you defined your difference as the 90-day price minus the 14-day price, then with 16 bins you would have the following histogram:
+<center>[[File:DirectFlightCosts-Histogram2-Excel.png|link=]]</center>
+</div>
+&nbsp;
+</div>
+
+
+
+<img src="./Images/Step4.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:30. **Verify the requirements have been met**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::<!-- This is not a simple random sample of airports.  Rather, the sample was chosen from the list of the busiest airports in Europe.  However, we are not making an inference on the airports but on the difference in the cost of the flights. -->The sample size is large, so we can conclude that the sample mean, $ \bar d $ is normally distributed.
+</div>
+
+
+:31. **Give the test statistic and its value**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::The test statistic for a test for two means with paired data is a $t$.
+$$ t=1.685 $$
+::If you computed the difference as the 90-day price minus the 14-day price, the value of your test statistic is $ -1.685 $.
+</div>
+
+
+:32. **State the degrees of freedom**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+$
+df = 86 
+$
+</center>
+</div>
+
+
+:33. **Mark the test statistic and $P$-value on a graph of the sampling distribution** 
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+: The test statistic is plotted on the horizontal axis.  The $P$-value is shaded in blue.  This image was copied from the normal probability applet.  Since the test statistic is a $t$, not a $z$, this is not the exact image for this procedure.  We label the image, "For illustrative purposes only":
+<center>[[File:DirectFlightCosts-Applet.png|link=]]</center>
+</div>
+
+
+:34. **Find the $P$-value and compare it to the level of significance**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+$
+P\textrm{-value}= 0.096 > 0.01 = \alpha 
+$
+</center>
+: The $P$-value will be 0.096, no matter what order you subtracted the values.
+</div>
+
+
+:35. **State your decision**
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+: Since the $P$-value is greater than the level of significance, we fail to reject the null hypothesis.
+</div>
+&nbsp;
+</div>
+
+
+<img src="./Images/Step5.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:36. **Present your conclusion in an English sentence, relating the result to the context of the problem**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::There is insufficient evidence to suggest that there is a difference in the mean cost of airline tickets 14-days versus 90-days in advance.
+</div>
+&nbsp;
+</div>
+
+</div>
+<br>
+<br>
+
+## Confidence Intervals
+
+We can compute a confidence interval for the true mean of the differences for paired data.  After the differences between two paired data sets have been calculated, we can create a confidence interval for the true mean of the differences.  To do this, we follow the instructions for creating a confidence interval for a one mean with $ \sigma $ unknown, but we use the column of differences as the data set.
+
+{{Software_Filter|PageName=CI-PairedData}}
+
+The requirements for creating a confidence interval for the difference of means are the same as the requirements for the hypothesis test.  We assume:
+:* A simple random sample was drawn from the population
+:* The mean of the differences is normally distributed
+
+
+<img src="./Images/StepsAll.png">
+
+<img src="./Images/PineBeetleDamage-1441150-LG.png">
+### Mountain Pine Beetle Attacks
+
+<img src="./Images/Step1.png">
+
+**Summarize the relevant background information**
+
+Mountain pine beetles are small insects that bore into the bark of trees. The female beetles that first infest the tree emit pheromones to attract other beetles. In response to the pheromones, many beetles bore into the tree and ultimately kill it. The insects can destroy large tree stands within one year.
+
+Lodgepole pine (*Pinus contorta* Dougl.ex Loud.) are particularly susceptible to mountain pine beetle (*Dendroctonus ponderosae* Hopkins) outbreaks.  The image to the right shows the destruction that can be caused by these insects. The large brown patches are pines that have been killed by the beetles.
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:37. The mountain pine beetle threatens many forests in the United States. These tiny insects are only 0.5 cm long--about the size of a grain of rice. This photo of a mountain pine beetle is magnified greatly. These little creatures can destroy a large, healthy forest. Can you think of a spiritual parallel?   
+
+<img src="./Images/MountainPineBeetle2-1306004.png">
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::There are many great diverse answers that could be presented. Please share your thoughts with someone in your group.
+<!--: The story of President Hinckley’s axe head in the notch of a tree provides a similar analogy.-->
+</div>
+&nbsp;
+</div>
+
+
+
+<img src="./Images/Step2.png">
+
+**Describe the data collection procedures**
+
+In a study conducted in the Arapaho National Forest in Colorado, researchers from the USDA Forest Service studied the effect of pine beetle outbreaks on the average number of trees in an area. <!--<cite>Klutsch09</cite>-->  The researchers counted the number of established trees per hectare before a pine beetle outbreak and seven years after an outbreak. (One hectare is an area of 100 meters by 100 meters.)  Data representative of their observations are given in the file <span class=Link>[[Data|PineBeetle]]</span>.
+
+
+<img src="./Images/Step3.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:**Give the relevant summary statistics**
+
+:38. Find the mean and standard deviation of the number of trees per hectare *before* the pine beetle outbreak.  How would you describe the density of the trees in this forest?  Express this in terms that make sense to you. 
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::The mean was 1028.41 trees per hectare and the standard deviation was 57.03 trees per hectare.  Note that the values were rounded to two decimal places, since the data were given to one decimal place.
+::Answers will vary regarding the description of the density.  Here is one possible response.
+::There is roughly one tree every $ \frac{100 \times 100}{1028.41} = 9.7 $ square meters.  In other words, on average, each tree would have a space of about $ \sqrt{9.7} = 3.1 $ meters long and 3.1 meters wide in which to grow.
+</div>
+
+
+:39. Repeat question 38 for the number of trees per hectare *after* the outbreak.
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::The mean was 592.87 trees per hectare and the standard deviation was 45.31 trees per hectare.
+::Answers will vary regarding the description of the density.  Here is one possible respons.
+::The trees are about half as dense as they were before the pine beetle infestation.  About $ \frac{592.87}{1028.41} = 0.58 = 58\% $ of the trees remained, so $ 100\% - 58\% = 42\% $ of the trees were killed by the pine beetles!
+</div>
+
+
+:40. Create a new column of data in the file <span class=Link>[[Data|PineBeetle]]</span> by subtracting the "before" counts from the "after" counts:
+$$ Difference = After - Before $$
+::For these differences, report the mean, the standard deviation, and the sample size.
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+{| class="wikitable"
+|- 
+! colspan="2" | Summary Statistics:
+|- 
+| Mean: 
+| $ \bar d = -435.535 $
+|-
+| Standard Deviation:
+| $ s_d = 17.082 $ 
+|-
+| Sample Size: 
+| $ n = 170 $
+|}
+</center>
+
+</div>
+
+
+:**Make an appropriate graph to illustrate the data**
+
+:41. Create a histogram of the differences in the density of the trees.
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<img src="./Images/PineBeetleDiff-Histogram-Excel.png">
+</div>
+&nbsp;
+</div>
+
+
+
+<img src="./Images/Step4.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:42. **Verify the requirements have been met.**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::a. It is not explicitly stated, but we assume the plots of land were selected at random.
+
+::b. For the pine beetle data, the histogram indicates that the data are not normally distributed.  This can be confirmed with a Q-Q plot.  Since the sample size is large ($ n = 170 $), we can assume the sample mean is normally distributed.
+
+::The requirements for creating the confidence interval seem to be satisfied.
+</div>
+
+
+:43. **Find the confidence interval**. Use the 95% level of confidence.
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+$ (-438.121,~ -432.948) $
+</center>
+</div>
+&nbsp;
+</div>
+
+
+
+<img src="./Images/Step5.png">
+
+**Present your observations in an English sentence, relating the result to the context of the problem**
+
+Interpret the confidence interval we created.
+We are 95% confident that the true mean change in the number of trees per hectare after a pine beetle outbreak is between $-438.121$ and $-432.948$ trees per hectare.  Stated differently, we are 95% confident that the true mean *decrease* in the number of trees per hectare after a pine beetle outbreak is between $432.948$ and $438.121$ trees per hectare.
+
+
+<img src="./Images/StepsAll.png">
+
+### Sleep Inducing Drugs
+
+<img src="./Images/Step1.png">
+
+**Summarize the relevant background information**
+
+In William Sealy Gosset's landmark paper on the $t$-distribution, he cites data on a sleep-inducing drug. In a paper published in 1905, Arthur R. Cushny and A. Roy Peebles reported the effect of Lævorotary Hyoscyamine Hydrobromate (L-Hyoscyamine) on the length of time that people sleep before waking. <!-- cite{Cushny05} -->  The primary research question is: does L-Hyoscyamine impact the mean amount of time that people sleep?  We will compute a 90% confidence for the true mean difference in the times.
+
+
+<img src="./Images/Step2.png">
+
+**Describe the data collection procedures**
+
+Eleven subjects were included in the study.  At the start of the study, the researchers observed the average length of time that each of the participants slept before waking.  Later, each subject was given 0.6 mg of L-Hyoscyamine and the duration of uninterrupted sleep was again measured.
+
+The difference in the amount of time each person slept was computed by subtracting the amount of time the subjects slept when taking the drug minus the sleep duration with no drug.  The data are summarized in the table below.
+
+{| class="basic"
+|+**Mean hours of sleep**
+|-
+! Subject !! Control (no drug)  !! L-Hyoscyamine  !! Difference
+|- align="center"
+| 1 || 0.6 || 1.3 || 0.7
+|- align="center"
+| 2 || 3 || 1.4 || -1.6
+|- align="center"
+| 3 || 4.7 || 4.5 || -0.2
+|- align="center"
+| 4 || 5.5 || 4.3 || -1.2
+|- align="center"
+| 5 || 6.2 || 6.1 || -0.1
+|- align="center"
+| 6 || 3.2 || 6.6 || 3.4
+|- align="center"
+| 7 || 2.5 || 6.2 || 3.7
+|- align="center"
+| 8 || 2.8 || 3.6 || 0.8
+|- align="center"
+| 9 || 1.1 || 1.1 || 0
+|- align="center"
+| 10 || 2.9 || 4.9 || 2
+|- align="center"
+| 11 || - || 6.3 || -
+|}
+
+Notice that the "control" data for Subject #11 is missing.  It is not possible to compute a difference for this person, so their data will be omitted from our analysis.  For this analysis, we will use the remaining $ n=10 $ observations.
+
+You may find it easier to copy and paste the data from the following table.  The last row has been omitted.
+
+{| class="basic"
+|-
+! Increase in hours of sleep
+|- align="center"
+| 0.7
+|- align="center"
+| -1.6
+|- align="center"
+| -0.2
+|- align="center"
+| -1.2
+|- align="center"
+| -0.1
+|- align="center"
+| 3.4
+|- align="center"
+| 3.7
+|- align="center"
+| 0.8
+|- align="center"
+| 0
+|- align="center"
+| 2
+|} 
+
+
+
+<img src="./Images/Step3.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:**Give the relevant summary statistics**
+
+:44. Report the mean, standard deviation, and sample size for the differences.
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+{| class="wikitable"
+|- 
+! colspan="2" | Summary Statistics:
+|- 
+| Mean: 
+| $ \bar d = 0.75 $ hours
+|-
+| Standard Deviation:
+| $ s_d = 1.79 $ hours
+|-
+| Sample Size: 
+| $ n = 10 $
+|}
+</center>
+
+</div>
+
+
+:**Make an appropriate graph to illustrate the data**
+
+:45. Create a histogram of the differences in the hours of sleep.
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+: Here is a histogram of the data with 6 bins:
+<center>
+<img src="./Images/LHyoscyamine-Histogram-Excel.png">
+</center>
+</div>
+&nbsp;
+</div>
+
+
+
+<img src="./Images/Step4.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:46. **Verify the requirements have been met.**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::a. We assume the subjects represent a random sample from the population.
+
+::b. A Q-Q plot of the differences indicates that is reasonable to conclude that the data are normally distributed even though the sample size is small:
+<img src="./Images/LHyoscyamine-QQ.png">
+
+::The requirements for creating the confidence interval seem to be satisfied.
+</div>
+
+
+:47. **Find the confidence interval**. Use the 90% level of confidence.
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+$ (-0.287, 1.787) $
+</center>
+</div>
+&nbsp;
+</div>
+
+
+
+<img src="./Images/Step5.png">
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+:48. **Present your observations in an English sentence, relating the result to the context of the problem**
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::We are 90% confident that the true mean difference in the amount of time people sleep by taking this drug compared to not taking the drug is between $-0.287$ hours and $1.787$ hours.
+::Notice that 0 is in the confidence interval.  This suggests that 0 is a plausible value for the mean difference in the times.  In other words, the drug does not seem to affect the amount of time people sleep.  L-Hyoscyamine is not an effective sleep aid--at least at these dosage levels.
+</div>
+&nbsp;
+</div>
+
+## Summary
+
+<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
+{{Summary|12}}
+
+## Navigation
+
+<center>
+{| 
+|- align="center"
+| **Previous Reading**: <br> Lesson 11:  <br> [[Lesson 11: Inference for One Mean: Sigma Unknown|Inference for One Mean: Sigma Unknown]]
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| **This Reading**: <br> Lesson 12:  <br> Inference for Two Means: Paired Data
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| **Next Reading**: <br> Lesson 13:  <br> [[Lesson 13: Inference for Two Means: Independent Samples|Inference for Two Means: Independent Samples]]
+|}
+</center>

@@ -1,0 +1,43 @@
+---
+title: "Translation Guide"
+output: html_document
+---
+
+| Wiki Code                 |                Rmd Translation |
+|---------------------------|--------------------------------|
+| ==Some Title==            | ## Some Title                  |
+| ===Some Subtitle===       | ### Some Subtitle              |
+| ====Some Sub-subtitle==== | #### Some Sub-subtitle         |
+| =====Last one I think===== | ##### Last one I think        |
+| `[[File:somefile.png|center|link=]]` | `<img src="./Images/somefile.png">`[^1] |
+| `'''`  | `**` |
+| `''` | `*` |
+
+
+
+
+## Translating the Green Problem Show/Hide Solution Boxes:
+
+```{}
+## Wiki Code:
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+  
+## Becomes in Rmd:
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+  
+### But be sure to change both instances of 'Q2' to Q3 or whatever...
+
+```
+
+[^1]: Go to wiki, right click on corresponding "somefile.png" image, Save As, Choose the "Images" folder of the "Current Math 221 Wiki" folder.
+
+### Regular Expressions
+
+Beginning of file source = 
+
+End of file source = `\|(link).*\]\]$`
+
+`[[File:StepsAll.png|link=|center]]`
+`\[\[(File):\w*\.\w{3}\|\w*\=\|\w*\]\]`

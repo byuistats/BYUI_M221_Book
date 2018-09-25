@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Lesson 14</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 221B</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 4: Rules of Probability</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 5: Normal Distributions</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 6: The Central Limit Theorem</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 7: Probability Calculations for a Sample Mean</a>
+    </li>
+    <li class="dropdown-header">Lesson 8: Unit 1 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson09.html">Lesson 9: Hypothesis Test for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson10.html">Lesson 10: Confidence Interval for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson11.html">Lesson 11: Inference for One Mean (Sigma Unknown)</a>
+    </li>
+    <li>
+      <a href="Lesson12.html">Lesson 12: Inference for Match Pairs</a>
+    </li>
+    <li>
+      <a href="Lesson13.html">Lesson 13: Inference for Two Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson14.html">Lesson 14: Inference for Several Independent Samples</a>
+    </li>
+    <li class="dropdown-header">Lesson 15: Unit 2 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson16.htlm">Lesson 16: Describing Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson17.html">Lesson 17: Inference for One Proportion</a>
+    </li>
+    <li>
+      <a href="Lesson18.html">Lesson 18: Inference for Two Proportions</a>
+    </li>
+    <li>
+      <a href="Lesson19.html">Lesson 19: Inference for Independence of Categorical Data</a>
+    </li>
+    <li class="dropdown-header">Lesson 20: Unit 3 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson21.html">Lesson 21: Describing Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson22.html">Lesson 22: Simple Linear Regression</a>
+    </li>
+    <li>
+      <a href="Lesson23.html">Lesson 23: Inference for Bivariate Data</a>
+    </li>
+    <li class="dropdown-header">Lesson 24: Unit 4 Review</li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="Data.html">Data</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lesson 14</h1>
+
+</div>
+
+
+<iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+<div style="clear:both">
+
+</div>
+<p>{{:Tidbit:7}}</p>
+<p>==Lesson Outcomes==</p>
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Lesson Outcomes" data-expandtext="Click Here to Show Outcomes for this Lesson">
+<p>By the end of this lesson, you should be able to: :* Hypothesis Testing for several means (ANOVA): :** State the null and alternative hypothesis. :** Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test. :** Assess the statistical significance by comparing the p-value to the α-level. :** Check the requirements for the hypothesis test. :** Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. :** Draw a correct conclusion for the hypothesis test.</p>
+</div>
+<p><br></p>
+<p>==The Effects of Gratitude==</p>
+<p>[[<a href="File:StepsAll.png%7Clink" class="uri">File:StepsAll.png|link</a>=|center]]</p>
+<p>{| style=“border: 1px solid lightblue;” |- valign=“top” | [[<a href="File:GordonBHinckley.png%7Clink" class="uri">File:GordonBHinckley.png|link</a>=]] | <span class="math inline">\(~ ~\)</span> | President Gordon B. Hinckley said, “My plea is that we stop seeking out the storms and enjoy more fully the sunlight. I am suggesting that as we go through life, we ‘accentuate the positive.’ I am asking that we look a little deeper for the good, that we still our voices of insult and sarcasm, that we more generously compliment and endorse virtue and effort” (‘’Standing for Something’’, 2000, p.101). |- |}</p>
+<p>[[<a href="File:Step1.png%7Clink" class="uri">File:Step1.png|link</a>=]][[<a href="File:Midnight_sun.jpg%7Cframe%7Clink" class="uri">File:Midnight_sun.jpg|frame|link</a>=|400px|From [<a href="http://commons.wikimedia.org/wiki/File:Midnight_sun.jpg" class="uri">http://commons.wikimedia.org/wiki/File:Midnight_sun.jpg</a> commons.wikimedia.org] ]]</p>
+<p>‘’’Summarize the relevant background information’’’</p>
+<p>Robert Emmons and Michael McCullough investigated the effects of gratitude on people’s perception of life as a whole<!--<cite>Emmons03</cite>-->. In a study of <span class="math inline">\(n=192\)</span> undergraduates, the people were randomly assigned to one of three groups.</p>
+<p>:<em>Group 1 (Gratitude): The participants in this group were asked to record five things each week for which they were grateful or thankful. :</em>Group 2 (Hassles): The volunteers in this group recorded five irritants that had occurred to them in the previous week. :*Group 3 (Events): The people in the events group recorded five things that occurred in the past week that had an impact on them.</p>
+<p>In addition to the weekly record of the five things they recorded their level of satisfaction with life in general. (Higher values are more favorable.) Reports were collected for nine weeks, and the overall level of satisfaction with life as a whole was recorded for each individual. The researchers wanted to determine if there was a difference in the perception of life as a whole between the subjects assigned to each of the three groups. Stated differently, they wanted to determine if expressing gratitude affects a person’s view of life in general.</p>
+<p>Here is an excerpt of data representing the results of this study:</p>
+<p>[[<a href="File:Gratitude-Data.png%7Clink" class="uri">File:Gratitude-Data.png|link</a>=|center]]</p>
+<p>Higher values indicate a greater level of satisfaction with life as a whole.</p>
+<p>How might we analyze these data? One possible method would be to conduct separate t-tests for all the possible pairs of groups in the study. If we did this, we would need to conduct a separate t-test to compare groups 1 &amp; 2, 1 &amp; 3 and 2 &amp; 3. If the probability of committing a Type I error is $ = .05 $ on each of these tests, then the probability that we would commit a Type I error on at least one of the tests is much greater than 0.05. We need a hypothesis test that we can use to compare all the groups at once. The procedure that allows us to do this is called Analysis of Variance (ANOVA).</p>
+<!--
+!!!!!!!!!!!!!!!!!!!!!!!!! BEGIN MISSION MEMORIES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+==Mission Memories==
+
+
+District meetings are gatherings of approximately 6-12 missionaries who serve in a relatively small area. In some missions, the missionaries conclude each district meeting by individually shaking each other's hands.  If there are 6 missionaries present at a district meeting, how many handshakes will be given at the conclusion?
+
+You might want to use the following diagram to help you determine this number.  Each circle represents a missionary.  Draw line connecting each dot with the others.  The lines represent handshakes.  How many handshakes are there if there are 6 missionaries at a district meeting?
+
+<center>
+[[File:MissionaryHandshakeANOVA.png|link=]]
+</center>
+
+Now, think about the missionaries as means and the handshakes as hypothesis tests to determine if those means were equal.  However, each of these tests carry a probability of committing a type I error. If the tests were independent, the probability of committing at least one type I error in 15 tests (the number of tests required to look at all possible pairs of 6 means) is $1-(1-0.05)^{15}=0.5367$.  In other words, if there are six groups and you do all possible pairwise tests to look for differences in the means with $\alpha=0.05$, there is a probability of over 50% that you will have at least one type one error.  This is unacceptable!
+
+What is the solution?  Conduct only one test: an analysis of variance (ANOVA).
+
+!!!!!!!!!!!!!!!!!!!!!!!!! END MISSION MEMORIES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+-->
+<p>==Analysis of Variance (ANOVA)==</p>
+<p>ANOVA is a test for equality of several means. It allows us to compare the means for several groups–in one hypothesis test. It might sound intimidating, but ANOVA is simply a way to analyze several means at once. It is based on a comparison of the spread of the data within each of the groups compared to the spread of the means of the groups.</p>
+<p>In an ANOVA test, the null hypothesis is typically expressed in words: <span class="math display">\[H_0: \text{All the means are equal.}\]</span> The alternative hypothesis is given as: <span class="math display">\[H_a: \text{One or more of the means differs from the others.}\]</span></p>
+<p>If the means differ from each other in comparison to the variability in each group, then we conclude that the means are not all equal. If the means do not differ by much (when compared to the spread of the data in each group) then we do not reject the hypothesis that all the means are equal.</p>
+<p>We will use the level of significance, <span class="math inline">\(\alpha\)</span>, and the <span class="math inline">\(P\)</span>-value just as we have in the other hypothesis tests.</p>
+<p>===<span class="math inline">\(F\)</span>-distribution=== [[<a href="File:Gratitude-F.png%7Clink" class="uri">File:Gratitude-F.png|link</a>=|frame]] The test statistic in ANOVA follows an <span class="math inline">\(F\)</span>-distribution. This is the first time we have encountered this distribution. In previous tests, we have used the test statistics <span class="math inline">\(z\)</span> and <span class="math inline">\(t\)</span>. For the ANOVA test, we use the <span class="math inline">\(F\)</span>-statistic.</p>
+<p>Here is a brief summary of the characteristics of the <span class="math inline">\(F\)</span>-distribution: :<em>It is right skewed. :</em>The values of <span class="math inline">\(F\)</span> are never negative. :*The <span class="math inline">\(P\)</span>-value for the ANOVA test is the area in the ‘’right tail’’. We will never divide the area in the tail.</p>
+<p>===Requirements of ANOVA===</p>
+<p>There are two requirements of ANOVA that must be checked: :*The data are normally distributed in each group. ::: We check this by creating a Q-Q plot for each group (separately). If the points in the Q-Q plot do not show distinct curvature, it is reasonable to conclude that the data are normally distributed.</p>
+<p>:*The ‘’’[[Lesson 3: Describing_Quantitative_<a href="Data:_Shape,_Center_%26_Spread#Variance%7Cvariances">Data:_Shape,_Center_%26_Spread#Variance|variances</a>]]‘’’ are equal for each group. ::: This requirement is checked by examining the variances. The rule we will use is: ‘’if the largest variance is less than or equal to four times the smallest variance, then we will conclude that the variances are equal.’’ If done by hand, the calculations for one simple ANOVA problem can easily require an hour of hard work. We will use software to do these calculations quickly and accurately.</p>
+<p>{{Tip|The variance is the square of the standard deviation. The sample variance is denoted by the symbol <span class="math inline">\(s^2\)</span>.}}</p>
+<p>===How to Conduct an ANOVA Test===</p>
+<div id="auto">
+
+</div>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<p>{{Software_Filter | PageName=TestANOVA }}</p>
+<p>==Worked Example: Gratitude==</p>
+<p>We will conduct a hypothesis test to determine if the mean responses of the individuals in the three groups differ.</p>
+<p>‘’’State the null and alternative hypotheses and the level of significance’’’ <span class="math display">\[
+\begin{align}
+H_0: &amp; ~ \textrm{All the means are equal} \\
+H_a: &amp; ~ \textrm{At least one of the means differs}
+\end{align}
+\]</span></p>
+<p>We will use the $ = 0.05 $ level of significance.</p>
+<p>[[<a href="File:Step2.png%7Clink" class="uri">File:Step2.png|link</a>=]]</p>
+<p>‘’’Describe the data collection procedures’’’</p>
+<p>The students were randomly assigned to one of the three treatments. They wrote in a weekly journal, according to their group assignment. At the end of the semester, they completed a questionnaire that asked about their attitude toward life. The responses on the survey were coded into a number, where higher numbers represent a more positive outlook.</p>
+<p>[[<a href="File:Step3.png%7Clink" class="uri">File:Step3.png|link</a>=]]</p>
+<p>‘’’Give the relevant summary statistics’’’</p>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<p>{{Software_Filter | PageName=GratitudeANOVA }}</p>
+<p>The summary statistics are presented in the following table:</p>
+<center>
+{| class=“basic” style=“text-align:center” |- valign=“bottom” !Group || N || Mean || Std. <br> Deviation |- | ‘’’Grateful’‘’ || 64 || 5.050 || 0.9443 |- |’‘’Hassles’‘’ || 63 || 4.675 || 0.8320 |- |’‘’Events’’’ || <span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span> 65<span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span> || <span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span> 4.660 <span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span> || <span class="math inline">\(~\)</span> 0.8483 <span class="math inline">\(~\)</span> |- |}
+</center>
+<p>Please do not blindly cut-and-paste computer output. It can include a lot of information that we do not use. Identify the relevant parts and only report those pieces of information. Present only those portions of the output that are relevant.</p>
+<p>Since the largest variance (<span class="math inline">\(s^2\)</span>) is not four times larger than the smallest variance, we can assume the variances are equal. The points in the Q-Q plots for each of the three groups (not shown) follow the line closely, suggesting that the data can be assumed to be normally distributed. We conclude that the requirements are satisfied and it is appropriate to use ANOVA. :* ‘’’Make an appropriate graph to illustrate the data’’’</p>
+<p>[[<a href="File:Gratitude-Boxplots.png%7Clink" class="uri">File:Gratitude-Boxplots.png|link</a>=|center]]</p>
+<p>[[<a href="File:Step4.png%7Clink" class="uri">File:Step4.png|link</a>=]]</p>
+<p>‘’’Verify the requirements have been met’’’</p>
+<p>Q-Q plots indicate that it is reasonable to conclude that the data are normally distributed in each group.<br />
+The largest variance (0.8917 from the Grateful group) is not four times the smallest (0.6922 from the Hassles group), so we conclude that the variances are equal for the three groups.</p>
+<p>‘’’Give the test statistic and its value’’’</p>
+<p>This can be found in the output. Our test statistic, <span class="math inline">\(F\)</span>, is: <span class="math display">\[F = 4.075\]</span></p>
+<p>‘’’State the degrees of freedom’’’</p>
+<p>There are 2 and 189 degrees of freedom.</p>
+<p>The order in which these are stated is important. For an F-test, it is not the same to have 2 and 189 degrees of freedom as it is to have 189 and 2 degrees of freedom.</p>
+<p>‘’’Mark the test statistic and <span class="math inline">\(P\)</span>-value on a graph of the sampling distribution’’’</p>
+<p>[[<a href="File:Gratitude-F.png%7Clink" class="uri">File:Gratitude-F.png|link</a>=|center]]</p>
+<p>‘’’Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance’’’</p>
+<p><span class="math display">\[P\textrm{-value}=0.019 &lt; 0.05 = \alpha\]</span></p>
+<p>‘’’State your decision’’’</p>
+<p>Since <span class="math inline">\(P\)</span>-value<span class="math inline">\(=0.019 &lt; 0.05 = \alpha\)</span>, we reject the null hypothesis.</p>
+<p>[[<a href="File:Step5.png%7Clink" class="uri">File:Step5.png|link</a>=]]</p>
+<p>‘’’Present your conclusion in an English sentence, relating the result to the context of the problem’’’</p>
+<p>There is sufficient evidence to suggest that at least one of the three groups has a mean level of satisfaction with life that differs from the others. In short, the mean level of satisfaction with life in general is not the same for all three groups.</p>
+<p>If we take a closer look, we see that the Hassles and Events groups had means that were fairly close together. However, the Grateful group appears to have a significantly higher mean level of satisfaction than the other two groups.</p>
+<p>==Worked Example: Soccer Shoes== <span id="21:SoccerShoesExplanation"></span></p>
+<p>[[<a href="File:StepsAll.png%7Clink" class="uri">File:StepsAll.png|link</a>=|center]]</p>
+<p>[[<a href="File:Step1.png%7Clink" class="uri">File:Step1.png|link</a>=]]</p>
+<p>‘’’Summarize the relevant background information’’’</p>
+<p>Nike, a company that makes sporting goods including shoes, funded a study to compare five soccer shoe designs. <!--<cite>Hennig09,Hennig10</cite>--> The objective of the research was to determine if there is a difference in the mean accuracy soccer players achieve using different Nike shoe designs.</p>
+<p>‘’’State the null and alternative hypotheses and the level of significance’’’ <span class="math display">\[
+\begin{align}
+H_0: &amp; \textrm{All the means are equal} \\
+H_a: &amp; \textrm{At least one of the means differs}
+\end{align}
+\]</span></p>
+<p>We will use the $ = 0.10 $ level of significance.</p>
+<p>[[<a href="File:Step2.png%7Clink" class="uri">File:Step2.png|link</a>=]]</p>
+<p>‘’’Describe the data collection procedures’’’</p>
+<p>As part of the research, they asked trained soccer players to kick a ball at a target. The target was placed 115 cm above the ground and at a distance of 10 m from the players. Using electronic equipment, the researchers recorded the distance from the center of the target to the point where the ball hit. The objective of the research was to assess if footwear could affect the accuracy of a soccer player.</p>
+<p>The subjects wore five different soccer shoes and for one treatment they kicked the ball in stocking feet. Due to the proprietary nature of the data, the shoes are only labeled “A,” “B,” “C,” “D,” and “E” in the article. Data representing the results of this study are given in the file <span class="Link">[[Data|SoccerShoes]]</span>.</p>
+<p>Use the <span class="Link">[[Data|SoccerShoes]]</span> data to answer the following questions.</p>
+<p>[[<a href="File:Step3.png%7Clink" class="uri">File:Step3.png|link</a>=]]</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+:1. ‘’’Give the relevant summary statistics’’’
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<center>
+<table>
+<thead>
+<tr class="header">
+<th>{</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+! Group !! N !! Mean !! Std. Deviation |- |A || 20 || 33.10 || 5.230 |- |B || 20 || 32.70 || 5.430 |- |C || 20 || 29.45 || 5.216 |- |D || 20 || 32.00 || 7.291 |- |E || 20 || 32.20 || 5.569 |- |Socks || 20 || 35.25 || 6.382 |}
+</center>
+</div>
+:2. ‘’’Make an appropriate graph to illustrate the data’’’
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::Here is a side-by-side boxplot to illustrate the data for the six groups all at once. (You may also want to make side-by-side histograms.) [[<a href="File:Soccershoes-boxplot-SPSS.png%7Clink" class="uri">File:Soccershoes-boxplot-SPSS.png|link</a>=|400px|center]]</p>
+</div>
+:3. Based on what you have seen so far, does it appear that there is a significant difference between the mean accuracy of the kicks using the six types of footwear?
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::Just by looking at the boxplots we can see that there is a difference, but we do not know if there is a statistically significant difference between the mean accuracy of the kicks using the six different types of footwear until we perform an hypothesis test for several means.</p>
+</div>
+:4. If we conducted independent samples <span class="math inline">\(t\)</span>-tests comparing the six groups, how many tests would be conducted if we compared each of the groups against all the others?
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::We would need to conduct 15 tests! We need to use ANOVA. We should not do the comparisons using several different t-tests.</p>
+</div>
+<p> </p>
+</div>
+<p>[[<a href="File:Step4.png%7Clink" class="uri">File:Step4.png|link</a>=]]</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+:5. ‘’’Verify the requirements have been met’’’
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::Q-Q plots of the data for each of the six groups (separately) do not indicate a departure from normality.<br />
+::{{Type_Filter|type=Online|content=The largest standard deviation (7.291) is not double the smallest (5.216).}}{{Type_Filter|type=Classroom|content=The largest variance (53.159) is not four times the smallest (27.207).}}</p>
+</div>
+:6. ‘’’Give the test statistic and its value’’’
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::<span class="math inline">\(F\)</span> statistic = 2.020</p>
+</div>
+:7. ‘’’State the degrees of freedom’’’
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::There are 5 and 114 degrees of freedom</p>
+</div>
+:8. ‘’’Mark the test statistic and <span class="math inline">\(P\)</span>-value on a graph of the sampling distribution’’’
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>[[<a href="File:SoccerShoes-SamplingDist.png%7Clink" class="uri">File:SoccerShoes-SamplingDist.png|link</a>=|center]]</p>
+</div>
+:9. ‘’’Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance’’’
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::$P =0.08094 &lt; 0.1 = $</p>
+</div>
+:10. ‘’’State your decision’’’
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::Since <span class="math inline">\(P\)</span>-value<span class="math inline">\(=0.08094 &lt; 0.1 = \alpha\)</span> we reject the null hypothesis.</p>
+</div>
+<p> </p>
+</div>
+<p>[[<a href="File:Step5.png%7Clink" class="uri">File:Step5.png|link</a>=]]</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+:11. ‘’’Present your conclusion in an English sentence, relating the result to the context of the problem’’’
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<p>::There is sufficient evidence to suggest that there is a difference in the mean accuracy of the kicks for the various types of footwear.</p>
+</div>
+<p> </p>
+</div>
+<p>==Summary==</p>
+<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
+<p>{{Summary|14}}</p>
+<p>==Navigation==</p>
+<p>{| |- align=“center” | ‘’’Previous Reading’‘’: <br> Lesson 13: <br> [[Lesson 13: Inference for Two Means: Independent Samples|Inference for Two Means: Independent Samples]] |                    |’‘’This Reading’‘’: <br> Lesson 14: <br> Inference for Several Means (ANOVA) |                    |’‘’Next Reading’’’: <br> Lesson 15: <br> [[Lesson 15: Review for Exam 2|Review for Exam 2]] |}</p>
+
+<br />
+<hr />
+<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
