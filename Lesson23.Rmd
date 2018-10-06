@@ -297,8 +297,26 @@ $
 
 ==Summary==
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|23}}
+*The unknown '''true linear regression line''' is $Y=\beta_0+\beta_1X$ where $\beta_0$ is the true y-intercept of the line and $\beta_1$ is the true slope of the line.
+
+*A '''residual''' is the difference between the observed value of $Y$ for a given $X$ and the predicted value of $Y$ on the regression line for the same $X$. It can be expressed as:
+$$
+Residual = Y - \hat Y = Y - (b_0 + b_1 X)
+$$
+
+*To check all the requirements for bivariate inference you will need to create a '''scatterplot''' of $X$ and $Y$, a '''residual plot''', and a '''Q-Q plot of the residuals'''. 
+
+*We conduct a hypothesis test on bivariate data to know if there is a linear relationship between the two variables. To determine this, we test the slope ($\beta_1$) on whether or not it equals zero. The appropriate hypotheses for this test are:
+$$
+\begin{array}{1cl}
+H_0: & \beta_1=0 \\
+H_a: & \beta_1\ne0
+\end{array}
+$$
+
+*For bivariate inference we use software to calculate the sample coefficients, residuals, test statistic, $P$-value, and confidence intervals of the true linear regression coefficients.
+<br>
+
 
 ==Navigation==
 

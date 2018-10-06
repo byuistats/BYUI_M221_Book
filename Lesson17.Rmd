@@ -313,8 +313,15 @@ Even though the proportion of indicators that suggested good health was less tha
 
 ==Summary==
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|17}}
+*The '''estimator''' of $p$ is $\hat p$. $\displaystyle{ \hat p = \frac {x}{n}}$ and is used for both confidence intervals and hypothesis testing.
+
+*You will use the Excel spreadsheet {{Course_Filter|course=A B C|content={{Spreadsheet-CDA}}}} to perform hypothesis testing and calculate confidence intervals for problems involving one proportion.
+
+*The requirements for a confidence interval are $n \hat p \ge 10$ and $n(1-\hat p) \ge 10$. The requirements for hypothesis tests involving one proportion are $np\ge10$ and $n(1-p)\ge10$.
+
+*We can determine the sample size we need to obtain a desired margin of error using the formula $\displaystyle{ n=\left(\frac{z^*}{m}\right)^2 p^*(1-p^*)}$ where $p^*$ is a '''prior estimate''' of $p$. If no prior estimate is available, the formula $\displaystyle{ \left(\frac{z^*}{2m}\right)^2}$ is used.
+<br>
+
 
 ==Navigation==
 

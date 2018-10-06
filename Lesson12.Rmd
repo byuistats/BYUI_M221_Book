@@ -1125,8 +1125,14 @@ $ (-0.287, 1.787) $
 
 ==Summary==
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|12}}
+*The key characteristic of '''dependent samples''' (or '''matched pairs''') is that knowing which subjects will be in group 1 determines which subjects will be in group 2.
+
+*We use slightly different variables when conducting inference using dependent samples:
+::Group 1 values: $x_1$&nbsp;&nbsp;Group 2 values: $x_2$&nbsp;&nbsp;Differences: $d$&nbsp;&nbsp;Population mean: $\mu_d$&nbsp;&nbsp;Sample mean: $\bar d$&nbsp;&nbsp;Sample standard deviation: $s_d$
+
+*When conducting hypothesis tests using dependent samples, the null hypothesis is always $\mu_d=0$, indicating that there is no change between the first population and the second population. The alternative hypothesis can be left-tailed ($<$), right-tailed($>$), or two-tailed($\ne$).
+<br>
+
 
 ==Navigation==
 

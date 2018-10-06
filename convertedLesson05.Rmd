@@ -14,11 +14,12 @@ output:
  }
 </script>
 
-<iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<br/>
+<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC94-G9-36oCixDqF97LTx6S" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
-<div style="clear:both"></div>
-
-{{YouTubeLesson|url=http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC94-G9-36oCixDqF97LTx6S}}
 
 ## Lesson Outcomes
 
@@ -83,7 +84,7 @@ We will return to this example later, and we will find the area shaded in blue.
 
 #### Characteristics of the Normal Curve
 
-#### =Introduction to $z$-scores=
+##### Introduction to $z$-scores
 
 In Ghana, the mean height of young adult women is normally distributed with mean $159.0$ cm and standard deviation $4.9$ cm. (Monden & Smits, 2009) Serwa, a female BYU-Idaho student from Ghana, is $169.0$ cm tall. Her height is $169.0 - 159.0 = 10$ cm greater than the mean. When compared to the standard deviation, she is about two standard deviations ($\approx 2 \times 4.9$ cm) taller than the mean. <!-- Two standard deviations is only an approximate.  Since $10/4.9 = 2.041$, she is 2.04 standard deviations greater than the mean.-->
 
@@ -93,16 +94,15 @@ The heights of men are also normally distributed. The mean height of young adult
 <div class="Questions">
 :1. Approximately how many standard deviations above the mean is Gustavo's height?
 
-<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q1" style="display:none;">
-<p>Gustavo’s height is $ 182.5 − 173.0 = 9.5 \text{ cm  } \ $    above the mean. The standard deviation of the height of Brazilian men is 6.3 cm, so his height is   $ \displaystyle{ \frac{9.5}{6.3} =1.508 } \ $  standard deviations above the mean.</p>
+<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+::Gustavo’s height is $ 182.5 − 173.0 = 9.5 \text{ cm  } \ $    above the mean. The standard deviation of the height of Brazilian men is 6.3 cm, so his height is   $ \displaystyle{ \frac{9.5}{6.3} =1.508 } \ $  standard deviations above the mean.
 </div>
 &nbsp;
 </div>
-<br/>
 
 
-#### =Computing $z$-scores=
+##### Computing $z$-scores
 
 When we examined the heights of Serwa and Gustavo, we compared their height to the standard deviation. If we look carefully at the steps we did, we subtracted each individual's height from the mean height for people of the same gender and nationality.
 
@@ -119,7 +119,7 @@ $$z = \frac{x -\mu }{\sigma}.$$
 
 The $z$-score can be computed for data from any distribution, but it is most commonly applied to normally distributed data.
 
-#### =68-95-99.7% Rule for Bell-shaped Distributions=
+##### 68-95-99.7% Rule for Bell-shaped Distributions
 
 Heights of women (or men) in a particular population follow a normal distribution. Most people's heights are close to the mean. A few are very tall or very short. We would like to make a more precise statement than this.
 
@@ -159,34 +159,33 @@ We define an **unusual observation** to be something that happens less than 5% o
 <div class="Questions">
 :2. Out of Serwa and Gustavo, who is physically taller?
  
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
 ::Gustavo is taller.  He is 182.5 cm tall, and Serwa is 169.0 cm tall.
 </div>
-<br/>
+
 
 :3. Relative to their own gender and nationality, who is relatively taller?
 
-<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q3" style="display:none;">
+<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
 ::Relative to other Ghanian women, Serwa is very tall.  Gustavo is tall relative to Brazilian men, but relative to people of his gender and nationality, he is not relatively taller than Serwa.  Serwa has a higher $z$-score.
 </div>
-<br/>
+ 
 
 :4. Are either of these heights unusual?
 
-<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q4" style="display:none;">
+<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
 ::Serwa’s height is unusual.  Her $z$-score is: $ z = 2.041. $ This is more than two standard deviations away from the mean. Gustavo’s height is not unusual.  His $z$-score is less than two standard deviations away from the mean.
 </div>
 &nbsp;
 </div>
-<br/>
+
 
 <center>"Piled Higher and Deeper" by Jorge Cham</center> 
 <br>
-
-<img src="./Images/Phd1030.png">
+[[file:Phd1030.png">
 
 ## Normal Probability Computations
 
@@ -198,7 +197,7 @@ An important part of the practice of statistics is finding areas under a normal 
 
 ### Converting a $z$-score to a Probability
 
-Using this applet we can calculate proportions and probabilities based on the area under the normal curve. For the following examples, please open the [Normal Probability Applet](http://byuimath.com/apps/normprob.html)  and practice using it to find areas under the curve.
+Using this applet we can calculate proportions and probabilities based on the area under the normal curve. For the following examples, please open the [http://byuimath.com/apps/normprob.html Normal Probability Applet] and practice using it to find areas under the curve.
 
 #### Heights of Ghanian Women
 
@@ -210,13 +209,12 @@ What proportion of young Ghanian women reach a height that is at or below 169 cm
 
 To find the area under a normal curve corresponding to a $z$-score of $2.041$, do the following:
 
-* Type the $z$-score of $2.041$ into one of the two boxes along the horizontal axis of the graph.
+::*Type the $z$-score of $2.041$ into one of the two boxes along the horizontal axis of the graph.
+::*Click on the areas under the curve until only the areas left of the $z$-score are shaded blue.
+::*The total shaded area under the normal distribution, 0.979
+<nowiki>*</nowiki>, is given above the graph. This is the proportion of young Ghanian women who are shorter than Serwa.
 
-* Click on the areas under the curve until only the areas left of the $z$-score are shaded blue.
-
-- The total shaded area under the normal distribution, 0.979*, is given above the graph. This is the proportion of young Ghanian women who are shorter than Serwa.
-
-<img src="./Images/Serwa_z-score.PNG|400px">
+<img src="./Images/Serwa z-score.PNG|400px">
 
 The area to the left of our chosen $z$-score is also the probability that a randomly selected woman will be shorter than Serwa. The probability that a randomly selected Ghanaian woman will be shorter than Serwa is $0.979$, or $97.9\%$.
 
@@ -230,7 +228,7 @@ $$z = \frac{x – \mu}{\sigma} = \frac{0.280 – 0.261}{0.034} = 0.559$$
 
 Type the $z$-score of $0.559$ in one of the boxes below the horizontal axis in the applet. Click on the areas under the curve until only the region on the right is highlighted in blue.
 
-<img src="./Images/Batting_average_z-score.PNG|400px|center">
+<img src="./Images/Batting average z-score.PNG|400px|center">
 
 The area under the curve to the right of $z = 0.559$ is $0.288$. This is the probability that a randomly selected player will have a batting average that is greater than 0.280. (Note: It is a coincidence that the area, 0.288, is close to the batting average of 0.280. There is no significance in this.)
 
@@ -265,7 +263,7 @@ First, we need to find the $z$-score that corresponds to the 90<sup>th</sup> per
 
 For example, to find the $z$-score corresponding to the 90<sup>th</sup> percentile, click on the regions of the graph so that the area to the left of one of the bars is shaded and nothing is shaded to the right. Then, type the number 0.9 in the box at the top of the applet and press [Enter]. The value 1.282 is the $z$-score such that 90% of the area is to the left.
 
-<img src="./Images/Batting_average_percentiles.PNG|400px|center">
+<img src="./Images/Batting average percentiles.PNG|400px|center">
 
 So, $z = 1.282$ is the $z$-score that corresponds to the 90th percentile of a normal distribution. How do we find the batting average that corresponds to the 90<sup>th</sup> percentile? We can solve for $x$ in the equation for the $z$-score.
 
@@ -367,14 +365,12 @@ Each volunteer was given a physical to assure that they were not ill at the time
 <div class="Questions">
 :5. Make a *histogram of the body temperature data. 
 
-<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q5" style="display:none;">
+<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
 
 <!--
 {{Course_Filter_Two|A=[[File:BodyTemperatures-Histogram.png|link=|400 px]]|B=[[File:Histogram Example.jpg|link=|400px]]}}
 -->
-
-<br/>
 
 <img src="./Images/BodyTemperatures-Histogram.png">
 
@@ -385,16 +381,16 @@ Note that the mean is 98.23, standard deviation is 0.738, and sample size is n =
 
 :6. Based on your histogram, what is the shape of the distribution of these data?
 
-<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q6" style="display:none;">
+<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
 ::The data appear to be normally distributed. 
 </div>
 
 
 :7. Create a Q-Q plot of the body temperature data.
 
-<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q7" style="display:none;">
+<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
 
 <!--
 {{Course_Filter_Two|A=[[File:BodyTemperatures-QQ.png|link=|400 px]]|B=[[File:SPSS QQ-Plot Body Temp.jpg|link=|400 px]]}}
@@ -403,19 +399,19 @@ Note that the mean is 98.23, standard deviation is 0.738, and sample size is n =
 <img src="./Images/BodyTemperatures-QQ.png">
 
 </div>
-<br/>
+
 
 ::<nowiki>*</nowiki>Click the link at right for a review of how to create a histogram.
 
-<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q8" style="display:none;">
+<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 {{Software_Filter|PageName=Histogram-Condensed}}
 </div>
 <br>
 &nbsp;
 </div>
-<br/>
+
 
 You may notice some jagged jumps in the in Q-Q plot of the body temperature data. This is called granularity. It occurs here because the body temperatures were only reported to the nearest tenth of a degree. If we had more precision in the data, this would not occur.
 
@@ -456,8 +452,17 @@ The ability to determine if data follow a normal distribution will be important 
 
 ## Summary
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|05}}
+*A **normal density curve** is symmetric and bell-shaped. The curve lies above the horizontal axis and the total area under the curve is equal to 1. 
+
+*A **standard normal distribution** has a mean of 0 and a standard deviation of 1. The **68-95-99.7% rule** states that when data are normally distributed, approximately 68% of the data lie within 1 standard deviation from the mean, approximately 95% of the data lie within 2 standard deviations from the mean, and approximately 99.7% of the data lie within 3 standard deviations from the mean. 
+
+*A **z-score** tells us how many standard deviations away from the mean a given value is. It is calculated as: $\displaystyle{z = \frac{\text{value}-\text{mean}}{\text{standard deviation}} = \frac{x-\mu}{\sigma}}$
+
+*The **probability applet** allows us to use z-scores to calculate proportions, probabilities, and percentiles.
+
+*A **Q-Q plot** is used to assess whether or not a set of data is normally distributed.
+<br>
+
 
 ## Alumni Spotlight: Adam Andersen
 
@@ -466,8 +471,8 @@ The ability to determine if data follow a normal distribution will be important 
 </center>
 <!-- Adam has a copyright release for these photos -->
 
-<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q9" style="display:none;">
+<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
 
 :Statistics have been useful in multiple aspects of my work in Human Resources and Diversity.  I created a dynamic spreadsheet model for analyzing workforce salaries, both company-wide and for discrete job functions within various levels of the organization.  This model utilizes averages and sets thresholds that trigger flags for anomalies in proposed salary offer decisions, including those beyond two standard deviations of the internal peer average.  These flags prompt review, discussion, and provide opportunities to vet offer decisions and to substantiate and document the basis for any outlier salary decisions.  This has proved to promote and maintain salary equity among women and minorities and their majority peers.
 
@@ -475,7 +480,7 @@ The ability to determine if data follow a normal distribution will be important 
 
 :Despite having studied statistics at BYU-Idaho several years ago (in fact, I nearly took the course twice), I have felt the Holy Ghost bring these basic concepts to my remembrance and teach me how to apply them at work.  And for that, I am grateful.
 
-<div style="font-size:75%">
+<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 Biography:<br>
 Adam D. Andersen is the Human Capital Management System Lead for Battelle Energy Alliance, LLC at the U.S. Department of Energy’s Idaho National Laboratory in Idaho Falls, Idaho.  He is responsible for creating and revising employment policies and procedures; coordinating human capital assurance; leading measurement and reporting; managing contract and regulatory requirements; and assisting in-house legal counsel in employee disciplinary advisory groups and in representing the company in disputes involving its five labor unions.
 <br>

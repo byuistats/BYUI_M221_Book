@@ -565,8 +565,15 @@ $
 
 ==Summary==
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|11}}
+*In practice we rarely know the true standard deviation $\sigma$ and will therefore be unable to calculate a z-score. '''Student's t-distribution''' gives us a new test statistic, $t$, that is calculated using the sample standard deviation ($s$) instead.
+$$ \displaystyle{ t = \frac {\bar x - \mu} {s / \sqrt{n}} } $$
+
+*The $t$-distribution is similar to a normal distribution in that it is bell-shaped and symmetrical, but the exact shape of the $t$-distribution depends on the '''degrees of freedom ($df$)'''. 
+$$df=n-1$$
+
+*You will use Excel to carry out hypothesis testing and create confidence intervals involving $t$-distributions.
+<br>
+
 
 ==Navigation==
 

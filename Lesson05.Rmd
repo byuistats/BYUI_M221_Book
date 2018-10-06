@@ -14,11 +14,13 @@ output:
  }
 </script>
 
-<iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div style="float:right;width=40%;">
+<br/>
+<div style="padding-left:10%;">**Optional Lesson Video**</div>
+<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC94-G9-36oCixDqF97LTx6S" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
-<div style="clear:both"></div>
 
-{{YouTubeLesson|url=http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC94-G9-36oCixDqF97LTx6S}}
 ==Lesson Outcomes==
 
 By the end of this lesson, you should be able to:
@@ -449,8 +451,17 @@ The ability to determine if data follow a normal distribution will be important 
 
 ==Summary==
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|05}}
+*A '''normal density curve''' is symmetric and bell-shaped. The curve lies above the horizontal axis and the total area under the curve is equal to 1. 
+
+*A '''standard normal distribution''' has a mean of 0 and a standard deviation of 1. The '''68-95-99.7% rule''' states that when data are normally distributed, approximately 68% of the data lie within 1 standard deviation from the mean, approximately 95% of the data lie within 2 standard deviations from the mean, and approximately 99.7% of the data lie within 3 standard deviations from the mean. 
+
+*A '''z-score''' tells us how many standard deviations away from the mean a given value is. It is calculated as: $\displaystyle{z = \frac{\text{value}-\text{mean}}{\text{standard deviation}} = \frac{x-\mu}{\sigma}}$
+
+*The '''probability applet''' allows us to use z-scores to calculate proportions, probabilities, and percentiles.
+
+*A '''Q-Q plot''' is used to assess whether or not a set of data is normally distributed.
+<br>
+
 
 ==Alumni Spotlight: Adam Andersen==
 

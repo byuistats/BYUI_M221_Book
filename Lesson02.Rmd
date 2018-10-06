@@ -540,8 +540,22 @@ Auditors typically cannot consider every item in a population, because there are
 
 ##Summary
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|02}}
+*The '''Statistical Process''' has five steps: '''D'''esign the study, '''C'''ollect the data, '''D'''escribe the data, '''M'''ake inferences, '''T'''ake action.
+
+*In a '''designed experiment''', researchers control the conditions of the study. In an '''observational study''', researchers don't control the conditions but only observe what happens.
+
+*There are many sampling methods used to obtain a '''sample''' from a '''population''':
+::*A '''simple random sample (SRS)''' is a random selection taken from a population
+::*A '''systematic sample''' is every '''''k'''''<sup>th</sup> item in the population, beginning at a random starting point
+::*A '''cluster sample''' is all items in one or more randomly selected clusters, or blocks
+::*A '''stratified sample''' divides data into similar groups and an '''SRS''' is taken from each group
+::*A '''convenience sample''' is one easily obtained in a less-than-systematic way and should be avoided whenever possible 
+
+*'''Quantitative variables''' represent things that are numeric in nature, such as the value of a car or the number of students in a classroom. '''Categorical variables''' represent nonnumerical data that can only be considered as labels, such as colors or brands of shoes.
+
+*The '''null hypothesis ($H_0$)''' is the foundational assumption about a population and represents the status quo. The '''alternative hypothesis ($H_a$)''' is a different assumption about a population. Using a '''hypothesis test''', we determine whether it is more likely that the null hypothesis or the alternative hypothesis is true.
+<br>
+
 
 ##References
 

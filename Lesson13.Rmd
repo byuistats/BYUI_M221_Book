@@ -689,8 +689,17 @@ Because hospital-based rehabilitation tends to be more expensive, the researcher
 
 ==Summary==
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|13}}
+*In contrast to dependent samples, two samples are independent if knowing which subjects are in group 1 tells you nothing about which subjects will be in group 2. With '''independent samples''', there is no pairing between the groups.
+
+*When conducting inference using independent samples we use $\bar x_1$, $s_1$, and $n_1$ for the mean, standard deviation, and sample size, respectively, of group 1. We use the symbols $\bar x_2$, $s_2$, and $n_2$ for group 2.
+
+*When working with independent samples it is important to graphically illustrate each sample separately. Combining the groups to create a single graph is not appropriate.
+
+*When conducting hypothesis tests using independent samples, the null hypothesis is always $\mu_1=\mu_2$, indicating that there is no difference between the two populations. The alternative hypothesis can be left-tailed ($<$), right-tailed($>$), or two-tailed($\ne$).
+
+*Whenever zero is contained in the confidence interval of the difference of the true means we conclude that there is no significant difference between the two populations.
+<br>
+
 
 ==Navigation==
 

@@ -569,8 +569,29 @@ $
 
 ==Summary==
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|18}}
+*When conducting hypothesis tests using two proportions, the null hypothesis is always $p_1=p_2$, indicating that there is no difference between the two proportions. The alternative hypothesis can be left-tailed ($<$), right-tailed($>$), or two-tailed($\ne$).
+
+*For a hypothesis test and confidence interval of two proportions, we use the following symbols:
+$$
+\begin{array}{lcl}
+\text{Sample proportion for group 1:} & \hat p_1 = \displaystyle{\frac{x_1}{n_1}} \\
+\text{Sample proportion for group 2:} & \hat p_2 = \displaystyle{\frac{x_2}{n_2}}
+\end{array}
+$$
+
+*For a hypothesis test only, we use the following symbols:
+
+$$
+\begin{array}{lcl}
+\text{Overall sample proportion:} & \hat p = \displaystyle{\frac{x_1+x_2}{n_1+n_2}}
+\end{array}
+$$
+
+*Whenever zero is contained in the confidence interval of the difference of the true proportions we conclude that there is no significant difference between the two proportions.
+
+*You will use the Excel spreadsheet {{Course_Filter|course=A B C|content={{Spreadsheet|CDA}} }} to perform hypothesis testing and calculate confidence intervals for problems involving two proportions.
+<br>
+
 
 ==Navigation==
 

@@ -14,26 +14,27 @@ output:
  }
 </script>
 
-<iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div style="float:right;width=40%;">
+<br/>
+<div style="padding-left:10%;">**Optional Lesson Video**</div>
+<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
-<div style="clear:both"></div>
-
-
-{{YouTubeLesson|url=http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC_w9Z1CWsBjtdmcQdJwuAay}}
 ## Lesson Outcomes
 
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Lesson Outcomes" data-expandtext="Click Here to Show Outcomes for this Lesson">
 By the end of this lesson, you should be able to:
-:* Determine the shape of a distribution using a histogram and/or box plot.
-:* Determine the centers of a given histogram and/or box plot. 
-:* Identify the mean, median and standard deviation in skewed or normal histograms.
-:* Calculate the mean, median and standard deviation from quantitative data.
-:* Distinguish between a parameter and a statistic.
-:* Calculate a percentile from a quantitative data set.
-:* Calculate a five-number summary from quantitative data with Excel, or by hand.
-:* Create a histogram and a box-plot from quantitative data. 
-</div>
+
+* Determine the shape of a distribution using a histogram and/or box plot.
+* Determine the centers of a given histogram and/or box plot. 
+* Identify the mean, median and standard deviation in skewed or normal histograms.
+* Calculate the mean, median and standard deviation from quantitative data.
+* Distinguish between a parameter and a statistic.
+* Calculate a percentile from a quantitative data set.
+* Calculate a five-number summary from quantitative data with Excel, or by hand.
+* Create a histogram and a box-plot from quantitative data. 
+
+
+<div style="clear:both"></div>
 
 <br>
 
@@ -65,6 +66,12 @@ We will use the five steps in the Statistical Process throughout the course. Rec
 | **T**ake action
 |}
 
+  Step 1:   \*\*D\*\*aniel    \*\*D\*\*esign the study
+  --------- ----------------- ---------------------------
+  Step 2:   \*\*C\*\*an       \*\*C\*\*ollect data
+  Step 3:   \*\*D\*\*iscern   \*\*D\*\*escribe the data
+  Step 4:   \*\*M\*\*ore      \*\*M\*\*ake inferences
+  Step 5:   \*\*T\*\*ruth     \*\*T\*\*ake action
 
 <img src="./Images/StepsAll.png">
 
@@ -1573,8 +1580,17 @@ Follow the steps below to learn how to draw a boxplot.
 
 ## Summary
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|03}}
+*A '''histogram''' allows us to visually interpret data. Histograms can be left-skewed, right-skewed, or symmetrical and bell-shaped.
+
+*The '''mean''', '''median''', and '''mode''' are measures of the center of a distribution. The mean is the most common measure of center, and is computed by adding up the observed data and dividing by the number of observations in the data set.
+
+*The '''standard deviation''' is a number that describes how spread out the data are. A larger standard deviation means the data are more spread out than data with a smaller standard deviation.
+
+*A '''parameter''' is a true (but usually unknown) number that describes a population. A '''statistic''' is an estimate of a parameter obtained from a sample. 
+
+*'''Quartiles/percentiles''', '''Five-Number Summaries''', and '''Boxplots''' are tools that help us understand data. The five-number summary of a data set contains the minimum value, the first quartile, the median, the third quartile, and the maximum value. A boxplot is a graphical representation of the five-number summary.
+<br>
+
 
 ## Navigation
 

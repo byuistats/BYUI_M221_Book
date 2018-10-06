@@ -333,8 +333,13 @@ TextGoesHere
 
 ==Summary==
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|22}}
+*In statistics, we write the '''linear regression equation''' as $\hat Y=b_0+b_1X$ where $b_0$ is the '''Y-intercept''' of the line and $b_1$ is the '''slope''' of the line. The values of $b_0$ and $b_1$ are calculated using software.
+
+*Linear regression allows us to predict values of $Y$ for a given $X$. This is done by first calculating the coefficients $b_0$ and $b_1$ and then plugging in the desired value of $X$ and solving for $Y$. 
+
+*The '''independent (or explanatory) variable ($X$)''' is the variable which is ''not'' affected by what happens to the other variable. The '''dependent (or response) variable ($Y$)''' is the variable which ''is'' affected by what happens to the other variable. For example, in the correlation between number of powerboats and number of manatee deaths, the number of deaths is affected by the number of powerboats in the water, but not the other way around. So, we would assign $X$ to represent the number of powerboats and $Y$ to represent the number of manatee deaths.
+<br>
+
 
 ==Navigation==
 

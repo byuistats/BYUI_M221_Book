@@ -465,8 +465,13 @@ The sample statistic $ s_{xy} $ is an estimator of the population parameter $ \s
 
 ==Summary==
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|21}}
+*Creating '''scatterplots''' of bivariate data allows us to visualize the data by helping us understand its '''shape''' (linear or nonlinear), '''direction''' (positive, negative, or neither), and '''strength''' (strong, moderate, or weak). 
+
+*The '''correlation coefficient ($r$)''' is a number between $-1$ and $1$ that tells us the direction and strength of the linear association between two variables. A positive $r$ corresponds to a '''positive association''' while a negative $r$ corresponds to a '''negative association'''. A value of $r$ closer to $-1$ or $1$ indicates a stronger association than a value of $r$ closer to zero.
+
+*The '''covariance''' is a measure of how two variables vary together. The formula for the covariance is $s_{xy}=r \cdot s_x \cdot s_y$.
+<br>
+
 
 ==Navigation==
 

@@ -4,7 +4,7 @@ output:
   html_document:
     theme: cerulean
     toc: true
-    toc_float: true
+    toc_float: false
 ---
 
 <script type="text/javascript">
@@ -20,9 +20,7 @@ output:
 
 
 {{YouTubeLesson|url=http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-a7rYECFUKhL6yMzvOIwCO}}
-
-Lesson Outcomes
----------------
+==Lesson Outcomes==
 
 By the end of this lesson, you should be able to:
 :* State and apply the three axioms of probability.

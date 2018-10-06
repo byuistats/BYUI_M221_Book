@@ -9,13 +9,13 @@ output:
 
 <iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div style="clear:both"></div>
 
 {{YouTubeLesson|url=http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9C5z9NWEjdRaS7h--99Kwv}}
 ## Lesson Outcomes
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Lesson Outcomes" data-expandtext="Click Here to Show Outcomes for this Lesson">
 By the end of this lesson, you should be able to:
 :* Conduct a Hypothesis Test for a single mean with σ known:
 :** State the null and alternative hypothesis. 
@@ -30,16 +30,16 @@ By the end of this lesson, you should be able to:
 
 <br>
 
-<img src="./Images/StepsAll.png">
+[[File:StepsAll.png|link=|center]]
 
 ## The Ethan Allen
 
-<img src="./Images/The_Judge_Ben_Wiles_(TJG).jpg|400px|frame|From [http://commons.wikimedia.org/wiki/File:The_Judge_Ben_Wiles_(TJG).jpg commons.wikimedia.org]">
+[[File:The_Judge_Ben_Wiles_(TJG).jpg|400px|frame|From [http://commons.wikimedia.org/wiki/File:The_Judge_Ben_Wiles_(TJG).jpg commons.wikimedia.org]|link=]]
 
 A tragic accident on Lake George in New York, USA, called into question the safety regulations for commercial tour boats. On October 5, 2005, a full boat of 47 passengers and 1 crew member began a routine one-hour tour of Lake George. As the operator initiated a turn, the tour boat "Ethan Allen" listed (tipped) enough to take water aboard.  The force caused by dipping beneath the surface caused the vessel to list, shifting the passengers to one side of the boat.  After this shift in the weight distribution, the boat capsized killing 20 passengers and injuring 9 others.
 
 
-<img src="./Images/Step1.png">
+[[File:Step1.png|link=]]
 
 We assume that at the time of the accident, the stability requirements were based on the Coast Guard criteria of a mean of 140 pounds per person.  So, the Ethan Allen was supposed to be able to safely transport passengers and crew with a mean weight of 140 pounds.  We want to investigate if 140 pounds is a reasonable value for the mean weight of tour boat passengers.  This leads to the research question: "Is the mean weight of tour boat passengers greater than 140 pounds?"
 
@@ -58,7 +58,7 @@ We label the null hypothesis $H_0$ and the alternative hypothesis $H_a$.  In eve
 When we test hypotheses, we assume the null hypothesis is true.  Because of this requirement, whenever we need to use μ in a calculation, we can use the value specified in the null hypothesis. When we conduct a hypothesis test, we gather evidence against the requirement that the null hypothesis is true.  If we get enough evidence against the null hypothesis, we reject it.  If we do not have sufficient evidence against the null hypothesis, we do not reject it.
 
 
-<img src="./Images/Step2.png">
+[[File:Step2.png|link=]]
 
 How do we gather evidence against a null hypothesis?  We collect data. 
 
@@ -124,13 +124,13 @@ The marine accident report gives the weight (in pounds) of each of the passenger
 </center> 
 
 
-<img src="./Images/Step3.png">
+[[File:Step3.png|link=]]
 
 To help us understand the the data, we first create a graph summarizing the values.
 
 <center>
 **Weights of Passengers and Crew on the Ethan Allen**<br>
-<img src="./Images/EthanAllen-PassengerWeights-Histogram.png">
+[[File:EthanAllen-PassengerWeights-Histogram.png|link=]]
 </center>
 
 Next, we compute summary statistics. The sample size is $n=48$, and the sample mean is $\bar x=177.6$ pounds. According to the CDC, the standard deviation of the weights of individuals in the United States is $ \sigma=26.7$ pounds. <!-- CITE: http://www.cdc.gov/growthcharts/2000growthchart-us.pdf, page 154-155.--> 
@@ -138,7 +138,7 @@ Next, we compute summary statistics. The sample size is $n=48$, and the sample m
 Considering the data as a random sample of all possible tour boat passengers, it appears that the true mean weight of tour boat passengers might be greater than 140 pounds.  However, we need to check this with a formal test of our hypotheses.
  
 
-<img src="./Images/Step4.png">
+[[File:Step4.png|link=]]
 
 It is not sufficient to gain an intuitive sense for the data.  We will test if there is sufficient evidence to reject the null hypothesis that the true mean weight of tour boat passengers is 140 pounds. 
 
@@ -155,7 +155,7 @@ The area to the right of $z=9.757$ is so small, the normal probability applet gi
 Based on this analysis and the hypothesis test, the evidence against $H_0$ is strong enough to conclude that if every seat on the Ethan Allen was occupied, that the boat would be carrying a greater load than it was certified to handle.
 
  
-<img src="./Images/Step5.png">
+[[File:Step5.png|link=]]
 
 As a result of this accident, the United States government took several actions.  The Coast Guard stability regulations were changed, and the assumed average weight per person was increased to 185 pounds. <!-- [[CITE: http://www.uscg.mil/hq/cg5/cg5212/docs/secg12142010.pdf]]--> As a result, the safety of public vessels has been improved.
 <!--
@@ -166,7 +166,7 @@ As a result of this accident, the United States government took several actions.
 
 -->
 
-<img src="./Images/StepsAll.png">
+[[File:StepsAll.png|link=|center]]
 
 ## Body Temperatures of Healthy Adults
 
@@ -181,8 +181,8 @@ Based on his research, Wunderlich stated, "The axillary temperature of 98.6&deg;
 <div class="Questions">
 :1. How would you design a study to determine if the mean body temperature of healthy adults is 98.6&deg; ?
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::Take the temperature of a large number of healthy individuals in a clinical setting and compare your mean to the assumed mean body temperature of 98.6 degrees F.  
 </div>
 &nbsp;
@@ -196,72 +196,72 @@ A group of researchers led by Philip A. Mackowiak, MD, conducted a study to asse
 <div class="Questions">
 :2. How could you use the body temperature data collected by Dr. Mackowiak to determine if the mean body temperature is really 98.6&deg; F?
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::We can compare his sample results to the assumed population mean of 98.6&deg; F. 
 </div>
 
 
 :3. Find the mean of the $n=148$ body temperatures.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::$ \bar x = 98.23~&deg;\text{F}$. 
 </div>
 
 
 :4. Create a histogram illustrating the body temperatures of the individuals in the Mackowiak study.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
-<img src="./Images/BodyTemp-Hist-Excel.png">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+[[File:BodyTemp-Hist-Excel.png|link=|center]]
 </div>
 
 
 :5. Based on the mean of the observations (Question 3) and the histogram of the data (Question 4,) does it appear that the mean body temperature of healthy adults is significantly different from 98.6&deg; F?
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::Answers may vary.  However, many students are likely to say that the sample mean and population mean are very close to each other.
 </div>
 
 
 :6. What is the shape of the distribution of all possible sample means? How do we know? 
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::The distribution of all possible sample means will be approximately normally distributed.  Since the sample size is large, the Central Limit Theorem guarantees this result.
 </div>
 
 
 :7. Assuming that the true mean body temperature of healthy adults is $\mu=98.6$&deg; F, and the population standard deviation is $\sigma = 0.675$&deg; F,<!-- \cite{SundLevander02}--> find the mean and standard deviation of the random variable $\bar X$.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::The random variable $ \bar X $ will have a mean of $ \mu = 98.6 $ and a standard deviation of $ \displaystyle{ \frac{\sigma}{\sqrt{n}} = \frac{0.675}{\sqrt{148}} = 0.05548 } $.
 </div>
 
 
 :8. Use the information in Question 7 to find the $z$-score for the mean you calculated in Question 3.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 <center>$z = \frac{\bar x - \mu}{\sigma / \sqrt{n} } = \frac{98.23 - 98.6}{0.675 / \sqrt{148} } = -6.6685$</center>
 </div>
 
 
 :9. What is the probability of observing a $z$-score that is as extreme or more extreme (further away from 0) than the $z$-score you calculated in Question 8?
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::This is a two-tailed test, so we need to shade both tails of the applet.  This gives a $P$-value of $2.584\times 10^{-11}$.
 </div>
 
 
 :10. Assuming the mean body temperature really is 98.6&deg; F, how likely would it be for a random sample of $n=148$ people in the population to have a mean body temperature that is a extreme as was observed in Question 3?
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::This is extremely unlikely.
 </div>
 
@@ -274,8 +274,8 @@ A group of researchers led by Philip A. Mackowiak, MD, conducted a study to asse
 ::E. The data were collected on a cold day.
 ::F. The data are not normally distributed.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::Correct answer: C. The true mean is different than 98.6&deg; F. The data were collected carefully with properly calibrated modern thermometers.  The sample was representative of the population and the size of the sample was not an issue.
 </div>
 &nbsp;
@@ -347,7 +347,7 @@ In advance of collecting the data, we may have had no idea whether the true mean
 
 In the case of a two-sided test for one mean with $\sigma$ known, the $P$-value is the area in the tails beyond $\pm z$, in both the left and right tails of the standard normal distribution.
 
-<img src="./Images/Applet2584E-11-twosided-LoR.png">
+[[File:Applet2584E-11-twosided-LoR.png|link=|center]]
 
 Using the applet, we shade the area in both tails and then type in the value of $z=-6.669$.  The applet reports an area of "2.584E-11."  This is the way computers indicate scientific notation.  Expressed using more traditional notation, we get
 
@@ -388,7 +388,7 @@ The three possibilities are illustrated in the figures below.
 |- align="center"
 | $H_a:~~\mu \ne 98.6$ || $H_a:~~\mu < 98.6$ || $H_a:~~\mu > 98.6$
 |- align="center"
-| [[File:Applet-TwoTail-LoRes.png">
+| [[File:Applet-TwoTail-LoRes.png|link=|300px]] || [[File:Applet-LeftTail-LoRes.png|link=|300px]] || [[File:Applet-RightTail-LoRes.png|link=|300px]]
 |}
 </center>
 
@@ -399,7 +399,7 @@ If $\bar x$ is close to $\mu$, then the $z$-score will be small.  If the $z$-sco
 {| class="wikitable" 
 ! Large $P$-value !! Small $P$-value 
 |- align="center"
-| [[File:Applet-largeP-LoRes.png">
+| [[File:Applet-largeP-LoRes.png|link=|300px]] || [[File:Applet-smallP-LoRes.png|link=|300px]]
 |- align="center"
 | Fail to reject $H_0$ || Reject $H_0$
 |}
@@ -485,24 +485,24 @@ You are considering approaching this student to discuss their footwear.
 <div class="Questions">
 :12. What action would lead to a Type I error in this case?
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::A Type I Error would be committed if you decided that they were not flip flops, when in reality they were flip-flops. 
 </div>
 
 
 :13. What action corresponds to committing a Type II error?
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::A Type II Error would be committed if you concluded that they were technically flip flops, when in reality they were not flip-flops.
 </div>
 
 
 :14. In this case, is a Type I error or a Type II error more serious?  Justify your response.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::Answers may vary. 
 </div>
 &nbsp;
@@ -525,24 +525,24 @@ $$
 <div class="Questions">
 :15. What action by the FDA would lead to a Type I error in this case?
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::A Type I error would be committed if the FDA decided that the drug improves patient’s conditions, when in actuality it does not.
 </div>
 
 
 :16. What action by the FDA would be associated with committing a Type II error?
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::The FDA would commit a Type II error if they decided that the drug does not improve patients' conditions, when in reality it does.
 </div>
 
 
 :17. In this case, is a Type I error or a Type II error more serious?  Justify your response.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::Answers may vary.  However, a Type I error is probably more serious, since patients would be exposed to the negative side effects of the drug without any benefit.
 </div>
 &nbsp;
@@ -562,24 +562,24 @@ $$
 <div class="Questions">
 :18. What action by the FDA would lead to a Type I error in this case?
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::A Type I error would be committed if the FDA decided that the drug causes serious side effects, when it does not.
 </div>
 
 
 :19. What action by the FDA corresponds to committing a Type II error?
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::A Type II error would be committed if the FDA decided that the drug does not cause serious side effects, when in reality it does cause serious side effects.
 </div>
 
 
 :20. In this case, is a Type I error or a Type II error more serious?  Justify your response.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::A type II error would be more serious, because the FDA could release a drug that they say has no serious side effects, when it actually does.
 </div>
 &nbsp;
@@ -604,11 +604,11 @@ Putting this all together, we can summarize the requirements for a test for a si
 ::*The sample size is large.
 
 
-<img src="./Images/StepsAll.png">
+[[File:StepsAll.png|link=|center]]
 
 ### Worked Example: Body Temperatures
 
-<img src="./Images/Step1.png">
+[[File:Step1.png|link=]]
 
 **Summarize the relevant background information**
 
@@ -624,13 +624,13 @@ H_a:& \mu \ne 98.6
 $$
 $$ \alpha = 0.05 $$
 
-<img src="./Images/Step2.png">
+[[File:Step2.png|link=]]
 
 **Describe the data collection procedures**
 
 The body temperatures of $ n = 148 $ healthy adults were measured using calibrated thermometers in a clinical setting.
 
-<img src="./Images/Step3.png">
+[[File:Step3.png|link=]]
 
 **Give the relevant summary statistics**
 
@@ -644,10 +644,10 @@ $$
 
 **Make an appropriate graph (e.g. a histogram) to illustrate the data**
 
-<img src="./Images/BodyTemp-Histogram-LoRes.png">
+[[File:BodyTemp-Histogram-LoRes.png|link=|center]]
 
 
-<img src="./Images/Step4.png">
+[[File:Step4.png|link=]]
   
 **Verify the requirements have been met**
 
@@ -660,7 +660,7 @@ $$z=-6.669$$
 
 **Mark the test statistic and $P$-value on a graph of the sampling distribution (i.e. the standard normal curve)** 
 
-<img src="./Images/BodyTemp-AppletPvalue.png">
+[[File:BodyTemp-AppletPvalue.png|link=|center]]
 
 **Find the $P$-value and compare it to the level of significance**
 
@@ -671,14 +671,14 @@ $$ P\textrm{-value} = 2.57552 \times 10^{-11} = 0.000~000~000~026 < 0.05 = \alph
 Since the $P$-value is less than $\alpha$, we reject the null hypothesis.
 
 
-<img src="./Images/Step5.png">
+[[File:Step5.png|link=]]
 
 **Present your conclusion in an English sentence, relating the result to the context of the problem**
 
 There is sufficient evidence to suggest that the true mean body temperature of healthy adults is different from 98.6&deg; F.
 
 
-<img src="./Images/StepsAll.png">
+[[File:StepsAll.png|link=|center]]
 
 ## Worked Example: Perceived Health after a Cardiac Arrest
 
@@ -690,12 +690,12 @@ Dr. Bunch summarized the responses in a figure, <!--\cite{Bunch03}--> from which
 
 <div class="QuestionsHeading">Answer the following question:</div>
 <div class="Questions">
-:[[File:Step1.png">
+:[[File:Step1.png|link=]]
 
 :21. Summarize the relevant background information.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::The long-term health of patients who had previously suffered a cardiac arrest were studied.  The researchers want to know if these patients will feel that their overall long-term health was worsened by the cardiac arrest.  
 ::After patients concluded their treatment for the cardiac arrest, they were given the SF-36 survey to assess their overall health.  In the general population, the mean score on the SF-36 is 50.  Lower scores indicate poorer health.  The researchers will test to see if the mean score of those who have had a cardiac arrest is less than 50.
 </div>
@@ -703,8 +703,8 @@ Dr. Bunch summarized the responses in a figure, <!--\cite{Bunch03}--> from which
 
 :22. State the null and alternative hypotheses and the level of significance.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 <center>
 $
 \begin{array}{lcl}
@@ -718,22 +718,22 @@ $
 </div>
 
 
-:[[File:Step2.png">
+:[[File:Step2.png|link=]]
 
 :23. Describe the data collection procedures.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::The researchers collected data from $n=50$ patients who had suffered a cardiac arrest outside a hospital.  The data were collected using the SF-36 survey instrument.
 </div>
 
 
-:[[File:Step3.png">
+:[[File:Step3.png|link=]]
 
 :24. Give the relevant summary statistics.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 <center>
 $
 \begin{array}{l}
@@ -748,18 +748,18 @@ $
 
 :25. Make an appropriate graph to illustrate the data.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
-<img src="./Images/CardiacArrestHealth-Histogram.png">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+[[File:CardiacArrestHealth-Histogram.png|link=|500px|center]]
 </div>
 
 
-:[[File:Step4.png">
+:[[File:Step4.png|link=]]
 
 :26. Verify the requirements have been met.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::*We assume that the individuals chosen to participate in the study represent a (simple) random sample from the population.
 ::*$\bar x$ will be normally distributed, because the sample size is large.
 </div>
@@ -767,8 +767,8 @@ $
 
 :27. Give the test statistic and its value.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 <center>
 $ \displaystyle{ z=\frac{\bar x - \mu}{\sigma / \sqrt{n}} = \frac{47.82 - 50}{10 / \sqrt{50}} = -1.5415 } $
 </center>
@@ -777,16 +777,16 @@ $ \displaystyle{ z=\frac{\bar x - \mu}{\sigma / \sqrt{n}} = \frac{47.82 - 50}{10
 
 :28. Mark the test statistic and $P$-value on a graph of the sampling distribution.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
-<img src="./Images/CardiacArrestHealth-AppletPvalue.png">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+[[File:CardiacArrestHealth-AppletPvalue.png|link=|center]]
 </div>
 
 
 :29. Find the $P$-value and compare it to the level of significance.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 <center>
 $ P\textrm{-value} = 0.0616 > 0.05 = \alpha $
 </center>
@@ -795,18 +795,18 @@ $ P\textrm{-value} = 0.0616 > 0.05 = \alpha $
 
 :30. State your decision.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::Since the $P$-value is greater than $\alpha$, we fail to reject the null hypothesis.
 </div>
 
 
-:[[File:Step5.png">
+:[[File:Step5.png|link=]]
 
 :31. Present your conclusion in an English sentence, relating the result to the context of the problem.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::There is insufficient evidence to suggest that the mean perceived general health of patients after a cardiac arrest is worse than the general population. Patients who suffer from a cardiac arrest typically have the potential to return to full health
 </div>
 &nbsp;
@@ -822,26 +822,26 @@ In the $P$-value method, you compare a computed $P$-value to your selected $\alp
 
 Hypothesis tests follow the same basic pattern.
 
-<img src="./Images/Step1.png">
+[[File:Step1.png|link=]]
 
 :1. Summarize the relevant background information
 
 :2. State the null and alternative hypotheses
 
 
-<img src="./Images/Step2.png">
+[[File:Step2.png|link=]]
 
 :3. Describe the data collection procedures
 
 
-<img src="./Images/Step3.png">
+[[File:Step3.png|link=]]
 
 :4. Give the relevant summary statistics
 
 :5. Make an appropriate graph to illustrate the data
 
 
-<img src="./Images/Step4.png">
+[[File:Step4.png|link=]]
 
 :6. Verify the requirements have been met
 
@@ -854,7 +854,7 @@ Hypothesis tests follow the same basic pattern.
 :10. State your decision
 
 
-<img src="./Images/Step5.png">
+[[File:Step5.png|link=]]
 
 :11. Present your conclusion in an English sentence, relating the result to the context of the problem
 
@@ -876,17 +876,17 @@ In practice, we never really know $ \sigma $.  This procedure is primarily used 
 
 Conducting a hypothesis test involves the application of all of the processes we have learned in this course.  Viewing additional examples can help your understanding.  Click on the link at right to see three other examples.
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Additional Examples" data-expandtext="Show Additional Examples">
 
 <br>
 
-<img src="./Images/StepsAll.png">
+[[File:StepsAll.png|link=|center]]
 
 
 ### Mean age of people who read the New York Times online
 
-<img src="./Images/Step1.png">
+[[File:Step1.png|link=]]
 
 :1. Summarize the relevant background information
 
@@ -907,7 +907,7 @@ $$
 $$ \alpha = 0.05 $$
 
 
-<img src="./Images/Step2.png">
+[[File:Step2.png|link=]]
 
 :3. Describe the data collection procedures
 
@@ -941,7 +941,7 @@ $$ \alpha = 0.05 $$
 34
 -->
 
-<img src="./Images/Step3.png">
+[[File:Step3.png|link=]]
 
 :4. Give the relevant summary statistics
 
@@ -952,16 +952,16 @@ $$ \alpha = 0.05 $$
 
 ::: A histogram showed that the mean age of the online customers may be less than $42$ years. 
 
-<img src="./Images/NYtimes-Hist-Excel.png">
+[[File:NYtimes-Hist-Excel.png|link=|center]]
 
 
-<img src="./Images/Step4.png">
+[[File:Step4.png|link=]]
 
 :6. Verify the requirements have been met
 
 ::: The data represent a simple random sample form the population.  Based on a Q-Q plot, it is reasonable to conclude that the ages are approximately normally distributed.
 
-<img src="./Images/NYtimes-QQ-Excel.png">
+[[File:NYtimes-QQ-Excel.png|link=|center]]
 
 :7. Give the test statistic and its value 
 
@@ -970,7 +970,7 @@ $$ \displaystyle{ z = \frac{\bar x - \mu}{\sigma/\sqrt{n}} = \frac{35.32-42}{12/
 
 :8. Mark the test statistic and $P$-value on a graph of the sampling distribution
 
-<img src="./Images/Applet0.0027-lefttailed-LoR.png">
+[[File:Applet0.0027-lefttailed-LoR.png|link=|center]]
 
 :9. Find the $P$-value and compare it to the level of significance
 
@@ -982,7 +982,7 @@ $$P\text{-value} = 0.0027 < 0.05 = \alpha $$
 ::: Since the $P$-value is less than the level of significance, we reject the null hypothesis.
 
 
-<img src="./Images/Step5.png">
+[[File:Step5.png|link=]]
 
 :11. Present your conclusion in an English sentence, relating the result to the context of the problem
 
@@ -991,7 +991,7 @@ $$P\text{-value} = 0.0027 < 0.05 = \alpha $$
 ::: SIt is reasonable to conclude that the mean age of those who read the Times online is less than 42. There does appear to be a difference in the ages of those who read the print ($ \mu = 42 $) years and the online editions of the paper.
 
 
-<img src="./Images/StepsAll.png">
+[[File:StepsAll.png|link=|center]]
 
 ### Mean GPA of early risers
 
@@ -1002,7 +1002,7 @@ Researcher K. Clay and others presented a paper at the Associated Professional S
 A simple random sample of $n = 378 $ early-rising BYU-Idaho students was collected.  The students were asked to report their BYU-Idaho GPA. The GPA of each person who was selected and signed the informed consent statement (to authorize the use of their data) was recorded. 
 
 
-<img src="./Images/Step1.png">
+[[File:Step1.png|link=]]
 
 :1. Summarize the relevant background information
 
@@ -1023,7 +1023,7 @@ $$
 $$ \alpha = 0.05 $$
 
 
-<img src="./Images/Step2.png">
+[[File:Step2.png|link=]]
 
 :3. Describe the data collection procedures
 
@@ -1034,7 +1034,7 @@ $$ \alpha = 0.05 $$
 -->
 
 
-<img src="./Images/Step3.png">
+[[File:Step3.png|link=]]
 
 :4. Give the relevant summary statistics
 
@@ -1043,16 +1043,16 @@ $$ \alpha = 0.05 $$
 
 :5. Make an appropriate graph to illustrate the data
 
-<img src="./Images/EarlyRisersGPA-Hist-Excel.png">
+[[File:EarlyRisersGPA-Hist-Excel.png|link=|center]]
 
 
-<img src="./Images/Step4.png">
+[[File:Step4.png|link=]]
 
 :6. Verify the requirements have been met
 
 ::: Here is a Q-Q plot of the GPA data.
 
-<img src="./Images/EarlyRisersGPA-QQ-Excel.png">
+[[File:EarlyRisersGPA-QQ-Excel.png|link=|center]]
 
 ::: A simple random sample of $n = 378$ early-rising students at BYU-Idaho was collected. Both the histogram and the Q-Q plot suggest that the data are left-skewed. That is, many of the students have fairly high GPAs, but a few are very low. It is reasonable to conclude that the mean of the GPAs are approximately normally distributed, since the sample size is large, even though the GPA data are left-skewed.
 
@@ -1063,7 +1063,7 @@ $$ \displaystyle{ z = \frac{\bar x - \mu}{\sigma/\sqrt{n}} = \frac{3.21-3.15}{0.
 
 :8. Mark the test statistic and $P$-value on a graph of the sampling distribution
 
-<img src="./Images/Applet0.0431-righttailed-LoRes.png">
+[[File:Applet0.0431-righttailed-LoRes.png|link=|center]]
 
 :9. Find the $P$-value and compare it to the level of significance
 
@@ -1074,7 +1074,7 @@ $$ P\text{-value} = 0.0431 < 0.05 =  \alpha $$
 ::: Reject Ho. There is sufficient evidence to suggest that the mean GPA of early risers is greater than $3.15$.
 
 
-<img src="./Images/Step5.png">
+[[File:Step5.png|link=]]
 
 :11. Present your conclusion in an English sentence, relating the result to the context of the problem
 
@@ -1122,8 +1122,8 @@ We started with an requirement that $1=2$ is a true statement.  We applied valid
 <div class="Questions">
 :32. What is wrong with the logic in this "proof?"
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 ::The problem here is that we assumed that $1=2$, and then we attempted to use that requirement to prove itself.  We cannot use a requirement as evidence of itself.
 ::However, if we start with an requirement and then find a contradiction, then we know that our original requirement is not true. Since this did not happen, we say that we did not get enough evidence against the requirement that $1=2$.
 </div>
@@ -1168,8 +1168,15 @@ When a testimony is given, the truth is planted in the heart.  The testimony fro
 
 ## Summary
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|09}}
+*The **null hypothesis ($H_0$)** is the foundational assumption about a population and represents the status quo. It is a statement of equality ($=$). The **alternative hypothesis ($H_a$)** is a different assumption about a population and is a statement of inequality ($<$, $>$, or $\ne$). Using a **hypothesis test**, we determine whether it is more likely that the null hypothesis or the alternative hypothesis is true.
+
+*The **$P$-value** is the probability of getting a test statistic at least as extreme as the one you got, assuming $H_0$ is true. A $P$-value is calculated by finding the area under the normal distribution curve that is more extreme (farther away from the mean) than the z-score. The alternative hypothesis tells us whether we look at both tails or only one.
+
+*The **level of significance ($\alpha$)** is the standard for determining whether or not the null hypothesis should be rejected. Typical values for $\alpha$ are $0.05$, $0.10$, and $0.01$. If the $P$-value is less than $\alpha$ we reject the null. If the $P$-value is not less than $\alpha$ we fail to reject the null.
+
+*A **Type I error** is committed when we reject a null hypothesis that is, in reality, true. A **Type II error** is committed when we fail to reject a null hypothesis that is, in reality, not true. The value of $\alpha$ is the probability of committing a Type I error.
+<br>
+
 
 ## References
 

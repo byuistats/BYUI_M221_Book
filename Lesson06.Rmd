@@ -230,8 +230,13 @@ The mean and standard deviation of $\bar{x}$ are:
 
 ==Summary==
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|06}}
+*The '''distribution of sample means''' is a distribution of all possible sample means ($\bar x$) for a particular sample size. It has a mean of $\mu$ and a standard deviation of $\sigma/\sqrt{n}$.
+
+*The distribution of sample means is normal when $\bar x$ is normally distributed or when, thanks to the '''Central Limit Theorom (CLT)''', our sample size ($n$) is large.
+
+*The '''Law of Large Numbers''' states that as the sample size ($n$) gets larger, the sample mean ($\bar x$) will get closer to the population mean ($\mu$).
+<br>
+
 
 ==Navigation==
 

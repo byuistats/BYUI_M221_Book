@@ -384,8 +384,19 @@ We do not calculate confidence intervals when working with contingency tables. T
 -->
 ==Summary==
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|19}}
+*The '''$\chi^2$ hypothesis test''' is a test of independence between two variables. These variables are either associated or they are not. Therefore, the null and alternative hypotheses are the same for every test:
+$$
+\begin{array}{1cl}
+H_0: & \text{The (first variable) and the (second variable) are independent.} \\
+H_a: & \text{The (first variable) and the (second variable) are not independent.}
+\end{array}
+$$
+
+*The '''degrees of freedom ($df$)''' for a $\chi^2$ test of independence are calculated using the formula $df=(\text{number of rows}-1)(\text{number of columns}-1)$
+
+*In our hypothesis testing for $\chi^2$ we never conclude that two variables are ''dependent''. Instead, we say that two variables are ''not independent''.
+<br>
+
 
 ==Navigation==
 

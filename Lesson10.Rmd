@@ -778,8 +778,14 @@ In many cases, budgets will limit the sample size that can be drawn.  A research
 
 ==Summary==
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|10}}
+*The '''margin of error''' gives an estimate of the variability of responses. It is calculated as $\displaystyle{m=z^*\frac{\sigma}{\sqrt{n}}}$ where $z^*$ represents a calculated z-score corresponding to a particular confidence level.
+
+*A '''confidence interval''' is an interval estimator used to give a range of plausible values for a parameter. The width of a confidence interval depends on the chosen confidence level (and its corresponding value of $z^*$) as well as the sample size ($n$). This is the equation for calculating confidence intervals:
+$$\displaystyle{\left(\bar x-z^*\frac{\sigma}{\sqrt{n}},~\bar x+z^*\frac{\sigma}{\sqrt{n}}\right)}$$
+
+*The '''sample size formula''' allows us to estimate the number of observations required to obtain a specific margin of error. $\displaystyle{n=\left(\frac{z^*\sigma}{m}\right)^2}$
+<br>
+
 
 ==Navigation==
 

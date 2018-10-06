@@ -298,9 +298,18 @@ This calculation was done in the same way we have done normal calculations in th
 
 ==Summary==
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|16}}
+*'''Pie charts''' are used when you want to represent the observations as part of a whole, where each slice (sector) of the pie chart represents a proportion or percentage of the whole.
+
+*'''Bar charts''' present the same information as pie charts and are used when our data represent counts. A '''Pareto chart''' is a bar chart where the height of the bars is presented in descending order.
+
+*$\hat p$ is a point estimator for true proportion $p$. $\displaystyle{\hat p = \frac{x}{n}}$
+
+*The sampling distribution of $\hat p$ has a mean of $p$ and a standard deviation of $\displaystyle{\sqrt{\frac{p\cdot(1-p)}{n}}}$
+
+*If $np \ge 10$ and $n(1-p) \ge 10$, you can conduct '''probability calculations''' using the Normal Probability Applet. $\displaystyle {z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}}
+= \frac{\hat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}}$
+<br>
+
 
 ==Navigation==
 

@@ -242,8 +242,11 @@ There is sufficient evidence to suggest that the mean lead level is less than 50
 
 ==Summary==
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|07}}
+*When the distribution of sample means is normally distributed, we can use '''z-scores''' and the '''probability applet''' to calculate proportions and probabilities. A z-score is calculated as: $\displaystyle{z = \frac{\text{value}-\text{mean}}{\text{standard deviation}} = \frac{\bar x-\mu}{\sigma/\sqrt{n}}}$
+
+*The '''$P$-value''' is the probability of getting a test statistic at least as extreme as the one you got, assuming $H_0$ is true. A $P$-value is calculated by finding the area under the normal distribution curve that is more extreme (farther away from the mean) than the z-score.
+<br>
+
 
 ==Navigation==
 

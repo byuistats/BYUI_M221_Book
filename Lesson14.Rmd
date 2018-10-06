@@ -373,8 +373,25 @@ Use the <span class=Link>[[Data|SoccerShoes]]</span> data to answer the followin
 
 ==Summary==
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|14}}
+*'''ANOVA''' is used to compare the means for several groups. The hypotheses for the test are always:
+$$
+\begin{align}
+H_0: & ~ \textrm{All the means are equal} \\
+H_a: & ~ \textrm{At least one of the means differs}
+\end{align}
+$$
+
+*For ANOVA testing we use an '''$F$-distribution''', which is right-skewed. The $P$-value of an ANOVA test is always the area to the right of the $F$-statistic.
+
+*We can conduct ANOVA testing when the following three requirements are satisfied:
+:1. The data come from a simple random sample.
+:2. The data are normally distributed within each group.
+:::*This is satisfied when Q-Q Plots for the data in each group roughly follow a straight line.
+:3. The variance is constant.
+:::*This is satisfied when the largest variance is not more than four times the smallest variance.
+
+<br>
+
 
 ==Navigation==
 

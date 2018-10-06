@@ -1,0 +1,518 @@
+---
+title: "Lesson 4: Probability; Discrete Random Variables"
+output: 
+  html_document:
+    theme: cerulean
+    toc: true
+    toc_float: false
+---
+
+<script type="text/javascript">
+ function showhide(id) {
+    var e = document.getElementById(id);
+    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+ }
+</script>
+
+<iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-a7rYECFUKhL6yMzvOIwCO" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<div style="clear:both"></div>
+</br>
+
+## Lesson Outcomes
+
+By the end of this lesson, you should be able to:
+
+* State and apply the three axioms of probability.
+
+## Probability
+
+### Christopher Columbus’ First Voyage
+
+<img src="./Images/Columbus_taking_possession_of_the_new_country.jpg">
+
+On August 3, 1492, Columbus set sail from Spain for his intended destination: the Indies (Caso, Adolph 1990). He was on the Santa Maria, which had a crew of approximately 41 men ("Crist'obal col'on" 1991; "Christopher Columbus"). Several other men were aboard the Niña and the Pinta ("Crist'obal col'on" 1991). On October 12, he landed on an island in the Bahamas he called San Salvador.
+
+The return trip was not without challenges. The Santa Maria ran aground on Christmas Day, 1492, and was abandoned on the island we now call Haiti. Following this incident, Columbus sailed for Spain. Severe storms made the journey difficult. A particularly bad storm on February 14, 1493 made the crew fear for their lives. By morning, the storm was even worse!
+
+Recognizing his dependence upon God, Columbus ordered that a pilgrimage should be made to a particular shrine upon their safe arrival in Spain. He decided that they would use random chance to determine who would make the pilgrimage. They took one chick pea for each man on board. A knife was used to mark one of the chick peas with a cross. The chick peas were placed in a hat and shaken up. Each man was to draw a chick pea, and the one who had the cross would make the pilgrimage.
+
+“The ﬁrst who put in his hand was [Columbus,] and he drew out the bean with a cross, so the lot fell on him; and he was bound to go on the pilgrimage and fulfil the vow” (Caso, Adolph 1990).
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+1. Remember, there were 41 men aboard his ship. What is the probability that Columbus would draw out the marked chick pea? Express your answer as a fraction, and then convert it to a decimal.
+
+<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q1" style="display:none;">
+* There is only one marked chick pea in the hat, out of 41 chick peas total. *Out of* is expressed arithmetically by division. The probability is  $ \frac{1}{41} = 0.0244 $.  (Note: this is about 2%.)
+
+</div>
+</br>
+
+2. Based on your answer to the previous question, how likely is it that Columbus would draw out the marked chick pea?
+
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+
+* There is only about a 2% chance that Columbus will draw out the marked Chick Pea.  This is not very likely.  
+</div>
+&nbsp;
+</div>
+</br>
+
+**Additional Drawings**<br>
+Columbus’ promise to make the pilgrimage did not stop the storm. It was determined that there should be a pilgrimage to another site they held sacred. Again, chick peas representing each member of the crew were placed in a hat and shaken up. “The lot fell on a sailor...named Pedro de Villa” (Caso, Adolph 1990).
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+3. What is the probability that Columbus would not draw out the marked chick pea? Express your answer as a fraction, and then covert it to a decimal?
+
+<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q3" style="display:none;">
+* There are 40 other men on board plus Columbus. So, the probability that Columbus would not draw out the marked chick pea is: $ \frac{40}{41} = 0.9756 $. (Note: this is almost 98%.)
+</div>
+</br>
+
+4. Based on your answer to the previous question, how likely is it that Columbus would not draw out the marked chick pea?
+
+<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q4" style="display:none;">
+* It is very likely that Columbus would not draw out the marked chick pea.  This result is not surprising.
+</div>
+</br>
+
+5. In this second drawing, either Columbus would draw out the marked chick pea, or he would not. Add the probability that Columbus would draw out the marked chick pea and the probability that he would not draw out the marked chick pea.  What is the value of this sum?
+
+<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q5" style="display:none;">
+* The sum of the probabilities is 1:
+$$ \frac{1}{41} + \frac{40}{41} = \frac{41}{41} = 1 $$
+</div>
+&nbsp;
+</div>
+</br>
+
+After the drawing in which Pedro de Villa was chosen to make a pilgrimage, two additional drawings were held. In both cases, Columbus drew out the marked chick pea (Caso, Adolph 1990). In all, Christopher Columbus drew the marked chick pea in three of the four drawings. It can be shown that the probability that this would occur due to chance is very small: 0.0000566.
+
+To put some perspective on this, a high school athlete in the United States is over 26 times more likely to play professional sports than Columbus was to draw the three marked peas! (Fields, Mike 2008) Consider how you might explain the occurrence of this extremely unlikely event. (While no response is required of you right now, this kind of question will be very important later, so take a little time to ponder it.)
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+6. If a fair, six-sided die* is rolled, what is the probability of rolling a 6?
+
+<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q6" style="display:none;">
+* The probability of rolling a 6 on a die is $ \displaystyle{ \frac{1}{6}} = 0.1667 $.
+</div>
+</br>
+
+7. If a fair, six-sided die is rolled, what is the probability of not rolling a 6?
+
+<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q7" style="display:none;">
+* The probability of not rolling a 6 on a die is $ \displaystyle{\frac{5}{6}} = 0.8333. $
+</div>
+</br>
+
+8. When a die is rolled, what is the sum of the probability of rolling a 6 and the probability of not rolling a six?
+
+<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q8" style="display:none;">
+* The probability of rolling a six is $ \displaystyle{\frac{1}{6}} $ and the probability of not rolling a six is $ \displaystyle{\frac{5}{6} } $.  These things cannot happen at the same time, so the probability of either rolling a six or not rolling a six is
+$$ \frac{1}{6} + \frac{5}{6} = \frac{6}{6} = 1 $$
+
+*The only possible outcomes in this case are that you either roll a six or that you do not roll a six.  The probability that one of these will happen is 1.  If we list all the possible outcomes, the probability that at least one of them will occur is 1.
+</div>
+</br>
+
+9. In general, if we know the probability that a particular outcome will occur, how could we calculate the probability that it will not occur?
+
+<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q9" style="display:none;">
+* If we know the probability that an event will occur, we can subtract this probability from 1 to find the probability that the event will not occur. This is because the sum of the probabilities that the event will occur and that the event will not occur must be 1.
+
+</div>
+</br>
+
+
+$*$*Note: The word "die" is the singular form of the word "dice." When we refer to a die, we are talking about a fair, six-sided die.*
+</div>
+</br>
+
+### Probability Notation
+
+You may already have a good understanding of the basics of probability. It is worth noting that there is a special notation used to denote probabilities. The probability that an event, $x$, will occur is written $P(x)$. As an example, the probability that you will roll a 6 on a die can be written as
+
+P (Roll a 6 on a die)= $\displaystyle{\frac{1}{6}}$
+
+### Rules of Probability
+
+Probabilities follow patterns, called **probability distributions,** or “distributions,“ for short. There are three rules that a probability distribution must follow. Answer the following questions to explore what these three rules might be.
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+10. As an answer to a homework problem, a student reported, “The probability of ﬁnding life on Mars is −0.35.” What is wrong with this statement?
+
+<a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q10" style="display:none;">
+* Probabilities cannot be negative.
+</div>
+</br>
+
+11. A student in an introductory statistics class wrote the following statement on an exam: “The probability that the event will occur is 1.25 (i.e. 125%).” What is wrong with this statement?
+
+<a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q11" style="display:none;">
+* Probabilities cannot be larger than 1 (or 100%).
+</div>
+</br>
+
+12. A student estimated that the probability that he would finish his homework is 0.45 (i.e., 45%), and the probability that he would not finish his homework is 0.35 (i.e., 35%). What is wrong with this student’s statement?
+
+<a href="javascript:showhide('Q12')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q12" style="display:none;">
+This can be viewed as one of two problems:  
+</br> 
+
+1. The probabilities for all the events do not add up to 1 (or 100%.)
+
+2. The probability that he does not finish his homework is actually 1 minus the probability that he will finish his homework or 0.55 (i.e., 55%).
+
+</div>
+&nbsp;
+</div>
+</br>
+
+In this course we are interested in experiments where the outcomes are influenced by random effects. So the outcomes of the experiment are uncertain, yet they follow a pattern or distribution and the probability of the experimental outcomes are governed by rules. An event is a set of outcomes of an experiment. Each outcome is an event, but an event can include more than one outcome.
+
+<div class="Emphasis">
+**The three rules of probability are:**
+
+***Rule 1**: The probability of an event $X$ is a number between 0 and 1. 
+
+$$ 0 ≤ P(X) ≤ 1 $$
+
+***Rule 2**: If you list all the outcomes of an experiment (such as rolling a die) the probability that one of these outcomes will occur is 1. In other words, the sum of the probabilities of all the possible outcomes of any experiment is 1.
+
+$$ \sum P(X) = 1 $$
+
+***Rule 3**: (Complement Rule) The probability that an event $X$ will not occur is 1 minus the probability that it will occur.
+
+$$ P(\text{not}~X) = 1 - P(X) $$
+
+You may have noticed that the Complement Rule is just a combination of the first two rules. 
+</div>
+
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+13. Which of the probability rules was violated by the statement in Question 10?
+
+<a href="javascript:showhide('Q13')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q13" style="display:none;">
+* Rule 1
+</div>
+</br>
+
+14. Which of the probability rules was violated by the statement in Question 11?
+
+<a href="javascript:showhide('Q14')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q14" style="display:none;">
+* Rule 1
+</div>
+</br>
+
+15. Which of the probability rules was violated by the statement in Question 12?
+
+<a href="javascript:showhide('Q15')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q15" style="display:none;">
+* Rule 2 or Rule 3
+</div>
+&nbsp;
+</div>
+</br>
+
+Informally, a distribution can be thought of as being "all the possible outcomes and how often they occur."
+
+### Randomness
+
+A BYU-Idaho student was overhead saying, "I went shopping and bought some *random* items."  Did the person actually take a random sample of the items at the store?  Did they write all the items down and randomly select the items for purchase?  Of course not!
+
+What did the student mean? That the items they bought seemed unrelated.  When we consciously or subconsciously choose a sample, it is not random.  
+
+What does it mean to be random? When something is random, it is not just haphazard, with no pattern.  Any random process follows a very distinct pattern over time---the distribution of its outcomes.  For example, if you roll a die thousands of times, about one-sixth of the time you will roll a four.  This is a very clear pattern, or part of a pattern. The entire pattern (or, the entire distribution) is that each number on the die is rolled about one-sixth of the time. 
+
+But there's something different about the patterns followed by random processes than other kinds of patterns.  Other kinds of patterns can be very predictable, such as a color pattern of the red, yellow, blue, red, yellow, blue, and so on. If you're following this pattern and happen to see yellow, you know the next color will be blue. By contrast, you never know what you will get on the next roll of a six-sided die. You *do* know that in the long run you will roll fours about one-sixth of the time.  
+
+When something is random, we can be sure that it follows a long-term pattern, its distribution.  We just never know what the outcome of the next experiment will be.
+
+## The Mean and Standard Deviation of a Discrete Random Variable
+The phrase "discrete random variable" has a very specific meaning. A variable is something that varies (of course!), and a variable is random if its values follow a specific distribution, over the long run. The true meaning of the word "discrete" is too technical for this course. Roughly speaking, a random variable is discrete if its values could be listed (in principle), given enough time.
+
+### Finding the Mean of a Discrete Random Variable
+
+In many applications, it is important to be able to compute the population mean of a discrete random variable. To introduce this idea, we will continue with the hopefully familiar example of rolling a fair six-sided die.
+
+Imagine you are playing a game that involves rolling the die. As part of the game, you roll the die many, many times and keep track of the numbers you roll.
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+16. What proportion of the time do you think you would roll a 1?  What about a 2?  What about a 3? a 4? a 5? a 6?
+
+<a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q16" style="display:none;">
+* Since all the numbers are equally likely, we would expect to roll each of the values 1 through 6 about $ \displaystyle{\frac{1}{6} } $ of the time.  So the proportion of time that each digit would occur is $ \displaystyle{\frac{1}{6} } = 0.1667 $.
+</div>
+</br>
+
+
+17. What is the mean of the values that you get if you roll a fair die many, many times?
+
+<a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q17" style="display:none;">
+* Many people think the mean is 3. We will visit this later.  Make sure you have written down your response, for future reference.
+</div>
+&nbsp;
+</div>
+</br>
+
+A man rolled a die 6,000 times and recorded the results. (Yes, some people actually do this sort of thing.)
+
+Here are the results.
+
+  Value   Count
+  ------- -------
+  1       1047
+  2       968
+  3       961
+  4       1006
+  5       980
+  6       1038
+  Sum:    6,000
+
+How can we find the sample mean of these observed data? We just add the values up and divide by 6,000. The sample mean is.
+
+
+$$\bar x = \frac{1(1047)+2(968)+3(961)+4(1006)+5(980)+6(1038)}{6000}=3.5030$$
+
+
+Sometimes,relative frequencies are given instead of frequencies. There is a straightforward way to calculate the mean when relative frequencies are given. To find out what it is, let's use the rules of arithmetic to break up the previous calculation into six different fractions.
+
+$$\bar x=\frac{1(1047)}{6000}+\frac{2(968)}{6000}+\frac{3(961)}{6000}+\frac{4(1006)}{6000}+\frac{5(980)}{6000}+\frac{6(1038)}{6000} = 3.5030$$
+
+
+$$OR$$
+
+
+$$ \bar x = \left(1\times\frac{1047}{6000} \right)+ \left(2\times\frac{968}{6000} \right) + \left(3\times\frac{961}{6000} \right) + \left( 4\times\frac{1006}{6000} \right) + \left( 5\times\frac{980}{6000} \right) + \left( 6\times\frac{1038}{6000} \right) = 3.5030 $$
+
+Notice each of the fractions in parentheses is the number of times the value occurred divided by the total number of rolls. In other words, the fractions give the proportion of times that each value occurred, or the relative frequencies. If we divide the fractions, we get
+
+
+$$\bar x= 1\,(0.1745) + 2\,(0.1613) + 3\,(0.1602) + 4\,(0.1677) + 5\,(0.1633) + 6\,(0.1730) =3.5030$$
+
+
+Notice that the sample mean is what you get when you multiply each of the values by the proportion of times they occurred and then add them up. We can revise the table above so it gives the value and the sample proportion. We add a column that gives the product of the value and the proportion of times it occurred. When we add up the values in this column, we get the following mean.
+
+<center>
+<table>
+<thead>
+<tr class="header">
+<th><p>Column 1</p></th>
+<th><p>Column 2</p></th>
+<th><p>Column 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Value</p></td>
+<td><p>Count</p></td>
+<td><p>Value $\times$ Proportion</p></td>
+</tr>
+<tr class="even">
+<td><p>$$1$$</p></td>
+<td><p>$\displaystyle{\frac{1047}{6000}≈ 0.1745}$</p></td>
+<td><p>$$1(0.1745)$$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$$2$$</p></td>
+<td><p>$\displaystyle{\frac{968}{6000}≈ 0.1613}$</p></td>
+<td><p>$$2(0.1613)$$</p></td>
+</tr>
+<tr class="even">
+<td><p>$$3$$</p></td>
+<td><p>$\displaystyle{\frac{961}{6000}≈ 0.1602}$</p></td>
+<td><p>$$3(0.1602)$$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$$4$$</p></td>
+<td><p>$\displaystyle{\frac{1006}{6000}≈ 0.1677}$</p></td>
+<td><p>$$4(0.1677)$$</p></td>
+</tr>
+<tr class="even">
+<td><p>$$5$$</p></td>
+<td><p>$\displaystyle{\frac{980}{6000}≈ 0.1633}$</p></td>
+<td><p>$$5(0.1633)$$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$$6$$</p></td>
+<td><p>$\displaystyle{\frac{1038}{6000}≈ 0.1730}$</p></td>
+<td><p>$$6(0.1730)$$</p></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><p>Sum: 1</p></td>
+<td><p>Sum:$\bar x \approx 3.5030$</p></td>
+</tr>
+</tbody>
+</table>
+</center>
+
+The sample mean of the values shown on the 6,000 rolls of the die is $ \bar x = 3.5030 $.
+
+What could we do to calculate the population mean? Remember that the true probability that we would roll any one of these values is $1/6$. If we substitute the true proportion, $1/6$, for the estimated proportion obtained by rolling the die 6,000 times, we get the following table.
+
+
+Column 1   Column 2                               Column 3
+---------- -------------------------------------- ---------------------------
+Value      Count                                  Value $\times$ Proportion
+$x$        $P(x)$                                 $x \times P(x) $
+$$1$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$1(0.1667)$$
+$$2$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$2(0.1667)$$
+$$3$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$3(0.1667)$$
+$$4$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$4(0.1667)$$
+$$5$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$5(0.1667)$$
+$$6$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$6(0.1667)$$
+           Sum: 1                                 Sum: $\mu\approx 3.5$
+
+
+The population mean of a discrete random variable is computed by multiplying each of the values of the random variable by the respective probability that the value will occur. This is exactly what we did in the last table above. You can use a table like this to compute the mean of any discrete random variable. The first column of the table contains the values of the random variable. The second column gives their probabilities. The third column is found by multiplying the values in the previous two columns. The population mean, $\mu$, is the sum of the numbers in the third column.
+ 
+The quantity $\mu = 3.5$ is the true population mean for the values shown on a die. If you roll a die many, many times, the sample mean of the values you roll will be very close to $\mu = 3.5$. (Another way to say this is that the long-run average of the values shown on a die will tend to be close to $\mu$ = 3.5.) This is the answer to [[#Q17|question 17]] above.  Did you put 3.5, or did you guess the answer would be 3?  Many people guess the mean will be 3, but as we have seen, it is actually 3.5.
+
+Notice that the sample mean was very close to the true mean. This is an example of the Law of Large Numbers. The **Law of Large Numbers** states that if you take a large sample from a population, the sample mean will likely be close to the population mean.
+
+### Finding the Standard Deviation of a Discrete Random Variable
+
+We can find the population standard deviation for a discrete random variable by making a table to calculate the mean of the variable. Then we add a column whose values are found by subtracting the mean from each of the observations, squaring it, and multiplying it by the probability for that value. When we add up the values in this column, we get the variance. The standard deviation is the square root of the variance. Our running example of rolling a fair six-sided die will allow us to illustrate this.
+
+#### Rolling a die
+
+Let's calculate the population standard deviation for the number that results from rolling a fair six-sided die. We can do this by extending the table we made for calculating the mean, as described in the previous paragraph and illustrated in the following table.
+
+Column 1   Column 2                               Column 3                    Column 4
+  ---------- -------------------------------------- --------------------------- -------------------------------------
+  Value      Count                                  Value $\times$ Proportion   
+  $x$        $P(x)$                                 $x \times P(x) $            $(x-\mu)^2 \times P(x) $
+  $$1$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$1(0.1667)$$               $(1-3.5)^2\times(0.1667) = 1.0417$
+  $$2$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$2(0.1667)$$               $(2-3.5)^2\times(0.1667) = 0.3750$
+  $$3$$      $\displaystyle\frac{1}{6}≈ 0.1667$     $$3(0.1667)$$               $(3-3.5)^2\times(0.1667) = 0.0417$
+  $$4$$      $\displaystyle\frac{1}{6}≈ 0.1667$     $$4(0.1667)$$               $(4-3.5)^2\times(0.1667) = 0.0417$
+  $$5$$      $\displaystyle\frac{1}{6}≈ 0.1667$     $$5(0.1667)$$               $(5-3.5)^2\times(0.1667) = 0.3750$
+  $$6$$      $\displaystyle\frac{1}{6}≈ 0.1667$     $$6(0.1667)$$               $(6-3.5)^2\times(0.1667) = 1.0417$
+             $$1$$                                  Sum: $\mu≈3.5$              Sum: Variance = $\sigma^2 = 2.9167$
+
+The standard deviation is $$\sigma=\sqrt{\sigma^2}=\sqrt{(2.9167)}=1.7078$$
+
+So, the mean of the values shown on a die is 3.5 and the standard deviation is 1.7078. The standard deviation is a measure of the variation in the numbers shown on the die. On average, we can expect that the numbers shown on the die are about 1.7 away from 3.5.
+
+#### Powerball
+
+Powerball is a multi-state lottery game. Fifty-nine White balls numbered 1&ndash;59 are placed in a drum and thoroughly mixed; five of the balls are drawn. Then, thirty-five red balls&mdash;one of which is labeled the "powerball"&mdash;are placed in another drum and  thoroughly mixed, and one ball is drawn from this drum. Players win by correctly guessing some or all of the balls that will be selected in weekly drawings. The payout value of the grand prize depends on the number of tickets sold. If more than one ticket matches all the balls, the grand prize payoff is divided evenly among all the grand prize tickets.
+
+The profit is the amount a player wins minus the cost to play (<nomathjax>$</nomathjax>2 ). So, if a person wins a prize of <nomathjax>$</nomathjax>4, their profit is <nomathjax>$</nomathjax>2.  If a person loses, their profit is <nomathjax>$</nomathjax>–2. We will assume that the grand prize is <nomathjax>$</nomathjax>200,000,000&mdash;although in many drawings it will be much less than this.
+
+The table below illustrates the profit for all possible outcomes in a drawing where the grand prize is <nomathjax>$</nomathjax>200,000,000. The symbol "O" represents one white ball was correctly guessed, and the symbol <span style="color:red;">P</span> represents that the powerball was correctly guessed.
+
+Outcome         Payoff           Profit         Probability
+  --------------- ---------------- -------------- ----------------------------------------------------------------
+                  Gross Winnings   $ x $          P$ (x) $
+  OOOOOP          $200,000,000     $199,999,998   $\dfrac{1}{175,223,510}$
+  OOOOO           $1,000,000       $999,998       $\dfrac{34}{175,223,510}$
+  OOOO P          $10,000          $9,998         $\dfrac{270}{175\text{,}223\text{,}510}$
+  OOOO            $100             $98            $\dfrac{9\text{,}180}{175\text{,}223\text{,}510}$
+  OOO$P$          $100             $98            $\dfrac{14\text{,}310}{175\text{,}223\text{,}510}$
+  OOO             $7               $5             $\dfrac{486\text{,}540}{175\text{,}223\text{,}510}$
+  OO$P$           $7               $5             $\dfrac{248\text{,}040}{175\text{,}223\text{,}510}$
+  O$P$            $4               $2             $\dfrac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}$
+  $P$             $4               $2             $\dfrac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}$
+  Losing ticket   $0               -$2            $\dfrac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}$
+
+
+How likely is it that you will win the Powerball jackpot? To put this in perspective, we will make some comparisons. You are more likely to be struck by lightning twice  in your life than to win the Powerball jackpot. You are more likely to be killed in a airplane accident&mdash;while walking on the ground&mdash;than you are to win the Powerball jackpot! It is extremely unlikely that you will guess all the numbers in a particular drawing.  
+
+What is the population mean of the profits for those who play Powerball? To find this, we add one more column to the table above. We multiply the profit values, $x$, by the probability of getting that profit, and then add the numbers in this new column.
+
+Outcome         Profit                            Probability                                                       
+  --------------- --------------------------------- ----------------------------------------------------------------- -----------------------------------------------------------------------------------------------------
+                  Gross Winnings, $x$               $P(x)$                                                            $x \times P(x) $
+  OOOOOP          $$\$199\text{,}999\text{,}998$$   $$\frac{1}{175\text{,}223\text{,}510}$$                           $\displaystyle{\$199\text{,}999\text{,}998\times\frac{1}{175\text{,}223\text{,}510}≈0.00000000571}$
+  OOOOO           $$\$999\text{,}998$$              $$\frac{34}{175\text{,}223\text{,}510}$$                          $\displaystyle{\$999\text{,}998\times\frac{34}{175\text{,}223\text{,}510}≈0.000000194}$
+  OOOOP           $$\$9\text{,}998$$                $$\frac{270}{175\text{,}223\text{,}510}$$                         $\displaystyle{\$9\text{,}998\times\frac{270}{175\text{,}223\text{,}510}≈0.000001541}$
+  OOOO            $$\$98$$                          $$\frac{9\text{,}1890}{175223\text{,}510}$$                       $\displaystyle{\$98\times\frac{9\text{,}180}{175\text{,}223\text{,}510}≈0.000052390}$
+  OOOP            $$\$98$$                          $$\frac{14\text{,}310}{175\text{,}223\text{,}510}$$               $\displaystyle{\$98\times\frac{14\text{,}310}{175\text{,}223\text{,}510}≈0.000081660}$
+  OOO             $$\$5$$                           $$\frac{486\text{,}540}{175\text{,}223\text{,}510}$$              $\displaystyle{\$5\times\frac{486\text{,}540}{175\text{,}223\text{,}510}≈0.002776682}$
+  OOP             $$\$5$$                           $$\frac{248\text{,}040}{175\text{,}223\text{,}510}$$              $\displaystyle{\$5\times\frac{248\text{,}040}{175\text{,}223\text{,}510}≈0.001415563}$
+  OP              $$\$2$$                           $$\frac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}$$     $\displaystyle{\$2\times\frac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}≈0.009024217}$
+  P               $$\$2$$                           $$\frac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}$$     $\displaystyle{\$2\times\frac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}≈0.018048434}$
+  Losing ticket   $$\$-2$$                          $$\frac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}$$   $\displaystyle{\$-2\times\frac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}≈0.968599305}$
+
+
+The fact that the mean is <nomathjax>$</nomathjax>$-$0.4981 says that the average profit of each Powerball lottery ticket is actually a loss of 50 cents. In other words, players lose 50 cents on average, every time they play.
+
+If we add another column and compute the standard deviation of the profits, we get
+
+Outcome         Profit                Probability                            
+  --------------- --------------------- --------------- ---------------------- -----------------------------
+                  Gross Winnings, $x$   $P(x)$          $x \times P(x) $       $(x-\mu)^2 \times P(x) $
+  OOOOOP          $\$ $199,999,998      0.00000000571   1.141399               228279866.1
+  OOOOO           $\$ $999,998          0.000000194     0.194038               194037.3062
+  OOOOP           $\$ $9,998            0.000001541     0.015406               154.0426305
+  OOOO            $\$ $98               0.000052390     0.005134               0.508283622
+  OOOP            $\$ $98               0.000081660     0.008003               0.79232447
+  OOO             $\$ $5                0.002776682     0.013883               0.083936974
+  OOP             $\$ $5                0.001415563     0.007078               0.042791399
+  OP              $\$ $2                0.009024217     0.018148               0.056316192
+  P               $\$ $2                0.018048434     0.036097               0.112632684
+  Losing ticket   $\$ $-2               0.968599305     (1.937199)             2.184838583
+                  Total                 Sum: 1          Sum: $\mu=\$-0.4981$   Sum: $\sigma^2$=228474061.2
+
+
+The standard deviation is $$ \sigma = \sqrt{\sigma^2}=\sqrt{228\text{,}474\text{,}061.2}=\$15\text{,}115.36$$ The standard deviation measures how spread out the profits are. On average, we can expect profits to be about <nomathjax>$</nomathjax>15,115.36 away from the mean profit of <nomathjax>$</nomathjax>$-$0.50. The standard deviation is so large in this example because of all the outliers: Every positive profit (<nomathjax>$</nomathjax>2, <nomathjax>$</nomathjax>5, <nomathjax>$</nomathjax>98, and so on) occurs so rarely as to qualify to be an outlier. In addition, the profit <nomathjax>$</nomathjax>199,999,998 is a very large outlier. Almost everyone who plays has a profit of <nomathjax>$</nomathjax>$-$2, however, so the vast majority of the data aren't spread out at all. Recall from Lesson 3 that the standard deviation is not resistant to outliers. Powerball profits are a rather dramatic example of this lack of resistance.
+
+The population mean is also called the **expected value**.  How do we interpret the population mean or expected value of $\mu=\$-0.4981$?  If you played Powerball, buying one ticket every week, forever, then the mean of your winnings would be very close to <nomathjax>$</nomathjax>$-$0.50. This takes into account that on rare occasions&mdash;about once in every 175 million weeks&mdash;you would win the jackpot. Most of the time (about 97% of the time,) you would win nothing!  In the long run, if you look at your mean profit, your financial situation would be the same whether you were to throw 50 cents away every week or whether you were to play Powerball each week. Of course, this assumes that you live forever and always play. In practice, however, most people do not live forever playing Powerball. Most likely, you will lose much more than you win.
+
+What about those who have won? Read one of the Powerball winner's story, in the following (hidden) optional readings.
+
+#### Optional Lottery Explorations (Hidden)
+
+<a href="javascript:showhide('Q18')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q18" style="display:none;">
+
+The following stories describe how winning a huge Powerball jackpot changed the life of Jack Whittaker, for the worse.
+
+[Print story](http://abcnews.go.com/2020/powerball-winner-cursed/story?id=3012631#.TxRrefkprTp)
+
+[Lottery Curse Video](http://abcnews.go.com/2020/video/unlucky-lotto-winner-3023380)
+
+[Lottery Curse Video–Part II](http://abcnews.go.com/2020/video/lotto-winner-wishes-hed-torn-ticket-3016773)
+
+</div>
+<br>
+
+## Summary
+
+<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
+{{Summary|04}}
+
+## Navigation
+
+{| 
+|- align="center"
+| **Previous Reading**: <br> Lesson 03:  <br> [[Lesson 3: Describing Quantitative Data: Shape, Center & Spread|Describing Quantitative Data: Shape, Center & Spread]]
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| **This Reading**: <br> Lesson 04:  <br> Probability; Discrete Random Variables
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| **Next Reading**: <br> Lesson 05:  <br> [[Lesson 5: Normal Distributions|Normal Distributions]]
+|}
