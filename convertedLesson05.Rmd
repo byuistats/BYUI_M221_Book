@@ -1,10 +1,10 @@
 ---
-title: "Lesson 5"
+title: "Lesson 5: Normal Distributions"
 output: 
   html_document:
     theme: cerulean
     toc: true
-    toc_float: true
+    toc_float: false
 ---
 
 <script type="text/javascript">
@@ -14,9 +14,10 @@ output:
  }
 </script>
 
-<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+
+<div style="float:right;width=40%;">
 <br/>
-<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div style="padding-left:10%;">**Optional Lesson Video**</div>
 <iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC94-G9-36oCixDqF97LTx6S" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
@@ -24,11 +25,11 @@ output:
 ## Lesson Outcomes
 
 By the end of this lesson, you should be able to:
-:* State the properties of a normal density curve.
-:* Calculate the z-score of an individual observation, given the mean and standard deviation.
-:* Interpret a z-score.
-:* Calculate probability as area under a normal density curve.
-:* Assess normality using a QQ-plot.
+-  State the properties of a normal density curve.
+-  Calculate the z-score of an individual observation, given the mean and standard deviation.
+-  Interpret a z-score.
+-  Calculate probability as area under a normal density curve.
+-  Assess normality using a QQ-plot.
 
 
 ## Normal Distributions and Normal Computations
@@ -69,8 +70,8 @@ The normal density curve appears in many applications in business, nature, medic
 
 All density curves, including normal density curves, have two basic properties:
 
-:1. The total area under the curve equals 1.
-:2. The density curve always lies on or above the horizontal axis.
+1. The total area under the curve equals 1.
+2. The density curve always lies on or above the horizontal axis.
 
 Because of these two properties, the area under the curve can be treated as a probability. If we want to find the probability that a randomly selected baseball player will have a batting average between some range of values, we only need to find the area under the curve in that range. This is illustrated by the region shaded in blue in the figure below.
 
@@ -92,15 +93,15 @@ The heights of men are also normally distributed. The mean height of young adult
 
 <div class="QuestionsHeading">Answer the following question:</div>
 <div class="Questions">
-:1. Approximately how many standard deviations above the mean is Gustavo's height?
+1. Approximately how many standard deviations above the mean is Gustavo's height?
 
-<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
-::Gustavo’s height is $ 182.5 − 173.0 = 9.5 \text{ cm  } \ $    above the mean. The standard deviation of the height of Brazilian men is 6.3 cm, so his height is   $ \displaystyle{ \frac{9.5}{6.3} =1.508 } \ $  standard deviations above the mean.
+<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q1" style="display:none;">
+-  Gustavo’s height is $ 182.5 − 173.0 = 9.5 \text{ cm  } \ $    above the mean. The standard deviation of the height of Brazilian men is 6.3 cm, so his height is   $ \displaystyle{ \frac{9.5}{6.3} =1.508 } \ $  standard deviations above the mean.
 </div>
 &nbsp;
 </div>
-
+<br>
 
 ##### Computing $z$-scores
 
@@ -124,12 +125,12 @@ The $z$-score can be computed for data from any distribution, but it is most com
 Heights of women (or men) in a particular population follow a normal distribution. Most people's heights are close to the mean. A few are very tall or very short. We would like to make a more precise statement than this.
 
 <div class="Emphasis">
-:For any bell-shaped distribution,
-:*68% of the data will lie within 1 standard deviation of the mean,
-:*95% of the data will lie within 2 standard deviations of the mean, and
-:*99.7% of the data will lie within 3 standard deviations of the mean.
+For any bell-shaped distribution,
+- 68% of the data will lie within 1 standard deviation of the mean,
+- 95% of the data will lie within 2 standard deviations of the mean, and
+- 99.7% of the data will lie within 3 standard deviations of the mean.
 
-:This is called the 68-95-99.7% Rule for Bell-shaped Distributions. Some statistics books refer to this as the Empirical Rule.
+This is called the 68-95-99.7% Rule for Bell-shaped Distributions. Some statistics books refer to this as the Empirical Rule.
 </div>
 
 <img src="./Images/L03_A06_R04.jpg">
@@ -157,35 +158,36 @@ We define an **unusual observation** to be something that happens less than 5% o
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
-:2. Out of Serwa and Gustavo, who is physically taller?
+2. Out of Serwa and Gustavo, who is physically taller?
  
-<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
-::Gustavo is taller.  He is 182.5 cm tall, and Serwa is 169.0 cm tall.
+-  Gustavo is taller.  He is 182.5 cm tall, and Serwa is 169.0 cm tall.
 </div>
+<br>
 
+3. Relative to their own gender and nationality, who is relatively taller?
 
-:3. Relative to their own gender and nationality, who is relatively taller?
-
-<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
-::Relative to other Ghanian women, Serwa is very tall.  Gustavo is tall relative to Brazilian men, but relative to people of his gender and nationality, he is not relatively taller than Serwa.  Serwa has a higher $z$-score.
+<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q3" style="display:none;">
+-  Relative to other Ghanian women, Serwa is very tall.  Gustavo is tall relative to Brazilian men, but relative to people of his gender and nationality, he is not relatively taller than Serwa.  Serwa has a higher $z$-score.
 </div>
- 
+<br>
 
-:4. Are either of these heights unusual?
+4. Are either of these heights unusual?
 
-<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
-::Serwa’s height is unusual.  Her $z$-score is: $ z = 2.041. $ This is more than two standard deviations away from the mean. Gustavo’s height is not unusual.  His $z$-score is less than two standard deviations away from the mean.
+<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q4" style="display:none;">
+-  Serwa’s height is unusual.  Her $z$-score is: $ z = 2.041. $ This is more than two standard deviations away from the mean. Gustavo’s height is not unusual.  His $z$-score is less than two standard deviations away from the mean.
 </div>
 &nbsp;
 </div>
-
+<br>
 
 <center>"Piled Higher and Deeper" by Jorge Cham</center> 
 <br>
-[[file:Phd1030.png">
+
+<img src="./Images/Phd1030.png">
 
 ## Normal Probability Computations
 
@@ -197,7 +199,7 @@ An important part of the practice of statistics is finding areas under a normal 
 
 ### Converting a $z$-score to a Probability
 
-Using this applet we can calculate proportions and probabilities based on the area under the normal curve. For the following examples, please open the [http://byuimath.com/apps/normprob.html Normal Probability Applet] and practice using it to find areas under the curve.
+Using this applet we can calculate proportions and probabilities based on the area under the normal curve. For the following examples, please open the [Normal Probability Applet](http://byuimath.com/apps/normprob.html){target="_blank"} and practice using it to find areas under the curve.
 
 #### Heights of Ghanian Women
 
@@ -209,12 +211,11 @@ What proportion of young Ghanian women reach a height that is at or below 169 cm
 
 To find the area under a normal curve corresponding to a $z$-score of $2.041$, do the following:
 
-::*Type the $z$-score of $2.041$ into one of the two boxes along the horizontal axis of the graph.
-::*Click on the areas under the curve until only the areas left of the $z$-score are shaded blue.
-::*The total shaded area under the normal distribution, 0.979
-<nowiki>*</nowiki>, is given above the graph. This is the proportion of young Ghanian women who are shorter than Serwa.
+- Type the $z$-score of $2.041$ into one of the two boxes along the horizontal axis of the graph.
+- Click on the areas under the curve until only the areas left of the $z$-score are shaded blue.
+- The total shaded area under the normal distribution, 0.979\*, is given above the graph. This is the proportion of young Ghanian women who are shorter than Serwa.
 
-<img src="./Images/Serwa z-score.PNG|400px">
+<img src="./Images/Serwa_z-score.PNG">
 
 The area to the left of our chosen $z$-score is also the probability that a randomly selected woman will be shorter than Serwa. The probability that a randomly selected Ghanaian woman will be shorter than Serwa is $0.979$, or $97.9\%$.
 
@@ -228,7 +229,7 @@ $$z = \frac{x – \mu}{\sigma} = \frac{0.280 – 0.261}{0.034} = 0.559$$
 
 Type the $z$-score of $0.559$ in one of the boxes below the horizontal axis in the applet. Click on the areas under the curve until only the region on the right is highlighted in blue.
 
-<img src="./Images/Batting average z-score.PNG|400px|center">
+<img src="./Images/Batting_average_z-score.PNG">
 
 The area under the curve to the right of $z = 0.559$ is $0.288$. This is the probability that a randomly selected player will have a batting average that is greater than 0.280. (Note: It is a coincidence that the area, 0.288, is close to the batting average of 0.280. There is no significance in this.)
 
@@ -255,15 +256,15 @@ So the probability that the height of a randomly selected young Ghanian woman wi
 
 A percentile is a number such that a specified percentage of the data are at or below this number. For example, the 25<sup>th</sup> percentile is the number in a data set that is greater than or equal to 25% of all the values in the data set. (For a more complete definition of percentiles, see [[Lesson_3#Percentiles_and_Quartiles|Lesson 3]].) We can find the values of percentiles for a normal distribution by using the applet to calculate the $z$-score corresponding to a specified area and then plugging that $z$-score into our $z$-score equation and solving for $x$. The following instructions show how to find the 90<sup>th</sup> percentile of the distribution of batting averages.
 
-First, we need to find the $z$-score that corresponds to the 90<sup>th</sup> percentile using the [http://byuimath.com/apps/normprob.html Normal Probability Applet].
+First, we need to find the $z$-score that corresponds to the 90<sup>th</sup> percentile using the [Normal Probability Applet](http://byuimath.com/apps/normprob.html){target="_blank"}.
 
-:*Click on the areas under the curve until only the areas *left* of the positive $z$-score are shaded blue.
-:*Type the desired area (or percentile) in the box at the top of the graph. (Type in a number between 0 and 1. A 90<sup>th</sup> percentile would be entered as "0.900".)
-:*The $z$-score corresponding to this area will be displayed in the bottom right box. 
+- Click on the areas under the curve until only the areas *left* of the positive $z$-score are shaded blue.
+- Type the desired area (or percentile) in the box at the top of the graph. (Type in a number between 0 and 1. A 90<sup>th</sup> percentile would be entered as "0.900".)
+- The $z$-score corresponding to this area will be displayed in the bottom right box. 
 
-For example, to find the $z$-score corresponding to the 90<sup>th</sup> percentile, click on the regions of the graph so that the area to the left of one of the bars is shaded and nothing is shaded to the right. Then, type the number 0.9 in the box at the top of the applet and press [Enter]. The value 1.282 is the $z$-score such that 90% of the area is to the left.
+For example, to find the $z$-score corresponding to the 90<sup>th</sup> percentile, click on the regions of the graph so that the area to the left of one of the bars is shaded and nothing is shaded to the right. Then, type the number 0.9 in the box at the top of the applet and press `Enter`. The value 1.282 is the $z$-score such that 90% of the area is to the left.
 
-<img src="./Images/Batting average percentiles.PNG|400px|center">
+<img src="./Images/Batting_average_percentiles.PNG">
 
 So, $z = 1.282$ is the $z$-score that corresponds to the 90th percentile of a normal distribution. How do we find the batting average that corresponds to the 90<sup>th</sup> percentile? We can solve for $x$ in the equation for the $z$-score.
 
@@ -273,58 +274,26 @@ We know $z = 1.282$, $\mu = 0.261$, and $\sigma = 0.034$. Substituting these val
 
 $$1.282 = \frac{x – 0.261}{0.034 }$$
 
+<br>
+
 Solve for $x$:
 
-{| 
-|-
-| Original Equation
-| align="right" | $ \displaystyle{ 1.282 } $ 
-| $=$ 
-| $ \displaystyle{ \frac{x – 0.261}{0.034 }} $
-|-
-| $~$
-|-
-| Multiply both sides by 0.034
-| align="right" | $ \displaystyle{ 1.282 (0.034) } $ 
-| $=$ 
-| $ \displaystyle{ \frac{x – 0.261}{0.034 } \cdot (0.034) } $
-|-
-| $~$
-|-
-| Simplify the right-hand side
-| align="right" | $ \displaystyle{ 1.282 (0.034) } $ 
-| $=$ 
-| $ \displaystyle{ x – 0.261 } $
-|-
-| $~$
-|-
-| Add 0.261 to both sides
-| align="right" | $ \displaystyle{  0.261 + 1.282 (0.034) } $ 
-| $=$ 
-| $ \displaystyle{ 0.261 + (x – 0.261) } $
-|-
-| $~$
-|-
-| Simplify the right-hand side
-| align="right" | $ \displaystyle{  0.261 + 1.282 (0.034) } $ 
-| $=$ 
-| $ \displaystyle{ x } $
-|-
-| $~$
-|-
-| Simplify the left-hand side
-| align="right" | $ \displaystyle{  0.305 } $ 
-| $=$ 
-| $ \displaystyle{ x } $
-|-
-| $~$
-|-
-| Swap the left- and right-hand sides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-| align="right" | $ \displaystyle{  x } $ 
-| $=$ 
-| $ \displaystyle{ 0.305 } $
-|-
-|}
+|                                          |                                             |     |                                                                |
+|------------------------------------------|--------------------------------------------:|-----|----------------------------------------------------------------|
+| Original Equation                        |            $\displaystyle{ 1.282 }\space$   | $=$ | $\displaystyle{ \frac{x – 0.261}{0.034 }}$                     |
+| $~$                                      |                                             |     |                                                                |
+| Multiply both sides by 0.034             |    $\displaystyle{ 1.282 (0.034) }\space$   | $=$ | $\displaystyle{ \frac{x – 0.261}{0.034 } \cdot (0.034) }$      |
+| $~$                                      |                                             |     |                                                                |
+| Simplify the right-hand side             |    $\displaystyle{ 1.282 (0.034) }\space$   | $=$ | $\displaystyle{ x – 0.261 }$                                   |
+| $~$                                      |                                             |     |                                                                |
+| Add 0.261 to both sides                  |$\displaystyle{ 0.261 + 1.282(0.034)}\space$ | $=$ | $\displaystyle{ 0.261 + (x – 0.261) }$                         |
+| $~$                                      |                                             |     |                                                                |
+| Simplify the right-hand side             |$\displaystyle{ 0.261 + 1.282(0.034)}\space$ | $=$ | $\displaystyle{ x }$                                           |
+| $~$                                      |                                             |     |                                                                |
+| Simplify the left-hand side              |            $\displaystyle{ 0.305 }\space$   | $=$ | $\displaystyle{ x }$                                           |
+| $~$                                      |                                             |     |                                                                |
+| Swap the left- and right-hand sides      |                $\displaystyle{ x }\space$   | $=$ | $\displaystyle{ 0.305 }$                                       |
+|                                          |                                             |     |                                                                |
 
 The 90<sup>th</sup> percentile of the batting averages is 0.305. That means that 90% of the players have a batting average that is 0.305 or less.
 
@@ -363,10 +332,10 @@ Each volunteer was given a physical to assure that they were not ill at the time
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
-:5. Make a *histogram of the body temperature data. 
+5. Make a *histogram of the body temperature data. 
 
-<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q5" style="display:none;">
 
 <!--
 {{Course_Filter_Two|A=[[File:BodyTemperatures-Histogram.png|link=|400 px]]|B=[[File:Histogram Example.jpg|link=|400px]]}}
@@ -377,20 +346,20 @@ Each volunteer was given a physical to assure that they were not ill at the time
 Note that the mean is 98.23, standard deviation is 0.738, and sample size is n = 148.
 
 </div>
+<br>
 
+6. Based on your histogram, what is the shape of the distribution of these data?
 
-:6. Based on your histogram, what is the shape of the distribution of these data?
-
-<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
-::The data appear to be normally distributed. 
+<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q6" style="display:none;">
+-  The data appear to be normally distributed. 
 </div>
+<br>
 
+7. Create a Q-Q plot of the body temperature data.
 
-:7. Create a Q-Q plot of the body temperature data.
-
-<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q7" style="display:none;">
 
 <!--
 {{Course_Filter_Two|A=[[File:BodyTemperatures-QQ.png|link=|400 px]]|B=[[File:SPSS QQ-Plot Body Temp.jpg|link=|400 px]]}}
@@ -399,19 +368,19 @@ Note that the mean is 98.23, standard deviation is 0.738, and sample size is n =
 <img src="./Images/BodyTemperatures-QQ.png">
 
 </div>
+<br>
 
+\*Click the link at right for a review of how to create a histogram.
 
-::<nowiki>*</nowiki>Click the link at right for a review of how to create a histogram.
-
-<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Refresh My Memory</span></a>
+<div id="Q8" style="display:none;">
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 {{Software_Filter|PageName=Histogram-Condensed}}
 </div>
 <br>
 &nbsp;
 </div>
-
+<br>
 
 You may notice some jagged jumps in the in Q-Q plot of the body temperature data. This is called granularity. It occurs here because the body temperatures were only reported to the nearest tenth of a degree. If we had more precision in the data, this would not occur.
 
@@ -429,6 +398,8 @@ Notice the distinct curvature in the data. This suggests that the data are not n
 <img src="./Images/L04_QQ_Plot_03.jpg">
 
 In this case, it is easy to spot the right-skewed shape of the histogram. Sometimes, especially when sample sizes are small, the histogram can be misleading. The Q-Q plot usually gives a better measure of whether or not the data are normally distributed.
+
+<br>
 
 ### Other Examples
 
@@ -450,17 +421,23 @@ When assessing a Q-Q plot, you should be a little “forgiving” of the points 
 
 The ability to determine if data follow a normal distribution will be important later in the course.
 
+<br>
+
 ## Summary
 
-*A **normal density curve** is symmetric and bell-shaped. The curve lies above the horizontal axis and the total area under the curve is equal to 1. 
+<div class="SummaryHeading">Remember...</div>
+<div class="Summary">
 
-*A **standard normal distribution** has a mean of 0 and a standard deviation of 1. The **68-95-99.7% rule** states that when data are normally distributed, approximately 68% of the data lie within 1 standard deviation from the mean, approximately 95% of the data lie within 2 standard deviations from the mean, and approximately 99.7% of the data lie within 3 standard deviations from the mean. 
+- A **normal density curve** is symmetric and bell-shaped. The curve lies above the horizontal axis and the total area under the curve is equal to 1. 
 
-*A **z-score** tells us how many standard deviations away from the mean a given value is. It is calculated as: $\displaystyle{z = \frac{\text{value}-\text{mean}}{\text{standard deviation}} = \frac{x-\mu}{\sigma}}$
+- A **standard normal distribution** has a mean of 0 and a standard deviation of 1. The **68-95-99.7% rule** states that when data are normally distributed, approximately 68% of the data lie within 1 standard deviation from the mean, approximately 95% of the data lie within 2 standard deviations from the mean, and approximately 99.7% of the data lie within 3 standard deviations from the mean. 
 
-*The **probability applet** allows us to use z-scores to calculate proportions, probabilities, and percentiles.
+- A **z-score** tells us how many standard deviations away from the mean a given value is. It is calculated as: $\displaystyle{z = \frac{\text{value}-\text{mean}}{\text{standard deviation}} = \frac{x-\mu}{\sigma}}$
 
-*A **Q-Q plot** is used to assess whether or not a set of data is normally distributed.
+- The **probability applet** allows us to use z-scores to calculate proportions, probabilities, and percentiles.
+
+- A **Q-Q plot** is used to assess whether or not a set of data is normally distributed.
+</div>
 <br>
 
 
@@ -471,16 +448,16 @@ The ability to determine if data follow a normal distribution will be important 
 </center>
 <!-- Adam has a copyright release for these photos -->
 
-<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide this Optional Section" data-expandtext="Click Here to Learn How one BYU-Idaho Alumnus Uses Statistics Professionally">
 
-:Statistics have been useful in multiple aspects of my work in Human Resources and Diversity.  I created a dynamic spreadsheet model for analyzing workforce salaries, both company-wide and for discrete job functions within various levels of the organization.  This model utilizes averages and sets thresholds that trigger flags for anomalies in proposed salary offer decisions, including those beyond two standard deviations of the internal peer average.  These flags prompt review, discussion, and provide opportunities to vet offer decisions and to substantiate and document the basis for any outlier salary decisions.  This has proved to promote and maintain salary equity among women and minorities and their majority peers.
+Statistics have been useful in multiple aspects of my work in Human Resources and Diversity.  I created a dynamic spreadsheet model for analyzing workforce salaries, both company-wide and for discrete job functions within various levels of the organization.  This model utilizes averages and sets thresholds that trigger flags for anomalies in proposed salary offer decisions, including those beyond two standard deviations of the internal peer average.  These flags prompt review, discussion, and provide opportunities to vet offer decisions and to substantiate and document the basis for any outlier salary decisions.  This has proved to promote and maintain salary equity among women and minorities and their majority peers.
 
-:I also use statistics in developing metrics for our management team to assess the human-capital health of the organization.  With the looming retirement of the baby-boomer bubble, I analyzed the distribution of our current workforce by age.  Further, I broke out a subset of mission critical disciplines and compared it to the entire workforce.  This allowed a view into where we were, at least in terms of headcount, in developing a human capital pipeline to backfill these areas.  I then compared this to the weighted average historical percentage of retirements by age, all things equal, to predict approximately what percent of the current workforce, including these mission critical disciplines, would retire and by when.  This data has been presented to our management council, the corporate office, and will be utilized at an upcoming leadership strategy session.
+I also use statistics in developing metrics for our management team to assess the human-capital health of the organization.  With the looming retirement of the baby-boomer bubble, I analyzed the distribution of our current workforce by age.  Further, I broke out a subset of mission critical disciplines and compared it to the entire workforce.  This allowed a view into where we were, at least in terms of headcount, in developing a human capital pipeline to backfill these areas.  I then compared this to the weighted average historical percentage of retirements by age, all things equal, to predict approximately what percent of the current workforce, including these mission critical disciplines, would retire and by when.  This data has been presented to our management council, the corporate office, and will be utilized at an upcoming leadership strategy session.
 
-:Despite having studied statistics at BYU-Idaho several years ago (in fact, I nearly took the course twice), I have felt the Holy Ghost bring these basic concepts to my remembrance and teach me how to apply them at work.  And for that, I am grateful.
+Despite having studied statistics at BYU-Idaho several years ago (in fact, I nearly took the course twice), I have felt the Holy Ghost bring these basic concepts to my remembrance and teach me how to apply them at work.  And for that, I am grateful.
 
-<a href="javascript:showhide("Q2")"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div style="font-size:75%">
 Biography:<br>
 Adam D. Andersen is the Human Capital Management System Lead for Battelle Energy Alliance, LLC at the U.S. Department of Energy’s Idaho National Laboratory in Idaho Falls, Idaho.  He is responsible for creating and revising employment policies and procedures; coordinating human capital assurance; leading measurement and reporting; managing contract and regulatory requirements; and assisting in-house legal counsel in employee disciplinary advisory groups and in representing the company in disputes involving its five labor unions.
 <br>
@@ -505,15 +482,15 @@ Monden, C. W. S., & Smits, J. (2009). Maternal height and child mortality in 42 
 
 Orçamento e Gestão Ministério do Planejamento. Pesquisa de orçamentos familiars 2008-2009: Antropometria e estado nutricional de crianças, adolescentes e adultos no brasil. Technical report, Instituto Brasileiro de Geografi a e Estatística – IBGE, Rio de Janeiro, Brazil 2010.
 
+<br>
+
 ## Navigation
 
 <center>
-{| 
-|- align="center"
-| **Previous Reading**: <br> Lesson 04:  <br> [[Lesson 4: Probability; Discrete Random Variables|Probability; Discrete Random Variables]]
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-| **This Reading**: <br> Lesson 05:  <br> Normal Distributions
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-| **Next Reading**: <br> Lesson 06:  <br> [[Lesson 6: Distribution of Sample Means & The Central Limit Theorem|Distribution of Sample Means & The Central Limit Theorem]]
-|}
+| **Previous Reading** | **This Reading** | **Next Reading** |
+| :------------------: | :--------------: | :--------------: |
+| [Lesson 4: Probability; Discrete Random Variables](Lesson04.html) | Lesson 05: Normal Distributions | [Lesson 6: Distribution of Sample Means & The Central Limit Theorem](Lesson06.html) |
 </center>
+
+
+

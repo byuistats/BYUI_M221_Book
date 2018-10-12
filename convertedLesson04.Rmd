@@ -421,9 +421,9 @@ So, the mean of the values shown on a die is 3.5 and the standard deviation is 1
 
 Powerball is a multi-state lottery game. Fifty-nine White balls numbered 1&ndash;59 are placed in a drum and thoroughly mixed; five of the balls are drawn. Then, thirty-five red balls&mdash;one of which is labeled the "powerball"&mdash;are placed in another drum and  thoroughly mixed, and one ball is drawn from this drum. Players win by correctly guessing some or all of the balls that will be selected in weekly drawings. The payout value of the grand prize depends on the number of tickets sold. If more than one ticket matches all the balls, the grand prize payoff is divided evenly among all the grand prize tickets.
 
-The profit is the amount a player wins minus the cost to play (<nomathjax>$</nomathjax>2 ). So, if a person wins a prize of <nomathjax>$</nomathjax>4, their profit is <nomathjax>$</nomathjax>2.  If a person loses, their profit is <nomathjax>$</nomathjax>–2. We will assume that the grand prize is <nomathjax>$</nomathjax>200,000,000&mdash;although in many drawings it will be much less than this.
+The profit is the amount a player wins minus the cost to play (\$2 ). So, if a person wins a prize of \$4, their profit is \$2.  If a person loses, their profit is \$–2. We will assume that the grand prize is \$200,000,000&mdash;although in many drawings it will be much less than this.
 
-The table below illustrates the profit for all possible outcomes in a drawing where the grand prize is <nomathjax>$</nomathjax>200,000,000. The symbol "O" represents one white ball was correctly guessed, and the symbol <span style="color:red;">P</span> represents that the powerball was correctly guessed.
+The table below illustrates the profit for all possible outcomes in a drawing where the grand prize is \$200,000,000. The symbol "O" represents one white ball was correctly guessed, and the symbol <span style="color:red;">P</span> represents that the powerball was correctly guessed.
 
 Outcome         Payoff           Profit         Probability
   --------------- ---------------- -------------- ----------------------------------------------------------------
@@ -459,13 +459,14 @@ Outcome         Profit                            Probability
   Losing ticket   $$\$-2$$                          $$\frac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}$$   $\displaystyle{\$-2\times\frac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}≈0.968599305}$
 
 
-The fact that the mean is <nomathjax>$</nomathjax>$-$0.4981 says that the average profit of each Powerball lottery ticket is actually a loss of 50 cents. In other words, players lose 50 cents on average, every time they play.
+The fact that the mean is -$0.4981 says that the average profit of each Powerball lottery ticket is actually a loss of 50 cents. In other words, players lose 50 cents on average, every time they play.
 
 If we add another column and compute the standard deviation of the profits, we get
 
-Outcome         Profit                Probability                            
+
+  Outcome         Profit                Probability                            
   --------------- --------------------- --------------- ---------------------- -----------------------------
-                  Gross Winnings, $x$   $P(x)$          $x \times P(x) $       $(x-\mu)^2 \times P(x) $
+                  Gross Winnings, $x$   $P(x)$          $x \times P(x)$       $(x-\mu)^2 \times P(x)$
   OOOOOP          $\$ $199,999,998      0.00000000571   1.141399               228279866.1
   OOOOO           $\$ $999,998          0.000000194     0.194038               194037.3062
   OOOOP           $\$ $9,998            0.000001541     0.015406               154.0426305
@@ -479,40 +480,55 @@ Outcome         Profit                Probability
                   Total                 Sum: 1          Sum: $\mu=\$-0.4981$   Sum: $\sigma^2$=228474061.2
 
 
-The standard deviation is $$ \sigma = \sqrt{\sigma^2}=\sqrt{228\text{,}474\text{,}061.2}=\$15\text{,}115.36$$ The standard deviation measures how spread out the profits are. On average, we can expect profits to be about <nomathjax>$</nomathjax>15,115.36 away from the mean profit of <nomathjax>$</nomathjax>$-$0.50. The standard deviation is so large in this example because of all the outliers: Every positive profit (<nomathjax>$</nomathjax>2, <nomathjax>$</nomathjax>5, <nomathjax>$</nomathjax>98, and so on) occurs so rarely as to qualify to be an outlier. In addition, the profit <nomathjax>$</nomathjax>199,999,998 is a very large outlier. Almost everyone who plays has a profit of <nomathjax>$</nomathjax>$-$2, however, so the vast majority of the data aren't spread out at all. Recall from Lesson 3 that the standard deviation is not resistant to outliers. Powerball profits are a rather dramatic example of this lack of resistance.
+The standard deviation is $$ \sigma = \sqrt{\sigma^2}=\sqrt{228\text{,}474\text{,}061.2}=\$15\text{,}115.36$$ 
 
-The population mean is also called the **expected value**.  How do we interpret the population mean or expected value of $\mu=\$-0.4981$?  If you played Powerball, buying one ticket every week, forever, then the mean of your winnings would be very close to <nomathjax>$</nomathjax>$-$0.50. This takes into account that on rare occasions&mdash;about once in every 175 million weeks&mdash;you would win the jackpot. Most of the time (about 97% of the time,) you would win nothing!  In the long run, if you look at your mean profit, your financial situation would be the same whether you were to throw 50 cents away every week or whether you were to play Powerball each week. Of course, this assumes that you live forever and always play. In practice, however, most people do not live forever playing Powerball. Most likely, you will lose much more than you win.
+The standard deviation measures how spread out the profits are. On average, we can expect profits to be about \$15,115.36 away from the mean profit of \$-0.50. The standard deviation is so large in this example because of all the outliers: Every positive profit (\$2, \$5, \$98, and so on) occurs so rarely as to qualify to be an outlier. In addition, the profit \$199,999,998 is a very large outlier. Almost everyone who plays has a profit of \$-2, however, so the vast majority of the data aren't spread out at all. Recall from Lesson 3 that the standard deviation is not resistant to outliers. Powerball profits are a rather dramatic example of this lack of resistance.
+
+The population mean is also called the **expected value**.  How do we interpret the population mean or expected value of $\mu=\$-0.4981$?  If you played Powerball, buying one ticket every week, forever, then the mean of your winnings would be very close to \$-$0.50. This takes into account that on rare occasions&mdash;about once in every 175 million weeks&mdash;you would win the jackpot. Most of the time (about 97% of the time,) you would win nothing!  In the long run, if you look at your mean profit, your financial situation would be the same whether you were to throw 50 cents away every week or whether you were to play Powerball each week. Of course, this assumes that you live forever and always play. In practice, however, most people do not live forever playing Powerball. Most likely, you will lose much more than you win.
 
 What about those who have won? Read one of the Powerball winner's story, in the following (hidden) optional readings.
 
 #### Optional Lottery Explorations (Hidden)
 
-<a href="javascript:showhide('Q18')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q18')"><span style="font-size:8pt;">Click Here to Explore this Optional Section</span></a>
 <div id="Q18" style="display:none;">
 
 The following stories describe how winning a huge Powerball jackpot changed the life of Jack Whittaker, for the worse.
 
-[Print story](http://abcnews.go.com/2020/powerball-winner-cursed/story?id=3012631#.TxRrefkprTp)
+[Print story](http://abcnews.go.com/2020/powerball-winner-cursed/story?id=3012631#.TxRrefkprTp){target="_blank"}
 
-[Lottery Curse Video](http://abcnews.go.com/2020/video/unlucky-lotto-winner-3023380)
+[Lottery Curse Video](http://abcnews.go.com/2020/video/unlucky-lotto-winner-3023380){target="_blank"}
 
-[Lottery Curse Video–Part II](http://abcnews.go.com/2020/video/lotto-winner-wishes-hed-torn-ticket-3016773)
+[Lottery Curse Video–Part II](http://abcnews.go.com/2020/video/lotto-winner-wishes-hed-torn-ticket-3016773){target="_blank"}
 
 </div>
 <br>
 
 ## Summary
 
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-{{Summary|04}}
+<div class="SummaryHeading">Remember...</div>
+<div class="Summary">
+
+- The three **rules of probability** are:
+
+1. A probability is a number between 0 and 1. 
+$$ 0 ≤ P(X) ≤ 1 $$
+
+2. If you list all the outcomes of a probability experiment (such as rolling a die) the probability that one of these outcomes will occur is 1. In other words, the sum of the probabilities in any probability is 1. 
+$$ \sum P(X) = 1 $$
+
+3. The probability that an outcome will not occur is 1 minus the probability that it will occur. 
+$$ P(\text{not}~X) = 1 - P(X) $$
+</div>
+<br>
+
 
 ## Navigation
 
-{| 
-|- align="center"
-| **Previous Reading**: <br> Lesson 03:  <br> [[Lesson 3: Describing Quantitative Data: Shape, Center & Spread|Describing Quantitative Data: Shape, Center & Spread]]
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-| **This Reading**: <br> Lesson 04:  <br> Probability; Discrete Random Variables
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-| **Next Reading**: <br> Lesson 05:  <br> [[Lesson 5: Normal Distributions|Normal Distributions]]
-|}
+| **Previous Reading** | **This Reading** | **Next Reading** |
+| :------------------: | :--------------: | :--------------: |
+| [Lesson 3: Describing Quantitative Data: Shape, Center & Spread](Lesson03.html) | Probability; Discrete Random Variables | [Lesson 5: Normal Distributions](Lesson05.html) |
+
+<br>
+
+<br>

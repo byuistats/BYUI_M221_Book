@@ -128,7 +128,7 @@ To help us visualize these data, we will create a graph called a histogram. To m
 | At least 10,000 and less than 15,000
 | 3
 |-
-| At least 15,000 and less than 20,000
+| At least 15,000 and less than 20,000 
 | 2
 |-
 | At least 20,000 and less than 25,000

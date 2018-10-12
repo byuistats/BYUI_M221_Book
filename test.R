@@ -19,11 +19,17 @@ wiki_to_md <- function(wiki_file){
   str_remove_all( "^:{1}")           %>% 
   str_replace_all("^\\[\\[(File):", '<img src="./Images/') %>%
   str_replace_all("\\|(link).*\\]\\]$", '">') %>%
-  str_replace_all("\\<div style.*", glue('<a href="javascript:showhide(', "'Q2')",'"><span style="font-size:8pt;">Show/Hide Solution</span></a>')) %>%
-  str_replace_all('\\<div class="mw\\-.*', '<div id="Q2" style="display:none;">')
+  str_replace_all("\\|\\d*(px)\\|\\w*\\|\\w*\\=\\]\\]", '">')
+  str_replace_all("\\<div style.*", glue('<a href="javascript:showhide(', "'Q2')",
+                                         '"><span style="font-size:8pt;">Show/Hide Solution</span></a>')) %>%
+  str_replace_all('\\<div class="mw\\-.*', '<div id="Q2" style="display:none;">') %>% 
+  str_replace_all("\\<\\w*\\>\\$\\<\\/\\w*\\>", '\\?') %>% 
+  str_replace_all("^\\*{1}","- ")
+  
   new_file_name <- paste0("converted", wiki_file)
   write_lines(new, new_file_name)
-  remove(x,new)
+  remove(x, new, new_file_name)
+  
 }
 
 # files <- list.files(pattern = "Lesson\\d{1,2}(.Rmd)")
