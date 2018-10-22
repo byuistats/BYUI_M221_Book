@@ -14,7 +14,9 @@ wiki_to_md <- function(wiki_file){
   str_remove_all( "={3}$")          %>% 
   str_replace_all("^={2}", "## ")   %>% 
   str_remove_all( "={2}$")          %>% 
-  str_replace_all( "^:{1}\\*", "- ") %>% 
+  str_replace_all("^:{1}\\*", "- ") %>% 
+  #str_replace_all("^\\*{1}", "- ")  %>% 
+  str_replace_all("^:{2}\\*", "  + ") %>% 
   str_replace_all("'{3}", "**")     %>% 
   str_replace_all("'{2}", "*")      %>% 
   str_replace_all("^:{2}", "* ")    %>% 
@@ -25,7 +27,8 @@ wiki_to_md <- function(wiki_file){
   str_replace_all("\\<div style.*", glue::glue('<a href="javascript:showhide(', "'Q2')",
                                          '"><span style="font-size:8pt;">Show/Hide Solution</span></a>')) %>%
   str_replace_all('\\<div class="mw\\-.*', '<div id="Q2" style="display:none;">') %>% 
-  str_replace_all("\\<\\w*\\>\\$\\<\\/\\w*\\>", '\\?') %>%  
+  str_replace_all("\\<\\w*\\>\\$\\<\\/\\w*\\>", '?') %>% 
+  #str_replace_all("\\s\\?", "\\$") %>% 
   str_replace("toc\\_float:\\strue$", "toc_float: false")
   
   new_file_name <- paste0("converted", wiki_file)

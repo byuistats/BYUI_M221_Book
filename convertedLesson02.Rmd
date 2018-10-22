@@ -34,7 +34,7 @@ By the end of this lesson, you should be able to:
     * Cluster sampling
     * Stratified sampling
     * Convenience sampling
-*Explain the significance of using a random sample.
+* Explain the significance of using a random sample.
 
 
 
@@ -45,6 +45,8 @@ By the end of this lesson, you should be able to:
 ## Introduction
 
 Statistics are used in every aspect of society. Every statistical analysis follows a pattern we will call the Statistical Process. This process will be introduced in this lesson and will be used throughout the course.
+
+<br>
 
 ### The Statistical Process and Daniel's Experiment
 
@@ -60,7 +62,6 @@ Statistics are used in every aspect of society. Every statistical analysis follo
 The Old Testament prophet Daniel planned one of the earliest recorded scientific research studies. We will use his example to illustrate the following five steps of The Statistical Process.
 
 The following icons can help you remember these steps. Notice that each icon has a letter and an image to help you remember the five steps of the Statistical Process.
-
 
 <div style="clear:both"></div>
 
@@ -81,10 +82,11 @@ The following icons can help you remember these steps. Notice that each icon has
 | <img src="./Images/Step5.png" width="100"> | **T**ake Action |
 
 </div>
-
+<br>
 
 
 ### Step 1: Design the Study 
+
 <img src="./Images/Step1.png" width="100px;">
 
 An important step in scientific inquiry or problem solving can be to state a research question such as:
@@ -101,6 +103,7 @@ Before collecting data, researchers make a hypothesis, or an educated guess abou
 * People who express gratitude will be more satisfied with life than those who do not.
 * A newly-developed vaccine is effective at preventing tuberculosis.
 
+<br>
 
 #### Daniel’s Experiment
 
@@ -133,6 +136,8 @@ Daniel's hypothesis is that the Israelite children who eat pulse and drink water
 When designing a study, much attention is given to the process by which data are observed. When examining data, it is also important to understand the data collection procedures. A **sample** is a subset (a portion) of a population. How is this sample obtained?  How are the observations made?
 
 Daniel’s study design required that data be collected at the end of 10 days. Melzar would compare the appearances of two groups of people: (1) Israelites who ate pulse and drank water versus (2) Israelites who ate the king’s meat and drank his wine.
+
+<br>
 
 ### Step 3: Describe the Data
 
@@ -297,8 +302,8 @@ This study was **double blind**. Neither the children's parents nor their doctor
 <div class="Questions">
 3. Some children can be identified as having a higher risk of developing polio. Would it have been better if they were assigned to the treatment group so they could get the vaccine?
 
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q3" style="display:none;">
 - No. The two groups need to be as similar as possible. Specifically, the people in the treatment group need to have the same potential (on average) of contracting polio as the people in the control group. If we put the people who are at a higher risk of developing polio in the treatment group, we run the risk of having more people in the treatment group getting polio simply because they are more likely to get it, *whether they are vaccinated or not.* Likewise, we might have fewer people in the control group getting polio just because they are less likely to get it, *whether they are vaccinated or not.*
 
 - These two effects would create a bias against the vaccine, by making the vaccine look like it doesn't work, or doesn't work as well as it does. It might also make it appear that people who aren't vaccinated stay healthy and the vaccine is not needed. There is even a chance that people will conclude that the vaccine actually gives people polio.
@@ -306,11 +311,13 @@ This study was **double blind**. Neither the children's parents nor their doctor
 - Randomly assigning subjects to the two groups tends to yield groups with similar characteristics---in this example, similar potential for contracting polio. Randomly assigning subjects to groups therefore defends us against problems like those mentioned in the previous paragraph.
 
 </div>
-
+<br>
 
 4. Why is it important for the subject and those who assess the health of the subject to be unaware of whether or not that child received the vaccine?
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+
+<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q4" style="display:none;">
+
 - **Subjects:** Suppose a subject in the study thinks they're being treated. It has been documented that subjects with such knowledge tend to show improvement whether they are receiving the treatment or not. To see why, consider how you might feel and act if you were told you had been vaccinated. You might have a more hopeful outlook, leading to healthier living habits such as better hygiene and nutrition. Such changes would tend to reduce your chance of contracting polio *whether you've received the vaccine or not.* This might make the vaccine look like it works better than it does. It also might make the vaccine look like it works, even if it doesn't.
 
 - Now suppose subjects in the control group know they are not being treated. This can also change the way they feel and act, in ways that can make them more likely to contract polio than they would be if they weren't in the study. This could make it look like the incidence of polio among unvaccinated persons is higher than it is, again making the vaccine look like it works better than it does.
@@ -325,7 +332,7 @@ This study was **double blind**. Neither the children's parents nor their doctor
 </div>
 &nbsp;
 </div>
-
+<br>
 
 The null and alternative hypotheses for this study are:
 
@@ -373,7 +380,7 @@ The researchers followed up with each child to determine if they contracted poli
 
 **Step 3: Describe the data.**
 
-:One way to summarize the data is to compute the proportion of children in each group that developed polio. The proportion of children in the treatment group that developed polio during the study period is:
+One way to summarize the data is to compute the proportion of children in each group that developed polio. The proportion of children in the treatment group that developed polio during the study period is:
 
 $$ \frac{57}{200745} = 0.000~283~9 $$
 
@@ -381,22 +388,24 @@ $$ \frac{57}{200745} = 0.000~283~9 $$
 <div class="Questions">
 5. Calculate the proportion of children in the placebo group that developed polio during the study period.
 
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q5" style="display:none;">
 <center>
 $$ \displaystyle{\frac{142}{201229} = 0.000~705~7} $$
 </center>
 </div>
-
+<br>
 
 6. Compare the two proportions. What do you observe?
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+
+<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+
+<div id="Q6" style="display:none;">
 - The proportion of children in the placebo group that develop polio during the study period  was more than double the proportion of children in the treatment group that developed polio during the study period. That suggests that the treatment is effective in reducing the proportion of children that will develop polio.
 </div>
-&nbsp;
+<br>
 </div>
-
+<br>
 
 
 <img src="./Images/Step4.png" width="100px;">
@@ -411,6 +420,8 @@ When the hypothesis test to compare the proportions was conducted, the probabili
 **Step 5: Take action**
 
 Once it was clear that the vaccine was effective, children who were unvaccinated or had received the placebo were given Salk’s vaccine. Since 1954, there has been a marked decrease in the number of polio cases worldwide (Offit, 2005). Public health researchers continue to work to eradicate this disease around the world.
+
+<br>
 
 ### Observational Studies
 
@@ -436,6 +447,8 @@ Auditors typically cannot consider every item in a population, because there are
 
 <img src="./Images/Step2.png" width="100px;">
 
+<br>
+
 ### Sampling Methods
 
 **Step 2: Collect data**
@@ -448,15 +461,17 @@ A **systematic sample** is where auditors select every $k^{\text{th}}$ item in t
 
 A **cluster sample** (sometimes called a *block sample*) consists of taking all items in one or more randomly selected clusters, or blocks. For example, all the accounts receivable items in a few randomly selected months (the blocks) could be sampled. When the variation from one block to another is relatively low, compared to the variation within the block, cluster sampling is a reasonable way to get a sample. However, in many cases, the number of blocks that must be sampled must be large in order to draw a reasonable audit conclusion. For this reason, a cluster sample is usually not recommended for audits.
 
-A **stratified sample** is when the items to be sampled are organized in groups of homogeneous (similar) items called strata, then a simple random sample is drawn from each of these strata. Stratified sampling works well when the items are similar within each stratum and tend to differ from one stratum to another. In an audit of accounts receivable items, auditors could define the strata as: (1) accounts under <nomathjax>$</nomathjax>1,000, (2) accounts between <nomathjax>$</nomathjax>1,000 and <nomathjax>$</nomathjax>4,999, (3) accounts between <nomathjax>$</nomathjax>5,000 and <nomathjax>$</nomathjax>9,999, and (4) accounts of <nomathjax>$</nomathjax>10,000 or more. A certain number of items could be randomly selected from each of these strata. Auditors may choose to include in their sample all items from some strata, such as very large accounts (<nomathjax>$</nomathjax>10,000 or more), when there are few items in those strata.
+A **stratified sample** is when the items to be sampled are organized in groups of homogeneous (similar) items called strata, then a simple random sample is drawn from each of these strata. Stratified sampling works well when the items are similar within each stratum and tend to differ from one stratum to another. In an audit of accounts receivable items, auditors could define the strata as: (1) accounts under \$1,000, (2) accounts between \$1,000 and \$4,999, (3) accounts between \$5,000 and \$9,999, and (4) accounts of \$10,000 or more. A certain number of items could be randomly selected from each of these strata. Auditors may choose to include in their sample all items from some strata, such as very large accounts (\$10,000 or more), when there are few items in those strata.
 
 A **convenience sample** involves selecting items that are relatively easy to obtain and does not use random selection to choose the sample. Even though the sample is chosen by convenience, it should be done without introducing any systematic bias if possible. As an example of a convenience sample, an auditor could haphazardly select items from a filing cabinet. This is frequently done when a quick and simple sample is needed, but may not yield a sample that represents the population well. When possible, convenience samples **should be avoided.**
+
+<br>
 
 ### Types of Variables
 
 Auditors meticulously record information on every item audited, thus generating data. There are two basic types of data: quantitative and categorical. 
 
-**Quantitative variables** provide numerical information. They represent things that are numeric in nature; things that are measured. For a quantitative variable, it makes sense to apply arithmetic operations to the data (such as adding one to a value, doubling a value, or comparing two values). The net worth of a company or the number of people it employs are both examples of quantitative variables: If one company is worth <nomathjax>$</nomathjax>1,000,000 and a second company is worth <nomathjax>$</nomathjax>2,000,000 then the second company really is worth twice the value of the first.
+**Quantitative variables** provide numerical information. They represent things that are numeric in nature; things that are measured. For a quantitative variable, it makes sense to apply arithmetic operations to the data (such as adding one to a value, doubling a value, or comparing two values). The net worth of a company or the number of people it employs are both examples of quantitative variables: If one company is worth \$1,000,000 and a second company is worth \$2,000,000 then the second company really is worth twice the value of the first.
 
 **Categorical variables** yield data that can only be considered as categories. Categorical variables are labels, and it does not make sense to do arithmetic with them. The following are examples of categorical variables: gender, nationality, job title, telephone number, etc. Even though a telephone number is made of digits, it does not make sense to double someone’s phone number, to add one to their number, or to say one phone number is smaller than another. In Unit 3 we will learn more about Categorical variables and proportions.
 
@@ -468,33 +483,35 @@ The sample accounts receivable record has information on both types of variables
 
 <!--:a. Customer
 
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-:The variable "Customer" is categorical. It classifies the customer.
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+The variable "Customer" is categorical. It classifies the customer.
 </div>  -->
 a. Terms
 
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q7" style="display:none;">
 - The variable "Terms" is categorical. It classifies the invoice by the terms of payment for that invoice.
 </div>
+<br>
 
 b. Account number
 
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q8" style="display:none;">
 - The variable "Account number" is categorical. Even though the account number is given a number, it is actually functioning as a label. It is not something that is counted or measured. It does not make sense to do arithmetic operations (like adding 1 or multiplying by 2) to the account number.
 </div>
+<br>
 
 c. Invoice amount
 
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-- The variable "Invoice amount" is quantitative. It makes sense to do arithmetic operations to this value. For example, the amount of Invoice 5745 (which is <nomathjax>$</nomathjax>990.00) is somewhat more than twice as much as that of Invoice 2378 (which is <nomathjax>$</nomathjax>478.00).
+<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q9" style="display:none;">
+- The variable "Invoice amount" is quantitative. It makes sense to do arithmetic operations to this value. For example, the amount of Invoice 5745 (which is \$990.00) is somewhat more than twice as much as that of Invoice 2378 (which is \$478.00).
 </div>
 &nbsp;
 </div>
-
+<br>
 
 
 <img src="./Images/Step3.png" width="100px;">
@@ -505,6 +522,8 @@ After auditors collect a sample and compile the data, they review the evidence. 
 
 
 <img src="./Images/Step4.png" width="100px;">
+
+<br>
 
 ## Making Inferences: Hypothesis Testing
 
@@ -518,7 +537,7 @@ $H_0$:  ImmunAvance’s financial statements are materially correct.
 
 Auditors sample the company’s records to collect evidence against the null hypothesis. If there is sufficient evidence, we reject the null hypothesis. If the null hypothesis is rejected, it is rejected in favor of another statement about the population: the **alternative hypothesis**. In the case of this audit, the alternative hypothesis is
 
-H_a$:  ImmunAvance’s financial statements are not materially correct.
+$H_a$:  ImmunAvance’s financial statements are not materially correct.
 
 Notice that both the null and alternative hypotheses are statements about the state of *all* of ImmunAvance’s financial documents, not just the documents included in the sample.
 
@@ -555,25 +574,27 @@ The auditors prepare a report in which they give their opinion on the status of 
 
 There is not enough evidence to suggest that ImmunAvance’s financial statements are not materially correct. The auditor’s conclusion is that no adjustment is necessary, since the observed discrepancies could be attributed to chance.
 
+<br>
+
 ## Summary
 
 <div class="SummaryHeading">Remember...</div>
 <div class="Summary">
 
-*The '''Statistical Process''' has five steps: '''D'''esign the study, '''C'''ollect the data, '''D'''escribe the data, '''M'''ake inferences, '''T'''ake action.
+- The **Statistical Process** has five steps: **D**esign the study, **C**ollect the data, **D**escribe the data, **M**ake inferences, **T**ake action.
 
-*In a '''designed experiment''', researchers control the conditions of the study. In an '''observational study''', researchers don't control the conditions but only observe what happens.
+- In a **designed experiment**, researchers control the conditions of the study. In an **observational study**, researchers don't control the conditions but only observe what happens.
 
-*There are many sampling methods used to obtain a '''sample''' from a '''population''':
-  + A '''simple random sample (SRS)''' is a random selection taken from a population
-  + A '''systematic sample''' is every '''''k'''''<sup>th</sup> item in the population, beginning at a random starting point
-  + A '''cluster sample''' is all items in one or more randomly selected clusters, or blocks
-  + A '''stratified sample''' divides data into similar groups and an '''SRS''' is taken from each group
-  + A '''convenience sample''' is one easily obtained in a less-than-systematic way and should be avoided whenever possible 
+- There are many sampling methods used to obtain a **sample** from a **population**:
+  + A **simple random sample (SRS)** is a random selection taken from a population
+  + A **systematic sample** is every ***k***<sup>th</sup> item in the population, beginning at a random starting point
+  + A **cluster sample** is all items in one or more randomly selected clusters, or blocks
+  + A **stratified sample** divides data into similar groups and an **SRS** is taken from each group
+  + A **convenience sample** is one easily obtained in a less-than-systematic way and should be avoided whenever possible 
 
-- '''Quantitative variables''' represent things that are numeric in nature, such as the value of a car or the number of students in a classroom. '''Categorical variables''' represent nonnumerical data that can only be considered as labels, such as colors or brands of shoes.
+- **Quantitative variables** represent things that are numeric in nature, such as the value of a car or the number of students in a classroom. **Categorical variables** represent nonnumerical data that can only be considered as labels, such as colors or brands of shoes.
 
-- The '''null hypothesis ($H_0$)''' is the foundational assumption about a population and represents the status quo. The '''alternative hypothesis ($H_a$)''' is a different assumption about a population. Using a '''hypothesis test''', we determine whether it is more likely that the null hypothesis or the alternative hypothesis is true.
+- The **null hypothesis ($H_0$)** is the foundational assumption about a population and represents the status quo. The **alternative hypothesis ($H_a$)** is a different assumption about a population. Using a **hypothesis test**, we determine whether it is more likely that the null hypothesis or the alternative hypothesis is true.
 </div>
 <br>
 
@@ -588,6 +609,7 @@ Francis, T., et. al. (1955). An evaluation of the 1954 poliomyletis vaccine tria
 
 Offit, P. A. (2005). Why are pharmaceutical companies gradually abandoning vaccines? Health Affairs, 24(3), 622-630. doi:10.1377/hlthaff.24.3.622
 
+<br>
 
 ## Additional Reading
 
@@ -595,11 +617,11 @@ Offit, P. A. (2005). Why are pharmaceutical companies gradually abandoning vacci
 
 
 
-<div class=nextpage>[Lesson 3 >>](Lesson03.html)</div>
+<!-- <div class=nextpage>[Lesson 3 >>](Lesson03.html)</div> -->
 
 <!--Note: This page needs some additional attention. Specifically, not all the lesson outcomes are covered.-->
 
-[^1]: [lds.org definition of pulse](http://www.lds.org/scriptures/bd/pulse?lang=eng&query=pulse)
+<br>
 
 ## Navigation
 
@@ -608,3 +630,5 @@ Offit, P. A. (2005). Why are pharmaceutical companies gradually abandoning vacci
 | :------------------: | :--------------: | :--------------: |
 | [Lesson 01: Course Introduction](Lesson01.html) | Lesson 02: The Statistical Process & Design of Studies | [Lesson 03: Describing Quantitative Data: Shape, Center & Spread](Lesson03.html) |
 </center>
+
+[^1]: [lds.org definition of pulse](http://www.lds.org/scriptures/bd/pulse?lang=eng&query=pulse){target="_blank"}

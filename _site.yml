@@ -13,14 +13,15 @@ navbar:
         - text: "Lesson 3: Describing Quantitative Data"
           href: Lesson03.html
         - text: "Lesson 4: Rules of Probability"
-          href: Lesson03.html
+          href: convertedLesson04.html
         - text: "Lesson 5: Normal Distributions"
-          href: Lesson03.html
+          href: convertedLesson05.html
         - text: "Lesson 6: The Central Limit Theorem"
-          href: Lesson03.html          
+          href: convertedLesson06.html          
         - text: "Lesson 7: Probability Calculations for a Sample Mean"
-          href: Lesson03.html
+          href: convertedLesson07.html
         - text: "Lesson 8: Unit 1 Review"
+          href: convertedLesson08.html
     - text: "Unit 2"
       menu: 
         - text: "Lesson 9: Hypothesis Test for One Mean (Sigma Known)"
