@@ -401,37 +401,46 @@ div.tocify {
 </div>
 
 
-<iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
-<div style="clear:both">
-
+<script type="text/javascript">
+ function showhide(id) {
+    var e = document.getElementById(id);
+    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+ }
+</script>
+<div style="float:right;width=40%;">
+<br/>
+<div style="padding-left:10%;">
+<strong>Optional Lesson Video</strong>
 </div>
-<p>{{YouTubeLesson|url=<a href="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC94-G9-36oCixDqF97LTx6S" class="uri">http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC94-G9-36oCixDqF97LTx6S</a>}} ==Lesson Outcomes==</p>
+<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC94-G9-36oCixDqF97LTx6S" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+</div>
+<p>==Lesson Outcomes==</p>
 <p>By the end of this lesson, you should be able to: :* State the properties of a normal density curve. :* Calculate the z-score of an individual observation, given the mean and standard deviation. :* Interpret a z-score. :* Calculate probability as area under a normal density curve. :* Assess normality using a QQ-plot.</p>
 <p>==Normal Distributions and Normal Computations==</p>
 <p>===Baseball Batting Averages===</p>
-<p>[[<a href="File:Baseball.jpg%7Clink" class="uri">File:Baseball.jpg|link</a>=|center]]</p>
+<p>[[<a href="File:Baseball.jpg%7Clink=%7Ccenter" class="uri">File:Baseball.jpg|link=|center</a>]]</p>
 <p>In baseball, a player called the “pitcher” throws a ball to a player called the “batter.” The batter swings a wooden or metal bat and tries to hit the ball. A “hit” is made when the batter successfully hits the ball and runs to a point in the field called first base. A player’s batting average is calculated as the ratio of the number of hits a player makes divided by the number of times the player has attempted to hit the ball or in other words, been “at bat.” Sean Lahman reported the batting averages of several professional baseball players in the United States. (Lahman, 2010) The file <span class="Link">[[Data|BattingAverages]]</span> contains his data.</p>
 <p>The following histogram summarizes the batting averages for these professional baseball players:</p>
-<p>[[<a href="File:Lesson_03_Activity_06_Reading_1.jpg%7Clink" class="uri">File:Lesson_03_Activity_06_Reading_1.jpg|link</a>=|center]]</p>
+<p>[[<a href="File:Lesson_03_Activity_06_Reading_1.jpg%7Clink=%7Ccenter" class="uri">File:Lesson_03_Activity_06_Reading_1.jpg|link=|center</a>]]</p>
 <p>Notice the bell-shaped distribution of the data.</p>
 <p>Suppose we want to estimate the probability that a randomly selected player will have a batting average that is greater than 0.280. One way to do this would be to find the proportion of players in the data set who have a batting average above 0.280. We can do this by finding the number of players who fall into each of the red-colored bins below and dividing this number by the total number of players.</p>
-<p>[[<a href="File:L03_A06_R02.jpg%7Clink" class="uri">File:L03_A06_R02.jpg|link</a>=|center]]</p>
+<p>[[<a href="File:L03_A06_R02.jpg%7Clink=%7Ccenter" class="uri">File:L03_A06_R02.jpg|link=|center</a>]]</p>
 <p>In other words, we could find the proportion of the total area of the bars that is shaded red out of the combined area of all the bars. This gives us the proportion of players whose batting averages are greater than 0.280.</p>
 <p>Out of the 446 players listed, there are a total of 133 players with batting averages over 0.280. This suggests that the proportion of players whose batting average exceeds 0.280 is:</p>
 <p><span class="math display">\[\displaystyle{\frac{133}{446}} = 0.298\]</span></p>
 <p>Alternatively, we can use the fact that the data follow a bell-shaped distribution to find the probability that a player has a batting average above 0.280.</p>
 <p>===Density Curves===</p>
 <p>The bell-shaped curve superimposed on the histogram above is called a density curve. It is essentially a smooth histogram. Notice how closely this curve follows the observed data.</p>
-<p>The density curve illustrated on the histogram of the batting average data is special. It is called a ‘’’normal density curve’’’. This density curve is symmetric and has a bell-shape.</p>
+<p>The density curve illustrated on the histogram of the batting average data is special. It is called a ’‘’normal density curve’’’. This density curve is symmetric and has a bell-shape.</p>
 <p>The normal density curve is also referred to as a normal distribution or a “Gaussian” distribution (after Carl Friedrich Gauss.)</p>
 <p>The normal density curve appears in many applications in business, nature, medicine, psychology, sociology, and more. We will use the normal density curve extensively in this course.</p>
 <p>All density curves, including normal density curves, have two basic properties:</p>
 <p>:1. The total area under the curve equals 1. :2. The density curve always lies on or above the horizontal axis.</p>
 <p>Because of these two properties, the area under the curve can be treated as a probability. If we want to find the probability that a randomly selected baseball player will have a batting average between some range of values, we only need to find the area under the curve in that range. This is illustrated by the region shaded in blue in the figure below.</p>
-<p>[[<a href="File:L03_A06_R03.jpg%7Clink" class="uri">File:L03_A06_R03.jpg|link</a>=|center]]</p>
+<p>[[<a href="File:L03_A06_R03.jpg%7Clink=%7Ccenter" class="uri">File:L03_A06_R03.jpg|link=|center</a>]]</p>
 <p>A normal density curve is uniquely determined by its mean, <span class="math inline">\(\mu\)</span>, and its standard deviation, <span class="math inline">\(\sigma\)</span>. So, if random variables follow a normal distribution with a known mean and standard deviation, then we can calculate any probabilities related to that variable by finding the area under the curve.</p>
-<p>When the mean of a normal distribution is 0 and its standard deviation is 1, we call it the ‘’’standard normal distribution’’’.</p>
+<p>When the mean of a normal distribution is 0 and its standard deviation is 1, we call it the ’‘’standard normal distribution’’’.</p>
 <p>We will return to this example later, and we will find the area shaded in blue.</p>
 <p>====Characteristics of the Normal Curve====</p>
 <p>=====Introduction to <span class="math inline">\(z\)</span>-scores=====</p>
@@ -462,13 +471,13 @@ Answer the following question:
 <p>:For any bell-shaped distribution, :<em>68% of the data will lie within 1 standard deviation of the mean, :</em>95% of the data will lie within 2 standard deviations of the mean, and :*99.7% of the data will lie within 3 standard deviations of the mean.</p>
 <p>:This is called the 68-95-99.7% Rule for Bell-shaped Distributions. Some statistics books refer to this as the Empirical Rule.</p>
 </div>
-<p>[[<a href="File:L03_A06_R04.jpg%7Clink" class="uri">File:L03_A06_R04.jpg|link</a>=|center]]</p>
+<p>[[<a href="File:L03_A06_R04.jpg%7Clink=%7Ccenter" class="uri">File:L03_A06_R04.jpg|link=|center</a>]]</p>
 <p>Approximately 68% of the observations from a bell-shaped distribution will be between the values of <span class="math inline">\(\mu -~\sigma~\)</span>and <span class="math inline">\(\mu +~\sigma~\)</span>. Consider the heights of young adult women in Ghana. We expect that about 68% of Ghanian women have a height between the values of <span class="math display">\[\mu -~\sigma = 159.0 − 4.9 = 154.1~\text{cm}\]</span> and <span class="math display">\[\mu +~\sigma = 159.0 + 4.9 = 163.9~\text{cm}.\]</span></p>
 <p>So, if a female is chosen at random from all the young adult women in Ghana, about 68% of those chosen will have a height between 154.1 and 163.9 cm. Similarly, 95% of the women’s heights will be between the values of <span class="math display">\[\mu − 2\sigma = 159.0 − 2(4.9) = 149.2~\text{cm}\]</span> and <span class="math display">\[\mu + 2\sigma = 159.0 + 2(4.9) = 168.8~\text{cm}.\]</span></p>
 <p>Finally, 99.7% of the women’s heights will be between <span class="math display">\[\mu − 3\sigma = 159.0 − 3(4.9) = 144.3~\text{cm}\]</span> and <span class="math display">\[\mu + 3\sigma = 159.0 + 3(4.9) = 173.7~\text{cm}.\]</span></p>
 <p>====Unusual Events====</p>
 <p>If a <span class="math inline">\(z\)</span>-score is extreme (either a large positive number or a large negative number), then that suggests that that observed value is very far from the mean. The 68-95-99.7% rule states that 95% of the observed data values will be within two standard deviations of the mean. This means that 5% of the observations will be more than 2 standard deviations away from the mean (either to the left or to the right).</p>
-<p>We define an ‘’’unusual observation’’’ to be something that happens less than 5% of the time. For normally distributed data, we determine if an observation is unusual based on its <span class="math inline">\(z\)</span>-score. We call an observation unusual if <span class="math inline">\(z &lt; –2\)</span> or if <span class="math inline">\(z &gt; 2\)</span>. In other words, we will call an event unusual if the absolute value of its <span class="math inline">\(z\)</span>-score is greater than 2.</p>
+<p>We define an ’‘’unusual observation’’’ to be something that happens less than 5% of the time. For normally distributed data, we determine if an observation is unusual based on its <span class="math inline">\(z\)</span>-score. We call an observation unusual if <span class="math inline">\(z &lt; –2\)</span> or if <span class="math inline">\(z &gt; 2\)</span>. In other words, we will call an event unusual if the absolute value of its <span class="math inline">\(z\)</span>-score is greater than 2.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
@@ -499,7 +508,7 @@ Answer the following questions:
 <center>
 “Piled Higher and Deeper” by Jorge Cham
 </center>
-<p><br> [[<a href="file:Phd1030.png%7Clink" class="uri">file:Phd1030.png|link</a>=|center]]</p>
+<p><br> [[<a href="file:Phd1030.png%7Clink=%7Ccenter" class="uri">file:Phd1030.png|link=|center</a>]]</p>
 <p>==Normal Probability Computations==</p>
 <p>An important part of the practice of statistics is finding areas under a normal curve. The area under a normal curve, say, to the left of a value, gives the probability of obtaining an observation less than (or equal to) that value. This is an example of converting a value to an area. It is also important to convert an area to a value. For example, if you want to find the 40th percentile for data that follow a normal distribution, you find the value of the observation such that the area (under the curve) to the left of this value is 0.40.</p>
 <p>===Introduction to the Normal Probability Applet===</p>
@@ -699,13 +708,13 @@ Answer the following questions:
 <p>==Assessing Normality Using a Q-Q Plot==</p>
 <p>===Baseball Batting Averages===</p>
 <p>Recall the data on the batting averages of Major League Baseball players. The histogram of the batting averages showed a distinct bell-shaped curve.</p>
-<p>[[<a href="File:Picture6.jpg%7Clink" class="uri">File:Picture6.jpg|link</a>=|center]]</p>
-<p>To help us visually assess if data are normally distributed, statisticians have developed Q-Q plots. A ‘’’Q-Q plot’’’ is a graph that is used to assess if data are normally distributed. If the points in the Q-Q plot are essentially in a straight line, then we conclude that the data are normally distributed.</p>
+<p>[[<a href="File:Picture6.jpg%7Clink=%7Ccenter" class="uri">File:Picture6.jpg|link=|center</a>]]</p>
+<p>To help us visually assess if data are normally distributed, statisticians have developed Q-Q plots. A ’‘’Q-Q plot’’’ is a graph that is used to assess if data are normally distributed. If the points in the Q-Q plot are essentially in a straight line, then we conclude that the data are normally distributed.</p>
 <p>In a Q-Q plot, the <span class="math inline">\(z\)</span>-scores for the observed values in the data set are plotted on the horizontal axis. The <span class="math inline">\(z\)</span>-scores of the expected values (assuming the data are normally distributed) are plotted on the vertical axis. If the data follow a normal distribution, then we would expect these points to lie in a straight line. If the data are non-normal, we expect to see a distinct curve in the Q-Q plot.</p>
-<p>[[<a href="File:L04_QQ_Plot_01.jpg%7Clink" class="uri">File:L04_QQ_Plot_01.jpg|link</a>=|center]]</p>
+<p>[[<a href="File:L04_QQ_Plot_01.jpg%7Clink=%7Ccenter" class="uri">File:L04_QQ_Plot_01.jpg|link=|center</a>]]</p>
 <p>Notice that the points fall in a fairly straight line. These data appear to follow a normal distribution.</p>
 <p>In any Q-Q plot, we expect little “wiggles” in the points. If the points in the Q-Q plot are essentially in a line, then we conclude that the data are normally distributed.</p>
-<p>‘’’Instructions for creating a Q-Q Plot:’’’</p>
+<p>’‘’Instructions for creating a Q-Q Plot:’’’</p>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <p>{{Software_Filter | PageName=QQ-plot }}</p>
 <p>Make sure you can create the Q-Q plot shown above on your own.</p>
@@ -724,7 +733,7 @@ Answer the following questions:
 <!--
 {{Course_Filter_Two|A=[[File:BodyTemperatures-Histogram.png|link=|400 px]]|B=[[File:Histogram Example.jpg|link=|400px]]}}
 -->
-<p>[[<a href="File:BodyTemperatures-Histogram.png%7Clink" class="uri">File:BodyTemperatures-Histogram.png|link</a>=|400 px]]</p>
+<p>[[<a href="File:BodyTemperatures-Histogram.png%7Clink=%7C400" class="uri">File:BodyTemperatures-Histogram.png|link=|400</a> px]]</p>
 <p>Note that the mean is 98.23, standard deviation is 0.738, and sample size is n = 148.</p>
 </div>
 <p>:6. Based on your histogram, what is the shape of the distribution of these data?</p>
@@ -742,7 +751,7 @@ Answer the following questions:
 <!--
 {{Course_Filter_Two|A=[[File:BodyTemperatures-QQ.png|link=|400 px]]|B=[[File:SPSS QQ-Plot Body Temp.jpg|link=|400 px]]}}
 -->
-<p>[[<a href="File:BodyTemperatures-QQ.png%7Clink" class="uri">File:BodyTemperatures-QQ.png|link</a>=|400 px]]</p>
+<p>[[<a href="File:BodyTemperatures-QQ.png%7Clink=%7C400" class="uri">File:BodyTemperatures-QQ.png|link=|400</a> px]]</p>
 </div>
 <p>::<nowiki>*</nowiki>Click the link at right for a review of how to create a histogram.</p>
 <div style="clear:both">
@@ -758,26 +767,29 @@ Answer the following questions:
 <p>The points in the Q-Q plot distinctly follow a line. We conclude the body temperature data are normally distributed.</p>
 <p>===Wages of BYU-Idaho Students===</p>
 <p>The following Q-Q plot represents the wages of a random sample of BYU-Idaho students. Here is the Q-Q plot for the wages data:</p>
-<p>[[<a href="File:L04_QQ_Plot_02.jpg%7Clink" class="uri">File:L04_QQ_Plot_02.jpg|link</a>=|center]]</p>
+<p>[[<a href="File:L04_QQ_Plot_02.jpg%7Clink=%7Ccenter" class="uri">File:L04_QQ_Plot_02.jpg|link=|center</a>]]</p>
 <p>Notice the distinct curvature in the data. This suggests that the data are not normal. Here is a histogram of the wage data:</p>
-<p>[[<a href="File:L04_QQ_Plot_03.jpg%7Clink" class="uri">File:L04_QQ_Plot_03.jpg|link</a>=|center]]</p>
+<p>[[<a href="File:L04_QQ_Plot_03.jpg%7Clink=%7Ccenter" class="uri">File:L04_QQ_Plot_03.jpg|link=|center</a>]]</p>
 <p>In this case, it is easy to spot the right-skewed shape of the histogram. Sometimes, especially when sample sizes are small, the histogram can be misleading. The Q-Q plot usually gives a better measure of whether or not the data are normally distributed.</p>
 <p>===Other Examples===</p>
 <p>We will consider additional Q-Q Plots that illustrate data that are not normal.</p>
 <p>Notice the S-shape in the following plot.</p>
-<p>[[<a href="File:L04_QQ_Plot_04.jpg%7Clink" class="uri">File:L04_QQ_Plot_04.jpg|link</a>=|center]]</p>
+<p>[[<a href="File:L04_QQ_Plot_04.jpg%7Clink=%7Ccenter" class="uri">File:L04_QQ_Plot_04.jpg|link=|center</a>]]</p>
 <p>Here is an example of a plot representing data that are not normal. When the Q-Q plot curves in this manner, it suggests a left-skewed distribution.</p>
-<p>[[<a href="File:L04_QQ_Plot_05.jpg%7Clink" class="uri">File:L04_QQ_Plot_05.jpg|link</a>=|center]]</p>
+<p>[[<a href="File:L04_QQ_Plot_05.jpg%7Clink=%7Ccenter" class="uri">File:L04_QQ_Plot_05.jpg|link=|center</a>]]</p>
 <p>The following Q-Q plot represents right-skewed data. The data are not normal.</p>
-<p>[[<a href="File:L04_QQ_Plot_06.jpg%7Clink" class="uri">File:L04_QQ_Plot_06.jpg|link</a>=|center]]</p>
+<p>[[<a href="File:L04_QQ_Plot_06.jpg%7Clink=%7Ccenter" class="uri">File:L04_QQ_Plot_06.jpg|link=|center</a>]]</p>
 <p>When assessing a Q-Q plot, you should be a little “forgiving” of the points on the two ends. If there are some points that are slight outliers, you do not need to worry very much about them. If there is not a sustained curve—either upward or downward—or an S-shape in the data, then you can conclude the data are normally distributed.</p>
 <p>The ability to determine if data follow a normal distribution will be important later in the course.</p>
 <p>==Summary==</p>
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-<p>{{Summary|05}}</p>
+<p>*A ’‘’normal density curve’’’ is symmetric and bell-shaped. The curve lies above the horizontal axis and the total area under the curve is equal to 1.</p>
+<p>*A ’‘’standard normal distribution’’’ has a mean of 0 and a standard deviation of 1. The ’‘’68-95-99.7% rule’’’ states that when data are normally distributed, approximately 68% of the data lie within 1 standard deviation from the mean, approximately 95% of the data lie within 2 standard deviations from the mean, and approximately 99.7% of the data lie within 3 standard deviations from the mean.</p>
+<p>*A ’‘’z-score’’’ tells us how many standard deviations away from the mean a given value is. It is calculated as: <span class="math inline">\(\displaystyle{z = \frac{\text{value}-\text{mean}}{\text{standard deviation}} = \frac{x-\mu}{\sigma}}\)</span></p>
+<p>*The ’‘’probability applet’’’ allows us to use z-scores to calculate proportions, probabilities, and percentiles.</p>
+<p>*A ’‘’Q-Q plot’’’ is used to assess whether or not a set of data is normally distributed. <br></p>
 <p>==Alumni Spotlight: Adam Andersen==</p>
 <center>
-[[<a href="File:AdamAndersen-Portrait.png%7Clink" class="uri">File:AdamAndersen-Portrait.png|link</a>=]] <span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span> [[<a href="File:AdamAndersen-Family.png%7Clink" class="uri">File:AdamAndersen-Family.png|link</a>=]]
+[[<a href="File:AdamAndersen-Portrait.png%7Clink=" class="uri">File:AdamAndersen-Portrait.png|link=</a>]] <span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span> <span class="math inline">\(~\)</span> [[<a href="File:AdamAndersen-Family.png%7Clink=" class="uri">File:AdamAndersen-Family.png|link=</a>]]
 </center>
 <!-- Adam has a copyright release for these photos -->
 <div style="clear:both">
@@ -799,7 +811,7 @@ Answer the following questions:
 <p>Orçamento e Gestão Ministério do Planejamento. Pesquisa de orçamentos familiars 2008-2009: Antropometria e estado nutricional de crianças, adolescentes e adultos no brasil. Technical report, Instituto Brasileiro de Geografi a e Estatística – IBGE, Rio de Janeiro, Brazil 2010.</p>
 <p>==Navigation==</p>
 <center>
-{| |- align=“center” | ‘’’Previous Reading’‘’: <br> Lesson 04: <br> [[Lesson 4: Probability; Discrete Random Variables|Probability; Discrete Random Variables]] |                    |’‘’This Reading’‘’: <br> Lesson 05: <br> Normal Distributions |                    |’‘’Next Reading’’’: <br> Lesson 06: <br> [[Lesson 6: Distribution of Sample Means &amp; The Central Limit Theorem|Distribution of Sample Means &amp; The Central Limit Theorem]] |}
+{| |- align=“center” | ’‘’Previous Reading’’‘: <br> Lesson 04: <br> [[Lesson 4: Probability; Discrete Random Variables|Probability; Discrete Random Variables]] |                    |’‘’This Reading’’‘: <br> Lesson 05: <br> Normal Distributions |                    |’‘’Next Reading’’’: <br> Lesson 06: <br> [[Lesson 6: Distribution of Sample Means &amp; The Central Limit Theorem|Distribution of Sample Means &amp; The Central Limit Theorem]] |}
 </center>
 
 <br />

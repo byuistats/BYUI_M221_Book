@@ -415,15 +415,15 @@ div.tocify {
 </div>
 <p><br></p>
 <p>==What If We Don’t Know <span class="math inline">\(\sigma\)</span>?==</p>
-<p>[[<a href="File:WilliamSealyGosset-NoCopyright.png%7Clink" class="uri">File:WilliamSealyGosset-NoCopyright.png|link</a>=|thumb|right|‘’’Historical Note:’’’ <br> William Sealy Gosset (1876-1937) was a British industrial scientist and statistician best known for his discovery of the <span class="math inline">\(t\)</span>-distribution. <!-- Gosset was able to focus on statistics after he was confined to his bed for three months because of a motor accident ...he ran into a lamp-post on a straight road, by looking down to adjust some stuff he was carrying... His statistical work was motivated by his research for the brewery that employed him much of his life.--> ]]</p>
+<p>[[<a href="File:WilliamSealyGosset-NoCopyright.png%7Clink=%7Cthumb%7Cright" class="uri">File:WilliamSealyGosset-NoCopyright.png|link=|thumb|right</a>|’‘’Historical Note:’’’ <br> William Sealy Gosset (1876-1937) was a British industrial scientist and statistician best known for his discovery of the <span class="math inline">\(t\)</span>-distribution. <!-- Gosset was able to focus on statistics after he was confined to his bed for three months because of a motor accident ...he ran into a lamp-post on a straight road, by looking down to adjust some stuff he was carrying... His statistical work was motivated by his research for the brewery that employed him much of his life.--> ]]</p>
 <p>In practice, we almost never know the population standard deviation, $ $. So, it is generally not appropriate to use the formula <span class="math display">\[
 z = \frac{ \bar x - \mu }{ \sigma / \sqrt{n} }
 \]</span> In 1908, William Sealy Gosset published a solution to this problem <!--<cite>Gosset08</cite>-->. He found a way to appropriately compute the confidence interval for the mean when <span class="math inline">\(\sigma\)</span> is not known. The basic idea is to use the sample standard deviation, <span class="math inline">\(s\)</span> in the place of the true population standard deviation, <span class="math inline">\(\sigma\)</span>. If <span class="math inline">\(\sigma\)</span> is not known, we cannot base the calculations on the standard normal distribution, and we cannot use the formula above to conduct hypothesis tests.</p>
-<p>In a remarkable piece of work, Gosset found the appropriate distribution to use when <span class="math inline">\(\sigma\)</span> is unknown. At the time of this discovery, Gosset worked for the Guinness brewery. To avoid problems with industrial espionage, Guinness prohibited employees from publishing any research results. Knowing his work provided a significant contribution to Statistics, Gosset chose convinced his employer to allow him to publish under a pseudonum. He chose the pseudonym “Student”. Gosset’s test statistic was denoted by the letter <span class="math inline">\(t\)</span>, this distribution has come to be known as ‘’’Student’s t-distribution’’’.</p>
+<p>In a remarkable piece of work, Gosset found the appropriate distribution to use when <span class="math inline">\(\sigma\)</span> is unknown. At the time of this discovery, Gosset worked for the Guinness brewery. To avoid problems with industrial espionage, Guinness prohibited employees from publishing any research results. Knowing his work provided a significant contribution to Statistics, Gosset chose convinced his employer to allow him to publish under a pseudonum. He chose the pseudonym “Student”. Gosset’s test statistic was denoted by the letter <span class="math inline">\(t\)</span>, this distribution has come to be known as ’‘’Student’s t-distribution’’’.</p>
 <p><span class="math display">\[
 t = \frac{ \bar x - \mu }{ s / \sqrt{n} }
 \]</span></p>
-<p>The <span class="math inline">\(t\)</span>-distribution is bell-shaped and symmetrical. The <span class="math inline">\(t\)</span>-distribution has a mean of 0, but it has more area in the tails than the standard normal distribution. The exact shape of the <span class="math inline">\(t\)</span>-distribution depends on a parameter called the ‘’’degrees of freedom’’’ (abbreviated <span class="math inline">\(df\)</span>). The degrees of freedom is related to the sample size. As the sample size goes up, the degrees of freedom increase accordingly. For the procedures discussed in this lesson, the degrees of freedom equal the sample size minus one: <span class="math inline">\(df = n-1\)</span>.</p>
+<p>The <span class="math inline">\(t\)</span>-distribution is bell-shaped and symmetrical. The <span class="math inline">\(t\)</span>-distribution has a mean of 0, but it has more area in the tails than the standard normal distribution. The exact shape of the <span class="math inline">\(t\)</span>-distribution depends on a parameter called the ’‘’degrees of freedom’’’ (abbreviated <span class="math inline">\(df\)</span>). The degrees of freedom is related to the sample size. As the sample size goes up, the degrees of freedom increase accordingly. For the procedures discussed in this lesson, the degrees of freedom equal the sample size minus one: <span class="math inline">\(df = n-1\)</span>.</p>
 <p>[<a href="http://byuimath.com/apps/normprobwitht.html" class="uri">http://byuimath.com/apps/normprobwitht.html</a> Click here] to explore how the shape of the <span class="math inline">\(t\)</span>-distribution changes with the degrees of freedom. Notice that as the degrees of freedom increases, the shape of the <span class="math inline">\(t\)</span>-distribution (black curve) gets closer to the standard normal distribution (red curve). The red curve is identical in the three images below.</p>
 <center>
 <table>
@@ -435,17 +435,17 @@ t = \frac{ \bar x - \mu }{ s / \sqrt{n} }
 <tbody>
 </tbody>
 </table>
-! <span class="math inline">\(t\)</span>-distribution <br> with <span class="math inline">\(df = 1\)</span> ! <span class="math inline">\(t\)</span>-distribution <br> with <span class="math inline">\(df = 5\)</span> ! <span class="math inline">\(t\)</span>-distribution <br> with <span class="math inline">\(df = 15\)</span> |- | [[<a href="File:T-dist-df-01.png%7Clink" class="uri">File:T-dist-df-01.png|link</a>= | 300 px]] | [[<a href="File:T-dist-df-05.png%7Clink" class="uri">File:T-dist-df-05.png|link</a>= | 300 px]] | [[<a href="File:T-dist-df-15.png%7Clink" class="uri">File:T-dist-df-15.png|link</a>= | 300 px]] |- | align=“center” colspan=“3” | (Image credit: Webster West, <a href="http://www.stat.tamu.edu/~west/applets/tdemo1.html" class="uri">http://www.stat.tamu.edu/~west/applets/tdemo1.html</a>) <!-- We do not have permission to use these images....--> |}
+! <span class="math inline">\(t\)</span>-distribution <br> with <span class="math inline">\(df = 1\)</span> ! <span class="math inline">\(t\)</span>-distribution <br> with <span class="math inline">\(df = 5\)</span> ! <span class="math inline">\(t\)</span>-distribution <br> with <span class="math inline">\(df = 15\)</span> |- | [[<a href="File:T-dist-df-01.png%7Clink=" class="uri">File:T-dist-df-01.png|link=</a> | 300 px]] | [[<a href="File:T-dist-df-05.png%7Clink=" class="uri">File:T-dist-df-05.png|link=</a> | 300 px]] | [[<a href="File:T-dist-df-15.png%7Clink=" class="uri">File:T-dist-df-15.png|link=</a> | 300 px]] |- | align=“center” colspan=“3” | (Image credit: Webster West, <a href="http://www.stat.tamu.edu/~west/applets/tdemo1.html" class="uri">http://www.stat.tamu.edu/~west/applets/tdemo1.html</a>) <!-- We do not have permission to use these images....--> |}
 </center>
 <p>==Hypothesis Tests==</p>
-<p>[[<a href="File:StepsAll.png%7Clink" class="uri">File:StepsAll.png|link</a>=|center]]</p>
+<p>[[<a href="File:StepsAll.png%7Clink=%7Ccenter" class="uri">File:StepsAll.png|link=|center</a>]]</p>
 <p>===Body Temperatures Revisited===</p>
 <p>We will apply the <span class="math inline">\(t\)</span>-distribution to the body temperature data we explored previously.</p>
 <p>This hypothesis test is conducted in a manner similar to a test for a single mean where <span class="math inline">\(\sigma\)</span> is known, except that instead of using the population standard deviation, <span class="math inline">\(\sigma\)</span>, in the calculations, we estimate this value using the sample standard deviation, <span class="math inline">\(s\)</span>. This leads to a <span class="math inline">\(t\)</span>-distribution, rather than a normal distribution for the test statistic. We will not need to compute the value of this test statistic by hand. It will be done using Software.</p>
-<p>[[<a href="File:Step1.png%7Clink" class="uri">File:Step1.png|link</a>=]]</p>
-<p>‘’’Summarize the relevant background information’’’</p>
+<p>[[<a href="File:Step1.png%7Clink=" class="uri">File:Step1.png|link=</a>]]</p>
+<p>’‘’Summarize the relevant background information’’’</p>
 <p>We want to conduct a hypothesis test to determine if the mean body temperature is different from 98.6° Fahrenheit. Previously, we assumed that we knew the value of <span class="math inline">\(\sigma\)</span>. Actually, this value is not known.</p>
-<p>‘’’State the null and alternative hypotheses and the level of significance’’’</p>
+<p>’‘’State the null and alternative hypotheses and the level of significance’’’</p>
 <p><span class="math display">\[
 \begin{array}{rl}
 H_0: \mu = 98.6\\
@@ -454,11 +454,11 @@ H_a: \mu \ne 98.6\\
 \]</span> <span class="math display">\[
 \alpha = 0.05
 \]</span></p>
-<p>[[<a href="File:Step2.png%7Clink" class="uri">File:Step2.png|link</a>=]]</p>
-<p>‘’’Describe the data collection procedures’’’</p>
+<p>[[<a href="File:Step2.png%7Clink=" class="uri">File:Step2.png|link=</a>]]</p>
+<p>’‘’Describe the data collection procedures’’’</p>
 <p>We will use the body temperature data, <span class="Link">[[Data|BodyTemp]]</span>, collected by Dr. Mackowiak and his colleagues to conduct the test. <!-- <cite>Mackowiak92</cite> --></p>
-<p>[[<a href="File:Step3.png%7Clink" class="uri">File:Step3.png|link</a>=]]</p>
-<p>‘’’Give the relevant summary statistics’’’</p>
+<p>[[<a href="File:Step3.png%7Clink=" class="uri">File:Step3.png|link=</a>]]</p>
+<p>’‘’Give the relevant summary statistics’’’</p>
 <p><span class="math display">\[
 \begin{array}{l}
 \bar x = 98.23\\
@@ -466,14 +466,14 @@ s = 0.738\\
 n = 148
 \end{array}
 \]</span></p>
-<p>‘’’Make an appropriate graph (e.g. a histogram) to illustrate the data’’’</p>
-<p>[[<a href="File:BodyTemp-Histogram-LoRes.png%7Clink" class="uri">File:BodyTemp-Histogram-LoRes.png|link</a>=|center]]</p>
-<p>[[<a href="File:Step4.png%7Clink" class="uri">File:Step4.png|link</a>=]]</p>
-<p>‘’’Verify the requirements have been met’’’</p>
+<p>’‘’Make an appropriate graph (e.g. a histogram) to illustrate the data’’’</p>
+<p>[[<a href="File:BodyTemp-Histogram-LoRes.png%7Clink=%7Ccenter" class="uri">File:BodyTemp-Histogram-LoRes.png|link=|center</a>]]</p>
+<p>[[<a href="File:Step4.png%7Clink=" class="uri">File:Step4.png|link=</a>]]</p>
+<p>’‘’Verify the requirements have been met’’’</p>
 <p>:<em>We assume that the individuals chosen to participate in the study represent a (simple) random sample from the population. :</em><span class="math inline">\(\bar x\)</span> will be normally distributed, because the sample size is large. (Note: We could have also noticed that the body temperature data appears to be normally distributed, so even with a small sample size, <span class="math inline">\(\bar x\)</span> would be normal.)</p>
-<p>‘’’Give the test statistic and its value’’’</p>
+<p>’‘’Give the test statistic and its value’’’</p>
 <p>We will need to conduct the analysis using software, so we can report this value.</p>
-<p>‘’’Instructions for conducting a test for one mean with <span class="math inline">\(sigma\)</span> unknown:’’’</p>
+<p>’‘’Instructions for conducting a test for one mean with <span class="math inline">\(sigma\)</span> unknown:’’’</p>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <p>{{Software_Filter | PageName=OneSampleTtest }}</p>
 <p>The interpretation of the results will follow the pattern established in the previous hypothesis tests. If the <span class="math inline">\(P\)</span>-value is less than the <span class="math inline">\(\alpha\)</span> level, we reject the null hypothesis. If the <span class="math inline">\(P\)</span>-value is greater than the <span class="math inline">\(\alpha\)</span> level, we fail to reject the null hypothesis. This is true for every hypothesis test.</p>
@@ -485,41 +485,41 @@ t &amp;= \frac{ \bar x - \mu }{ s / \sqrt{n} } \\
 &amp;\approx -6.03
 \end{align}
 \]</span> Any differences are due to rounding.</p>
-<p>‘’’State the degrees of freedom’’’</p>
+<p>’‘’State the degrees of freedom’’’</p>
 <p>{{Course_Filter|course=A|content=In Excel, the degrees of freedom (<span class="math inline">\(df\)</span>) are given in cell E21.}}</p>
 <p><span class="math display">\[df = 147\]</span> <!-- '''Mark the test statistic and $P$-value on a graph of the sampling distribution''' --> <!-- CONSOLIDATED and UPDATED --></p>
-<p>‘’’Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance’’’</p>
+<p>’‘’Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance’’’</p>
 <p>The <span class="math inline">\(P\)</span>-value is given in the software as “1.2723E-08”. Writing this properly and comparing it to <span class="math inline">\(\alpha\)</span>, we have: <span class="math display">\[
 P\text{-value} = 1.2723 \times 10^{-8} = 0.000~000~012~723 &lt; 0.05 = \alpha
 \]</span></p>
-<p>‘’’State your decision’’’</p>
+<p>’‘’State your decision’’’</p>
 <p>The interpretation of the results will follow the pattern established in the previous hypothesis tests. If the <span class="math inline">\(P\)</span>-value is less than the <span class="math inline">\(\alpha\)</span> level, we reject the null hypothesis. If the <span class="math inline">\(P\)</span>-value is greater than the <span class="math inline">\(\alpha\)</span> level, we fail to reject the null hypothesis. This is true for every hypothesis test.</p>
 <p>Since the <span class="math inline">\(P\)</span>-value was less than <span class="math inline">\(\alpha\)</span>, we reject the null hypothesis.</p>
-<p>[[<a href="File:Step5.png%7Clink" class="uri">File:Step5.png|link</a>=]]</p>
-<p>‘’’Present your conclusion in an English sentence, relating the result to the context of the problem’’’</p>
+<p>[[<a href="File:Step5.png%7Clink=" class="uri">File:Step5.png|link=</a>]]</p>
+<p>’‘’Present your conclusion in an English sentence, relating the result to the context of the problem’’’</p>
 <p>There is sufficient evidence to suggest that the mean body temperature is not 98.6° Fahrenheit.</p>
-<p>[[<a href="File:StepsAll.png%7Clink" class="uri">File:StepsAll.png|link</a>=|center]]</p>
+<p>[[<a href="File:StepsAll.png%7Clink=%7Ccenter" class="uri">File:StepsAll.png|link=|center</a>]]</p>
 <p>===Baby Boom===</p>
-<p>[[<a href="File:Step1.png%7Clink" class="uri">File:Step1.png|link</a>=]]</p>
-<p>‘’’Summarize the relevant background information’’’</p>
+<p>[[<a href="File:Step1.png%7Clink=" class="uri">File:Step1.png|link=</a>]]</p>
+<p>’‘’Summarize the relevant background information’’’</p>
 <p>The birth weight of a child is an important indicator of their neonatal health. It is important that pediatric health care providers track changes in the birth weights over time. The birth weight of children in Australia has historically had a population mean of 3373 grams.<!--<cite>Steele97,JSEdunn99</cite>--> Is this still the mean birth weight of Australian children, or has there been a change? We will use the 0.05 level of significance.</p>
-<p>‘’’State the null and alternative hypotheses and the level of significance’’’</p>
+<p>’‘’State the null and alternative hypotheses and the level of significance’’’</p>
 <p><span class="math display">\[
 \begin{align}
 H_0: &amp;~ \mu=3373 \\
 H_a: &amp;~ \mu \ne 3373
 \end{align}
 \]</span> <span class="math display">\[ \alpha = 0.05 \]</span></p>
-<p>[[<a href="File:Step2.png%7Clink" class="uri">File:Step2.png|link</a>=]]</p>
-<p>‘’’Describe the data collection procedures’’’</p>
+<p>[[<a href="File:Step2.png%7Clink=" class="uri">File:Step2.png|link=</a>]]</p>
+<p>’‘’Describe the data collection procedures’’’</p>
 <p>The birth weights of all children born on December 18, 1997 at the Mater Mothers’ Hospital in Brisbane, Australia were recorded <!--<cite>JSEdunn99</cite>-->. The time of birth (on a 24 hour clock), gender, and birth weight of each child are given in the file <span class="Link">[[Data|BabyBoom]]</span>.</p>
 <p>Using this data set, test the hypothesis that the mean weight of babies born in Australia is 3373 grams. Use the <span class="math inline">\(\alpha=0.05\)</span> level of significance for this problem. Make an appropriate graph of the data.</p>
-<p>[[<a href="File:Step3.png%7Clink" class="uri">File:Step3.png|link</a>=]]</p>
+<p>[[<a href="File:Step3.png%7Clink=" class="uri">File:Step3.png|link=</a>]]</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
 <div class="Questions">
-<p>:1. ‘’’Give the relevant summary statistics’’’</p>
+<p>:1. ’‘’Give the relevant summary statistics’’’</p>
 <div style="clear:both">
 
 </div>
@@ -529,39 +529,37 @@ Answer the following questions:
 </div>
 ::The relevant summary statistics are:
 <center>
-$
-<span class="math display">\[\begin{align}
+$ <span class="math display">\[\begin{align}
 \bar x &amp;= 3275.95 \textrm{g}\\
 s &amp;= 528.03 \textrm{g}\\
 n &amp;= 44
-\end{align}\]</span>
-$
+\end{align}\]</span> $
 </center>
 </div>
-<p>:2. ‘’’Make an appropriate graph to illustrate the data’’’</p>
+<p>:2. ’‘’Make an appropriate graph to illustrate the data’’’</p>
 <div style="clear:both">
 
 </div>
 <div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-<p>[[<a href="File:BabyBoom-JSE-Histogram.png%7Clink" class="uri">File:BabyBoom-JSE-Histogram.png|link</a>=|center]]</p>
+<p>[[<a href="File:BabyBoom-JSE-Histogram.png%7Clink=%7Ccenter" class="uri">File:BabyBoom-JSE-Histogram.png|link=|center</a>]]</p>
 </div>
 <p> </p>
 </div>
-<p>[[<a href="File:Step4.png%7Clink" class="uri">File:Step4.png|link</a>=]]</p>
-<p>‘’’Verify the requirements have been met’’’</p>
+<p>[[<a href="File:Step4.png%7Clink=" class="uri">File:Step4.png|link=</a>]]</p>
+<p>’‘’Verify the requirements have been met’’’</p>
 <p>The data show a left-skewed shape, however the sample size is large. Using the Central Limit Theorem, we can conclude that the sample mean is normally distributed and the requirements are satisfied.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
 <div class="Questions">
-<p>:3. ‘’’Give the test statistic and its value’’’</p>
+<p>:3. ’‘’Give the test statistic and its value’’’</p>
 <div style="clear:both">
 
 </div>
 <div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 <p>::The test statistic is a <span class="math inline">\(t\)</span>. The value of the test statistic is <span class="math inline">\(-1.219\)</span>. This was taken from the output above. We have <span class="math inline">\(t = -1.219\)</span>.</p>
 </div>
-<p>:4. ‘’’State the degrees of freedom’’’</p>
+<p>:4. ’‘’State the degrees of freedom’’’</p>
 <div style="clear:both">
 
 </div>
@@ -574,15 +572,15 @@ $ df = 43$
 </div>
 <p> </p>
 </div>
-<p>‘’’Mark the test statistic and <span class="math inline">\(P\)</span>-value on a graph of the sampling distribution’’’ <!-- CONSOLIDATED and UPDATED --></p>
+<p>’‘’Mark the test statistic and <span class="math inline">\(P\)</span>-value on a graph of the sampling distribution’’’ <!-- CONSOLIDATED and UPDATED --></p>
 <p>The <span class="math inline">\(P\)</span>-value is shaded in green:</p>
-<p>[[<a href="File:BabyBoom-JSE-TwoSidedT1-2.png%7Clink" class="uri">File:BabyBoom-JSE-TwoSidedT1-2.png|link</a>=|center]]</p>
-<p>‘’’Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance’’’</p>
+<p>[[<a href="File:BabyBoom-JSE-TwoSidedT1-2.png%7Clink=%7Ccenter" class="uri">File:BabyBoom-JSE-TwoSidedT1-2.png|link=|center</a>]]</p>
+<p>’‘’Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance’’’</p>
 <p><span class="math display">\[P\text{-value}=0.228 &gt; 0.05 = \alpha\]</span></p>
-<p>‘’’State your decision’’’</p>
+<p>’‘’State your decision’’’</p>
 <p>Since the <span class="math inline">\(P\)</span>-value is greater than the level of significance, we fail to reject the null hypothesis.</p>
-<p>[[<a href="File:Step5.png%7Clink" class="uri">File:Step5.png|link</a>=]]</p>
-<p>‘’’Present your conclusion in an English sentence, relating the result to the context of the problem’’’</p>
+<p>[[<a href="File:Step5.png%7Clink=" class="uri">File:Step5.png|link=</a>]]</p>
+<p>’‘’Present your conclusion in an English sentence, relating the result to the context of the problem’’’</p>
 <p>There is insufficient evidence to suggest that the mean weight of babies born in Australia is different from 3373 grams.</p>
 <p>==Confidence Intervals==</p>
 <p>The procedure for finding confidence intervals when <span class="math inline">\(\sigma\)</span> is not known is very similar to the process when <span class="math inline">\(\sigma\)</span> is known. As a reminder, here is the confidence interval (from Lesson 10) when <span class="math inline">\(\sigma\)</span> is known. <span class="math display">\[
@@ -592,19 +590,19 @@ $ df = 43$
 \left( \bar x - t^* \frac{s}{\sqrt{n}}, ~ \bar x + t^* \frac{s}{\sqrt{n}} \right)
 \]</span> where <span class="math inline">\(t^*\)</span> is the <span class="math inline">\(t\)</span>-score corresponding to the confidence level and <span class="math inline">\(s\)</span> is the sample standard deviation.</p>
 <p>We will use {{Name}} to construct confidence intervals when <span class="math inline">\(\sigma\)</span> is unknown. The values of <span class="math inline">\(t^*\)</span> and <span class="math inline">\(s\)</span> will be computed for us. Examples of this are given below. You can see the details by clicking on [Show Hand Calculations] in Step 4.</p>
-<p>[[<a href="File:StepsAll.png%7Clink" class="uri">File:StepsAll.png|link</a>=|center]]</p>
+<p>[[<a href="File:StepsAll.png%7Clink=%7Ccenter" class="uri">File:StepsAll.png|link=|center</a>]]</p>
 <p>===Automatic Language Translation Programs===</p>
-<p>[[<a href="File:Step1.png%7Clink" class="uri">File:Step1.png|link</a>=]]</p>
-<p>‘’’Summarize the relevant background information’’’</p>
+<p>[[<a href="File:Step1.png%7Clink=" class="uri">File:Step1.png|link=</a>]]</p>
+<p>’‘’Summarize the relevant background information’’’</p>
 <p>Computer software is commonly used to translate text from one language to another. As part of his Ph.D. thesis, Philipp Koehn developed a phrase-based translation program called Pharaoh. <!--<cite>Koehn04Pharaoh</cite>--></p>
 <p>The quality of the translation can vary. A good translation system should match a professional human translation. <!--<cite>Papineni02</cite>--> It is important to be able to quantify how good the translations produced by Pharaoh are.</p>
 <p>The IBM T. J. Watson Research Center developed methods to measure the quality of a translation from one language to another. <!--<cite>Brown90</cite>--> One of these is the the BiLingual Evaluation Understudy (BLEU). <!--<cite>Papineni02</cite>--> BLEU is a score ranging from 0 to 1 that indicates how well a computer translation matches a professional human translation of the same text. Higher scores indicate a better match. BLEU helps companies who develop translation software “to monitor the effect of daily changes to their systems in order to weed out bad ideas from good ideas”. <!--<cite>Papineni02</cite>--></p>
-<p>[[<a href="File:Step2.png%7Clink" class="uri">File:Step2.png|link</a>=]]</p>
-<p>‘’’Describe the data collection procedures’’’</p>
+<p>[[<a href="File:Step2.png%7Clink=" class="uri">File:Step2.png|link=</a>]]</p>
+<p>’‘’Describe the data collection procedures’’’</p>
 <p>To test Pharaoh’s ability to translate, Koehn took a random sample of 100 blocks of Spanish text, each of which contained 300 sentences, and used Pharaoh to translate each of these to English. The BLEU score was calculated for each of the 100 blocks. The data were extracted from Figure 2 in a paper Koehn published. <!--<cite>Koehn04</cite>--> The 100 BLEU scores are given in <span class="Link">[[Data|BLEU-Scores]]</span>.</p>
 <p>Koehn wants to find an estimate of the true mean BLEU score for text translated by the Pharaoh computer program. He would like to compute a confidence interval, but he does not know the true population standard deviation, <span class="math inline">\(\sigma\)</span>.</p>
-<p>[[<a href="File:Step3.png%7Clink" class="uri">File:Step3.png|link</a>=]]</p>
-<p>‘’’Give the relevant summary statistics’’’</p>
+<p>[[<a href="File:Step3.png%7Clink=" class="uri">File:Step3.png|link=</a>]]</p>
+<p>’‘’Give the relevant summary statistics’’’</p>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <p>{{Software_Filter | PageName=BLEUscores-SummaryStats }}</p>
 <p>The summary statistics are:</p>
@@ -615,18 +613,18 @@ s =&amp; 0.0264 \\
 n =&amp; 100
 \end{align}
 \]</span></p>
-<p>‘’’Make an appropriate graph to illustrate the data’’’</p>
+<p>’‘’Make an appropriate graph to illustrate the data’’’</p>
 <p>Here is a histogram of the data showing 10 bins.</p>
-<p>[[<a href="File:BLEUscores-Histogram-Excel.png%7Clink" class="uri">File:BLEUscores-Histogram-Excel.png|link</a>=|center]]</p>
-<p>[[<a href="File:Step4.png%7Clink" class="uri">File:Step4.png|link</a>=]]</p>
-<p>‘’’Verify the requirements have been met’’’</p>
+<p>[[<a href="File:BLEUscores-Histogram-Excel.png%7Clink=%7Ccenter" class="uri">File:BLEUscores-Histogram-Excel.png|link=|center</a>]]</p>
+<p>[[<a href="File:Step4.png%7Clink=" class="uri">File:Step4.png|link=</a>]]</p>
+<p>’‘’Verify the requirements have been met’’’</p>
 <p>The requirements for creating a confidence interval for a mean with <span class="math inline">\(\sigma\)</span> unknown are the same as the requirements for this procedure when <span class="math inline">\(\sigma\)</span> is known:</p>
 <p>====Requirements====</p>
 <p>There are two requirements that need to be checked when computing a confidence interval for a mean with <span class="math inline">\(\sigma\)</span> unknown:</p>
 <p>:1. A simple random sample was drawn from the population :2. $ x$ is normally distributed</p>
 <p>Recall the requirement of normality is satisfied if the data are approximately normally distributed or if the sample size is large.</p>
 <p>The data are bell-shaped and fairly symmetric. So, the sample mean, <span class="math inline">\(\bar x\)</span>, is approximately normally distributed.</p>
-<p>‘’’Find the confidence interval’’’</p>
+<p>’‘’Find the confidence interval’’’</p>
 <div style="clear:both">
 
 </div>
@@ -654,8 +652,8 @@ n =&amp; 100
 <p>{{Software_Filter | PageName=CI-OneMeanSigmaUnknown }}</p>
 <p>The 95% confidence interval for the true mean BLEU score is:</p>
 <p><span class="math display">\[ (0.282, 0.293) \]</span></p>
-<p>[[<a href="File:Step5.png%7Clink" class="uri">File:Step5.png|link</a>=]]</p>
-<p>‘’’Present your observations in an English sentence, relating the result to the context of the problem’’’</p>
+<p>[[<a href="File:Step5.png%7Clink=" class="uri">File:Step5.png|link=</a>]]</p>
+<p>’‘’Present your observations in an English sentence, relating the result to the context of the problem’’’</p>
 <p>We are 95% confident that the true mean BLEU score for all translations by the Pharaoh program is between 0.2824 and 0.2928.</p>
 <p>Answer the following questions using the data set <span class="Link">[[Data|BLEU-Scores]]</span>, which gives the BLEU scores for <span class="math inline">\(n=100\)</span> translations from Spanish to English by the computer program Pharaoh.</p>
 <div class="QuestionsHeading">
@@ -685,20 +683,20 @@ Answer the following questions:
 </div>
 <p> </p>
 </div>
-<p>[[<a href="File:StepsAll.png%7Clink" class="uri">File:StepsAll.png|link</a>=|center]]</p>
+<p>[[<a href="File:StepsAll.png%7Clink=%7Ccenter" class="uri">File:StepsAll.png|link=|center</a>]]</p>
 <p>===Euro Weights===</p>
-<p>[[<a href="File:Step1.png%7Clink" class="uri">File:Step1.png|link</a>=]]</p>
-<p>‘’’Summarize the relevant background information’’’</p>
+<p>[[<a href="File:Step1.png%7Clink=" class="uri">File:Step1.png|link=</a>]]</p>
+<p>’‘’Summarize the relevant background information’’’</p>
 <p>A group of statisticians measured the weights of 2000 Belgian one Euro coins in eight batches. Each batch contains coins that were all minted together. <!--<cite>JSEeuros</cite>--> You can learn more about these data at: [<a href="http://www.amstat.org/publications/jse/datasets/euroweight.txt" class="uri">http://www.amstat.org/publications/jse/datasets/euroweight.txt</a> <a href="http://www.amstat.org/publications/jse/datasets/euroweight.txt" class="uri">http://www.amstat.org/publications/jse/datasets/euroweight.txt</a>]</p>
-<p>[[<a href="File:Step2.png%7Clink" class="uri">File:Step2.png|link</a>=]]</p>
-<p>‘’’Describe the data collection procedures’’’</p>
+<p>[[<a href="File:Step2.png%7Clink=" class="uri">File:Step2.png|link=</a>]]</p>
+<p>’‘’Describe the data collection procedures’’’</p>
 <p>The coins were “borrowed” from a bank in Belgium, one batch at a time. The weights (in grams) of the coins are given in the file <span class="Link">[[Data|EuroWeight]]</span>.</p>
-<p>[[<a href="File:Step3.png%7Clink" class="uri">File:Step3.png|link</a>=]]</p>
+<p>[[<a href="File:Step3.png%7Clink=" class="uri">File:Step3.png|link=</a>]]</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
 <div class="Questions">
-<p>:8. ‘’’Give the relevant summary statistics’’’.</p>
+<p>:8. ’‘’Give the relevant summary statistics’’’.</p>
 <div style="clear:both">
 
 </div>
@@ -708,26 +706,24 @@ Answer the following questions:
 </div>
 ::When we do this, we get the following summary statistics:
 <center>
-$
-<span class="math display">\[\begin{align}
+$ <span class="math display">\[\begin{align}
 \bar x =&amp; 7.521 \\ 
 s =&amp; 0.034 \\
 n =&amp; 2000
-\end{align}\]</span>
-$
+\end{align}\]</span> $
 </center>
 </div>
-<p>:9. ‘’’Make an appropriate graph to illustrate the data’’’</p>
+<p>:9. ’‘’Make an appropriate graph to illustrate the data’’’</p>
 <div style="clear:both">
 
 </div>
 <div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-<p>[[<a href="File:EuroWeights-Histogram-SPSS.png%7Clink" class="uri">File:EuroWeights-Histogram-SPSS.png|link</a>=|center]]</p>
+<p>[[<a href="File:EuroWeights-Histogram-SPSS.png%7Clink=%7Ccenter" class="uri">File:EuroWeights-Histogram-SPSS.png|link=|center</a>]]</p>
 </div>
 <p> </p>
 </div>
-<p>[[<a href="File:Step4.png%7Clink" class="uri">File:Step4.png|link</a>=]]</p>
-<p>‘’’Verify the requirements have been met’’’</p>
+<p>[[<a href="File:Step4.png%7Clink=" class="uri">File:Step4.png|link=</a>]]</p>
+<p>’‘’Verify the requirements have been met’’’</p>
 <p>We need to check the following two requirements:</p>
 <p>:1. A simple random sample was drawn from the population :2. $ x$ is normally distributed</p>
 <p>The coins were taken in batches, but we can think of the batches as a random sample of the possible coins that could be chosen.</p>
@@ -736,7 +732,7 @@ $
 Answer the following question:
 </div>
 <div class="Questions">
-<p>:10. ‘’’Find the confidence interval’’’: Use {{Name}} to create a 99% confidence interval for the true mean.</p>
+<p>:10. ’‘’Find the confidence interval’’’: Use {{Name}} to create a 99% confidence interval for the true mean.</p>
 <div style="clear:both">
 
 </div>
@@ -747,12 +743,12 @@ $ (7.519, ~ 7.523) $
 </div>
 <p> </p>
 </div>
-<p>[[<a href="File:Step5.png%7Clink" class="uri">File:Step5.png|link</a>=]]</p>
+<p>[[<a href="File:Step5.png%7Clink=" class="uri">File:Step5.png|link=</a>]]</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
 <div class="Questions">
-<p>:11. ‘’’Present your observations in an English sentence, relating the result to the context of the problem’’’.</p>
+<p>:11. ’‘’Present your observations in an English sentence, relating the result to the context of the problem’’’.</p>
 <div style="clear:both">
 
 </div>
@@ -762,11 +758,12 @@ Answer the following questions:
 <p> </p>
 </div>
 <p>==Summary==</p>
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-<p>{{Summary|11}}</p>
+<p>*In practice we rarely know the true standard deviation <span class="math inline">\(\sigma\)</span> and will therefore be unable to calculate a z-score. ’‘’Student’s t-distribution’’’ gives us a new test statistic, <span class="math inline">\(t\)</span>, that is calculated using the sample standard deviation (<span class="math inline">\(s\)</span>) instead. <span class="math display">\[ \displaystyle{ t = \frac {\bar x - \mu} {s / \sqrt{n}} } \]</span></p>
+<p>*The <span class="math inline">\(t\)</span>-distribution is similar to a normal distribution in that it is bell-shaped and symmetrical, but the exact shape of the <span class="math inline">\(t\)</span>-distribution depends on the ’‘’degrees of freedom (<span class="math inline">\(df\)</span>)’’’. <span class="math display">\[df=n-1\]</span></p>
+<p>*You will use Excel to carry out hypothesis testing and create confidence intervals involving <span class="math inline">\(t\)</span>-distributions. <br></p>
 <p>==Navigation==</p>
 <center>
-{| |- align=“center” | ‘’’Previous Reading’‘’: <br> Lesson 10: <br> [[Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)|Inference for One Mean: Sigma Known (Confidence Interval)]] |                    |’‘’This Reading’‘’: <br> Lesson 11: <br> Inference for One Mean: Sigma Unknown |                    |’‘’Next Reading’’’: <br> Lesson 12: <br> [[Lesson 12: Inference for Two Means: Paired Data|Inference for Two Means: Paired Data]] |}
+{| |- align=“center” | ’‘’Previous Reading’’‘: <br> Lesson 10: <br> [[Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)|Inference for One Mean: Sigma Known (Confidence Interval)]] |                    |’‘’This Reading’’‘: <br> Lesson 11: <br> Inference for One Mean: Sigma Unknown |                    |’‘’Next Reading’’’: <br> Lesson 12: <br> [[Lesson 12: Inference for Two Means: Paired Data|Inference for Two Means: Paired Data]] |}
 </center>
 
 <br />

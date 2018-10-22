@@ -25,6 +25,7 @@ output:
 ## Lesson Outcomes
 
 By the end of this lesson, you should be able to:
+
 -  State the properties of a normal density curve.
 -  Calculate the z-score of an individual observation, given the mean and standard deviation.
 -  Interpret a z-score.
