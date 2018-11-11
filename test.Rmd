@@ -38,3 +38,5 @@ At this point, it may be difficult to understand the meaning and usefulness of t
   +  If the standard deviation is large, then the data are very spread out.
   +  If the standard deviation is zero, then all the values are the identical--there is no spread in the data.
   +  The standard deviation cannot be negative.
+  
+[Sampling Chapter.pdf](Documents/Sampling_Chapter.pdf){target="_blank"}

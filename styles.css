@@ -349,43 +349,43 @@ min-height:26px;
 .Note {
 background-color: #F0F0E7;
 border: 1px solid #cc9933;
-background-image: url(//statistics.byuimath.com/images/b/b3/Bulb.png);
+background-image: url(./Images/Bulb.png);
 padding-left: 30px;
 }
 
 .Warning {
 background-color: #F0E7E7;
 border: 1px solid #cc3333;
-background-image: url(//statistics.byuimath.com/images/c/cb/Warning.png);
+background-image: url(./Images/Warning.png);
 padding-left: 32px;
 }
 
 .Caution {
 background-color: #FFFFE9;
 border: 1px solid #F4C930;
-background-image: url(//statistics.byuimath.com/images/0/04/Caution.png);
+background-image: url(./Images/Caution.png);
 padding-left: 38px;
 }
 
 .Tip {
 background-color: #CCFFCC;
 border: 1px solid #59D156;
-background-image: url(//statistics.byuimath.com/images/2/2a/Check.png);
+background-image: url("./Images/Check.png");
 padding-left: 30px;
 }
 
 /* ********************** End Message Styling ******************* */
 
 .Emphasis {
-        margin-left:auto;
-        margin-right:auto;
+margin-left:auto;
+margin-right:auto;
 margin-top:15px;
 margin-bottom:15px;
-        background-color: #FFFF99;
-        border-top:7px solid #FFCC66;
-        border-radius:8px;
-        width: 95%;
-        box-shadow: 4px 4px 5px #888888;
+background-color: #FFFF99;
+border-top:7px solid #FFCC66;
+border-radius:8px;
+width: 95%;
+box-shadow: 4px 4px 5px #888888;
 }
 
 .QuestionsHeading {

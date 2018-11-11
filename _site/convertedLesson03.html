@@ -1462,11 +1462,11 @@ Answer the following questions:
 <div id="Q8" style="display:none;">
 <center>
 <p><strong>Representative Body Temperature of Northern Elephant Seals before Diving</strong></p>
-<img src="./Images/DiveSeals-Temp-Hist.png"> <br> Representative Temperature (<span class="math inline">\(^\circ \text{C}\)</span>)
+<img src="Images/DiveSeals-Temp-Hist.png"> <br> Representative Temperature (<span class="math inline">\(^\circ \text{C}\)</span>)
 </center>
 </div>
 <ol start="10" style="list-style-type: decimal">
-<li>Using {{Course_Filter|course=A B C|content=Excel}}<!--{{Course_Filter|course=B C|content=SPSS}}-->, find the mean, standard deviation and sample size for the “Representative Temperature” data.</li>
+<li>Using Excel<!--{{Course_Filter|course=B C|content=SPSS}}-->, find the mean, standard deviation and sample size for the “Representative Temperature” data.</li>
 </ol>
 <a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q9" style="display:none;">
@@ -1491,57 +1491,74 @@ Answer the following questions:
 </table>
 <center>
 </div>
-<ul>
-<li><nowiki>*</nowiki>Click the link at right for a review of how to create a histogram.</li>
-</ul>
+<p><nowiki>*</nowiki>Click the link below for a review of how to create a histogram.</p>
 <a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q10" style="display:none;">
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-<p>{{Software_Filter|PageName=Histogram-Condensed}}</p>
+<p>To make a histogram in Excel, you can use the Excel file <a href="./Data/QuantitativeDescriptiveStatistics.xls">Quantitative Descriptive Statistics</a>. Copy and paste the desired data values into the first column (on the left side) of the tool. The histogram will be generated automatically.</p>
+<p><img src="Images/Lesson_2_Activity_2-2.JPG"></p>
 </div>
  
 </div>
-<p>The standard deviation of the representative temperatures is $ s = 1.262, ^ <span class="math inline">\(. When we consider body temperature measurements, this is a fairly small amount. Note that in this case, the standard deviation (\)</span> s = 1.262, ^ <span class="math inline">\() is much smaller than the mean (\)</span> x = 38.212, ^ $).</p>
-<p>{{Tip|<strong>Rounding:</strong> As a general rule, when rounding your results, round to three decimal places unless otherwise specified.}}</p>
 <p><br></p>
+<p>The standard deviation of the representative temperatures is <span class="math inline">\(s = 1.262\, ^\circ \text{C}\)</span>. When we consider body temperature measurements, this is a fairly small amount. Note that in this case, the standard deviation (<span class="math inline">\(s = 1.262\, ^\circ \text{C}\)</span>) is much smaller than the mean (<span class="math inline">\(\bar x = 38.212\, ^\circ \text{C}\)</span>).</p>
+<br>
+<div class="message Tip">
+<strong>Rounding:</strong> As a general rule, when rounding your results, round to three decimal places unless otherwise specified.
+</div>
+<p><br> <br></p>
 <div id="calculating-the-standard-deviation-by-hand" class="section level4">
 <h4>Calculating the Standard Deviation by Hand</h4>
 <p>How is the standard deviation computed? Where does this “magic” number come from? How does one number include the information about the spread of all the points?</p>
-<p><strong>Bird Flu Fever</strong> <img src="./Images/Peuquito.jpg"> Avian Influenza A H5N1, commonly called the bird flu, is a deadly illness that is currently only passed to humans from infected birds. This illness is particularly dangerous because at some point it is likely to mutate to allow human-to-human transmission. Health officials worldwide are preparing for the possibility of a bird flu pandemic.</p>
+<p><strong>Bird Flu Fever</strong></p>
+<p><img src="Images/Peuquito.jpg"></p>
+<p>Avian Influenza A H5N1, commonly called the bird flu, is a deadly illness that is currently only passed to humans from infected birds. This illness is particularly dangerous because at some point it is likely to mutate to allow human-to-human transmission. Health officials worldwide are preparing for the possibility of a bird flu pandemic.</p>
 <p><img src="Images/Step1.png"></p>
 <p>Dr. K. Y. Yuen led a team of researchers who reported the body temperatures of people admitted to Chinese hospitals with confirmed cases of Avian Influenza. Their research team collected data on the body temperature at the time that people with the bird flu were admitted to the hospital. In the article, they reported on two groups of people, those with relatively uncomplicated cases of the bird flu and those with severe cases.</p>
 <p><img src="Images/Step2.png"></p>
 <p>The table below presents the data representative of the body temperatures for the two groups of bird flu patients:</p>
-<center>
-<table>
+<table style="width:67%;">
+<colgroup>
+<col width="45%" />
+<col width="20%" />
+</colgroup>
 <thead>
 <tr class="header">
-<th>
-<p>
-Relatively<br /> Uncomplicated<br /> Cases
-</p>
-</th>
-<th>
-<p>
-Severe Cases |- valign=“top” align=“center”
-</p>
-</th>
-<th>
-<p>
-38.1<br /> 38.3<br /> 38.4<br /> 39.5<br /> 39.7
-</p>
-</th>
-<th>
-<p>
-39.1<br /> 39.5<br /> 38.9<br /> 39.2<br /> 39.9<br /> 39.7<br /> 39.0
-</p>
-</th>
+<th align="center">Relatively Uncomplicated Cases</th>
+<th align="center">Severe Cases</th>
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td align="center">38.1</td>
+<td align="center">39.1</td>
+</tr>
+<tr class="even">
+<td align="center">38.3</td>
+<td align="center">39.5</td>
+</tr>
+<tr class="odd">
+<td align="center">38.4</td>
+<td align="center">38.9</td>
+</tr>
+<tr class="even">
+<td align="center">39.5</td>
+<td align="center">39.2</td>
+</tr>
+<tr class="odd">
+<td align="center">39.7</td>
+<td align="center">39.9</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center">39.7</td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">39</td>
+</tr>
 </tbody>
 </table>
-</center>
 <p><img src="Images/Step3.png"></p>
 <p>We will use these data to investigate some measures of the spread in a data set.</p>
 <div class="QuestionsHeading">
@@ -1549,16 +1566,13 @@ Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="11" style="list-style-type: decimal">
-<li>Draw the number line below and illustrate the relatively uncomplicated cases by marking an “x” for each point. The first point has been plotted for you.</li>
+<li>Draw the number line below and illustrate the relatively uncomplicated cases by marking an “x” for each point. The first point has been plotted for you. <img src="Images/BirdFlu-DotPlotQuestion.png"> <br></li>
 </ol>
-<ul>
-<li><img src="./Images/BirdFlu-DotPlotQuestion.png"> <br></li>
-</ul>
 <a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q11" style="display:none;">
 <ul>
 <li>Here is the completed plot:</li>
-<li><img src="./Images/BirdFlu-DotPlotAnswer.png"></li>
+<li><img src="Images/BirdFlu-DotPlotAnswer.png"></li>
 </ul>
 </div>
 <p><br></p>
@@ -1585,7 +1599,7 @@ Answer the following questions:
 </div>
 <p><br></p>
 <p>Think about the points you marked in question 5 above. On your sketch of the number line, draw a vertical line at 38.8 degrees, the sample mean. Now, draw horizontal lines from the mean to each of your <span class="math inline">\(\times\)</span>’s. These horizontal line segments represent the spread of the data about the mean. Your plot should look something like this:</p>
-<p><img src="./Images/BirdFlu-DotPlotAnswer-Lines.png"></p>
+<p><img src="Images/BirdFlu-DotPlotAnswer-Lines.png"></p>
 <p>The length of each of the line segments represents how far each observation is from the mean. If the data are close together, these lines will be fairly short. If the distribution has a large spread, the line segments will be longer. The standard deviation is a measure of how long these lines are, as a whole. It is a little tedious to compute the standard deviation by hand. However, the process is very instructive. As you work through the following steps, please remember the goal is to find a measure of the spread in a data set. We want one number that describes how spread out the data are.</p>
 <p>The deviation of an observation from the mean is the directed distance from the observation to the mean. In other words, deviations are the lengths of the line segments you drew in the previous set of questions.</p>
 <p><span class="math display">\[
@@ -1603,23 +1617,20 @@ Answer the following questions:
 <tr class="header">
 <th>
 <p>
-Column 1
+Observation (<span class="math inline">\(x\)</span>)
+</p>
+</td>
 </p>
 </th>
 <th>
 <p>
-Column 2
+Deviation from the Mean (<span class="math inline">\(x-\bar x\)</span>)
 </p>
 </th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>
-<p>
-Observation<br /> ($ x <span class="math inline">\()&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;Deviation&lt;br /&gt; from the Mean&lt;br /&gt; (\)</span> x-x $)
-</p>
-</td>
 </tr>
 <tr class="even">
 <td>
@@ -1672,7 +1683,7 @@ Observation<br /> ($ x <span class="math inline">\()&lt;/p&gt;&lt;/td&gt; &lt;td
 <tr class="odd">
 <td>
 <p>
-$ x = 38.8 $
+<span class="math inline">\(\bar x = 38.8\)</span>
 </p>
 </td>
 <td>
@@ -1682,31 +1693,24 @@ $ x = 38.8 $
 </table>
 </center>
 <p><strong>Step 02</strong>: The second column of the table contains the deviations from the mean. Complete column 2 of the table above.</p>
-<a href="javascript:showhide('Q14')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q14')"><span style="font-size:8pt;">Check Results for Step 2</span></a>
 <div id="Q14" style="display:none;">
 <table>
 <thead>
 <tr class="header">
 <th>
 <p>
-Column 1
+Observation (<span class="math inline">\(x\)</span>)
 </p>
 </th>
 <th>
 <p>
-Column 2
+Deviation from the Mean (<span class="math inline">\(x-\bar x\)</span>)
 </p>
 </th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>
-<p>
-Observation<br /> ($ x <span class="math inline">\()&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;Deviation&lt;br /&gt; from the Mean&lt;br /&gt; (\)</span> x-x $)
-</p>
-</td>
-</tr>
 <tr class="even">
 <td>
 <p>
@@ -1739,7 +1743,7 @@ Observation<br /> ($ x <span class="math inline">\()&lt;/p&gt;&lt;/td&gt; &lt;td
 </td>
 <td>
 <p>
-$ 38.4-38.8=-0.4 $
+<span class="math inline">\(38.4-38.8=-0.4\)</span>
 </p>
 </td>
 </tr>
@@ -1751,7 +1755,7 @@ $ 38.4-38.8=-0.4 $
 </td>
 <td>
 <p>
-$ 39.5-38.8=0.7 $
+<span class="math inline">\(39.5-38.8=0.7\)</span>
 </p>
 </td>
 </tr>
@@ -1763,7 +1767,14 @@ $ 39.5-38.8=0.7 $
 </td>
 <td>
 <p>
-$ 39.7-38.8=0.9 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr class=&quot;odd&quot;&gt; &lt;td&gt;&lt;p&gt;\)</span> x = 38.8 $
+<span class="math inline">\(39.7-38.8=0.9\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(\bar x = 38.8\)</span>
 </p>
 </td>
 <td>
@@ -1782,8 +1793,11 @@ Answer the following questions:
 <a href="javascript:showhide('Q15')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q15" style="display:none;">
 <ul>
-<li>You may have suggested that we compute the mean of these values. This seems like a good idea. If we compute the mean, it will tell us the average deviation from the mean. <br><br> Compute the mean of Column 2. What do you get? <a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q16" style="display:none;"></li>
+<li>You may have suggested that we compute the mean of these values. This seems like a good idea. If we compute the mean, it will tell us the average deviation from the mean. <br> <br> Compute the mean of Column 2. What do you get?</li>
+</ul>
+<a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Click Here to Continue</span></a>
+<div id="Q16" style="display:none;">
+<ul>
 <li>You should have found that the mean of the deviations is zero. This is true for <em>every</em> data set. If you add up the deviations from the mean, the positive values will cancel with the negative values. The sum of the deviations from the mean will be zero, so the mean also must equal zero.</li>
 <li>The good news is that you can use this fact to check if you are on the right track. If the deviations from the mean do not add up to zero, then you have made a mistake in the calculations. The bad news is that the deviations always add up to 0, making it look like the distance from the data to the mean is 0. Nonsense!</li>
 <li>The mean of the deviations from the mean cannot be used to find a measure of the spread in a data set, but it does provide a guidepost that shows we are on the right track. We must find another way to estimate the spread of a data set.</li>
@@ -1794,7 +1808,7 @@ Answer the following questions:
 <ol start="15" style="list-style-type: decimal">
 <li>We need a way to work with the negative deviations from the mean, so they do not cancel with the positive ones. What could we do? (Choose one of the four options below.)</li>
 </ol>
-<a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Option #1: Take the absolute value of the deviations</span></a>
 <div id="Q17" style="display:none;">
 <ul>
 <li><p>Option #1:</p></li>
@@ -1803,21 +1817,21 @@ Answer the following questions:
 <li>There is good news and bad news. The good news is, you discovered a way to estimate the spread in a data set. (In fact, the MAD is used as one estimate of the volatility of stocks.) The bad news is that the MAD does not have good theoretical properties. A proof of this claim requires calculus, and so will not be discussed here. For most applications, there is a better choice. Please select another option.</li>
 </ul>
 </div>
-<a href="javascript:showhide('Q18')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q18')"><span style="font-size:8pt;">Option #2: Square the deviations from the mean</span></a>
 <div id="Q18" style="display:none;">
 <ul>
 <li><p>Option #2:</p></li>
 <li>If we square the deviations from the mean, the values that were negative will become positive. This leads to an estimator of the spread that has excellent theoretical properties. This is the best of the four options. You will apply this idea in Step 03.</li>
 </ul>
 </div>
-<a href="javascript:showhide('Q19')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q19')"><span style="font-size:8pt;">Option #3: Delete all the negative deviations</span></a>
 <div id="Q19" style="display:none;">
 <ul>
 <li><p>Option #3:</p></li>
 <li>Sorry, you can’t make your troubles go away by deleting things you don’t like. Please try again.</li>
 </ul>
 </div>
-<a href="javascript:showhide('Q20')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q20')"><span style="font-size:8pt;">Option #4: Do something entirely different</span></a>
 <div id="Q20" style="display:none;">
 <ul>
 <li><p>Option #4:</p></li>
@@ -1825,54 +1839,37 @@ Answer the following questions:
 </ul>
 </div>
 <ul>
-<li>:Please do not go on to Step 03 until you have finished this exploration.
-</div>
-<br></li>
+<li>Please do not go on to Step 03 until you have finished this exploration.</li>
 </ul>
+</div>
+<p><br></p>
 <center>
-“Piled Higher and Deeper” by Jorge Cham <br> <img src="./Images/Phd062307s.png">
+“Piled Higher and Deeper” by Jorge Cham <br> <img src="Images/Phd062307s.png">
 </center>
 <p><strong>Step 03</strong>: Add a third column to your table. To get the values in this column, square the deviations from the mean that you found in Column 2.</p>
-<a href="javascript:showhide('Q21')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q21')"><span style="font-size:8pt;">Click Here for a Blank Table</span></a>
 <div id="Q21" style="display:none;">
 <table>
 <thead>
 <tr class="header">
 <th>
 <p>
-Column 1
+Observation <span class="math inline">\(x\)</span>
 </p>
 </th>
 <th>
 <p>
-Column 2
+Deviation<br /> from the Mean<br /> <span class="math inline">\(x-\bar x\)</span>
 </p>
 </th>
 <th>
 <p>
-Column 3
+Squared Deviation<br /> from the Mean<br /> <span class="math inline">\(\left(x-\bar x\right)^2\)</span>
 </p>
 </th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>
-<p>
-Observation<br /> $ x $
-</p>
-</td>
-<td>
-<p>
-Deviation<br /> from the Mean<br /> $ x-x $
-</p>
-</td>
-<td>
-<p>
-Squared Deviation<br /> from the Mean<br /> $ (x-x)^2 $
-</p>
-</td>
-</tr>
 <tr class="even">
 <td>
 <p>
@@ -1909,7 +1906,7 @@ Squared Deviation<br /> from the Mean<br /> $ (x-x)^2 $
 </td>
 <td>
 <p>
-$ 38.4-38.8=-0.4 $
+<span class="math inline">\(38.4-38.8=-0.4\)</span>
 </p>
 </td>
 <td>
@@ -1923,7 +1920,7 @@ $ 38.4-38.8=-0.4 $
 </td>
 <td>
 <p>
-$ 39.5-38.8=0.7 $
+<span class="math inline">\(39.5-38.8=0.7\)</span>
 </p>
 </td>
 <td>
@@ -1937,12 +1934,21 @@ $ 39.5-38.8=0.7 $
 </td>
 <td>
 <p>
-$ 39.7-38.8=0.9 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr class=&quot;odd&quot;&gt; &lt;td&gt;&lt;p&gt;\)</span> x = 38.8 $
+<span class="math inline">\(39.7-38.8=0.9\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(\bar x = 38.8\)</span>
 </p>
 </td>
 <td>
 <p>
-Sum $ =0 $
+Sum <span class="math inline">\(=0\)</span>
 </p>
 </td>
 <td>
@@ -1951,46 +1957,30 @@ Sum $ =0 $
 </tbody>
 </table>
 </div>
-<a href="javascript:showhide('Q22')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<p></br></p>
+<a href="javascript:showhide('Q22')"><span style="font-size:8pt;">Check Results for Step 03</span></a>
 <div id="Q22" style="display:none;">
 <table>
 <thead>
 <tr class="header">
 <th>
 <p>
-Column 1
+Observation <span class="math inline">\(x\)</span>
 </p>
 </th>
 <th>
 <p>
-Column 2
+Deviation<br /> from the Mean<br /> <span class="math inline">\(x-\bar x\)</span>
 </p>
 </th>
 <th>
 <p>
-Column 3
+Squared Deviation<br /> from the Mean<br /> <span class="math inline">\(\left(x-\bar x\right)^2\)</span>
 </p>
 </th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>
-<p>
-Observation<br /> $ x $
-</p>
-</td>
-<td>
-<p>
-Deviation<br /> from the Mean<br /> $ x-x $
-</p>
-</td>
-<td>
-<p>
-Squared Deviation<br /> from the Mean<br /> $ (x-x)^2 $
-</p>
-</td>
-</tr>
 <tr class="even">
 <td>
 <p>
@@ -2004,7 +1994,7 @@ Squared Deviation<br /> from the Mean<br /> $ (x-x)^2 $
 </td>
 <td>
 <p>
-$ (-0.7)^2=0.49 $
+<span class="math inline">\((-0.7)^2=0.49\)</span>
 </p>
 </td>
 </tr>
@@ -2021,7 +2011,7 @@ $ (-0.7)^2=0.49 $
 </td>
 <td>
 <p>
-$ (-0.5)^2=0.25 $
+<span class="math inline">\((-0.5)^2=0.25\)</span>
 </p>
 </td>
 </tr>
@@ -2033,19 +2023,29 @@ $ (-0.5)^2=0.25 $
 </td>
 <td>
 <p>
-$ 38.4-38.8=-0.4 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> (-0.4)^2=0.16 $
+<span class="math inline">\(38.4-38.8=-0.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.4)^2=0.16\)</span>
 </p>
 </td>
 </tr>
 <tr class="odd">
 <td>
 <p>
-<span class="math inline">\(39.5\)</span>
+<span class="math inline">\(9.5\)</span>
 </p>
 </td>
 <td>
 <p>
-$ 39.5-38.8=0.7 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> (0.7)^2=0.49 $
+<span class="math inline">\(39.5-38.8=0.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((0.7)^2=0.49\)</span>
 </p>
 </td>
 </tr>
@@ -2057,12 +2057,12 @@ $ 39.5-38.8=0.7 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;
 </td>
 <td>
 <p>
-$ 39.7-38.8=0.9 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> (0.9)^2=0.81 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr class=&quot;odd&quot;&gt; &lt;td&gt;&lt;p&gt;\)</span> x = 38.8 $
+$39.7-38.8=0.9 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span>(0.9)^2=0.81<span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr class=&quot;odd&quot;&gt; &lt;td&gt;&lt;p&gt;\)</span>x = 38.8$
 </p>
 </td>
 <td>
 <p>
-Sum $ =0 $
+Sum <span class="math inline">\(=0\)</span>
 </p>
 </td>
 <td>
@@ -2072,46 +2072,29 @@ Sum $ =0 $
 </table>
 </div>
 <p><strong>Step 04</strong>: Now, add up the squared deviations from the mean.</p>
-<a href="javascript:showhide('Q23')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q23')"><span style="font-size:8pt;">Check Results for Step 04</span></a>
 <div id="Q23" style="display:none;">
 <table>
 <thead>
 <tr class="header">
 <th>
 <p>
-Column 1
+Observation <span class="math inline">\(x\)</span>
 </p>
 </th>
 <th>
 <p>
-Column 2
+Deviation<br /> from the Mean<br /> <span class="math inline">\(x-\bar x\)</span>
 </p>
 </th>
 <th>
 <p>
-Column 3
+Squared Deviation<br /> from the Mean<br /> <span class="math inline">\(\left(x-\bar x\right)^2\)</span>
 </p>
 </th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>
-<p>
-Observation<br /> $ x $
-</p>
-</td>
-<td>
-<p>
-Deviation<br /> from the Mean<br /> $ x-x $
-</p>
-</td>
-<td>
-<p>
-Squared Deviation<br /> from the Mean<br /> $ (x-x)^2 $
-</p>
-</td>
-</tr>
 <tr class="even">
 <td>
 <p>
@@ -2125,7 +2108,7 @@ Squared Deviation<br /> from the Mean<br /> $ (x-x)^2 $
 </td>
 <td>
 <p>
-$ (-0.7)^2=0.49 $
+<span class="math inline">\((-0.7)^2=0.49\)</span>
 </p>
 </td>
 </tr>
@@ -2142,7 +2125,7 @@ $ (-0.7)^2=0.49 $
 </td>
 <td>
 <p>
-$ (-0.5)^2=0.25 $
+<span class="math inline">\((-0.5)^2=0.25\)</span>
 </p>
 </td>
 </tr>
@@ -2154,7 +2137,12 @@ $ (-0.5)^2=0.25 $
 </td>
 <td>
 <p>
-$ 38.4-38.8=-0.4 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> (-0.4)^2=0.16 $
+<span class="math inline">\(38.4-38.8=-0.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.4)^2=0.16\)</span>
 </p>
 </td>
 </tr>
@@ -2166,7 +2154,12 @@ $ 38.4-38.8=-0.4 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt
 </td>
 <td>
 <p>
-$ 39.5-38.8=0.7 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> (0.7)^2=0.49 $
+<span class="math inline">\(39.5-38.8=0.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((0.7)^2=0.49\)</span>
 </p>
 </td>
 </tr>
@@ -2178,17 +2171,29 @@ $ 39.5-38.8=0.7 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;
 </td>
 <td>
 <p>
-$ 39.7-38.8=0.9 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> (0.9)^2=0.81 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr class=&quot;odd&quot;&gt; &lt;td&gt;&lt;p&gt;\)</span> x = 38.8 $
+<span class="math inline">\(39.7-38.8=0.9\)</span>
 </p>
 </td>
 <td>
 <p>
-Sum $ =0 $
+<span class="math inline">\((0.9)^2=0.81\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(\bar x = 38.8\)</span>
 </p>
 </td>
 <td>
 <p>
-Sum $ =2.20 $
+Sum <span class="math inline">\(=0\)</span>
+</p>
+</td>
+<td>
+<p>
+Sum <span class="math inline">\(=2.20\)</span>
 </p>
 </td>
 </tr>
@@ -2196,6 +2201,7 @@ Sum $ =2.20 $
 </table>
 <p>The sum of the squared deviations is 2.20.</p>
 </div>
+<p><br></p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
@@ -2211,59 +2217,45 @@ Answer the following questions:
 <li>Remember, we are trying to find a measure of the spread of a data set. Our final measure should not be dependent on the sample size. We need to do something else.</li>
 </ul>
 </div>
+<p><br></p>
 <ol start="17" style="list-style-type: decimal">
 <li>What could we do to make sure the sample size does not inflate our estimate of the spread of the data?</li>
 </ol>
-<a href="javascript:showhide('Q25')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q25')"><span style="font-size:8pt;">Option #1: Divide by n</span></a>
 <div id="Q25" style="display:none;">
 <ul>
 <li><p>Option #1:</p></li>
 <li>This is an excellent suggestion. There are good reasons to choose this option. Unfortunately, dividing by <span class="math inline">\(n\)</span> to estimate the spread of data gives estimates that are too low, on average. There is a surprising, yet simple fix: divide by <span class="math inline">\(n-1\)</span> instead of <span class="math inline">\(n\)</span>. Please examine Option #2.</li>
 </ul>
 </div>
-<a href="javascript:showhide('Q26')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<p><br></p>
+<a href="javascript:showhide('Q26')"><span style="font-size:8pt;">Option #2: Divide by n-1</span></a>
 <div id="Q26" style="display:none;">
 <ul>
 <li><p>Option #2:</p></li>
-<li>This seems very odd, but it avoids the problem of underestimating the spread in the data, a problem that dividing by <span class="math inline">\(n\)</span> has. Ultimately, dividing by <span class="math inline">\(n-1\)</span> will lead us to the standard deviation you computed using {{Course_Filter|course=A|content=Excel}}<!--{{Course_Filter|course=B C|content=SPSS}}--> earlier. In Step 05, you will divide the sum of the squared deviations by <span class="math inline">\(n-1\)</span>. Here is how your table should look so far.
+<li><p>This seems very odd, but it avoids the problem of underestimating the spread in the data, a problem that dividing by <span class="math inline">\(n\)</span> has. Ultimately, dividing by <span class="math inline">\(n-1\)</span> will lead us to the standard deviation you computed using <!--{{Course_Filter|course=B C|content=SPSS}}--> earlier. In Step 05, you will divide the sum of the squared deviations by <span class="math inline">\(n-1\)</span>. Here is how your table should look so far.</p></li>
+</ul>
 <table>
 <thead>
 <tr class="header">
 <th>
 <p>
-Column 1
+Observation <span class="math inline">\(x\)</span>
 </p>
 </th>
 <th>
 <p>
-Column 2
+Deviation<br /> from the Mean<br /> <span class="math inline">\(x-\bar x\)</span>
 </p>
 </th>
 <th>
 <p>
-Column 3
+Squared Deviation<br /> from the Mean<br /> <span class="math inline">\(\left(x-\bar x\right)^2\)</span>
 </p>
 </th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>
-<p>
-Observation<br /> $ x $
-</p>
-</td>
-<td>
-<p>
-Deviation<br /> from the Mean<br /> $ x-x $
-</p>
-</td>
-<td>
-<p>
-Squared Deviation<br /> from the Mean<br /> $ (x-x)^2 $
-</p>
-</td>
-</tr>
 <tr class="even">
 <td>
 <p>
@@ -2277,7 +2269,7 @@ Squared Deviation<br /> from the Mean<br /> $ (x-x)^2 $
 </td>
 <td>
 <p>
-$ (-0.7)^2=0.49 $
+<span class="math inline">\((-0.7)^2=0.49\)</span>
 </p>
 </td>
 </tr>
@@ -2294,7 +2286,7 @@ $ (-0.7)^2=0.49 $
 </td>
 <td>
 <p>
-$ (-0.5)^2=0.25 $
+<span class="math inline">\((-0.5)^2=0.25\)</span>
 </p>
 </td>
 </tr>
@@ -2306,7 +2298,12 @@ $ (-0.5)^2=0.25 $
 </td>
 <td>
 <p>
-$ 38.4-38.8=-0.4 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> (-0.4)^2=0.16 $
+<span class="math inline">\(38.4-38.8=-0.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.4)^2=0.16\)</span>
 </p>
 </td>
 </tr>
@@ -2318,7 +2315,12 @@ $ 38.4-38.8=-0.4 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt
 </td>
 <td>
 <p>
-$ 39.5-38.8=0.7 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> (0.7)^2=0.49 $
+<span class="math inline">\(39.5-38.8=0.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((0.7)^2=0.49\)</span>
 </p>
 </td>
 </tr>
@@ -2330,28 +2332,48 @@ $ 39.5-38.8=0.7 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;
 </td>
 <td>
 <p>
-$ 39.7-38.8=0.9 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> (0.9)^2=0.81 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr class=&quot;odd&quot;&gt; &lt;td&gt;&lt;p&gt;\)</span> x = 38.8 $
+<span class="math inline">\(39.7-38.8=0.9\)</span>
 </p>
 </td>
 <td>
 <p>
-Sum $ =0 $
+<span class="math inline">\((0.9)^2=0.81\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(\bar x = 38.8\)</span>
 </p>
 </td>
 <td>
 <p>
-Sum $ =2.20 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr class=&quot;even&quot;&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span>$
+Sum $=0 $
+</p>
+</td>
+<td>
+<p>
+Sum <span class="math inline">\(=2.20\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+</td>
+<td>
+<p>
+<span class="math inline">\(\displaystyle{s^2=\frac{sum}{n-1}=\frac{2.20}{5-1}=0.55}\)</span>
 </p>
 </td>
 <td>
 </td>
 </tr>
 </tbody>
-</table></li>
-</ul>
+</table>
 </div>
 <p><br></p>
-<a href="javascript:showhide('Q27')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q27')"><span style="font-size:8pt;">Option #3: Neither of these</span></a>
 <div id="Q27" style="display:none;">
 <ul>
 <li><p>Option #3:</p></li>
@@ -2366,7 +2388,7 @@ Sum $ =2.20 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr
 <p><strong>Step 05</strong>: Divide the sum of the squared deviations by <span class="math inline">\(n - 1\)</span>. Write this value at the bottom of Column 3 of your table.</p>
 <p>The number you computed in Step 05 is called the <span id="Sample Variance"><strong>sample variance</strong></span>. It is a measure of the spread in a data set. It has very nice theoretical properties. The variance plays an important role in Statistics. We denote the sample variance by the symbol <span class="math inline">\(s^2\)</span>.</p>
 <p>It can be shown that the sample variance is an unbiased estimator of the true population variance (which is denoted <span class="math inline">\(\sigma^2\)</span>.) This means that the sample variance can be considered a reasonable estimator of the population variance. If the sample size is large, this estimator tends to be very good.</p>
-<a href="javascript:showhide('Q28')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q28')"><span style="font-size:8pt;">Check the Results for Step 05</span></a>
 <div id="Q28" style="display:none;">
 <p>The sum of the squared deviations is the sum of the values in Column 3. This sum equals 2.20. We divide the sum of Column 3 (<span class="math inline">\(2.20\)</span>) by <span class="math inline">\(n-1=5-1=4\)</span> to get the sample variance, <span class="math inline">\(s^2\)</span>:</p>
 <p><span class="math display">\[s^2=\frac{sum}{n-1}=\frac{2.20}{5-1}=0.55\]</span></p>
@@ -2376,39 +2398,22 @@ Sum $ =2.20 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr
 <tr class="header">
 <th>
 <p>
-Column 1
+Observation <span class="math inline">\(x\)</span>
 </p>
 </th>
 <th>
 <p>
-Column 2
+Deviation<br /> from the Mean<br /> <span class="math inline">\(x-\bar x\)</span>
 </p>
 </th>
 <th>
 <p>
-Column 3
+Squared Deviation<br /> from the Mean<br /> <span class="math inline">\(\left(x-\bar x\right)^2\)</span>
 </p>
 </th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>
-<p>
-Observation<br /> $ x $
-</p>
-</td>
-<td>
-<p>
-Deviation<br /> from the Mean<br /> $ x-x $
-</p>
-</td>
-<td>
-<p>
-Squared Deviation<br /> from the Mean<br /> $ (x-x)^2 $
-</p>
-</td>
-</tr>
 <tr class="even">
 <td>
 <p>
@@ -2422,7 +2427,7 @@ Squared Deviation<br /> from the Mean<br /> $ (x-x)^2 $
 </td>
 <td>
 <p>
-$ (-0.7)^2=0.49 $
+<span class="math inline">\((-0.7)^2=0.49\)</span>
 </p>
 </td>
 </tr>
@@ -2439,7 +2444,7 @@ $ (-0.7)^2=0.49 $
 </td>
 <td>
 <p>
-$ (-0.5)^2=0.25 $
+<span class="math inline">\((-0.5)^2=0.25\)</span>
 </p>
 </td>
 </tr>
@@ -2451,7 +2456,12 @@ $ (-0.5)^2=0.25 $
 </td>
 <td>
 <p>
-$ 38.4-38.8=-0.4 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> (-0.4)^2=0.16 $
+<span class="math inline">\(38.4-38.8=-0.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.4)^2=0.16\)</span>
 </p>
 </td>
 </tr>
@@ -2463,7 +2473,12 @@ $ 38.4-38.8=-0.4 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt
 </td>
 <td>
 <p>
-$ 39.5-38.8=0.7 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> (0.7)^2=0.49 $
+<span class="math inline">\(39.5-38.8=0.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((0.7)^2=0.49\)</span>
 </p>
 </td>
 </tr>
@@ -2475,17 +2490,41 @@ $ 39.5-38.8=0.7 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;
 </td>
 <td>
 <p>
-$ 39.7-38.8=0.9 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> (0.9)^2=0.81 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr class=&quot;odd&quot;&gt; &lt;td&gt;&lt;p&gt;\)</span> x = 38.8 $
+<span class="math inline">\(39.7-38.8=0.9\)</span>
 </p>
 </td>
 <td>
 <p>
-Sum $ =0 $
+<span class="math inline">\((0.9)^2=0.81\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(\bar x = 38.8\)</span>
 </p>
 </td>
 <td>
 <p>
-Sum $ =2.20 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr class=&quot;even&quot;&gt; &lt;td&gt;&lt;p&gt;Variance:&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span>$
+Sum <span class="math inline">\(=0\)</span>
+</p>
+</td>
+<td>
+<p>
+Sum <span class="math inline">\(=2.20\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+Variance:
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(\displaystyle{s^2=\frac{sum}{n-1}=\frac{2.20}{5-1}=0.55}\)</span>
 </p>
 </td>
 <td>
@@ -2494,6 +2533,7 @@ Sum $ =2.20 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr
 </tbody>
 </table>
 </div>
+<p><br></p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
@@ -2548,7 +2588,159 @@ Answer the following questions:
 <ul>
 <li>This is the sample variance.</li>
 </ul>
-<p>{| class=“basic” ! Column 1 ! Column 2 ! Column 3 |- ! Observation <br> $ x $ ! Deviation <br> from the Mean <br> $ x-x $ ! Squared Deviation <br> from the Mean <br> $ (x-x)^2 $ |- align=“center” | <span class="math inline">\(38.1\)</span> | <span class="math inline">\(38.1-38.8=-0.7\)</span> | $ (-0.7)^2=0.49 $ |- align=“center” | <span class="math inline">\(38.3\)</span> | <span class="math inline">\(38.3-38.8=-0.5\)</span> | $ (-0.5)^2=0.25 $ |- align=“center” | <span class="math inline">\(38.4\)</span> | $ 38.4-38.8=-0.4 $ | $ (-0.4)^2=0.16 $ |- align=“center” | <span class="math inline">\(39.5\)</span> | $ 39.5-38.8=0.7 $ | $ (0.7)^2=0.49 $ |- align=“center” | <span class="math inline">\(39.7\)</span> | $ 39.7-38.8=0.9 $ | $ (0.9)^2=0.81 $ |- ! $ x = 38.8 $ ! Sum $ =0 $ ! Sum $ =2.20 $ |- ! colspan=“2” | Variance: ! <span class="math inline">\(\displaystyle{s^2=\frac{sum}{n-1}=\frac{2.20}{5-1}=0.55}\)</span> |- ! colspan=“2” | Standard Deviation: ! <span class="math inline">\(\displaystyle{s = \sqrt{s^2}=\sqrt{0.55} \approx 0.742}\)</span> |}</p>
+<table>
+<thead>
+<tr class="header">
+<th>
+<p>
+Observation <span class="math inline">\(x\)</span>
+</p>
+</th>
+<th>
+<p>
+Deviation<br /> from the Mean<br /> <span class="math inline">\(x-\bar x\)</span>
+</p>
+</th>
+<th>
+<p>
+Squared Deviation<br /> from the Mean<br /> <span class="math inline">\(\left(x-\bar x\right)^2\)</span>
+</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.1\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.1-38.8=-0.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.7)^2=0.49\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(38.3\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.3-38.8=-0.5\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.5)^2=0.25\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.4-38.8=-0.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.4)^2=0.16\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(39.5\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(39.5-38.8=0.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((0.7)^2=0.49\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(39.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(39.7-38.8=0.9\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((0.9)^2=0.81\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(\bar x = 38.8\)</span>
+</p>
+</td>
+<td>
+<p>
+Sum <span class="math inline">\(=0\)</span>
+</p>
+</td>
+<td>
+<p>
+Sum <span class="math inline">\(=2.20\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+Variance:
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(\displaystyle{s^2=\frac{sum}{n-1}=\frac{2.20}{5-1}=0.55}\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+Standard Deviation:
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(\displaystyle{s = \sqrt{s^2}=\sqrt{0.55} \approx 0.742}\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><p>The sample standard deviation is <span class="math inline">\(s = 0.742\)</span> degrees Centigrade.</p></li>
 <li>Take a few minutes to verify that you can recreate this table on your own.</li>
@@ -2556,6 +2748,7 @@ Answer the following questions:
 </div>
 <p> </p>
 </div>
+<p><br></p>
 </div>
 <div id="summary" class="section level4">
 <h4>Summary</h4>
@@ -2580,11 +2773,42 @@ Answer the following questions:
 <p><strong>Review of Parameters and Statistics</strong></p>
 <p>We have now learned some statistics that can be used to estimate population parameters. For example, we use $ x $ to estimate the population mean $ $. The sample statistics <span class="math inline">\(s\)</span> estimates the true population standard deviation <span class="math inline">\(\sigma\)</span>. The following table summarizes what we have done so far:</p>
 <center>
-{| class=“basic” ! ! Sample Statistic ! Population Parameter |- | Mean | align=“center” | $ x $ | align=“center” | $ $ |- | Standard Deviation | align=“center” | $ s $ | align=“center” | $ $ |- | Variance | align=“center” | $ s^2 $ | align=“center” | $ ^2 $ |- | align=“center” | $ $ | align=“center” | $ $ | align=“center” | $ $ |}
+<table>
+<thead>
+<tr class="header">
+<th>
+</th>
+<th>
+<p>
+Sample Statistic
+</p>
+</th>
+<th>
+<p>
+Population Parameter
+</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>
+<p>
+Mean
+</p>
+</td>
+<td>
+<p>
+$ x <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr class=&quot;even&quot;&gt; &lt;td&gt;&lt;p&gt;Standard Deviation&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> s <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr class=&quot;odd&quot;&gt; &lt;td&gt;&lt;p&gt;Variance&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> s^2 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> ^2 <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr class=&quot;even&quot;&gt; &lt;td&gt;&lt;p&gt;\)</span> <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> <span class="math inline">\(&lt;/p&gt;&lt;/td&gt; &lt;td&gt;&lt;p&gt;\)</span> $
+</p>
+</td>
+</tr>
+</tbody>
+</table>
 </center>
 <p>Unless otherwise specified, we will always use {{Course_Filter|course=A|content=Excel}}<!--{{Course_Filter|course=B C|content=SPSS}}--> to find the sample variance and sample mean. In each case, the sample statistic estimates the population parameter. The ellipses <span class="math inline">\(\vdots\)</span> in this table hint that we will add rows in the future.</p>
 <p><strong>Optional Reading: Formulas for <span class="math inline">\(s\)</span> and <span class="math inline">\(s^2\)</span> (Hidden)</strong></p>
-<a href="javascript:showhide('Q32')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q32')"><span style="font-size:8pt;">Click Here if you love Math</span></a>
 <div id="Q32" style="display:none;">
 <p><strong>Formulas</strong></p>
 <p>For those who like formulas, the equation for the sample variance and sample standard deviation are given here.</p>
@@ -2721,6 +2945,7 @@ Answer the following question:
 </div>
 <p> </p>
 </div>
+<p><br></p>
 <p>The home values are representative of data. If we have a list of data, sorted in increasing order, and we want to divide it into 100 equal groups, we only need 99 dividers (like fences) to divide up the data. The first divider is as large or larger than 1% of the data. The second divider is as large or larger than 2% of the data, and so on. The last divider, the 99<sup>th</sup>, is the value that is as large or larger than 99% of the data. These “dividers” are called percentiles. A <strong>percentile</strong> is a number such that a specified percentage of the data are at or below this number. For example, the 99<sup>th</sup> percentile is a number such that 99% of the data are at or below this value. As another example, half (50%) of the data lie at or below the 50<sup>th</sup> percentile. The word “percent” means “<span class="math inline">\(\div 100\)</span>.” This can help you remember that the percentiles divide the data into 100 equal groups.</p>
 <p><strong>Quartiles</strong> are special percentiles. The word “quartile” is from the Latin <em>quartus</em>, which means “fourth.” The quartiles divide the data into four equal groups. The quartiles correspond to specific percentiles. The first quartile, Q<sub>1</sub>, is the 25<sup>th</sup> percentile. The second quartile, Q<sub>2</sub>, is the same as the 50<sup>th</sup> percentile or the median. The third quartile, Q<sub>3</sub>, is equivalent to the 75<sup>th</sup> percentile.</p>
 <div class="QuestionsHeading">
@@ -2739,7 +2964,15 @@ Answer the following questions:
 <p> </p>
 </div>
 <p><br></p>
-<p>{{Software_Filter|PageName=Percentiles/Quartiles}}</p>
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p><strong>To calculate percentiles and quartiles in Excel, do the following</strong></p>
+<p><em>Open the data file you are using. For this example, open the file <a href="./Data/WrongSiteWrongPatient.xlsx">WrongSiteWrongPatient.xlsx</a> </em>Copy and paste the desired data into Column A of the spreadsheet <a href="./Data/QuantitativeDescriptiveStatistics.xlsx">Dquantitative Descriptive Statistics</a>. *The percentiles and quartiles are listed below the Numerical Descriptive Statistics. Scroll to find the percentile you need.</p>
+<p>You may notice that some of the values for percentiles given in Excel are different from those given in SPSS. This is due to the different ways in which Excel and SPSS calculate percentiles. Since you are using Excel, be sure to use the percentiles calculated in Excel.</p>
+</div>
+<p><br></p>
 <p>The first quartile (<span class="math inline">\(Q_1\)</span>) or 25<sup>th</sup> percentile (calculated in Excel) of the wrong site data is: ?29,496. (This result is illustrated in the figure below.) This means that 25 percent of the time hospitals lost a wrong-site lawsuit, they had to pay ?29,496 or less. The 25<sup>th</sup> percentile can be written symbolically as: P<sub>25</sub> = ?29,496. Other percentiles can be written the same way. The 99<sup>th</sup> percentile can be written as P<sub>99</sub>.</p>
 <center>
 <table>

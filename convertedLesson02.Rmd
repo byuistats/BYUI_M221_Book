@@ -296,7 +296,7 @@ The subjects were randomly assigned to one of two groups. The first group was gi
 
 The second group was given a **placebo**. <nowiki>*Placebo*</nowiki> is another name for a control. In this study, the placebo was an injection that looked just like the vaccine, but contained a harmless saline solution. The **placebo group** or *control group* is made up of the subjects assigned to receive the placebo.
 
-This study was **double blind**. Neither the children's parents nor their doctors knew whether a particular child received the treatment or the control. Both parties were ``blinded* to this information.
+This study was **double blind**. Neither the children's parents nor their doctors knew whether a particular child received the treatment or the control. Both parties were *blinded* to this information.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
@@ -613,7 +613,7 @@ Offit, P. A. (2005). Why are pharmaceutical companies gradually abandoning vacci
 
 ## Additional Reading
 
-[Sampling Chapter.pdf](http://statistics.byuimath.com/images/9/99/Sampling_Chapter.pdf){target="_blank"}
+[Sampling Chapter.pdf](Documents/Sampling_Chapter.pdf){target="_blank"}
 
 
 
