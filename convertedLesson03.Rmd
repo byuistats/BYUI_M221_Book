@@ -163,16 +163,11 @@ To help us visualize these data, we will create a graph called a histogram. To m
 
 For each of these intervals, we draw a bar on the histogram. The width of the bars is determined by the width of the interval (5000 in this example). The height of the bars is equal to the number of observations that fall in each interval.
 
-<div class="stats A">
 <center>
-{| style="width:50%"
-|- align="center" 
-! This is a histogram created in Excel: 
-|- align="center" 
-| <img src="./Images/Lesson_2_Activity_2-1.JPG">
-|} 
+**This is a histogram created in Excel:**
+<br>
+<img src="./Images/Lesson_2_Activity_2-1.JPG">
 </center>
-</div>
 <!--
 <div class="stats B C">
 <center>
@@ -189,14 +184,26 @@ For each of these intervals, we draw a bar on the histogram. The width of the ba
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" 
 {{Software_Filter | PageName=Histogram }}
 -->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+**Instructions for Creating a Histogram in Excel:**
+
+To make a histogram in Excel, you can use the Excel file [Quantitative Descriptive Statistics](./Data/QuantitativeDescriptiveStatistics.xlsx). First, enter the 10 data values in the first column (on the left side) of the tool, the histogram will be generated automatically. You can practice creating a histogram in Excel using the data provided on the 10 patients.
+
+Using 8 intervals, the tuberculosis cost data can be represented by the following histogram.
+
 <img src="./Images/Lesson_2_Activity_2-1.JPG">
 
-<br>
-After summarizing the data numerically and graphically, we are ready to make inferences about the population.
+This histogram differs slightly from the first example. The width of the intervals is smaller and the starting value for the first interval is different. However, both graphs illustrate the same data.
 
+</div>
+<br>
+
+After summarizing the data numerically and graphically, we are ready to make inferences about the population.
+<br>
 
 <img src="./Images/Step4.png">
-<br>
 **Step 4: Make inferences.** 
 
 The historical total mean cost to society to treat a case of tuberculosis in India is known to be $13,800. To assess if the cost has increased, the null and alternative hypotheses are:
@@ -220,7 +227,7 @@ It can be shown that the $P$-value is 0.460. (Later in the course, you will have
 
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
-* Fail to reject the null hypothesis.  Since the $P$-value is large, there is not a lot of evidence against the null hypothesis.  When the $P$-value is large, we fail to reject the null hypothesis.  There is not enough evidence to suggest that the mean cost is now greater than ?13,800.
+* Fail to reject the null hypothesis.  Since the $P$-value is large, there is not a lot of evidence against the null hypothesis.  When the $P$-value is large, we fail to reject the null hypothesis.  There is not enough evidence to suggest that the mean cost is now greater than $13,800.
 </div>
 &nbsp;
 </div>
@@ -238,7 +245,7 @@ After making inferences, you take action. The motivation for conducting a study 
 
 <a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
-* Answers may vary.  -- We fail to reject the null hypothesis.  That means that we could not say that the true mean cost is not equal to ?13,800.  So, there is not enough evidence of inflation.  There is no need to for the Government of India to take action.
+* Answers may vary.  -- We fail to reject the null hypothesis.  That means that we could not say that the true mean cost is not equal to $13,800.  So, there is not enough evidence of inflation.  There is no need to for the Government of India to take action.
 </div>
 &nbsp;
 </div>
@@ -260,6 +267,8 @@ Some distributions have no distinct peak, others have more than one peak. When t
 
 <img src="./Images/Modal_distributions.jpg">
 <br>
+<br>
+
 ## Center of a Distribution
 
 
@@ -272,6 +281,7 @@ Sometimes people talk about the "typical" BYU-Idaho student or the “average”
 When we talk about the "typical" or "average" value, we are essentially describing the center of a population. If we want to estimate the "average" costs to treat a tuberculosis patient, there are several ways we can do it.
 
 <br>
+
 ### Measuring the Center of a Distribution
 
 #### Mean
@@ -372,12 +382,25 @@ d. Only A and B can occur.
 
 e. A, B, and C can all occur.
 </div>
+<br>
 
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+&nbsp;&nbsp;**To calculate the mean, median, and mode in Excel, do the following**
 
+&nbsp;&nbsp;If you do not know how to use Excel to find the mean and median, the spreadsheet {{Spreadsheet|QDS}} has been created to make these calculations for you.
+
+- Download and open the Excel spreadsheet. 
+- Copy and paste your data into the blue column found on the left side of the page. 
+- The mean, median, mode, and other statistics will be located in the "Numerical Descriptive Statistics" table found in the center of the worksheet. A histogram will be shown above this table.
+
+<center><img src="./Images/DiveSeals-Mass-Stats.png"></center>
+<br>
+</div>
+<br>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <!-- {{Software_Filter|PageName=Mean_Median_Mode}} -->
-{{Software|Type=Excel|PageName=Mean_Median_Mode}}
-<br>
+
 
 ### Parameters and Statistics
 
@@ -405,6 +428,8 @@ The mean cost to treat the ten tuberculosis patients in the sample was $\bar x$ 
 $$\bar x=\frac{14100 + 14100 + 14100 + 14100 + 14100 + 14100 + 14100 + 14100 + 14100 + 14100}{10} =14,100$$
 
 Even though measures of center are important, we need to consider the shape, center and spread of a distribution of data.  When evaluating data, it is sometimes tempting to compute a mean but to avoid creating a histogram.  This can lead to errant decisions based on a misunderstanding or incorrect transcription of data.  If there is a transcription error in the data, it is sometimes easiest to detect it as an outlier in a histogram.
+
+<br>
 <br>
 
 ## Spread of a Distribution
@@ -585,13 +610,14 @@ Use the data in the column labeled "Mass (kg)" to create a histogram and calcula
 <div class="stats A">
 **Your histogram should look like this (a title and axis label have been added here)**:
 
-<center>Mass (kg) of the Diving Elephant Seals in Excel:</center>
+<center>Mass (kg) of the Diving Elephant Seals in Excel:
 
 <img src="./Images/DiveSeals-Mass-Hist.png">
+</center>
 
 **The descriptive statistics are summarized as follows**:
 
-<img src="./Images/DiveSeals-Mass-Stats.png">
+<center><img src="./Images/DiveSeals-Mass-Stats.png"></center>
 </div>
 
 <!--
@@ -610,7 +636,7 @@ Use the data in the column labeled "Mass (kg)" to create a histogram and calcula
 
 Some of these statistics, such as the mean and median, should be familiar to you by now. In this section, you will learn about the standard deviation and the variance.  Later in this reading assignment we will discuss the minimum, $Q_1$, median, $Q_3$, and the maximum.
 
-The mean mass of the 13 seals is $ \bar x = 195.2$ kg.  (Note that this value was rounded with one more decimal place of accuracy compared to the raw data.) The mean is a measure of the *center* of the distribution.  
+The mean mass of the 13 seals is $\bar x = 195.2$ kg.  (Note that this value was rounded with one more decimal place of accuracy compared to the raw data). The mean is a measure of the *center* of the distribution.  
 
 There is a fairly large difference in the masses of the different seals.  The smallest seal has a mass of 148 kg.  The largest has a mass of 288 kg.  
 
@@ -622,7 +648,7 @@ We are working with a sample.  To be explicit, we call 45.8 kg the *sample stand
 
 At this point, you probably do not have much intuition regarding the standard deviation. We will use this statistic frequently. By the end of the semester, you can expect to become very comfortable with this idea. For now, all you need to know is that if two variables are measured on the same scale, the variable with values that are further apart will have the larger standard deviation.
 
-**Man Vs. Seal**
+**Man vs. Seal**
 
 <!-- http://lib.stat.cmu.edu/datasets/bodyfat -->
 Roger Johnson compiled a collection of measurements on 252 men. The mean mass of the men was $\bar x = 81.2$ kg.  The standard deviation of the weights was $s = 13.3$ kg.  
@@ -684,7 +710,7 @@ The variable "Length of Deployment (Days at Sea)" indicates the the number of da
 </div>
 <div class="stats B C">
 <center>**Length of Time Data were Collected on each Seal**</center>
-<img src="./Images/SPSS Histogram Diving Seals length of deployment.jpg">
+<img src="./Images/SPSS_Histogram_Diving_Seals_length_of_deployment.jpg">
 </div>
 </div>
 <br>
@@ -699,7 +725,7 @@ The variable "Length of Deployment (Days at Sea)" indicates the the number of da
 
 <a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q7" style="display:none;">
-* The sample standard deviation of the length of deployment is $s = 6.22 $ days.
+* The sample standard deviation of the length of deployment is $s = 6.22$ days.
 * Note that this number was rounded to one more decimal place than is given in the original data.
 </div>
 &nbsp;
@@ -733,7 +759,7 @@ Consider the last column in the table of data.  The "representative temperature"
 <img src="./Images/DiveSeals-Temp-Hist.png"> <br> Representative Temperature ($^\circ \text{C}$)
 </center>
 </div>
-
+<br>
 
 10. Using Excel<!--{{Course_Filter|course=B C|content=SPSS}}-->, find the mean, standard deviation and sample size for the "Representative Temperature" data. 
 
@@ -747,16 +773,18 @@ Consider the last column in the table of data.  The "representative temperature"
 | Sample Size: $n = 13$ |
 <center>
 </div>
-
+<br>
 
 <nowiki>*</nowiki>Click the link below for a review of how to create a histogram.
 
-<a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Refresh My Memory</span></a>
 <div id="Q10" style="display:none;">
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-To make a histogram in Excel, you can use the Excel file [Quantitative Descriptive Statistics](./Data/QuantitativeDescriptiveStatistics.xls). Copy and paste the desired data values into the first column (on the left side) of the tool. The histogram will be generated automatically.
+To make a histogram in Excel, you can use the Excel file 
+[Quantitative Descriptive Statistics](./Data/QuantitativeDescriptiveStatistics.xlsx). 
+Copy and paste the desired data values into the first column (on the left side) of the tool. The histogram will be generated automatically.
 
-<img src="./Images/Lesson_2_Activity_2-2.JPG">
+<center><img src="./Images/Lesson_2_Activity_2-2.JPG"></center>
 </div>
 &nbsp;
 </div>
@@ -942,7 +970,7 @@ The standard deviation is a complicated sort of average of the deviations. Makin
 </tbody>
 </table>
 </div>
-
+<br>
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
@@ -979,6 +1007,7 @@ Compute the mean of Column 2. What do you get?
 
 * There is good news and bad news.  The good news is, you discovered a way to estimate the spread in a data set. (In fact, the MAD is used as one estimate of the volatility of stocks.) The bad news is that the MAD does not have good theoretical properties. A proof of this claim requires calculus, and so will not be discussed here.  For most applications, there is a better choice.  Please select another option.
 </div>
+<br>
 
 <a href="javascript:showhide('Q18')"><span style="font-size:8pt;">Option #2: Square the deviations from the mean</span></a>
 <div id="Q18" style="display:none;">
@@ -986,6 +1015,7 @@ Compute the mean of Column 2. What do you get?
 
 * If we square the deviations from the mean, the values that were negative will become positive.  This leads to an estimator of the spread that has excellent theoretical properties.  This is the best of the four options.  You will apply this idea in Step 03.
 </div>
+<br>
 
 <a href="javascript:showhide('Q19')"><span style="font-size:8pt;">Option #3: Delete all the negative deviations</span></a>
 <div id="Q19" style="display:none;">
@@ -993,6 +1023,7 @@ Compute the mean of Column 2. What do you get?
 
 * Sorry, you can't make your troubles go away by deleting things you don't like.  Please try again.
 </div>
+<br>
 
 <a href="javascript:showhide('Q20')"><span style="font-size:8pt;">Option #4: Do something entirely different</span></a>
 <div id="Q20" style="display:none;">
@@ -1000,6 +1031,8 @@ Compute the mean of Column 2. What do you get?
 
 * You probably have an ingenious idea.  Surprisingly enough, there *is* a right answer to the question.  Please choose a different option.
 </div>
+<br>
+<br>
 
 * Please do not go on to Step 03 until you have finished this exploration.
 </div>
@@ -1102,7 +1135,7 @@ $\left(x-\bar x\right)^2$</p></th>
 </tr>
 <tr class="even">
 <td><p>$39.7$</p></td>
-<td><p>$39.7-38.8=0.9 $</p></td> 
+<td><p>$39.7-38.8=0.9$</p></td> 
 <td><p>$(0.9)^2=0.81$</p></td> 
 </tr>
 <tr class="odd">
@@ -1113,7 +1146,7 @@ $\left(x-\bar x\right)^2$</p></th>
 </tbody>
 </table>
 </div>
-
+<br>
 
 **Step 04**:  Now, add up the squared deviations from the mean.
 
@@ -1237,7 +1270,7 @@ $\left(x-\bar x\right)^2$</p></th>
 </tr>
 <tr class="odd">
 <td><p>$\bar x = 38.8$</p></td>
-<td><p>Sum $=0 $</p></td>
+<td><p>Sum $=0$</p></td>
 <td><p>Sum $=2.20$</p></td>
 </tr>
 <tr class="even">
@@ -1256,6 +1289,7 @@ $\left(x-\bar x\right)^2$</p></th>
 
 * You probably have an ingenious idea.  Nevertheless, please choose a different option.
 </div>
+<br>
 
 * Please do not go on until you have finished this exercise.
 </div>
@@ -1446,16 +1480,17 @@ $\left(x-\bar x\right)^2$</p></th>
 #### Summary
 
 <div class="Emphasis">
-**Standard Deviation**
+&nbsp;&nbsp;**Standard Deviation**
 
-The **standard deviation** is one number that describes the spread in a set of data.  If the data points are close together, the standard deviation will be smaller than if they are spread out.
+&nbsp;&nbsp;The **standard deviation** is one number that describes the spread in a set of data.  If the data points are close together, the standard deviation will be smaller than if they are spread out.
 
-At this point, it may be difficult to understand the meaning and usefulness of the standard deviation.  For now, it is enough for you to recognize the following points:
+&nbsp;&nbsp;At this point, it may be difficult to understand the meaning and usefulness of the standard deviation.  For now, it is enough for you to recognize the following points:
 
   +  The standard deviation is a measure of how spread out the data are.
   +  If the standard deviation is large, then the data are very spread out.
   +  If the standard deviation is zero, then all the values are the identical--there is no spread in the data.
   +  The standard deviation cannot be negative.
+<br>
 </div>
 
 **Variance**
@@ -1475,7 +1510,7 @@ The mean and standard deviation are used to describe the center and spread when 
 
 **Review of Parameters and Statistics**
 
-We have now learned some statistics that can be used to estimate population parameters.  For example, we use $ \bar x $ to estimate the population mean $ \mu $.  The sample statistics $s$ estimates the true population standard deviation $\sigma$.  The following table summarizes what we have done so far:
+We have now learned some statistics that can be used to estimate population parameters.  For example, we use $\bar x$ to estimate the population mean $\mu$.  The sample statistics $s$ estimates the true population standard deviation $\sigma$.  The following table summarizes what we have done so far:
 
 <center>
 <table>
@@ -1489,23 +1524,23 @@ We have now learned some statistics that can be used to estimate population para
 <tbody>
 <tr class="odd">
 <td><p>Mean</p></td>
-<td><p>$ \bar x $</p></td>
-<td><p>$ \mu $</p></td>
+<td><p>$\bar x$</p></td>
+<td><p>$\mu$</p></td>
 </tr>
 <tr class="even">
 <td><p>Standard Deviation</p></td>
-<td><p>$ s $</p></td>
-<td><p>$ \sigma $</p></td>
+<td><p>$s$</p></td>
+<td><p>$\sigma$</p></td>
 </tr>
 <tr class="odd">
 <td><p>Variance</p></td>
-<td><p>$ s^2 $</p></td>
-<td><p>$ \sigma^2 $</p></td>
+<td><p>$s^2$</p></td>
+<td><p>$\sigma^2$</p></td>
 </tr>
 <tr class="even">
-<td><p>$ \vdots $</p></td>
-<td><p>$ \vdots $</p></td>
-<td><p>$ \vdots $</p></td>
+<td><p>$\vdots$</p></td>
+<td><p>$\vdots$</p></td>
+<td><p>$\vdots$</p></td>
 </tr>
 </tbody>
 </table>
@@ -1513,6 +1548,8 @@ We have now learned some statistics that can be used to estimate population para
 
 Unless otherwise specified, we will always use {{Course_Filter|course=A|content=Excel}}<!--{{Course_Filter|course=B C|content=SPSS}}--> to find the sample variance and sample mean.
 In each case, the sample statistic estimates the population parameter.  The ellipses $\vdots$ in this table hint that we will add rows in the future.
+
+<br>
 
 **Optional Reading: Formulas for $s$ and $s^2$ (Hidden)**
 
@@ -1534,7 +1571,7 @@ $$\displaystyle{ s=\sqrt{s^2}=\sqrt{\frac{\sum\limits_{i=1}^n (x_i-\bar x)^2}{n-
 
 where $x_i$ is the $i^{th}$ observed data value, and  $i=1, 2, \ldots, n$.
 
-Unless otherwise specified, we will always use {{Course_Filter|course=A|content=Excel}}<!--{{Course_Filter|course=B C|content=SPSS}}--> to find the sample variance and sample mean.
+Unless otherwise specified, we will always use Excel<!--{{Course_Filter|course=B C|content=SPSS}}--> to find the sample variance and sample mean.
 
 **Why do we divide by $n-1$?**
 
@@ -1630,54 +1667,34 @@ The home values are representative of data.  If we have a list of data, sorted i
 <div class="SoftwareHeading">Excel Instructions</div>
 <div class="Summary">
 
-**To calculate percentiles and quartiles in Excel, do the following**
+&nbsp;&nbsp;**To calculate percentiles and quartiles in Excel, do the following**
 
-*Open the data file you are using. For this example, open the file [WrongSiteWrongPatient.xlsx](./Data/WrongSiteWrongPatient.xlsx)
-*Copy and paste the desired data into Column A of the spreadsheet [Dquantitative Descriptive Statistics](./Data/QuantitativeDescriptiveStatistics.xlsx).
-*The percentiles and quartiles are listed below the Numerical Descriptive Statistics.  Scroll to find the percentile you need.
+- Open the data file you are using. For this example, open the file [WrongSiteWrongPatient.xlsx](./Data/WrongSiteWrongPatient.xlsx).
 
-You may notice that some of the values for percentiles given in Excel are different from those given in SPSS. This is due to the different ways in which Excel and SPSS calculate percentiles. Since you are using Excel, be sure to use the percentiles calculated in Excel.
+- Copy and paste the desired data into Column A of the spreadsheet [Dquantitative Descriptive Statistics](./Data/QuantitativeDescriptiveStatistics.xlsx).
+
+- The percentiles and quartiles are listed below the Numerical Descriptive Statistics.  Scroll to find the percentile you need.
+
+&nbsp;&nbsp;You may notice that some of the values for percentiles given in Excel are different from those given in SPSS. This is due to the different ways in which Excel and SPSS calculate percentiles. Since you are using Excel, be sure to use the percentiles calculated in Excel.
+<br>
 </div>
 <br>
 
 
 The first quartile ($Q_1$) or 25<sup>th</sup> percentile (calculated in Excel) of the wrong site data is: ?29,496. (This result is illustrated in the figure below.)  This means that 25 percent of the time hospitals lost a wrong-site lawsuit, they had to pay ?29,496 or less. The 25<sup>th</sup> percentile can be written symbolically as: P<sub>25</sub> = ?29,496.  Other percentiles can be written the same way.  The 99<sup>th</sup> percentile can be written as P<sub>99</sub>.
 
-<center>
-<table>
-<caption>**Percentiles (Calculated in Excel)**</caption>
-<tbody>
-<tr class="odd">
-<td><p>1st percentile</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>2nd percentile</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3rd percentile</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>...</p></td>
-<td><p>...</p></td>
-</tr>
-<tr class="odd">
-<td><p>24th percentile</p></td>
-<td><p>28633.4</p></td>
-</tr>
-<tr class="even">
-<td><p>25th percentile</p></td>
-<td><p>29496</p></td>
-</tr>
-<tr class="odd">
-<td><p>26th percentile</p></td>
-<td><p>31067</p></td>
-</tr>
-</tbody>
-</table>
-</center>
+<center>**Percentiles (Calculated in Excel)**</center>
+|        &nbsp;   |  &nbsp; |
+| --------------- | ------- |
+| 1st percentile  | 0       |
+| 2nd percentile  | 0       |
+| 3rd percentile  | 0       |
+| ...             | ...     |
+| 24th percentile | 28633.4 |
+| 25th percentile | 29496   |
+| 26th percentile | 31067   |
+
+<br>
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
@@ -1750,9 +1767,17 @@ The first quartile ($Q_1$) or 25<sup>th</sup> percentile (calculated in Excel) o
 
 Another way to summarize data is with the five-number summary.  **The five-number summary** is comprised of the minimum, the first quartile, the second quartile (or median), the third quartile and the maximum.  The values in the five-number summary are *always* presented in this order.  Since the order of the numbers in the five number summary is fixed, it is not necessary to label each of the values individually. 
 
-Statistical packages can give different results for some computations.  This is because there are several reasonable ways to define certain quantities, such as the quartiles. As such, you may find that some of the values that are given in {{Course_Filter|course=A|content=Excel}}<!--{{Course_Filter|course=B C|content=SPSS}}--> are different than what other software may give. <!--Please be sure to use the values that you calculate using the software designated for your particular class ({{Course_Filter|course=A|content=Excel}}{{Course_Filter|course=B C|content=SPSS}}-->.
+Statistical packages can give different results for some computations.  This is because there are several reasonable ways to define certain quantities, such as the quartiles. As such, you may find that some of the values that are given in Excel<!--{{Course_Filter|course=B C|content=SPSS}}--> are different than what other software may give. 
 
-{{Software_Filter|PageName=FiveNumberSummary}}
+<!--Please be sure to use the values that you calculate using the software designated for your particular class ({{Course_Filter|course=A|content=Excel}}{{Course_Filter|course=B C|content=SPSS}}-->.
+
+&nbsp;&nbsp;**To find the values for a five-number summary in Excel, do the following**
+
+- Copy and paste the desired data into Column A of the spreadsheet [Quantitative Descriptive Statistics](./Data/QuantitativeDescriptiveStatistics.xlsx).
+
+- The minimum, maximum, and quartiles are listed in the Numerical Descriptive Statistics area.
+<br>
+
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
@@ -1769,7 +1794,10 @@ $$\displaystyle{\$0,~~\$29,496,~~\$68,552,~~\$124,280,~~\$780,575}$$
 </div>
 <br>
 
-{{Caution|Some students mistakenly include the mean in the five-number summary.  The third value in the five-number summary is the median.}}
+<br>
+<div class="message Caution">Some students mistakenly include the mean in the five-number summary.  The third value in the five-number summary is the median.</div>
+<br>
+<br>
 
 ### Boxplots
 
@@ -1810,6 +1838,7 @@ Follow the steps below to learn how to draw a boxplot.
 <br>
 
 ## Summary
+
 <div class="SummaryHeading">Remember...</div>
 <div class="Summary">
 

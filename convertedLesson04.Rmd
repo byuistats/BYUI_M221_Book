@@ -14,10 +14,11 @@ output:
  }
 </script>
 
-<iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-a7rYECFUKhL6yMzvOIwCO" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-<div style="clear:both"></div>
-</br>
+<div style="float:right;width=40%;">
+<br/>
+<div style="padding-left:10%;">**Optional Lesson Video**</div>
+<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-a7rYECFUKhL6yMzvOIwCO" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## Lesson Outcomes
 
@@ -45,7 +46,7 @@ Recognizing his dependence upon God, Columbus ordered that a pilgrimage should b
 
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
-* There is only one marked chick pea in the hat, out of 41 chick peas total. *Out of* is expressed arithmetically by division. The probability is  $ \frac{1}{41} = 0.0244 $.  (Note: this is about 2%.)
+* There is only one marked chick pea in the hat, out of 41 chick peas total. *Out of* is expressed arithmetically by division. The probability is  $\frac{1}{41} = 0.0244$.  (Note: this is about 2%.)
 
 </div>
 </br>
@@ -70,7 +71,7 @@ Columbus’ promise to make the pilgrimage did not stop the storm. It was determ
 
 <a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q3" style="display:none;">
-* There are 40 other men on board plus Columbus. So, the probability that Columbus would not draw out the marked chick pea is: $ \frac{40}{41} = 0.9756 $. (Note: this is almost 98%.)
+* There are 40 other men on board plus Columbus. So, the probability that Columbus would not draw out the marked chick pea is: $\frac{40}{41} = 0.9756$. (Note: this is almost 98%.)
 </div>
 </br>
 
@@ -87,7 +88,11 @@ Columbus’ promise to make the pilgrimage did not stop the storm. It was determ
 <a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q5" style="display:none;">
 * The sum of the probabilities is 1:
-$$ \frac{1}{41} + \frac{40}{41} = \frac{41}{41} = 1 $$
+
+$$
+\frac{1}{41} + \frac{40}{41} = \frac{41}{41} = 1
+$$
+
 </div>
 &nbsp;
 </div>
@@ -103,7 +108,7 @@ To put some perspective on this, a high school athlete in the United States is o
 
 <a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q6" style="display:none;">
-* The probability of rolling a 6 on a die is $ \displaystyle{ \frac{1}{6}} = 0.1667 $.
+* The probability of rolling a 6 on a die is $\displaystyle{ \frac{1}{6}} = 0.1667$.
 </div>
 </br>
 
@@ -111,7 +116,7 @@ To put some perspective on this, a high school athlete in the United States is o
 
 <a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q7" style="display:none;">
-* The probability of not rolling a 6 on a die is $ \displaystyle{\frac{5}{6}} = 0.8333. $
+* The probability of not rolling a 6 on a die is $\displaystyle{\frac{5}{6}} = 0.8333.$
 </div>
 </br>
 
@@ -187,23 +192,23 @@ This can be viewed as one of two problems:
 In this course we are interested in experiments where the outcomes are influenced by random effects. So the outcomes of the experiment are uncertain, yet they follow a pattern or distribution and the probability of the experimental outcomes are governed by rules. An event is a set of outcomes of an experiment. Each outcome is an event, but an event can include more than one outcome.
 
 <div class="Emphasis">
-**The three rules of probability are:**
+&nbsp;&nbsp;**The three rules of probability are:**
 
-***Rule 1**: The probability of an event $X$ is a number between 0 and 1. 
+- **Rule 1**: The probability of an event $X$ is a number between 0 and 1. 
 
-$$ 0 ≤ P(X) ≤ 1 $$
+$$0 ≤ P(X) ≤ 1$$
 
-***Rule 2**: If you list all the outcomes of an experiment (such as rolling a die) the probability that one of these outcomes will occur is 1. In other words, the sum of the probabilities of all the possible outcomes of any experiment is 1.
+- **Rule 2**: If you list all the outcomes of an experiment (such as rolling a die) the probability that one of these outcomes will occur is 1. In other words, the sum of the probabilities of all the possible outcomes of any experiment is 1.
 
-$$ \sum P(X) = 1 $$
+$$\sum P(X) = 1$$
 
-***Rule 3**: (Complement Rule) The probability that an event $X$ will not occur is 1 minus the probability that it will occur.
+- **Rule 3**: (Complement Rule) The probability that an event $X$ will not occur is 1 minus the probability that it will occur.
 
-$$ P(\text{not}~X) = 1 - P(X) $$
+$$P(\text{not}~X) = 1 - P(X)$$
 
-You may have noticed that the Complement Rule is just a combination of the first two rules. 
+&nbsp;&nbsp;You may have noticed that the Complement Rule is just a combination of the first two rules. 
 </div>
-
+<br>
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
@@ -262,7 +267,9 @@ Imagine you are playing a game that involves rolling the die. As part of the gam
 
 <a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q16" style="display:none;">
-* Since all the numbers are equally likely, we would expect to roll each of the values 1 through 6 about $ \displaystyle{\frac{1}{6} } $ of the time.  So the proportion of time that each digit would occur is $ \displaystyle{\frac{1}{6} } = 0.1667 $.
+* Since all the numbers are equally likely, we would expect to roll each of the values 1 through 6 about 
+$\displaystyle{\frac{1}{6} }$ of the time.  So the proportion of time that each digit would occur is 
+$\displaystyle{\frac{1}{6} } = 0.1667$.
 </div>
 </br>
 
@@ -305,7 +312,7 @@ $$\bar x=\frac{1(1047)}{6000}+\frac{2(968)}{6000}+\frac{3(961)}{6000}+\frac{4(10
 $$OR$$
 
 
-$$ \bar x = \left(1\times\frac{1047}{6000} \right)+ \left(2\times\frac{968}{6000} \right) + \left(3\times\frac{961}{6000} \right) + \left( 4\times\frac{1006}{6000} \right) + \left( 5\times\frac{980}{6000} \right) + \left( 6\times\frac{1038}{6000} \right) = 3.5030 $$
+$$\bar x = \left(1\times\frac{1047}{6000} \right)+ \left(2\times\frac{968}{6000} \right) + \left(3\times\frac{961}{6000} \right) + \left( 4\times\frac{1006}{6000} \right) + \left( 5\times\frac{980}{6000} \right) + \left( 6\times\frac{1038}{6000} \right) = 3.5030$$
 
 Notice each of the fractions in parentheses is the number of times the value occurred divided by the total number of rolls. In other words, the fractions give the proportion of times that each value occurred, or the relative frequencies. If we divide the fractions, we get
 
@@ -369,7 +376,7 @@ Notice that the sample mean is what you get when you multiply each of the values
 </table>
 </center>
 
-The sample mean of the values shown on the 6,000 rolls of the die is $ \bar x = 3.5030 $.
+The sample mean of the values shown on the 6,000 rolls of the die is $\bar x = 3.5030$.
 
 What could we do to calculate the population mean? Remember that the true probability that we would roll any one of these values is $1/6$. If we substitute the true proportion, $1/6$, for the estimated proportion obtained by rolling the die 6,000 times, we get the following table.
 
@@ -377,7 +384,7 @@ What could we do to calculate the population mean? Remember that the true probab
 Column 1   Column 2                               Column 3
 ---------- -------------------------------------- ---------------------------
 Value      Count                                  Value $\times$ Proportion
-$x$        $P(x)$                                 $x \times P(x) $
+$x$        $P(x)$                                 $x \times P(x)$
 $$1$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$1(0.1667)$$
 $$2$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$2(0.1667)$$
 $$3$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$3(0.1667)$$
@@ -389,7 +396,7 @@ $$6$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$6(0.1667)$$
 
 The population mean of a discrete random variable is computed by multiplying each of the values of the random variable by the respective probability that the value will occur. This is exactly what we did in the last table above. You can use a table like this to compute the mean of any discrete random variable. The first column of the table contains the values of the random variable. The second column gives their probabilities. The third column is found by multiplying the values in the previous two columns. The population mean, $\mu$, is the sum of the numbers in the third column.
  
-The quantity $\mu = 3.5$ is the true population mean for the values shown on a die. If you roll a die many, many times, the sample mean of the values you roll will be very close to $\mu = 3.5$. (Another way to say this is that the long-run average of the values shown on a die will tend to be close to $\mu$ = 3.5.) This is the answer to [[#Q17|question 17]] above.  Did you put 3.5, or did you guess the answer would be 3?  Many people guess the mean will be 3, but as we have seen, it is actually 3.5.
+The quantity $\mu = 3.5$ is the true population mean for the values shown on a die. If you roll a die many, many times, the sample mean of the values you roll will be very close to $\mu = 3.5$. (Another way to say this is that the long-run average of the values shown on a die will tend to be close to $\mu$ = 3.5.) This is the answer to question 17 above.  Did you put 3.5, or did you guess the answer would be 3?  Many people guess the mean will be 3, but as we have seen, it is actually 3.5.
 
 Notice that the sample mean was very close to the true mean. This is an example of the Law of Large Numbers. The **Law of Large Numbers** states that if you take a large sample from a population, the sample mean will likely be close to the population mean.
 
@@ -401,10 +408,10 @@ We can find the population standard deviation for a discrete random variable by 
 
 Let's calculate the population standard deviation for the number that results from rolling a fair six-sided die. We can do this by extending the table we made for calculating the mean, as described in the previous paragraph and illustrated in the following table.
 
-Column 1   Column 2                               Column 3                    Column 4
+  Column 1   Column 2                               Column 3                    Column 4
   ---------- -------------------------------------- --------------------------- -------------------------------------
   Value      Count                                  Value $\times$ Proportion   
-  $x$        $P(x)$                                 $x \times P(x) $            $(x-\mu)^2 \times P(x) $
+  $x$        $P(x)$                                 $x \times P(x)$             $(x-\mu)^2 \times P(x)$
   $$1$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$1(0.1667)$$               $(1-3.5)^2\times(0.1667) = 1.0417$
   $$2$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$2(0.1667)$$               $(2-3.5)^2\times(0.1667) = 0.3750$
   $$3$$      $\displaystyle\frac{1}{6}≈ 0.1667$     $$3(0.1667)$$               $(3-3.5)^2\times(0.1667) = 0.0417$
@@ -425,38 +432,38 @@ The profit is the amount a player wins minus the cost to play (\$2 ). So, if a p
 
 The table below illustrates the profit for all possible outcomes in a drawing where the grand prize is \$200,000,000. The symbol "O" represents one white ball was correctly guessed, and the symbol <span style="color:red;">P</span> represents that the powerball was correctly guessed.
 
-Outcome         Payoff           Profit         Probability
+  Outcome         Payoff           Profit         Probability
   --------------- ---------------- -------------- ----------------------------------------------------------------
-                  Gross Winnings   $ x $          P$ (x) $
-  OOOOOP          $200,000,000     $199,999,998   $\dfrac{1}{175,223,510}$
-  OOOOO           $1,000,000       $999,998       $\dfrac{34}{175,223,510}$
-  OOOO P          $10,000          $9,998         $\dfrac{270}{175\text{,}223\text{,}510}$
-  OOOO            $100             $98            $\dfrac{9\text{,}180}{175\text{,}223\text{,}510}$
-  OOO$P$          $100             $98            $\dfrac{14\text{,}310}{175\text{,}223\text{,}510}$
-  OOO             $7               $5             $\dfrac{486\text{,}540}{175\text{,}223\text{,}510}$
-  OO$P$           $7               $5             $\dfrac{248\text{,}040}{175\text{,}223\text{,}510}$
-  O$P$            $4               $2             $\dfrac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}$
-  $P$             $4               $2             $\dfrac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}$
-  Losing ticket   $0               -$2            $\dfrac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}$
+                  Gross Winnings   \$x$            P$ (x)$
+  OOOOOP          \$200,000,000     \$199,999,998   $\dfrac{1}{175,223,510}$
+  OOOOO           \$1,000,000       \$999,998       $\dfrac{34}{175,223,510}$
+  OOOO P          \$10,000          \$9,998         $\dfrac{270}{175\text{,}223\text{,}510}$
+  OOOO            \$100             \$98            $\dfrac{9\text{,}180}{175\text{,}223\text{,}510}$
+  OOO$P$          \$100             \$98            $\dfrac{14\text{,}310}{175\text{,}223\text{,}510}$
+  OOO             \$7               \$5             $\dfrac{486\text{,}540}{175\text{,}223\text{,}510}$
+  OO$P$           \$7               \$5             $\dfrac{248\text{,}040}{175\text{,}223\text{,}510}$
+  O$P$            \$4               \$2             $\dfrac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}$
+  $P$             \$4               \$2             $\dfrac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}$
+  Losing ticket   \$0               -\$2            $\dfrac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}$
 
 
 How likely is it that you will win the Powerball jackpot? To put this in perspective, we will make some comparisons. You are more likely to be struck by lightning twice  in your life than to win the Powerball jackpot. You are more likely to be killed in a airplane accident&mdash;while walking on the ground&mdash;than you are to win the Powerball jackpot! It is extremely unlikely that you will guess all the numbers in a particular drawing.  
 
 What is the population mean of the profits for those who play Powerball? To find this, we add one more column to the table above. We multiply the profit values, $x$, by the probability of getting that profit, and then add the numbers in this new column.
 
-Outcome         Profit                            Probability                                                       
+  Outcome         Profit                            Probability                                                       
   --------------- --------------------------------- ----------------------------------------------------------------- -----------------------------------------------------------------------------------------------------
-                  Gross Winnings, $x$               $P(x)$                                                            $x \times P(x) $
-  OOOOOP          $$\$199\text{,}999\text{,}998$$   $$\frac{1}{175\text{,}223\text{,}510}$$                           $\displaystyle{\$199\text{,}999\text{,}998\times\frac{1}{175\text{,}223\text{,}510}≈0.00000000571}$
-  OOOOO           $$\$999\text{,}998$$              $$\frac{34}{175\text{,}223\text{,}510}$$                          $\displaystyle{\$999\text{,}998\times\frac{34}{175\text{,}223\text{,}510}≈0.000000194}$
-  OOOOP           $$\$9\text{,}998$$                $$\frac{270}{175\text{,}223\text{,}510}$$                         $\displaystyle{\$9\text{,}998\times\frac{270}{175\text{,}223\text{,}510}≈0.000001541}$
-  OOOO            $$\$98$$                          $$\frac{9\text{,}1890}{175223\text{,}510}$$                       $\displaystyle{\$98\times\frac{9\text{,}180}{175\text{,}223\text{,}510}≈0.000052390}$
-  OOOP            $$\$98$$                          $$\frac{14\text{,}310}{175\text{,}223\text{,}510}$$               $\displaystyle{\$98\times\frac{14\text{,}310}{175\text{,}223\text{,}510}≈0.000081660}$
-  OOO             $$\$5$$                           $$\frac{486\text{,}540}{175\text{,}223\text{,}510}$$              $\displaystyle{\$5\times\frac{486\text{,}540}{175\text{,}223\text{,}510}≈0.002776682}$
-  OOP             $$\$5$$                           $$\frac{248\text{,}040}{175\text{,}223\text{,}510}$$              $\displaystyle{\$5\times\frac{248\text{,}040}{175\text{,}223\text{,}510}≈0.001415563}$
-  OP              $$\$2$$                           $$\frac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}$$     $\displaystyle{\$2\times\frac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}≈0.009024217}$
-  P               $$\$2$$                           $$\frac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}$$     $\displaystyle{\$2\times\frac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}≈0.018048434}$
-  Losing ticket   $$\$-2$$                          $$\frac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}$$   $\displaystyle{\$-2\times\frac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}≈0.968599305}$
+                  Gross Winnings, $x$               $P(x)$                                                            $x \times P(x)$
+  OOOOOP          \$199,999,998                     $$\frac{1}{175\text{,}223\text{,}510}$$                           $\displaystyle{\$199\text{,}999\text{,}998\times\frac{1}{175\text{,}223\text{,}510}≈0.00000000571}$
+  OOOOO           \$999,998                         $$\frac{34}{175\text{,}223\text{,}510}$$                          $\displaystyle{\$999\text{,}998\times\frac{34}{175\text{,}223\text{,}510}≈0.000000194}$
+  OOOOP           \$9,998                           $$\frac{270}{175\text{,}223\text{,}510}$$                         $\displaystyle{\$9\text{,}998\times\frac{270}{175\text{,}223\text{,}510}≈0.000001541}$
+  OOOO            \$98                              $$\frac{9\text{,}1890}{175223\text{,}510}$$                       $\displaystyle{\$98\times\frac{9\text{,}180}{175\text{,}223\text{,}510}≈0.000052390}$
+  OOOP            \$98                              $$\frac{14\text{,}310}{175\text{,}223\text{,}510}$$               $\displaystyle{\$98\times\frac{14\text{,}310}{175\text{,}223\text{,}510}≈0.000081660}$
+  OOO             \$5                               $$\frac{486\text{,}540}{175\text{,}223\text{,}510}$$              $\displaystyle{\$5\times\frac{486\text{,}540}{175\text{,}223\text{,}510}≈0.002776682}$
+  OOP             \$5                               $$\frac{248\text{,}040}{175\text{,}223\text{,}510}$$              $\displaystyle{\$5\times\frac{248\text{,}040}{175\text{,}223\text{,}510}≈0.001415563}$
+  OP              \$2                               $$\frac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}$$     $\displaystyle{\$2\times\frac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}≈0.009024217}$
+  P               \$2                               $$\frac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}$$     $\displaystyle{\$2\times\frac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}≈0.018048434}$
+  Losing ticket   \$-2                              $$\frac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}$$   $\displaystyle{\$-2\times\frac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}≈0.968599305}$
 
 
 The fact that the mean is -$0.4981 says that the average profit of each Powerball lottery ticket is actually a loss of 50 cents. In other words, players lose 50 cents on average, every time they play.
@@ -467,20 +474,20 @@ If we add another column and compute the standard deviation of the profits, we g
   Outcome         Profit                Probability                            
   --------------- --------------------- --------------- ---------------------- -----------------------------
                   Gross Winnings, $x$   $P(x)$          $x \times P(x)$       $(x-\mu)^2 \times P(x)$
-  OOOOOP          $\$ $199,999,998      0.00000000571   1.141399               228279866.1
-  OOOOO           $\$ $999,998          0.000000194     0.194038               194037.3062
-  OOOOP           $\$ $9,998            0.000001541     0.015406               154.0426305
-  OOOO            $\$ $98               0.000052390     0.005134               0.508283622
-  OOOP            $\$ $98               0.000081660     0.008003               0.79232447
-  OOO             $\$ $5                0.002776682     0.013883               0.083936974
-  OOP             $\$ $5                0.001415563     0.007078               0.042791399
-  OP              $\$ $2                0.009024217     0.018148               0.056316192
-  P               $\$ $2                0.018048434     0.036097               0.112632684
-  Losing ticket   $\$ $-2               0.968599305     (1.937199)             2.184838583
+  OOOOOP         \$199,999,998          0.00000000571   1.141399               228279866.1
+  OOOOO          \$999,998              0.000000194     0.194038               194037.3062
+  OOOOP          \$9,998                0.000001541     0.015406               154.0426305
+  OOOO           \$98                   0.000052390     0.005134               0.508283622
+  OOOP           \$98                   0.000081660     0.008003               0.79232447
+  OOO            \$5                    0.002776682     0.013883               0.083936974
+  OOP            \$5                    0.001415563     0.007078               0.042791399
+  OP             \$2                    0.009024217     0.018148               0.056316192
+  P              \$2                    0.018048434     0.036097               0.112632684
+  Losing ticket  \$-2                   0.968599305     (1.937199)             2.184838583
                   Total                 Sum: 1          Sum: $\mu=\$-0.4981$   Sum: $\sigma^2$=228474061.2
 
 
-The standard deviation is $$ \sigma = \sqrt{\sigma^2}=\sqrt{228\text{,}474\text{,}061.2}=\$15\text{,}115.36$$ 
+The standard deviation is $$\sigma = \sqrt{\sigma^2}=\sqrt{228\text{,}474\text{,}061.2}=\$15\text{,}115.36$$ 
 
 The standard deviation measures how spread out the profits are. On average, we can expect profits to be about \$15,115.36 away from the mean profit of \$-0.50. The standard deviation is so large in this example because of all the outliers: Every positive profit (\$2, \$5, \$98, and so on) occurs so rarely as to qualify to be an outlier. In addition, the profit \$199,999,998 is a very large outlier. Almost everyone who plays has a profit of \$-2, however, so the vast majority of the data aren't spread out at all. Recall from Lesson 3 that the standard deviation is not resistant to outliers. Powerball profits are a rather dramatic example of this lack of resistance.
 

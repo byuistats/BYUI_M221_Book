@@ -14,7 +14,6 @@ output:
  }
 </script>
 
-
 <div style="float:right;width=40%;">
 <br/>
 <div style="padding-left:10%;">**Optional Lesson Video**</div>
@@ -601,7 +600,7 @@ There is not enough evidence to suggest that ImmunAvance’s financial statement
 
 ## References
 
-Bible Dictionary, “Pulse” at http://lds.org/scriptures/bd/pulse.
+Bible Dictionary, “Pulse” at [http://lds.org/scriptures/bd/pulse](http://lds.org/scriptures/bd/pulse){target="_blank"}.
 
 Brownlee, K. A. (1955). Statistics of the 1954 polio vaccine trials. Journal of the American Statistical Association, 50(272), pp. 1005-1013.
 
