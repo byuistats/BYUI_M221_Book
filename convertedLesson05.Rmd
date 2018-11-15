@@ -98,7 +98,7 @@ The heights of men are also normally distributed. The mean height of young adult
 
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
--  Gustavo’s height is $ 182.5 − 173.0 = 9.5 \text{ cm  } \ $    above the mean. The standard deviation of the height of Brazilian men is 6.3 cm, so his height is   $ \displaystyle{ \frac{9.5}{6.3} =1.508 } \ $  standard deviations above the mean.
+-  Gustavo’s height is $182.5 − 173.0 = 9.5 \text{ cm  }$    above the mean. The standard deviation of the height of Brazilian men is 6.3 cm, so his height is   $\displaystyle{ \frac{9.5}{6.3} =1.508 }$  standard deviations above the mean.
 </div>
 &nbsp;
 </div>
@@ -111,13 +111,13 @@ When we examined the heights of Serwa and Gustavo, we compared their height to t
 This shows how much taller or shorter the person is than the mean height. In order to compare the height difference to the standard deviation, we divide the difference by the standard deviation. This gives the number of standard deviations the individual is above or below the mean.
 
 For example, Serwa's height is 169.0 cm. If we subtract the mean and divide by the standard deviation, we get
-$$z = \frac{169.0 - 159.0}{4.9} = 2.041.$$
+$$z = \frac{169.0 - 159.0}{4.9} = 2.041$$
 We call this number a $z$-score. The $z$-score for a data value tells how many standard deviations away from the mean the observation lies. If the $z$-score is positive, then the observed value lies above the mean. A negative $z$-score implies that the value was below the mean.
 
 We compute the $z$-score for Gustavo's height similarly, and obtain
-$$z = \frac{182.5 - 173.0}{6.3} = 1.508.$$
+$$z = \frac{182.5 - 173.0}{6.3} = 1.508$$
 Gustavo's $z$-score is 1.508. As noted above, this is about one-and-a-half standard deviations above the mean. In general, if an observation $x$ is taken from a random process with mean $\mu$ and standard deviation $\sigma$, then the $z$-score is
-$$z = \frac{x -\mu }{\sigma}.$$
+$$z = \frac{x -\mu }{\sigma}$$
 
 The $z$-score can be computed for data from any distribution, but it is most commonly applied to normally distributed data.
 
@@ -132,7 +132,9 @@ For any bell-shaped distribution,
 - 99.7% of the data will lie within 3 standard deviations of the mean.
 
 This is called the 68-95-99.7% Rule for Bell-shaped Distributions. Some statistics books refer to this as the Empirical Rule.
+<br>
 </div>
+<br>
 
 <img src="./Images/L03_A06_R04.jpg">
 
@@ -179,7 +181,7 @@ We define an **unusual observation** to be something that happens less than 5% o
 
 <a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q4" style="display:none;">
--  Serwa’s height is unusual.  Her $z$-score is: $ z = 2.041. $ This is more than two standard deviations away from the mean. Gustavo’s height is not unusual.  His $z$-score is less than two standard deviations away from the mean.
+-  Serwa’s height is unusual.  Her $z$-score is: $z = 2.041$ This is more than two standard deviations away from the mean. Gustavo’s height is not unusual.  His $z$-score is less than two standard deviations away from the mean.
 </div>
 &nbsp;
 </div>
@@ -196,7 +198,25 @@ An important part of the practice of statistics is finding areas under a normal 
 
 ### Introduction to the Normal Probability Applet
 
-{{Help:Normal_Probability_Applet_Instructions|}}
+The Normal Probability Applet is a visualization program offering statistics students insights and computations for the relationship between $z$-scores and areas under the standard normal curve. You can find a link to this applet on the [[Main Page]] of the wiki under Course Resources. This app is also compatible to use on your phone, iPad, and other mobile devices.  The app is stored at http://byuimath.com/apps/normprob.html.  If you want a copy you can open from your desktop, just right click the link and save it to your computer.
+
+To use this applet follow these instructions:
+
+*Click on an area below the curved line to shade/unshade the region.
+*Click and drag the red lines to adjust the $z$-scores and obtain the area.
+*Type a $z$-score into one of the bottom input boxes and hit "Enter" to get an area.
+*Type in an area and hit "Enter" to get a $z$-score.
+
+<br>
+<center>
+{{#widget:Iframe
+|url=http://byuimath.com/apps/normprob.html?width={{{width|600}}}&z={{{z|1}}}&height={{{height|400}}}&left={{{left|1}}}&mid={{{mid|0}}}&right={{{right|1}}}&area={{{area|a}}}&static={{{static|0}}}&title={{{title|1}}}&border={{{border|0}}}
+|width={{{fwidth|650}}}
+|height={{{fheight|450}}}
+|border=0
+}}
+</center>
+<br>
 
 ### Converting a $z$-score to a Probability
 
@@ -296,9 +316,13 @@ Solve for $x$:
 | Swap the left- and right-hand sides      |                $\displaystyle{ x }\space$   | $=$ | $\displaystyle{ 0.305 }$                                       |
 |                                          |                                             |     |                                                                |
 
+<br>
+
 The 90<sup>th</sup> percentile of the batting averages is 0.305. That means that 90% of the players have a batting average that is 0.305 or less.
 
 The ability to use the Normal Probability Applet to find probabilities is very important in this course. Take some time to familiarize yourself with the applet and to practice using it.
+
+<br>
 
 ## Assessing Normality Using a Q-Q Plot
 
@@ -320,8 +344,22 @@ In any Q-Q plot, we expect little “wiggles” in the points. If the points in 
 
 **Instructions for creating a Q-Q Plot:**
 
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=QQ-plot }}
+- **Here is how to make a Q-Q plot in Excel**
+- Open the data file [BattingAverages.xlsx](./Data/BattingAverages.xlsx)
+- Copy the data you needs from this file (the column labeled BattingAvg)
+- Open the file [Quantitative Descriptive Statistics](./Data/QuantitativeDescriptiveStatistics.xlsx)
+- Click on the tab labeled “QQ Plots”
+- Paste the data into Column A of the QQ plots worksheet
+  + Sort Column A in order from smallest to largest.
+  + The graph on the right will be your Q-Q plot.
+
+<img src="./Images/Excel_QQ-Plot_ _L05.jpg">
+<br>
+</div>
+<br>
 
 Make sure you can create the Q-Q plot shown above on your own.
 
@@ -329,7 +367,7 @@ Make sure you can create the Q-Q plot shown above on your own.
 
 A group of researchers led by Philip A. Mackowiak, MD, conducted a study to assess the true mean body temperatures of healthy adults. They selected n = 148 subjects between the ages of 18 and 40 years old, representative of the general population.
 
-Each volunteer was given a physical to assure that they were not ill at the time of the data collection. Their axillary (under the arm) body temperature was measured and reported in a paper published in the Journal of the American Medical Association. [1] These data were extracted and are presented in the file <span class=Link>[[Data|BodyTemp]]</span>. The body temperatures are given in degrees Fahrenheit.
+Each volunteer was given a physical to assure that they were not ill at the time of the data collection. Their axillary (under the arm) body temperature was measured and reported in a paper published in the Journal of the American Medical Association. [1] These data were extracted and are presented in the file [BodyTemp](./Data/BodyTemp.xlsx). The body temperatures are given in degrees Fahrenheit.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
@@ -376,7 +414,19 @@ Note that the mean is 98.23, standard deviation is 0.738, and sample size is n =
 <a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Refresh My Memory</span></a>
 <div id="Q8" style="display:none;">
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter|PageName=Histogram-Condensed}}
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+- **Instructions for Creating a Histogram in Excel**
+
+- To make a histogram in Excel, you can use the Excel file 
+[Quantitative Descriptive Statistics](./Data/QuantitativeDescriptiveStatistics.xlsx). 
+Copy and paste the desired data values into the first column (on the left side) of the tool. The histogram will be generated automatically. 
+
+<img src="./Images/Lesson_2_Activity_2-2.JPG">
+
+<br>
+</div>
 </div>
 <br>
 &nbsp;

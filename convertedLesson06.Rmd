@@ -105,11 +105,11 @@ To the right of the histogram of the parent population is a drop down menu that 
 
 - **Step 05**: Repeatedly pushing the [Animated] button produces more samples of size 25, calculates the mean of each sample, and then places the mean in the “Distribution of Means” graph.  Play with this a few times to make sure you understand the process.
 
-:Notice that to the left of the Distribution of Means graph, the mean and standard deviation of the sample means is given.  This is the mean and standard deviation of the “Distribution of Means.”  In other words, it gives the mean of the means and the standard deviation of the means.
+Notice that to the left of the Distribution of Means graph, the mean and standard deviation of the sample means is given.  This is the mean and standard deviation of the “Distribution of Means.”  In other words, it gives the mean of the means and the standard deviation of the means.
 
 - **Step 06**:  In order to get more data, press the [10,000] button to generate 10,000 samples of size 25 per sample.  Soon a histogram of all 10,000 means will be displayed.
 
-:We are interested in the shape, center and spread of the “Distribution of Means” graph.  This graph represents the distribution of sample means.
+We are interested in the shape, center and spread of the “Distribution of Means” graph.  This graph represents the distribution of sample means.
 
 - **Step 07**: Press the [Clear Lower 3] button.  This will erase your data and reset the applet.  Repeat Steps 04-08.  Compare the new graph of the sample means (the third plot) with the graph you originally created.  Even though they are based on different simulated draws from the population, they should be very similar.
 
@@ -208,13 +208,13 @@ $$
 <div id="Q4" style="display:none;">
 * If the sample size, $n$, is increased, then the standard deviation of the sample mean will decrease. The fraction will get smaller.
 </div>
-
+<br>
 
 5. If the standard deviation of the sample mean gets smaller, what happens to the values of $\bar x$?
 
 <a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q5" style="display:none;">
-* The values that will be observed will be very close to each other and therefore close to $ \mu $, if the sample size is large.
+* The values that will be observed will be very close to each other and therefore close to $\mu$, if the sample size is large.
 </div>
 &nbsp;
 </div>

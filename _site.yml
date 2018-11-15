@@ -7,11 +7,11 @@ navbar:
     - text: "Unit 1"
       menu:
         - text: "Lesson 1: Course Introduction"
-          href: Lesson01.html
+          href: convertedLesson01.html
         - text: "Lesson 2: The Statistical Process"
-          href: Lesson02.html
+          href: convertedLesson02.html
         - text: "Lesson 3: Describing Quantitative Data"
-          href: Lesson03.html
+          href: convertedLesson03.html
         - text: "Lesson 4: Rules of Probability"
           href: convertedLesson04.html
         - text: "Lesson 5: Normal Distributions"

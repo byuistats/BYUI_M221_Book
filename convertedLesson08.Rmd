@@ -96,7 +96,7 @@ The expectation on the exam is that you should be able to do the following:
 8. A special interest group is conducting a survey regarding wolves in Yellowstone National Park.  To adequately gauge opinions on both sides of the political spectrum, the researchers took the list of registered Democrats and selected a simple random sample of 100 people.  Then, they took a list of registered Republicans and selected a simple random sample of 100 people. Which type of sampling scheme was implemented?
 
 
-A survey was taken of purchases at the Crossroads.  Open the data file [CrossroadsPurchases](http://statistics.byuimath.com/index.php?title=Data){target="_blank"} 
+A survey was taken of purchases at the Crossroads.  Open the data file [CrossroadsPurchases](./Data/CrossroadsPurchases.xlsx)
 and use this data to answer questions 9 and 10.
 
 
