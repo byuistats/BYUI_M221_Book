@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -167,6 +170,101 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -304,175 +402,26 @@ $(document).ready(function () {
 
 </div>
 
-<div id="TOC">
-<ul>
-<li><a href="#lesson-outcomes">Lesson Outcomes</a></li>
-<li><a href="#lesson-summaries">Lesson Summaries</a></li>
-<li><a href="#review-questions">Review Questions</a></li>
-<li><a href="#navigation">Navigation</a></li>
-</ul>
-</div>
 
-<script type="text/javascript">
- function showhide(id) {
-    var e = document.getElementById(id);
-    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
- }
-</script>
-<p>The following questions are intended to help you judge your preparation for this exam. Carefully work through the problems.<br /> <strong>These questions are repeated on the preparation quiz for this lesson.</strong></p>
-<p>This is not designed to be a comprehensive review. There may be items on the exam that are not covered in this review. Similarly, there may be items in this review that are not tested on this exam. You are strongly encouraged to review the readings, homework exercises, and other activities from Unit 1 as you prepare for the exam. Use the <a href="http://statistics.byuimath.com/index.php?title=Index" target="_blank">Index</a> to review definitions of important terms.</p>
-<p><br></p>
-<div id="lesson-outcomes" class="section level2">
-<h2>Lesson Outcomes</h2>
-<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Lesson Outcomes</span></a>
-<div id="Q1" style="display:none;">
-<p>The expectation on the exam is that you should be able to do the following:</p>
-<ul>
-<li>Distinguish between a categorical and a quantitative variable.</li>
-<li>Distinguish between an observational study and an experiment.</li>
-<li>Distinguish between a population and a sample.</li>
-<li>Distinguish between a parameter and a statistic.</li>
-<li>Distinguish and give an example of each of the following sampling schemes:
-<ul>
-<li>Simple random sampling</li>
-<li>Systematic sampling</li>
-<li>Cluster sampling</li>
-<li>Stratified sampling</li>
-<li>Convenience sampling</li>
-</ul></li>
-<li>Explain the significance of using a random sample.</li>
-<li>Determine the shape of a distribution using a histogram and/or box plot.</li>
-<li>Determine the centers of a given histogram and/or box plot.</li>
-<li>Identify the mean, median and standard deviation in skewed or normal histograms.</li>
-<li>Calculate the mean, median and standard deviation from quantitative data.</li>
-<li>Calculate a percentile from a quantitative data set.</li>
-<li>Calculate a five-number summary from quantitative data with Excel, or by hand.</li>
-<li>Create a histogram and a box-plot from quantitative data.</li>
-<li>State and apply the three axioms of probability.</li>
-<li>State the properties of a normal density curve.</li>
-<li>Calculate the z-score of an individual observation, given the mean and standard deviation.</li>
-<li>Interpret a z-score.</li>
-<li>Calculate probability as area under a normal density curve.</li>
-<li>Assess normality using a QQ-plot.</li>
-<li>Explain how a sampling distribution is created.</li>
-<li>Determine the mean, standard deviation and shape of a distribution of sample means.</li>
-<li>State and apply the Central Limit Theorem and the Law of Large numbers.</li>
-<li>Calculate probabilities using a distribution of sample means.</li>
-</ul>
+<p><strong>NOTOC</strong> The following questions are intended to help you judge your preparation for this exam. Carefully work through the problems.<br /> ’‘’These questions are repeated on the preparation quiz for this lesson.’’’</p>
+<p>This is not designed to be a comprehensive review. There may be items on the exam that are not covered in this review. Similarly, there may be items in this review that are not tested on this exam. You are strongly encouraged to review the readings, homework exercises, and other activities from Unit 1 as you prepare for the exam. Use the <span class="Link"> [[Index]]</span> to review definitions of important terms.</p>
+==Lesson Outcomes==
+<div style="clear:both">
+
+</div>
+<div class="mw-collapsible" data-collapsetext="Hide Lesson Outcomes" data-expandtext="Click Here to Show Outcomes for this Lesson">
+<p>The expectation on the exam is that you should be able to do the following: :* Distinguish between a categorical and a quantitative variable. :* Distinguish between an observational study and an experiment. :* Distinguish between a population and a sample. :* Distinguish between a parameter and a statistic. :* Distinguish and give an example of each of the following sampling schemes: :** Simple random sampling :** Systematic sampling :** Cluster sampling :** Stratified sampling :** Convenience sampling :* Explain the significance of using a random sample. :* Determine the shape of a distribution using a histogram and/or box plot. :* Determine the centers of a given histogram and/or box plot. :* Identify the mean, median and standard deviation in skewed or normal histograms. :* Calculate the mean, median and standard deviation from quantitative data. :* Calculate a percentile from a quantitative data set. :* Calculate a five-number summary from quantitative data with Excel, or by hand. :* Create a histogram and a box-plot from quantitative data. :* State and apply the three axioms of probability. :* State the properties of a normal density curve. :* Calculate the z-score of an individual observation, given the mean and standard deviation. :* Interpret a z-score. :* Calculate probability as area under a normal density curve. :* Assess normality using a QQ-plot. :* Explain how a sampling distribution is created. :* Determine the mean, standard deviation and shape of a distribution of sample means. :* State and apply the Central Limit Theorem and the Law of Large numbers. :* Calculate probabilities using a distribution of sample means.</p>
 </div>
 <p><br></p>
-</div>
-<div id="lesson-summaries" class="section level2">
-<h2>Lesson Summaries</h2>
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Unit 1 Summaries</span></a>
-<div id="Q2" style="display:none;">
-<div class="RecapHeading">
-Lesson 01 Recap
-</div>
-<div class="Summary">
-<ul>
-<li><p>Each lesson follows the same schedule: <strong>Individual and Group Preparation</strong>, <strong>Class Meeting</strong>, and <strong>Homework Assignment and Quiz</strong>. Understanding this layout will help you successfully manage the workload of this class.</p></li>
-<li><p>In this class you will use the online textbook that has been written for you by your statistics teachers. All of the assignments and quizzes will be based on the readings, so study it well.</p></li>
-<li>By doing the work, staying on schedule, and living the Honor Code you <em>can</em> succeed in this class!</li>
-</ul>
-</div>
-<p><br></p>
-<div class="RecapHeading">
-Lesson 02 Recap
-</div>
-<div class="Summary">
-<ul>
-<li><p>The <strong>Statistical Process</strong> has five steps: <strong>D</strong>esign the study, <strong>C</strong>ollect the data, <strong>D</strong>escribe the data, <strong>M</strong>ake inferences, <strong>T</strong>ake action.</p></li>
-<li><p>In a <strong>designed experiment</strong>, researchers control the conditions of the study. In an <strong>observational study</strong>, researchers don’t control the conditions but only observe what happens.</p></li>
-<li>There are many sampling methods used to obtain a <strong>sample</strong> from a <strong>population</strong>:
-<ul>
-<li>A <strong>simple random sample (SRS)</strong> is a random selection taken from a population</li>
-<li>A <strong>systematic sample</strong> is every <strong><em>k</em></strong><sup>th</sup> item in the population, beginning at a random starting point</li>
-<li>A <strong>cluster sample</strong> is all items in one or more randomly selected clusters, or blocks</li>
-<li>A <strong>stratified sample</strong> divides data into similar groups and an <strong>SRS</strong> is taken from each group</li>
-<li>A <strong>convenience sample</strong> is one easily obtained in a less-than-systematic way and should be avoided whenever possible</li>
-</ul></li>
-<li><p><strong>Quantitative variables</strong> represent things that are numeric in nature, such as the value of a car or the number of students in a classroom. <strong>Categorical variables</strong> represent nonnumerical data that can only be considered as labels, such as colors or brands of shoes.</p></li>
-<li>The <strong>null hypothesis (<span class="math inline">\(H_0\)</span>)</strong> is the foundational assumption about a population and represents the status quo. The <strong>alternative hypothesis (<span class="math inline">\(H_a\)</span>)</strong> is a different assumption about a population. Using a <strong>hypothesis test</strong>, we determine whether it is more likely that the null hypothesis or the alternative hypothesis is true.</li>
-</ul>
-</div>
-<p><br></p>
-<div class="RecapHeading">
-Lesson 03 Recap
-</div>
-<div class="Summary">
-<ul>
-<li><p>A <strong>histogram</strong> allows us to visually interpret data. Histograms can be left-skewed, right-skewed, or symmetrical and bell-shaped.</p></li>
-<li><p>The <strong>mean</strong>, <strong>median</strong>, and <strong>mode</strong> are measures of the center of a distribution. The mean is the most common measure of center, and is computed by adding up the observed data and dividing by the number of observations in the data set.</p></li>
-<li><p>The <strong>standard deviation</strong> is a number that describes how spread out the data are. A larger standard deviation means the data are more spread out than data with a smaller standard deviation.</p></li>
-<li><p>A <strong>parameter</strong> is a true (but usually unknown) number that describes a population. A <strong>statistic</strong> is an estimate of a parameter obtained from a sample.</p></li>
-<li><strong>Quartiles/percentiles</strong>, <strong>Five-Number Summaries</strong>, and <strong>Boxplots</strong> are tools that help us understand data. The five-number summary of a data set contains the minimum value, the first quartile, the median, the third quartile, and the maximum value. A boxplot is a graphical representation of the five-number summary.</li>
-</ul>
-</div>
-<p><br></p>
-<div class="RecapHeading">
-Lesson 04 Recap
-</div>
-<div class="Summary">
-<ul>
-<li>The three <strong>rules of probability</strong> are:</li>
-</ul>
-<ol style="list-style-type: decimal">
-<li><p>A probability is a number between 0 and 1. <span class="math display">\[ 0 ≤ P(X) ≤ 1 \]</span></p></li>
-<li><p>If you list all the outcomes of a probability experiment (such as rolling a die) the probability that one of these outcomes will occur is 1. In other words, the sum of the probabilities in any probability is 1. <span class="math display">\[ \sum P(X) = 1 \]</span></p></li>
-<li>The probability that an outcome will not occur is 1 minus the probability that it will occur. <span class="math display">\[ P(\text{not}~X) = 1 - P(X) \]</span></li>
-</ol>
-</div>
-<p><br></p>
-<div class="RecapHeading">
-Lesson 05 Recap
-</div>
-<div class="Summary">
-<ul>
-<li><p>A <strong>normal density curve</strong> is symmetric and bell-shaped. The curve lies above the horizontal axis and the total area under the curve is equal to 1.</p></li>
-<li><p>A <strong>standard normal distribution</strong> has a mean of 0 and a standard deviation of 1. The <strong>68-95-99.7% rule</strong> states that when data are normally distributed, approximately 68% of the data lie within 1 standard deviation from the mean, approximately 95% of the data lie within 2 standard deviations from the mean, and approximately 99.7% of the data lie within 3 standard deviations from the mean.</p></li>
-<li><p>A <strong>z-score</strong> tells us how many standard deviations away from the mean a given value is. It is calculated as: <span class="math inline">\(\displaystyle{z = \frac{\text{value}-\text{mean}}{\text{standard deviation}} = \frac{x-\mu}{\sigma}}\)</span></p></li>
-<li><p>The <strong>probability applet</strong> allows us to use z-scores to calculate proportions, probabilities, and percentiles.</p></li>
-<li>A <strong>Q-Q plot</strong> is used to assess whether or not a set of data is normally distributed.</li>
-</ul>
-</div>
-<p><br></p>
-<div class="RecapHeading">
-Lesson 06 Recap
-</div>
-<div class="Summary">
-<ul>
-<li><p>The <strong>distribution of sample means</strong> is a distribution of all possible sample means (<span class="math inline">\(\bar x\)</span>) for a particular sample size. It has a mean of <span class="math inline">\(\mu\)</span> and a standard deviation of <span class="math inline">\(\sigma/\sqrt{n}\)</span>.</p></li>
-<li><p>The distribution of sample means is normal when <span class="math inline">\(\bar x\)</span> is normally distributed or when, thanks to the <strong>Central Limit Theorom (CLT)</strong>, our sample size (<span class="math inline">\(n\)</span>) is large.</p></li>
-<li>The <strong>Law of Large Numbers</strong> states that as the sample size (<span class="math inline">\(n\)</span>) gets larger, the sample mean (<span class="math inline">\(\bar x\)</span>) will get closer to the population mean (<span class="math inline">\(\mu\)</span>).</li>
-</ul>
-</div>
-<p><br></p>
-<div class="RecapHeading">
-Lesson 07 Recap
-</div>
-<div class="Summary">
-<ul>
-<li><p>When the distribution of sample means is normally distributed, we can use <strong>z-scores</strong> and the <strong>probability applet</strong> to calculate proportions and probabilities. A z-score is calculated as: <span class="math inline">\(\displaystyle{z = \frac{\text{value}-\text{mean}}{\text{standard deviation}} = \frac{\bar x-\mu}{\sigma/\sqrt{n}}}\)</span></p></li>
-<li>The <strong><span class="math inline">\(P\)</span>-value</strong> is the probability of getting a test statistic at least as extreme as the one you got, assuming <span class="math inline">\(H_0\)</span> is true. A <span class="math inline">\(P\)</span>-value is calculated by finding the area under the normal distribution curve that is more extreme (farther away from the mean) than the z-score.</li>
-</ul>
-</div>
-<p><br></p>
-</div>
-<p><br></p>
-</div>
-<div id="review-questions" class="section level2">
-<h2>Review Questions</h2>
+<p>==Lesson Summaries==</p>
+<p>{{Unit_Recap|1}}</p>
+<p>==Review Questions==</p>
 <ol style="list-style-type: decimal">
 <li><p>What is the name of the important statistical result that guarantees that the sampling distribution of the sample mean <span class="math inline">\(\bar x\)</span> will be normal, if the sample size is large?</p></li>
 <li><p>What is the name of the important statistical result that states that when the sample size is large, the sample mean <span class="math inline">\(\bar x\)</span> will be close to the population mean <span class="math inline">\(\mu\)</span>?</p></li>
 <li><p>Which of the following variables is/are categorical?</p></li>
 </ol>
-<ul>
-<li>The number of animals in the local zoo</li>
-<li>A randomly selected brand of toothpaste at a convenience store</li>
-<li>Age in years of a randomly selected vehicle in a parking lot</li>
-</ul>
+<p>:::<span class="math inline">\(\text{I}.~~\)</span> The number of animals in the local zoo :::<span class="math inline">\(\text{II}.~~\)</span> A randomly selected brand of toothpaste at a convenience store :::<span class="math inline">\(\text{III}.~~\)</span> Age in years of a randomly selected vehicle in a parking lot</p>
 <ol start="4" style="list-style-type: decimal">
 <li><p>The mean I.Q. test score in the United States is 100. Twenty randomly selected Statistics students took an I.Q. test, and the mean of their scores was 112. Which of these two numbers is a parameter and which is a statistic?</p></li>
 <li><p>Rotham City has four distinct neighborhoods. The property values are very similar within each neighborhood, but they vary considerably from neighborhood to neighborhood. One neighborhood has very low property values and another has extremely high property values. Property taxes are usually roughly proportional to the property values. What type of sample should we collect to gauge the residents’ responses to a proposed increase in property taxes?</p></li>
@@ -480,359 +429,31 @@ Lesson 07 Recap
 <li><p>At a school fund raiser, the name of every person who attended was entered into a drawing. At the end of the evening, six names were selected to receive door prizes. Which type of sampling scheme was implemented?</p></li>
 <li><p>A special interest group is conducting a survey regarding wolves in Yellowstone National Park. To adequately gauge opinions on both sides of the political spectrum, the researchers took the list of registered Democrats and selected a simple random sample of 100 people. Then, they took a list of registered Republicans and selected a simple random sample of 100 people. Which type of sampling scheme was implemented?</p></li>
 </ol>
-<p>A survey was taken of purchases at the Crossroads. Open the data file <a href="./Data/CrossroadsPurchases.xlsx">CrossroadsPurchases</a> and use this data to answer questions 9 and 10.</p>
+<p>A survey was taken of purchases at the Crossroads. Open the data file <span class="Link">[[Data|CrossroadsPurchases]]</span> and use this data to answer questions 9 and 10.</p>
 <ol start="9" style="list-style-type: decimal">
 <li><p>Calculate the descriptive statistics of the amounts spent in Crossroads purchases. Give the mean, standard deviation, and five-number summary of the data.</p></li>
 <li><p>Create a histogram representing the amounts spent in Crossroads purchases.</p></li>
 </ol>
 <p>Jessica Meir and her research team measured the body temperatures of a sample of diving elephant seals.<!-- \cite{Meir10} --> A thermistor was placed at a specific location on each seal to measure its body temperature. The body temperature of seals tends to decrease as they dive. The researchers estimated the typical body temperature of each seal at the time they initiate a dive and called this the “representative temperature” of the seal.</p>
 <p>Thermistors were placed in the hepatic sinus of four of the seals (named Bodil, Roberta, Larry, and Per.) The seal’s body temperature at the start of the dive was calculated to be:</p>
-<table>
-<thead>
-<tr class="header">
-<th>
-<p>
-Seal
-</p>
-</th>
-<th>
-<p>
-Representative<br /> Temperature (<span class="math inline">\(^\circ\text{C}\)</span>)
-</p>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>
-<p>
-Bodil
-</p>
-</td>
-<td>
-<p>
-37.91
-</p>
-</td>
-</tr>
-<tr class="even">
-<td>
-<p>
-Roberta
-</p>
-</td>
-<td>
-<p>
-37.25
-</p>
-</td>
-</tr>
-<tr class="odd">
-<td>
-<p>
-Larry
-</p>
-</td>
-<td>
-<p>
-38.98
-</p>
-</td>
-</tr>
-<tr class="even">
-<td>
-<p>
-Per
-</p>
-</td>
-<td>
-<p>
-38.16
-</p>
-</td>
-</tr>
-<tr class="odd">
-<td>
-</td>
-<td>
-</td>
-</tr>
-</tbody>
-</table>
+<p>{| class=“basic” |- align=“center” ! Seal !! Representative <br> Temperature (<span class="math inline">\(^\circ\text{C}\)</span>) |- align=“center” | Bodil ||37.91 |- align=“center” | Roberta ||37.25 |- align=“center” | Larry ||38.98 |- align=“center” | Per ||38.16 |- |}</p>
 <p>Complete the following table and answer questions 11 through 14 below.</p>
-<table>
-<thead>
-<tr class="header">
-<th>
-</th>
-<th>
-<p>
-Representative<br /> Temperature (<span class="math inline">\(^\circ\text{C}\)</span>)
-</p>
-</th>
-<th>
-<p>
-Deviation from<br /> the mean
-</p>
-</th>
-<th>
-<p>
-Squared<br /> Deviations
-</p>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>
-<p>
-Seal
-</p>
-</td>
-<td>
-<p>
-<span class="math inline">\(x\)</span>
-</p>
-</td>
-<td>
-<p>
-<span class="math inline">\((x-\bar x)\)</span>
-</p>
-</td>
-<td>
-<p>
-<span class="math inline">\((x-\bar x)^2\)</span>
-</p>
-</td>
-</tr>
-<tr class="even">
-<td>
-<p>
-Bodil
-</p>
-</td>
-<td>
-<p>
-37.91
-</p>
-</td>
-<td>
-<p>
-“A”
-</p>
-</td>
-<td>
-</td>
-</tr>
-<tr class="odd">
-<td>
-<p>
-Roberta
-</p>
-</td>
-<td>
-<p>
-37.25
-</p>
-</td>
-<td>
-</td>
-<td>
-<p>
-“B”
-</p>
-</td>
-</tr>
-<tr class="even">
-<td>
-<p>
-Larry
-</p>
-</td>
-<td>
-<p>
-38.98
-</p>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-<tr class="odd">
-<td>
-<p>
-Per
-</p>
-</td>
-<td>
-<p>
-38.16
-</p>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-<tr class="even">
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-</tbody>
-</table>
+<p>{| class=“basic” |- align=“center” ! !! Representative <br> Temperature (<span class="math inline">\(^\circ\text{C}\)</span>) !! Deviation from <br> the mean !! Squared <br> Deviations |- align=“center” ! Seal !! <span class="math inline">\(x\)</span> !! <span class="math inline">\((x-\bar x)\)</span> !! <span class="math inline">\((x-\bar x)^2\)</span> |- align=“center” | Bodil || 37.91 || “A” || |- align=“center” | Roberta || 37.25 || || “B” |- align=“center” | Larry || 38.98 || || |- align=“center” | Per || 38.16 || || |- align=“center” |}</p>
 <ol start="11" style="list-style-type: decimal">
 <li><p>What is the value of the number that goes in the position marked with an “A” in the table above?</p></li>
 <li><p>What is the value of the number that goes in the position marked with an “B” in the table above?</p></li>
-<li><p>What quantity is equal to the sum of the numbers in the “Squared Deviations” column?</p></li>
-</ol>
-<ul>
-<li>A. The mean</li>
-<li>B. The standard deviation</li>
-<li>C. The variance</li>
-<li>D. None of these is correct</li>
-</ul>
-<ol start="14" style="list-style-type: decimal">
+<li><p>What quantity is equal to the sum of the numbers in the “Squared Deviations” column? :::A. The mean :::B. The standard deviation :::C. The variance :::D. None of these is correct</p></li>
 <li><p>What is the standard deviation of these temperatures?</p></li>
 <li><p>(True or False) Under certain conditions, the standard deviation can be negative.</p></li>
 <li><p>In the same study, the researchers placed thermistors (temperature sensors) in the three seals (named Chick, Starburst, and Patty) near their spinal cord and brain in the extradural vein. They placed thermistors in six other seals (named Sir Richard, Jerry, Sammy, Knut, Jonesie, and Butler) in their aorta, the largest artery in the body. Finally, they placed thermistors in four other seals (named Bodil, Roberta, Larry, and Per) in their hepatic sinus. The results from this study are summarized in the table below.</p></li>
 </ol>
-<table>
-<thead>
-<tr class="header">
-<th>
-</th>
-<th>
-<p>
-Sample<br /> Size
-</p>
-</th>
-<th>
-<p>
-Mean
-</p>
-</th>
-<th>
-<p>
-Standard<br /> Deviation
-</p>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>
-<p>
-Location
-</p>
-</td>
-<td>
-<p>
-<span class="math inline">\(n\)</span>
-</p>
-</td>
-<td>
-<p>
-<span class="math inline">\(\bar x\)</span>
-</p>
-</td>
-<td>
-<p>
-<span class="math inline">\(s\)</span>
-</p>
-</td>
-</tr>
-<tr class="even">
-<td>
-<p>
-Arterial
-</p>
-</td>
-<td>
-<p>
-6
-</p>
-</td>
-<td>
-<p>
-38.785
-</p>
-</td>
-<td>
-<p>
-1.554
-</p>
-</td>
-</tr>
-<tr class="odd">
-<td>
-<p>
-Extradural
-</p>
-</td>
-<td>
-<p>
-3
-</p>
-</td>
-<td>
-<p>
-37.247
-</p>
-</td>
-<td>
-<p>
-0.577
-</p>
-</td>
-</tr>
-<tr class="even">
-<td>
-<p>
-Hepatic Sinus
-</p>
-</td>
-<td>
-<p>
-4
-</p>
-</td>
-<td>
-<p>
-38.070
-</p>
-</td>
-<td>
-<p>
-0.715
-</p>
-</td>
-</tr>
-<tr class="odd">
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-</tbody>
-</table>
+<p>{| class=“basic” ! !! Sample <br> Size !! Mean !! Standard <br> Deviation |- align=“center” ! Location !! <span class="math inline">\(n\)</span> !! $ x $ !! <span class="math inline">\(s\)</span> |- align=“center” | Arterial || 6 || 38.785 || 1.554 |- align=“center” | Extradural || 3 || 37.247 || 0.577 |- align=“center” | Hepatic Sinus || 4 || 38.070 || 0.715 |- |}</p>
 <p>Which location resulted in the most consistent temperature measurements from one seal to another? Justify your answer.</p>
 <ol start="17" style="list-style-type: decimal">
 <li>In your own words, and without using any mathematical symbols or statistical jargon, explain what the standard deviation is. Do not tell how to calculate the standard deviation, but explain what it represents.</li>
 </ol>
 <p>The number of hours students spent studying for an exam were recorded. The data are represented by the boxplot below. Use this boxplot to answer questions 18 and 19.</p>
-<p><img src="Images/Review_1_Boxplot.jpg"></p>
-<p><br></p>
+<p>[[<a href="File:Review" class="uri">File:Review</a> 1 Boxplot.jpg|400px|link=|center]]</p>
 <ol start="18" style="list-style-type: decimal">
 <li><p>Give the five-number summary of this data.</p></li>
 <li><p>What percentage of the data lies between 4 hours and 8 hours?</p></li>
@@ -859,40 +480,16 @@ Hepatic Sinus
 <li><p>What are the mean and standard deviation of the distribution of sample mean scores for all such samples?</p></li>
 <li><p>What is the probability that the sample mean GMAT score for a SRS of <span class="math inline">\(n=15\)</span> students will be greater than 600?</p></li>
 </ol>
-<p><br></p>
-</div>
-<div id="navigation" class="section level2">
-<h2>Navigation</h2>
-<center>
-<table>
-<colgroup>
-<col width="38%" />
-<col width="30%" />
-<col width="30%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center"><strong>Previous Reading</strong></th>
-<th align="center"><strong>This Reading</strong></th>
-<th align="center"><strong>Next Reading</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><a href="Lesson07.html">Lesson 7: Probability Calculations involving a Mean Response</a></td>
-<td align="center">Lesson 08: Review for Exam 1</td>
-<td align="center"><a href="Lesson09.html">Lesson 9: Inference for One Mean: Sigma Known (Hypothesis Test)</a></td>
-</tr>
-</tbody>
-</table>
-</center>
-</div>
+<p>==Navigation==</p>
+<p>{| |- align=“center” | ’‘’Previous Reading’’‘: <br> Lesson 07: <br> [[Lesson 7: Probability Calculations involving a Mean Response|Probability Calculations involving a Mean Response]] |                    |’‘’This Reading’’‘: <br> Lesson 08: <br> Review for Exam 1 |                    |’‘’Next Reading’’’: <br> Lesson 09: <br> [[Lesson 9: Inference for One Mean: Sigma Known (Hypothesis Test)|Inference for One Mean: Sigma Known (Hypothesis Test)]] |}</p>
 
 <br />
 <hr />
 <p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
 
 
+</div>
+</div>
 
 </div>
 

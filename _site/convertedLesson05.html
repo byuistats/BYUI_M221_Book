@@ -192,27 +192,29 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+      <a href="convertedLesson01.html">Lesson 1: Course Introduction</a>
     </li>
     <li>
-      <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
+      <a href="convertedLesson02.html">Lesson 2: The Statistical Process</a>
     </li>
     <li>
-      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+      <a href="convertedLesson03.html">Lesson 3: Describing Quantitative Data</a>
     </li>
     <li>
-      <a href="Lesson03.html">Lesson 4: Rules of Probability</a>
+      <a href="convertedLesson04.html">Lesson 4: Rules of Probability</a>
     </li>
     <li>
-      <a href="Lesson03.html">Lesson 5: Normal Distributions</a>
+      <a href="convertedLesson05.html">Lesson 5: Normal Distributions</a>
     </li>
     <li>
-      <a href="Lesson03.html">Lesson 6: The Central Limit Theorem</a>
+      <a href="convertedLesson06.html">Lesson 6: The Central Limit Theorem</a>
     </li>
     <li>
-      <a href="Lesson03.html">Lesson 7: Probability Calculations for a Sample Mean</a>
+      <a href="convertedLesson07.html">Lesson 7: Probability Calculations for a Sample Mean</a>
     </li>
-    <li class="dropdown-header">Lesson 8: Unit 1 Review</li>
+    <li>
+      <a href="convertedLesson08.html">Lesson 8: Unit 1 Review</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -401,7 +403,7 @@ Answer the following question:
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
 <ul>
-<li>Gustavo’s height is $ 182.5 − 173.0 = 9.5   $ above the mean. The standard deviation of the height of Brazilian men is 6.3 cm, so his height is $   $ standard deviations above the mean.</li>
+<li>Gustavo’s height is <span class="math inline">\(182.5 − 173.0 = 9.5 \text{ cm  }\)</span> above the mean. The standard deviation of the height of Brazilian men is 6.3 cm, so his height is <span class="math inline">\(\displaystyle{ \frac{9.5}{6.3} =1.508 }\)</span> standard deviations above the mean.</li>
 </ul>
 </div>
 <p> </p>
@@ -412,8 +414,8 @@ Answer the following question:
 <h5>Computing <span class="math inline">\(z\)</span>-scores</h5>
 <p>When we examined the heights of Serwa and Gustavo, we compared their height to the standard deviation. If we look carefully at the steps we did, we subtracted each individual’s height from the mean height for people of the same gender and nationality.</p>
 <p>This shows how much taller or shorter the person is than the mean height. In order to compare the height difference to the standard deviation, we divide the difference by the standard deviation. This gives the number of standard deviations the individual is above or below the mean.</p>
-<p>For example, Serwa’s height is 169.0 cm. If we subtract the mean and divide by the standard deviation, we get <span class="math display">\[z = \frac{169.0 - 159.0}{4.9} = 2.041.\]</span> We call this number a <span class="math inline">\(z\)</span>-score. The <span class="math inline">\(z\)</span>-score for a data value tells how many standard deviations away from the mean the observation lies. If the <span class="math inline">\(z\)</span>-score is positive, then the observed value lies above the mean. A negative <span class="math inline">\(z\)</span>-score implies that the value was below the mean.</p>
-<p>We compute the <span class="math inline">\(z\)</span>-score for Gustavo’s height similarly, and obtain <span class="math display">\[z = \frac{182.5 - 173.0}{6.3} = 1.508.\]</span> Gustavo’s <span class="math inline">\(z\)</span>-score is 1.508. As noted above, this is about one-and-a-half standard deviations above the mean. In general, if an observation <span class="math inline">\(x\)</span> is taken from a random process with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>, then the <span class="math inline">\(z\)</span>-score is <span class="math display">\[z = \frac{x -\mu }{\sigma}.\]</span></p>
+<p>For example, Serwa’s height is 169.0 cm. If we subtract the mean and divide by the standard deviation, we get <span class="math display">\[z = \frac{169.0 - 159.0}{4.9} = 2.041\]</span> We call this number a <span class="math inline">\(z\)</span>-score. The <span class="math inline">\(z\)</span>-score for a data value tells how many standard deviations away from the mean the observation lies. If the <span class="math inline">\(z\)</span>-score is positive, then the observed value lies above the mean. A negative <span class="math inline">\(z\)</span>-score implies that the value was below the mean.</p>
+<p>We compute the <span class="math inline">\(z\)</span>-score for Gustavo’s height similarly, and obtain <span class="math display">\[z = \frac{182.5 - 173.0}{6.3} = 1.508\]</span> Gustavo’s <span class="math inline">\(z\)</span>-score is 1.508. As noted above, this is about one-and-a-half standard deviations above the mean. In general, if an observation <span class="math inline">\(x\)</span> is taken from a random process with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>, then the <span class="math inline">\(z\)</span>-score is <span class="math display">\[z = \frac{x -\mu }{\sigma}\]</span></p>
 <p>The <span class="math inline">\(z\)</span>-score can be computed for data from any distribution, but it is most commonly applied to normally distributed data.</p>
 </div>
 <div id="rule-for-bell-shaped-distributions" class="section level5">
@@ -421,8 +423,9 @@ Answer the following question:
 <p>Heights of women (or men) in a particular population follow a normal distribution. Most people’s heights are close to the mean. A few are very tall or very short. We would like to make a more precise statement than this.</p>
 <div class="Emphasis">
 <p>For any bell-shaped distribution, - 68% of the data will lie within 1 standard deviation of the mean, - 95% of the data will lie within 2 standard deviations of the mean, and - 99.7% of the data will lie within 3 standard deviations of the mean.</p>
-<p>This is called the 68-95-99.7% Rule for Bell-shaped Distributions. Some statistics books refer to this as the Empirical Rule.</p>
+<p>This is called the 68-95-99.7% Rule for Bell-shaped Distributions. Some statistics books refer to this as the Empirical Rule. <br></p>
 </div>
+<p><br></p>
 <p><img src="Images/L03_A06_R04.jpg"></p>
 <p>Approximately 68% of the observations from a bell-shaped distribution will be between the values of <span class="math inline">\(\mu -~\sigma~\)</span>and <span class="math inline">\(\mu +~\sigma~\)</span>. Consider the heights of young adult women in Ghana. We expect that about 68% of Ghanian women have a height between the values of <span class="math display">\[\mu -~\sigma = 159.0 − 4.9 = 154.1~\text{cm}\]</span> and <span class="math display">\[\mu +~\sigma = 159.0 + 4.9 = 163.9~\text{cm}.\]</span></p>
 <p>So, if a female is chosen at random from all the young adult women in Ghana, about 68% of those chosen will have a height between 154.1 and 163.9 cm. Similarly, 95% of the women’s heights will be between the values of <span class="math display">\[\mu − 2\sigma = 159.0 − 2(4.9) = 149.2~\text{cm}\]</span> and <span class="math display">\[\mu + 2\sigma = 159.0 + 2(4.9) = 168.8~\text{cm}.\]</span></p>
@@ -463,7 +466,7 @@ Answer the following questions:
 <a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q4" style="display:none;">
 <ul>
-<li>Serwa’s height is unusual. Her <span class="math inline">\(z\)</span>-score is: $ z = 2.041. $ This is more than two standard deviations away from the mean. Gustavo’s height is not unusual. His <span class="math inline">\(z\)</span>-score is less than two standard deviations away from the mean.</li>
+<li>Serwa’s height is unusual. Her <span class="math inline">\(z\)</span>-score is: <span class="math inline">\(z = 2.041\)</span> This is more than two standard deviations away from the mean. Gustavo’s height is not unusual. His <span class="math inline">\(z\)</span>-score is less than two standard deviations away from the mean.</li>
 </ul>
 </div>
 <p> </p>
@@ -482,7 +485,14 @@ Answer the following questions:
 <p>An important part of the practice of statistics is finding areas under a normal curve. The area under a normal curve, say, to the left of a value, gives the probability of obtaining an observation less than (or equal to) that value. This is an example of converting a value to an area. It is also important to convert an area to a value. For example, if you want to find the 40th percentile for data that follow a normal distribution, you find the value of the observation such that the area (under the curve) to the left of this value is 0.40.</p>
 <div id="introduction-to-the-normal-probability-applet" class="section level3">
 <h3>Introduction to the Normal Probability Applet</h3>
-<p>{{Help:Normal_Probability_Applet_Instructions|}}</p>
+<p>The Normal Probability Applet is a visualization program offering statistics students insights and computations for the relationship between <span class="math inline">\(z\)</span>-scores and areas under the standard normal curve. You can find a link to this applet on the [[Main Page]] of the wiki under Course Resources. This app is also compatible to use on your phone, iPad, and other mobile devices. The app is stored at <a href="http://byuimath.com/apps/normprob.html" class="uri">http://byuimath.com/apps/normprob.html</a>. If you want a copy you can open from your desktop, just right click the link and save it to your computer.</p>
+<p>To use this applet follow these instructions:</p>
+<p><em>Click on an area below the curved line to shade/unshade the region. </em>Click and drag the red lines to adjust the <span class="math inline">\(z\)</span>-scores and obtain the area. <em>Type a <span class="math inline">\(z\)</span>-score into one of the bottom input boxes and hit “Enter” to get an area. </em>Type in an area and hit “Enter” to get a <span class="math inline">\(z\)</span>-score.</p>
+<br>
+<center>
+{{#widget:Iframe |url=<a href="http://byuimath.com/apps/normprob.html?width=" class="uri">http://byuimath.com/apps/normprob.html?width=</a>{{{width|600}}}&amp;z={{{z|1}}}&amp;height={{{height|400}}}&amp;left={{{left|1}}}&amp;mid={{{mid|0}}}&amp;right={{{right|1}}}&amp;area={{{area|a}}}&amp;static={{{static|0}}}&amp;title={{{title|1}}}&amp;border={{{border|0}}} |width={{{fwidth|650}}} |height={{{fheight|450}}} |border=0 }}
+</center>
+<p><br></p>
 </div>
 <div id="converting-a-z-score-to-a-probability" class="section level3">
 <h3>Converting a <span class="math inline">\(z\)</span>-score to a Probability</h3>
@@ -635,8 +645,10 @@ Answer the following questions:
 </tr>
 </tbody>
 </table>
+<p><br></p>
 <p>The 90<sup>th</sup> percentile of the batting averages is 0.305. That means that 90% of the players have a batting average that is 0.305 or less.</p>
 <p>The ability to use the Normal Probability Applet to find probabilities is very important in this course. Take some time to familiarize yourself with the applet and to practice using it.</p>
+<p><br></p>
 </div>
 </div>
 <div id="assessing-normality-using-a-q-q-plot" class="section level2">
@@ -651,14 +663,32 @@ Answer the following questions:
 <p>Notice that the points fall in a fairly straight line. These data appear to follow a normal distribution.</p>
 <p>In any Q-Q plot, we expect little “wiggles” in the points. If the points in the Q-Q plot are essentially in a line, then we conclude that the data are normally distributed.</p>
 <p><strong>Instructions for creating a Q-Q Plot:</strong></p>
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-<p>{{Software_Filter | PageName=QQ-plot }}</p>
+<ul>
+<li><strong>Here is how to make a Q-Q plot in Excel</strong></li>
+<li>Open the data file <a href="./Data/BattingAverages.xlsx">BattingAverages.xlsx</a></li>
+<li>Copy the data you needs from this file (the column labeled BattingAvg)</li>
+<li>Open the file <a href="./Data/QuantitativeDescriptiveStatistics.xlsx">Quantitative Descriptive Statistics</a></li>
+<li>Click on the tab labeled “QQ Plots”</li>
+<li>Paste the data into Column A of the QQ plots worksheet
+<ul>
+<li>Sort Column A in order from smallest to largest.</li>
+<li>The graph on the right will be your Q-Q plot.</li>
+</ul></li>
+</ul>
+<p><img src="./Images/Excel_QQ-Plot_ _L05.jpg"> <br></p>
+</div>
+<p><br></p>
 <p>Make sure you can create the Q-Q plot shown above on your own.</p>
 </div>
 <div id="body-temperatures" class="section level3">
 <h3>Body Temperatures</h3>
 <p>A group of researchers led by Philip A. Mackowiak, MD, conducted a study to assess the true mean body temperatures of healthy adults. They selected n = 148 subjects between the ages of 18 and 40 years old, representative of the general population.</p>
-<p>Each volunteer was given a physical to assure that they were not ill at the time of the data collection. Their axillary (under the arm) body temperature was measured and reported in a paper published in the Journal of the American Medical Association. [1] These data were extracted and are presented in the file <span class="Link">[[Data|BodyTemp]]</span>. The body temperatures are given in degrees Fahrenheit.</p>
+<p>Each volunteer was given a physical to assure that they were not ill at the time of the data collection. Their axillary (under the arm) body temperature was measured and reported in a paper published in the Journal of the American Medical Association. [1] These data were extracted and are presented in the file <a href="./Data/BodyTemp.xlsx">BodyTemp</a>. The body temperatures are given in degrees Fahrenheit.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
@@ -700,7 +730,17 @@ Answer the following questions:
 <a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Refresh My Memory</span></a>
 <div id="Q8" style="display:none;">
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-<p>{{Software_Filter|PageName=Histogram-Condensed}}</p>
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<ul>
+<li><p><strong>Instructions for Creating a Histogram in Excel</strong></p></li>
+<li><p>To make a histogram in Excel, you can use the Excel file <a href="./Data/QuantitativeDescriptiveStatistics.xlsx">Quantitative Descriptive Statistics</a>. Copy and paste the desired data values into the first column (on the left side) of the tool. The histogram will be generated automatically.</p></li>
+</ul>
+<p><img src="Images/Lesson_2_Activity_2-2.JPG"></p>
+<p><br></p>
+</div>
 </div>
 <p><br>  </p>
 </div>
