@@ -140,7 +140,35 @@ We will need to conduct the analysis using software, so we can report this value
 '''Instructions for conducting a test for one mean with $sigma$ unknown:'''
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=OneSampleTtest }}
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+:Here are the instructions for conducting the one sample t-test in Excel:
+
+:The Excel file needed for this analysis is {{Spreadsheet|QIP}}.  We will use this Excel file to conduct the hypothesis tests for a single mean with $\sigma$ unknown.
+
+::* After opening the file, please click on the tab labeled "One-sample t-test".  
+::* Paste the data in the appropriate place in Column A.
+::* Set the null hypothesis value in cell D10.  For this example, the value should be 98.6.
+::* Click in cell D11 and use the drop down menu to set the alternative hypothesis to: "Not Equal To"
+
+:The image below shows the Excel file after these changes have been made.
+
+[[File:BodyTemp-tTest-Excel.png|link=|400px|center]]
+
+:Consider each of the following alternative hypotheses that could be used in a test for a single mean where the null hypothesis is $H_0: \mu = 98.6$.
+
+::* $H_a: \mu \ne 98.6$
+::::::Choose "Not Equal To" in the drop-down menu in cell D11.
+::* $H_a: \mu < 98.6$
+::::::Choose "Less Than" in the drop-down menu in cell D11.
+::* $H_a: \mu > 98.6$  
+::::::Choose "Greater Than" in the drop-down menu in cell D11.
+
+:You will have opportunities to practice using each of these.
+<br>
+</div>
+<br>
+</div>
 
 The interpretation of the results will follow the pattern established in the previous hypothesis tests.  If the $P$-value is less than the $\alpha$ level, we reject the null hypothesis. If the $P$-value is greater than the $\alpha$ level, we fail to reject the null hypothesis.  This is true for every hypothesis test.
 
@@ -224,7 +252,9 @@ Using this data set, test the hypothesis that the mean weight of babies born in 
 <div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 
 <div class="stats A">
-::{{:Software:Excel-OneSampleTtestOutput}}
+When the data are entered into the file {{Spreadsheet|QIP}}, the following output is generated:
+
+[[File:BabyBoom-Ttest-Excel.png|link=|400px|center]]
 </div>
 
 
@@ -349,7 +379,15 @@ Koehn wants to find an estimate of the true mean BLEU score for text translated 
 '''Give the relevant summary statistics'''
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=BLEUscores-SummaryStats }}
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+:Copying the <span class=Link>[[Data|BLEU-Scores]]</span> data into the {{Spreadsheet|QIP}} file in Excel, we get the following:
+
+[[File:BLEUscores-Exceloutput.png|link=|400px|center]]
+<br>
+</div>
+<br>
+
 
 The summary statistics are:
 
@@ -421,7 +459,20 @@ $$
 </div>
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=CI-OneMeanSigmaUnknown }}
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+:We will use Excel to find the confidence intervals for the mean.  
+
+:Do the following:
+::* Open the file {{Spreadsheet|QIP}}
+::* Click on the tab labeled "One-sample t-test"
+::* Enter the data, and
+::* Set the confidence level.  
+
+:In this case, we are using a 95% confidence level.  So, you set the confidence level in the Excel file to 0.95 (i.e., 95%).  The confidence interval is given to you in cells G21 and H21.
+<br>
+</div>
+<br>
 
 The 95% confidence interval for the true mean BLEU score is:
 
@@ -494,18 +545,30 @@ The coins were "borrowed" from a bank in Belgium, one batch at a time. The weigh
 <div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 
 <div class="stats A">
-::{{:Software:Excel-EuroWeightOutput}}
-</div>
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+The following output was generated using the Excel file {{Spreadsheet|QIP}}:
 
+[[File:EuroWeights-Output-Excel.png|link=|400 px|center]]
+
+::Typically, we round our computations to one more decimal place of precision than was given in the original data.  This means we need one more decimal place than is shown in the output above.  We can increase the precision by selecting the cell we want to modify and then clicking on the following button in the "Home" menu ribbon in Excel:
+
+[[File:Excel-IncreaseDecimals.png|link=|400 px|center]]
+</div>
+<br>
+</div>
+<br>
 
 ::When we do this, we get the following summary statistics:
-<center>$
+<center>
+$$
 \begin{align}
 \bar x =& 7.521 \\ 
 s =& 0.034 \\
 n =& 2000
 \end{align}
-$</center>
+$$
+</center>
 </div>
 
 

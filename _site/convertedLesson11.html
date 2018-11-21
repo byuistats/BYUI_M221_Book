@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Lesson 11</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 221B</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="convertedLesson01.html">Lesson 1: Course Introduction</a>
+    </li>
+    <li>
+      <a href="convertedLesson02.html">Lesson 2: The Statistical Process</a>
+    </li>
+    <li>
+      <a href="convertedLesson03.html">Lesson 3: Describing Quantitative Data</a>
+    </li>
+    <li>
+      <a href="convertedLesson04.html">Lesson 4: Rules of Probability</a>
+    </li>
+    <li>
+      <a href="convertedLesson05.html">Lesson 5: Normal Distributions</a>
+    </li>
+    <li>
+      <a href="convertedLesson06.html">Lesson 6: The Central Limit Theorem</a>
+    </li>
+    <li>
+      <a href="convertedLesson07.html">Lesson 7: Probability Calculations for a Sample Mean</a>
+    </li>
+    <li>
+      <a href="convertedLesson08.html">Lesson 8: Unit 1 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson09.html">Lesson 9: Hypothesis Test for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson10.html">Lesson 10: Confidence Interval for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson11.html">Lesson 11: Inference for One Mean (Sigma Unknown)</a>
+    </li>
+    <li>
+      <a href="Lesson12.html">Lesson 12: Inference for Match Pairs</a>
+    </li>
+    <li>
+      <a href="Lesson13.html">Lesson 13: Inference for Two Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson14.html">Lesson 14: Inference for Several Independent Samples</a>
+    </li>
+    <li class="dropdown-header">Lesson 15: Unit 2 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson16.htlm">Lesson 16: Describing Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson17.html">Lesson 17: Inference for One Proportion</a>
+    </li>
+    <li>
+      <a href="Lesson18.html">Lesson 18: Inference for Two Proportions</a>
+    </li>
+    <li>
+      <a href="Lesson19.html">Lesson 19: Inference for Independence of Categorical Data</a>
+    </li>
+    <li class="dropdown-header">Lesson 20: Unit 3 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson21.html">Lesson 21: Describing Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson22.html">Lesson 22: Simple Linear Regression</a>
+    </li>
+    <li>
+      <a href="Lesson23.html">Lesson 23: Inference for Bivariate Data</a>
+    </li>
+    <li class="dropdown-header">Lesson 24: Unit 4 Review</li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="Data.html">Data</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lesson 11</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#lesson-outcomes">Lesson Outcomes</a></li>
+<li><a href="#what-if-we-dont-know-sigma">What If We Don’t Know <span class="math inline">\(\sigma\)</span>?</a></li>
+<li><a href="#hypothesis-tests">Hypothesis Tests</a><ul>
+<li><a href="#body-temperatures-revisited">Body Temperatures Revisited</a></li>
+<li><a href="#baby-boom">Baby Boom</a></li>
+</ul></li>
+<li><a href="#confidence-intervals">Confidence Intervals</a><ul>
+<li><a href="#automatic-language-translation-programs">Automatic Language Translation Programs</a></li>
+<li><a href="#euro-weights">Euro Weights</a></li>
+</ul></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#navigation">Navigation</a></li>
+</ul>
+</div>
+
+<script type="text/javascript">
+ function showhide(id) {
+    var e = document.getElementById(id);
+    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+ }
+</script>
+<div style="float:right;width=40%;">
+<br/>
+<div style="padding-left:10%;">
+<strong>Optional Lesson Video</strong>
+</div>
+<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-eXvWi8id9S0NiKSyGYr6j" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+</div>
+<div id="lesson-outcomes" class="section level2">
+<h2>Lesson Outcomes</h2>
+<a href="javascript:showhide('outcomes')"><span style="font-size:8pt;">Click here to show Outcomes for this Lesson</span></a>
+<div id="outcomes" style="display:none;">
+<p>By the end of this lesson, you should be able to:</p>
+<ul>
+<li><p>Confidence Intervals for a single mean with σ unknown:</p></li>
+<li>Calculate and interpret a confidence interval for a population mean given a confidence level.</li>
+<li>Identify a point estimate and margin of error for the confidence interval.</li>
+<li>Show the appropriate connections between the numerical and graphical summaries that support the confidence interval.</li>
+<li><p>Check the requirements the confidence interval.</p></li>
+<li><p>Hypothesis Testing for a single mean with σ unknown:</p></li>
+<li>State the null and alternative hypothesis.</li>
+<li>Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.</li>
+<li>Assess the statistical significance by comparing the p-value to the α-level.</li>
+<li>Check the requirements for the hypothesis test.</li>
+<li>Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test.</li>
+<li><p>Draw a correct conclusion for the hypothesis test.</p></li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="what-if-we-dont-know-sigma" class="section level2">
+<h2>What If We Don’t Know <span class="math inline">\(\sigma\)</span>?</h2>
+<p><img src="Images/WilliamSealyGosset-NoCopyright.png"></p>
+<p>In practice, we almost never know the population standard deviation, <span class="math inline">\(\sigma\)</span>. So, it is generally not appropriate to use the formula <span class="math display">\[
+z = \frac{ \bar x - \mu }{ \sigma / \sqrt{n} }
+\]</span> In 1908, William Sealy Gosset published a solution to this problem <!--<cite>Gosset08</cite>-->. He found a way to appropriately compute the confidence interval for the mean when <span class="math inline">\(\sigma\)</span> is not known. The basic idea is to use the sample standard deviation, <span class="math inline">\(s\)</span> in the place of the true population standard deviation, <span class="math inline">\(\sigma\)</span>. If <span class="math inline">\(\sigma\)</span> is not known, we cannot base the calculations on the standard normal distribution, and we cannot use the formula above to conduct hypothesis tests.</p>
+<p>In a remarkable piece of work, Gosset found the appropriate distribution to use when <span class="math inline">\(\sigma\)</span> is unknown. At the time of this discovery, Gosset worked for the Guinness brewery. To avoid problems with industrial espionage, Guinness prohibited employees from publishing any research results. Knowing his work provided a significant contribution to Statistics, Gosset chose convinced his employer to allow him to publish under a pseudonum. He chose the pseudonym “Student”. Gosset’s test statistic was denoted by the letter <span class="math inline">\(t\)</span>, this distribution has come to be known as <strong>Student’s t-distribution</strong>.</p>
+<p><span class="math display">\[
+t = \frac{ \bar x - \mu }{ s / \sqrt{n} }
+\]</span></p>
+<p>The <span class="math inline">\(t\)</span>-distribution is bell-shaped and symmetrical. The <span class="math inline">\(t\)</span>-distribution has a mean of 0, but it has more area in the tails than the standard normal distribution. The exact shape of the <span class="math inline">\(t\)</span>-distribution depends on a parameter called the <strong>degrees of freedom</strong> (abbreviated <span class="math inline">\(df\)</span>). The degrees of freedom is related to the sample size. As the sample size goes up, the degrees of freedom increase accordingly. For the procedures discussed in this lesson, the degrees of freedom equal the sample size minus one: <span class="math inline">\(df = n-1\)</span>.</p>
+<p><a href="http://byuimath.com/apps/normprobwitht.html" target="_blank">Click here</a> to explore how the shape of the <span class="math inline">\(t\)</span>-distribution changes with the degrees of freedom. Notice that as the degrees of freedom increases, the shape of the <span class="math inline">\(t\)</span>-distribution (black curve) gets closer to the standard normal distribution (red curve). The red curve is identical in the three images below.</p>
+<center>
+<table>
+<thead>
+<tr class="header">
+<th>
+<p>
+<span class="math inline">\(t\)</span>-distribution<br /> with <span class="math inline">\(df = 1\)</span>
+</p>
+</th>
+<th>
+<p>
+<span class="math inline">\(t\)</span>-distribution<br /> with <span class="math inline">\(df = 5\)</span>
+</p>
+</th>
+<th>
+<p>
+<span class="math inline">\(t\)</span>-distribution<br /> with <span class="math inline">\(df = 15\)</span>
+</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>
+<p>
+<img src="Images/T-dist-df-01.png">
+</p>
+</td>
+<td>
+<p>
+<img src="Images/T-dist-df-05.png">
+</p>
+</td>
+<td>
+<p>
+<img src="Images/T-dist-df-15.png">
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+(Image credit: Webster West, <a href="http://www.stat.tamu.edu/~west/applets/tdemo1.html">http://www.stat.tamu.edu/~west/applets/tdemo1.html</a>)
+</p>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<!-- <center> -->
+<!-- {| class="wikitable" -->
+<!-- |-  -->
+<!-- ! $t$-distribution <br> with $df = 1$ -->
+<!-- ! $t$-distribution <br> with $df = 5$ -->
+<!-- ! $t$-distribution <br> with $df = 15$ -->
+<!-- |-  -->
+<!-- | <img src="Images/T-dist-df-01.png"> -->
+<!-- | <img src="Images/T-dist-df-05.png"> -->
+<!-- | <img src="Images/T-dist-df-15.png"> -->
+<!-- |-  -->
+<!-- | align="center" colspan="3" | (Image credit: Webster West, http://www.stat.tamu.edu/~west/applets/tdemo1.html) <!-- We do not have permission to use these images....-->
+<!-- |} -->
+<!-- </center> -->
+<p><br></p>
+</div>
+<div id="hypothesis-tests" class="section level2">
+<h2>Hypothesis Tests</h2>
+<p><img src="Images/StepsAll.png"></p>
+<div id="body-temperatures-revisited" class="section level3">
+<h3>Body Temperatures Revisited</h3>
+<p>We will apply the <span class="math inline">\(t\)</span>-distribution to the body temperature data we explored previously.</p>
+<p>This hypothesis test is conducted in a manner similar to a test for a single mean where <span class="math inline">\(\sigma\)</span> is known, except that instead of using the population standard deviation, <span class="math inline">\(\sigma\)</span>, in the calculations, we estimate this value using the sample standard deviation, <span class="math inline">\(s\)</span>. This leads to a <span class="math inline">\(t\)</span>-distribution, rather than a normal distribution for the test statistic. We will not need to compute the value of this test statistic by hand. It will be done using Software.</p>
+<p><img src="Images/Step1.png"></p>
+<p><strong>Summarize the relevant background information</strong></p>
+<p>We want to conduct a hypothesis test to determine if the mean body temperature is different from 98.6° Fahrenheit. Previously, we assumed that we knew the value of <span class="math inline">\(\sigma\)</span>. Actually, this value is not known.</p>
+<p><strong>State the null and alternative hypotheses and the level of significance</strong></p>
+<p><span class="math display">\[
+\begin{array}{rl}
+H_0: \mu = 98.6\\
+H_a: \mu \ne 98.6\\
+\end{array}
+\]</span></p>
+<p><span class="math display">\[
+\alpha = 0.05
+\]</span></p>
+<p><img src="Images/Step2.png"></p>
+<p><strong>Describe the data collection procedures</strong></p>
+<p>We will use the body temperature data, <span class="Link">[[Data|BodyTemp]]</span>, collected by Dr. Mackowiak and his colleagues to conduct the test. <!-- <cite>Mackowiak92</cite> --></p>
+<p><img src="Images/Step3.png"></p>
+<p><strong>Give the relevant summary statistics</strong></p>
+<p><span class="math display">\[
+\begin{array}{l}
+\bar x = 98.23\\
+s = 0.738\\
+n = 148
+\end{array}
+\]</span></p>
+<p><strong>Make an appropriate graph (e.g. a histogram) to illustrate the data</strong></p>
+<p><img src="Images/BodyTemp-Histogram-LoRes.png"></p>
+<p><img src="Images/Step4.png"></p>
+<p><strong>Verify the requirements have been met</strong></p>
+<ul>
+<li>We assume that the individuals chosen to participate in the study represent a (simple) random sample from the population.</li>
+<li><span class="math inline">\(\bar x\)</span> will be normally distributed, because the sample size is large. (Note: We could have also noticed that the body temperature data appears to be normally distributed, so even with a small sample size, <span class="math inline">\(\bar x\)</span> would be normal.)</li>
+</ul>
+<p><strong>Give the test statistic and its value</strong></p>
+<p>We will need to conduct the analysis using software, so we can report this value.</p>
+<p><strong>Instructions for conducting a test for one mean with <span class="math inline">\(sigma\)</span> unknown:</strong></p>
+<p><br></p>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p>Here are the instructions for conducting the one sample t-test in Excel:</p>
+<p>The Excel file needed for this analysis is <a href="./Data/QuantitativeInferenceProcedures.xlsx">Quantitative Inference Procedures.xlsx</a>. We will use this Excel file to conduct the hypothesis tests for a single mean with <span class="math inline">\(\sigma\)</span> unknown.</p>
+<ul>
+<li>After opening the file, please click on the tab labeled “One-sample t-test”.<br />
+</li>
+<li>Paste the data in the appropriate place in Column A.</li>
+<li>Set the null hypothesis value in cell D10. For this example, the value should be 98.6.</li>
+<li>Click in cell D11 and use the drop down menu to set the alternative hypothesis to: “Not Equal To”</li>
+</ul>
+<p>The image below shows the Excel file after these changes have been made.</p>
+<center>
+<img src="Images/BodyTemp-tTest-Excel.png">
+</center>
+<p>Consider each of the following alternative hypotheses that could be used in a test for a single mean where the null hypothesis is <span class="math inline">\(H_0: \mu = 98.6\)</span>.</p>
+<ul>
+<li><span class="math inline">\(H_a: \mu \ne 98.6\)</span>
+<ul>
+<li>Choose “Not Equal To” in the drop-down menu in cell D11.</li>
+</ul></li>
+<li><span class="math inline">\(H_a: \mu &lt; 98.6\)</span>
+<ul>
+<li>Choose “Less Than” in the drop-down menu in cell D11.</li>
+</ul></li>
+<li><span class="math inline">\(H_a: \mu &gt; 98.6\)</span>
+<ul>
+<li>Choose “Greater Than” in the drop-down menu in cell D11.</li>
+</ul></li>
+</ul>
+<p>You will have opportunities to practice using each of these. <br></p>
+</div>
+<br>
+</div>
+<p>The interpretation of the results will follow the pattern established in the previous hypothesis tests. If the <span class="math inline">\(P\)</span>-value is less than the <span class="math inline">\(\alpha\)</span> level, we reject the null hypothesis. If the <span class="math inline">\(P\)</span>-value is greater than the <span class="math inline">\(\alpha\)</span> level, we fail to reject the null hypothesis. This is true for every hypothesis test.</p>
+<p>The test statistic is <span class="math inline">\(t\)</span> and its value is <span class="math inline">\(-6.029\)</span>. So, we have <span class="math inline">\(t = -6.029\)</span>.</p>
+<p>Notice this is the same number we get if we use the formula: <span class="math display">\[
+\begin{align}
+t &amp;= \frac{ \bar x - \mu }{ s / \sqrt{n} } \\
+&amp;\approx \frac{ 98.234 - 98.6 }{ 0.738 / \sqrt{148} } \\
+&amp;\approx -6.03
+\end{align}
+\]</span> Any differences are due to rounding.</p>
+<p><strong>State the degrees of freedom</strong></p>
+<p>In Excel, the degrees of freedom (<span class="math inline">\(df\)</span>) are given in cell E21.</p>
+<p><span class="math display">\[df = 147\]</span> <!-- **Mark the test statistic and $P$-value on a graph of the sampling distribution** --> <!-- CONSOLIDATED and UPDATED --></p>
+<p><strong>Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance</strong></p>
+<p>The <span class="math inline">\(P\)</span>-value is given in the software as “1.2723E-08”. Writing this properly and comparing it to <span class="math inline">\(\alpha\)</span>, we have: <span class="math display">\[
+P\text{-value} = 1.2723 \times 10^{-8} = 0.000~000~012~723 &lt; 0.05 = \alpha
+\]</span></p>
+<p><strong>State your decision</strong></p>
+<p>The interpretation of the results will follow the pattern established in the previous hypothesis tests. If the <span class="math inline">\(P\)</span>-value is less than the <span class="math inline">\(\alpha\)</span> level, we reject the null hypothesis. If the <span class="math inline">\(P\)</span>-value is greater than the <span class="math inline">\(\alpha\)</span> level, we fail to reject the null hypothesis. This is true for every hypothesis test.</p>
+<p>Since the <span class="math inline">\(P\)</span>-value was less than <span class="math inline">\(\alpha\)</span>, we reject the null hypothesis.</p>
+<p><img src="Images/Step5.png"></p>
+<p><strong>Present your conclusion in an English sentence, relating the result to the context of the problem</strong></p>
+<p>There is sufficient evidence to suggest that the mean body temperature is not 98.6° Fahrenheit.</p>
+<p><img src="Images/StepsAll.png"></p>
+</div>
+<div id="baby-boom" class="section level3">
+<h3>Baby Boom</h3>
+<p><img src="Images/Step1.png"></p>
+<p><strong>Summarize the relevant background information</strong></p>
+<p>The birth weight of a child is an important indicator of their neonatal health. It is important that pediatric health care providers track changes in the birth weights over time. The birth weight of children in Australia has historically had a population mean of 3373 grams.<!--<cite>Steele97,JSEdunn99</cite>--> Is this still the mean birth weight of Australian children, or has there been a change? We will use the 0.05 level of significance.</p>
+<p><strong>State the null and alternative hypotheses and the level of significance</strong></p>
+<p><span class="math display">\[
+\begin{align}
+H_0: &amp;~ \mu=3373 \\
+H_a: &amp;~ \mu \ne 3373
+\end{align}
+\]</span></p>
+<p><span class="math display">\[ \alpha = 0.05 \]</span></p>
+<p><img src="Images/Step2.png"></p>
+<p><strong>Describe the data collection procedures</strong></p>
+<p>The birth weights of all children born on December 18, 1997 at the Mater Mothers’ Hospital in Brisbane, Australia were recorded <!--<cite>JSEdunn99</cite>-->. The time of birth (on a 24 hour clock), gender, and birth weight of each child are given in the file <span class="Link">[[Data|BabyBoom]]</span>.</p>
+<p>Using this data set, test the hypothesis that the mean weight of babies born in Australia is 3373 grams. Use the <span class="math inline">\(\alpha=0.05\)</span> level of significance for this problem. Make an appropriate graph of the data.</p>
+<p><img src="Images/Step3.png"></p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol style="list-style-type: decimal">
+<li><strong>Give the relevant summary statistics</strong></li>
+</ol>
+<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q1" style="display:none;">
+<div class="stats A">
+<p>When the data are entered into the file <a href="./Data/QuantitativeInferenceProcedures.xlsx">Quantitative Inference Procedures.xlsx</a> , the following output is generated:</p>
+<p><img src="Images/BabyBoom-Ttest-Excel.png"></p>
+</div>
+<p><br></p>
+<ul>
+<li>The relevant summary statistics are:
+<center>
+<span class="math display">\[
+\begin{align}
+\bar x &amp;= 3275.95 \textrm{g}\\
+s &amp;= 528.03 \textrm{g}\\
+n &amp;= 44
+\end{align}
+\]</span>
+</center></li>
+</ul>
+</div>
+<p><br></p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Make an appropriate graph to illustrate the data</strong></li>
+</ol>
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<p><img src="Images/BabyBoom-JSE-Histogram.png"></p>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p><img src="Images/Step4.png"></p>
+<p><strong>Verify the requirements have been met</strong></p>
+<p>The data show a left-skewed shape, however the sample size is large. Using the Central Limit Theorem, we can conclude that the sample mean is normally distributed and the requirements are satisfied.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Give the test statistic and its value</strong></li>
+</ol>
+<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q3" style="display:none;">
+<ul>
+<li>The test statistic is a <span class="math inline">\(t\)</span>. The value of the test statistic is <span class="math inline">\(-1.219\)</span>. This was taken from the output above. We have <span class="math inline">\(t = -1.219\)</span>.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="4" style="list-style-type: decimal">
+<li><strong>State the degrees of freedom</strong></li>
+</ol>
+<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q4" style="display:none;">
+<ul>
+<li>The degrees of freedom are given in the output above:
+<center>
+<span class="math display">\[
+df = 43
+\]</span>
+</center></li>
+<li>Notice that this is one less than than sample size. For a test for a single mean, the degrees of freedom are always equal to one less than the sample size.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p><strong>Mark the test statistic and <span class="math inline">\(P\)</span>-value on a graph of the sampling distribution</strong> <!-- CONSOLIDATED and UPDATED --></p>
+<p>The <span class="math inline">\(P\)</span>-value is shaded in green:</p>
+<p><img src="Images/BabyBoom-JSE-TwoSidedT1-2.png"></p>
+<p><strong>Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance</strong></p>
+<p><span class="math display">\[P\text{-value}=0.228 &gt; 0.05 = \alpha\]</span></p>
+<p><strong>State your decision</strong></p>
+<p>Since the <span class="math inline">\(P\)</span>-value is greater than the level of significance, we fail to reject the null hypothesis.</p>
+<p><img src="Images/Step5.png"></p>
+<p><strong>Present your conclusion in an English sentence, relating the result to the context of the problem</strong></p>
+<p>There is insufficient evidence to suggest that the mean weight of babies born in Australia is different from 3373 grams.</p>
+</div>
+</div>
+<div id="confidence-intervals" class="section level2">
+<h2>Confidence Intervals</h2>
+<p>The procedure for finding confidence intervals when <span class="math inline">\(\sigma\)</span> is not known is very similar to the process when <span class="math inline">\(\sigma\)</span> is known. As a reminder, here is the confidence interval (from Lesson 10) when <span class="math inline">\(\sigma\)</span> is known. <span class="math display">\[
+\left( \bar x - z^* \frac{\sigma}{\sqrt{n}}, ~ \bar x + z^* \frac{\sigma}{\sqrt{n}} \right)
+\]</span></p>
+<p>To construct the confidence interval when <span class="math inline">\(\sigma\)</span> is not known, we replace the population standard deviation, <span class="math inline">\(\sigma\)</span>, with its point estimate, <span class="math inline">\(s\)</span>. The appropriate distribution is a <span class="math inline">\(t\)</span>, rather than a <span class="math inline">\(z\)</span>. So, we replace <span class="math inline">\(z^*\)</span> with <span class="math inline">\(t^*\)</span>. So the confidence interval when <span class="math inline">\(\sigma\)</span> is not known is <span class="math display">\[
+\left( \bar x - t^* \frac{s}{\sqrt{n}}, ~ \bar x + t^* \frac{s}{\sqrt{n}} \right)
+\]</span> where <span class="math inline">\(t^*\)</span> is the <span class="math inline">\(t\)</span>-score corresponding to the confidence level and <span class="math inline">\(s\)</span> is the sample standard deviation.</p>
+<p>We will use Excel to construct confidence intervals when <span class="math inline">\(\sigma\)</span> is unknown. The values of <span class="math inline">\(t^*\)</span> and <span class="math inline">\(s\)</span> will be computed for us. Examples of this are given below. You can see the details by clicking on [Show Hand Calculations] in Step 4.</p>
+<p><img src="Images/StepsAll.png"></p>
+<div id="automatic-language-translation-programs" class="section level3">
+<h3>Automatic Language Translation Programs</h3>
+<p><img src="Images/Step1.png"></p>
+<p><strong>Summarize the relevant background information</strong></p>
+<p>Computer software is commonly used to translate text from one language to another. As part of his Ph.D. thesis, Philipp Koehn developed a phrase-based translation program called Pharaoh. <!--<cite>Koehn04Pharaoh</cite>--></p>
+<p>The quality of the translation can vary. A good translation system should match a professional human translation. <!--<cite>Papineni02</cite>--> It is important to be able to quantify how good the translations produced by Pharaoh are.</p>
+<p>The IBM T. J. Watson Research Center developed methods to measure the quality of a translation from one language to another. <!--<cite>Brown90</cite>--> One of these is the the BiLingual Evaluation Understudy (BLEU). <!--<cite>Papineni02</cite>--> BLEU is a score ranging from 0 to 1 that indicates how well a computer translation matches a professional human translation of the same text. Higher scores indicate a better match. BLEU helps companies who develop translation software “to monitor the effect of daily changes to their systems in order to weed out bad ideas from good ideas”. <!--<cite>Papineni02</cite>--></p>
+<p><img src="Images/Step2.png"></p>
+<p><strong>Describe the data collection procedures</strong></p>
+<p>To test Pharaoh’s ability to translate, Koehn took a random sample of 100 blocks of Spanish text, each of which contained 300 sentences, and used Pharaoh to translate each of these to English. The BLEU score was calculated for each of the 100 blocks. The data were extracted from Figure 2 in a paper Koehn published. <!--<cite>Koehn04</cite>--> The 100 BLEU scores are given in <a href="./Data/BLEU-Scores.xlsx">BLEU-Scores</a>.</p>
+<p>Koehn wants to find an estimate of the true mean BLEU score for text translated by the Pharaoh computer program. He would like to compute a confidence interval, but he does not know the true population standard deviation, <span class="math inline">\(\sigma\)</span>.</p>
+<p><img src="Images/Step3.png"></p>
+<p><strong>Give the relevant summary statistics</strong></p>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p>Copying the <a href="./Data/BLEU-Scores.xlsx">BLEU-Scores</a> data into the <a href="./Data/QuantitativeInferenceProcedures.xlsx">Quantitative Inference Procedures.xlsx</a> file in Excel, we get the following:</p>
+<center>
+<img src="Images/BLEUscores-Exceloutput.png">
+</center>
+<p><br></p>
+</div>
+<p><br></p>
+<p>The summary statistics are:</p>
+<p><span class="math display">\[
+\begin{align}
+\bar x =&amp; 0.2876 \\ 
+s =&amp; 0.0264 \\
+n =&amp; 100
+\end{align}
+\]</span></p>
+<p><strong>Make an appropriate graph to illustrate the data</strong></p>
+<p>Here is a histogram of the data showing 10 bins.</p>
+<p><img src="Images/BLEUscores-Histogram-Excel.png"></p>
+<p><img src="Images/Step4.png"></p>
+<p><strong>Verify the requirements have been met</strong></p>
+<p>The requirements for creating a confidence interval for a mean with <span class="math inline">\(\sigma\)</span> unknown are the same as the requirements for this procedure when <span class="math inline">\(\sigma\)</span> is known:</p>
+<div id="requirements" class="section level4">
+<h4>Requirements</h4>
+<p>There are two requirements that need to be checked when computing a confidence interval for a mean with <span class="math inline">\(\sigma\)</span> unknown:</p>
+<ol style="list-style-type: decimal">
+<li>A simple random sample was drawn from the population</li>
+<li><span class="math inline">\(\bar x\)</span> is normally distributed</li>
+</ol>
+<p>Recall the requirement of normality is satisfied if the data are approximately normally distributed or if the sample size is large.</p>
+<p>The data are bell-shaped and fairly symmetric. So, the sample mean, <span class="math inline">\(\bar x\)</span>, is approximately normally distributed.</p>
+<p><strong>Find the confidence interval</strong></p>
+<a href="javascript:showhide('hc')"><span style="font-size:8pt;">Show Hand Calculations</span></a>
+<div id="hc" style="display:none;">
+<p>The formula for the confidence interval where <span class="math inline">\(\sigma\)</span> is known was given in the reading titled [<a href="Lesson10.html">Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)</a> as <span class="math display">\[
+\left( \bar x - z^* \frac{\sigma}{\sqrt{n}}, ~ \bar x + z^* \frac{\sigma}{\sqrt{n}} \right)
+\]</span> It is impossible to know the true standard deviation of the BLEU scores for a new translation program like Pharaoh. Replacing <span class="math inline">\(\sigma\)</span> with <span class="math inline">\(s\)</span> and replacing <span class="math inline">\(z^*\)</span> with <span class="math inline">\(t^*\)</span>, we get: <span class="math display">\[
+\left( \bar x - t^* \frac{s}{\sqrt{n}}, ~ \bar x + t^* \frac{s}{\sqrt{n}} \right)
+\]</span> The value of <span class="math inline">\(t^*\)</span> depends on the level of confidence and the sample size. It must be computed using software or looked up on a table. If you are asked to compute a confidence interval for a mean where the population standard deviation is unknown, the value of <span class="math inline">\(t^*\)</span> will be given to you. The other numbers (<span class="math inline">\(\bar x\)</span>, <span class="math inline">\(s\)</span>, and <span class="math inline">\(n\)</span>) can all be obtained directly from your data.</p>
+<p>If we want to create a 95% confidence interval for <span class="math inline">\(\mu\)</span>, with 99 degrees of freedom, then <span class="math inline">\(t^* = 1.9842\)</span>.</p>
+<p>Using the sample statistics: <span class="math display">\[
+\begin{align}
+\bar x =&amp; 0.2876 \\ 
+s =&amp; 0.0264 \\
+n =&amp; 100
+\end{align}
+\]</span></p>
+<p>The 95% confidence interval for <span class="math inline">\(\mu\)</span> is: <span class="math display">\[
+\left( 0.2876 - 1.9842 \frac{0.0264}{\sqrt{100}}, ~ 0.2876 + 1.9842 \frac{0.0264}{\sqrt{100}} \right)
+\]</span> which reduces to: <span class="math display">\[
+\left( 0.2824, ~ 0.2928 \right)
+\]</span></p>
+</div>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p>We will use Excel to find the confidence intervals for the mean.</p>
+<p>Do the following:</p>
+<ul>
+<li>Open the file <a href="./Data/QuantitativeInferenceProcedures.xlsx">Quantitative Inference Procedures.xlsx</a></li>
+<li>Click on the tab labeled “One-sample t-test”</li>
+<li>Enter the data, and</li>
+<li>Set the confidence level.</li>
+</ul>
+<p>In this case, we are using a 95% confidence level. So, you set the confidence level in the Excel file to 0.95 (i.e., 95%). The confidence interval is given to you in cells G21 and H21. <br></p>
+</div>
+<p><br></p>
+<p>The 95% confidence interval for the true mean BLEU score is:</p>
+<p><span class="math display">\[(0.282, 0.293)\]</span></p>
+<p><img src="Images/Step5.png"></p>
+<p><strong>Present your observations in an English sentence, relating the result to the context of the problem</strong></p>
+<p>We are 95% confident that the true mean BLEU score for all translations by the Pharaoh program is between 0.2824 and 0.2928.</p>
+<p>Answer the following questions using the data set <span class="Link">[[Data|BLEU-Scores]]</span>, which gives the BLEU scores for <span class="math inline">\(n=100\)</span> translations from Spanish to English by the computer program Pharaoh.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="5" style="list-style-type: decimal">
+<li>Use Excel to find a 90% confidence interval for the true mean BLEU score for translations by the Pharaoh program. Give your answer accurate to 3 decimal places. Interpret this confidence interval in a complete sentence.</li>
+</ol>
+<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q5" style="display:none;">
+<ul>
+<li><span class="math inline">\((0.283, 0.292)\)</span><br>We are 90% confident that the true mean BLEU score for translations by the Pharaoh program lies between 0.283 and 0.292.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Use Excel to find a 99% confidence interval for the true mean BLEU score for translations by the Pharaoh program. Give your answer accurate to 3 decimal places. Interpret this confidence interval in a complete sentence.</li>
+</ol>
+<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q6" style="display:none;">
+<ul>
+<li><span class="math inline">\((0.281, 0.295)\)</span><br>We are 99% confident that the true mean BLEU score for translations by the Pharaoh program lies between 0.281 and 0.295.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="7" style="list-style-type: decimal">
+<li>What do you notice about the confidence interval as the confidence level increased from 90% to 99%?</li>
+</ol>
+<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q7" style="display:none;">
+<ul>
+<li>As the confidence level increases, the width of the confidence interval increases. We could also say, as the confidence level increases, the margin of error increases. The center of the confidence interval (the sample mean) is unchanged.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p><img src="Images/StepsAll.png"></p>
+</div>
+</div>
+<div id="euro-weights" class="section level3">
+<h3>Euro Weights</h3>
+<p><img src="Images/Step1.png"></p>
+<p><strong>Summarize the relevant background information</strong></p>
+<p>A group of statisticians measured the weights of 2000 Belgian one Euro coins in eight batches. Each batch contains coins that were all minted together. <!--<cite>JSEeuros</cite>--> You can learn more about these data at: <a href="http://www.amstat.org/publications/jse/datasets/euroweight.txt" target="_blank">http://www.amstat.org/publications/jse/</a></p>
+<p><img src="Images/Step2.png"></p>
+<p><strong>Describe the data collection procedures</strong></p>
+<p>The coins were “borrowed” from a bank in Belgium, one batch at a time. The weights (in grams) of the coins are given in the file <a href="./Data/EuroWeight.xlsx">EuroWeight.xlsx</a>.</p>
+<p><img src="Images/Step3.png"></p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="8" style="list-style-type: decimal">
+<li><strong>Give the relevant summary statistics</strong>.</li>
+</ol>
+<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q8" style="display:none;">
+<div class="stats A">
+<p>The following output was generated using the Excel file <a href="./Data/QuantitativeInferenceProcedures.xlsx">Quantitative Inference Procedures.xlsx</a>:</p>
+<center>
+<img src="Images/EuroWeights-Output-Excel.png">
+</center>
+<ul>
+<li>Typically, we round our computations to one more decimal place of precision than was given in the original data. This means we need one more decimal place than is shown in the output above. We can increase the precision by selecting the cell we want to modify and then clicking on the following button in the “Home” menu ribbon in Excel:</li>
+</ul>
+<center>
+<img src="Images/Excel-IncreaseDecimals.png">
+</center>
+<p><br></p>
+</div>
+<p><br></p>
+<ul>
+<li>When we do this, we get the following summary statistics:
+<center></li>
+</ul>
+<span class="math display">\[
+\begin{align}
+\bar x =&amp; 7.521 \\ 
+s =&amp; 0.034 \\
+n =&amp; 2000
+\end{align}
+\]</span>
+</center>
+</div>
+<p><br></p>
+<ol start="9" style="list-style-type: decimal">
+<li><strong>Make an appropriate graph to illustrate the data</strong></li>
+</ol>
+<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q9" style="display:none;">
+<center>
+<img src="Images/EuroWeights-Histogram-SPSS.png">
+</center>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p><img src="Images/Step4.png"></p>
+<p><strong>Verify the requirements have been met</strong></p>
+<p>We need to check the following two requirements:</p>
+<ol style="list-style-type: decimal">
+<li>A simple random sample was drawn from the population</li>
+<li><span class="math inline">\(\bar x\)</span> is normally distributed</li>
+</ol>
+<p>The coins were taken in batches, but we can think of the batches as a random sample of the possible coins that could be chosen.</p>
+<p>The data follow a bell-shaped distribution. There are a few potential outliers, but they are not too frequent or extreme. We can conclude that <span class="math inline">\(\bar x\)</span> is normally distributed.</p>
+<div class="QuestionsHeading">
+Answer the following question:
+</div>
+<div class="Questions">
+<ol start="10" style="list-style-type: decimal">
+<li><strong>Find the confidence interval</strong>: Use Excel to create a 99% confidence interval for the true mean.</li>
+</ol>
+<a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q10" style="display:none;">
+<center>
+<span class="math display">\[
+(7.519, ~ 7.523) 
+\]</span>
+</center>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p><img src="Images/Step5.png"></p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="11" style="list-style-type: decimal">
+<li><strong>Present your observations in an English sentence, relating the result to the context of the problem</strong>.</li>
+</ol>
+<a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q11" style="display:none;">
+<ul>
+<li>We are 99% confident that the true mean weight of all Belgian Euros is between 7.519 grams and 7.523 grams.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+</div>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<div class="SummaryHeading">
+Remember…
+</div>
+<div class="Summary">
+<ul>
+<li><p>In practice we rarely know the true standard deviation <span class="math inline">\(\sigma\)</span> and will therefore be unable to calculate a z-score. <strong>Student’s t-distribution</strong> gives us a new test statistic, <span class="math inline">\(t\)</span>, that is calculated using the sample standard deviation (<span class="math inline">\(s\)</span>) instead. <span class="math display">\[\displaystyle{ t = \frac {\bar x - \mu} {s / \sqrt{n}} }\]</span></p></li>
+<li><p>The <span class="math inline">\(t\)</span>-distribution is similar to a normal distribution in that it is bell-shaped and symmetrical, but the exact shape of the <span class="math inline">\(t\)</span>-distribution depends on the <strong>degrees of freedom (<span class="math inline">\(df\)</span>)</strong>. <span class="math display">\[df=n-1\]</span></p></li>
+</ul>
+<p>*You will use Excel to carry out hypothesis testing and create confidence intervals involving <span class="math inline">\(t\)</span>-distributions.</p>
+</div>
+<p><br></p>
+</div>
+<div id="navigation" class="section level2">
+<h2>Navigation</h2>
+<center>
+<table>
+<colgroup>
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Previous Reading</strong></th>
+<th align="center"><strong>This Reading</strong></th>
+<th align="center"><strong>Next Reading</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><a href="Lesson10.html">Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)</a></td>
+<td align="center">Lesson 11: <br> Inference for One Mean: Sigma Unknown</td>
+<td align="center">[Lesson 12: Inference for Two Means: Paired Data</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+
+<br />
+<hr />
+<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
