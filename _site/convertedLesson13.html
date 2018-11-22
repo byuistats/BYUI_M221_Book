@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Lesson 13: Inference for Two Means: Independent Samples</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 221B</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="convertedLesson01.html">Lesson 1: Course Introduction</a>
+    </li>
+    <li>
+      <a href="convertedLesson02.html">Lesson 2: The Statistical Process</a>
+    </li>
+    <li>
+      <a href="convertedLesson03.html">Lesson 3: Describing Quantitative Data</a>
+    </li>
+    <li>
+      <a href="convertedLesson04.html">Lesson 4: Rules of Probability</a>
+    </li>
+    <li>
+      <a href="convertedLesson05.html">Lesson 5: Normal Distributions</a>
+    </li>
+    <li>
+      <a href="convertedLesson06.html">Lesson 6: The Central Limit Theorem</a>
+    </li>
+    <li>
+      <a href="convertedLesson07.html">Lesson 7: Probability Calculations for a Sample Mean</a>
+    </li>
+    <li>
+      <a href="convertedLesson08.html">Lesson 8: Unit 1 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson09.html">Lesson 9: Hypothesis Test for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson10.html">Lesson 10: Confidence Interval for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson11.html">Lesson 11: Inference for One Mean (Sigma Unknown)</a>
+    </li>
+    <li>
+      <a href="Lesson12.html">Lesson 12: Inference for Match Pairs</a>
+    </li>
+    <li>
+      <a href="Lesson13.html">Lesson 13: Inference for Two Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson14.html">Lesson 14: Inference for Several Independent Samples</a>
+    </li>
+    <li class="dropdown-header">Lesson 15: Unit 2 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson16.htlm">Lesson 16: Describing Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson17.html">Lesson 17: Inference for One Proportion</a>
+    </li>
+    <li>
+      <a href="Lesson18.html">Lesson 18: Inference for Two Proportions</a>
+    </li>
+    <li>
+      <a href="Lesson19.html">Lesson 19: Inference for Independence of Categorical Data</a>
+    </li>
+    <li class="dropdown-header">Lesson 20: Unit 3 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson21.html">Lesson 21: Describing Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson22.html">Lesson 22: Simple Linear Regression</a>
+    </li>
+    <li>
+      <a href="Lesson23.html">Lesson 23: Inference for Bivariate Data</a>
+    </li>
+    <li class="dropdown-header">Lesson 24: Unit 4 Review</li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="Data.html">Data</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lesson 13: Inference for Two Means: Independent Samples</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#lesson-outcomes">Lesson Outcomes</a></li>
+<li><a href="#independent-samples-versus-paired-data">Independent Samples Versus Paired Data</a></li>
+<li><a href="#hypothesis-tests">Hypothesis Tests</a><ul>
+<li><a href="#reading-practices-of-children-with-developmental-or-behavioral-problems">Reading Practices of Children with Developmental or Behavioral Problems</a></li>
+<li><a href="#world-cup-heart-attacks">World Cup Heart Attacks</a></li>
+<li><a href="#theory-of-statistics">Theory of Statistics</a></li>
+</ul></li>
+<li><a href="#confidence-intervals">Confidence Intervals</a><ul>
+<li><a href="#reading-practices-of-children-with-developmental-or-behavioral-problems-1">Reading Practices of Children with Developmental or Behavioral Problems</a></li>
+<li><a href="#chronic-obstructive-pulmonary-disease-copd">Chronic Obstructive Pulmonary Disease (COPD)</a></li>
+</ul></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#navigation">Navigation</a></li>
+</ul>
+</div>
+
+<script type="text/javascript">
+ function showhide(id) {
+    var e = document.getElementById(id);
+    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+ }
+</script>
+<div style="float:right;width=40%;">
+<br/>
+<div style="padding-left:10%;">
+<strong>Optional Lesson Video</strong>
+</div>
+<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC8q6v33gWLuWgiwoHSKRslw" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+</div>
+<div id="lesson-outcomes" class="section level2">
+<h2>Lesson Outcomes</h2>
+<a href="javascript:showhide('outcome')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="outcome" style="display:none;">
+<p>By the end of this lesson, you should be able to:</p>
+<ul>
+<li>Confidence Intervals for difference of two means of independent samples:
+<ul>
+<li>Calculate and interpret a confidence interval given a confidence level and a given parameter.</li>
+<li>Identify a point estimate and margin of error for the confidence interval.</li>
+<li>Show the appropriate connections between the numerical and graphical summaries that support the confidence interval.</li>
+<li>Check the requirements for the confidence interval.</li>
+</ul></li>
+<li>Hypothesis Testing for difference of two means of independent samples:
+<ul>
+<li>State the null and alternative hypothesis.</li>
+<li>Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.</li>
+<li>Assess the statistical significance by comparing the p-value to the α-level.</li>
+<li>Check the requirements for the hypothesis test.</li>
+<li>Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test.</li>
+<li>Draw a correct conclusion for the hypothesis test.</li>
+</ul></li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="independent-samples-versus-paired-data" class="section level2">
+<h2>Independent Samples Versus Paired Data</h2>
+<!--
+{| class="basic"
+|-
+|
+**Study Tip:**  Samples are dependent (or represent paired data) if knowing which subjects will be in the first group determines which will be in the second group.  If knowing which subjects are in the first group gives you no information about the second group, we say the samples are independent.
+|}
+-->
+<p>In the previous reading <a href="Lesson12.html" target="_blank">Lesson 12: Inference for Two Means: Paired Data</a> we studied confidence intervals and hypothesis tests for the difference of two means, where the data are paired. One example of paired data is pre- and post-test scores, such as Mahon’s weight loss study. <!--<cite>Mahon07</cite>--> Another example is paired comparisons, like the nosocomial infection study. <!--<cite>Vegas93</cite>--> How can you tell if data are paired? The key characteristic of dependent samples (or matched pairs) is that knowing which subjects will be in Group 1 determines which subjects will be in Group 2. The data for each subject in Group 1 is <em>paired</em> with the data for a corresponding subject in Group 2. In the case of the weight loss study, the same subject provided weight data for both groups: once in the pre-test (group 1) and once in the post-test (group 2).</p>
+<p>In contrast to dependent samples, two samples are independent if knowing which subjects are in Group 1 tells you nothing about which subjects will be in Group 2. With <strong>independent samples</strong>, there is no pairing between the groups. Suppose you want to compare the incomes of men and women in the general population. A random sample of men would be collected, and each would be asked to report their income. Similarly, a random sample of women would be drawn, and they would also be asked to report their income. Notice that the groups are independent. Knowing the names of the men who are selected tells you nothing about which women would be selected. This is an example of independent samples.</p>
+<p>We can compare the mean income of men to the mean income of women using the procedures of this section. We will conduct hypothesis tests and compute confidence intervals for the difference in the true population means of two groups (<span class="math inline">\(\mu_1 - \mu_2\)</span>).</p>
+<p>Some students make the association that samples are independent if they do not affect each other. This is a false notion. Instead, remember that <em>samples are independent if knowing who was selected for Group A tells you nothing about who will be selected for group B.</em></p>
+</div>
+<div id="hypothesis-tests" class="section level2">
+<h2>Hypothesis Tests</h2>
+<p><a name="Sec20:HypTestTwoMeansIndep"></a></p>
+<p><img src="Images/StepsAll.png"></p>
+<div id="reading-practices-of-children-with-developmental-or-behavioral-problems" class="section level3">
+<h3>Reading Practices of Children with Developmental or Behavioral Problems</h3>
+<p>Is there a difference in the amount of reading done by children with problematic behavior compared to other children?</p>
+<p><img src="Images/Step1.png"></p>
+<p><strong>Summarize the relevant background information</strong></p>
+<p>Researchers led by Arlene Butz published a study on the reading practices of children <!--<cite>Butz09</cite>-->. They wanted to know if there was a difference in the reading practices of children with developmental or behavioral problems (the DEV group or Group 1) compared to children in the general population who do not have developmental problems (the GEN group or Group 2.) One of the factors they considered was the number of nights each week that the children participated in reading in the home. Data representative of their results are given in the file <a href="./Data/ReadingPractices.xlsx">ReadingPractices.xlsx</a>.</p>
+<p><strong>State the null and alternative hypotheses and the level of significance</strong></p>
+<p>The null hypothesis is that there is no difference in the mean number of nights each week in which the two groups of children participate in reading in the home. The alternative hypothesis is that there is a difference in the mean number of nights that the children in the two groups participate in reading in the home. These hypotheses are expressed mathematically as: <span class="math display">\[
+\begin{align}
+H_0: &amp;~~ \mu_1 = \mu_2 \\
+H_a: &amp;~~ \mu_1 \ne \mu_2
+\end{align}
+\]</span></p>
+<p>We will use the <span class="math inline">\(\alpha = 0.05\)</span> level of significance.</p>
+<p><img src="Images/Step2.png"></p>
+<p><strong>Describe the data collection procedures</strong></p>
+<p>A group of children were enrolled in the study. Children who were identified to have developmental or behavioral problems were labeled as Group 1 (the DEV group). Children who did not display developmental or behavioral problems were labeled as Group 2 (the GEN group). A survey was administered to a parent of each of the children. One of the questions on the survey asked the number of nights that either their child read or that they read to their child during the week. This data is found in the file <a href="./Data/ReadingPractices.xlsx">ReadingPractices.xlsx</a>.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol style="list-style-type: decimal">
+<li>For which group do you think the mean number of nights of reading will be higher?</li>
+</ol>
+<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q1" style="display:none;">
+<ul>
+<li>Answers will vary.</li>
+<li>Many students indicate they expect the group without behavioral problems will have a higher mean number of nights that they read in the home.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Do the data published by Arlene Butz and her colleagues represent paired data or independent samples? How can you tell?</li>
+</ol>
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<ul>
+<li>The data represent independent samples. Knowing which children are in Group 1 tells you nothing about which children will be in Group 2.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p><img src="Images/Step3.png"></p>
+<p><strong>Give the relevant summary statistics</strong></p>
+<p>We will use <span class="math inline">\(\bar x_1\)</span> to denote the mean of Group 1. Similarly, we use <span class="math inline">\(s_1\)</span> and <span class="math inline">\(n_1\)</span> for the standard deviation and sample size of Group 1. For Group 2, we indicate the mean, standard deviation and sample size with the symbols: <span class="math inline">\(\bar x_2\)</span>, <span class="math inline">\(s_2\)</span>, and <span class="math inline">\(n_2\)</span>, respectively.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="3" style="list-style-type: decimal">
+<li>Find the mean, standard deviation and sample size for the two groups, separately. In other words, find <span class="math inline">\(\bar x_1\)</span>, <span class="math inline">\(s_1\)</span>, <span class="math inline">\(n_1\)</span>, <span class="math inline">\(\bar x_2\)</span>, <span class="math inline">\(s_2\)</span>, and <span class="math inline">\(n_2\)</span>.</li>
+</ol>
+<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q3" style="display:none;">
+<center>
+<strong>Summary Statistics:</strong>
+</center>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="left">DEV Group</th>
+<th align="left">GEN Group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mean:</td>
+<td align="left"><span class="math inline">\(\bar x_1 = 4.1\)</span></td>
+<td align="left"><span class="math inline">\(\bar x_2 = 3.7\)</span></td>
+</tr>
+<tr class="even">
+<td>Standard Deviation:</td>
+<td align="left"><span class="math inline">\(s_1 = 2.4\)</span></td>
+<td align="left"><span class="math inline">\(s_2 = 2.5\)</span></td>
+</tr>
+<tr class="odd">
+<td>Sample Size:</td>
+<td align="left"><span class="math inline">\(n_1 = 204\)</span></td>
+<td align="left"><span class="math inline">\(n_2 = 117\)</span></td>
+</tr>
+</tbody>
+</table>
+<!-- {| class="basic" -->
+<!-- |+**Summary Statistics:** -->
+<!-- |-  -->
+<!-- ! -->
+<!-- ! DEV Group -->
+<!-- ! GEN Group -->
+<!-- |-  -->
+<!-- | Mean:  -->
+<!-- | $\bar x_1 = 4.1$  -->
+<!-- | $\bar x_2 = 3.7$  -->
+<!-- |- -->
+<!-- | Standard Deviation: -->
+<!-- | $s_1 = 2.4$  -->
+<!-- | $s_2 = 2.5$  -->
+<!-- |- -->
+<!-- | Sample Size:  -->
+<!-- | $n_1 = 204$ -->
+<!-- | $n_2 = 117$ -->
+<!-- |} -->
+<p>Were you surprised that the sample mean <span class="math inline">\(\bar x\)</span> was higher for the group with behavioral problems? Why might this be the case?</p>
+</div>
+<p><br></p>
+<p>4.Based on the summary statistics (means, standard deviations, and sample sizes) for the two groups, does the true mean number of nights each week that the children engage in reading seem to differ significantly between the DEV and GEN groups?</p>
+<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q4" style="display:none;">
+<ul>
+<li>Answers will vary. We will conduct a hypothesis test to formally determine the answer to this question.<br />
+</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p><strong>Make an appropriate graph to illustrate the data</strong></p>
+<p>There are two populations, and it is important to illustrate both of them separately. It is not sufficient to combine the groups and to produce a single graph. This would obscure the differences in the groups.</p>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p><strong>To create side-by-side histograms in Excel, do the following:</strong></p>
+<p>Use the file <a href="./Data/QuantitativeDescriptiveStatistics.xlsx">QuantitativeDescriptiveStatistics.xlsx</a> and create separate histograms for the two groups. This requires pasting the data for one of the groups, deleting the data, and pasting the data for the other group.</p>
+<p>Using 7 bins, the data are represented in the following histograms:</p>
+<p><img src="Images/ReadingPractices-Histogram-Excel.png"></p>
+<span class="Custom">Click the link at right for a helpful tip.</span> <a href="javascript:showhide('tip')"><span style="font-size:8pt;">Show/Hide Tip</span></a>
+<div id="tip" style="display:none;">
+<p><strong>Tip for Excel users:</strong></p>
+<p>If you copy and paste the graphs into Microsoft Word, you will want to use the “Paste Special” option. If you simply paste the histogram from Excel, it is treated as a “Microsoft Office Graphic Object.” This means that it will update if your Excel file is changed. To copy and paste side-by-side histograms into Microsoft word, do the following: - Create the graph for the first group in Excel - Select the graph by clicking on it - Copy the graph - In Microsoft Word, click on the lower part of the “Paste” icon under the “Home” ribbon: <img src="Images/PasteButtonInFileRibbon.png"> - Then, choose “Paste Special” - A list of options will appear; from this list choose one of the “Picture” options, such as “Picture (PNG)” - This will paste a static image of the graph in the Word document, which you can move around or shrink as desired - You should create a title for the graph and place it above the graph in your document - Repeat this process for the second data set</p>
+</div>
+<p><br></p>
+</div>
+<p><br></p>
+<p><img src="Images/Step4.png"></p>
+<p><strong>Verify the requirements have been met</strong></p>
+<p>There are two requirements that need to be checked when conducting a hypothesis test for two means with independent samples:</p>
+<ul>
+<li>A simple random sample was drawn from each of the populations</li>
+<li><span class="math inline">\(\bar x\)</span> is normally distributed for each group</li>
+</ul>
+<p>Remember, the second requirement will be satisfied if the original populations are normally distributed or if the sample sizes are large.</p>
+<p><strong>Give the test statistic and its value</strong></p>
+<p>The test statistic for a hypothesis test comparing two means with independent samples is a <span class="math inline">\(t\)</span>. We will use software tools to conduct the hypothesis test for two means with independent samples:</p>
+<div id="hypothesis-test" class="section level4">
+<h4>Hypothesis Test</h4>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p><strong>The following instructions will help you conduct a hypothesis test for two means with independent samples in Excel.</strong></p>
+<p>Use the file <a href="./Data/QuantitativeInferenceProcedures.xlsx">QuantitativeInferenceProcedures.xlsx</a> to do the following: - Click on the tab labeled “Two-sample t-test” - Paste the data from the first group in the appropriate part of Column A - Paste the data for the second group in the designated part of Column B - Click on the drop-down menu in cell F11 and choose the appropriate alternative hypothesis For the Reading Practices example, we choose “Not equal to” - The test statistic, <span class="math inline">\(t\)</span>, is given in cell E23 - The (approximate) degrees of freedom are presented in cell F23 - The <span class="math inline">\(P\)</span>-value is reported in cell G23 <br></p>
+</div>
+<p><br></p>
+<p>Now, we will apply these steps to the data from the study on the reading practices of children with developmental and behavioral problems.</p>
+<p>If you assign the DEV group to be Group 1, and the GEN group as Group 2, then the test statistic will be:</p>
+<p><span class="math display">\[
+t = 1.455
+\]</span></p>
+<p>If the group labels are switched, then the <span class="math inline">\(t\)</span> statistic will have the opposite sign.</p>
+<p><strong>State the degrees of freedom</strong></p>
+<p>The degrees of freedom are given as: <span class="math display">\[df = 228.427\]</span></p>
+<p>You will notice that this is not a whole number. This is called the Satterthwaite approximation for the degrees of freedom. Do not worry that this is not an whole number. Just record the value as it is given to you in the software.</p>
+<p><strong>Mark the test statistic and <span class="math inline">\(P\)</span>-value on a graph of the sampling distribution</strong></p>
+<p>The image below represents the area under the curve. The phrase “for illustrative purposes only” reminds us that this image, which was taken from the applet, shows a normal distribution, not a <span class="math inline">\(t\)</span>-distribution.</p>
+<p><img src="Images/Applet-1.455-twotails.png"></p>
+<p><strong>Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance</strong></p>
+<p>From the output, we find that the <span class="math inline">\(P\)</span>-value is 0.147.</p>
+<p><span class="math display">\[
+P\text{-value}=0.147 &gt; 0.05 = \alpha
+\]</span></p>
+<p><strong>State your decision</strong></p>
+<p>Since the <span class="math inline">\(P\)</span>-value is greater than the level of significance, we fail to reject the null hypothesis.</p>
+<p><img src="Images/Step5.png"></p>
+<p><strong>Present your conclusion in an English sentence, relating the result to the context of the problem</strong></p>
+<p>There is insufficient evidence to suggest that there is a difference in the mean number of nights children with developmental / behavioral disabilities read compared to children in the general population.</p>
+<!---
+#### Pooled
+
+Let the DEV group be called Group 1, and GEN group will be called Group 2.  So, $\mu_1$ is the true population mean of the DEV group, $\bar x_1$ is the sample mean for the DEV group, $n_1$ is the sample size for the DEV group, etc.  Similarly, $\mu_2$ is the true population mean of the GEN group, and so on.
+
+We will do the hypothesis test by following these steps:
+\begin{enumerate}
+- State the null and alternative hypotheses.
+$$
+\begin{align}
+H_0: & \mu_1=\mu_2
+H_a: & \mu_1 \ne \mu_2
+\end{align}
+$$
+- Give the relevant summary statistics.
+
+We will use the variable, *GroupCode*, that was described above.
+The output from the command the command \Menuuu{Analyze}{Compare Means}{Independent-Samples T Test} is summarized below:
+<center>
+<img src="./Images/Reading-TtestOutput.png">
+</center>
+Our summary statistics are:
+$$
+\begin{array}{|rl|c|rl|}
+
+colspan="2" | \textrm{Group 1} && colspan="2" | \textrm{Group 2} \\
+colspan="2" | \textrm{DEV} && colspan="2" | \textrm{GEN} \\
+
+\bar x_1 &= 4.10    && \bar x_2 &= 3.68 \\
+s_1 &= 2.377        && s_2 &= 2.545 \\
+n_1 &= 204          && n_2 &= 117 \\
+
+\end{array}
+$$
+Since the larger standard deviation is not double the smaller standard deviation, we can assume equal variances.
+- Present a graph illustrating the data.
+<center>
+<img src="./Images/Reading-Histograms.png">
+</center>
+- Report the test statistic.
+Since the larger standard deviation is not double the smaller standard deviation, we conclude that the variances can be treated as being equal.  So, our test statistic, $t$, is:
+$$
+t = 1.482$$
+Note that if you reverse the assignment of the group names, then you would get a $t$ value of $-1.482$.
+- Give the degrees of freedom.
+$$
+df = 319$$
+- Sketch the sampling distribution, showing the test statistic and shading the $P$-value.
+<center>
+<img src="./Images/Reading-Sketch.png">
+</center>
+- State the $P$-value.
+$$
+P\textrm{-value}=0.139$$
+- Give the decision rule for the test.
+Since $P$-value$=0.139 > 0.05 = \alpha$, we fail to reject the null hypothesis.
+- Summarize your conclusion in an English sentence.
+There is insufficient evidence to suggest that there is a difference in the mean number of nights children with developmental / behavioral disabilities read compared to children in the general population.
+\end{enumerate}
+$$
+-->
+<p><img src="Images/StepsAll.png"></p>
+</div>
+</div>
+<div id="world-cup-heart-attacks" class="section level3">
+<h3>World Cup Heart Attacks</h3>
+<p>Do intense sporting events increase the probability of a person having a heart attack? We will consider this question in the next example.</p>
+<p><img src="Images/Step1.png"></p>
+<p><img src="Images/Soccer-City-Stadium-at-capacity.jpg"></p>
+<p><strong>Summarize the relevant background information</strong></p>
+<p>The FIFA Football (Soccer) World Cup is held every four years and is one of the biggest sporting events in the world. In 2006, Germany hosted the World Cup. A study was conducted by Dr. Wilbert-Lampen, et. al. to determine if the stress of viewing a soccer match would increase the risk of a heart attack or another cardiovascular event. <!--<cite>WilbertLampen08</cite>--></p>
+<p>We will use the data on cardiovascular problems during the World Cup to test the hypothesis that the mean number of cardiovascular events is greater during the World Cup than during the control period.</p>
+<p><strong>State the null and alternative hypotheses and the level of significance</strong></p>
+<p>Let Group 1 be days in the Control Period and let Group 2 represent days during the 2006 World Cup. We are testing whether the mean number of cardiovascular events is greater during the World Cup than during the control period. So, the alternative hypothesis will be one-sided.</p>
+<p><span class="math display">\[
+\begin{align}
+H_0: &amp; ~~ \mu_1=\mu_2 \\
+H_a: &amp; ~~ \mu_1 &lt; \mu_2
+\end{align}
+\]</span></p>
+<p>We will use the 0.01 level of significance.</p>
+<p><img src="Images/Step2.png"></p>
+<p><strong>Describe the data collection procedures</strong></p>
+<p>The 2006 World Cup was held from June 9, 2006 to July 9, 2006. The number of patients suffering cardiovascular events (e.g. heart attacks) was obtained from medical records of patients in the Greater Munich (Germany) area during this time period. To provide a control group, counts of patients suffering cardiovascular events was recorded from May 1 to June 8 and July 10 to July 30, 2006, as well as May 1 to July 30 in 2003 and 2005. The year 2004 was avoided, due to the European Soccer Championships held in Portugal. These data were extracted from Figure 1 in the article by Wilbert-Lampen, <!--<cite>WilbertLampen08</cite>--> and are given in the file <a href="./Data/WorldCupHeartAttacks.xlsx">WorldCupHeartAttacks.xlsx</a>.</p>
+<p><img src="Images/Step3.png"></p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="5" style="list-style-type: decimal">
+<li><strong>Give the relevant summary statistics</strong></li>
+</ol>
+<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q5" style="display:none;">
+<ul>
+<li>We need to find the the following: <span class="math inline">\(\bar x_1\)</span>, $s_1 $, <span class="math inline">\(n_1\)</span>, <span class="math inline">\(\bar x_2\)</span>, <span class="math inline">\(s_2\)</span>, and <span class="math inline">\(n_2\)</span>.</li>
+</ul>
+<center>
+<strong>Summary Statistics:</strong>
+</center>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Time Period</th>
+<th align="left">Mean</th>
+<th align="left">Std. Deviation</th>
+<th align="left">Sample Size</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Control</td>
+<td align="left"><span class="math inline">\(\bar x_1 = 14\)</span></td>
+<td align="left"><span class="math inline">\(s_1 = 4.2\)</span></td>
+<td align="left"><span class="math inline">\(n_1 = 182\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">World Cup</td>
+<td align="left"><span class="math inline">\(\bar x_2 = 19\)</span></td>
+<td align="left"><span class="math inline">\(s_2 = 9.8\)</span></td>
+<td align="left"><span class="math inline">\(n_2 = 91\)</span></td>
+</tr>
+</tbody>
+</table>
+<!-- <center> -->
+<!-- {| class="basic" -->
+<!-- |+ **Summary Statistics:** -->
+<!-- |-  -->
+<!-- ! Time Period !! Mean !! Std. Deviation !! Sample Size -->
+<!-- |- -->
+<!-- | Control || $\bar x_1 = 14$ || $s_1 = 4.2$ || $n_1 = 182$ -->
+<!-- |- -->
+<!-- | World Cup || $\bar x_2 = 19$ || $s_2 = 9.8$ || $n_2 = 91$ -->
+<!-- |- -->
+<!-- |} -->
+<!-- </center> -->
+</div>
+<p><br></p>
+<ol start="6" style="list-style-type: decimal">
+<li><strong>Make an appropriate graph to illustrate the data</strong></li>
+</ol>
+<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q6" style="display:none;">
+<ul>
+<li>Side-by-side histograms are a great way to summarize the data:
+<center>
+<img src="Images/WorldCup-Histogram-SPSS.png">
+</center></li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p><img src="Images/Step4.png"></p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="7" style="list-style-type: decimal">
+<li><strong>Verify the requirements have been met</strong></li>
+</ol>
+<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q7" style="display:none;">
+<ul>
+<li>Even though a simple random sample of days was not taken, we can assume that the number of heart attacks on one day do not affect the number of heart attacks on other days.<br />
+</li>
+<li>The sample size is large for both groups, so we conclude that the sample means are normally distributed.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="8" style="list-style-type: decimal">
+<li><strong>Give the test statistic and its value</strong></li>
+</ol>
+<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q8" style="display:none;">
+<ul>
+<li>The test statistic is a <span class="math inline">\(t\)</span> and its value is</li>
+</ul>
+<p><span class="math display">\[t = -4.617\]</span></p>
+</div>
+<p><br></p>
+<ol start="9" style="list-style-type: decimal">
+<li><strong>State the degrees of freedom</strong></li>
+</ol>
+<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q9" style="display:none;">
+<ul>
+<li>The degrees of freedom are:</li>
+</ul>
+<p><span class="math display">\[df = 106.429\]</span></p>
+</div>
+<p><br></p>
+<ol start="10" style="list-style-type: decimal">
+<li><strong>Mark the test statistic and <span class="math inline">\(P\)</span>-value on a graph of the sampling distribution</strong></li>
+</ol>
+<a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q10" style="display:none;">
+<img src="Images/WorldCup-Applet.png">
+<center>
+<strong>For Illustrative Purposes Only</strong>
+</center>
+</div>
+<p><br></p>
+<ol start="11" style="list-style-type: decimal">
+<li><strong>Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance</strong></li>
+</ol>
+<a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q11" style="display:none;">
+<center>
+<span class="math display">\[
+P\textrm{-value}=5.4636 \times 10^{-06}
+\]</span>
+</center>
+</div>
+<p><br></p>
+<ol start="12" style="list-style-type: decimal">
+<li><strong>State your decision</strong></li>
+</ol>
+<a href="javascript:showhide('Q12')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q12" style="display:none;">
+<ul>
+<li>Since <span class="math inline">\(P\textrm{-value}=5.4636 \times 10^{-06} &lt; 0.01 = \alpha\)</span>, we reject the null hypothesis.<br />
+</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p><img src="Images/Step5.png"></p>
+<div class="QuestionsHeading">
+Answer the following question:
+</div>
+<div class="Questions">
+<ol start="13" style="list-style-type: decimal">
+<li><strong>Present your conclusion in an English sentence, relating the result to the context of the problem</strong></li>
+</ol>
+<a href="javascript:showhide('Q13')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q13" style="display:none;">
+<ul>
+<li>There is sufficient evidence to suggest that the mean number of heart attacks per day is greater during intense sporting events, such as the World Cup.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+</div>
+<div id="theory-of-statistics" class="section level3">
+<h3>Theory of Statistics</h3>
+<p>In this course, we do not go very deep into statistical theory. For those students who are interested, there is a lot of theory undergirding statistical practice.</p>
+<p>An important theoretical issue relates to this hypothesis test. If the variances of the two groups are equal, then traditional statistical theory suggests that you combine or <em>pool</em> the information about the variance in the two groups. If the variances are not equal, you do not combine the information about the spread. These two techniques usually lead to slightly different values for the <span class="math inline">\(t\)</span>-statistic, degrees of freedom, and <span class="math inline">\(P\)</span>-value.</p>
+<p>If the variances observed in the sample data are very different from each other, you assume unequal variances and do not pool the data. However, if the variances are very similar to each other, the results of the two procedures will be nearly identical. In this case, it does not really matter which you choose.</p>
+<p>So, if the variances differ significantly, we should not assume equal variances. If the variances do not differ significantly, it doesn’t really matter if you assume equal variances or not. So, for this course, we will never assume the variances are equal. Stated, differently, we always assume unequal variances in this course. This provides a consistent framework for your learning.</p>
+<p><br></p>
+</div>
+</div>
+<div id="confidence-intervals" class="section level2">
+<h2>Confidence Intervals</h2>
+<p><a name="Sec19:CITwoMeansIndep"></a></p>
+<p><img src="Images/StepsAll.png"></p>
+<div id="reading-practices-of-children-with-developmental-or-behavioral-problems-1" class="section level3">
+<h3>Reading Practices of Children with Developmental or Behavioral Problems</h3>
+<p><img src="Images/Step1.png"></p>
+<p><strong>Summarize the relevant background information</strong></p>
+<p>Researchers led by Arlene Butz published a study on the reading practices of children [55]. They wanted to know if there was a difference in the reading practices of children with developmental or behavioral problems (the DEV group) compared to children in the general population who do not have developmental problems (the GEN group.) One of the factors they considered was the number of nights each week that the children participated in reading in the home.</p>
+<p>We can use a 95% confidence interval to compare the difference between the true mean number of nights children in the DEV group participated in reading compared to children in the GEN group. We are trying to find an estimate for the difference in the true means of the two groups. Using math symbols, we want to estimate the value of <span class="math inline">\(\mu_1 - \mu_2\)</span>. The confidence interval gives a range of plausible values for the unknown parameter <span class="math inline">\(\mu_1 - \mu_2\)</span>.</p>
+<p>Notice that if <span class="math inline">\(\mu_1 - \mu_2 = 0\)</span>, if we add <span class="math inline">\(\mu_2\)</span> to both sides of the equation, we get: <span class="math inline">\(\mu_1 = \mu_2\)</span>. Extending that idea, if zero is in the confidence interval, then it is plausible that <span class="math inline">\(\mu_1 = \mu_2\)</span>. If zero is in the confidence interval, we conclude that there is no significant difference between the mean number of nights the children in the two groups read at home.</p>
+<p>Software can be used to compute the confidence interval for a difference of two means with independent samples.</p>
+<p><img src="Images/Step2.png"></p>
+<p><strong>Describe the data collection procedures</strong></p>
+<p>In the study by Arlene Butz, et.al., on the reading practices of children, the researchers wanted to determine if there was a difference in the mean number of nights children read in the two groups (DEV and GEN)<!--<cite>Butz09</cite>-->. A survey was given to the child’s caretaker (usually a parent). This survey included questions about the child’s development and behavior. The survey also asked the number of nights each week that the child participated in reading in the home. Data representative of their results are given in the file <a href="./Data/ReadingPractices.xlsx">ReadingPractices.xlsx</a>.</p>
+<p><img src="Images/Step3.png"></p>
+<p><strong>Give the relevant summary statistics</strong></p>
+<p>Using Excel, we compute the following:</p>
+<table style="width:83%;">
+<caption><strong>Summary Statistics</strong></caption>
+<colgroup>
+<col width="30%" />
+<col width="26%" />
+<col width="26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>DEV Group Group 1</th>
+<th>GEN Group Group 2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mean:</td>
+<td><span class="math inline">\(\bar x_1 = 4.1\)</span></td>
+<td><span class="math inline">\(\bar x_2 = 3.7\)</span></td>
+</tr>
+<tr class="even">
+<td>Standard Deviation:</td>
+<td><span class="math inline">\(s_1 = 2.4\)</span></td>
+<td><span class="math inline">\(s_2 = 2.5\)</span></td>
+</tr>
+<tr class="odd">
+<td>Sample Size:</td>
+<td><span class="math inline">\(n_1 = 204\)</span></td>
+<td><span class="math inline">\(n_2 = 117\)</span></td>
+</tr>
+</tbody>
+</table>
+<!-- {| class="basic" -->
+<!-- |+**Summary Statistics** -->
+<!-- |-  -->
+<!-- ! -->
+<!-- ! DEV Group<br>Group 1 -->
+<!-- ! GEN Group<br>Group 2 -->
+<!-- |-  -->
+<!-- | Mean:  -->
+<!-- | $\bar x_1 = 4.1$  -->
+<!-- | $\bar x_2 = 3.7$  -->
+<!-- |- -->
+<!-- | Standard Deviation: -->
+<!-- | $s_1 = 2.4$  -->
+<!-- | $s_2 = 2.5$  -->
+<!-- |- -->
+<!-- | Sample Size:  -->
+<!-- | $n_1 = 204$ -->
+<!-- | $n_2 = 117$ -->
+<!-- |} -->
+<p><strong>Make an appropriate graph to illustrate the data</strong></p>
+<p><img src="Images/ReadingPractices-Histogram-Excel.png"></p>
+<p><img src="Images/Step4.png"></p>
+<p><strong>Verify the requirements have been met</strong></p>
+<p>The sample size is large, so we can use these methods without much concern about normality.</p>
+<p><strong>Find the confidence interval</strong></p>
+<p>In this example, we compute the 95% confidence interval for the difference in the mean number of nights the children in the DEV and GEN groups are reading. To obtain a confidence interval for the difference in two means with independent samples, follow these steps:</p>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p><strong>To compute a 95% confidence interval for two independent samples in Excel:</strong></p>
+<ul>
+<li>Open the file <a href="./Data/QuantitativeInferenceProcedures.xlsx">QuantitativeInferenceProcedures.xlsx</a></li>
+<li>Click on the tab labeled, “Two-sample t-test”</li>
+<li>Paste the data for the first group in the appropriate place of column A</li>
+<li>Paste the data for group 2 in column B</li>
+<li>Enter the desired confidence level in cell F10</li>
+<li>The confidence interval will be given in cells H23 and I23 <br></li>
+</ul>
+</div>
+<p><br></p>
+<p><img src="Images/Step5.png"></p>
+<p><strong>Present your observations in an English sentence, relating the result to the context of the problem</strong></p>
+<p>We are 95% confident that the true difference in the means is between <span class="math inline">\(-0.149\)</span> and <span class="math inline">\(0.987\)</span> days. Note that this confidence interval contains zero, so it is plausible that there is no difference in the mean number of nights the children in the two groups participate in reading.</p>
+<p>When defining the confidence interval in Excel, if the two groups are reversed, the means are subtracted in the opposite order. This results in a confidence interval with the opposite sign. If we assign the GEN group as the first group and the DEV group as the second, we would get a confidence interval of <span class="math inline">\((-0.987, 0.149)\)</span>.</p>
+<p><img src="Images/StepsAll.png"></p>
+</div>
+<div id="chronic-obstructive-pulmonary-disease-copd" class="section level3">
+<h3>Chronic Obstructive Pulmonary Disease (COPD)</h3>
+<p><img src="Images/Step1.png"></p>
+<p><strong>Summarize the relevant background information</strong></p>
+<p>The National Heart Lung and Blood Institute gives the following explanation of COPD <!--<cite>NHLBI09</cite>-->:</p>
+<p>COPD, or chronic obstructive pulmonary (PULL-mun-ary) disease, is a progressive disease that makes it hard to breathe. “Progressive” means the disease gets worse over time.</p>
+<p>COPD can cause coughing that produces large amounts of mucus (a slimy substance), wheezing, shortness of breath, chest tightness, and other symptoms.</p>
+<p>Cigarette smoking is the leading cause of COPD. Most people who have COPD smoke or used to smoke. Long-term exposure to other lung irritants, such as air pollution, chemical fumes, or dust, also may contribute to COPD.</p>
+<p><img src="Images/Step2.png"></p>
+<p><strong>Describe the data collection procedures</strong></p>
+<p>A study was conducted in the United Kingdom to determine if there is a difference in the effectiveness of community-based rehabilitation program compared to hospital-based rehabilitation <!--<cite>Waterhouse10</cite>-->. Patients suffering from COPD were randomly assigned to either the community or hospital group. Twice a week for six weeks, they participated in two-hour educational and exercise sessions. Patients were also encouraged to exercise between sessions.</p>
+<p>The effectiveness of the program was measured based on the total distance patients could walk at one time at a particular pace. This is called the endurance shuttle walking test (ESWT). This was measured at the beginning of the study and again at the end of the six week rehabilitation period. Data representing the improvement of the patients in each group is given in the file <a href="./Data/COPD-Rehab.xlsx">COPD-Rehab</a>. The data represent the increased distance (in meters) that each patient could walk. Negative values indicate that the patient was not able to walk as far at the end of the rehabilitation treatment as at the beginning.</p>
+<p>Because hospital-based rehabilitation tends to be more expensive, the researchers wanted to assess if there is a significant difference in the patients’ improvement under the two programs. If not, then it makes sense to refer patients to the less expensive treatment option. The purpose of this study was to determine if pulmonary rehabilitation in a community setting is as effective as rehabilitation in a hospital setting.</p>
+<p><img src="Images/Step3.png"></p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="15" style="list-style-type: decimal">
+<li><strong>Give the relevant summary statistics</strong>.</li>
+</ol>
+<a href="javascript:showhide('Q15')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q15" style="display:none;">
+<table style="width:56%;">
+<caption><strong>Location</strong></caption>
+<colgroup>
+<col width="26%" />
+<col width="29%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Community Group 1</th>
+<th>Hospital Group 2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\bar x = 216.1\)</span></td>
+<td><span class="math inline">\(\bar x_2 = 283.4\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(s = 339.9\)</span></td>
+<td><span class="math inline">\(s = 359.9\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(n = 76\)</span></td>
+<td><span class="math inline">\(n = 85\)</span></td>
+</tr>
+</tbody>
+</table>
+<!-- <center> -->
+<!-- {| class="basic" -->
+<!-- |+ **Location** -->
+<!-- |- -->
+<!-- ! Community<br>Group 1 !! Hospital<br>Group 2 -->
+<!-- |- align="center" -->
+<!-- | $\bar x = 216.1$ || $\bar x_2 = 283.4$ -->
+<!-- |- -->
+<!-- | $s = 339.9$ || $s = 359.9$ -->
+<!-- |- -->
+<!-- | $n = 76$ || $n = 85$ -->
+<!-- |} -->
+<!-- </center> -->
+</div>
+<p><br></p>
+<ol start="16" style="list-style-type: decimal">
+<li><strong>Make an appropriate graph to illustrate the data</strong>.</li>
+</ol>
+<a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q16" style="display:none;">
+<p><img src="Images/COPD-Histogram-Excel.png"></p>
+</div>
+<p><br></p>
+<ol start="17" style="list-style-type: decimal">
+<li>What do you <em>observe</em> in the graphs you made in the previous question? Does there appear to be a difference in the mean responses of the two groups?</li>
+</ol>
+<a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q17" style="display:none;">
+<ul>
+<li>The two histograms look similar, although based on the graphs it looks like the mean of the Hospital Group may be slightly higher than the community group. This is just a visual observation. We need to conduct a hypothesis test or create a confidence interval to verify it.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p><img src="Images/Step4.png"></p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="18" style="list-style-type: decimal">
+<li><strong>Verify the requirements have been met</strong></li>
+</ol>
+<a href="javascript:showhide('Q18')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q18" style="display:none;">
+<ul>
+<li>The sample sizes are large, so the distribution of sample means from both groups are normal. Therefore, we can conclude the requirements are met.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="19" style="list-style-type: decimal">
+<li><strong>Find the confidence interval</strong></li>
+</ol>
+<a href="javascript:showhide('Q19')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q19" style="display:none;">
+<ul>
+<li><p>Remember, we will never assume equal variances in this course.</p></li>
+<li><p>Two different confidence intervals are possible, depending on how you defined the groups. The order in which we subtract the means determines the sign of the results.</p>
+<ul>
+<li>If we subtract <strong>Community</strong> - <strong>Hospital</strong>, we get:
+<center>
+<span class="math inline">\((-176.2,~41.7)\)</span>
+</center></li>
+<li>If we subtract <strong>Hospital</strong> - <strong>Community</strong>, we get:
+<center>
+<span class="math inline">\((-41.7,~176.2)\)</span>
+</center></li>
+</ul></li>
+<li>If the problem does not specify the order in which we should subtract, either of these is acceptable.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p><img src="Images/Step5.png"></p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="20" style="list-style-type: decimal">
+<li><strong>Present your observations in an English sentence, relating the result to the context of the problem</strong></li>
+</ol>
+<a href="javascript:showhide('Q20')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q20" style="display:none;">
+<ul>
+<li>We are 95% confident that the true mean difference in the improvement for the two groups is between -176.2 and 41.7.</li>
+</ul>
+<br>
+<div class="message Note">
+If we had subtracted in the order <strong>Hospital</strong> - <strong>Community</strong>, we would say, we are 95% confident that the true mean difference in the improvement for the two groups is between -41.7 and 176.2.
+</div>
+<p><br> <br></p>
+</div>
+<p><br></p>
+<ol start="21" style="list-style-type: decimal">
+<li>Does there appear to be a difference in the mean improvement observed between the two groups? What does this suggest?</li>
+</ol>
+<a href="javascript:showhide('Q21')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q21" style="display:none;">
+<ul>
+<li><p>Zero is contained in the confidence interval, so zero is a plausible value for the difference in the means. In other words, we cannot conclude that there is a difference in the mean improvement of the two groups.</p></li>
+<li>These results suggest that health care administrators should encourage community rehabilitation options for COPD whenever possible. It is generally less expensive than the hospital experience and does not lead to significantly different patient improvement.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="22" style="list-style-type: decimal">
+<li>Create a 90% confidence interval for the difference in the mean responses of the two groups.</li>
+</ol>
+<a href="javascript:showhide('Q22')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q22" style="display:none;">
+<ul>
+<li><p>If we subtract: <span class="math inline">\(Community - Hospital\)</span>, we get: <span class="math inline">\((-158.5,~24.0)\)</span></p></li>
+<li>If we subtract: <span class="math inline">\(Hospital - Community\)</span>, we get: <span class="math inline">\((-24.0,~158.5)\)</span></li>
+</ul>
+</div>
+<p><br></p>
+<ol start="23" style="list-style-type: decimal">
+<li>Interpret the confidence interval you computed in Question 22.</li>
+</ol>
+<a href="javascript:showhide('Q23')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q23" style="display:none;">
+<ul>
+<li>We are 90% confident that the true mean difference in the improvement for the two groups is between <span class="math inline">\(-158.5\)</span> and <span class="math inline">\(24.0\)</span>. A similar statement holds for <span class="math inline">\(24.0\)</span> and <span class="math inline">\(-158.5\)</span>.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="24" style="list-style-type: decimal">
+<li>Why is the 95% confidence interval wider than the 90% confidence interval?</li>
+</ol>
+<a href="javascript:showhide('Q24')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q24" style="display:none;">
+<ul>
+<li>In order to be more confident that the true mean is between two values, we have to make the confidence interval wider.<br />
+</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+</div>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<div class="SummaryHeading">
+Remember…
+</div>
+<div class="Summary">
+<ul>
+<li><p>In contrast to dependent samples, two samples are independent if knowing which subjects are in group 1 tells you nothing about which subjects will be in group 2. With <strong>independent samples</strong>, there is no pairing between the groups.</p></li>
+<li><p>When conducting inference using independent samples we use <span class="math inline">\(\bar x_1\)</span>, <span class="math inline">\(s_1\)</span>, and <span class="math inline">\(n_1\)</span> for the mean, standard deviation, and sample size, respectively, of group 1. We use the symbols <span class="math inline">\(\bar x_2\)</span>, <span class="math inline">\(s_2\)</span>, and <span class="math inline">\(n_2\)</span> for group 2.</p></li>
+<li><p>When working with independent samples it is important to graphically illustrate each sample separately. Combining the groups to create a single graph is not appropriate.</p></li>
+<li><p>When conducting hypothesis tests using independent samples, the null hypothesis is always <span class="math inline">\(\mu_1=\mu_2\)</span>, indicating that there is no difference between the two populations. The alternative hypothesis can be left-tailed (<span class="math inline">\(&lt;\)</span>), right-tailed(<span class="math inline">\(&gt;\)</span>), or two-tailed(<span class="math inline">\(\ne\)</span>).</p></li>
+<li>Whenever zero is contained in the confidence interval of the difference of the true means we conclude that there is no significant difference between the two populations. <br></li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="navigation" class="section level2">
+<h2>Navigation</h2>
+<center>
+<table>
+<colgroup>
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Previous Reading</strong></th>
+<th align="center"><strong>This Reading</strong></th>
+<th align="center"><strong>Next Reading</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><a href="Lesson12.html">Lesson 12: <br> Inference for Two Means: Paired Data</a></td>
+<td align="center">Lesson 13: <br> Inference for Two Means: Independent Samples</td>
+<td align="center"><a href="Lesson14.html">Lesson 14: <br> Inference for Several Means (ANOVA)</a></td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+
+<br />
+<hr />
+<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
