@@ -27,14 +27,12 @@ output:
 By the end of this lesson, you should be able to:
 
 -  Confidence Intervals for a single mean with σ unknown: 
-
   + Calculate and interpret a confidence interval for a population mean given a confidence level.
   + Identify a point estimate and margin of error for the confidence interval.
   + Show the appropriate connections between the numerical and graphical summaries that support the confidence interval. 
   + Check the requirements the confidence interval.
-  
+ 
 -  Hypothesis Testing for a single mean with σ unknown:
-
   + State the null and alternative hypothesis. 
   + Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.
   + Assess the statistical significance by comparing the p-value to the α-level.
@@ -211,7 +209,7 @@ You will have opportunities to practice using each of these.
 <br>
 </div>
 <br>
-</div>
+
 
 The interpretation of the results will follow the pattern established in the previous hypothesis tests.  If the $P$-value is less than the $\alpha$ level, we reject the null hypothesis. If the $P$-value is greater than the $\alpha$ level, we fail to reject the null hypothesis.  This is true for every hypothesis test.
 
@@ -295,17 +293,15 @@ Using this data set, test the hypothesis that the mean weight of babies born in 
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
 
-<div class="stats A">
 When the data are entered into the file 
-[Quantitative Inference Procedures.xlsx](./Data/QuantitativeInferenceProcedures.xlsx)
-, the following output is generated:
+[Quantitative Inference Procedures.xlsx](./Data/QuantitativeInferenceProcedures.xlsx), the following output is generated:
 
 <img src="./Images/BabyBoom-Ttest-Excel.png">
-</div>
 <br>
 
 * The relevant summary statistics are:
 <center>
+
 $$
 \begin{align}
 \bar x &= 3275.95 \textrm{g}\\
@@ -314,7 +310,6 @@ n &= 44
 \end{align}
 $$
 </center>
-
 </div>
 <br>
 
@@ -383,6 +378,7 @@ Since the $P$-value is greater than the level of significance, we fail to reject
 
 There is insufficient evidence to suggest that the mean weight of babies born in Australia is different from 3373 grams.
 
+<br>
 
 ## Confidence Intervals
 
@@ -484,7 +480,7 @@ The data are bell-shaped and fairly symmetric.  So, the sample mean, $\bar x$, i
 <a href="javascript:showhide('hc')"><span style="font-size:8pt;">Show Hand Calculations</span></a>
 <div id="hc" style="display:none;">
 The formula for the confidence interval where $\sigma$ is known was given in the reading titled 
-[[Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)](Lesson10.html) as
+[Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)](Lesson10.html) as
 $$
 \left( \bar x - z^* \frac{\sigma}{\sqrt{n}}, ~ \bar x + z^* \frac{\sigma}{\sqrt{n}} \right)
 $$ 
@@ -577,7 +573,6 @@ Answer the following questions using the data set <span class=Link>[[Data|BLEU-S
 
 ### Euro Weights
 
-
 <img src="./Images/Step1.png">
 
 **Summarize the relevant background information**
@@ -585,13 +580,11 @@ Answer the following questions using the data set <span class=Link>[[Data|BLEU-S
 A group of statisticians measured the weights of 2000 Belgian one Euro coins in eight batches.  Each batch contains coins that were all minted together. <!--<cite>JSEeuros</cite>--> You can learn more about these data at: 
 [http://www.amstat.org/publications/jse/](http://www.amstat.org/publications/jse/datasets/euroweight.txt){target="_blank"}
 
-
 <img src="./Images/Step2.png">
 
 **Describe the data collection procedures**
 
 The coins were "borrowed" from a bank in Belgium, one batch at a time. The weights (in grams) of the coins are given in the file [EuroWeight.xlsx](./Data/EuroWeight.xlsx). 
-
 
 <img src="./Images/Step3.png">
 
@@ -602,7 +595,6 @@ The coins were "borrowed" from a bank in Belgium, one batch at a time. The weigh
 <a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q8" style="display:none;">
 
-<div class="stats A">
 The following output was generated using the Excel file 
 [Quantitative Inference Procedures.xlsx](./Data/QuantitativeInferenceProcedures.xlsx):
 
@@ -611,8 +603,7 @@ The following output was generated using the Excel file
 * Typically, we round our computations to one more decimal place of precision than was given in the original data.  This means we need one more decimal place than is shown in the output above.  We can increase the precision by selecting the cell we want to modify and then clicking on the following button in the "Home" menu ribbon in Excel:
 
 <center><img src="./Images/Excel-IncreaseDecimals.png"></center>
-<br>
-</div>
+
 <br>
 
 * When we do this, we get the following summary statistics:
@@ -634,8 +625,9 @@ $$
 <a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q9" style="display:none;">
 
-<center><img src="./Images/EuroWeights-Histogram-SPSS.png"></center>
-
+<center>
+<img src="./Images/EuroWeights-Histogram-SPSS.png">
+</center>
 </div>
 &nbsp;
 </div>

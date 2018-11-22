@@ -1,5 +1,5 @@
 ---
-title: "Lesson 12"
+title: "Lesson 12: Inference for Two Means: Paired Data"
 output: 
   html_document:
     theme: cerulean
@@ -119,7 +119,50 @@ Appending the column of differences to the table above, we have:
 
 <div id="SubtractDifferences"></div>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=SubtractDifferences }}
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+:Here is how you can subtract two columns of data in Excel:
+
+::* If the data are in columns, you might want to give a label to the new column, such as "Differences"
+::* Within Excel, click on the cell where you want the difference to be calculated.  Typically, this will be adjacent to the two values you want to subtract.
+::* Type an equal sign (=)
+::* Click on the cell containing the first number to be subtracted
+::* Then type the subtraction sign (-)
+::* Now, click on the cell containing the second value to be subtracted.
+:::The following image shows the subtraction of the pre-study weights from the post-study weights of Mahon's volunteers (The post-study will not always be on the left, so pay attention to how you subtract, post - pre):
+
+[[File:Mahon-DifferencesInExcel.png|link=|center]]
+
+::* When you click elsewhere, the difference will be computed.
+::* If the data are in columns, you can easily compute the difference for the remaining data values.
+:::* Select the cell containing the difference you just computed.
+:::* Copy the value in the cell ([Ctrl]-c is the keyboard shortcut for PCs.)
+:::* Then simultaneously select all the cells in which you want the data to be pasted.
+:::* Finally, paste the formula into these cells ([Ctrl]-v is the keyboard shortcut for PCs.)
+
+:::You have now computed the column of differences. Your file should look like this when you are finished:
+
+[[File:Mahon-DifferencesInExcel-2.png|link=|center]]
+
+:If you want to remove the formulas to make it easier to paste the differences into the {{Spreadsheet|QIP}} file, do the following:
+::* Select the column of differences
+::* Copy the column ([Ctrl]-c is the keyboard shortcut for PCs.)
+::* Click on the bottom half of the "Paste" button in the "File" ribbon of Excel: [[File:PasteButtonInFileRibbon.png]]
+::* Choose Paste Values, as illustrated below:
+
+[[File:Mahon-DifferencesInExcel-3.png|link=|center]]
+
+:Now, the cells contain the subtracted differences, rather than the equation for these differences.  You are now ready to perform the calculations for a hypothesis test.  The hypothesis test will be conducted using the file {{Spreadsheet|QIP}}.
+::* Copy the first 2 columns of data that you generated above
+::* Open the file {{Spreadsheet|QIP}}
+::* Click on the tab "Paired Sample t-test", which is located at the bottom of the Excel window
+::* Paste the data in columns A, B, and C, with the first data value in row 5
+
+:::Your file should look like this:
+
+[[File:Mahon-Output-Excel-95CI.png|link=|400px|center]]
+<br>
+</div>
 
 The researchers are not interested in the weights of the women, they are more interested in the ''change'' in the women's weights.  This will give them a measure of the effectiveness of the low-calorie diet.  Notice that in this weight loss study, the change in the weights is negative.  This indicates that the final weight was lower than the initial weight.
 
@@ -295,7 +338,8 @@ By pairing the patients according to specific characteristics, the researchers c
 
 The difference, $d$, is defined as the duration of the hospital stay of the individual in the pair with the nosocomial infection minus the duration of the stay for the individual who did not get a nosocomial infection:
 $$
-Difference=Infected - NotInfected$$
+Difference=Infected - NotInfected
+$$
 After computing the differences, we do not use the data for the individual groups at all.  In fact, after we subtract, the hypothesis test is conducted (essentially) like a one-sample test for a single mean with $\sigma$ unknown.
 
 
@@ -306,12 +350,12 @@ After computing the differences, we do not use the data for the individual group
 <div style="clear:both"></div>
 <div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
 <center>
-$
+$$
 \begin{align}
 H_0: &~~ \mu_d = 0 \\
 H_a: &~~ \mu_d > 0 \\
 \end{align}
-$
+$$
 </center>
 ::The level of significance was not specified in the problem.  You can choose any value you wish.  The most common choices are 0.05, 0.01 and 0.1.  We will illustrate this example with $\alpha = 0.05$. 
 
@@ -812,7 +856,17 @@ $
 
 We can compute a confidence interval for the true mean of the differences for paired data.  After the differences between two paired data sets have been calculated, we can create a confidence interval for the true mean of the differences.  To do this, we follow the instructions for creating a confidence interval for a one mean with $ \sigma $ unknown, but we use the column of differences as the data set.
 
-{{Software_Filter|PageName=CI-PairedData}}
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+:'''To calculate confidence intervals for the true mean of the difference in Excel, do the following''':
+::*Follow the directions given '''[[#SubtractDifferences|above]]''' for creating a new column containing the differences between two variables.
+::*Open the file {{Spreadsheet|QIP}}
+::*Click on the tab labeled "One-sample t-test"
+::*Enter the values of the differences you calculated.
+::*Set the desired confidence level.
+<br>
+
+</div>
 
 The requirements for creating a confidence interval for the difference of means are the same as the requirements for the hypothesis test.  We assume:
 :* A simple random sample was drawn from the population
