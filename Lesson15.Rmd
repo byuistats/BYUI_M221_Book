@@ -11,3 +11,298 @@ output:
 
 <div style="clear:both"></div>
 
+__NOTOC__
+The following questions are intended to help you judge your preparation for this exam.  Carefully work through the problems.<br />  '''These questions are repeated on the preparation quiz for this lesson.'''
+
+This is not designed to be a comprehensive review.  There may be items on the exam that are not covered in this review.  Similarly, there may be items in this review that are not tested on this exam.  You are strongly encouraged to review the readings, homework exercises, and other activities from Units 1 and 2 as you prepare for the exam. In particular, you should go over the [[Lesson 8: Review for Exam 1|Review for Exam 1]]. Use the <span style="font-variant:small-caps">
+[[Index]]</span> to review definitions of important terms.
+
+==Lesson Outcomes ==
+
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Lesson Outcomes" data-expandtext="Click Here to Show Outcomes for this Lesson">
+The expectation on the exam is the following outcomes. You should be able to do:
+:* All of the Outcomes from Lesson 08 (Unit 1)
+:* Confidence Intervals: 
+:** Calculate and interpret a confidence interval given a confidence level and a given parameter.
+:** Explain how the margin of error changes with the sample size and the level of confidence. 
+:** Identify a point estimate and margin of error for a given confidence interval.
+:** Show the appropriate connections between the numerical and graphical summaries that support a confidence interval. 
+:** Check the requirements for a confidence interval.
+:** Determining correct confidence interval for a given scenario
+:* Calculate a confidence interval for 
+:** A single mean with σ known.
+:** A single mean with σ unknown.
+:** The mean of differences with dependent samples.
+:** Difference of two means of independent samples.
+:* Hypothesis Testing
+:** State the null and alternative hypothesis for the chosen test. 
+:** Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.
+:** Assess the statistical significance by comparing the p-value to the α-level.
+:** Check the requirements for the hypothesis test.
+:** Show the appropriate connections between the numerical and graphical summaries that support a hypothesis test. 
+:** Draw a correct conclusion for a hypothesis test.
+:** Interpret a Type I and II error.
+:** Determining correct hypothesis test for a given scenario. 
+:* Conduct a Hypothesis Test for
+:** A single mean with σ known.
+:** A single mean with σ unknown.
+:** Difference of two means with dependent samples.
+:** The mean of differences with independent samples.
+:** Several means (ANOVA).
+
+
+
+</div>
+
+<br>
+
+==Lesson Summaries==
+
+{{Unit_Recap|2}}
+
+==Review Questions==
+
+'''Questions 1 through 6: Understanding Confidence Intervals'''
+
+1. Given a 90% confidence interval of (45, 105) for mean heart rate, which of the following is the best interpretation of this confidence interval?
+	
+:::a. We are 90% confident that the true mean heart rate is between 45 and 105.  
+:::b. There is a 90% chance that the true mean heart rate is between 45 and 105.
+:::c. 90% of all people have heart rate between 45 and 105.
+:::d. There is a 90% chance that the sample mean heart rate is between 45 and 105.
+
+
+Researchers at the University of Mississippi wanted to determine whether the reaction time (in seconds) to go/no go stimulus of males differed from that of females.  The researchers randomly selected 20 females and 15 males to participate.  The go/no go stimulus required the student to respond to a particular stimulus and not to respond to other stimuli. Use this information to answer questions 2 and 3.
+
+2. The researchers decided to construct a confidence interval to determine if the difference of the means is significant. To determine whether the confidence interval would be reliable they create Q-Q plots of both random samples and see that they are approximately normal. Are the requirements for constructing a confidence interval satisfied? Why or why not?
+
+:::a. Yes. The distribution of the mean for each sample is normal since the researchers can apply the Central Limit theorem.
+:::b. Yes. The distribution of the mean of each sample is normal since the data have been determined to be normal.  
+:::c. No. The distribution of the mean of each sample is not normal since the sample size is not large enough.
+:::d. No. The company needs to check that all the data combined is normal.
+
+
+3. Of the four types of confidence intervals listed below, which one is appropriate for this experiment?
+	
+:::a. Confidence interval for $μ$ when $σ$  is known.
+:::b. Confidence interval for $μ$ when $σ$  is unknown.
+:::c. Confidence interval for the mean of differences, using dependent samples.
+:::d. Confidence interval for the difference of means, using independent samples.  
+
+
+4. A researcher is interested in estimating the savings account balance of customers at a large bank. She obtains the savings account balance of a random sample of 30 customers.  A 95% confidence interval for the mean savings account balance of bank customers is found to be (<nomathjax>$</nomathjax>3402.08, <nomathjax>$</nomathjax>4142.75).  Which of the following would produce a confidence interval with a smaller margin of error than this 95% confidence interval? 
+	
+:::a. Obtain the savings account balances of only 10 bank customers rather than 30, because 10 are likely to be more uniform than 30. 
+:::b. Obtain the balances of 90 bank customers rather than 30.  
+:::c. Compute a 99% confidence interval rather than a 95% confidence interval.
+:::d. None of the above.
+
+
+5. A factory makes propeller drive shafts for ships. A quality assurance engineer at the factory needs to estimate the true mean length of the shafts. She randomly selects four drive shafts made at the factory, measures their lengths, and finds their sample mean to be 1000 mm. The lengths are known to follow a normal distribution whose standard deviation is 2 mm. Calculate a 95% confidence interval for the true mean length of the shafts.
+
+:::a. (998.040, 1001.960)  
+:::b. (996.080, 1003.920)
+:::c. (998.355, 1001.645) 
+:::d. (997.424, 1002.576)
+
+
+6. To assess the accuracy of a laboratory scale, a standard weight that is known to weigh 1 gram is repeatedly weighed a total of n times and the mean of the weighings is computed. Suppose the scale readings are normally distributed with unknown mean $μ$ and standard deviation $σ$  = 0.01 g.  How large should n be so that a 95% confidence interval for $μ$ has a margin of error of ± 0.0001? 
+	
+:::a. 1960 
+:::b. 12988
+:::c. 38416  
+:::d. 45455 
+
+
+'''Questions 7 through 14: Understanding Hypothesis Testing'''
+
+7. The mean area $μ$ of the several thousand apartments in a new development is advertised to be 1250 square feet.  A tenant group thinks that the apartments are smaller than advertised.  They hire an engineer to measure a random sample of apartments to test their suspicion.  The appropriate null and alternative hypotheses, $H_0$ and $H_a$, for $μ$ are 
+	
+:::a. $H_0: μ=1250$          $H_a: μ<1250$  
+:::b. $H_0: μ=1250$          $H_a: μ≠1250$
+:::c. $H_0: μ=1250$          $H_a: μ>1250$
+:::d. Can’t specify without knowing the size of the sample used by the engineer
+
+
+8. In a statistical test of hypotheses, we say the test result is statistically significant at the level of significance ($α$) if 
+	
+:::a. $α$  = 0.05
+:::b. the $P$-$\text{value}$ is less than $α$  
+:::c. $α$  is small
+:::d. the $P$-$\text{value}$ is larger than $α$ 
+
+
+9. A group of statistics students wants to determine if students in some apartment buildings get better grades than students in other apartment buildings. They collect GPAs from an anonymous random sample of size 15 from each of four different apartment buildings. The data for each apartment building are bell-shaped with no outliers and the sample standard deviations are nearly equal. Can they use an ANOVA hypothesis test to answer their question?
+	
+:::a. Yes. It is enough that the data are bell-shaped with no outliers and the sample standard deviations are nearly equal.  
+:::b. Yes. They have a total of 60 GPAs in all, so they can apply the Central Limit theorem.
+:::c. No. They do not have enough data.
+:::d. No. They do not know the true standard deviations of each sample.
+
+
+10. A medical researcher is working on a new treatment for a certain type of cancer.  The average survival time after diagnosis for the standard treatment is two years. So the null hypothesis is that average survival time after diagnosis is the same for the new treatment and the standard treatment. In an early trial, she tries the new treatment on three subjects, who have an average survival time after diagnosis of 4.5 years.  Even though the sample is small, the null hypothesis would be rejected at the 0.05 significance level. Consequently, she rejects the null hypothesis. In a future study, it is determined that the new treatment does not increase the mean survival time in the population of all patients with this particular type of cancer.  The researcher has 
+
+:::a. Committed a type I error.  
+:::b. Committed a type II error. 
+:::c. Incorrectly used a 0.05 significance level when she should have used a 0.01 significance level. 
+:::d. Incorrectly used a 0.05 significance test when she should have computed the $P$-$\text{value}$.
+
+
+11. If the level of significance, $α$ , is made very small, thereby making the probability of committing a Type 1 error very small, what happens to the probability of committing a Type 2 error?
+	
+:::a. By reducing the probability of committing a Type 1 error, we also reduce the probability of committing a Type 2 error.
+:::b. The relationship between the two probabilities depends on how the study is set up.
+:::c. There is no specific relationship between the two probabilities.
+:::d. By reducing the probability of committing a Type 1 error, we increase the probability of committing a Type 2 error.  
+
+
+12. The nicotine content in cigarettes of a certain brand is normally distributed, with mean (in milligrams) $μ$ and a known standard deviation of $σ$=0.17. The brand advertises that the mean nicotine content of its cigarettes is 1.5, but measurements on a random sample of 100 cigarettes of this brand give a sample mean of x ̅ = 1.53.  Is this evidence that the mean nicotine content is actually higher than advertised?  To answer this, test the hypotheses
+
+$H_0: μ=1.5$          $H_a: μ>1.5$
+
+at the 5% level of significance.  You conclude that you should...
+	
+:::a. reject $H_a$
+:::b. fail to reject $H_0$
+:::c. there is a 5% chance that the null hypothesis is true
+:::d. reject $H_0$  
+
+
+13. You would like to look at the mean number of hours worked for wages per week by male students and female students.  You would like a random sample of 100 for each group and test if those means are different.  What is the correct statistical procedure?
+	
+:::a. One-sample z-test
+:::b. One-sample t-test
+:::c. Dependent samples test (or, "matched-pairs" test)
+:::d. Independent samples test  
+:::e. ANOVA (analysis of variance)
+
+
+14. An educator is interested in academic achievement by males and females with similar academic support systems. She decides to use brothers and sisters raised in the same home. Furthermore, she decides to use only brother-sister pairs when they are next to each other in sibling order. Should she use a hypothesis test based on independent or dependent sampling?
+	
+:::a. Independent sampling. The brother and sister are separate people who make their own choices, so the brother’s academic achievement shouldn’t depend on his sister’s academic achievement.
+:::b. Independent sampling. Knowing the brothers included in the study tells you nothing about which sisters are included in the study.
+:::c. Dependent sampling. The sister’s academic achievement depends to some degree on her brother’s academic achievement.
+:::d. Dependent sampling. If you select a brother so as to compare his academic achievement to his sister, you must include the sister in your study.  
+
+
+'''Questions 15 through 26: Select and carry out the correct inferential procedure for each set of problems'''
+
+A soil scientist collected random soil samples from a field and measured the dissolved organic carbon (mg/L) level of each sample. Dissolved organic carbon molecules are an important part of an ecosystem and help plants to process organic compounds. The researcher would like to construct a 95% confidence interval for the mean dissolved organic carbon level in the field. Open the data file <span class=Link>[[Data| Dissolved Organic Carbon]]</span>. Use this information to answer questions 15 and 16.
+
+15. Of the four types of confidence intervals listed below, which one is appropriate for this situation?
+	
+:::a. Confidence interval for $μ$ when $σ$  is known.
+:::b. Confidence interval for $μ$ when $σ$  is unknown.  
+:::c. Confidence interval for the mean of differences, using dependent samples.
+:::d. Confidence interval for the difference of means, using independent samples.
+
+
+16. Which of the following is the 95% confidence interval for these data?
+	
+:::a. (11.520, 14.865)
+:::b. (10.425, 15.960)
+:::c. (11.909, 14.477)
+:::d. (11.168, 15.217)  
+
+
+A random sample of Hummers for sale in Los Angeles and New York were taken from listings at cars.com. We want to know if there is a difference in mean listing prices between Hummers for sale in Los Angeles (group 1) and Hummers for sale in New York (group 2). Create a 95% confidence interval for the true difference of mean listing prices between the two cities. Open the data file <span class=Link>[[Data|Used Hummers LA and NY]]</span>. Use this information to answer questions 17 and 18.
+
+17. Of the four types of confidence intervals listed below, which one is appropriate for this situation?
+	
+:::a. Confidence interval for $μ$ when $σ$  is known.
+:::b. Confidence interval for $μ$ when $σ$  is unknown.
+:::c. Confidence interval for the mean of differences, using dependent samples.
+:::d. Confidence interval for the difference of means, using independent samples.  
+
+
+18. Which of the following is the 95% confidence interval for the true difference of mean listing prices between Hummers from LA and NY?
+	
+:::a. (-770, 5764)
+:::b. (-210, 6221)
+:::c. (-423, 5417)  
+:::d. (-402, 5396)
+
+
+Many studies have suggested that there is a link between exercise and healthy bones. Exercise stresses the bones and this causes them to get stronger. One study examined the effect of jumping on the bone density of growing rats.  There were three groups (rats were selected at random for the three groups): a control with no jumping, a low-jump group (the jump height was 30 centimeters), and a high-jump group (60 centimeters). After 8 weeks of 10 jumps per day, 5 days per week, the bone density of the rats (expressed in mg/cm3) was measured. The rats were selected at random for the three groups. Researchers would like to perform a hypothesis test to determine if the mean levels of bone density are different between the three different groups of rats listed above. Use a level of significance of $\alpha=0.05$. Open the data file <span class=Link>[[Data|Exercised Bone Density]]</span>. Use this information to answer questions 19 through 22.
+
+19. What is the correct hypothesis test for this situation?
+	
+:::a. One-sample z-test
+:::b. One-sample t-test
+:::c. Dependent samples test (or, "matched-pairs" test)
+:::d. Independent samples test  
+:::e. ANOVA (analysis of variance)
+
+
+20. Calculate the test statistic.  
+
+:::a. 1.578 
+:::b. 2.193
+:::c. 7.978  
+:::d. 3.442 
+
+
+21. Give the $P$-value. 
+
+:::a. 0.485 
+:::b. 0.002  
+:::c. 0.115
+:::d. 0.028
+
+
+22. Which of the following best expresses the conclusion of this test? Use a level of significance of $\alpha=0.05$.
+	
+:::a. There is sufficient evidence to conclude that the bone density of all three groups is about the same.
+:::b. There is sufficient evidence to conclude that the bone density of at least one of the groups is different from the bone density of at least one of the other groups.  
+:::c. There is insufficient evidence to conclude that the bone density of all three groups is about the same.
+:::d. There is sufficient evidence to conclude that the bone density between all of the groups are different.
+:::e. There is insufficient evidence to conclude that the bone density of at least one of the groups is different from the bone density of at least one of the other groups.
+
+
+Pressures of supply and demand act directly on the prices for an airline ticket. As the seats available on the plane begin to fill, airlines raise the price. If seats on a flight do not sell well, an airline may discount the tickets or even cancel the flight. A study was undertaken to determine if there is a difference in the mean cost of an airline ticket purchased 90 days in advance of a scheduled flight compared with a ticket purchased only 14 days in advance. Data were collected on the cost of a one-way ticket from London's Heathrow Airport to a variety of destinations in Europe. The lowest published ticket prices of one-way flights from Heathrow to various destinations in Europe was recorded for each scheduled flight 90 days in advance and then again 14 days in advance. Perform a hypothesis test to determine if there is a difference in the cost of the nonstop flights when tickets are purchased 14 days in advance compared to 90 days in advance. Use a level of significance of $\alpha=0.10$. Open the data file <span class=Link>[[Data|Direct Flight Costs]]</span>. Use this information to answer questions 23 through 26.
+
+23. What is the correct hypothesis test for this situation?
+	
+:::a. One-sample z-test
+:::b. One-sample t-test
+:::c. Dependent samples test (or, "matched-pairs" test)  
+:::d. Independent samples test
+:::e. ANOVA (analysis of variance)
+
+
+24. Calculate the test statistic.  
+
+:::a. 1.685  
+:::b. 1.361
+:::c. 1.834
+:::d. 1.518 
+
+
+25. Give the $P$-value. 
+
+:::a. 0.129 
+:::b. 0.096  
+:::c. 0.174
+:::d. 0.067
+
+
+26. Which of the following best expresses the conclusion of this test? Use a level of significance of $\alpha=0.10$.
+	
+:::a. There is sufficient evidence to conclude that there is no difference in the cost of tickets purchased 14 days in advance compared to 90 days in advance.
+:::b. There is sufficient evidence to conclude that there is a difference in the cost of tickets purchased 14 days in advance compared to 90 days in advance.  
+:::c. There is insufficient evidence to conclude that there is no difference in the cost of tickets purchased 14 days in advance compared to 90 days in advance.
+:::d. There is insufficient evidence to conclude that there is a difference in the cost of tickets purchased 14 days in advance compared to 90 days in advance.
+
+==Navigation==
+
+<center>
+{| 
+|- align="center"
+| '''Previous Reading''': <br> Lesson 14:  <br> [[Lesson 14: Inference for Several Means (ANOVA)|Inference for Several Means (ANOVA)]]
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| '''This Reading''': <br> Lesson 15:  <br> Review for Exam 2
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+| '''Next Reading''': <br> Lesson 16:  <br> [[Lesson 16: Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion|Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion]]
+|}
+</center>

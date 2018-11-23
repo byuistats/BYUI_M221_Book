@@ -1,8 +1,5 @@
 ---
 title: "lesson_recaps"
-author: "Dallin Webb"
-date: "October 22, 2018"
-output: html_document
 ---
 
 # Lesson 1
