@@ -1,5 +1,5 @@
 ---
-title: "Lesson 14"
+title: "Lesson 14: Inference for Several Means (ANOVA)"
 output: 
   html_document:
     theme: cerulean
@@ -126,7 +126,38 @@ If done by hand, the calculations for one simple ANOVA problem can easily requir
 
 <div id="auto"></div>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=TestANOVA }}
+<!-- {{Software_Filter | PageName=TestANOVA }}-->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+
+:To conduct a test for several means (ANOVA) in Excel, do the following: 
+
+:Open the file {{Spreadsheet|QIP}} and do the following:
+::* Click on the tab labeled "ANOVA"
+::* Paste the data from each group into their own column
+:::* Paste the data from the first group in the appropriate part of Column A
+:::* Paste the data for the second group in the designated part of Column B
+:::* Continue copy and pasting each group in the appropriate columns
+::* The test statistic, $F$, is given in cell L15
+::* The degrees of freedom are presented in cells J15 and J16
+::* The $P$-value is reported in cell M15
+
+:The following points will help you interpret the output.
+::*The "Descriptive Statistics" section of the output gives the sample size, mean and standard deviation for each of the groups in your sample.
+::*In the ANOVA table, you will find the test statistic ($F$), the $P$-value (Sig.), and the degrees of freedom (df) for the $F$ statistic.  Note that there are two numbers specifying the degrees of freedom.  These are given as the between groups and within groups df, respectively.  Do not worry about the total df.  This number is the sum of the other two.
+
+:To check your requirements, do the following:
+
+::*To determine if the data are normally distributed, we will make a Q-Q plot for each group separately.
+::*Using {{Spreadsheet|QDS}}, under the Q-Q plot tab you can paste in each of the three groups of data separately, to test for normality.
+::*To determine if the population variances are equal, we will use a very simple check:
+:::*If the largest variance is at least four times as big as the smallest variance, we will conclude that the population variances are not equal.  (Remember, the variance is the square of the standard deviation.)
+:::*If the largest variance is ''not'' four times as big as the smallest variance, we will conclude that the population variances are close enough that we can assume the variances are all equal.
+
+<br>
+</div>
+<br>
 
 ==Worked Example: Gratitude==
 
@@ -155,7 +186,24 @@ The students were randomly assigned to one of the three treatments.  They wrote 
 '''Give the relevant summary statistics'''
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=GratitudeANOVA }}
+<!-- {{Software_Filter | PageName=GratitudeANOVA }} -->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+
+:Follow these instructions to apply the ANOVA procedure using Excel:
+
+:Data representative of the values reported by Emmons and McCullough are given in the file <span class=Link>[[Data|Gratitude-Stacked.xls]]</span>.  The data is divided up into three columns which represent Grateful, Hassels, and Events.  
+
+:The summary statistics can be obtained using the {{Spreadsheet|QIP}}.  Paste the three columns of data into the appropriate areas of column A, B, and C.  The summary statistics will appear in the table to the right labeled "Descriptive Statistics".
+
+:This yields the following output:
+
+[[File:Gratitude-ANOVA-Output-Excel.png|link=|center]]
+<br>
+</div>
+<br>
+
 
 The summary statistics are presented in the following table:
 
