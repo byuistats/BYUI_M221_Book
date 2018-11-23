@@ -1,5 +1,5 @@
 library(tidyverse)
-x <- read_lines("convertedLesson12.Rmd")
+x <- read_lines("convertedLesson17.Rmd")
 
 tibble(start   = str_count(x, "<div "), 
            end = str_count(x, "</div>")) %>% 

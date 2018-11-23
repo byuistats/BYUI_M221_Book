@@ -1,5 +1,5 @@
 ---
-title: "Lesson 16"
+title: "Lesson 16: Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion"
 output: 
   html_document:
     theme: cerulean
@@ -52,19 +52,72 @@ Pie charts are a popular way to display categorical data.  These are used extens
 We can represent the reasons the students did not click in their searches using a pie chart.
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=PieCharts }}
+<!-- {{Software_Filter | PageName=PieCharts }} -->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+
+:'''To make a pie chart in Excel:'''
+
+:*Open the data file <span class=Link>[[Data|NoClickQuery-Summary.xls]]</span>.  This file contains a summary of the NoClickQuery data.  Notice that each row in this data file represents the responses of several individuals.  The ''Count'' column tells how many times each response was given.  The data in this file have been summarized.  
+:*Make sure the categorical column (Reason) and the Count column are next to each other with the Count column on the right and highlight both of them.
+:*Click on the Insert tab, then click on the Pie tab.
+:*Please choose the basic 2D pie.
+
+:The pie chart will look like this:
+
+[[File:NoClickQuery-Pie-Excel.png|link=|center]]
+<br>
+</div>
+<br>
+
 
 ===Bar charts and Pareto charts===
 
 Bar charts can be considered a companion plot to the pie chart. They present the same basic information but are not, however, interchangeable. We typically use bar charts if our data represent counts. In contrast, pie charts are used to represent parts of a whole.
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=BarCharts }}
+<!-- {{Software_Filter | PageName=BarCharts }} -->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+
+:'''To make a bar chart in Excel:'''
+
+:*Highlight the categorical column and the count column.
+:*Click on the Insert tab and then click on column tab.
+:*Again, please choose the simple 2D column chart.
+
+
+:Your bar chart will look like this:
+
+[[File:NoClickQuery-Bar-Excel.png|link=|center]]
+<br>
+</div>
+<br>
 
 A Pareto chart is a bar chart where the bars are presented in descending order.
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=ParetoCharts }}
+<!-- {{Software_Filter | PageName=ParetoCharts }} -->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+
+:'''To make a Pareto chart in Excel:'''
+
+:*Begin by creating a bar chart.  You can use the one you created above.
+:*Highlight the "Count" column.
+:*Click on the Sort and Filter tab in the right hand corner of the screen.
+:*Click on Sort Largest to Smallest(A little window will pop up and click on "Expand the Selection" then "Sort".
+:*Your bar chart should have been converted to a Pareto chart.
+
+:Your Pareto chart will look like this:
+
+[[File:NoClickQuery-Pareto-Excel.png|link=|center]]
+<br>
+</div>
+<br>
 
 We conclude that the main reason that people do not click on any of the search results is that the results were not relevant.  The next two most common reasons were that they did not find any new results or they made a spelling error in their search query.
 
@@ -298,6 +351,9 @@ This calculation was done in the same way we have done normal calculations in th
 
 ==Summary==
 
+<div class="SummaryHeading">Remember...</div>
+<div class="Summary">
+
 *'''Pie charts''' are used when you want to represent the observations as part of a whole, where each slice (sector) of the pie chart represents a proportion or percentage of the whole.
 
 *'''Bar charts''' present the same information as pie charts and are used when our data represent counts. A '''Pareto chart''' is a bar chart where the height of the bars is presented in descending order.
@@ -309,7 +365,8 @@ This calculation was done in the same way we have done normal calculations in th
 *If $np \ge 10$ and $n(1-p) \ge 10$, you can conduct '''probability calculations''' using the Normal Probability Applet. $\displaystyle {z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}}
 = \frac{\hat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}}$
 <br>
-
+</div>
+<br>
 
 ==Navigation==
 
