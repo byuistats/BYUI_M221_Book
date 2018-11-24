@@ -89,7 +89,24 @@ When the points in a scatterplot follow a straight pattern, we say that there is
 Data for estuarine, or saltwater, crocodiles is given in the file <span class=Link>[[Data|EstuarineCrocodile]]</span>.  We will illustrate the relationship between the head length of the crocodiles and their body lengths by creating a scatterplot.
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=Scatterplot }}
+<!-- {{Software_Filter | PageName=Scatterplot }} -->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+:'''To make a scatterplot in Excel:'''
+
+::* Open the [CategoricalDataAnalysis.xlsx](./Data/CategoricalDataAnalysis_Hat.xlsx) file.
+::* Put the variable that you want on the x-axis (head length) in the "Explanatory Variable" column.
+::* Put the variable that you want on the y-axis (body length) in the "Response Variable" column.  This is the value you want to predict.
+::* The points in the scatterplot will update with your data.
+
+:Here is the scatterplot for the estuarine crocodile data.  The head length in centimeters is on the horizontal (x) axis and the body length in centimeters is on the vertical (y) axis.
+
+[[File:EstuarineCrocodile-Scatterplot-Excel.png|link=|400px|center]]
+<br>
+
+</div>
+<br>
 
 Notice that there is a strong positive linear relationship between the head lengths and the body lengths of the crocodiles.  That fact will be important in the next lesson.
 
@@ -225,7 +242,21 @@ Several scatterplots have been created, and the correlation coefficient summariz
 ====Calculating the Correlation Coefficient====
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=CorrelationCoefficient }}
+<!-- {{Software_Filter | PageName=CorrelationCoefficient }} -->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+:The correlation coefficient can easily be calculated in Excel.
+
+:Using any cell in an excel page you can calculate the Correlation coefficient.  The command is = CORREL (array 1, array2).  For array 1 highlight the explanatory variable (x) and for array 2 highlight the response variable (y).  Here is a screen shot example of finding the correlation coefficient of the Old Faithful data.   
+
+[[File:OldFaithfulCorrelation-Excel.png|link=|center]]
+
+:An easier way to do this is to use the file [CategoricalDataAnalysis.xlsx](./Data/CategoricalDataAnalysis_Hat.xlsx).  After entering the data in the first two columns, the correlation coefficient is given as "r" in cell E8 of that spreadsheet.
+<br>
+
+</div>
+<br>
 
 ====Effect of Outliers====
 

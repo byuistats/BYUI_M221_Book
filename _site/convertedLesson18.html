@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Lesson 18: Inference for Two Proportions</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 221B</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="convertedLesson01.html">Lesson 1: Course Introduction</a>
+    </li>
+    <li>
+      <a href="convertedLesson02.html">Lesson 2: The Statistical Process</a>
+    </li>
+    <li>
+      <a href="convertedLesson03.html">Lesson 3: Describing Quantitative Data</a>
+    </li>
+    <li>
+      <a href="convertedLesson04.html">Lesson 4: Rules of Probability</a>
+    </li>
+    <li>
+      <a href="convertedLesson05.html">Lesson 5: Normal Distributions</a>
+    </li>
+    <li>
+      <a href="convertedLesson06.html">Lesson 6: The Central Limit Theorem</a>
+    </li>
+    <li>
+      <a href="convertedLesson07.html">Lesson 7: Probability Calculations for a Sample Mean</a>
+    </li>
+    <li>
+      <a href="convertedLesson08.html">Lesson 8: Unit 1 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson09.html">Lesson 9: Hypothesis Test for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson10.html">Lesson 10: Confidence Interval for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson11.html">Lesson 11: Inference for One Mean (Sigma Unknown)</a>
+    </li>
+    <li>
+      <a href="Lesson12.html">Lesson 12: Inference for Match Pairs</a>
+    </li>
+    <li>
+      <a href="Lesson13.html">Lesson 13: Inference for Two Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson14.html">Lesson 14: Inference for Several Independent Samples</a>
+    </li>
+    <li class="dropdown-header">Lesson 15: Unit 2 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson16.htlm">Lesson 16: Describing Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson17.html">Lesson 17: Inference for One Proportion</a>
+    </li>
+    <li>
+      <a href="Lesson18.html">Lesson 18: Inference for Two Proportions</a>
+    </li>
+    <li>
+      <a href="Lesson19.html">Lesson 19: Inference for Independence of Categorical Data</a>
+    </li>
+    <li class="dropdown-header">Lesson 20: Unit 3 Review</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson21.html">Lesson 21: Describing Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson22.html">Lesson 22: Simple Linear Regression</a>
+    </li>
+    <li>
+      <a href="Lesson23.html">Lesson 23: Inference for Bivariate Data</a>
+    </li>
+    <li class="dropdown-header">Lesson 24: Unit 4 Review</li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="Data.html">Data</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lesson 18: Inference for Two Proportions</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#lesson-outcomes">Lesson Outcomes</a></li>
+<li><a href="#hypothesis-tests">Hypothesis Tests</a><ul>
+<li><a href="#another-taste-of-ptc">Another Taste of PTC</a></li>
+<li><a href="#using-excel-to-perform-these-calculations">Using Excel to perform these calculations</a></li>
+<li><a href="#mortality-rates-and-day-of-admission-aortic-aneurysms">Mortality Rates and Day of Admission: Aortic Aneurysms</a></li>
+<li><a href="#mortality-rates-and-day-of-admission-heart-attacks">Mortality Rates and Day of Admission: Heart Attacks</a></li>
+</ul></li>
+<li><a href="#confidence-intervals-managing-fox-populations">Confidence Intervals: Managing Fox Populations</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#navigation">Navigation</a></li>
+</ul>
+</div>
+
+<script type="text/javascript">
+ function showhide(id) {
+    var e = document.getElementById(id);
+    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+ }
+</script>
+<div style="float:right;width=40%;">
+<br/>
+<div style="padding-left:10%;">
+<strong>Optional Lesson Video</strong>
+</div>
+<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-_0HG1XNei5qVvNogVs95k" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+</div>
+<div id="lesson-outcomes" class="section level2">
+<h2>Lesson Outcomes</h2>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="oc" style="display:none;">
+<p>By the end of this lesson, you should be able to:</p>
+<ul>
+<li>Confidence Intervals for a comparison of two proportions:
+<ul>
+<li>Calculate and interpret a confidence interval for a comparison of two proportions given a confidence level.</li>
+<li>Identify a point estimate and margin of error for the confidence interval.</li>
+<li>Show the appropriate connections between the numerical and graphical summaries that support the confidence interval.</li>
+<li>Check the requirements for the confidence interval.</li>
+</ul></li>
+<li>Hypothesis Testing for a comparison of two proportions:
+<ul>
+<li>State the null and alternative hypothesis for the chosen test.</li>
+<li>Calculate the test-statistic and p-value of the hypothesis test.</li>
+<li>Assess the statistical significance by comparing the p-value to the α-level.</li>
+<li>Check the requirements for the hypothesis test.</li>
+<li>Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test.</li>
+<li>Draw a correct conclusion for the hypothesis test.</li>
+</ul></li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="hypothesis-tests" class="section level2">
+<h2>Hypothesis Tests</h2>
+<p><img src="Images/StepsAll.png"></p>
+<div id="another-taste-of-ptc" class="section level3">
+<h3>Another Taste of PTC</h3>
+<p><img src="Images/Step1.png"></p>
+<p><img src="Images/Phenylthiocarbamide-3D-balls.png"></p>
+<p>The ability to taste the chemical Phenylthiocarbamide (PTC) is hereditary. Some people can taste it, while others cannot. Even though the ability to taste PTC was observed in all age, race, and sex groups, this does not address the issue about whether men or women are more likely to be able taste PTC.</p>
+<p>Further exploration of the PTC data allows us to investigate if there is a difference in the proportion of men and women who can taste PTC. The following contingency table summarizes Elise Johnson’s results<!--<cite>Johnson06</cite>-->:</p>
+<table>
+<caption><strong>Gender Data Table</strong></caption>
+<thead>
+<tr class="header">
+<th align="left">Can Taste PTC?</th>
+<th align="left">Female</th>
+<th align="left">Male</th>
+<th align="left">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">No</td>
+<td align="left">15</td>
+<td align="left">14</td>
+<td align="left">29</td>
+</tr>
+<tr class="even">
+<td align="left">Yes</td>
+<td align="left">51</td>
+<td align="left">38</td>
+<td align="left">89</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">66</td>
+<td align="left">52</td>
+<td align="left">118</td>
+</tr>
+</tbody>
+</table>
+<!-- {| class="basic" style="text-align:center" -->
+<!-- |+ **Gender Data Table** -->
+<!-- |- -->
+<!-- ! Can Taste PTC? || Female || Male || Total -->
+<!-- |- -->
+<!-- !  No -->
+<!-- | 15 || 14 || 29 -->
+<!-- |- -->
+<!-- ! Yes -->
+<!-- || 51 || 38 || 89 -->
+<!-- |- -->
+<!-- ! Total -->
+<!-- | 66 || 52 || 118 -->
+<!-- |- -->
+<!-- |} -->
+<p>These data are available in the file <a href="./Data/PTCTasting.xlsx">PTCTasting</a>. Note the way the data are organized in the file. One column gives the gender, another column indicates if the individual can taste PTC, and a third column gives counts for each group.</p>
+<p>Researchers want to know if the ability to taste PTC is a sex-linked trait. This can be summarized in the following research question: Is there a difference in the proportion of men and the proportion of women who can taste PTC? The hypothesis is that there is no difference in the the true proportion of men who can taste PTC compared to the true proportion of women who can taste PTC.</p>
+<p><img src="Images/Step2.png"></p>
+<p>A sample of 66 females and 52 males were provided with PTC strips and asked to indicate if they could taste the chemical or not. (This research was approved by the BYU-Idaho Institutional Review Board.)</p>
+<p><img src="Images/Step3.png"></p>
+<p>When working with quantitative data, it is natural to summarize the data by computing proportions. If someone has the ability to taste PTC, we will call this a success. The sample proportion is defined as the number of successes observed divided by the total number of observations. For the females, the proportion of the sample who could taste the PTC was: <span class="math display">\[
+\hat p_1 = \frac{x_1}{n_1} = \frac{51}{66}
+\]</span> This is approximately 77.3% of the people who were surveyed. For the males, the proportion who could taste PTC was: <span class="math display">\[
+\hat p_2 = \frac{x_2}{n_2} = \frac{38}{52}
+\]</span> This works out to be about 73.1%.</p>
+<p>When working with data for two proportions, graphically displaying the data can help us compare each proportion. Pie charts and bar charts are essential tools for describing our data.</p>
+<p><strong>Side-by-Side Pie Charts</strong></p>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<!-- {{Software_Filter | PageName=SideBySidePieCharts}} -->
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p><strong>To create side-by-side pie charts in Excel, do the following:</strong></p>
+<p>For this example we will use the <a href="./Data/PTCTasting.xlsx">PTCTasting</a> data set.</p>
+<ul>
+<li>First, make sure the data are organized so that one column contains the first variable (gender) and another column contains the second variable (whether or not they can taste PTC).</li>
+<li>If a third column has be used to store counts of the number of observations in each group, then highlight the “CanTaste” column and “Count” column just for females, or cells B2, B3, C2, and C3.<br />
+</li>
+<li>Now click on the “Insert” tab and then the “pie chart” button. Please select the most basic 2D pie chart.</li>
+<li>Next you can repeat the process above but highlighting the male data or cells B4, B5, C4, and C5.<br />
+</li>
+<li>To keep the two pie charts straight, you can add a title by clicking on the “Layout” tab under chart tools. Next click on “Chart Title” and then “Above Chart”.<br />
+</li>
+<li>You can now type in the titles, “Females Taste PTC?” and “Males Taste PTC?” or something similar.</li>
+<li><p>Now you should be able to visually compare the proportion of females that can taste PTC to the proportion of males that can taste PTC.</p></li>
+<li><p>Your pie charts should look like this:</p></li>
+</ul>
+<p><img src="Images/SidebysidePieCharts_-_Excel.PNG"> <br></p>
+</div>
+<p><br></p>
+<p><strong>Side-by-Side Bar Charts</strong></p>
+<p><img src="Images/Step4.png"></p>
+<p>The null and alternative hypotheses for a test of equality of two proportions is: <span class="math display">\[
+\begin{array}{rl}
+H_0: &amp; p_1 = p_2 \\
+H_a: &amp; p_1 \ne p_2 \\
+\end{array}
+\]</span></p>
+<p>If the null hypothesis is true, then the proportion of females who can taste PTC is the same as the proportion of males who can taste PTC.</p>
+<p><span id="Equation"></span> The test statistic is a <span class="math inline">\(z\)</span>, and is given by: <span class="math display">\[
+z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) } }
+\]</span> where <span class="math display">\[
+\begin{array}{lll}
+n_1= \text{sample size for group 1:}    &amp; n_1 = 66  &amp; \text{(number of females)} \\
+n_2= \text{sample size for group 2:}    &amp; n_2 = 52  &amp; \text{(number of males)} \\
+\hat p_1= \text{sample proportion for group 1:} &amp; \hat p_1 = \frac{x_1}{n_1} = \frac{51}{66} &amp; \text{(proportion of females who can taste PTC)}\\
+\hat p_2= \text{sample proportion for group 2:} ~ &amp; \hat p_2 = \frac{x_2}{n_2} = \frac{38}{52} &amp; \text{(proportion of males who can taste PTC)}\\
+\hat p= \text{overall sample proportion:}   &amp; \hat p = \frac{x_1+x_2}{n_1+n_2} = \frac{89}{118} &amp; \text{(overall proportion who can taste PTC)}\\
+\end{array}
+\]</span></p>
+<p>Substituting these values into the equation for the test statistic, <span class="math inline">\(z\)</span>, we get: <span class="math display">\[
+\begin{align}
+z &amp; = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) } }
+\\
+&amp; = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( 0 \right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) } } \\
+&amp; ~ ~ ~ ~ ~ \textrm{In the null hypothesis, we assumed that} ~ p_1=p_2. \\
+&amp; ~ ~ ~ ~ ~ \textrm{Or after subtracting,} ~ p_1-p_2=0 \\
+&amp; ~ ~ ~ ~ ~ \textrm{In the null hypothesis, we assumed that} ~ p_1=p_2. \\
+&amp; ~ ~ ~ ~ ~ \textrm{So, we substituted} ~ 0 ~ \textrm{for} ~ p_1-p_2 ~ \text{in the previous step.} \\
+&amp; = \frac{ \left( \frac{51}{66} - \frac{38}{52} \right) - (0) }{ \sqrt{\frac{89}{118} \left( 1-\frac{89}{118} \right) \left( \frac{1}{66} + \frac{1}{52} \right) } } \\
+&amp; = 0.526 \\
+\end{align}
+\]</span></p>
+The test statistic is <span class="math inline">\(z=0.526\)</span>. Under the null hypothesis, this follows a standard normal distribution. So, we can use the Normal Probability applet to compute the <span class="math inline">\(P\)</span>-value. We are conducting a two-sided test, so we will shade both tails in the applet.
+<center>
+<img src="Images/ShadeBothZ-0-5256.png">
+</center>
+<p>Since <span class="math inline">\(P\textrm{-value} = 0.599 &gt; 0.05 = \alpha\)</span>, we fail to reject the null hypothesis. In English we say, there is insufficient evidence to suggest that the true proportion of males who can taste PTC is different from the true proportion of females who can taste PTC.</p>
+<p><img src="Images/Step5.png"></p>
+<p>Men and women appear to be able to taste PTC in equal proportions. There is not enough evidence to say that one gender is able to taste PTC more than the other. It appears that the ability to taste PTC is not a sex-linked trait.</p>
+</div>
+<div id="using-excel-to-perform-these-calculations" class="section level3">
+<h3>Using Excel to perform these calculations</h3>
+<!-- {{Content:Excel/SPSS-Two Proportion HT}} -->
+<p>Just like we did for one proportion, we will use the Excel spreadsheet CategoricalDataAnalysis to perform hypothesis tests for two proportions.</p>
+<p>To download this file, click here: <a href="./Data/CategoricalDataAnalysis_Hat.xlsx">CategoricalDataAnalysis.xlsx</a></p>
+<span class="Custom">Click on the link at right</span> for instructions on using this spreadsheet to perform hypothesis testing. <a href="javascript:showhide('ins')"><span style="font-size:8pt;">Show/Hide Instructions</span></a>
+<div id="ins" style="display:none;">
+<p>For this example we will consider the “PTC” data above.</p>
+<ul>
+<li><strong>Step 1</strong>: Open the Excel file CategoricalDataAnalysis and click on the “Two Proportions” tab at the bottom of the spreadsheet.</li>
+</ul>
+<center>
+<img src="Images/Lesson_18_pic_1.PNG">
+</center>
+<ul>
+<li><p>The blue boxes indicate the input spaces. These are the only cells into which you will enter data. For this example we will be considering all the blue boxes.</p></li>
+<li><p><strong>Step 2</strong>: Input the appropriate values into the designated cells. We will input the values of <span class="math inline">\(x_1\)</span>, <span class="math inline">\(n_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(n_2\)</span> from the data above. The fifth cell indicates our desired level of confidence for our confidence interval and is also used to give the level of significance, <span class="math inline">\(\alpha\)</span>. The level of significance will be <span class="math inline">\(1-\text{value of the cell}\)</span>. By default, the cell contains the value 0.95. This means we have a level of significance of <span class="math inline">\(\alpha=1-0.95=0.05\)</span>. The sixth cell contains the value of our null hypothesis and is a drop-down list where we can select the appropriate hypothesis test.</p></li>
+</ul>
+<center>
+<img src="Images/Lesson_18_pic_2.PNG">
+</center>
+<ul>
+<li><p>You may have noticed that after you input the values into the blue cells that the values of the other cells changed automatically. Excel performs all of the necessary calculations for you.</p></li>
+<li><p><strong>Step 3</strong>: The results of the hypothesis test are given in the output boxes.</p></li>
+</ul>
+<center>
+<img src="Images/Lesson_18_pic_3.PNG">
+</center>
+<ul>
+<li>Compare the z-score and <span class="math inline">\(P\)</span>-value with the one you calculated by hand. They’re the same! <br></li>
+</ul>
+</div>
+<p><br></p>
+<p><img src="Images/StepsAll.png"></p>
+</div>
+<div id="mortality-rates-and-day-of-admission-aortic-aneurysms" class="section level3">
+<h3>Mortality Rates and Day of Admission: Aortic Aneurysms</h3>
+<p>Some people have claimed that mortality (death) rates are higher for patients admitted to a hospital on a weekend compared to patients admitted on a weekday. Researchers Chaim Bell and Donald Redelmeier analyzed admission data from hospital emergency rooms in Ontario, Canada <!--<cite>Bell01</cite>-->.</p>
+<center>
+<img src="Images/AneurysmAorta-marked.png">
+</center>
+<p>The aorta is a major artery that takes oxygen-rich blood from the heart to the entire body. In some patients, this artery can swell like a balloon and burst. If this occurs in the abdomen, the technical term for the event is a ruptured abdominal aortic aneurysm. Although this condition is treatable, it requires immediate action, or the patient will die rapidly.</p>
+<p><img src="Images/Step1.png"></p>
+<p>The problem is that the quality of care in an emergency care facility may differ at different times of the week. Doctors Bell and Redelmeier hypothesized that the probability that a patient with an aortic aneurysm will die is greater if they are admitted to a hospital on a weekend compared to a weekday.</p>
+<p><strong>Hypothesis:</strong> The proportion of patients with a ruptured abdominal aortic aneurysm who will die is greater on the weekends than on weekdays.</p>
+<p><img src="Images/Step2.png"></p>
+<p>To test this claim, the researchers accessed medical records for several patients admitted to the emergency department of the hospitals in Ontario, Canada. They recorded the number of patients admitted with an aortic aneurysm on weekdays compared to weekends.</p>
+<p>Data representative of their results are given below <!--<cite>Bell01</cite>-->.</p>
+<table>
+<caption><strong>Aortic Aneurysm Outcomes</strong></caption>
+<thead>
+<tr class="header">
+<th align="left">Outcome</th>
+<th align="left">Weekday Admission</th>
+<th align="left">Weekend Admission</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Died (x)</td>
+<td align="left"><span class="math inline">\(x_1 = 1476\)</span></td>
+<td align="left"><span class="math inline">\(x_2 = 553\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">Survived</td>
+<td align="left"><span class="math inline">\(2669\)</span></td>
+<td align="left"><span class="math inline">\(756\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">Total (n)</td>
+<td align="left"><span class="math inline">\(n_1 = 4145\)</span></td>
+<td align="left"><span class="math inline">\(n_2 = 1309\)</span></td>
+</tr>
+</tbody>
+</table>
+<!-- {| class="basic" style="text-align:center" -->
+<!-- |+ **Aortic Aneurysm Outcomes** -->
+<!-- |- -->
+<!-- ! Outcome || Weekday Admission ||  Weekend Admission -->
+<!-- |- -->
+<!-- ! Died (x) -->
+<!-- | align="right" | $x_1 = 1476$ -->
+<!-- | align="right" | $x_2 = 553$ -->
+<!-- |- -->
+<!-- ! Survived -->
+<!-- | align="right" | $2669$ -->
+<!-- | align="right" | $756$ -->
+<!-- |- -->
+<!-- ! Total (n) -->
+<!-- | align="right" | $n_1 = 4145$ -->
+<!-- | align="right" | $n_2 = 1309$ -->
+<!-- |- -->
+<!-- |} -->
+<p><img src="Images/Step3.png"></p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol style="list-style-type: decimal">
+<li>Use the data above to find the estimated proportion of patients admitted with an aortic aneurysm on a weekday who will die, <span class="math inline">\(\hat p_1\)</span>.</li>
+</ol>
+<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q1" style="display:none;">
+<center>
+<span class="math inline">\(\hat p_1 = 0.3561\)</span>
+</center>
+</div>
+<p><br></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Use the data to compute the estimated proportion of the patients admitted on a weekend that will die, <span class="math inline">\(\hat p_2\)</span>.</li>
+</ol>
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+<span class="math inline">\(\hat p_2 = 0.4225\)</span>
+</center>
+</div>
+<p><br></p>
+<ol start="3" style="list-style-type: decimal">
+<li>What do you notice about <span class="math inline">\(\hat p_1\)</span> and <span class="math inline">\(\hat p_2\)</span>?</li>
+</ol>
+<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q3" style="display:none;">
+<center>
+<span class="math inline">\(\hat p_2~&gt;~\hat p_1\)</span>
+</center>
+</div>
+<p><br></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Without doing any more calculations, do you think that there is a significant increase in the death rates of patients admitted on a weekend compared to those admitted on a weekday? Justify your answer.</li>
+</ol>
+<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q4" style="display:none;">
+<ul>
+<li>It appears that those admitted on a weekend have a greater death rate than those who are admitted on a weekday, but we do not know if it is a statistically significant difference until we do a hypothesis test.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<div id="side-by-side-bar-charts" class="section level4">
+<h4>Side-by-side Bar Charts</h4>
+<p>If the data are considered counts, then a side-by-side bar chart is usually the preferred plot.</p>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<!-- {{Software_Filter | PageName=SideBySideBarCharts }} -->
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p><strong>To create side-by-side bar charts in Excel, do the following:</strong></p>
+<ul>
+<li>First, make sure the data are organized so that the first column gives the outcome (died or survived), the next column indicates the day of admittance (weekday or weekend) and the last column shows the counts.</li>
+<li>Then highlight the all three columns but just for the “Weekday” data.<br />
+</li>
+<li>Now click on the “Insert” tab and then the “Chart” button, and select “column”. Please select the most basic 2D column chart.</li>
+<li>Next you can repeat the process above but highlighting the “Weekend” data for all three columns.<br />
+</li>
+<li>To keep the two bar charts straight, you can add a title by clicking on the “Layout” tab under chart tools. Next click on “Chart Title” and then “Above Chart”.<br />
+</li>
+<li>You can now type in the Titles, “Aortic Aneurysm Outcomes Weekday Admittance” and “Aortic Aneurysm Outcomes Weekend Admittance” or something similar. <br></li>
+</ul>
+</div>
+<p><br></p>
+<p><img src="Images/Step4.png"></p>
+<br>
+<div class="message Tip">
+<span class="math inline">\(p_1\)</span> is the true proportion of deaths in group 1, the weekday group. <span class="math inline">\(p_2\)</span> is the true proportion of deaths in the weekend group.
+</div>
+<p><br> <br></p>
+<p>We now conduct a formal hypothesis test to determine if the mortality (death) rate is greater on a weekend compared to a weekday. First, we state the null and alternative hypotheses: <span class="math display">\[
+\begin{align}
+H_0: &amp;  p_1 = p_2 \\
+H_a: &amp;  p_1 &lt; p_2
+\end{align}
+\]</span> where group 1 represents the patients admitted on a weekday and group 2 represents patients admitted on a weekend. Note that if <span class="math inline">\(p_1 &lt; p_2\)</span>, then the risk of death is greater in group 2 than in group 1. We will use the 0.05 level of significance.</p>
+</div>
+<div id="checking-requirements-for-the-hypothesis-test" class="section level4">
+<h4>Checking Requirements for the Hypothesis Test</h4>
+<br>
+<div class="message Tip">
+When you check the requirements for this procedure, you are actually checking that you have at least 10 successes and 10 failures in both Group 1 and Group 2. All four conditions must be true in order to conduct the test.
+</div>
+<p><br> <br></p>
+<p>If the sample size is large in both groups, then we can use the normal distribution to compute the <span class="math inline">\(P\)</span>-value. To check if the sample size is large enough, we need to check the following requirements: <span class="math display">\[
+\begin{array}{rrr}
+n_1 \cdot \hat p_1 \ge 10                 &amp;&amp; n_2 \cdot \hat p_2 \ge 10 \\
+n_1 \cdot \left(1-\hat p_1\right) \ge 10  &amp;&amp; n_2 \cdot \left(1-\hat p_2\right) \ge 10
+\end{array}
+\]</span> If these requirements are satisfied, the <span class="math inline">\(z\)</span>-statistic can be used to compute to assess whether the true population proportions are equal or if the risk of death is greater on weekends.</p>
+<p>Note that the requirements are all satisfied: <span class="math display">\[
+\begin{array}{rr}
+n_1 \cdot \hat p_1  = 4145 \cdot 0.3561 = 1476 \ge 10           &amp; n_2 \cdot \hat p_2  = 1309 \cdot 0.4225 = 553 \ge 10  \\
+n_1 \cdot \left(1-\hat p_1\right) = 4145 \cdot 0.6439 = 2669 \ge 10     &amp; n_2 \cdot \left(1-\hat p_2\right) = 1309 \cdot 0.5775 = 756 \ge 10
+\end{array}
+\]</span></p>
+<p><strong>Reminder:</strong> <span class="math inline">\(~ x_1 = 1476,~x_2 =553\)</span>, <span class="math inline">\(n_1=4145,~n_2 = 1309\)</span>, <span class="math inline">\(\hat p_1 = \frac{x_1}{n_1},~\hat p_2 = \frac{x_2}{n_2}\)</span>, and <span class="math inline">\(\hat p = \frac{x_1+x_2}{n_1+n_2}\)</span>.</p>
+<p>The test statistic can be computed by following these steps:</p>
+<ul>
+<li>First, find the combined proportion of “successes.” This is computed as: <span class="math display">\[
+\hat p = \frac{x_1+x_2}{n_1+n_2} = \frac{1476+553}{4145+1309} = \frac{2029}{5454}
+\]</span></li>
+<li>Next, enter the appropriate values into the equation for the <span class="math inline">\(z\)</span>-score. <span class="math display">\[
+\begin{array}{rcll}
+z &amp;=&amp; \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) } } \\
+&amp;=&amp; \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( 0 \right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) } } &amp; \text{We assumed } p_1=p_2. \\
+&amp;=&amp; \frac{ \left( \hat p_1 - \hat p_2 \right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) } } \\
+&amp;=&amp; \frac{ \left( \frac{1476}{4145} - \frac{553}{1309} \right) }{ \sqrt{\frac{2029}{5454} \left( 1-\frac{2029}{5454} \right) \left( \frac{1}{4145} + \frac{1}{1309} \right) } } \\
+&amp;=&amp; -4.331
+\end{array}
+\]</span></li>
+</ul>
+<p>(Make sure you can get this value using your calculator.)</p>
+<div class="Emphasis">
+<ul>
+<li><strong>Remember…</strong></li>
+</ul>
+<p>The alternative hypothesis determines which area in the tails of the <span class="math inline">\(z\)</span>-distribution will be shaded as you calculated the <span class="math inline">\(P\)</span>-value.</p>
+<p>If the alternative hypothesis is <span class="math inline">\(\ldots\)</span></p>
+<ul>
+<li><p><span class="math inline">\(p_1 \ne p_2\)</span>, shade both tails.</p></li>
+<li><p><span class="math inline">\(p_1 &lt; p_2\)</span>, shade the left tail.</p></li>
+<li><span class="math inline">\(p_1 &gt; p_2\)</span>, shade the right tail. <br></li>
+</ul>
+</div>
+<p><br></p>
+This <span class="math inline">\(z\)</span>-score can be substituted into the Normal Probability applet to find the <span class="math inline">\(P\)</span>-value. Since the alternative hypothesis is that <span class="math inline">\(p_1 &lt; p_2\)</span>, we consider only the area to the left of <span class="math inline">\(z=-4.331\)</span>. The applet gives this area (our <span class="math inline">\(P\)</span>-value) as <span class="math inline">\(7.42 \times 10^{-6} = 0.00000742\)</span>.
+<center>
+<img src="Images/ShadeLeftZ-4-331.png">
+</center>
+<p>Note that <span class="math inline">\(P\)</span>-value<span class="math inline">\(= 0.00000742 &lt; 0.05 = \alpha\)</span>, so we reject the null hypothesis.</p>
+<p><img src="Images/Step5.png"></p>
+<p>There is sufficient evidence to suggest that the true proportion of patients who die from an aortic aneurysm is greater on the weekends than on the weekdays. It appears that there are substantial differences in the quality of care available to patients on the weekends compared to patients on weekdays.</p>
+<p><img src="Images/StepsAll.png"></p>
+</div>
+</div>
+<div id="mortality-rates-and-day-of-admission-heart-attacks" class="section level3">
+<h3>Mortality Rates and Day of Admission: Heart Attacks</h3>
+<p><img src="Images/Acute_myocardial_infarction_with_contraction_band_necrosis.png"></p>
+<p>Heart attacks are a leading cause of death in many areas of the world. The study by Doctors Bell and Redelmeier included an analysis of the risk of dying of a heart attack, after admission to a hospital. The researchers reported the following death rates, depending on whether the heart attack occurred on a weekday or a weekend <!--<cite>Bell01</cite>-->.</p>
+<table>
+<caption><strong>Heart Attack Outcomes</strong></caption>
+<thead>
+<tr class="header">
+<th align="left">Outcome</th>
+<th align="left">Weekday Admission</th>
+<th align="left">Weekend Admission</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Died (x)</td>
+<td align="left">17,113</td>
+<td align="left">6,289</td>
+</tr>
+<tr class="even">
+<td align="left">Survived</td>
+<td align="left">100,596</td>
+<td align="left">36,222</td>
+</tr>
+<tr class="odd">
+<td align="left">Total (n)</td>
+<td align="left">117,709</td>
+<td align="left">42,511</td>
+</tr>
+</tbody>
+</table>
+<!-- {| class="basic" style="text-align:center" -->
+<!-- |+ **Heart Attack Outcomes** -->
+<!-- ! Outcome  !! Weekday Admission !! Weekend Admission -->
+<!-- |- -->
+<!-- !Died (x) -->
+<!-- | 17,113 || 6,289 -->
+<!-- |- -->
+<!-- !Survived -->
+<!-- | 100,596 || 36,222 -->
+<!-- |- -->
+<!-- !Total (n) -->
+<!-- | 117,709 || 42,511 -->
+<!-- |- -->
+<!-- |} -->
+<p>In this section, you will conduct a hypothesis test to determine if the proportion of patients who die of a heart attack is greater on weekends than on weekdays. Use the 0.05 level of significance.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<p><img src="Images/Step1.png"></p>
+<ol start="5" style="list-style-type: decimal">
+<li>Summarize the relevant background information</li>
+</ol>
+<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q5" style="display:none;">
+<ul>
+<li>This was a study conducted by Doctors Bell and Redelmeier in which they analyzed the death rates depending on which day (weekday or weekend) the heart attack occurred and when the patients were admitted into the hospital.</li>
+</ul>
+</div>
+<p><br></p>
+<p><img src="Images/Step2.png"></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Describe the data collection process.</li>
+</ol>
+<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q6" style="display:none;">
+<ul>
+<li>The researchers collected data on patients admitted to hospitals for heart attacks and whether or not they died. Separate data was kept for weekday hospital admissions and weekend hospital admissions.</li>
+</ul>
+</div>
+<p><br></p>
+<p><img src="Images/Step3.png"></p>
+<ol start="7" style="list-style-type: decimal">
+<li>The value of <span class="math inline">\(\hat p_1\)</span>, the sample proportion of patients who died of a heart attack on a weekday, is <span class="math inline">\(\hat p_1 = \frac{17113}{117709} = 0.14538\)</span>. Find the value of <span class="math inline">\(\hat p_2\)</span>.</li>
+</ol>
+<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q7" style="display:none;">
+<center>
+<span class="math inline">\(\displaystyle{\hat p_2 = \frac{6289}{42511}=0.14794}\)</span>
+</center>
+</div>
+<p><br></p>
+<ol start="8" style="list-style-type: decimal">
+<li>Create a side-by-side pie chart illustrating the data.</li>
+</ol>
+<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q8" style="display:none;">
+<p><img src="Images/Heart-Attack-Side-By-Side-Pies-Excel.png"></p>
+</div>
+<p><br></p>
+<ol start="9" style="list-style-type: decimal">
+<li>Based on your answers to questions 7 and 8, does it appear that the risk of dying is greater if a heart attack occurs on a weekend than on a weekday?</li>
+</ol>
+<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q9" style="display:none;">
+<ul>
+<li>The sample proportions, <span class="math inline">\(\hat p_1\)</span> and <span class="math inline">\(\hat p_2\)</span> are very close. Visually, there does not appear to be a difference.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="10" style="list-style-type: decimal">
+<li>If the proportion of patients who die of a heart attack is greater on weekends than on weekdays, which of the following would best describe the relationship?</li>
+</ol>
+<ul>
+<li>A. <span class="math inline">\(p_1 = p_2\)</span></li>
+<li>B. <span class="math inline">\(p_1 &gt; p_2\)</span></li>
+<li>C. <span class="math inline">\(p_1 &lt; p_2\)</span></li>
+<li>D. <span class="math inline">\(p_1 \ne p_2\)</span></li>
+</ul>
+<a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q10" style="display:none;">
+<ul>
+<li><span class="math inline">\(p_1 &lt; p_2\)</span> is correct. Note that group 1 is the weekday group and group 2 is the weekend group.</li>
+</ul>
+</div>
+<p><br></p>
+<p><img src="Images/Step4.png"></p>
+<ol start="11" style="list-style-type: decimal">
+<li>Replace the circles (<span class="math inline">\(\bigcirc\)</span>) in the following null and alternative hypotheses with two of the following symbols: <span class="math inline">\(=&gt;&lt;\ne\)</span>.</li>
+</ol>
+<p><span class="math display">\[
+\begin{array}{rl}
+H_0: &amp;  p_1 \bigcirc p_2 \\
+H_a: &amp;  p_1 \bigcirc p_2
+\end{array}
+\]</span></p>
+<a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q11" style="display:none;">
+<center>
+<span class="math display">\[
+\begin{array}{rl}
+H_0: &amp;  p_1 = p_2 \\
+H_a: &amp;  p_1 &lt; p_2
+\end{array}
+\]</span>
+</center>
+</div>
+<p><br></p>
+<ol start="12" style="list-style-type: decimal">
+<li>What are the requirements for this test?</li>
+</ol>
+<a href="javascript:showhide('Q12')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q12" style="display:none;">
+<center>
+<span class="math display">\[
+\begin{array}{rrr}
+n_1 \cdot \hat p_1 \ge 10 &amp;&amp; n_2 \cdot \hat p_2 \ge 10 \\
+n_1 \cdot \left(1-\hat p_1\right) \ge 10 &amp;&amp; n_2 \cdot \left(1-\hat p_2\right) \ge 10
+\end{array}
+\]</span>
+</center>
+</div>
+<p><br></p>
+<ol start="13" style="list-style-type: decimal">
+<li>Are the requirements for this hypothesis test satisfied? Justify your answer.</li>
+</ol>
+<a href="javascript:showhide('Q13')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q13" style="display:none;">
+<center>
+<span class="math display">\[
+\begin{array}{rrr}
+n_1 \cdot \hat p_1 = 17113 \ge 10 &amp;&amp; n_2 \cdot \hat p_2 = 6289 \ge 10 \\
+n_1 \cdot \left(1-\hat p_1\right) = 100596 \ge 10 &amp;&amp; n_2 \cdot \left(1-\hat p_2\right) = 36222 \ge 10
+\end{array}
+\]</span>
+</center>
+<ul>
+<li>Yes, all of the calculated quantities from the previous question are at least 10.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="14" style="list-style-type: decimal">
+<li>Write the equation for the test statistic, <span class="math inline">\(z\)</span>.</li>
+</ol>
+<a href="javascript:showhide('Q14')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q14" style="display:none;">
+<center>
+<span class="math display">\[
+z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) }}
+\]</span>
+</center>
+</div>
+<p><br></p>
+<ol start="15" style="list-style-type: decimal">
+<li>Compute the value of the test statistic.</li>
+</ol>
+<a href="javascript:showhide('Q15')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q15" style="display:none;">
+<center>
+<span class="math inline">\(z=-1.278\)</span>
+</center>
+</div>
+<p><br></p>
+<ol start="16" style="list-style-type: decimal">
+<li>Present a sketch of the sampling distribution, showing the test statistic and the <span class="math inline">\(P\)</span>-value.</li>
+</ol>
+<a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q16" style="display:none;">
+<p><img src="Images/SamplingDistributionHeartAttack-Applet.png"></p>
+</div>
+<p><br></p>
+<ol start="17" style="list-style-type: decimal">
+<li>Find the <span class="math inline">\(P\)</span>-value.</li>
+</ol>
+<a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q17" style="display:none;">
+<center>
+<span class="math inline">\(P\textrm{-value} = 0.1006\)</span>
+</center>
+</div>
+<p><br></p>
+<ol start="18" style="list-style-type: decimal">
+<li>Compare the <span class="math inline">\(P\)</span>-value to the level of significance. Which is smaller? Will you reject, or fail to reject, the null hypothesis?</li>
+</ol>
+<a href="javascript:showhide('Q18')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q18" style="display:none;">
+<center>
+<span class="math inline">\(P\textrm{-value} = 0.1006 &gt; 0.05 = \alpha\)</span>
+</center>
+</div>
+<p><br></p>
+<ol start="19" style="list-style-type: decimal">
+<li>What is your decision?</li>
+</ol>
+<a href="javascript:showhide('Q19')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q19" style="display:none;">
+<ul>
+<li>Since the <span class="math inline">\(P\)</span>-value is greater than <span class="math inline">\(\alpha\)</span>, we fail to reject the null hypothesis.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="20" style="list-style-type: decimal">
+<li>Fill in the blanks in the following sentence:</li>
+</ol>
+<ul>
+<li>There is <span class="math inline">\(\text{____________}\)</span> evidence to suggest that the true proportion of patients who die of a heart attack is <span class="math inline">\(\text{__________}\)</span> on weekends than on weekdays.*</li>
+</ul>
+<a href="javascript:showhide('Q20')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q20" style="display:none;">
+<ul>
+<li>There is <strong>insufficient</strong> evidence to suggest that the true proportion of patients who die of a heart attack is <strong>greater</strong> on weekends than on weekdays.</li>
+</ul>
+</div>
+<p><br></p>
+<p><img src="Images/Step5.png"></p>
+<ol start="21" style="list-style-type: decimal">
+<li>If you were to have a heart attack, would you be more concerned if it occurred on a weekend than on a weekday?</li>
+</ol>
+<a href="javascript:showhide('Q21')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q21" style="display:none;">
+<ul>
+<li>No, the evidence suggests that the probability of dying of a heart attack is not greater on the weekends.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p><img src="Images/StepsAll.png"></p>
+<p><br></p>
+</div>
+</div>
+<div id="confidence-intervals-managing-fox-populations" class="section level2">
+<h2>Confidence Intervals: Managing Fox Populations</h2>
+<!-- {{:Lesson_18:Content/F2F}} -->
+<p>*When conducting hypothesis tests using two proportions, the null hypothesis is always <span class="math inline">\(p_1=p_2\)</span>, indicating that there is no difference between the two proportions. The alternative hypothesis can be left-tailed (<span class="math inline">\(&lt;\)</span>), right-tailed(<span class="math inline">\(&gt;\)</span>), or two-tailed(<span class="math inline">\(\ne\)</span>).</p>
+<p>*For a hypothesis test and confidence interval of two proportions, we use the following symbols: <span class="math display">\[
+\begin{array}{lcl}
+\text{Sample proportion for group 1:} &amp; \hat p_1 = \displaystyle{\frac{x_1}{n_1}} \\
+\text{Sample proportion for group 2:} &amp; \hat p_2 = \displaystyle{\frac{x_2}{n_2}}
+\end{array}
+\]</span></p>
+<p>*For a hypothesis test only, we use the following symbols:</p>
+<p><span class="math display">\[
+\begin{array}{lcl}
+\text{Overall sample proportion:} &amp; \hat p = \displaystyle{\frac{x_1+x_2}{n_1+n_2}}
+\end{array}
+\]</span></p>
+<ul>
+<li><p>Whenever zero is contained in the confidence interval of the difference of the true proportions we conclude that there is no significant difference between the two proportions.</p></li>
+<li><p>You will use the Excel spreadsheet <a href="./Data/CategoricalDataAnalysis_Hat.xlsx">CategoricalDataAnalysis.xlsx</a> to perform hypothesis testing and calculate confidence intervals for problems involving two proportions. <br></p></li>
+</ul>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<div class="SummaryHeading">
+Remember…
+</div>
+<div class="Summary">
+<ul>
+<li><p>When conducting hypothesis tests using two proportions, the null hypothesis is always <span class="math inline">\(p_1=p_2\)</span>, indicating that there is no difference between the two proportions. The alternative hypothesis can be left-tailed (<span class="math inline">\(&lt;\)</span>), right-tailed(<span class="math inline">\(&gt;\)</span>), or two-tailed(<span class="math inline">\(\ne\)</span>).</p></li>
+<li><p>For a hypothesis test and confidence interval of two proportions, we use the following symbols: <span class="math display">\[
+\begin{array}{lcl}
+\text{Sample proportion for group 1:} &amp; \hat p_1 = \displaystyle{\frac{x_1}{n_1}} \\
+\text{Sample proportion for group 2:} &amp; \hat p_2 = \displaystyle{\frac{x_2}{n_2}}
+\end{array}
+\]</span></p></li>
+<li><p>For a hypothesis test only, we use the following symbols:</p></li>
+</ul>
+<p><span class="math display">\[
+\begin{array}{lcl}
+\text{Overall sample proportion:} &amp; \hat p = \displaystyle{\frac{x_1+x_2}{n_1+n_2}}
+\end{array}
+\]</span></p>
+<ul>
+<li><p>Whenever zero is contained in the confidence interval of the difference of the true proportions we conclude that there is no significant difference between the two proportions.</p></li>
+<li>You will use the Excel spreadsheet <a href="./Data/CategoricalDataAnalysis_Hat.xlsx">CategoricalDataAnalysis.xlsx</a> to perform hypothesis testing and calculate confidence intervals for problems involving two proportions. <br></li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="navigation" class="section level2">
+<h2>Navigation</h2>
+<center>
+<table>
+<colgroup>
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Previous Reading</strong></th>
+<th align="center"><strong>This Reading</strong></th>
+<th align="center"><strong>Next Reading</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><a href="Lesson17.html">Lesson 17: <br> Inference for One Proportion</a></td>
+<td align="center">Lesson 18: <br> Inference for Two Proportion</td>
+<td align="center"><a href="Lesson19.html">Lesson 19: <br> Inference for Independence of Categorical Data</a></td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+
+<br />
+<hr />
+<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 ---
-title: "Lesson 18"
+title: "Lesson 18: Inference for Two Proportions"
 output: 
   html_document:
     theme: cerulean
@@ -11,8 +11,7 @@ output:
 
 <div style="clear:both"></div>
 
-
-{{:Tidbit:11}}
+http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-_0HG1XNei5qVvNogVs95k
 
 
 ==Lesson Outcomes==
@@ -96,7 +95,28 @@ When working with data for two proportions, graphically displaying the data can 
 '''Side-by-Side Pie Charts'''
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=SideBySidePieCharts}}
+<!-- {{Software_Filter | PageName=SideBySidePieCharts}} -->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+:'''To create side-by-side pie charts in Excel, do the following:'''
+
+:For this example we will use the <span class=Link>[[Data|PTCTasting]]</span> data set. 
+
+::*First, make sure the data are organized so that one column contains the first variable (gender) and another column contains the second variable (whether or not they can taste PTC).
+::*If a third column has be used to store counts of the number of observations in each group, then highlight the "CanTaste" column and "Count" column just for females, or cells B2, B3, C2, and C3.  
+::*Now click on the "Insert" tab and then the "pie chart" button.  Please select the most basic 2D pie chart.
+::*Next you can repeat the process above but highlighting the male data or cells B4, B5, C4, and C5.  
+::*To keep the two pie charts straight, you can add a title by clicking on the "Layout" tab under chart tools.  Next click on "Chart Title" and then "Above Chart".  
+::*You can now type in the titles, "Females Taste PTC?" and "Males Taste PTC?" or something similar.
+::*Now you should be able to visually compare the proportion of females that can taste PTC to the proportion of males that can taste PTC.
+
+::Your pie charts should look like this:
+
+[[File:SidebysidePieCharts - Excel.PNG|300px|center|link=]]
+<br>
+</div>
+<br>
 
 '''Side-by-Side Bar Charts'''
 
@@ -155,7 +175,37 @@ It appears that the ability to taste PTC is not a sex-linked trait.
 
 ===Using Excel to perform these calculations===
 
-{{Content:Excel/SPSS-Two Proportion HT}}
+<!-- {{Content:Excel/SPSS-Two Proportion HT}} -->
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+Just like we did for one proportion, we will use the Excel spreadsheet CategoricalDataAnalysis to perform hypothesis tests for two proportions. 
+
+To download this file, click here: {{Course_Filter|course=A B C|content={{Spreadsheet|CDA}} }}
+
+<span class="Custom">Click on the link at right</span> for instructions on using this spreadsheet to perform hypothesis testing.
+<div style="clear:both"></div>
+<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Instructions" data-expandtext="Show Instructions">
+
+For this example we will consider the "PTC" data above.
+
+::'''Step 1''': Open the Excel file CategoricalDataAnalysis and click on the "Two Proportions" tab at the bottom of the spreadsheet.
+[[File:Lesson 18 pic 1.PNG|center|link=]]
+
+::The blue boxes indicate the input spaces. These are the only cells into which you will enter data. For this example we will be considering all the blue boxes.
+
+
+::'''Step 2''': Input the appropriate values into the designated cells. We will input the values of $x_1$, $n_1$, $x_2$, and $n_2$ from the data above. The fifth cell indicates our desired level of confidence for our confidence interval and is also used to give the level of significance, $\alpha$. The level of significance will be $1-\text{value of the cell}$. By default, the cell contains the value 0.95. This means we have a level of significance of $\alpha=1-0.95=0.05$. The sixth cell contains the value of our null hypothesis and is a drop-down list where we can select the appropriate hypothesis test.
+[[File:Lesson 18 pic 2.PNG|center|link=]]
+
+::You may have noticed that after you input the values into the blue cells that the values of the other cells changed automatically. Excel performs all of the necessary calculations for you. 
+
+
+::'''Step 3''': The results of the hypothesis test are given in the output boxes.
+[[File:Lesson 18 pic 3.PNG|center|link=]]
+::Compare the z-score and $P$-value with the one you calculated by hand. They're the same!
+<br>
+</div>
+<br>
 
 
 [[File:StepsAll.png|link=|center]]
@@ -250,7 +300,22 @@ Data representative of their results are given below <!--<cite>Bell01</cite>-->.
 If the data are considered counts, then a side-by-side bar chart is usually the preferred plot.
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=SideBySideBarCharts }}
+<!-- {{Software_Filter | PageName=SideBySideBarCharts }} -->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+:'''To create side-by-side bar charts in Excel, do the following:'''
+
+::*First, make sure the data are organized so that the first column gives the outcome (died or survived), the next column indicates the day of admittance (weekday or weekend) and the last column shows the counts.
+::*Then highlight the all three columns but just for the "Weekday" data.  
+::*Now click on the "Insert" tab and then the "Chart" button, and select "column".  Please select the most basic 2D column chart.
+::*Next you can repeat the process above but highlighting the "Weekend" data for all three columns.  
+::*To keep the two bar charts straight, you can add a title by clicking on the "Layout" tab under chart tools.  Next click on "Chart Title" and then "Above Chart".  
+::*You can now type in the Titles, "Aortic Aneurysm Outcomes Weekday Admittance" and "Aortic Aneurysm Outcomes Weekend Admittance" or something similar.
+<br>
+
+</div>
+<br>
 
 [[File:Step4.png|link=]]
 
@@ -328,7 +393,9 @@ $$
 </div>
 
 This $z$-score can be substituted into the Normal Probability applet to find the $P$-value.  Since the alternative hypothesis is that $p_1 < p_2$, we consider only the area to the left of $z=-4.331$.  The applet gives this area (our $P$-value) as $7.42 \times 10^{-6} = 0.00000742$.
-<center>[[File:ShadeLeftZ-4-331.png|link=]]</center>
+<center>
+[[File:ShadeLeftZ-4-331.png|link=]]
+</center>
 Note that $P$-value$ = 0.00000742 < 0.05 = \alpha$, so we reject the null hypothesis.
 
 
@@ -565,7 +632,31 @@ $
 
 ==Confidence Intervals: Managing Fox Populations==
 
-{{:Lesson_18:Content/F2F}}
+<!-- {{:Lesson_18:Content/F2F}} -->
+
+*When conducting hypothesis tests using two proportions, the null hypothesis is always $p_1=p_2$, indicating that there is no difference between the two proportions. The alternative hypothesis can be left-tailed ($<$), right-tailed($>$), or two-tailed($\ne$).
+
+*For a hypothesis test and confidence interval of two proportions, we use the following symbols:
+$$
+\begin{array}{lcl}
+\text{Sample proportion for group 1:} & \hat p_1 = \displaystyle{\frac{x_1}{n_1}} \\
+\text{Sample proportion for group 2:} & \hat p_2 = \displaystyle{\frac{x_2}{n_2}}
+\end{array}
+$$
+
+*For a hypothesis test only, we use the following symbols:
+
+$$
+\begin{array}{lcl}
+\text{Overall sample proportion:} & \hat p = \displaystyle{\frac{x_1+x_2}{n_1+n_2}}
+\end{array}
+$$
+
+*Whenever zero is contained in the confidence interval of the difference of the true proportions we conclude that there is no significant difference between the two proportions.
+
+*You will use the Excel spreadsheet {{Course_Filter|course=A B C|content={{Spreadsheet|CDA}} }} to perform hypothesis testing and calculate confidence intervals for problems involving two proportions.
+<br>
+
 
 ==Summary==
 
