@@ -20,7 +20,7 @@ wiki_to_md <- function(wiki_file){
 # Step 3: Fix Bold & Italics ---------------------------------------------------
   str_replace_all("'{3}", "**")     %>% 
   str_replace_all("'{2}", "*")      %>% 
-  str_replace_all("^:{2}\*", "- ")  %>% 
+  str_replace_all("^:{2}\\*", "- ")  %>% 
   str_replace_all("^:{2}", "- ")    %>% 
   str_remove_all("^:{1}")           %>% 
   str_replace_all("^\\[\\[(File):", '<img src="./Images/') %>%

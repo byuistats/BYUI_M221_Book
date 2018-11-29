@@ -153,7 +153,20 @@ $$
 where $ \hat Y $ represents the predicted body length of an estuarine crocodile with a head length of $X$. The numbers $b_0$ and $b_1$ are called the estimated "regression coefficients".  "Coefficient" is a fancy term that simply means a number, especially a number that is multiplied by a variable such as $X$.  We will use software to calculate the regression coefficients.
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=RegressionCoeffs }}
+<!-- {{Software_Filter | PageName=RegressionCoeffs }} -->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+:'''To find the estimated regression coefficients ($ b_0 $ and $ b_1 $) in Excel, do the following:'''
+
+::* Open the {{Spreadsheet|QIP}} file.
+::* Click on the "Linear Regression" tab.
+::* Paste your data for the explanatory variable (x) in the first column.  For this example, this is the head lengths.
+::* The data for the response variable (y) is pasted in the second column.  This is the variable you want to predict based upon the value of (x).  Our response variable is the body length of the crocodiles.
+::* The regression coefficients are given in the table under the heading "Unstandardized Coefficients" below the sub-heading "B".
+<br>
+</div>
+<br>
 
 ===Interpreting the Regression Output===
 
@@ -188,7 +201,21 @@ $$
 Even though we can do this with a calculator, it is a little tedious and is subject to rounding errors.  There is a simpler, easier, and better way.
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=RegressionPredictions }}
+<!-- {{Software_Filter | PageName=RegressionPredictions }} -->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+:'''To use Excel to predict the value of $Y$ for any specified value of $X$, do the following:'''
+
+::* Enter the explanatory (x) and response (y) variables in the first two columns of the Linear Regression spreadsheet.
+::* Find cell G18, which is labeled as "x" in the "Confidence and Prediction Intervals for Regression Response" table. 
+::* In cell G18, enter the value of x for which you wish to predict y.  For this example, enter 87 for x, which is the skull length of the juvenile sarcosuchus.
+::* The predicted value is given in the cell labeled "predicted."
+<br>
+
+[http://www.byuimath.com/statisticswiki/images/0/01/LinearRegressionPredictedValue.png Click for details.]
+</div>
+<br>
 
 Notice that our result using software does not exactly match the results we got by hand.  Using software we estimate the body length of the juvenile sarcosuchus to be: 648.155 cm.  These results differ slightly.  The "by hand" answer was derived using less precision than is available using software.  It is better to use the software to make these predictions.
 
@@ -210,7 +237,18 @@ Stop and think about this for a minute.  This juvenile sarcosuchus is estimated 
 ===Drawing the Regression Line on a Scatterplot===
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=DrawingRegressionLine }}
+<!-- {{Software_Filter | PageName=DrawingRegressionLine }} -->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+'''To draw the regression line on a scatterplot in Excel:'''
+
+::*Right-click on one of the data points illustrated in your scatterplot.
+::*Choose the menu option "Add Trendline..."
+::*Close the dialog box that appears.
+<br>
+</div>
+<br>
 
 The following plot shows the regression line on the scatterplot.
 
