@@ -1,5 +1,5 @@
 ---
-title: "Lesson 20"
+title: "Lesson 23: Inference for Bivariate Data"
 output: 
   html_document:
     theme: cerulean
@@ -87,14 +87,36 @@ $$
 It is tedious to calculate the residuals by hand, but software can be used to find the residuals.
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=CalculateResiduals }}
+<!-- {{Software_Filter | PageName=CalculateResiduals }} -->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+:'''To find the residuals in Excel, do the following:'''
+
+::*Open {{Spreadsheet|QIP}} and click on the "Linear Regression" tab
+::*Copy and Paste the dependent (or response) variable into the "Response Variable" column (Column B).  The dependent variable is also known as the response variable.  It is the thing you are trying to predict.  Often it is the more difficult/expensive variable to measure.
+::*Copy and paste the independent (or explanatory) variable into the "explanatory variable" column (Column A).
+::*Your residuals will then be calculated in column E of the Excel Spreadsheet.
+<br>
+</div>
+<br>
 
 ===Residual Plot===
 
 The residual is calculated for each data point, so you have one residual for every observation in the data set.  It is hard to use so many numbers to make decisions.  How do you comprehend so much information at once? To help us understand the information in the residuals, we make what is called a ''residual plot''. A residual plot is a scatterplot where the $X$-axis shows the independent variable ($X$) and the $Y$-axis presents the residuals for each value of $X$.
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=ResidualPlot }}
+<!-- {{Software_Filter | PageName=ResidualPlot }} -->
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+:'''To make a residual plot in Excel do the following:'''
+
+::*Once you have already entered in the explanatory and response variables into the correct columns in the {{Spreadsheet|QIP}} spreadsheet, you are given a column of residuals in column E.  
+::*Highlight both column D and E (Explanatory Variable and Residuals)
+::*Click on the Insert Tab, and then click on "Scatter".  You want the first choice (Scatter with only markers), so select the first scatter plot choice.
+<br>
+</div>
+<br>
 
 The following image shows the residual plot for the estuarine crocodile data.
 
@@ -196,7 +218,24 @@ $$
 The $P$-value is given under the "Sig." column of the Coefficients table.  With a test statistic of $t=35.588$, we get a very small $P$-value.  
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=EstuarineCrocodilePvalue }}
+<!-- {{Software_Filter | PageName=EstuarineCrocodilePvalue }} -->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+:Note that in the output for Excel, the $P$-value is given in scientific notation.  Also note that there are two values under $P$-value.  One is for the slope and the other is for the y-intercept.  In this class we will always be looking at the slope, which is the bottom or the "Predictors".  So, our $P$-value for this test is written as:
+
+$$
+P\textrm{-value} = 0.0000000000000000000000107211   
+$$
+<center>or as</center>
+$$
+1.07211E^-23
+$$
+
+:Assuming $\alpha=0.05$, then $P\textrm{-value} = 1.07211E^-23 < 0.05 = \alpha$.
+<br>
+</div>
+<br>
 
 We reject the null hypothesis, since the $P$-value is less than the level of significance.  There is sufficient evidence to suggest that there is a linear relationship between the head length and the body length of estuarine crocodiles.
 
@@ -244,7 +283,24 @@ $$
 The $P$-value is given under the "Sig." column of the Coefficients table.  With a test statistic of $t=15.491$, we get a very small $P$-value.  
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=ManateePvalue }}
+<!-- {{Software_Filter | PageName=ManateePvalue }} -->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+:Note that in the output for Excel, the $P$-value is given in scientific notation.  Also note that there are two values under $P$-value.  One is for the slope and the other is for the y-intercept.  In this class we will always be looking at the slope, which is the bottom or the "Predictors".  So, our $P$-value for this test is written as:
+
+$$
+P\textrm{-value} = 0.000000000000000000105954   
+$$
+<center>or as</center>
+$$
+1.05954E^-19
+$$
+
+:Assuming $\alpha=0.05$, then $P\textrm{-value} = 1.05954E^-19 < 0.05 = \alpha$.
+<br>
+</div>
+<br>
 
 Our decision rule is to reject the null hypothesis, since the $P$-value is less than the level of significance.  There is sufficient evidence to suggest that there is a linear relationship between the number of powerboats registered in Florida and the number of manatees killed by powerboats.
 This conclusion fits our intuition. If there are more boats on the water, it seems plausible that this will affect the number of manatees killed. If any statistical conclusion is counterintuitive, you should always be very wary!
@@ -256,7 +312,21 @@ This conclusion fits our intuition. If there are more boats on the water, it see
 We are often interested in the range of plausible values for the true regression coefficients.  We can create a confidence interval for the slope and the $Y$-intercept in Excel.  
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-{{Software_Filter | PageName=ManateeCIforRegressionCoefficients }}
+<!-- {{Software_Filter | PageName=ManateeCIforRegressionCoefficients }} -->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+:'''To find the residuals in Excel, do the following:'''
+
+::*Open {{Spreadsheet|QIP}} and click on the "Linear Regression" tab
+::*Copy and Paste the dependent (or response) variable into the "Response Variable" column (Column B).  The dependent variable is also known as the response variable.  It is the thing you are trying to predict.  Often it is the more difficult/expensive variable to measure.
+::*Copy and paste the independent (or explanatory) variable into the "explanatory variable" column (Column A).
+::*You can change the confidence level in cell H3.  The default is 95%.    
+::*The confidence interval for the slope (X) is found in cells L14 and M14.  
+::*The confidence interval for the y-intercept (Y) is found in cells L13 and M13.
+<br>
+</div>
+<br>
 
 The confidence intervals will be presented in the Coefficients box in the output.
 
