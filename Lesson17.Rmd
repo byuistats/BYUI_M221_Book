@@ -4,7 +4,7 @@ output:
   html_document:
     theme: cerulean
     toc: true
-    toc_float: true
+    toc_float: false
 ---
 
 <script type="text/javascript">
@@ -19,49 +19,47 @@ output:
 <div style="padding-left:10%;">**Optional Lesson Video**</div>
 <iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC99-0c9nxhmZPIyT7Fy594V" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
-<br>
 
-==Lesson Outcomes==
+## Lesson Outcomes
 
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Lesson Outcomes" data-expandtext="Click Here to Show Outcomes for this Lesson">
-By the end of this lesson, you should be able to:
-:* Confidence Intervals for a single proportion: 
-:** Calculate and interpret a confidence interval for a single proportion given a confidence level.
-:** Identify a point estimate and margin of error for the confidence interval.
-:** Show the appropriate connections between the numerical and graphical summaries that support the confidence interval. 
-:** Check the requirements for the confidence interval.
-:** Calculate a desired sample size given a level of confidence and margin of error (with or without a prior estimate of the population proportion). 
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="oc" style="display:none;">
 
-:* Hypothesis Testing for a single proportion:
-:** State the null and alternative hypothesis. 
-:** Calculate the test-statistic and p-value of the hypothesis test.
-:** Assess the statistical significance by comparing the p-value to the α-level.
-:** Check the requirements for the hypothesis test.
-:** Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
-:** Draw a correct conclusion for the hypothesis test.
+- Confidence Intervals for a single proportion: 
+  + Calculate and interpret a confidence interval for a single proportion given a confidence level.
+  + Identify a point estimate and margin of error for the confidence interval.
+  + Show the appropriate connections between the numerical and graphical summaries that support the confidence interval. 
+  + Check the requirements for the confidence interval.
+  + Calculate a desired sample size given a level of confidence and margin of error (with or without a prior estimate of the population proportion). 
 
+- Hypothesis Testing for a single proportion:
+  + State the null and alternative hypothesis. 
+  + Calculate the test-statistic and p-value of the hypothesis test.
+  + Assess the statistical significance by comparing the p-value to the α-level.
+  + Check the requirements for the hypothesis test.
+  + Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
+  + Draw a correct conclusion for the hypothesis test.
 </div>
-
 <br>
 
-==Confidence Interval for One Proportion==
+## Confidence Interval for One Proportion
 
-===Honesty at Medical School===
-[[File:Medical Symbol.png|right|150px|link=]]
+### Honesty at Medical School
+
+<img src="./Images/Medical_Symbol.png">
 
 Frederick Sierles and his colleagues distributed an anonymous survey to students at two American medical schools.  The questionnaire was given during class without any prior announcement to students.  The authors of the study personally supervised the distribution and collection of the surveys.  95% of the students completed the survey, and students from all four years of medical school training were represented.  A total of 428 individuals participated in the survey.  Among this group, 249 people indicated that they had cheated in some way during medical school. The results were published in a journal article in 1980.
 
-We want to use the data from this study to generalize to a larger population.  We are not usually interested in the ''particular'' individuals' responses.  The reason the study was conducted is to provide an estimate of the true population proportion, $p$.  $\hat p$ is called a '''point estimate''' of $p$.  The sample proportion, $\hat p$ is one point on the number line that estimates the value of the true proportion, $p$.
+We want to use the data from this study to generalize to a larger population.  We are not usually interested in the *particular* individuals' responses.  The reason the study was conducted is to provide an estimate of the true population proportion, $p$.  $\hat p$ is called a **point estimate** of $p$.  The sample proportion, $\hat p$ is one point on the number line that estimates the value of the true proportion, $p$.
 
-A point estimate like $\hat p$ is helpful, but it does not give us direct information on ''how close'' it is to the true parameter, $p$.  We use a confidence interval to find a range of plausible values for the parameter.
+A point estimate like $\hat p$ is helpful, but it does not give us direct information on *how close* it is to the true parameter, $p$.  We use a confidence interval to find a range of plausible values for the parameter.
 
-===Confidence Intervals===
+### Confidence Intervals
 
 <!-- {{:Lesson_17:Content/F2F}} -->
-To find a confidence interval for one population proportion, $p$, we follow the same pattern as was done in the estimates for $\mu$ in the lesson titled [[Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)|Inference for One Mean: Sigma Known (Confidence Interval)]].  We start with the point estimate of $p$ and we add and subtract a certain number of standard deviations from this value.
+To find a confidence interval for one population proportion, $p$, we follow the same pattern as was done in the estimates for $\mu$ in the lesson titled [Inference for One Mean: Sigma Known (Confidence Interval)](Lesson10.html){target="_blank"}.  We start with the point estimate of $p$ and we add and subtract a certain number of standard deviations from this value.
 
-The point estimate for $p$ is $\hat p$.  You might want to review the mean and standard deviation of the random variable $\hat p$ in the lesson on [[Lesson 16: Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion|Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion]]. Traditionally, people have used these equations to create confidence intervals for the population proportion.
+The point estimate for $p$ is $\hat p$.  You might want to review the mean and standard deviation of the random variable $\hat p$ in the lesson on [Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion](Lesson16.html){target="_blank"}. Traditionally, people have used these equations to create confidence intervals for the population proportion.
 
 The formula for the confidence interval for one proportion is:
 $$
@@ -70,9 +68,10 @@ $$
 \hat p + z^* \sqrt{\frac{\hat p (1-\hat p)}{n}}}
 \right)
 $$
-where $\displaystyle{ \hat p = \frac{x}{n} }$.
 
-You can use the normal probability applet to compute $z^*$.  Please see the lesson on [[Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)|Inference for One Mean: Sigma Known (Confidence Interval)]] if you need to review this procedure.
+$$\text{where}\displaystyle{ \hat p = \frac{x}{n} }$$.
+
+You can use the normal probability applet to compute $z^*$.  Please see the lesson on [Inference for One Mean: Sigma Known (Confidence Interval)](Lesson10.html){target="_blank"} if you need to review this procedure.
 
 Be sure that you do not round any values until the last step.  Please perform this entire computation without rounding.
 
@@ -95,137 +94,141 @@ $$
 The 95% confidence interval for the true proportion of medical students who cheat is: $(0.535, 0.629)$.
 To interpret this interval, we say that we are 95% confident that the true proportion of people who cheat in medical school is between 0.535 and 0.629.  This represents the range of plausible values for the true proportion of students who cheat at these medical schools.
 
-====Requirement====
+#### Requirement
 
 Like other procedures, there are requirements that must be checked in order for this confidence interval to be valid.
 The confidence intervals are valid whenever $n \hat p \ge 10$ and $n(1-\hat p) \ge 10$. Notice that for the data on cheating in medical school, we have $428 * 0.582 = 249$ and $428 * (1-0.582) = 179$ which are both greater than 10, so this requirement is satisfied.
 
-===Using Excel to perform these calculations===
+### Using Excel to perform these calculations
 
 <!-- {{Content:Excel/SPSS-Plus-4_CI}} -->
 
 Finding confidence intervals for one proportion using only a calculator is tedious. An Excel spreadsheet has been created to help you quickly and accurately perform these calculations. You will use this spreadsheet throughout this and other lessons.
 
-To download this file, click here: {{Spreadsheet|CDA}}
-
-
-{{Type_Filter|type=Online|content=
+To download this file, click here: [CategoricalDataAnalysis.xlsx](./Data/CategoricalDataAnalysis_Hat.xlsx)
 
 <span class="Custom">Click on the link at right</span> for instructions on using this spreadsheet to calculate confidence intervals.
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Instructions" data-expandtext="Show Instructions">
+<a href="javascript:showhide('ins')"><span style="font-size:8pt;">Show/Hide Instructions</span></a>
+<div id="ins" style="display:none;">
 
 For this example we will consider the "Honesty at Medical School" data above.
 
-::'''Step 1''': Open the Excel file CategoricalDataAnalysis.xls
-[[File:Lesson 17 pic 1.PNG|center|link=]]
+- **Step 1**: Open the Excel file CategoricalDataAnalysis.xls
 
-::The blue boxes indicate the input spaces. These are the only cells into which you will enter data. For this example we will only be considering the first three blue boxes.
+<img src="./Images/Lesson_17_pic_1.PNG">
 
-
-::'''Step 2''': Input the appropriate values into the designated cells. We will input the value of $x$ and the value of $n$ from the data above. The third box indicates our desired level of confidence. By default it is set to 0.95, meaning a 95% confidence level. 
-[[File:Lesson 17 pic 4.PNG|center|link=]]
-
-::You may have noticed that after you input the values of $x$ and $n$ into the blue cells that the values of the other cells changed automatically. Excel performs all of the necessary calculations for you. 
+- The blue boxes indicate the input spaces. These are the only cells into which you will enter data. For this example we will only be considering the first three blue boxes.
 
 
-::'''Step 3''': The 95% confidence interval is given in the output boxes.
-[[File:Lesson 17 pic 5.PNG|center|link=]]
-::Compare this confidence interval with the one you calculated by hand. They're the same!
+- **Step 2**: Input the appropriate values into the designated cells. We will input the value of $x$ and the value of $n$ from the data above. The third box indicates our desired level of confidence. By default it is set to 0.95, meaning a 95% confidence level. 
+
+<img src="./Images/Lesson_17_pic_4.PNG">
+
+- You may have noticed that after you input the values of $x$ and $n$ into the blue cells that the values of the other cells changed automatically. Excel performs all of the necessary calculations for you. 
+
+
+- **Step 3**: The 95% confidence interval is given in the output boxes.
+
+<img src="./Images/Lesson_17_pic_5.PNG">
+
+ Compare this confidence interval with the one you calculated by hand. They're the same!
 
 </div>
+<br>
 
-}}
 
+### Another Study on Honesty at Medical School
 
-===Another Study on Honesty at Medical School===
-
-DeWitt C. Baldwin, Jr. and others conducted a larger study to assess how widespread cheating is in medical schools.  Elected class officers at 40 schools were invited to distribute a survey to their second-year classmates.  Surveys were completed by students from 31 of the 40 schools.  Among all students attending the 31 schools, 62% participated in the survey, yielding a total of $n=2426$ surveys.  Out of this group, $x=114$ admitted to cheating in medical school.  These results were published in ''Academic Medicine'' in 1996.
+DeWitt C. Baldwin, Jr. and others conducted a larger study to assess how widespread cheating is in medical schools.  Elected class officers at 40 schools were invited to distribute a survey to their second-year classmates.  Surveys were completed by students from 31 of the 40 schools.  Among all students attending the 31 schools, 62% participated in the survey, yielding a total of $n=2426$ surveys.  Out of this group, $x=114$ admitted to cheating in medical school.  These results were published in *Academic Medicine* in 1996.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
-:1. Are the requirements for creating a confidence interval satisfied?
+1. Are the requirements for creating a confidence interval satisfied?
 
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::Yes, $2426*0.047 = 114$ and $2426*(1-0.047) = 2312$, so it is appropriate to use this procedure to estimate the true proportion of students who cheat in medical school.
+<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q1" style="display:none;">
+* Yes, $2426*0.047 = 114$ and $2426*(1-0.047) = 2312$, so it is appropriate to use this procedure to estimate the true proportion of students who cheat in medical school.
 </div>
+<br>
 
+2. What is the value of $\hat p$ in this study?
 
-:2. What is the value of $\hat p$ in this study?
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
 <center>
 $ \displaystyle{ \hat p = \frac{114}{2426} = 0.047} $
 </center>
 </div>
+<br>
 
+3. Use Excel to calculate the lower bound for the 95% confidence interval for the true proportion $p$.
 
-:3. Use Excel to calculate the lower bound for the 95% confidence interval for the true proportion $p$.
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q3" style="display:none;">
 <center>
-$
+$$
 \displaystyle{\hat p - z^* \sqrt{\frac{\hat p (1-\hat p)}{n}}
 = \frac{114}{2426} - 1.96 \sqrt{\frac{\frac{114}{2426} \left(1-\frac{114}{2426}\right)}{2426}}
 = 0.039}
-$
+$$
 </center>
 </div>
+<br>
 
+4. Use Excel to help you find the 95% confidence interval for the true proportion of medical students who cheat based on the data from this larger study.
 
-:4. Use Excel to help you find the 95% confidence interval for the true proportion of medical students who cheat based on the data from this larger study.
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::The upper bound for the 95% confidence interval for the true proportion of students who cheat in medical school is:
+<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q4" style="display:none;">
+* The upper bound for the 95% confidence interval for the true proportion of students who cheat in medical school is:
 $$
 \hat p + z^* \sqrt{\frac{\hat p (1-\hat p)}{n}}
 = \frac{114}{2426} + 1.96 \sqrt{\frac{\frac{114}{2426} \left(1-\frac{114}{2426}\right)}{2426}}
 = 0.055
 $$
-::So, the 95% confidence interval for the true proportion of students who cheat at medical school is: $(0.039, 0.055)$
+* So, the 95% confidence interval for the true proportion of students who cheat at medical school is: $(0.039, 0.055)$
 </div>
+<br>
 
+5. Compare the confidence intervals obtained from the Sierles study to the confidence interval from Baldwin's study.  How do the results compare to each other?
 
-:5. Compare the confidence intervals obtained from the Sierles study to the confidence interval from Baldwin's study.  How do the results compare to each other?
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::The first study concluded that the mean proportion of cheaters in medical school is in the range (0.535,0.629), while the second study concluded a much lower range of possible proportions of cheaters (0.039,0.055).  It seems quite likely that at least one of the studies is not accurate.
+<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q5" style="display:none;">
+* The first study concluded that the mean proportion of cheaters in medical school is in the range (0.535,0.629), while the second study concluded a much lower range of possible proportions of cheaters (0.039,0.055).  It seems quite likely that at least one of the studies is not accurate.
 </div>
+<br>
 
+6. What are some possible factors that might explain the discrepancy in these two studies?
 
-:6. What are some possible factors that might explain the discrepancy in these two studies?
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::Possible factors could include:  Elected class officers giving the surveys may have skewed results, perhaps the 31 schools have less cheating than the original 2, the non-participating schools may have skewed results.  Another possibility is that cheating is more prevalent in the later years of medical school,since the second study only examined second-year students.
+<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q6" style="display:none;">
+* Possible factors could include:  Elected class officers giving the surveys may have skewed results, perhaps the 31 schools have less cheating than the original 2, the non-participating schools may have skewed results.  Another possibility is that cheating is more prevalent in the later years of medical school,since the second study only examined second-year students.
 </div>
+<br>
 
+7. How would you feel if you knew that your doctor cheated in medical school?
 
-:7. How would you feel if you knew that your doctor cheated in medical school?
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::Any thoughtful answer is sufficient, but we would likely not be happy!
+<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q7" style="display:none;">
+* Any thoughtful answer is sufficient, but we would likely not be happy!
 </div>
+<br>
 
+8. Write a paragraph explaining why it is important to you to be honest in all your dealings with your fellow men--including your academic pursuits.  Be sure to include a discussion of your future plans with regard to this issue.
 
-:8. Write a paragraph explaining why it is important to you to be honest in all your dealings with your fellow men--including your academic pursuits.  Be sure to include a discussion of your future plans with regard to this issue.
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::Any thoughtful paragraph is sufficient.
+<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q8" style="display:none;">
+* Any thoughtful paragraph is sufficient.
 </div>
 &nbsp;
 </div>
+<br>
 
-==Sample Size Calculations==
+## Sample Size Calculations
 
-{{Note|'''Think about it:''' What happens to the margin of error in a confidence interval if the sample size is increased?}}
+<br>
+<div class="message Note">**Think about it:** What happens to the margin of error in a confidence interval if the sample size is increased?</div>
+<br>
+<br>
 
 If you can reduce the margin of error by increasing the sample size, then you can achieve a specific margin of error by choosing a large enough sample.  So, if you are planning a future study, you can estimate the sample size you need to obtain a desired margin of error, $m$.
 
@@ -240,20 +243,20 @@ $$
 Note that this equation requires us to know the value of $\hat{p}$.  Unless we do a study, we do not know the value of $\hat{p}$.
 Sometimes we have a prior estimate of the true proportion of successes, denoted $p^*$.
 
-'''If we have a prior estimate for $\hat{p}$,''' (namely $p^*$,) we can plug this value into the equation above to compute the sample size required to obtain our desired margin of error:
+**If we have a prior estimate for $\hat{p}$,** (namely $p^*$,) we can plug this value into the equation above to compute the sample size required to obtain our desired margin of error:
 $$
 n = \left( \frac{z^*}{m} \right)^2 p^* (1-p^*)
 $$
 where $z^*$ is determined by your confidence level, $m$ is your desired margin of error, and $p^*$ is an estimate of the true proportion of successes.
-'''If no prior estimate for $p$ is available''', we can use the following formula to compute our sample size:
+**If no prior estimate for $p$ is available**, we can use the following formula to compute our sample size:
 $$
 n = \left( \frac{z^*}{2m} \right)^2
 $$
 The latter formula (where no prior estimate for $p$ is available) will result in excessively large sample sizes if $p$ is small (say, less than 0.3) or large (say, greater than 0.7.)  Otherwise, the results for the two equations will be fairly similar.
 
-No matter what value you obtain for the sample size, if it is not a whole number '''round it up''' to the nearest whole number.
+No matter what value you obtain for the sample size, if it is not a whole number **round it up** to the nearest whole number.
 
-===Example===
+### Example
 
 If you want to find the sample size required to get a margin of error of $m=0.03$ with 95% confidence, and previous studies have shown that the true proportion is approximately equal to $p^*=0.82$, then the sample size required would be:
 $$
@@ -263,43 +266,46 @@ n = \left( \frac{z^*}{m} \right)^2 p^* (1-p^*) = \left( \frac{1.96}{0.03} \right
 $$
 We need to round this answer up to the next larger whole number.  So, you would need to collect $n=631$ observations to obtain the desired margin of error.
 
-==Hypothesis Test for One Proportion==
+<br>
 
-[[File:StepsAll.png|link=|center]]
+## Hypothesis Test for One Proportion
 
+<img src="./Images/StepsAll.png">
 
-===Can You Taste PTC?===
+### Can You Taste PTC?
 
-[[File:Step1.png|link=]]
+<img src="./Images/Step1.png">
 
 The ability to taste the chemical Phenylthiocarbamide (PTC) is hereditary.  Some people can taste it, while others cannot.  The ability to taste PTC is typically assessed using paper test strips. When a PTC test strip is placed on the tongue, it will either taste like regular paper or else have a bitter taste.
 
-
-[[File:Step2.png|link=]]
+<img src="./Images/Step2.png">
 
 It is believed that 70% of all people are able to taste PTC. Data were collected by Elise Johnson to investigate this claim. Volunteers were provided with PTC test strips and asked if they could taste anything besides paper.
 
-
-[[File:Step3.png|link=]]
+<img src="./Images/Step3.png">
 
 Out of the 118 people who participated in the research, 89 indicated that they can taste PTC.  The proportion of people in the sample who could taste PTC is
 $$
 \hat p = \frac{89}{118} = 0.754
 $$
+
 In other words, 75.4% of the people surveyed could taste the chemical.
 
-[[File:PTC Pie Graph Excel.PNG|300px|link=|center]]
+<img src="./Images/PTC_Pie_Graph_Excel.PNG">
 
-{{Tip|'''Review:'''  For a review of how to make pie graphs and bar charts in Excel, read [[Lesson 16: Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion|Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion]]}}
+<br>
+<div class="message Tip">**Review:**  For a review of how to make pie graphs and bar charts in Excel, read [Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion](Lesson16.html){target="_blank"}</div>
+<br>
+<br>
 
-[[File:Step4.png|link=]]
+<img src="./Images/Step4.png">
 
 The empirical research suggested that the proportion of people who can taste PTC is $\frac{89}{118} = 0.754$, or 75.4%.
 Is this significantly different from the assumed value of 0.70 (i.e., 70%)?  We can test this question using a hypothesis test.
 
 If the following conditions are satisfied:
-:*$np \ge 10$
-:*$n(1-p) \ge 10$
+- $np \ge 10$
+- $n(1-p) \ge 10$
 
 then the sample size is large enough that the Central Limit Theorem suggests the sample proportion, $\hat p$, is approximately normal.
 Also, the true mean of $\hat p$ is $p$, and the standard deviation is $\sqrt{\frac{p \cdot (1-p)}{n}}$.
@@ -312,7 +318,7 @@ n(1-p) = 118 \cdot (1-0.70) = 35.4 \ge 10 & \surd
 \end{array}
 $$
 
-We can use a procedure that mimics the test for a single mean with $\sigma$ known from the lesson titled [[Lesson 9: Inference for One Mean: Sigma Known (Hypothesis Test)|Inference for One Mean: Sigma Known (Hypothesis Test)]] to conduct a test for a single proportion.
+We can use a procedure that mimics the test for a single mean with $\sigma$ known from the lesson titled [Inference for One Mean: Sigma Known (Hypothesis Test)](Lesson09.html){target="_blank"} to conduct a test for a single proportion.
 
 It is assumed that the true proportion of people who can taste PTC is 0.70.  This is the null hypothesis.  The alternative hypothesis is that the true proportion is different from 0.70.
 $$
@@ -331,205 +337,215 @@ $$
 Remember, we assume that the null hypothesis is true, so we use the value given in the null hypothesis for $p$.
 Using the NormalApplet, you can find the $P$-value.  This is a two-tailed test, since the alternative hypothesis includes both values above 0.70 and below 0.70.  In the applet, make sure both tails are shaded, then enter the $z$-score of 1.286.
 
-[[File:ZShadeBothTails-1-286.png|link=|center]]
+<img src="./Images/ZShadeBothTails-1-286.png">
 
 The combined area in the two tails is 0.1984, which is greater than $\alpha = 0.05$.  We fail to reject the null hypothesis.
 
 
-[[File:Step5.png|link=]]
+<img src="./Images/Step5.png">
 
 We conclude that there is insufficient evidence to suggest that the true proportion of the population that can taste PTC is different from 0.70.
 There is no reason to revise existing perspectives on the prevalence of the ability to taste PTC.
 
 <div class="QuestionsHeading">Answer the following question:</div>
 <div class="Questions">
-:14. Compare and contrast the test for one mean with $\sigma$ known and the test for one proportion.  Give at least two similarities and two differences.
+14. Compare and contrast the test for one mean with $\sigma$ known and the test for one proportion.  Give at least two similarities and two differences.
 
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::Similarities: There is one population. Both test are based on the $z$ statistic. Both tests require the use of the normal probability applet.
+<a href="javascript:showhide('Q14')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q14" style="display:none;">
+* Similarities: There is one population. Both test are based on the $z$ statistic. Both tests require the use of the normal probability applet.
 
-::Differences: The test for means involves quantitative data, the test for a proportion involves categorical data. The formulas for the $z$-score differ.
+* Differences: The test for means involves quantitative data, the test for a proportion involves categorical data. The formulas for the $z$-score differ.
 </div>
 &nbsp;
 </div>
+<br>
 
-===Using Excel to perform these calculations===
+### Using Excel to perform these calculations
 
 <!-- {{Content:Excel/SPSS-One Proportion HT}} -->
 
 The Excel spreadsheet CategoricalDataAnalysis can also be used to perform hypothesis tests for one proportion.
 
-To download this file, click here: {{Spreadsheet|CDA}}
+To download this file, click here: [CategoricalDataAnalysis.xlsx](./Data/CategoricalDataAnalysis_Hat.xlsx)
 
 <span class="Custom">Click on the link at right</span> for instructions on using this spreadsheet to perform hypothesis testing.
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Instructions" data-expandtext="Show Instructions">
+<a href="javascript:showhide('ins2')"><span style="font-size:8pt;">Show/Hide Instructions</span></a>
+<div id="ins2" style="display:none;">
 
 For this example we will consider the "PTC" data above.
 
-::'''Step 1''': Open the Excel file CategoricalDataAnalysis
-[[File:Lesson 17 pic 1.PNG||center|link=]]
+- **Step 1**: Open the Excel file [CategoricalDataAnalysis.xlsx](./Data/CategoricalDataAnalysis_Hat.xlsx)
 
-::The blue boxes indicate the input spaces. These are the only cells into which you will enter data. For this example we will be considering all the blue boxes.
+<img src="./Images/Lesson_17_pic_1.PNG">
 
-
-::'''Step 2''': Input the appropriate values into the designated cells. We will input the value of $x$ and the value of $n$ from the data above. The third box indicates our desired level of confidence for our confidence interval and is also used to give the level of significance, $\alpha$. The level of significance will be $1-\text{value of the cell}$. By default, the cell contains the value 0.95. This means we have a level of significance of $\alpha=1-0.95=0.05$. The fourth cell contains the value of our null hypothesis and is a drop-down list where we can select the type of hypothesis test, i.e. "Greater Than", "Less Than", or "Not Equal To."
-[[File:Lesson 17 pic 2.PNG|center|link=]]
-
-::You may have noticed that after you input the values into the blue cells that the values of the other cells changed automatically. Excel performs all of the necessary calculations for you. 
+- The blue boxes indicate the input spaces. These are the only cells into which you will enter data. For this example we will be considering all the blue boxes.
 
 
-::'''Step 3''': The results of the hypothesis test are given in the output boxes.
-[[File:Lesson 17 pic 3.PNG|center|link=]]
+- **Step 2**: Input the appropriate values into the designated cells. We will input the value of $x$ and the value of $n$ from the data above. The third box indicates our desired level of confidence for our confidence interval and is also used to give the level of significance, $\alpha$. The level of significance will be $1-\text{value of the cell}$. By default, the cell contains the value 0.95. This means we have a level of significance of $\alpha=1-0.95=0.05$. The fourth cell contains the value of our null hypothesis and is a drop-down list where we can select the type of hypothesis test, i.e. "Greater Than", "Less Than", or "Not Equal To."
+
+<img src="./Images/Lesson_17_pic_2.PNG">
+
+- You may have noticed that after you input the values into the blue cells that the values of the other cells changed automatically. Excel performs all of the necessary calculations for you. 
+
+
+- **Step 3**: The results of the hypothesis test are given in the output boxes.
+
+<img src="./Images/Lesson_17_pic_3.PNG">
 
 </div>
 <br>
 
-===Water Quality===
+### Water Quality
 
-[[File:Gorges_du_Verdon_River_from_Bottom_0364.jpg|frame|link=|From [http://commons.wikimedia.org/wiki/File:Gorges_du_Verdon_River_from_Bottom_0364.jpg commons.wikimedia.com] ]]
-[[File:Step1.png|link=]]
+<img src="./Images/Gorges_du_Verdon_River_from_Bottom_0364.jpg">
+
+<img src="./Images/Step1.png">
 
 Macroinvertebrates are small insects (without an internal skeleton) that live on the bottom of a stream. These insects are ideal for monitoring changes in water quality, because they (1) live nearly all their life in the water, (2) are easy to collect and identify, (3) often live for several years, (4) have a limited ability to migrate, and (5) they are influenced by environmental conditions.
 
 In any population of macroinvertebrates, there will be indicators of good health and indicators of poor health. Data are collected by capturing macroinvertebrates and recording whether they indicate good health or poor health for the river.  In particular sections of a small river near Bozeman, Montana, about 60% of the indicators observed have historically been associated with good health.
 
-
-[[File:Step2.png|link=]]
+<img src="./Images/Step2.png">
 
 Researchers suspect that the water quality in the area has decreased, suggesting that less than 60% of the indicators will show good health.  A random sample of macroinvertebrates were captured from the river.
 
-
-[[File:Step3.png|link=]]
+<img src="./Images/Step3.png">
 
 Among the $n=40$ observed indicators of health, $x=19$ suggested good health. Use this information to answer the following question.
 
 <div class="QuestionsHeading">Answer the following question:</div>
 <div class="Questions">
-:15. What is the proportion of the observed indicators that suggested good health?  Express your answer as a decimal and a percentage.
+15. What is the proportion of the observed indicators that suggested good health?  Express your answer as a decimal and a percentage.
 
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q15')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q15" style="display:none;">
 <center>
-$ \displaystyle {\hat p = \frac{x}{n} = \frac{19}{40} = 0.475~\text{or}~47.5\%} $
+$\displaystyle {\hat p = \frac{x}{n} = \frac{19}{40} = 0.475~\text{or}~47.5\%}$
 </center> 
 
-{{Course_Filter_Two|A=
-[[File:Water_quality_pie_graph_Excel.PNG|300px|link=|center]]|B=
-[[File:Water_quality_pie_graph_SPSS.PNG|300px|link=|center]]}}
+
+<img src="./Images/Water_quality_pie_graph_Excel.PNG">
+<img src="./Images/Water_quality_pie_graph_SPSS.PNG">
+
 </div>
 &nbsp;
 </div>
+<br>
 
-
-[[File:Step4.png|link=]]
+<img src="./Images/Step4.png">
 
 The following questions will guide you through the process of conducting a hypothesis test to determine if the water quality has decreased.  Use $\alpha=0.05$ for this test.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
-:16.  The two requirements required to conduct a hypothesis test for one proportion are
+16.  The two requirements required to conduct a hypothesis test for one proportion are
 <center>
-$
+$$
 \begin{array}{l}
 np \ge 10  \\
 n(1-p) \ge 10
 \end{array}
-$
+$$
 </center>
-::Are these requirements satisfied?
+* Are these requirements satisfied?
 
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::Yes, the requirements are satisfied.
+<a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q16" style="display:none;">
+* Yes, the requirements are satisfied.
 <center>
-$
+
+$$
 \begin{array}{ll}
 np = 40 \cdot 0.6 = 24 \ge 10 & \surd  \\
 n(1-p) = 40 \cdot (1-0.6) = 16  \ge 10  & \surd
 \end{array}
-$
+$$
 </center>
 </div>
+<br>
 
+17. The null hypothesis is $H_0: p = 0.6$ What is the alternative hypothesis?
 
-:17. The null hypothesis is $H_0: p = 0.6$ What is the alternative hypothesis?
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q17" style="display:none;">
 <center>
 $H_a: p < 0.6$
 </center>
 </div>
+<br>
 
-
-:18. Fill in the blanks to compute the $z$-score.<br />
+18. Fill in the blanks to compute the $z$-score.<br />
 <center>
-$
+$$
 \displaystyle{
 z = \frac{\hat p - p}{\sqrt{\frac{p(1-p)}{n}}}
 = \frac{()-0.60}{\sqrt{\frac{0.60(1-0.60)}{40}}}
 = -1.614}
-$
+$$
 </center>
 
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::The missing value is: <br />
+<a href="javascript:showhide('Q18')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q18" style="display:none;">
+* The missing value is: <br />
 <center>
 $\displaystyle{\hat p = \frac{19}{40}=0.475}$
 </center>
 </div>
+<br>
 
+19. The $P$-value will be the area under the normal curve to the left of $z$. Why will you only shade the left tail?
 
-:19. The $P$-value will be the area under the normal curve to the left of $z$. Why will you only shade the left tail?
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::We want to test if the water quality has ''decreased''.
-::The alternative hypothesis is that the proportion of healthy indicators is less than 0.6.
+<a href="javascript:showhide('Q19')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q19" style="display:none;">
+* We want to test if the water quality has *decreased*.
+* The alternative hypothesis is that the proportion of healthy indicators is less than 0.6.
 </div>
+<br>
 
+20. Using the Normal Probability Applet, it is determined that the area to the left of $z=-1.614$ is 0.053.
 
-:20. Using the Normal Probability Applet, it is determined that the area to the left of $z=-1.614$ is 0.053.
-[[File:ShadeLeftZ-1-614.png|link=|center]]
-:The shaded area in this figure (0.053) represents the $P$-value for this test. What is the decision for this test, do we reject the null hypothesis or fail to reject the null hypothesis? Give an English sentence summarizing the conclusion.
+<img src="./Images/ShadeLeftZ-1-614.png">
 
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::$P\textrm{-value} = 0.053 > 0.05 = \alpha$.
-::We fail to reject the null hypothesis.
-::There is insufficient evidence to suggest that the true proportion of indicators that suggest good health is less than 0.6.
+The shaded area in this figure (0.053) represents the $P$-value for this test. What is the decision for this test, do we reject the null hypothesis or fail to reject the null hypothesis? Give an English sentence summarizing the conclusion.
+
+<a href="javascript:showhide('Q20')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q20" style="display:none;">
+* $P\textrm{-value} = 0.053 > 0.05 = \alpha$.
+* We fail to reject the null hypothesis.
+* There is insufficient evidence to suggest that the true proportion of indicators that suggest good health is less than 0.6.
 </div>
 &nbsp;
 </div>
-
-
-
-[[File:Step5.png|link=]]
-
-Even though the proportion of indicators that suggested good health was less that 60%, it was not statistically significantly less than 60%.  Unless future research indicates to the contrary, we cannot say that the water quality in this river has decreased.
-
-==Summary==
-
-*The '''estimator''' of $p$ is $\hat p$. $\displaystyle{ \hat p = \frac {x}{n}}$ and is used for both confidence intervals and hypothesis testing.
-
-*You will use the Excel spreadsheet {{Course_Filter|course=A B C|content={{Spreadsheet-CDA}}}} to perform hypothesis testing and calculate confidence intervals for problems involving one proportion.
-
-*The requirements for a confidence interval are $n \hat p \ge 10$ and $n(1-\hat p) \ge 10$. The requirements for hypothesis tests involving one proportion are $np\ge10$ and $n(1-p)\ge10$.
-
-*We can determine the sample size we need to obtain a desired margin of error using the formula $\displaystyle{ n=\left(\frac{z^*}{m}\right)^2 p^*(1-p^*)}$ where $p^*$ is a '''prior estimate''' of $p$. If no prior estimate is available, the formula $\displaystyle{ \left(\frac{z^*}{2m}\right)^2}$ is used.
 <br>
 
 
-==Navigation==
+<img src="./Images/Step5.png">
 
-{|
-|- align="center"
-| '''Previous Reading''': <br> Lesson 16:  <br> [[Lesson 16: Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion|Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion]]
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-| '''This Reading''': <br> Lesson 17:  <br> Inference for One Proportion
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-| '''Next Reading''': <br> Lesson 18:  <br> [[Lesson 18: Inference for Two Proportions|Inference for Two Proportions]]
-|}
+Even though the proportion of indicators that suggested good health was less that 60%, it was not statistically significantly less than 60%.  Unless future research indicates to the contrary, we cannot say that the water quality in this river has decreased.
+
+<br>
+
+## Summary
+
+<div class="SummaryHeading">Remember...</div>
+<div class="Summary">
+
+- The **estimator** of $p$ is $\hat p$. $\displaystyle{ \hat p = \frac {x}{n}}$ and is used for both confidence intervals and hypothesis testing.
+
+- You will use the Excel spreadsheet [CategoricalDataAnalysis.xlsx](./Data/CategoricalDataAnalysis_Hat.xlsx) to perform hypothesis testing and calculate confidence intervals for problems involving one proportion.
+
+- The requirements for a confidence interval are $n \hat p \ge 10$ and $n(1-\hat p) \ge 10$. The requirements for hypothesis tests involving one proportion are $np\ge10$ and $n(1-p)\ge10$.
+
+- We can determine the sample size we need to obtain a desired margin of error using the formula $\displaystyle{ n=\left(\frac{z^*}{m}\right)^2 p^*(1-p^*)}$ where $p^*$ is a **prior estimate** of $p$. If no prior estimate is available, the formula $\displaystyle{ \left(\frac{z^*}{2m}\right)^2}$ is used.
+<br>
+</div>
+<br>
+
+## Navigation
+
+<center>
+| **Previous Reading** | **This Reading** | **Next Reading** |
+| :------------------: | :--------------: | :--------------: |
+| [Lesson 16: <br> Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion](Lesson16.html) | Lesson 17: <br> Inference for One Proportion | [Lesson 18: <br> Inference for Two Proportions](Lesson18.html) |
+</center>

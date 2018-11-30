@@ -7,21 +7,21 @@ navbar:
     - text: "Unit 1"
       menu:
         - text: "Lesson 1: Course Introduction"
-          href: convertedLesson01.html
+          href: Lesson01.html
         - text: "Lesson 2: The Statistical Process"
-          href: convertedLesson02.html
+          href: Lesson02.html
         - text: "Lesson 3: Describing Quantitative Data"
-          href: convertedLesson03.html
+          href: Lesson03.html
         - text: "Lesson 4: Rules of Probability"
-          href: convertedLesson04.html
+          href: Lesson04.html
         - text: "Lesson 5: Normal Distributions"
-          href: convertedLesson05.html
+          href: Lesson05.html
         - text: "Lesson 6: The Central Limit Theorem"
-          href: convertedLesson06.html          
+          href: Lesson06.html          
         - text: "Lesson 7: Probability Calculations for a Sample Mean"
-          href: convertedLesson07.html
+          href: Lesson07.html
         - text: "Lesson 8: Unit 1 Review"
-          href: convertedLesson08.html
+          href: Lesson08.html
     - text: "Unit 2"
       menu: 
         - text: "Lesson 9: Hypothesis Test for One Mean (Sigma Known)"
@@ -37,10 +37,11 @@ navbar:
         - text: "Lesson 14: Inference for Several Independent Samples"
           href: Lesson14.html
         - text: "Lesson 15: Unit 2 Review"
+          href: Lesson15.html
     - text: "Unit 3"
       menu:
         - text: "Lesson 16: Describing Categorical Data"
-          href: Lesson16.htlm
+          href: Lesson16.html
         - text: "Lesson 17: Inference for One Proportion"
           href: Lesson17.html
         - text: "Lesson 18: Inference for Two Proportions"
@@ -48,6 +49,7 @@ navbar:
         - text: "Lesson 19: Inference for Independence of Categorical Data"
           href: Lesson19.html
         - text: "Lesson 20: Unit 3 Review"
+          href: Lesson20.html
     - text: "Unit 4"
       menu: 
         - text: "Lesson 21: Describing Bivariate Data"
@@ -57,6 +59,7 @@ navbar:
         - text: "Lesson 23: Inference for Bivariate Data"
           href: Lesson23.html
         - text: "Lesson 24: Unit 4 Review"
+          href: Lesson24.html
   right:
     - text: Data
       href: Data.html

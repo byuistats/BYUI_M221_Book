@@ -4,81 +4,95 @@ output:
   html_document:
     theme: cerulean
     toc: true
-    toc_float: true
+    toc_float: false
 ---
 
-<iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<script type="text/javascript">
+ function showhide(id) {
+    var e = document.getElementById(id);
+    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+ }
+</script>
 
-<div style="clear:both"></div>
-
-http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-_0HG1XNei5qVvNogVs95k
-
-
-==Lesson Outcomes==
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Lesson Outcomes" data-expandtext="Click Here to Show Outcomes for this Lesson">
-By the end of this lesson, you should be able to:
-:* Confidence Intervals for a comparison of two proportions: 
-:** Calculate and interpret a confidence interval for a comparison of two proportions given a confidence level.
-:** Identify a point estimate and margin of error for the confidence interval.
-:** Show the appropriate connections between the numerical and graphical summaries that support the confidence interval. 
-:** Check the requirements for the confidence interval.
-:* Hypothesis Testing for a comparison of two proportions:
-:** State the null and alternative hypothesis for the chosen test. 
-:** Calculate the test-statistic and p-value of the hypothesis test.
-:** Assess the statistical significance by comparing the p-value to the α-level.
-:** Check the requirements for the hypothesis test.
-:** Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
-:** Draw a correct conclusion for the hypothesis test.
-
+<div style="float:right;width=40%;">
+<br/>
+<div style="padding-left:10%;">**Optional Lesson Video**</div>
+<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-_0HG1XNei5qVvNogVs95k" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
+## Lesson Outcomes
+
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="oc" style="display:none;">
+By the end of this lesson, you should be able to:
+
+- Confidence Intervals for a comparison of two proportions: 
+  + Calculate and interpret a confidence interval for a comparison of two proportions given a confidence level.
+  + Identify a point estimate and margin of error for the confidence interval.
+  + Show the appropriate connections between the numerical and graphical summaries that support the confidence interval. 
+  + Check the requirements for the confidence interval.
+- Hypothesis Testing for a comparison of two proportions:
+  + State the null and alternative hypothesis for the chosen test. 
+  + Calculate the test-statistic and p-value of the hypothesis test.
+  + Assess the statistical significance by comparing the p-value to the α-level.
+  + Check the requirements for the hypothesis test.
+  + Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
+  + Draw a correct conclusion for the hypothesis test.
+</div>
 <br>
 
-==Hypothesis Tests==
+## Hypothesis Tests
 
+<img src="./Images/StepsAll.png">
 
-[[File:StepsAll.png|link=|center]]
+### Another Taste of PTC
 
-===Another Taste of PTC===
+<img src="./Images/Step1.png">
 
+<img src="./Images/Phenylthiocarbamide-3D-balls.png">
 
-[[File:Step1.png|link=]]
-
-[[File:Phenylthiocarbamide-3D-balls.png|link=|right|250px]]
 The ability to taste the chemical Phenylthiocarbamide (PTC) is hereditary.  Some people can taste it, while others cannot.
 Even though the ability to taste PTC was observed in all age, race, and sex groups, this does not address the issue about whether men or women are more likely to be able taste PTC.
 
 Further exploration of the PTC data allows us to investigate if there is a difference in the proportion of men and women who can taste PTC. The following contingency table summarizes Elise Johnson's results<!--<cite>Johnson06</cite>-->:
+ 
+  Can Taste PTC?   Female   Male   Total
+  ---------------- -------- ------ -------
+  No               15       14     29
+  Yes              51       38     89
+  Total            66       52     118
+                                   
 
-{| class="basic" style="text-align:center"
-|+ '''Gender Data Table'''
-|-
-! Can Taste PTC? || Female || Male || Total
-|-
-!  No
-| 15 || 14 || 29
-|-
-! Yes
-|| 51 || 38 || 89
-|-
-! Total
-| 66 || 52 || 118
-|-
-|}
+  : **Gender Data Table**
 
-These data are available in the file <span class=Link>[[Data|PTCTasting]]</span>.  Note the way the data are organized in the file.  One column gives the gender, another column indicates if the individual can taste PTC, and a third column gives counts for each group.
+
+<!-- {| class="basic" style="text-align:center" -->
+<!-- |+ **Gender Data Table** -->
+<!-- |- -->
+<!-- ! Can Taste PTC? || Female || Male || Total -->
+<!-- |- -->
+<!-- !  No -->
+<!-- | 15 || 14 || 29 -->
+<!-- |- -->
+<!-- ! Yes -->
+<!-- || 51 || 38 || 89 -->
+<!-- |- -->
+<!-- ! Total -->
+<!-- | 66 || 52 || 118 -->
+<!-- |- -->
+<!-- |} -->
+
+These data are available in the file [PTCTasting](./Data/PTCTasting.xlsx).  Note the way the data are organized in the file.  One column gives the gender, another column indicates if the individual can taste PTC, and a third column gives counts for each group.
 
 Researchers want to know if the ability to taste PTC is a sex-linked trait. This can be summarized in the following research question: Is there a difference in the proportion of men and the proportion of women who can taste PTC?  The hypothesis is that there is no difference in the the true proportion of men who can taste PTC compared to the true proportion of women who can taste PTC.
 
 
-[[File:Step2.png|link=]]
+<img src="./Images/Step2.png">
 
 A sample of 66 females and 52 males were provided with PTC strips and asked to indicate if they could taste the chemical or not.  (This research was approved by the BYU-Idaho Institutional Review Board.)
 
 
-[[File:Step3.png|link=]]
+<img src="./Images/Step3.png">
 
 When working with quantitative data, it is natural to summarize the data by computing proportions. If someone has the ability to taste PTC, we will call this a success.  The sample proportion is defined as the number of successes observed divided by the total number of observations.  For the females, the proportion of the sample who could taste the PTC was:
 $$
@@ -92,35 +106,35 @@ This works out to be about 73.1%.
 
 When working with data for two proportions, graphically displaying the data can help us compare each proportion. Pie charts and bar charts are essential tools for describing our data.
 
-'''Side-by-Side Pie Charts'''
+**Side-by-Side Pie Charts**
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <!-- {{Software_Filter | PageName=SideBySidePieCharts}} -->
 
 <div class="SoftwareHeading">Excel Instructions</div>
 <div class="Summary">
-:'''To create side-by-side pie charts in Excel, do the following:'''
+**To create side-by-side pie charts in Excel, do the following:**
 
-:For this example we will use the <span class=Link>[[Data|PTCTasting]]</span> data set. 
+For this example we will use the [PTCTasting](./Data/PTCTasting.xlsx) data set. 
 
-::*First, make sure the data are organized so that one column contains the first variable (gender) and another column contains the second variable (whether or not they can taste PTC).
-::*If a third column has be used to store counts of the number of observations in each group, then highlight the "CanTaste" column and "Count" column just for females, or cells B2, B3, C2, and C3.  
-::*Now click on the "Insert" tab and then the "pie chart" button.  Please select the most basic 2D pie chart.
-::*Next you can repeat the process above but highlighting the male data or cells B4, B5, C4, and C5.  
-::*To keep the two pie charts straight, you can add a title by clicking on the "Layout" tab under chart tools.  Next click on "Chart Title" and then "Above Chart".  
-::*You can now type in the titles, "Females Taste PTC?" and "Males Taste PTC?" or something similar.
-::*Now you should be able to visually compare the proportion of females that can taste PTC to the proportion of males that can taste PTC.
+- First, make sure the data are organized so that one column contains the first variable (gender) and another column contains the second variable (whether or not they can taste PTC).
+- If a third column has be used to store counts of the number of observations in each group, then highlight the "CanTaste" column and "Count" column just for females, or cells B2, B3, C2, and C3.  
+- Now click on the "Insert" tab and then the "pie chart" button.  Please select the most basic 2D pie chart.
+- Next you can repeat the process above but highlighting the male data or cells B4, B5, C4, and C5.  
+- To keep the two pie charts straight, you can add a title by clicking on the "Layout" tab under chart tools.  Next click on "Chart Title" and then "Above Chart".  
+- You can now type in the titles, "Females Taste PTC?" and "Males Taste PTC?" or something similar.
+- Now you should be able to visually compare the proportion of females that can taste PTC to the proportion of males that can taste PTC.
 
-::Your pie charts should look like this:
+- Your pie charts should look like this:
 
-[[File:SidebysidePieCharts - Excel.PNG|300px|center|link=]]
+<img src="./Images/SidebysidePieCharts_-_Excel.PNG">
 <br>
 </div>
 <br>
 
-'''Side-by-Side Bar Charts'''
+**Side-by-Side Bar Charts**
 
-[[File:Step4.png|link=]]
+<img src="./Images/Step4.png">
 
 The null and alternative hypotheses for a test of equality of two proportions is:
 $$
@@ -164,138 +178,159 @@ z & = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \s
 $$
 
 The test statistic is $z=0.526$. Under the null hypothesis, this follows a standard normal distribution.  So, we can use the Normal Probability applet to compute the $P$-value. We are conducting a two-sided test, so we will shade both tails in the applet.
-<center>[[File:ShadeBothZ-0-5256.png|link=]]</center>
+<center>
+<img src="./Images/ShadeBothZ-0-5256.png">
+</center>
 Since $P\textrm{-value} = 0.599 > 0.05 = \alpha$, we fail to reject the null hypothesis.  In English we say, there is insufficient evidence to suggest that the true proportion of males who can taste PTC is different from the true proportion of females who can taste PTC.
 
 
-[[File:Step5.png|link=]]
+<img src="./Images/Step5.png">
 
 Men and women appear to be able to taste PTC in equal proportions.  There is not enough evidence to say that one gender is able to taste PTC more than the other.
 It appears that the ability to taste PTC is not a sex-linked trait.
 
-===Using Excel to perform these calculations===
+### Using Excel to perform these calculations
 
 <!-- {{Content:Excel/SPSS-Two Proportion HT}} -->
-<div class="SoftwareHeading">Excel Instructions</div>
-<div class="Summary">
+
 Just like we did for one proportion, we will use the Excel spreadsheet CategoricalDataAnalysis to perform hypothesis tests for two proportions. 
 
-To download this file, click here: {{Course_Filter|course=A B C|content={{Spreadsheet|CDA}} }}
+To download this file, click here: [CategoricalDataAnalysis.xlsx](./Data/CategoricalDataAnalysis_Hat.xlsx)
 
 <span class="Custom">Click on the link at right</span> for instructions on using this spreadsheet to perform hypothesis testing.
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Instructions" data-expandtext="Show Instructions">
+<a href="javascript:showhide('ins')"><span style="font-size:8pt;">Show/Hide Instructions</span></a>
+<div id="ins" style="display:none;">
 
 For this example we will consider the "PTC" data above.
 
-::'''Step 1''': Open the Excel file CategoricalDataAnalysis and click on the "Two Proportions" tab at the bottom of the spreadsheet.
-[[File:Lesson 18 pic 1.PNG|center|link=]]
+- **Step 1**: Open the Excel file CategoricalDataAnalysis and click on the "Two Proportions" tab at the bottom of the spreadsheet.
 
-::The blue boxes indicate the input spaces. These are the only cells into which you will enter data. For this example we will be considering all the blue boxes.
+<center>
+<img src="./Images/Lesson_18_pic_1.PNG">
+</center>
 
-
-::'''Step 2''': Input the appropriate values into the designated cells. We will input the values of $x_1$, $n_1$, $x_2$, and $n_2$ from the data above. The fifth cell indicates our desired level of confidence for our confidence interval and is also used to give the level of significance, $\alpha$. The level of significance will be $1-\text{value of the cell}$. By default, the cell contains the value 0.95. This means we have a level of significance of $\alpha=1-0.95=0.05$. The sixth cell contains the value of our null hypothesis and is a drop-down list where we can select the appropriate hypothesis test.
-[[File:Lesson 18 pic 2.PNG|center|link=]]
-
-::You may have noticed that after you input the values into the blue cells that the values of the other cells changed automatically. Excel performs all of the necessary calculations for you. 
+- The blue boxes indicate the input spaces. These are the only cells into which you will enter data. For this example we will be considering all the blue boxes.
 
 
-::'''Step 3''': The results of the hypothesis test are given in the output boxes.
-[[File:Lesson 18 pic 3.PNG|center|link=]]
-::Compare the z-score and $P$-value with the one you calculated by hand. They're the same!
+- **Step 2**: Input the appropriate values into the designated cells. We will input the values of $x_1$, $n_1$, $x_2$, and $n_2$ from the data above. The fifth cell indicates our desired level of confidence for our confidence interval and is also used to give the level of significance, $\alpha$. The level of significance will be $1-\text{value of the cell}$. By default, the cell contains the value 0.95. This means we have a level of significance of $\alpha=1-0.95=0.05$. The sixth cell contains the value of our null hypothesis and is a drop-down list where we can select the appropriate hypothesis test.
+
+<center>
+<img src="./Images/Lesson_18_pic_2.PNG">
+</center>
+
+- You may have noticed that after you input the values into the blue cells that the values of the other cells changed automatically. Excel performs all of the necessary calculations for you. 
+
+
+- **Step 3**: The results of the hypothesis test are given in the output boxes.
+
+<center>
+<img src="./Images/Lesson_18_pic_3.PNG">
+</center>
+
+- Compare the z-score and $P$-value with the one you calculated by hand. They're the same!
 <br>
 </div>
 <br>
 
+<img src="./Images/StepsAll.png">
 
-[[File:StepsAll.png|link=|center]]
 
-
-===Mortality Rates and Day of Admission: Aortic Aneurysms===
+### Mortality Rates and Day of Admission: Aortic Aneurysms
 
 
 Some people have claimed that mortality (death) rates are higher for patients admitted to a hospital on a weekend compared to patients admitted on a weekday.  Researchers Chaim Bell and Donald Redelmeier analyzed
 admission data from hospital emergency rooms in Ontario, Canada <!--<cite>Bell01</cite>-->.
 
-[[File:AneurysmAorta-marked.png|frame|center|link=|This CT scan image shows an abdominal aortic aneurysm. <br> The aorta is the large artery coming from the heart, along the center of the body. <br> The aneurysm appears as a bulge in the aorta. <br> (Image source: Michel de Villeneuve)]]
+<center>
+<img src="./Images/AneurysmAorta-marked.png">
+</center>
 
 The aorta is a major artery that takes oxygen-rich blood from the heart to the entire body.  In some patients, this artery can swell like a balloon and burst.  If this occurs in the abdomen, the technical term for the event is a ruptured abdominal aortic aneurysm.  Although this condition is treatable, it requires immediate action, or the patient will die rapidly.
 
 
-[[File:Step1.png|link=]]
+<img src="./Images/Step1.png">
 
 The problem is that the quality of care in an emergency care facility may differ at different times of the week.  Doctors Bell and Redelmeier hypothesized that the probability that a patient with an aortic aneurysm will die is greater if they are admitted to a hospital on a weekend compared to a weekday.
 
 
-'''Hypothesis:'''
+**Hypothesis:**
 The proportion of patients with a ruptured abdominal aortic aneurysm who will die is greater on the weekends than on weekdays.
 
 
-[[File:Step2.png|link=]]
+<img src="./Images/Step2.png">
 
 To test this claim, the researchers accessed medical records for several patients admitted to the emergency department of the hospitals in Ontario, Canada.  They recorded the number of patients admitted with an aortic aneurysm on weekdays compared to weekends.
 
 Data representative of their results are given below <!--<cite>Bell01</cite>-->.
 
-{| class="basic" style="text-align:center"
-|+ '''Aortic Aneurysm Outcomes'''
-|-
-! Outcome || Weekday Admission ||  Weekend Admission
-|-
-! Died (x)
-| align="right" | $x_1 = 1476$
-| align="right" | $x_2 = 553$
-|-
-! Survived
-| align="right" | $2669$
-| align="right" | $756$
-|-
-! Total (n)
-| align="right" | $n_1 = 4145$
-| align="right" | $n_2 = 1309$
-|-
-|}
+  Outcome     Weekday Admission   Weekend Admission
+  ----------- ------------------- -------------------
+  Died (x)    $x_1 = 1476$        $x_2 = 553$
+  Survived    $2669$              $756$
+  Total (n)   $n_1 = 4145$        $n_2 = 1309$
+                                  
+
+  : **Aortic Aneurysm Outcomes**
+
+<!-- {| class="basic" style="text-align:center" -->
+<!-- |+ **Aortic Aneurysm Outcomes** -->
+<!-- |- -->
+<!-- ! Outcome || Weekday Admission ||  Weekend Admission -->
+<!-- |- -->
+<!-- ! Died (x) -->
+<!-- | align="right" | $x_1 = 1476$ -->
+<!-- | align="right" | $x_2 = 553$ -->
+<!-- |- -->
+<!-- ! Survived -->
+<!-- | align="right" | $2669$ -->
+<!-- | align="right" | $756$ -->
+<!-- |- -->
+<!-- ! Total (n) -->
+<!-- | align="right" | $n_1 = 4145$ -->
+<!-- | align="right" | $n_2 = 1309$ -->
+<!-- |- -->
+<!-- |} -->
 
 
-[[File:Step3.png|link=]]
+<img src="./Images/Step3.png">
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
-:1. Use the data above to find the estimated proportion of patients admitted with an aortic aneurysm on a weekday who will die, $\hat p_1$.
+1. Use the data above to find the estimated proportion of patients admitted with an aortic aneurysm on a weekday who will die, $\hat p_1$.
 
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q1" style="display:none;">
 <center>$\hat p_1 = 0.3561$</center>
 </div>
+<br>
 
+2. Use the data to compute the estimated proportion of the patients admitted on a weekend that will die, $\hat p_2$.
 
-:2. Use the data to compute the estimated proportion of the patients admitted on a weekend that will die, $\hat p_2$.
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
 <center>$\hat p_2 = 0.4225$</center>
 </div>
+<br>
 
+3. What do you notice about $\hat p_1$ and $\hat p_2$?
 
-:3. What do you notice about $\hat p_1$ and $\hat p_2$?
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q3" style="display:none;">
 <center>$\hat p_2~>~\hat p_1$ </center>
 </div>
+<br>
 
+4. Without doing any more calculations, do you think that there is a significant increase in the death rates of patients admitted on a weekend compared to those admitted on a weekday? Justify your answer.
 
-:4. Without doing any more calculations, do you think that there is a significant increase in the death rates of patients admitted on a weekend compared to those admitted on a weekday? Justify your answer.
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::It appears that those admitted on a weekend have a greater death rate than those who are admitted on a weekday, but we do not know if it is a statistically significant difference until we do a hypothesis test.
+<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q4" style="display:none;">
+- It appears that those admitted on a weekend have a greater death rate than those who are admitted on a weekday, but we do not know if it is a statistically significant difference until we do a hypothesis test.
 </div>
 &nbsp;
 </div>
+<br>
 
-
-====Side-by-side Bar Charts====
+#### Side-by-side Bar Charts
 
 If the data are considered counts, then a side-by-side bar chart is usually the preferred plot.
 
@@ -304,22 +339,24 @@ If the data are considered counts, then a side-by-side bar chart is usually the 
 
 <div class="SoftwareHeading">Excel Instructions</div>
 <div class="Summary">
-:'''To create side-by-side bar charts in Excel, do the following:'''
+**To create side-by-side bar charts in Excel, do the following:**
 
-::*First, make sure the data are organized so that the first column gives the outcome (died or survived), the next column indicates the day of admittance (weekday or weekend) and the last column shows the counts.
-::*Then highlight the all three columns but just for the "Weekday" data.  
-::*Now click on the "Insert" tab and then the "Chart" button, and select "column".  Please select the most basic 2D column chart.
-::*Next you can repeat the process above but highlighting the "Weekend" data for all three columns.  
-::*To keep the two bar charts straight, you can add a title by clicking on the "Layout" tab under chart tools.  Next click on "Chart Title" and then "Above Chart".  
-::*You can now type in the Titles, "Aortic Aneurysm Outcomes Weekday Admittance" and "Aortic Aneurysm Outcomes Weekend Admittance" or something similar.
+- First, make sure the data are organized so that the first column gives the outcome (died or survived), the next column indicates the day of admittance (weekday or weekend) and the last column shows the counts.
+- Then highlight the all three columns but just for the "Weekday" data.  
+- Now click on the "Insert" tab and then the "Chart" button, and select "column".  Please select the most basic 2D column chart.
+- Next you can repeat the process above but highlighting the "Weekend" data for all three columns.  
+- To keep the two bar charts straight, you can add a title by clicking on the "Layout" tab under chart tools.  Next click on "Chart Title" and then "Above Chart".  
+- You can now type in the Titles, "Aortic Aneurysm Outcomes Weekday Admittance" and "Aortic Aneurysm Outcomes Weekend Admittance" or something similar.
 <br>
-
 </div>
 <br>
 
-[[File:Step4.png|link=]]
+<img src="./Images/Step4.png">
 
-{{Tip|$p_1$ is the true proportion of deaths in group 1, the weekday group.  $p_2$ is the true proportion of deaths in the weekend group.}}
+<br>
+<div class="message Tip">$p_1$ is the true proportion of deaths in group 1, the weekday group.  $p_2$ is the true proportion of deaths in the weekend group.</div>
+<br>
+<br>
 
 We now conduct a formal hypothesis test to determine if the mortality (death) rate is greater on a weekend compared to a weekday.  First, we state the null and alternative hypotheses:
 $$
@@ -330,9 +367,12 @@ H_a: &  p_1 < p_2
 $$
 where group 1 represents the patients admitted on a weekday and group 2 represents patients admitted on a weekend.  Note that if $p_1 < p_2$, then the risk of death is greater in group 2 than in group 1. We will use the 0.05 level of significance.
 
-====Checking Requirements for the Hypothesis Test====
+#### Checking Requirements for the Hypothesis Test
 
-{{Tip|When you check the requirements for this procedure, you are actually checking that you have at least 10 successes and 10 failures in both Group 1 and Group 2. All four conditions must be true in order to conduct the test.}}
+<br>
+<div class="message Tip">When you check the requirements for this procedure, you are actually checking that you have at least 10 successes and 10 failures in both Group 1 and Group 2. All four conditions must be true in order to conduct the test.</div>
+<br>
+<br>
 
 If the sample size is large in both groups, then we can use the normal distribution to compute the $P$-value.  To check if the sample size is large enough, we need to check the following requirements:
 $$
@@ -351,20 +391,16 @@ n_1 \cdot \left(1-\hat p_1\right) = 4145 \cdot 0.6439 = 2669 \ge 10  	& n_2 \cdo
 \end{array}
 $$
 
-{| class="basic"
-|-
-|
-'''Reminder:''' $~ x_1 = 1476,~x_2 =553$, $n_1=4145,~n_2 = 1309$, $\hat p_1 = \frac{x_1}{n_1},~\hat p_2 = \frac{x_2}{n_2}$,
+**Reminder:** $~ x_1 = 1476,~x_2 =553$, $n_1=4145,~n_2 = 1309$, $\hat p_1 = \frac{x_1}{n_1},~\hat p_2 = \frac{x_2}{n_2}$,
 and $\hat p = \frac{x_1+x_2}{n_1+n_2}$.
-|}
 
 The test statistic can be computed by following these steps:
 
-:*First, find the combined proportion of "successes."  This is computed as:
+- First, find the combined proportion of "successes."  This is computed as:
 $$
 \hat p = \frac{x_1+x_2}{n_1+n_2} = \frac{1476+553}{4145+1309} = \frac{2029}{5454}
 $$
-:*Next, enter the appropriate values into the equation for the $z$-score.
+- Next, enter the appropriate values into the equation for the $z$-score.
 $$
 \begin{array}{rcll}
 z &=& \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) } } \\
@@ -378,58 +414,67 @@ $$
 (Make sure you can get this value using your calculator.)
 
 <div class="Emphasis">
-::'''Remember...'''
+- **Remember...**
 
-:The alternative hypothesis determines which area in the tails of the $z$-distribution will be shaded as you calculated the $P$-value.
+The alternative hypothesis determines which area in the tails of the $z$-distribution will be shaded as you calculated the $P$-value.
 
-:If the alternative hypothesis is $\ldots$
+If the alternative hypothesis is $\ldots$
 
-::*$p_1 \ne p_2$, shade both tails.
+- $p_1 \ne p_2$, shade both tails.
 
-::*$p_1 < p_2$, shade the left tail.
+- $p_1 < p_2$, shade the left tail.
 
-::*$p_1 > p_2$, shade the right tail.
+- $p_1 > p_2$, shade the right tail.
 <br>
 </div>
+<br>
 
 This $z$-score can be substituted into the Normal Probability applet to find the $P$-value.  Since the alternative hypothesis is that $p_1 < p_2$, we consider only the area to the left of $z=-4.331$.  The applet gives this area (our $P$-value) as $7.42 \times 10^{-6} = 0.00000742$.
 <center>
-[[File:ShadeLeftZ-4-331.png|link=]]
+<img src="./Images/ShadeLeftZ-4-331.png">
 </center>
-Note that $P$-value$ = 0.00000742 < 0.05 = \alpha$, so we reject the null hypothesis.
+Note that $P$-value$= 0.00000742 < 0.05 = \alpha$, so we reject the null hypothesis.
 
 
-[[File:Step5.png|link=]]
+<img src="./Images/Step5.png">
 
 There is sufficient evidence to suggest that the true proportion of patients who die from an aortic aneurysm is greater on the weekends than on the weekdays.  It appears that there are substantial differences in the quality of care available to patients on the weekends compared to patients on weekdays.
 
 
 
-[[File:StepsAll.png|link=|center]]
+<img src="./Images/StepsAll.png">
 
-===Mortality Rates and Day of Admission: Heart Attacks===
+### Mortality Rates and Day of Admission: Heart Attacks
 
-[[File:Acute_myocardial_infarction_with_contraction_band_necrosis.png|link=|center|frame|A microscopic view of tissue from the heart of a heart attack victim. <br> Damage can be seen as constricted bands of tissue. (Image credit: KGH)]]
+<img src="./Images/Acute_myocardial_infarction_with_contraction_band_necrosis.png">
 
 
 Heart attacks are a leading cause of death in many areas of the world.
 The study by Doctors Bell and Redelmeier included an analysis of the risk of dying of a heart attack, after admission to a hospital.  The researchers reported the following death rates, depending on whether the heart attack occurred on a weekday or a weekend <!--<cite>Bell01</cite>-->.
 
+  Outcome     Weekday Admission   Weekend Admission
+  ----------- ------------------- -------------------
+  Died (x)    17,113              6,289
+  Survived    100,596             36,222
+  Total (n)   117,709             42,511
+                                  
 
-{| class="basic" style="text-align:center"
-|+ '''Heart Attack Outcomes'''
-! Outcome  !! Weekday Admission !! Weekend Admission
-|-
-!Died (x)
-| 17,113 || 6,289
-|-
-!Survived
-| 100,596 || 36,222
-|-
-!Total (n)
-| 117,709 || 42,511
-|-
-|}
+  : **Heart Attack Outcomes**
+
+<!-- {| class="basic" style="text-align:center" -->
+<!-- |+ **Heart Attack Outcomes** -->
+<!-- ! Outcome  !! Weekday Admission !! Weekend Admission -->
+<!-- |- -->
+<!-- !Died (x) -->
+<!-- | 17,113 || 6,289 -->
+<!-- |- -->
+<!-- !Survived -->
+<!-- | 100,596 || 36,222 -->
+<!-- |- -->
+<!-- !Total (n) -->
+<!-- | 117,709 || 42,511 -->
+<!-- |- -->
+<!-- |} -->
 
 
 In this section, you will conduct a hypothesis test to determine if the proportion of patients who die of a heart attack is greater on weekends than on weekdays. Use the 0.05 level of significance.
@@ -438,69 +483,69 @@ In this section, you will conduct a hypothesis test to determine if the proporti
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
 
-[[File:Step1.png|link=]]
+<img src="./Images/Step1.png">
 
-:5. Summarize the relevant background information
+5. Summarize the relevant background information
 
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::This was a study conducted by Doctors Bell and Redelmeier in which they analyzed the death rates depending on which day (weekday or weekend) the heart attack occurred and when the patients were admitted into the hospital.
+<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q5" style="display:none;">
+- This was a study conducted by Doctors Bell and Redelmeier in which they analyzed the death rates depending on which day (weekday or weekend) the heart attack occurred and when the patients were admitted into the hospital.
 </div>
+<br>
+
+<img src="./Images/Step2.png">
+
+6.  Describe the data collection process.
 
 
-[[File:Step2.png|link=]]
-
-:6.  Describe the data collection process.
-
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::The researchers collected data on patients admitted to hospitals for heart attacks and whether or not they died.  Separate data was kept for weekday hospital admissions and weekend hospital admissions.
+<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q6" style="display:none;">
+- The researchers collected data on patients admitted to hospitals for heart attacks and whether or not they died.  Separate data was kept for weekday hospital admissions and weekend hospital admissions.
 </div>
+<br>
 
 
+<img src="./Images/Step3.png">
 
-[[File:Step3.png|link=]]
+7. The value of $\hat p_1$, the sample proportion of patients who died of a heart attack on a weekday, is $\hat p_1 = \frac{17113}{117709} = 0.14538$.  Find the value of $\hat p_2$.
 
-:7. The value of $\hat p_1$, the sample proportion of patients who died of a heart attack on a weekday, is $\hat p_1 = \frac{17113}{117709} = 0.14538$.  Find the value of $\hat p_2$.
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q7" style="display:none;">
 <center>$\displaystyle{\hat p_2 = \frac{6289}{42511}=0.14794}$</center>
 </div>
+<br>
 
+8. Create a side-by-side pie chart illustrating the data.
 
-:8. Create a side-by-side pie chart illustrating the data.
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-[[File:Heart-Attack-Side-By-Side-Pies-Excel.png|link=|center]]
+<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q8" style="display:none;">
+<img src="./Images/Heart-Attack-Side-By-Side-Pies-Excel.png">
 </div>
+<br>
 
+9. Based on your answers to questions 7 and 8, does it appear that the risk of dying is greater if a heart attack occurs on a weekend than on a weekday?
 
-:9. Based on your answers to questions 7 and 8, does it appear that the risk of dying is greater if a heart attack occurs on a weekend than on a weekday?
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::The sample proportions, $\hat p_1$ and $\hat p_2$ are very close.  Visually, there does not appear to be a difference.
+<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q9" style="display:none;">
+- The sample proportions, $\hat p_1$ and $\hat p_2$ are very close.  Visually, there does not appear to be a difference.
 </div>
+<br>
 
+10. If the proportion of patients who die of a heart attack is greater on weekends than on weekdays, which of the following would best describe the relationship?
+- A. $p_1 = p_2$
+- B. $p_1 > p_2$
+- C. $p_1 < p_2$
+- D. $p_1 \ne p_2$
 
-:10. If the proportion of patients who die of a heart attack is greater on weekends than on weekdays, which of the following would best describe the relationship?
-:::A. $p_1 = p_2$
-:::B. $p_1 > p_2$
-:::C. $p_1 < p_2$
-:::D. $p_1 \ne p_2$
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::$p_1 < p_2$ is correct.  Note that group 1 is the weekday group and group 2 is the weekend group.
+<a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q10" style="display:none;">
+- $p_1 < p_2$ is correct.  Note that group 1 is the weekday group and group 2 is the weekend group.
 </div>
+<br>
 
+<img src="./Images/Step4.png">
 
-[[File:Step4.png|link=]]
-
-:11. Replace the circles ($\bigcirc$) in the following null and alternative hypotheses with two of the following symbols: $=><\ne$.
+11. Replace the circles ($\bigcirc$) in the following null and alternative hypotheses with two of the following symbols: $=><\ne$.
 
 $$
 \begin{array}{rl}
@@ -509,128 +554,129 @@ H_a: &  p_1 \bigcirc p_2
 \end{array}
 $$
 
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q11" style="display:none;">
 <center>
-$
+$$
 \begin{array}{rl}
 H_0: &  p_1 = p_2 \\
 H_a: &  p_1 < p_2
 \end{array}
-$
+$$
 </center>
 </div>
+<br>
 
+12. What are the requirements for this test?
 
-
-:12. What are the requirements for this test?
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q12')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q12" style="display:none;">
 <center>
-$
+$$
 \begin{array}{rrr}
 n_1 \cdot \hat p_1 \ge 10 && n_2 \cdot \hat p_2 \ge 10 \\
 n_1 \cdot \left(1-\hat p_1\right) \ge 10 && n_2 \cdot \left(1-\hat p_2\right) \ge 10
 \end{array}
-$
+$$
 </center>
 </div>
+<br>
 
+13. Are the requirements for this hypothesis test satisfied?  Justify your answer.
 
-:13. Are the requirements for this hypothesis test satisfied?  Justify your answer.
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q13')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q13" style="display:none;">
 <center>
-$
+$$
 \begin{array}{rrr}
 n_1 \cdot \hat p_1 = 17113 \ge 10 && n_2 \cdot \hat p_2 = 6289 \ge 10 \\
 n_1 \cdot \left(1-\hat p_1\right) = 100596 \ge 10 && n_2 \cdot \left(1-\hat p_2\right) = 36222 \ge 10
 \end{array}
-$
+$$
 </center>
-::Yes, all of the calculated quantities from the previous question are at least 10.
+- Yes, all of the calculated quantities from the previous question are at least 10.
 </div>
+<br>
 
+14. Write the equation for the test statistic, $z$.
 
-:14. Write the equation for the test statistic, $z$.
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q14')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q14" style="display:none;">
 <center>
-$
+$$
 z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) }}
-$
+$$
 </center>
 </div>
+<br>
 
+15. Compute the value of the test statistic.
 
-:15. Compute the value of the test statistic.
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q15')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q15" style="display:none;">
 <center>$z=-1.278$</center>
 </div>
+<br>
 
+16. Present a sketch of the sampling distribution, showing the test statistic and the $P$-value.
 
-:16. Present a sketch of the sampling distribution, showing the test statistic and the $P$-value.
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-[[File:SamplingDistributionHeartAttack-Applet.png|link=|center]]
+<a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q16" style="display:none;">
+<img src="./Images/SamplingDistributionHeartAttack-Applet.png">
 </div>
+<br>
 
+17. Find the $P$-value.
 
-:17. Find the $P$-value.
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q17" style="display:none;">
 <center>$P\textrm{-value} = 0.1006$</center>
 </div>
+<br>
 
+18. Compare the $P$-value to the level of significance.  Which is smaller?  Will you reject, or fail to reject, the null hypothesis?
 
-:18. Compare the $P$-value to the level of significance.  Which is smaller?  Will you reject, or fail to reject, the null hypothesis?
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+<a href="javascript:showhide('Q18')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q18" style="display:none;">
 <center>$P\textrm{-value} = 0.1006 > 0.05 = \alpha$</center>
 </div>
+<br>
 
+19. What is your decision?
 
-:19. What is your decision?
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::Since the $P$-value is greater than $\alpha$, we fail to reject the null hypothesis.
+<a href="javascript:showhide('Q19')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q19" style="display:none;">
+- Since the $P$-value is greater than $\alpha$, we fail to reject the null hypothesis.
 </div>
+<br>
 
+20. Fill in the blanks in the following sentence:
 
-:20. Fill in the blanks in the following sentence:
+- There is $\text{____________}$ evidence to suggest that the true proportion of patients who die of a heart attack is $\text{__________}$ on weekends than on weekdays.*
 
-::''There is $\text{____________}$ evidence to suggest that the true proportion of patients who die of a heart attack is $\text{__________}$ on weekends than on weekdays.''
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::There is '''insufficient''' evidence to suggest that the true proportion of patients who die of a heart attack is '''greater''' on weekends than on weekdays.
+<a href="javascript:showhide('Q20')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q20" style="display:none;">
+- There is **insufficient** evidence to suggest that the true proportion of patients who die of a heart attack is **greater** on weekends than on weekdays.
 </div>
+<br>
 
+<img src="./Images/Step5.png">
 
-[[File:Step5.png|link=]]
+21. If you were to have a heart attack, would you be more concerned if it occurred on a weekend than on a weekday?
 
-:21. If you were to have a heart attack, would you be more concerned if it occurred on a weekend than on a weekday?
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::No, the evidence suggests that the probability of dying of a heart attack is not greater on the weekends.
+<a href="javascript:showhide('Q21')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q21" style="display:none;">
+- No, the evidence suggests that the probability of dying of a heart attack is not greater on the weekends.
 </div>
 &nbsp;
 </div>
+<br>
 
+<img src="./Images/StepsAll.png">
 
-[[File:StepsAll.png|link=|center]]
+<br>
 
-==Confidence Intervals: Managing Fox Populations==
+## Confidence Intervals: Managing Fox Populations
 
 <!-- {{:Lesson_18:Content/F2F}} -->
 
@@ -652,17 +698,20 @@ $$
 \end{array}
 $$
 
-*Whenever zero is contained in the confidence interval of the difference of the true proportions we conclude that there is no significant difference between the two proportions.
+- Whenever zero is contained in the confidence interval of the difference of the true proportions we conclude that there is no significant difference between the two proportions.
 
-*You will use the Excel spreadsheet {{Course_Filter|course=A B C|content={{Spreadsheet|CDA}} }} to perform hypothesis testing and calculate confidence intervals for problems involving two proportions.
+- You will use the Excel spreadsheet [CategoricalDataAnalysis.xlsx](./Data/CategoricalDataAnalysis_Hat.xlsx) to perform hypothesis testing and calculate confidence intervals for problems involving two proportions.
 <br>
 
 
-==Summary==
+## Summary
 
-*When conducting hypothesis tests using two proportions, the null hypothesis is always $p_1=p_2$, indicating that there is no difference between the two proportions. The alternative hypothesis can be left-tailed ($<$), right-tailed($>$), or two-tailed($\ne$).
+<div class="SummaryHeading">Remember...</div>
+<div class="Summary">
 
-*For a hypothesis test and confidence interval of two proportions, we use the following symbols:
+- When conducting hypothesis tests using two proportions, the null hypothesis is always $p_1=p_2$, indicating that there is no difference between the two proportions. The alternative hypothesis can be left-tailed ($<$), right-tailed($>$), or two-tailed($\ne$).
+
+- For a hypothesis test and confidence interval of two proportions, we use the following symbols:
 $$
 \begin{array}{lcl}
 \text{Sample proportion for group 1:} & \hat p_1 = \displaystyle{\frac{x_1}{n_1}} \\
@@ -670,7 +719,7 @@ $$
 \end{array}
 $$
 
-*For a hypothesis test only, we use the following symbols:
+- For a hypothesis test only, we use the following symbols:
 
 $$
 \begin{array}{lcl}
@@ -678,19 +727,17 @@ $$
 \end{array}
 $$
 
-*Whenever zero is contained in the confidence interval of the difference of the true proportions we conclude that there is no significant difference between the two proportions.
+- Whenever zero is contained in the confidence interval of the difference of the true proportions we conclude that there is no significant difference between the two proportions.
 
-*You will use the Excel spreadsheet {{Course_Filter|course=A B C|content={{Spreadsheet|CDA}} }} to perform hypothesis testing and calculate confidence intervals for problems involving two proportions.
+- You will use the Excel spreadsheet [CategoricalDataAnalysis.xlsx](./Data/CategoricalDataAnalysis_Hat.xlsx) to perform hypothesis testing and calculate confidence intervals for problems involving two proportions.
+<br>
+</div>
 <br>
 
+## Navigation
 
-==Navigation==
-
-{|
-|- align="center"
-| '''Previous Reading''': <br> Lesson 17:  <br> [[Lesson 17: Inference for One Proportion|Inference for One Proportion]]
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-| '''This Reading''': <br> Lesson 18:  <br> Inference for Two Proportions
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-| '''Next Reading''': <br> Lesson 19:  <br> [[Lesson 19: Inference for Independence of Categorical Data|Inference for Independence of Categorical Data]]
-|}
+<center>
+| **Previous Reading** | **This Reading** | **Next Reading** |
+| :------------------: | :--------------: | :--------------: |
+| [Lesson 17: <br> Inference for One Proportion](Lesson17.html) | Lesson 18: <br> Inference for Two Proportion | [Lesson 19: <br> Inference for Independence of Categorical Data](Lesson19.html) |
+</center>

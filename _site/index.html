@@ -19,9 +19,6 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -170,101 +167,6 @@ $(document).ready(function () {
 
 
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
-
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
-
-
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -290,28 +192,28 @@ div.tocify {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="convertedLesson01.html">Lesson 1: Course Introduction</a>
+      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
     </li>
     <li>
-      <a href="convertedLesson02.html">Lesson 2: The Statistical Process</a>
+      <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
     </li>
     <li>
-      <a href="convertedLesson03.html">Lesson 3: Describing Quantitative Data</a>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
     </li>
     <li>
-      <a href="convertedLesson04.html">Lesson 4: Rules of Probability</a>
+      <a href="Lesson04.html">Lesson 4: Rules of Probability</a>
     </li>
     <li>
-      <a href="convertedLesson05.html">Lesson 5: Normal Distributions</a>
+      <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
     </li>
     <li>
-      <a href="convertedLesson06.html">Lesson 6: The Central Limit Theorem</a>
+      <a href="Lesson06.html">Lesson 6: The Central Limit Theorem</a>
     </li>
     <li>
-      <a href="convertedLesson07.html">Lesson 7: Probability Calculations for a Sample Mean</a>
+      <a href="Lesson07.html">Lesson 7: Probability Calculations for a Sample Mean</a>
     </li>
     <li>
-      <a href="convertedLesson08.html">Lesson 8: Unit 1 Review</a>
+      <a href="Lesson08.html">Lesson 8: Unit 1 Review</a>
     </li>
   </ul>
 </li>
@@ -340,7 +242,9 @@ div.tocify {
     <li>
       <a href="Lesson14.html">Lesson 14: Inference for Several Independent Samples</a>
     </li>
-    <li class="dropdown-header">Lesson 15: Unit 2 Review</li>
+    <li>
+      <a href="Lesson15.html">Lesson 15: Unit 2 Review</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -351,7 +255,7 @@ div.tocify {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson16.htlm">Lesson 16: Describing Categorical Data</a>
+      <a href="Lesson16.html">Lesson 16: Describing Categorical Data</a>
     </li>
     <li>
       <a href="Lesson17.html">Lesson 17: Inference for One Proportion</a>
@@ -362,7 +266,9 @@ div.tocify {
     <li>
       <a href="Lesson19.html">Lesson 19: Inference for Independence of Categorical Data</a>
     </li>
-    <li class="dropdown-header">Lesson 20: Unit 3 Review</li>
+    <li>
+      <a href="Lesson20.html">Lesson 20: Unit 3 Review</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -381,7 +287,9 @@ div.tocify {
     <li>
       <a href="Lesson23.html">Lesson 23: Inference for Bivariate Data</a>
     </li>
-    <li class="dropdown-header">Lesson 24: Unit 4 Review</li>
+    <li>
+      <a href="Lesson24.html">Lesson 24: Unit 4 Review</a>
+    </li>
   </ul>
 </li>
       </ul>
@@ -404,14 +312,109 @@ div.tocify {
 
 
 <p>Welcome to Math 221B!</p>
+<div class="mboxfull">
+<div class="mbox usermessage mw-customtoggle-Unit01">
+Unit 1: Quantitative Data-I
+</div>
+<div id="mw-customcollapsible-Unit01" class="mw-collapsible mw-collapsed" background="">
+<div class="toccolours mw-collapsible-content">
+<table class="tmain">
+<tr>
+<td>
+<a href="Lesson01.html">Lesson 1: Course Introduction</a>
+</td>
+</tr>
+<tr class="alt">
+<td>
+[[Lesson 2: The Statistical Process &amp; Design of Studies]]
+</td>
+</tr>
+<tr>
+<td>
+[[Lesson 3: Describing Quantitative Data: Shape, Center &amp; Spread]]
+</td>
+</tr>
+<tr class="alt">
+<td>
+[[Lesson 4: Probability; Discrete Random Variables]]
+</td>
+</tr>
+<tr>
+<td>
+[[Lesson 5: Normal Distributions]]
+</td>
+</tr>
+<tr class="alt">
+<td>
+[[Lesson 6: Distribution of Sample Means &amp; The Central Limit Theorem]]
+</td>
+</tr>
+<tr>
+<td>
+[[Lesson 7: Probability Calculations involving a Mean Response]]
+</td>
+</tr>
+<tr class="alt">
+<td>
+[[Lesson 8: Review for Exam 1]]
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="mboxfull">
+<div class="mbox usermessage mw-customtoggle-Unit02">
+Unit 2: Quantitative Data-II
+</div>
+<div id="mw-customcollapsible-Unit02" class="mw-collapsible mw-collapsed" background="">
+<div class="toccolours mw-collapsible-content">
+<table class="tmain">
+<tr>
+<td>
+<a href="Lesson01.html">Lesson 1: Course Introduction</a>
+</td>
+</tr>
+<tr class="alt">
+<td>
+[[Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)]]
+</td>
+</tr>
+<tr>
+<td>
+[[Lesson 11: Inference for One Mean: Sigma Unknown]]
+</td>
+</tr>
+<tr class="alt">
+<td>
+[[Lesson 12: Inference for Two Means: Paired Data]]
+</td>
+</tr>
+<tr>
+<td>
+[[Lesson 13: Inference for Two Means: Independent Samples]]
+</td>
+</tr>
+<tr class="alt">
+<td>
+[[Lesson 14: Inference for Several Means (ANOVA)]]
+</td>
+</tr>
+<tr>
+<td>
+[[Lesson 15: Review for Exam 2]]
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
 
 <br />
 <hr />
 <p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
 
 
-</div>
-</div>
 
 </div>
 

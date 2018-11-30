@@ -1,7 +1,79 @@
 ---
 title: "Course Home Page"
-output: html_document
+output: 
+  html_document:
+    theme: cerulean
+    toc: true
+    toc_float: false
 ---
 
 Welcome to Math 221B! 
 
+<div class="mboxfull">
+<div class="mbox usermessage mw-customtoggle-Unit01">Unit 1: Quantitative Data-I</div>
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-Unit01" background>
+<div class="toccolours mw-collapsible-content">
+
+<table class="tmain">
+<tr>
+<td>[Lesson 1: Course Introduction](Lesson01.html)</td>
+</tr>
+<tr class="alt">
+<td>[[Lesson 2: The Statistical Process & Design of Studies]]</td>
+</tr>
+<tr>
+<td>[[Lesson 3: Describing Quantitative Data: Shape, Center & Spread]]</td>
+</tr>
+<tr class="alt">
+<td>[[Lesson 4: Probability; Discrete Random Variables]]</td>
+</tr>
+<tr>
+<td>[[Lesson 5: Normal Distributions]]</td>
+</tr>
+<tr class="alt">
+<td>[[Lesson 6: Distribution of Sample Means & The Central Limit Theorem]]</td>
+</tr>
+<tr>
+<td>[[Lesson 7: Probability Calculations involving a Mean Response]]</td>
+</tr>
+<tr class="alt">
+<td>[[Lesson 8: Review for Exam 1]]</td>
+</tr>
+</table>
+
+</div>
+</div>
+</div>
+
+<div class="mboxfull">
+<div class="mgitgit box usermessage mw-customtoggle-Unit02">Unit 2: Quantitative Data-II</div>
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-Unit02" background>
+<div class="toccolours mw-collapsible-content">
+
+<table class="tmain">
+<tr>
+<td>[Lesson 1: Course Introduction](Lesson01.html)</td>
+</tr>
+<tr class="alt">
+<td>[[Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)]]</td>
+</tr>
+<tr>
+<td>[[Lesson 11: Inference for One Mean: Sigma Unknown]]</td>
+</tr>
+<tr class="alt">
+<td>[[Lesson 12: Inference for Two Means: Paired Data]]</td>
+</tr>
+<tr>
+<td>[[Lesson 13: Inference for Two Means: Independent Samples]]</td>
+</tr>
+<tr class="alt">
+<td>[[Lesson 14: Inference for Several Means (ANOVA)]]</td>
+</tr>
+<tr>
+<td>[[Lesson 15: Review for Exam 2]]</td>
+</tr>
+</table>
+
+</div>
+</div>
+</div>

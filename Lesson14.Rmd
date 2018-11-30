@@ -4,74 +4,95 @@ output:
   html_document:
     theme: cerulean
     toc: true
-    toc_float: true
+    toc_float: false
 ---
 
-<iframe width="340" align="center" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<script type="text/javascript">
+ function showhide(id) {
+    var e = document.getElementById(id);
+    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+ }
+</script>
 
-<div style="clear:both"></div>
-
-{{:Tidbit:7}}
-
-
-==Lesson Outcomes==
-
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Lesson Outcomes" data-expandtext="Click Here to Show Outcomes for this Lesson">
-By the end of this lesson, you should be able to:
-:* Hypothesis Testing for several means (ANOVA):
-:** State the null and alternative hypothesis. 
-:** Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.
-:** Assess the statistical significance by comparing the p-value to the α-level.
-:** Check the requirements for the hypothesis test.
-:** Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
-:** Draw a correct conclusion for the hypothesis test. 
-
+<div style="float:right;width=40%;">
+<br/>
+<div style="padding-left:10%;">**Optional Lesson Video**</div>
+<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC8BeDBR9mQR2d8nnqK_iQ0j" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
+## Lesson Outcomes
+
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="oc" style="display:none;">
+By the end of this lesson, you should be able to:
+
+- Hypothesis Testing for several means (ANOVA):
+  + State the null and alternative hypothesis. 
+  + Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.
+  + Assess the statistical significance by comparing the p-value to the α-level.
+  + Check the requirements for the hypothesis test.
+  + Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
+  + Draw a correct conclusion for the hypothesis test. 
+</div>
 <br>
 
-==The Effects of Gratitude==
+## The Effects of Gratitude
 
-[[File:StepsAll.png|link=|center]]
+<img src="./Images/StepsAll.png">
+
+<br>
+<table>
+<tbody>
+<tr class="odd">
+<td><p><img src="./Images/GordonBHinckley.png"></p></td>
+<td><p>$~ ~$</p></td>
+<td><p>President Gordon B. Hinckley said, &quot;My plea is that we stop seeking out the storms and enjoy more fully the sunlight. I am suggesting that as we go through life, we 'accentuate the positive.' I am asking that we look a little deeper for the good, that we still our voices of insult and sarcasm, that we more generously compliment and endorse virtue and effort&quot; (*Standing for Something*, 2000, p.101).</p></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<!-- {| style="border: 1px solid lightblue;" -->
+<!-- |- valign="top" -->
+<!-- | <img src="./Images/GordonBHinckley.png">  -->
+<!-- | $~ ~$ -->
+<!-- | President Gordon B. Hinckley said, "My plea is that we stop seeking out the storms and enjoy more fully the sunlight. I am suggesting that as we go through life, we 'accentuate the positive.' I am asking that we look a little deeper for the good, that we still our voices of insult and sarcasm, that we more generously compliment and endorse virtue and effort" (*Standing for Something*, 2000, p.101). -->
+<!-- |- -->
+<!-- |} -->
 
 
-{| style="border: 1px solid lightblue;"
-|- valign="top"
-| [[File:GordonBHinckley.png|link=]] 
-| $~ ~$
-| President Gordon B. Hinckley said, "My plea is that we stop seeking out the storms and enjoy more fully the sunlight. I am suggesting that as we go through life, we 'accentuate the positive.' I am asking that we look a little deeper for the good, that we still our voices of insult and sarcasm, that we more generously compliment and endorse virtue and effort" (''Standing for Something'', 2000, p.101).
-|-
-|}
+<img src="./Images/Step1.png">
 
+<img src="./Images/Midnight_sun.jpg">
 
-[[File:Step1.png|link=]]
-[[File:Midnight_sun.jpg|frame|link=|400px|From [http://commons.wikimedia.org/wiki/File:Midnight_sun.jpg commons.wikimedia.org] ]]
-
-'''Summarize the relevant background information'''
+**Summarize the relevant background information**
 
 Robert Emmons and Michael McCullough investigated the effects of gratitude on people's perception of life as a whole<!--<cite>Emmons03</cite>-->.  In a study of $n=192$ undergraduates, the people were randomly assigned to one of three groups.
 
-:*Group 1 (Gratitude): The participants in this group were asked to record five things each week for which they were grateful or thankful.
-:*Group 2 (Hassles): The volunteers in this group recorded five irritants that had occurred to them in the previous week.
-:*Group 3 (Events): The people in the events group recorded five things that occurred in the past week that had an impact on them.
+- Group 1 (Gratitude): The participants in this group were asked to record five things each week for which they were grateful or thankful.
+- Group 2 (Hassles): The volunteers in this group recorded five irritants that had occurred to them in the previous week.
+- Group 3 (Events): The people in the events group recorded five things that occurred in the past week that had an impact on them.
 
 In addition to the weekly record of the five things they recorded their level of satisfaction with life in general.  (Higher values are more favorable.)  Reports were collected for nine weeks, and the overall level of satisfaction with life as a whole was recorded for each individual.
 The researchers wanted to determine if there was a difference in the perception of life as a whole between the subjects assigned to each of the three groups.  Stated differently, they wanted to determine if expressing gratitude affects a person's view of life in general.
 
 Here is an excerpt of data representing the results of this study:
 
-[[File:Gratitude-Data.png|link=|center]]
+<img src="./Images/Gratitude-Data.png">
 
 Higher values indicate a greater level of satisfaction with life as a whole.
 
 
-How might we analyze these data?  One possible method would be to conduct separate t-tests for all the possible pairs of groups in the study.  If we did this, we would need to conduct a separate t-test to compare groups 1 & 2, 1 & 3 and 2 & 3.  If the probability of committing a Type I error is $ \alpha = .05 $ on each of these tests, then the probability that we would commit a Type I error on at least one of the tests is much greater than 0.05.  We need a hypothesis test that we can use to compare all the groups at once.  The procedure that allows us to do this is called Analysis of Variance (ANOVA).
+How might we analyze these data?  One possible method would be to conduct separate t-tests for all the possible pairs of groups in the study.  If we did this, we would need to conduct a separate t-test to compare groups 1 & 2, 1 & 3 and 2 & 3.  If the probability of committing a Type I error is $\alpha = .05$ on each of these tests, then the probability that we would commit a Type I error on at least one of the tests is much greater than 0.05.  We need a hypothesis test that we can use to compare all the groups at once.  The procedure that allows us to do this is called Analysis of Variance (ANOVA).
 
 <!--
 !!!!!!!!!!!!!!!!!!!!!!!!! BEGIN MISSION MEMORIES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-==Mission Memories==
+## Mission Memories
 
 
 District meetings are gatherings of approximately 6-12 missionaries who serve in a relatively small area. In some missions, the missionaries conclude each district meeting by individually shaking each other's hands.  If there are 6 missionaries present at a district meeting, how many handshakes will be given at the conclusion?
@@ -79,7 +100,7 @@ District meetings are gatherings of approximately 6-12 missionaries who serve in
 You might want to use the following diagram to help you determine this number.  Each circle represents a missionary.  Draw line connecting each dot with the others.  The lines represent handshakes.  How many handshakes are there if there are 6 missionaries at a district meeting?
 
 <center>
-[[File:MissionaryHandshakeANOVA.png|link=]]
+<img src="./Images/MissionaryHandshakeANOVA.png">
 </center>
 
 Now, think about the missionaries as means and the handshakes as hypothesis tests to determine if those means were equal.  However, each of these tests carry a probability of committing a type I error. If the tests were independent, the probability of committing at least one type I error in 15 tests (the number of tests required to look at all possible pairs of 6 means) is $1-(1-0.05)^{15}=0.5367$.  In other words, if there are six groups and you do all possible pairwise tests to look for differences in the means with $\alpha=0.05$, there is a probability of over 50% that you will have at least one type one error.  This is unacceptable!
@@ -88,7 +109,7 @@ What is the solution?  Conduct only one test: an analysis of variance (ANOVA).
 
 !!!!!!!!!!!!!!!!!!!!!!!!! END MISSION MEMORIES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 -->
-==Analysis of Variance (ANOVA)==
+## Analysis of Variance (ANOVA)
 
 ANOVA is a test for equality of several means. It allows us to compare the means for several groups--in one hypothesis test.  It might sound intimidating, but ANOVA is simply a way to analyze several means at once.  It is based on a comparison of the spread of the data within each of the groups compared to the spread of the means of the groups.  
 
@@ -101,28 +122,38 @@ If the means differ from each other in comparison to the variability in each gro
 
 We will use the level of significance, $\alpha$, and the $P$-value just as we have in the other hypothesis tests.
 
-===$F$-distribution===
-[[File:Gratitude-F.png|link=|frame]]
+### $F$-distribution
+<img src="./Images/Gratitude-F.png">
 The test statistic in ANOVA follows an $F$-distribution.  This is the first time we have encountered this distribution.  In previous tests, we have used the test statistics $z$ and $t$.  For the ANOVA test, we use the $F$-statistic.
 
 Here is a brief summary of the characteristics of the $F$-distribution:
-:*It is right skewed.
-:*The values of $F$ are never negative.
-:*The $P$-value for the ANOVA test is the area in the ''right tail''.  We will never divide the area in the tail.
+- It is right skewed.
+- The values of $F$ are never negative.
+- The $P$-value for the ANOVA test is the area in the *right tail*.  We will never divide the area in the tail.
 
-===Requirements of ANOVA===
+### Requirements of ANOVA
 
 There are two requirements of ANOVA that must be checked:
-:*The data are normally distributed in each group.
-::: We check this by creating a Q-Q plot for each group (separately).  If the points in the Q-Q plot do not show distinct curvature, it is reasonable to conclude that the data are normally distributed.
 
-:*The '''[[Lesson 3: Describing_Quantitative_Data:_Shape,_Center_%26_Spread#Variance|variances]]''' are equal for each group.
-::: This requirement is checked by examining the variances.  The rule we will use is: ''if the largest variance is less than or equal to four times the smallest variance, then we will conclude that the variances are equal.''
+- The data are normally distributed in each group.
+
+    We check this by creating a Q-Q plot for each group (separately).  If the points in the Q-Q plot do not show distinct curvature, it is reasonable to conclude that the data are normally distributed.
+
+<!-- **[[Lesson 3: Describing_Quantitative_Data:_Shape,_Center_%26_Spread#Variance|variances]]** 
+I don't know how to reference specific header in other lesson-->
+
+- The variances are equal for each group.
+
+    This requirement is checked by examining the variances.  The rule we will use is: *if the largest variance is less than or equal to four times the smallest variance, then we will conclude that the variances are equal.*
+
 If done by hand, the calculations for one simple ANOVA problem can easily require an hour of hard work.  We will use software to do these calculations quickly and accurately.
 
-{{Tip|The variance is the square of the standard deviation.  The sample variance is denoted by the symbol $s^2$.}}
+<br>
+<div class="message Tip">The variance is the square of the standard deviation.  The sample variance is denoted by the symbol $s^2$.</div>
+<br>
+<br>
 
-===How to Conduct an ANOVA Test===
+### How to Conduct an ANOVA Test
 
 <div id="auto"></div>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
@@ -131,39 +162,42 @@ If done by hand, the calculations for one simple ANOVA problem can easily requir
 <div class="SoftwareHeading">Excel Instructions</div>
 <div class="Summary">
 
-:To conduct a test for several means (ANOVA) in Excel, do the following: 
+To conduct a test for several means (ANOVA) in Excel, do the following: 
 
-:Open the file {{Spreadsheet|QIP}} and do the following:
-::* Click on the tab labeled "ANOVA"
-::* Paste the data from each group into their own column
-:::* Paste the data from the first group in the appropriate part of Column A
-:::* Paste the data for the second group in the designated part of Column B
-:::* Continue copy and pasting each group in the appropriate columns
-::* The test statistic, $F$, is given in cell L15
-::* The degrees of freedom are presented in cells J15 and J16
-::* The $P$-value is reported in cell M15
+Open the file [Quantitative Inference Procedures.xlsx](./Data/QuantitativeInferenceProcedures.xlsx) and do the following:
 
-:The following points will help you interpret the output.
-::*The "Descriptive Statistics" section of the output gives the sample size, mean and standard deviation for each of the groups in your sample.
-::*In the ANOVA table, you will find the test statistic ($F$), the $P$-value (Sig.), and the degrees of freedom (df) for the $F$ statistic.  Note that there are two numbers specifying the degrees of freedom.  These are given as the between groups and within groups df, respectively.  Do not worry about the total df.  This number is the sum of the other two.
+- Click on the tab labeled "ANOVA"
+- Paste the data from each group into their own column
+  + Paste the data from the first group in the appropriate part of Column A
+  + Paste the data for the second group in the designated part of Column B
+  + Continue copy and pasting each group in the appropriate columns
+- The test statistic, $F$, is given in cell L15
+- The degrees of freedom are presented in cells J15 and J16
+- The $P$-value is reported in cell M15
 
-:To check your requirements, do the following:
+The following points will help you interpret the output.
 
-::*To determine if the data are normally distributed, we will make a Q-Q plot for each group separately.
-::*Using {{Spreadsheet|QDS}}, under the Q-Q plot tab you can paste in each of the three groups of data separately, to test for normality.
-::*To determine if the population variances are equal, we will use a very simple check:
-:::*If the largest variance is at least four times as big as the smallest variance, we will conclude that the population variances are not equal.  (Remember, the variance is the square of the standard deviation.)
-:::*If the largest variance is ''not'' four times as big as the smallest variance, we will conclude that the population variances are close enough that we can assume the variances are all equal.
+- The "Descriptive Statistics" section of the output gives the sample size, mean and standard deviation for each of the groups in your sample.
+
+- In the ANOVA table, you will find the test statistic ($F$), the $P$-value (Sig.), and the degrees of freedom (df) for the $F$ statistic.  Note that there are two numbers specifying the degrees of freedom.  These are given as the between groups and within groups df, respectively.  Do not worry about the total df.  This number is the sum of the other two.
+
+To check your requirements, do the following:
+
+- To determine if the data are normally distributed, we will make a Q-Q plot for each group separately.
+- Using [QuantitativeDescriptiveStatistics.xlsx](./Data/QuantitativeDescriptiveStatistics.xlsx), under the Q-Q plot tab you can paste in each of the three groups of data separately, to test for normality.
+- To determine if the population variances are equal, we will use a very simple check:
+  + If the largest variance is at least four times as big as the smallest variance, we will conclude that the population variances are not equal.  (Remember, the variance is the square of the standard deviation.)
+  + If the largest variance is *not* four times as big as the smallest variance, we will conclude that the population variances are close enough that we can assume the variances are all equal.
 
 <br>
 </div>
 <br>
 
-==Worked Example: Gratitude==
+## Worked Example: Gratitude
 
 We will conduct a hypothesis test to determine if the mean responses of the individuals in the three groups differ.
 
-'''State the null and alternative hypotheses and the level of significance'''
+**State the null and alternative hypotheses and the level of significance**
 $$
 \begin{align}
 H_0: & ~ \textrm{All the means are equal} \\
@@ -171,19 +205,19 @@ H_a: & ~ \textrm{At least one of the means differs}
 \end{align}
 $$
 
-We will use the $ \alpha = 0.05 $ level of significance.
+We will use the $\alpha = 0.05$ level of significance.
 
 
-[[File:Step2.png|link=]]
+<img src="./Images/Step2.png">
 
-'''Describe the data collection procedures'''
+**Describe the data collection procedures**
 
 The students were randomly assigned to one of the three treatments.  They wrote in a weekly journal, according to their group assignment.  At the end of the semester, they completed a questionnaire that asked about their attitude toward life.  The responses on the survey were coded into a number, where higher numbers represent a more positive outlook.
 
 
-[[File:Step3.png|link=]]
+<img src="./Images/Step3.png">
 
-'''Give the relevant summary statistics'''
+**Give the relevant summary statistics**
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <!-- {{Software_Filter | PageName=GratitudeANOVA }} -->
@@ -191,15 +225,15 @@ The students were randomly assigned to one of the three treatments.  They wrote 
 <div class="SoftwareHeading">Excel Instructions</div>
 <div class="Summary">
 
-:Follow these instructions to apply the ANOVA procedure using Excel:
+Follow these instructions to apply the ANOVA procedure using Excel:
 
-:Data representative of the values reported by Emmons and McCullough are given in the file <span class=Link>[[Data|Gratitude-Stacked.xls]]</span>.  The data is divided up into three columns which represent Grateful, Hassels, and Events.  
+Data representative of the values reported by Emmons and McCullough are given in the file [Gratitude-Stacked.xlsx](./Data/Gratitude.xlsx).  The data is divided up into three columns which represent Grateful, Hassels, and Events.  
 
-:The summary statistics can be obtained using the {{Spreadsheet|QIP}}.  Paste the three columns of data into the appropriate areas of column A, B, and C.  The summary statistics will appear in the table to the right labeled "Descriptive Statistics".
+The summary statistics can be obtained using the [QuantitativeInferenceProcedures.xlsx](./Data/QuantitativeInferenceProcedures.xlsx).  Paste the three columns of data into the appropriate areas of column A, B, and C.  The summary statistics will appear in the table to the right labeled "Descriptive Statistics".
 
-:This yields the following output:
+This yields the following output:
 
-[[File:Gratitude-ANOVA-Output-Excel.png|link=|center]]
+<img src="./Images/Gratitude-ANOVA-Output-Excel.png">
 <br>
 </div>
 <br>
@@ -207,81 +241,95 @@ The students were randomly assigned to one of the three treatments.  They wrote 
 
 The summary statistics are presented in the following table:
 
-<center>
-{| class="basic" style="text-align:center"
-|- valign="bottom"
-!Group    || N  || Mean  || Std. <br> Deviation 
-|-
-| '''Grateful''' || 64 || 5.050 || 0.9443 
-|-
-| '''Hassles'''  || 63 || 4.675 || 0.8320 
-|-
-| '''Events'''   || $~$ $~$ $~$ 65$~$ $~$ $~$  || $~$ $~$ 4.660 $~$ $~$ || $~$ 0.8483 $~$ 
-|-
-|}
-</center>
++--------------+---------------------------+-----------------------+----------------+
+| Group        | N                         | Mean                  | Std.           |
+|              |                           |                       | Deviation      |
++==============+===========================+=======================+================+
+| **Grateful** | 64                        | 5.050                 | 0.9443         |
++--------------+---------------------------+-----------------------+----------------+
+| **Hassles**  | 63                        | 4.675                 | 0.8320         |
++--------------+---------------------------+-----------------------+----------------+
+| **Events**   | 65                        | 4.660                 | 0.8483         |
++--------------+---------------------------+-----------------------+----------------+
+|              |                           |                       |                |
++--------------+---------------------------+-----------------------+----------------+
+
+<!-- <center> -->
+<!-- {| class="basic" style="text-align:center" -->
+<!-- |- valign="bottom" -->
+<!-- !Group    || N  || Mean  || Std. <br> Deviation  -->
+<!-- |- -->
+<!-- | **Grateful** || 64 || 5.050 || 0.9443  -->
+<!-- |- -->
+<!-- | **Hassles**  || 63 || 4.675 || 0.8320  -->
+<!-- |- -->
+<!-- | **Events**   || $~$ $~$ $~$ 65$~$ $~$ $~$  || $~$ $~$ 4.660 $~$ $~$ || $~$ 0.8483 $~$  -->
+<!-- |- -->
+<!-- |} -->
+<!-- </center> -->
 
 Please do not blindly cut-and-paste computer output. It can include a lot of information that we do not use.  Identify the relevant parts and only report those pieces of information.  Present only those portions of the output that are relevant.
 
 Since the largest variance ($s^2$) is not four times larger than the smallest variance, we can assume the variances are equal.  The points in the Q-Q plots for each of the three groups (not shown) follow the line closely, suggesting that the data can be assumed to be normally distributed.
 We conclude that the requirements are satisfied and it is appropriate to use ANOVA.
-:* '''Make an appropriate graph to illustrate the data'''
 
-[[File:Gratitude-Boxplots.png|link=|center]]
+-  **Make an appropriate graph to illustrate the data**
+
+<img src="./Images/Gratitude-Boxplots.png">
 
 
-[[File:Step4.png|link=]]
+<img src="./Images/Step4.png">
 
-'''Verify the requirements have been met'''
+**Verify the requirements have been met**
 
 Q-Q plots indicate that it is reasonable to conclude that the data are normally distributed in each group.  
 The largest variance (0.8917 from the Grateful group) is not four times the smallest (0.6922 from the Hassles group), so we conclude that the variances are equal for the three groups.
 
-'''Give the test statistic and its value'''
+**Give the test statistic and its value**
 
 This can be found in the output.  Our test statistic, $F$, is:
 $$F = 4.075$$
 
-'''State the degrees of freedom'''
+**State the degrees of freedom**
 
 There are 2 and 189 degrees of freedom.  
 
 The order in which these are stated is important.  For an F-test, it is not the same to have 2 and 189 degrees of freedom as it is to have 189 and 2 degrees of freedom.
 
-'''Mark the test statistic and $P$-value on a graph of the sampling distribution'''
+**Mark the test statistic and $P$-value on a graph of the sampling distribution**
 
-[[File:Gratitude-F.png|link=|center]]
+<img src="./Images/Gratitude-F.png">
 
-'''Find the $P$-value and compare it to the level of significance'''
+**Find the $P$-value and compare it to the level of significance**
 
 $$P\textrm{-value}=0.019 < 0.05 = \alpha$$
 
-'''State your decision'''
+**State your decision**
 
 Since $P$-value$=0.019 < 0.05 = \alpha$, we reject the null hypothesis.
 
 
-[[File:Step5.png|link=]]
+<img src="./Images/Step5.png">
 
-'''Present your conclusion in an English sentence, relating the result to the context of the problem'''
+**Present your conclusion in an English sentence, relating the result to the context of the problem**
 
 There is sufficient evidence to suggest that at least one of the three groups has a mean level of satisfaction with life that differs from the others.  In short, the mean level of satisfaction with life in general is not the same for all three groups.
 
 If we take a closer look, we see that the Hassles and Events groups had means that were fairly close together.  However, the Grateful group appears to have a significantly higher mean level of satisfaction than the other two groups.
 
-==Worked Example: Soccer Shoes==
+## Worked Example: Soccer Shoes
 <span id='21:SoccerShoesExplanation'></span>
 
-[[File:StepsAll.png|link=|center]]
+<img src="./Images/StepsAll.png">
 
 
-[[File:Step1.png|link=]]
+<img src="./Images/Step1.png">
 
-'''Summarize the relevant background information'''
+**Summarize the relevant background information**
 
 Nike, a company that makes sporting goods including shoes, funded a study to compare five soccer shoe designs. <!--<cite>Hennig09,Hennig10</cite>-->  The objective of the research was to determine if there is a difference in the mean accuracy soccer players achieve using different Nike shoe designs.
 
-'''State the null and alternative hypotheses and the level of significance'''
+**State the null and alternative hypotheses and the level of significance**
 $$
 \begin{align}
 H_0: & \textrm{All the means are equal} \\
@@ -289,139 +337,168 @@ H_a: & \textrm{At least one of the means differs}
 \end{align}
 $$
 
-We will use the $ \alpha = 0.10 $ level of significance.
+We will use the $\alpha = 0.10$ level of significance.
 
 
-[[File:Step2.png|link=]]
+<img src="./Images/Step2.png">
 
-'''Describe the data collection procedures'''
+**Describe the data collection procedures**
 
 As part of the research, they asked trained soccer players to kick a ball at a target.  The target was placed 115 cm above the ground and at a distance of 10 m from the players. Using electronic equipment, the researchers recorded the distance from the center of the target to the point where the ball hit.  The objective of the research was to assess if footwear could affect the accuracy of a soccer player.  
 
 The subjects wore five different soccer shoes and for one treatment they kicked the ball in stocking feet.  Due to the proprietary nature of the data, the shoes are only labeled "A," "B," "C," "D," and "E" in the article.
-Data representing the results of this study are given in the file <span class=Link>[[Data|SoccerShoes]]</span>.
+Data representing the results of this study are given in the file [SoccerShoes.xlsx](./Data/SoccerShoes.xlsx).
 
-Use the <span class=Link>[[Data|SoccerShoes]]</span> data to answer the following questions.
+Use the [SoccerShoes.xlsx](./Data/SoccerShoes.xlsx) data to answer the following questions.
 
 
-[[File:Step3.png|link=]]
+<img src="./Images/Step3.png">
   
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
-:1. '''Give the relevant summary statistics'''
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
+
+1. **Give the relevant summary statistics**
+
+<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q1" style="display:none;">
 <center>
-{| class="basic" style="text-align:center" 
-|-
-! Group    !! N  !! Mean  !! Std. Deviation 
-|-
-|A  || 20 || 33.10 || 5.230 
-|-
-|B  || 20 || 32.70 || 5.430 
-|-
-|C   || 20 || 29.45 || 5.216 
-|-
-|D   || 20 || 32.00 || 7.291
-|-
-|E   || 20 || 32.20 || 5.569
-|-
-|Socks || 20 || 35.25 || 6.382
-|}
-</center>
+
+  Group   N    Mean    Std. Deviation
+  ------- ---- ------- ----------------
+  A       20   33.10   5.230
+  B       20   32.70   5.430
+  C       20   29.45   5.216
+  D       20   32.00   7.291
+  E       20   32.20   5.569
+  Socks   20   35.25   6.382
+
+<!-- {| class="basic" style="text-align:center"  -->
+<!-- |- -->
+<!-- ! Group    !! N  !! Mean  !! Std. Deviation  -->
+<!-- |- -->
+<!-- |A  || 20 || 33.10 || 5.230  -->
+<!-- |- -->
+<!-- |B  || 20 || 32.70 || 5.430  -->
+<!-- |- -->
+<!-- |C   || 20 || 29.45 || 5.216  -->
+<!-- |- -->
+<!-- |D   || 20 || 32.00 || 7.291 -->
+<!-- |- -->
+<!-- |E   || 20 || 32.20 || 5.569 -->
+<!-- |- -->
+<!-- |Socks || 20 || 35.25 || 6.382 -->
+<!-- |} -->
+<!-- </center> -->
 </div>
+<br>
 
+2. **Make an appropriate graph to illustrate the data**
 
-:2. '''Make an appropriate graph to illustrate the data'''
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::Here is a side-by-side boxplot to illustrate the data for the six groups all at once.  (You may also want to make side-by-side histograms.)
-[[File:Soccershoes-boxplot-SPSS.png|link=|400px|center]]
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+* Here is a side-by-side boxplot to illustrate the data for the six groups all at once.  (You may also want to make side-by-side histograms.)
+
+<img src="./Images/Soccershoes-boxplot-SPSS.png">
 </div>
+<br>
 
+3. Based on what you have seen so far, does it appear that there is a significant difference between the mean accuracy of the kicks using the six types of footwear?
 
-:3. Based on what you have seen so far, does it appear that there is a significant difference between the mean accuracy of the kicks using the six types of footwear?
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::Just by looking at the boxplots we can see that there is a difference, but we do not know if there is a statistically significant difference between the mean accuracy of the kicks using the six different types of footwear until we perform an hypothesis test for several means.  
+<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q3" style="display:none;">
+* Just by looking at the boxplots we can see that there is a difference, but we do not know if there is a statistically significant difference between the mean accuracy of the kicks using the six different types of footwear until we perform an hypothesis test for several means.  
 </div>
+<br>
 
+4. If we conducted independent samples $t$-tests comparing the six groups, how many tests would be conducted if we compared each of the groups against all the others?
 
-:4. If we conducted independent samples $t$-tests comparing the six groups, how many tests would be conducted if we compared each of the groups against all the others?
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::We would need to conduct 15 tests!  We need to use ANOVA.  We should not do the comparisons using several different t-tests.
+<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q4" style="display:none;">
+* We would need to conduct 15 tests!  We need to use ANOVA.  We should not do the comparisons using several different t-tests.
 </div>
 &nbsp;
 </div>
+<br>
 
 
-
-[[File:Step4.png|link=]]
+<img src="./Images/Step4.png">
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
-:5. '''Verify the requirements have been met'''
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::Q-Q plots of the data for each of the six groups (separately) do not indicate a departure from normality.  
-::{{Type_Filter|type=Online|content=The largest standard deviation (7.291) is not double the smallest (5.216).}}{{Type_Filter|type=Classroom|content=The largest variance (53.159) is not four times the smallest (27.207).}}
+
+5. **Verify the requirements have been met**
+
+<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q5" style="display:none;">
+* Q-Q plots of the data for each of the six groups (separately) do not indicate a departure from normality.  
+* The largest standard deviation (7.291) is not double the smallest (5.216).The largest variance (53.159) is not four times the smallest (27.207)
 </div>
+<br>
 
+6. **Give the test statistic and its value**
 
-:6. '''Give the test statistic and its value'''
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::$F$ statistic = 2.020
+<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q6" style="display:none;">
+* $F$ statistic = 2.020
 </div>
+<br>
 
+7. **State the degrees of freedom**
 
-:7. '''State the degrees of freedom'''
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::There are 5 and 114 degrees of freedom
+<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q7" style="display:none;">
+* There are 5 and 114 degrees of freedom
 </div>
+<br>
 
+8. **Mark the test statistic and $P$-value on a graph of the sampling distribution**
 
-:8. '''Mark the test statistic and $P$-value on a graph of the sampling distribution'''
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-[[File:SoccerShoes-SamplingDist.png|link=|center]]
+<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q8" style="display:none;">
+<img src="./Images/SoccerShoes-SamplingDist.png">
 </div>
+<br>
 
+9. **Find the $P$-value and compare it to the level of significance**
 
-:9. '''Find the $P$-value and compare it to the level of significance'''
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::$P\text{-value} =0.08094 < 0.1 = \alpha $
+<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q9" style="display:none;">
+* $P\text{-value} =0.08094 < 0.1 = \alpha$
 </div>
+<br>
 
+10. **State your decision**
 
-:10. '''State your decision'''
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::Since $P$-value$=0.08094 < 0.1 = \alpha$ we reject the null hypothesis.
+<a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q10" style="display:none;">
+* Since $P$-value$=0.08094 < 0.1 = \alpha$ we reject the null hypothesis.
 </div>
 &nbsp;
 </div>
+<br>
 
 
-
-[[File:Step5.png|link=]]
+<img src="./Images/Step5.png">
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
-:11. '''Present your conclusion in an English sentence, relating the result to the context of the problem'''
-<div style="clear:both"></div>
-<div class="mw-collapsible mw-collapsed" data-collapsetext="Hide Solution" data-expandtext="Show Solution">
-::There is sufficient evidence to suggest that there is a difference in the mean accuracy of the kicks for the various types of footwear.  
+
+11. **Present your conclusion in an English sentence, relating the result to the context of the problem**
+
+<a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q11" style="display:none;">
+* There is sufficient evidence to suggest that there is a difference in the mean accuracy of the kicks for the various types of footwear.  
 </div>
 &nbsp;
 </div>
+<br>
 
-==Summary==
+## Summary
 
-*'''ANOVA''' is used to compare the means for several groups. The hypotheses for the test are always:
+<div class="SummaryHeading">Remember...</div>
+<div class="Summary">
+
+- **ANOVA** is used to compare the means for several groups. The hypotheses for the test are always:
 $$
 \begin{align}
 H_0: & ~ \textrm{All the means are equal} \\
@@ -429,25 +506,23 @@ H_a: & ~ \textrm{At least one of the means differs}
 \end{align}
 $$
 
-*For ANOVA testing we use an '''$F$-distribution''', which is right-skewed. The $P$-value of an ANOVA test is always the area to the right of the $F$-statistic.
+- For ANOVA testing we use an **$F$-distribution**, which is right-skewed. The $P$-value of an ANOVA test is always the area to the right of the $F$-statistic.
 
-*We can conduct ANOVA testing when the following three requirements are satisfied:
-:1. The data come from a simple random sample.
-:2. The data are normally distributed within each group.
-:::*This is satisfied when Q-Q Plots for the data in each group roughly follow a straight line.
-:3. The variance is constant.
-:::*This is satisfied when the largest variance is not more than four times the smallest variance.
-
+- We can conduct ANOVA testing when the following three requirements are satisfied:
+1. The data come from a simple random sample.
+2. The data are normally distributed within each group.
+- This is satisfied when Q-Q Plots for the data in each group roughly follow a straight line.
+3. The variance is constant.
+- This is satisfied when the largest variance is not more than four times the smallest variance.
+<br>
+</div>
 <br>
 
 
-==Navigation==
+## Navigation
 
-{| 
-|- align="center"
-| '''Previous Reading''': <br> Lesson 13:  <br> [[Lesson 13: Inference for Two Means: Independent Samples|Inference for Two Means: Independent Samples]]
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-| '''This Reading''': <br> Lesson 14:  <br> Inference for Several Means (ANOVA)
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-| '''Next Reading''': <br> Lesson 15:  <br> [[Lesson 15: Review for Exam 2|Review for Exam 2]]
-|}
+<center>
+| **Previous Reading** | **This Reading** | **Next Reading** |
+| :------------------: | :--------------: | :--------------: |
+| [Lesson 13: <br> Inference for Two Means: Independent Samples](Lesson13.html) | Lesson 14: <br> Inference for Several Means (ANOVA) | [Lesson 15: <br> Review for Exam 2](Lesson15.html) |
+</center>
