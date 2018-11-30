@@ -324,8 +324,8 @@ $(document).ready(function () {
 <p><br></p>
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
-<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Lesson Outcomes</span></a>
-<div id="Q1" style="display:none;">
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Lesson Outcomes</span></a>
+<div id="oc" style="display:none;">
 <p>The expectation on the exam is that you should be able to do the following:</p>
 <ul>
 <li>Distinguish between a categorical and a quantitative variable.</li>
@@ -364,8 +364,8 @@ $(document).ready(function () {
 </div>
 <div id="lesson-summaries" class="section level2">
 <h2>Lesson Summaries</h2>
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Unit 1 Summaries</span></a>
-<div id="Q2" style="display:none;">
+<a href="javascript:showhide('su')"><span style="font-size:8pt;">Show/Hide Unit 1 Summaries</span></a>
+<div id="su" style="display:none;">
 <div class="RecapHeading">
 Lesson 01 Recap
 </div>
@@ -418,9 +418,9 @@ Lesson 04 Recap
 <li>The three <strong>rules of probability</strong> are:</li>
 </ul>
 <ol style="list-style-type: decimal">
-<li><p>A probability is a number between 0 and 1. <span class="math display">\[ 0 ≤ P(X) ≤ 1 \]</span></p></li>
-<li><p>If you list all the outcomes of a probability experiment (such as rolling a die) the probability that one of these outcomes will occur is 1. In other words, the sum of the probabilities in any probability is 1. <span class="math display">\[ \sum P(X) = 1 \]</span></p></li>
-<li>The probability that an outcome will not occur is 1 minus the probability that it will occur. <span class="math display">\[ P(\text{not}~X) = 1 - P(X) \]</span></li>
+<li><p>A probability is a number between 0 and 1. <span class="math display">\[0 ≤ P(X) ≤ 1\]</span></p></li>
+<li><p>If you list all the outcomes of a probability experiment (such as rolling a die) the probability that one of these outcomes will occur is 1. In other words, the sum of the probabilities in any probability is 1. <span class="math display">\[\sum P(X) = 1\]</span></p></li>
+<li>The probability that an outcome will not occur is 1 minus the probability that it will occur. <span class="math display">\[P(\text{not}~X) = 1 - P(X)\]</span></li>
 </ol>
 </div>
 <p><br></p>
@@ -466,27 +466,25 @@ Lesson 07 Recap
 <ol style="list-style-type: decimal">
 <li><p>What is the name of the important statistical result that guarantees that the sampling distribution of the sample mean <span class="math inline">\(\bar x\)</span> will be normal, if the sample size is large?</p></li>
 <li><p>What is the name of the important statistical result that states that when the sample size is large, the sample mean <span class="math inline">\(\bar x\)</span> will be close to the population mean <span class="math inline">\(\mu\)</span>?</p></li>
-<li><p>Which of the following variables is/are categorical?</p></li>
-</ol>
-<ul>
-<li>The number of animals in the local zoo</li>
-<li>A randomly selected brand of toothpaste at a convenience store</li>
-<li>Age in years of a randomly selected vehicle in a parking lot</li>
-</ul>
-<ol start="4" style="list-style-type: decimal">
+<li><p>Which of the following variables is/are categorical?</p>
+<p>The number of animals in the local zoo</p>
+<p>A randomly selected brand of toothpaste at a convenience store</p>
+<p>Age in years of a randomly selected vehicle in a parking lot</p></li>
 <li><p>The mean I.Q. test score in the United States is 100. Twenty randomly selected Statistics students took an I.Q. test, and the mean of their scores was 112. Which of these two numbers is a parameter and which is a statistic?</p></li>
 <li><p>Rotham City has four distinct neighborhoods. The property values are very similar within each neighborhood, but they vary considerably from neighborhood to neighborhood. One neighborhood has very low property values and another has extremely high property values. Property taxes are usually roughly proportional to the property values. What type of sample should we collect to gauge the residents’ responses to a proposed increase in property taxes?</p></li>
 <li><p>When designed experiments are conducted in public school systems, researchers typically choose a particular district, and randomly select teachers of, say, fourth grade students in that district. The experiment is then conducted using all the students in the selected classes. Which type of sampling scheme is implemented?</p></li>
 <li><p>At a school fund raiser, the name of every person who attended was entered into a drawing. At the end of the evening, six names were selected to receive door prizes. Which type of sampling scheme was implemented?</p></li>
 <li><p>A special interest group is conducting a survey regarding wolves in Yellowstone National Park. To adequately gauge opinions on both sides of the political spectrum, the researchers took the list of registered Democrats and selected a simple random sample of 100 people. Then, they took a list of registered Republicans and selected a simple random sample of 100 people. Which type of sampling scheme was implemented?</p></li>
 </ol>
-<p>A survey was taken of purchases at the Crossroads. Open the data file <a href="./Data/CrossroadsPurchases.xlsx">CrossroadsPurchases</a> and use this data to answer questions 9 and 10.</p>
+<p>A survey was taken of purchases at the Crossroads. Open the data file <a href="./Data/CrossroadsPurchases.xlsx">CrossroadsPurchases.xlsx</a> and use this data to answer questions 9 and 10.</p>
 <ol start="9" style="list-style-type: decimal">
 <li><p>Calculate the descriptive statistics of the amounts spent in Crossroads purchases. Give the mean, standard deviation, and five-number summary of the data.</p></li>
 <li><p>Create a histogram representing the amounts spent in Crossroads purchases.</p></li>
 </ol>
-<p>Jessica Meir and her research team measured the body temperatures of a sample of diving elephant seals.<!-- \cite{Meir10} --> A thermistor was placed at a specific location on each seal to measure its body temperature. The body temperature of seals tends to decrease as they dive. The researchers estimated the typical body temperature of each seal at the time they initiate a dive and called this the “representative temperature” of the seal.</p>
-<p>Thermistors were placed in the hepatic sinus of four of the seals (named Bodil, Roberta, Larry, and Per.) The seal’s body temperature at the start of the dive was calculated to be:</p>
+<ul>
+<li><p>Jessica Meir and her research team measured the body temperatures of a sample of diving elephant seals.<!-- \cite{Meir10} --> A thermistor was placed at a specific location on each seal to measure its body temperature. The body temperature of seals tends to decrease as they dive. The researchers estimated the typical body temperature of each seal at the time they initiate a dive and called this the “representative temperature” of the seal.</p></li>
+<li><p>Thermistors were placed in the hepatic sinus of four of the seals (named Bodil, Roberta, Larry, and Per.) The seal’s body temperature at the start of the dive was calculated to be:</p></li>
+</ul>
 <table>
 <thead>
 <tr class="header">
@@ -690,15 +688,8 @@ Per
 <ol start="11" style="list-style-type: decimal">
 <li><p>What is the value of the number that goes in the position marked with an “A” in the table above?</p></li>
 <li><p>What is the value of the number that goes in the position marked with an “B” in the table above?</p></li>
-<li><p>What quantity is equal to the sum of the numbers in the “Squared Deviations” column?</p></li>
-</ol>
-<ul>
-<li>A. The mean</li>
-<li>B. The standard deviation</li>
-<li>C. The variance</li>
-<li>D. None of these is correct</li>
-</ul>
-<ol start="14" style="list-style-type: decimal">
+<li><p>What quantity is equal to the sum of the numbers in the “Squared Deviations” column?</p>
+<p>A. The mean B. The standard deviation C. The variance D. None of these is correct</p></li>
 <li><p>What is the standard deviation of these temperatures?</p></li>
 <li><p>(True or False) Under certain conditions, the standard deviation can be negative.</p></li>
 <li><p>In the same study, the researchers placed thermistors (temperature sensors) in the three seals (named Chick, Starburst, and Patty) near their spinal cord and brain in the extradural vein. They placed thermistors in six other seals (named Sir Richard, Jerry, Sammy, Knut, Jonesie, and Butler) in their aorta, the largest artery in the body. Finally, they placed thermistors in four other seals (named Bodil, Roberta, Larry, and Per) in their hepatic sinus. The results from this study are summarized in the table below.</p></li>
@@ -830,21 +821,27 @@ Hepatic Sinus
 <ol start="17" style="list-style-type: decimal">
 <li>In your own words, and without using any mathematical symbols or statistical jargon, explain what the standard deviation is. Do not tell how to calculate the standard deviation, but explain what it represents.</li>
 </ol>
-<p>The number of hours students spent studying for an exam were recorded. The data are represented by the boxplot below. Use this boxplot to answer questions 18 and 19.</p>
+<ul>
+<li>The number of hours students spent studying for an exam were recorded. The data are represented by the boxplot below. Use this boxplot to answer questions 18 and 19.</li>
+</ul>
 <p><img src="Images/Review_1_Boxplot.jpg"></p>
 <p><br></p>
 <ol start="18" style="list-style-type: decimal">
 <li><p>Give the five-number summary of this data.</p></li>
 <li><p>What percentage of the data lies between 4 hours and 8 hours?</p></li>
 </ol>
-<p>An observation from a normally distributed population is considered “unusual” if it is more than 2 standard deviations away from the mean. There are several contaminants that can harm a city’s water supply. Nitrate concentrations above 10 ppm (parts per million) are considered a health risk for infants less than six month of age. The City of Rexburg reports that the nitrate concentration in the city’s drinking water supply is between 1.59 and 2.52 ppm (parts per million,) and values outside of this range are unusual. We will assume 1.59 ppm is the value of <span class="math inline">\(\mu-2\sigma\)</span> and <span class="math inline">\(\mu+2\sigma\)</span> is equal to 2.52 ppm. It is reasonable to assume the measured nitrate concentration is normally distributed. <!-- (Source:  \texttt{http://www.rexburg.org/departments/publicworks/pdfs/waterQuality2007.pdf}) --> Use this information to answer questions 20 through 22.</p>
+<ul>
+<li>An observation from a normally distributed population is considered “unusual” if it is more than 2 standard deviations away from the mean. There are several contaminants that can harm a city’s water supply. Nitrate concentrations above 10 ppm (parts per million) are considered a health risk for infants less than six month of age. The City of Rexburg reports that the nitrate concentration in the city’s drinking water supply is between 1.59 and 2.52 ppm (parts per million,) and values outside of this range are unusual. We will assume 1.59 ppm is the value of <span class="math inline">\(\mu-2\sigma\)</span> and <span class="math inline">\(\mu+2\sigma\)</span> is equal to 2.52 ppm. It is reasonable to assume the measured nitrate concentration is normally distributed. <!-- (Source:  \texttt{http://www.rexburg.org/departments/publicworks/pdfs/waterQuality2007.pdf}) --> Use this information to answer questions 20 through 22.</li>
+</ul>
 <ol start="20" style="list-style-type: decimal">
 <li><p>Estimate the mean of the measured nitrate concentration in Rexburg’s drinking water.</p></li>
 <li><p>Estimate the standard deviation of the measured nitrate concentration in Rexburg’s drinking water.</p></li>
 <li><p>Between what two measured nitrate concentrations do approximately 68% of the data values lie?</p></li>
 <li><p>What is the mean and standard deviation of the standard normal distribution?</p></li>
 </ol>
-<p>The admissions committees for most masters of business administration (MBA) programs require the Graduate Management Admission Test (GMAT) as part of the application for new students. It has been shown that the scores on the GMAT are normally distributed with a mean of 542.3 and a standard deviation of 120.54. <!-- (Source: www.mba.com.) --> The minimum GMAT score required for admission to the MAcc program in the School of Accountancy at BYU is 500, but it is rare for students with scores less than 600 to be admitted. <!-- (Source: http://marriottschool.byu.edu/soa/macc/admission.cfm.) --> Use this information to answer questions 24 through 32.</p>
+<ul>
+<li>The admissions committees for most masters of business administration (MBA) programs require the Graduate Management Admission Test (GMAT) as part of the application for new students. It has been shown that the scores on the GMAT are normally distributed with a mean of 542.3 and a standard deviation of 120.54. <!-- (Source: www.mba.com.) --> The minimum GMAT score required for admission to the MAcc program in the School of Accountancy at BYU is 500, but it is rare for students with scores less than 600 to be admitted. <!-- (Source: http://marriottschool.byu.edu/soa/macc/admission.cfm.) --> Use this information to answer questions 24 through 32.</li>
+</ul>
 <ol start="24" style="list-style-type: decimal">
 <li><p>What is the probability that a randomly selected student will score above 542.3 on the GMAT?</p></li>
 <li><p>What is the probability that a randomly selected student will score below 600 on the GMAT?</p></li>

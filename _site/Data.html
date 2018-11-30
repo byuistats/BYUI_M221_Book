@@ -19,9 +19,6 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -170,101 +167,6 @@ $(document).ready(function () {
 
 
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
-
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
-
-
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -403,15 +305,110 @@ div.tocify {
 </div>
 
 
-<p>List of Data files should go here.</p>
+<p>This page contains the data files that are used throughout the course in the wiki, preparation assignments, homework, and exams. It is recommended that students download the zip file and store all the data files for the semester on their personal computer for easy access. Alternatively, you may return to this page to download individual data files.</p>
+<p>You may download the zip folder with all the files: <a href="./Data/ExcelSpreadsheets.zip">ExcelSpreadsheets.zip</a></p>
+<p><a href="./Data/AMPM-Heights.xlsx">AMPM-Heights.xlsx</a></p>
+<p><a href="./Data/Apollo.xlsx">Apollo.xlsx</a></p>
+<p><a href="./Data/BabyBoom-JSE.xlsx">BabyBoom-JSE.xlsx</a></p>
+<p><a href="./Data/BattingAverages.xlsx">BattingAverages.xlsx</a></p>
+<p><a href="./Data/BirthWeightsTwoVar.xlsx">BirthWeightsTwoVar.xlsx</a></p>
+<p><a href="./Data/BLEU-Scores.xlsx">BLEU-Scores.xlsx</a></p>
+<p><a href="./Data/BodyMeasurements.xlsx">BodyMeasurements.xlsx</a></p>
+<p><a href="./Data/BodyMeasurementsCorrected.xlsx">BodyMeasurementsCorrected.xlsx</a></p>
+<p><a href="./Data/BodyTemp.xlsx">BodyTemp.xlsx</a></p>
+<p><a href="./Data/Bone_Mineral_Data.xlsx">Bone_Mineral_Data.xlsx</a></p>
+<p><a href="./Data/BookOfMormonWordprint.xlsx">BookOfMormonWordprint.xlsx</a></p>
+<p><a href="./Data/CardiacArrestHealth.xlsx">CardiacArrestHealth.xlsx</a></p>
+<p><a href="./Data/CategoricalDataAnalysis_Hat.xlsx">CategoricalDataAnalysis_Hat.xlsx</a></p>
+<p><a href="./Data/CauseOfDeath-Malnourished.xlsx">CauseOfDeath-Malnourished.xlsx</a></p>
+<p><a href="./Data/Chapter12DataA.xlsx">Chapter12DataA.xlsx</a></p>
+<p><a href="./Data/Chapter12DataB.xlsx">Chapter12DataB.xlsx</a></p>
+<p><a href="./Data/Chiropractor.xlsx">Chiropractor.xlsx</a></p>
+<p><a href="./Data/ClassSurvey.xlsx">ClassSurvey.xlsx</a></p>
+<p><a href="./Data/CoinTossHeads.xlsx">CoinTossHeads.xlsx</a></p>
+<p><a href="./Data/Comet-WaterProduction-Magnitude.xlsx">Comet-WaterProduction-Magnitude.xlsx</a></p>
+<p><a href="./Data/ConjugatedLinoleicAcid.xlsx">ConjugatedLinoleicAcid.xlsx</a></p>
+<p><a href="./Data/COPD-Rehab.xlsx">COPD-Rehab.xlsx</a></p>
+<p><a href="./Data/CrossroadsPurchases.xlsx">CrossroadsPurchases.xlsx</a></p>
+<p><a href="./Data/CuckooEggs.xlsx">CuckooEggs.xlsx</a></p>
+<p><a href="./Data/DASL-Cheese.xlsx">DASL-Cheese.xlsx</a></p>
+<p><a href="./Data/DASL-Fiber.xlsx">DASL-Fiber.xlsx</a></p>
+<p><a href="./Data/DASL-HeliumFootball.xlsx">DASL-HeliumFootball.xlsx</a></p>
+<p><a href="./Data/DASL-HotDogNutrition.xlsx">DASL-HotDogNutrition.xlsx</a></p>
+<p><a href="./Data/DASL-Hubble.xlsx">DASL-Hubble.xlsx</a></p>
+<p><a href="./Data/DASL-Stepping.xlsx">DASL-Stepping.xlsx</a></p>
+<p><a href="./Data/DASL-StudentDat.xlsx">DASL-StudentDat.xlsx</a></p>
+<p><a href="./Data/DASL-TasteTestScores.xlsx">DASL-TasteTestScores.xlsx</a></p>
+<p><a href="./Data/DASL-WasteRunUp.xlsx">DASL-WasteRunUp.xlsx</a></p>
+<p><a href="./Data/DentistOfficeBills.xlsx">DentistOfficeBills.xlsx</a></p>
+<p><a href="./Data/DirectFlightCosts.xlsx">DirectFlightCosts.xlsx</a></p>
+<p><a href="./Data/DissolvedOrganicCarbon.xlsx">DissolvedOrganicCarbon.xlsx</a></p>
+<p><a href="./Data/DivingElephantSeals.xlsx">DivingElephantSeals.xlsx</a></p>
+<p><a href="./Data/Estuarine_Crocodile_(Modified).xlsx">Estuarine_Crocodile_(Modified).xlsx</a></p>
+<p><a href="./Data/EuroWeight.xlsx">EuroWeight.xlsx</a></p>
+<p><a href="./Data/ExercisedBoneDensity.xlsx">ExercisedBoneDensity.xlsx</a></p>
+<p><a href="./Data/FactoryAssemblyTimes-sim.xlsx">FactoryAssemblyTimes-sim.xlsx</a></p>
+<p><a href="./Data/ForcedExpiratoryVolume.xlsx">ForcedExpiratoryVolume.xlsx</a></p>
+<p><a href="./Data/FreshmenDinner.xlsx">FreshmenDinner.xlsx</a></p>
+<p><a href="./Data/GharialCrocodiles.xlsx">GharialCrocodiles.xlsx</a></p>
+<p><a href="./Data/Gratitude.xlsx">Gratitude.xlsx</a></p>
+<p><a href="./Data/HubblesConstant-HubblesData.xlsx">HubblesConstant-HubblesData.xlsx</a></p>
+<p><a href="./Data/HubblesConstant-Supernovas.xlsx">HubblesConstant-Supernovas.xlsx</a></p>
+<p><a href="./Data/HubblesConstant-SupernovasUpTo250Mpc.xlsx">HubblesConstant-SupernovasUpTo250Mpc.xlsx</a></p>
+<p><a href="./Data/IllinoisBirthWeights.xlsx">IllinoisBirthWeights.xlsx</a></p>
+<p><a href="./Data/InsulinResistanceDepression.xlsx">InsulinResistanceDepression.xlsx</a></p>
+<p><a href="./Data/JSE-hats_(Modified).xlsx">JSE-hats_(Modified).xlsx</a></p>
+<p><a href="./Data/JunkFood.xlsx">JunkFood.xlsx</a></p>
+<p><a href="./Data/LASaturnWinter06.xlsx">LASaturnWinter06.xlsx</a></p>
+<p><a href="./Data/LeadExposureAndBehavior.xlsx">LeadExposureAndBehavior.xlsx</a></p>
+<p><a href="./Data/MadisonCountyRealEstate.xlsx">MadisonCountyRealEstate.xlsx</a></p>
+<p><a href="./Data/Mahon.xlsx">Mahon.xlsx</a></p>
+<p><a href="./Data/Manatees.xlsx">Manatees.xlsx</a></p>
+<p><a href="./Data/MathSelfEfficacy.xlsx">MathSelfEfficacy.xlsx</a></p>
+<p><a href="./Data/MLA_Data.xls">MLA_Data.xls</a></p>
+<p><a href="./Data/MysteryInvestmentOpportunities.xlsx">MysteryInvestmentOpportunities.xlsx</a></p>
+<p><a href="./Data/NASDAQ-PriceAndVolume.xlsx">NASDAQ-PriceAndVolume.xlsx</a></p>
+<p><a href="./Data/NBA_Salaries.xlsx">NBA_Salaries.xlsx</a></p>
+<p><a href="./Data/Nicotine_Test.xlsx">Nicotine_Test.xlsx</a></p>
+<p><a href="./Data/NoClickQuery-Summary.xlsx">NoClickQuery-Summary.xlsx</a></p>
+<p><a href="./Data/NoClickQuery.xlsx">NoClickQuery.xlsx</a></p>
+<p><a href="./Data/NosocomialInfections.xlsx">NosocomialInfections.xlsx</a></p>
+<p><a href="./Data/OldFaithful.xlsx">OldFaithful.xlsx</a></p>
+<p><a href="./Data/OreoDoubleStuf.xlsx">OreoDoubleStuf.xlsx</a></p>
+<p><a href="./Data/PatientSatisfaction-DoctorVsNurse-Stacked.xlsx">PatientSatisfaction-DoctorVsNurse-Stacked.xlsx</a></p>
+<p><a href="./Data/PineBeetle.xlsx">PineBeetle.xlsx</a></p>
+<p><a href="./Data/ProteinRequirement-Campbell.xlsx">ProteinRequirement-Campbell.xlsx</a></p>
+<p><a href="./Data/PTCtasting.xlsx">PTCtasting.xlsx</a></p>
+<p><a href="./Data/QuantitativeDescriptiveStatistics.xlsx">QuantitativeDescriptiveStatistics.xlsx</a></p>
+<p><a href="./Data/QuantitativeInferenceProcedures.xlsx">QuantitativeInferenceProcedures.xlsx</a></p>
+<p><a href="./Data/RatesOfReturn.xlsx">RatesOfReturn.xlsx</a></p>
+<p><a href="./Data/ReadingPractices.xlsx">ReadingPractices.xlsx</a></p>
+<p><a href="./Data/RedboxDecisionTimes.xlsx">RedboxDecisionTimes.xlsx</a></p>
+<p><a href="./Data/REE-ClassicalMusic.xlsx">REE-ClassicalMusic.xlsx</a></p>
+<p><a href="./Data/SingerHeights.xlsx">SingerHeights.xlsx</a></p>
+<p><a href="./Data/SoccerShoes.xlsx">SoccerShoes.xlsx</a></p>
+<p><a href="./Data/SovietAccidents.xlsx">SovietAccidents.xlsx</a></p>
+<p><a href="./Data/SpeedOfLightByMichelson1879.xlsx">SpeedOfLightByMichelson1879.xlsx</a></p>
+<p><a href="./Data/SpeedOfLightByMichelson1882.xlsx">SpeedOfLightByMichelson1882.xlsx</a></p>
+<p><a href="./Data/SuperBowlMovies.xlsx">SuperBowlMovies.xlsx</a></p>
+<p><a href="./Data/SurveyData.xlsx">SurveyData.xlsx</a></p>
+<p><a href="./Data/ToyotaPrius2005.xlsx">ToyotaPrius2005.xlsx</a></p>
+<p><a href="./Data/TwinsDiabetes.xlsx">TwinsDiabetes.xlsx</a></p>
+<p><a href="./Data/UraniumPlantData-Lead.xlsx">UraniumPlantData-Lead.xlsx</a></p>
+<p><a href="./Data/UsedHummersNYandLA.xls">UsedHummersNYandLA.xls</a></p>
+<p><a href="./Data/UsedHummersNYandLA.xlsx">UsedHummersNYandLA.xlsx</a></p>
+<p><a href="./Data/VertebralHeights.xlsx">VertebralHeights.xlsx</a></p>
+<p><a href="./Data/womenpoet.xls">womenpoet.xls</a></p>
+<p><a href="./Data/WorldCupHeartAttacks.xlsx">WorldCupHeartAttacks.xlsx</a></p>
+<p><a href="./Data/WrongSiteWrongPatient.xlsx">WrongSiteWrongPatient.xlsx</a></p>
+<p><a href="./Data/ZincForColds.xlsx">ZincForColds.xlsx</a></p>
+<p><a href="./Data/ZungSim.xlsx">ZungSim.xlsx</a></p>
 
 <br />
 <hr />
 <p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
 
 
-</div>
-</div>
 
 </div>
 

@@ -1,5 +1,5 @@
 ---
-title: "Lesson 15"
+title: "Lesson 15: Review for Exam 2"
 output: 
   html_document:
     theme: cerulean
@@ -65,8 +65,100 @@ The expectation on the exam is the following outcomes. You should be able to do:
 
 <a href="javascript:showhide('ls')"><span style="font-size:8pt;">Show/Hide Unit 1 Summaries</span></a>
 <div id="ls" style="display:none;">
-```{r child = 'convertedunit_2_recaps.Rmd'}
-```
+<br>
+<div class="RecapHeading">Lesson 09 Recap</div>
+<div class="Summary">
+
+- The **null hypothesis ($H_0$)** is the foundational assumption about a population and represents the status quo. It is a statement of equality ($=$). The **alternative hypothesis ($H_a$)** is a different assumption about a population and is a statement of inequality ($<$, $>$, or $\ne$). Using a **hypothesis test**, we determine whether it is more likely that the null hypothesis or the alternative hypothesis is true.
+
+- The **$P$-value** is the probability of getting a test statistic at least as extreme as the one you got, assuming $H_0$ is true. A $P$-value is calculated by finding the area under the normal distribution curve that is more extreme (farther away from the mean) than the z-score. The alternative hypothesis tells us whether we look at both tails or only one.
+
+- The **level of significance ($\alpha$)** is the standard for determining whether or not the null hypothesis should be rejected. Typical values for $\alpha$ are $0.05$, $0.10$, and $0.01$. If the $P$-value is less than $\alpha$ we reject the null. If the $P$-value is not less than $\alpha$ we fail to reject the null.
+
+- A **Type I error** is committed when we reject a null hypothesis that is, in reality, true. A **Type II error** is committed when we fail to reject a null hypothesis that is, in reality, not true. The value of $\alpha$ is the probability of committing a Type I error.
+<br>
+</div>
+<br>
+
+<div class="RecapHeading">Lesson 10 Recap</div>
+<div class="Summary">
+
+- The **margin of error** gives an estimate of the variability of responses. It is calculated as $\displaystyle{m=z^*\frac{\sigma}{\sqrt{n}}}$ where $z^*$ represents a calculated z-score corresponding to a particular confidence level.
+
+- A **confidence interval** is an interval estimator used to give a range of plausible values for a parameter. The width of a confidence interval depends on the chosen confidence level (and its corresponding value of $z^*$) as well as the sample size ($n$). This is the equation for calculating confidence intervals:
+$$\displaystyle{\left(\bar x-z^*\frac{\sigma}{\sqrt{n}},~\bar x+z^*\frac{\sigma}{\sqrt{n}}\right)}$$
+
+- The **sample size formula** allows us to estimate the number of observations required to obtain a specific margin of error. $\displaystyle{n=\left(\frac{z^*\sigma}{m}\right)^2}$
+<br>
+</div>
+<br>
+
+<div class="RecapHeading">Lesson 11 Recap</div>
+<div class="Summary">
+
+- In practice we rarely know the true standard deviation $\sigma$ and will therefore be unable to calculate a z-score. **Student's t-distribution** gives us a new test statistic, $t$, that is calculated using the sample standard deviation ($s$) instead.
+$$ \displaystyle{ t = \frac {\bar x - \mu} {s / \sqrt{n}} } $$
+
+- The $t$-distribution is similar to a normal distribution in that it is bell-shaped and symmetrical, but the exact shape of the $t$-distribution depends on the **degrees of freedom ($df$)**. 
+$$df=n-1$$
+
+- You will use Excel to carry out hypothesis testing and create confidence intervals involving $t$-distributions.
+<br>
+</div>
+<br>
+
+<div class="RecapHeading">Lesson 12 Recap</div>
+<div class="Summary">
+
+- The key characteristic of **dependent samples** (or **matched pairs**) is that knowing which subjects will be in group 1 determines which subjects will be in group 2.
+
+- We use slightly different variables when conducting inference using dependent samples:
+
+    Group 1 values: $x_1$&nbsp;&nbsp;Group 2 values: $x_2$&nbsp;&nbsp;Differences: $d$&nbsp;&nbsp;Population mean: $\mu_d$&nbsp;&nbsp;Sample mean: $\bar d$&nbsp;&nbsp;Sample standard deviation: $s_d$
+
+- When conducting hypothesis tests using dependent samples, the null hypothesis is always $\mu_d=0$, indicating that there is no change between the first population and the second population. The alternative hypothesis can be left-tailed ($<$), right-tailed($>$), or two-tailed($\ne$).
+<br>
+</div>
+<br>
+
+<div class="RecapHeading">Lesson 13 Recap</div>
+<div class="Summary">
+
+- In contrast to dependent samples, two samples are independent if knowing which subjects are in group 1 tells you nothing about which subjects will be in group 2. With **independent samples**, there is no pairing between the groups.
+
+- When conducting inference using independent samples we use $\bar x_1$, $s_1$, and $n_1$ for the mean, standard deviation, and sample size, respectively, of group 1. We use the symbols $\bar x_2$, $s_2$, and $n_2$ for group 2.
+
+- When working with independent samples it is important to graphically illustrate each sample separately. Combining the groups to create a single graph is not appropriate.
+
+- When conducting hypothesis tests using independent samples, the null hypothesis is always $\mu_1=\mu_2$, indicating that there is no difference between the two populations. The alternative hypothesis can be left-tailed ($<$), right-tailed($>$), or two-tailed($\ne$).
+
+- Whenever zero is contained in the confidence interval of the difference of the true means we conclude that there is no significant difference between the two populations.
+<br>
+</div>
+<br>
+
+<div class="RecapHeading">Lesson 14 Recap</div>
+<div class="Summary">
+
+***ANOVA** is used to compare the means for several groups. The hypotheses for the test are always:
+$$
+\begin{align}
+H_0: & ~ \textrm{All the means are equal} \\
+H_a: & ~ \textrm{At least one of the means differs}
+\end{align}
+$$
+
+- For ANOVA testing we use an **$F$-distribution**, which is right-skewed. The $P$-value of an ANOVA test is always the area to the right of the $F$-statistic.
+
+- We can conduct ANOVA testing when the following three requirements are satisfied:
+1. The data come from a simple random sample.
+2. The data are normally distributed within each group.
+  + This is satisfied when Q-Q Plots for the data in each group roughly follow a straight line.
+3. The variance is constant.
+  + This is satisfied when the largest variance is not more than four times the smallest variance.
+<br>
+</div>
+<br>
 </div>
 <br>
 
@@ -83,7 +175,7 @@ The expectation on the exam is the following outcomes. You should be able to do:
 
 <br>
 
-Researchers at the University of Mississippi wanted to determine whether the reaction time (in seconds) to go/no go stimulus of males differed from that of females.  The researchers randomly selected 20 females and 15 males to participate.  The go/no go stimulus required the student to respond to a particular stimulus and not to respond to other stimuli. Use this information to answer questions 2 and 3.
+- Researchers at the University of Mississippi wanted to determine whether the reaction time (in seconds) to go/no go stimulus of males differed from that of females.  The researchers randomly selected 20 females and 15 males to participate.  The go/no go stimulus required the student to respond to a particular stimulus and not to respond to other stimuli. Use this information to answer questions 2 and 3.
 
 2. The researchers decided to construct a confidence interval to determine if the difference of the means is significant. To determine whether the confidence interval would be reliable they create Q-Q plots of both random samples and see that they are approximately normal. Are the requirements for constructing a confidence interval satisfied? Why or why not?
 
@@ -213,7 +305,7 @@ at the 5% level of significance.  You conclude that you should...
 
 **Questions 15 through 26: Select and carry out the correct inferential procedure for each set of problems**
 
-A soil scientist collected random soil samples from a field and measured the dissolved organic carbon (mg/L) level of each sample. Dissolved organic carbon molecules are an important part of an ecosystem and help plants to process organic compounds. The researcher would like to construct a 95% confidence interval for the mean dissolved organic carbon level in the field. Open the data file [DissolvedOrganicCarbon.xlsx](./Data/DissolvedOrganicCarbon.xlsx). Use this information to answer questions 15 and 16.
+- A soil scientist collected random soil samples from a field and measured the dissolved organic carbon (mg/L) level of each sample. Dissolved organic carbon molecules are an important part of an ecosystem and help plants to process organic compounds. The researcher would like to construct a 95% confidence interval for the mean dissolved organic carbon level in the field. Open the data file [DissolvedOrganicCarbon.xlsx](./Data/DissolvedOrganicCarbon.xlsx). Use this information to answer questions 15 and 16.
 
 15. Of the four types of confidence intervals listed below, which one is appropriate for this situation?
 	
@@ -233,7 +325,7 @@ A soil scientist collected random soil samples from a field and measured the dis
 
 <br>
 
-A random sample of Hummers for sale in Los Angeles and New York were taken from listings at cars.com. We want to know if there is a difference in mean listing prices between Hummers for sale in Los Angeles (group 1) and Hummers for sale in New York (group 2). Create a 95% confidence interval for the true difference of mean listing prices between the two cities. Open the data file [UsedHummersNYandLA.xlsx](./Data/UsedHummersNYandLA.xlsx). Use this information to answer questions 17 and 18.
+- A random sample of Hummers for sale in Los Angeles and New York were taken from listings at cars.com. We want to know if there is a difference in mean listing prices between Hummers for sale in Los Angeles (group 1) and Hummers for sale in New York (group 2). Create a 95% confidence interval for the true difference of mean listing prices between the two cities. Open the data file [UsedHummersNYandLA.xlsx](./Data/UsedHummersNYandLA.xlsx). Use this information to answer questions 17 and 18.
 
 17. Of the four types of confidence intervals listed below, which one is appropriate for this situation?
 	
@@ -253,7 +345,7 @@ A random sample of Hummers for sale in Los Angeles and New York were taken from 
 
 <br>
 
-Many studies have suggested that there is a link between exercise and healthy bones. Exercise stresses the bones and this causes them to get stronger. One study examined the effect of jumping on the bone density of growing rats.  There were three groups (rats were selected at random for the three groups): a control with no jumping, a low-jump group (the jump height was 30 centimeters), and a high-jump group (60 centimeters). After 8 weeks of 10 jumps per day, 5 days per week, the bone density of the rats (expressed in mg/cm3) was measured. The rats were selected at random for the three groups. Researchers would like to perform a hypothesis test to determine if the mean levels of bone density are different between the three different groups of rats listed above. Use a level of significance of $\alpha=0.05$. Open the data file [Exercised Bone Density](./Data/ExercisedBoneDensity.xlsx). Use this information to answer questions 19 through 22.
+- Many studies have suggested that there is a link between exercise and healthy bones. Exercise stresses the bones and this causes them to get stronger. One study examined the effect of jumping on the bone density of growing rats.  There were three groups (rats were selected at random for the three groups): a control with no jumping, a low-jump group (the jump height was 30 centimeters), and a high-jump group (60 centimeters). After 8 weeks of 10 jumps per day, 5 days per week, the bone density of the rats (expressed in mg/cm3) was measured. The rats were selected at random for the three groups. Researchers would like to perform a hypothesis test to determine if the mean levels of bone density are different between the three different groups of rats listed above. Use a level of significance of $\alpha=0.05$. Open the data file [Exercised Bone Density.xlsx](./Data/ExercisedBoneDensity.xlsx). Use this information to answer questions 19 through 22.
 
 19. What is the correct hypothesis test for this situation?
 	
@@ -293,7 +385,7 @@ Many studies have suggested that there is a link between exercise and healthy bo
 
 <br>
 
-Pressures of supply and demand act directly on the prices for an airline ticket. As the seats available on the plane begin to fill, airlines raise the price. If seats on a flight do not sell well, an airline may discount the tickets or even cancel the flight. A study was undertaken to determine if there is a difference in the mean cost of an airline ticket purchased 90 days in advance of a scheduled flight compared with a ticket purchased only 14 days in advance. Data were collected on the cost of a one-way ticket from London's Heathrow Airport to a variety of destinations in Europe. The lowest published ticket prices of one-way flights from Heathrow to various destinations in Europe was recorded for each scheduled flight 90 days in advance and then again 14 days in advance. Perform a hypothesis test to determine if there is a difference in the cost of the nonstop flights when tickets are purchased 14 days in advance compared to 90 days in advance. Use a level of significance of $\alpha=0.10$. Open the data file [DirectFlightCosts.xlsx](./Data/DirectFlightCosts.xlsx). Use this information to answer questions 23 through 26.
+- Pressures of supply and demand act directly on the prices for an airline ticket. As the seats available on the plane begin to fill, airlines raise the price. If seats on a flight do not sell well, an airline may discount the tickets or even cancel the flight. A study was undertaken to determine if there is a difference in the mean cost of an airline ticket purchased 90 days in advance of a scheduled flight compared with a ticket purchased only 14 days in advance. Data were collected on the cost of a one-way ticket from London's Heathrow Airport to a variety of destinations in Europe. The lowest published ticket prices of one-way flights from Heathrow to various destinations in Europe was recorded for each scheduled flight 90 days in advance and then again 14 days in advance. Perform a hypothesis test to determine if there is a difference in the cost of the nonstop flights when tickets are purchased 14 days in advance compared to 90 days in advance. Use a level of significance of $\alpha=0.10$. Open the data file [DirectFlightCosts.xlsx](./Data/DirectFlightCosts.xlsx). Use this information to answer questions 23 through 26.
 
 23. What is the correct hypothesis test for this situation?
 	
