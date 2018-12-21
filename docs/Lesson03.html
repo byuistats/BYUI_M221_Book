@@ -1,0 +1,3353 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Lesson 3: Describing Quantitative Data: Shape, Center &amp; Spread</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 221B</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+    </li>
+    <li>
+      <a href="Lesson04.html">Lesson 4: Rules of Probability</a>
+    </li>
+    <li>
+      <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
+    </li>
+    <li>
+      <a href="Lesson06.html">Lesson 6: The Central Limit Theorem</a>
+    </li>
+    <li>
+      <a href="Lesson07.html">Lesson 7: Probability Calculations for a Sample Mean</a>
+    </li>
+    <li>
+      <a href="Lesson08.html">Lesson 8: Unit 1 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson09.html">Lesson 9: Hypothesis Test for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson10.html">Lesson 10: Confidence Interval for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson11.html">Lesson 11: Inference for One Mean (Sigma Unknown)</a>
+    </li>
+    <li>
+      <a href="Lesson12.html">Lesson 12: Inference for Match Pairs</a>
+    </li>
+    <li>
+      <a href="Lesson13.html">Lesson 13: Inference for Two Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson14.html">Lesson 14: Inference for Several Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson15.html">Lesson 15: Unit 2 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson16.html">Lesson 16: Describing Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson17.html">Lesson 17: Inference for One Proportion</a>
+    </li>
+    <li>
+      <a href="Lesson18.html">Lesson 18: Inference for Two Proportions</a>
+    </li>
+    <li>
+      <a href="Lesson19.html">Lesson 19: Inference for Independence of Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson20.html">Lesson 20: Unit 3 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson21.html">Lesson 21: Describing Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson22.html">Lesson 22: Simple Linear Regression</a>
+    </li>
+    <li>
+      <a href="Lesson23.html">Lesson 23: Inference for Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson24.html">Lesson 24: Unit 4 Review</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="Data.html">Data</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lesson 3: Describing Quantitative Data: Shape, Center &amp; Spread</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#lesson-outcomes">Lesson Outcomes</a></li>
+<li><a href="#review-of-the-five-steps-of-the-statistical-process">Review of the Five Steps of the Statistical Process</a></li>
+<li><a href="#shape-of-a-distribution">Shape of a Distribution</a><ul>
+<li><a href="#visualizing-quantitative-data-histograms">Visualizing Quantitative Data: Histograms</a></li>
+</ul></li>
+<li><a href="#center-of-a-distribution">Center of a Distribution</a><ul>
+<li><a href="#measuring-the-center-of-a-distribution">Measuring the Center of a Distribution</a></li>
+<li><a href="#parameters-and-statistics">Parameters and Statistics</a></li>
+</ul></li>
+<li><a href="#spread-of-a-distribution">Spread of a Distribution</a><ul>
+<li><a href="#standard-deviation-and-variance">Standard Deviation and Variance</a></li>
+</ul></li>
+<li><a href="#tools-to-describe-the-data">Tools to Describe the Data</a><ul>
+<li><a href="#percentiles-and-quartiles">Percentiles and Quartiles</a></li>
+<li><a href="#the-five-number-summary">The Five-Number Summary</a></li>
+<li><a href="#boxplots">Boxplots</a></li>
+</ul></li>
+<li><a href="#summary-1">Summary</a></li>
+<li><a href="#navigation">Navigation</a></li>
+</ul>
+</div>
+
+<script type="text/javascript">
+ function showhide(id) {
+    var e = document.getElementById(id);
+    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+ }
+</script>
+<div style="float:right;width=40%;">
+<br/>
+<div style="padding-left:10%;">
+<strong>Optional Lesson Video</strong>
+</div>
+<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC_w9Z1CWsBjtdmcQdJwuAay" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+</div>
+<p><br></p>
+<div id="lesson-outcomes" class="section level2">
+<h2>Lesson Outcomes</h2>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="oc" style="display:none;">
+<p>By the end of this lesson, you should be able to:</p>
+<ul>
+<li>Determine the shape of a distribution using a histogram and/or box plot.</li>
+<li>Determine the centers of a given histogram and/or box plot.</li>
+<li>Identify the mean, median and standard deviation in skewed or normal histograms.</li>
+<li>Calculate the mean, median and standard deviation from quantitative data.</li>
+<li>Distinguish between a parameter and a statistic.</li>
+<li>Calculate a percentile from a quantitative data set.</li>
+<li>Calculate a five-number summary from quantitative data with Excel, or by hand.</li>
+<li>Create a histogram and a box-plot from quantitative data.</li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="review-of-the-five-steps-of-the-statistical-process" class="section level2">
+<h2>Review of the Five Steps of the Statistical Process</h2>
+<p>We will use the five steps in the Statistical Process throughout the course. Recall the five steps (and the mnemonic “Daniel Can Discern More Truth) before you begin this lesson.</p>
+<table>
+<thead>
+<tr class="header">
+<th>
+<p>
+Step 1:
+</p>
+</th>
+<th>
+<p>
+<strong>D</strong>aniel
+</p>
+</th>
+<th>
+<p>
+<strong>D</strong>esign the study
+</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>
+<p>
+Step 2:
+</p>
+</td>
+<td>
+<p>
+<strong>C</strong>an
+</p>
+</td>
+<td>
+<p>
+<strong>C</strong>ollect data
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+Step 3:
+</p>
+</td>
+<td>
+<p>
+<strong>D</strong>iscern
+</p>
+</td>
+<td>
+<p>
+<strong>D</strong>escribe the data
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+Step 4:
+</p>
+</td>
+<td>
+<p>
+<strong>M</strong>ore
+</p>
+</td>
+<td>
+<p>
+<strong>M</strong>ake inferences
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+Step 5:
+</p>
+</td>
+<td>
+<p>
+<strong>T</strong>ruth
+</p>
+</td>
+<td>
+<p>
+<strong>T</strong>ake action
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="Images/StepsAll.png"></p>
+<p><br></p>
+</div>
+<div id="shape-of-a-distribution" class="section level2">
+<h2>Shape of a Distribution</h2>
+<p><strong>Cost to Treat Tuberculosis in India</strong></p>
+<p><img src="Images/Market_rural-India_-Tamilword22.jpg"></p>
+<p><img src="Images/Step1.png"> <br> <strong>Step 1: Design the study.</strong></p>
+<p>Tuberculosis (TB) is the most deadly bacterial disease in the world. In 2009, nine million new cases of tuberculosis were diagnosed, leading to almost 2 million deaths worldwide. Currently, the principal vaccine used to prevent tuberculosis is Bacille Calmette Guerin (BCG). Unfortunately, BCG is only moderately effective at preventing tuberculosis. Historically, India has had a high number of tuberculosis cases. The Indian Government wants to reduce the prevalence of this disease.</p>
+<p>In this activity, you will compare the â€œaverageâ€ costs of treating a person who contracts tuberculosis to the costs of preventing a case of tuberculosis in India.</p>
+<p><img src="Images/Step2.png"> <br> <strong>Step 2: Collect data.</strong></p>
+<p>Health Care records of tuberculosis patients in India were surveyed to estimate the cost to treat patients with tuberculosis. The following data are representative of the total costs (in US dollars) incurred by society in the treatment of 10 randomly selected tuberculosis patients in India.</p>
+<center>
+15,100     19,000     4,800     6,500     14,900     600     23,500     11,500     12,900     32,200
+</center>
+<p>These costs include health care treatment, time missed from work, and in some cases utility lost due to death.</p>
+<p><img src="Images/Step3.png"> <br> <strong>Step 3: Describe the data.</strong></p>
+<div id="visualizing-quantitative-data-histograms" class="section level3">
+<h3>Visualizing Quantitative Data: Histograms</h3>
+<p>The following data are representative of the total costs (in US dollars) incurred by society in the treatment of 10 randomly selected tuberculosis patients in India.</p>
+<center>
+15,100     19,000     4,800     6,500     14,900     600     23,500     11,500     12,900     32,200
+</center>
+<p>To help us visualize these data, we will create a graph called a histogram. To make a histogram, we will divide the number line from 0 to 35,000 in seven equal parts. We will then count the number of data points in each of these intervals:</p>
+<center>
+<table>
+<thead>
+<tr class="header">
+<th>
+<p>
+Interval
+</p>
+</th>
+<th>
+<p>
+Number of Observations
+</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>
+<p>
+At least 0 and less than 5,000
+</p>
+</td>
+<td>
+<p>
+2
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+At least 5,000 and less than 10,000
+</p>
+</td>
+<td>
+<p>
+1
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+At least 10,000 and less than 15,000
+</p>
+</td>
+<td>
+<p>
+3
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+At least 15,000 and less than 20,000
+</p>
+</td>
+<td>
+<p>
+2
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+At least 20,000 and less than 25,000
+</p>
+</td>
+<td>
+<p>
+1
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+At least 25,000 and less than 30,000
+</p>
+</td>
+<td>
+<p>
+0
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+At least 30,000 and less than 35,000
+</p>
+</td>
+<td>
+<p>
+1
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>For each of these intervals, we draw a bar on the histogram. The width of the bars is determined by the width of the interval (5000 in this example). The height of the bars is equal to the number of observations that fall in each interval.</p>
+<center>
+<strong>This is a histogram created in Excel:</strong> <br> <img src="Images/Lesson_2_Activity_2-1.JPG">
+</center>
+<!--
+<div class="stats B C">
+<center>
+{| style="width:50%"
+|- align="center" 
+! This is a histogram created using statistical software:
+|- align="center" 
+| <img src="./Images/IndianTBcosts.png">
+|}
+</center>
+</div>
+-->
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" 
+{{Software_Filter | PageName=Histogram }}
+-->
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p><strong>Instructions for Creating a Histogram in Excel:</strong></p>
+<p>To make a histogram in Excel, you can use the Excel file <a href="./Data/QuantitativeDescriptiveStatistics.xlsx">Quantitative Descriptive Statistics</a>. First, enter the 10 data values in the first column (on the left side) of the tool, the histogram will be generated automatically. You can practice creating a histogram in Excel using the data provided on the 10 patients.</p>
+<p>Using 8 intervals, the tuberculosis cost data can be represented by the following histogram.</p>
+<p><img src="Images/Lesson_2_Activity_2-1.JPG"></p>
+<p>This histogram differs slightly from the first example. The width of the intervals is smaller and the starting value for the first interval is different. However, both graphs illustrate the same data.</p>
+</div>
+<p><br></p>
+<p>After summarizing the data numerically and graphically, we are ready to make inferences about the population. <br></p>
+<p><img src="Images/Step4.png"> <strong>Step 4: Make inferences.</strong></p>
+<p>The historical total mean cost to society to treat a case of tuberculosis in India is known to be $13,800. To assess if the cost has increased, the null and alternative hypotheses are:</p>
+<p><span class="math inline">\(H_0\)</span>: The mean cost is equal to $13,800.</p>
+<p><span class="math inline">\(H_a\)</span>: The mean cost is greater than $13,800.</p>
+<p>Using the symbol for the population mean, we can rewrite the null and alternative hypotheses more simply as:</p>
+<p><span class="math inline">\(H_0\)</span>: <span class="math inline">\(\mu = \$13,800\)</span> <span class="math inline">\(H_a\)</span>: <span class="math inline">\(\mu &gt; \$13,800\)</span></p>
+<p>Recall, that the <span class="math inline">\(P\)</span>-value is the probability that the data would be as extreme or more extreme than we observed, assuming the null hypothesis is true. A small <span class="math inline">\(P\)</span>-value indicates that there is a lot of evidence against the null hypothesis. If the <span class="math inline">\(P\)</span>-value is low, say, less than 0.05, we reject the null hypothesis.</p>
+<p>It can be shown that the <span class="math inline">\(P\)</span>-value is 0.460. (Later in the course, you will have the tools to do this computation.)</p>
+<div class="QuestionsHeading">
+Answer the following question:
+</div>
+<div class="Questions">
+<ol style="list-style-type: decimal">
+<li>Based on the <span class="math inline">\(P\)</span>-value, would you reject or fail to reject the null hypothesis? Explain how you made this determination.</li>
+</ol>
+<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q1" style="display:none;">
+<ul>
+<li>Fail to reject the null hypothesis. Since the <span class="math inline">\(P\)</span>-value is large, there is not a lot of evidence against the null hypothesis. When the <span class="math inline">\(P\)</span>-value is large, we fail to reject the null hypothesis. There is not enough evidence to suggest that the mean cost is now greater than $13,800.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p><img src="Images/Step5.png"> <br> <strong>Step 5: Take action.</strong></p>
+<p>After making inferences, you take action. The motivation for conducting a study like this is usually to see if there is inflation in the costs.</p>
+<div class="QuestionsHeading">
+Answer the following question:
+</div>
+<div class="Questions">
+<ol start="2" style="list-style-type: decimal">
+<li>Given that you failed to reject the null hypothesis, do you think the Government of India needs to take any special action to stop the increase in the cost to treat tuberculosis?</li>
+</ol>
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<ul>
+<li>Answers may vary. – We fail to reject the null hypothesis. That means that we could not say that the true mean cost is not equal to $13,800. So, there is not enough evidence of inflation. There is no need to for the Government of India to take action.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p>One benefit of using a histogram is that it allows you to visualize the distribution of the data. A histogram illustrates the overall shape of the distribution of the data. The height of the bars show how many observations fall in that range.</p>
+<p>We will describe the shape of the distribution of a data set using the following basic categories: symmetric, bell-shaped, skewed right, and skewed left. Additionally, we can label the shape of a distribution as uniform, unimodal, bimodal, or multimodal.</p>
+<p>A distribution is symmetric if both the left and right side of the distribution appear to be roughly a mirror image of each other. A special symmetric distribution is a bell-shaped distribution. When data follow a Bell-shaped distribution, the histogram looks like a bell. Bell-shaped distributions play an important role in Statistics and will play a role in most of the future lessons.</p>
+<p>A distribution is right-skewed if a histogram of the distribution shows a long right tail. This can occur if there are some very large outliers. A distribution is left-skewed if a histogram shows that it has a long tail to the left.</p>
+<p><img src="Images/Lesson_2_Activity_2-3.JPG"></p>
+<p>If a distribution has only one peak, it is said to be <strong>unimodal</strong>. The three distributions illustrated above are all unimodal distributions. Some people might argue that there are several peaks in the GPA data, so it should not be considered unimodal. Even though there are jagged bumps in the histogram, it is important to visualize the overall shape in the data. When interpreting a histogram, it can be helpful to blur your eyes and imagine the overall shapeâ€”after smoothing out the bumps. If the overall trend indicates that there is more than one bump, then we do not consider the distribution to be unimodal.</p>
+<p>Some distributions have no distinct peak, others have more than one peak. When there is no distinct peak, and the histogram shows a relatively flat shape, we might say the data follow a <strong>uniform</strong> distribution. If there are two distinct peaks, a distribution is called bimodal. If there are more than two peaks, we refer to the distribution as <strong>multimodal</strong>.</p>
+<p><img src="Images/Modal_distributions.jpg"> <br> <br></p>
+</div>
+</div>
+<div id="center-of-a-distribution" class="section level2">
+<h2>Center of a Distribution</h2>
+<p><img src="Images/Step3.png"></p>
+<p><strong>Step 3: Describe the data.</strong></p>
+<p>Sometimes people talk about the “typical” BYU-Idaho student or the â€œaverageâ€ waiting time for a bus. But what does it mean for something or someone to be “average?” How can we quantify what it means to be â€œtypicalâ€ or â€œaverage?â€ In the example below, we will explore one way to define what “average” means.</p>
+<p>When we talk about the “typical” or “average” value, we are essentially describing the center of a population. If we want to estimate the “average” costs to treat a tuberculosis patient, there are several ways we can do it.</p>
+<p><br></p>
+<div id="measuring-the-center-of-a-distribution" class="section level3">
+<h3>Measuring the Center of a Distribution</h3>
+<div id="mean" class="section level4">
+<h4>Mean</h4>
+<p>The sample mean or sample arithmetic mean is the most common tool to estimate the center of a distribution. It is referred to simply as the mean. It is computed by adding up the observed data and dividing by the number of observations in the data set.</p>
+<p>In Statistics, important ideas are given a name. Very important ideas are given a symbol. The sample mean has both a name (mean) and a symbol (<span class="math inline">\(\bar x\)</span>).</p>
+<p>You may have heard people refer to the sample mean as the â€œaverage.â€ The word â€œaverageâ€ refers to any number that is used to estimate the center of a distribution. The mean, median and mode are all examples of averages. To avoid confusion in this course, the word â€œaverageâ€ will not be used to describe the mean.</p>
+<div class="QuestionsHeading">
+Answer the following question:
+</div>
+<div class="Questions">
+<ol start="3" style="list-style-type: decimal">
+<li>Practice finding the mean, <span class="math inline">\(\bar x\)</span>, for the tuberculosis treatment costs of the 10 patients in India by simplifying the following: <span class="math display">\[\bar x=\frac{15100 + 19000 + 4800 + 6500 + 14900 + 600 + 23500 + 11500 + 12900 + 32200}{10}=\]</span></li>
+</ol>
+<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q3" style="display:none;">
+<ul>
+<li>The mean cost to treat the 10 TB patients in India is: <span class="math inline">\(\bar x = \$14,100\)</span></li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+</div>
+<div id="median" class="section level4">
+<h4>Median</h4>
+<p>The median is the â€œmiddleâ€ value in a sorted data set. Half of the observations in the data set are below the median and half are above the median. To find the median, you:</p>
+<ul>
+<li>Sort the values from smallest to largest</li>
+<li>Do one of the following:
+<ul>
+<li>If there are an odd number of values, the median is the middle value in the sorted list.</li>
+<li>If there are an even number of values, the median is the mean of the two middle values in the sorted list.</li>
+</ul></li>
+</ul>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="4" style="list-style-type: decimal">
+<li>Practice finding the median of the tuberculosis treatment costs for the 10 patients in India. First, sort the data from smallest to largest.</li>
+</ol>
+<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q4" style="display:none;">
+<ul>
+<li>600</li>
+<li>4800</li>
+<li>6500</li>
+<li>11500</li>
+<li>12900</li>
+<li>14900</li>
+<li>15100</li>
+<li>19000</li>
+<li>23500</li>
+<li>32200</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="5" style="list-style-type: decimal">
+<li>Since there are an even number of observations (n=10), the median is computed as the mean of the middle two values. Use your answer to the previous question to find the median of the data. What is the median?</li>
+</ol>
+<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q5" style="display:none;">
+<ul>
+<li>600</li>
+<li>4800</li>
+<li>6500</li>
+<li>11500</li>
+<li><strong>12900</strong></li>
+<li><strong>14900</strong></li>
+<li>15100</li>
+<li>19000</li>
+<li>23500</li>
+<li>32200</li>
+</ul>
+<p>The middle two numbers are 12900 and 14900. The mean of these two numbers is:</p>
+<center>
+<span class="math inline">\(\text{Median } = \frac{12900 + 14900}{2} = 13900\)</span>
+</center>
+<p>The median cost to treat the ten TB patients in India is ?13,900.</p>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+</div>
+<div id="mode" class="section level4">
+<h4>Mode</h4>
+<p>The most frequently occurring value is called the mode. Sometimes there is more than one mode. For example, in the data set</p>
+<p><span class="math display">\[{1,~~2, ~~2, ~~2, ~~3, ~~4, ~~4, ~~5, ~~5, ~~5, ~~6}\]</span></p>
+<p>the modes are 2 and 5. Both of these values occurs three times, which is more times than any other value.</p>
+<p>If no number occurs more than once in the data set, we say that there is no mode. For the data set representing the costs to treat tuberculosis in India, none of the values is repeated. So, there is no mode for these data.</p>
+<div class="QuestionsHeading">
+Answer the following question:
+</div>
+<div class="Questions">
+<ol start="6" style="list-style-type: decimal">
+<li>For a particular data set, which of the following can occur?</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>There may be no mode.</p></li>
+<li><p>There may be exactly one mode.</p></li>
+<li><p>There may be several modes.</p></li>
+<li><p>Only A and B can occur.</p></li>
+<li>A, B, and C can all occur.</li>
+</ol>
+</div>
+<p><br></p>
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p>  <strong>To calculate the mean, median, and mode in Excel, do the following</strong></p>
+<p>  If you do not know how to use Excel to find the mean and median, the spreadsheet {{Spreadsheet|QDS}} has been created to make these calculations for you.</p>
+<ul>
+<li>Download and open the Excel spreadsheet.</li>
+<li>Copy and paste your data into the blue column found on the left side of the page.</li>
+<li>The mean, median, mode, and other statistics will be located in the “Numerical Descriptive Statistics” table found in the center of the worksheet. A histogram will be shown above this table.</li>
+</ul>
+<center>
+<img src="Images/DiveSeals-Mass-Stats.png">
+</center>
+<p><br></p>
+</div>
+<p><br> <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" --> <!-- {{Software_Filter|PageName=Mean_Median_Mode}} --></p>
+</div>
+</div>
+<div id="parameters-and-statistics" class="section level3">
+<h3>Parameters and Statistics</h3>
+<p>We only have data on the cost to treat ten randomly selected tuberculosis patients. This represents a random sample from the population. The sample obtained by the researchers depends on random chance. If the study was repeated and a new sample of ten patients was randomly drawn from all cases of tuberculosis in India, would we observe the same data values? Certainly not!</p>
+<p>However, if we draw a random sample, we would expect the mean of the new sample to be somewhat close to the mean for our original sample. The sample mean, <span class="math inline">\(\bar x\)</span>, is an estimate of the true mean of the population.</p>
+<p>One of the primary purposes of collecting and analyzing data is to estimate the true mean of a population.Usually, we do not know what the true mean is, and we estimate it with the sample mean.</p>
+<p>The sample mean is an example of a statistic. A statistic is a number that describes a sample. The true (usually unknown) population mean is an example of a parameter. A parameter is any number that describes a population.</p>
+<p>An easy way to distinguish between a parameter and a statistic is to note the repetition in the first letters:</p>
+<ul>
+<li><strong>P</strong>opulation <strong>P</strong>arameter â€“ True (usually unknown) value describing a population</li>
+<li><strong>S</strong>ample <strong>S</strong>tatistic â€“ Estimate of the population parameter obtained from a sample</li>
+</ul>
+<p>In the example above, the sample mean <span class="math inline">\(\bar x\)</span> = $14,100 is a statistic. Over the last few years, the total mean cost to treat tuberculosis in India has been $13,800. This is considered a parameter.</p>
+<p>Different symbols are used to distinguish between the sample mean (a statistic) and the population mean (a parameter). The symbol for the sample mean is <span class="math inline">\(\bar x\)</span>. The symbol for the population mean is <span class="math inline">\(\mu\)</span>.</p>
+<p><strong>Perspective</strong></p>
+<p>The mean cost to treat the ten tuberculosis patients in the sample was <span class="math inline">\(\bar x\)</span> = $14,100. This number gives us some useful information. However, if this was all we were given, we would not be able to distinguish the data above from a situation where the cost for each of the ten patents was exactly $14,100. Notice that if the cost for each patient was $14,100, the mean would be:</p>
+<p><span class="math display">\[\bar x=\frac{14100 + 14100 + 14100 + 14100 + 14100 + 14100 + 14100 + 14100 + 14100 + 14100}{10} =14,100\]</span></p>
+<p>Even though measures of center are important, we need to consider the shape, center and spread of a distribution of data. When evaluating data, it is sometimes tempting to compute a mean but to avoid creating a histogram. This can lead to errant decisions based on a misunderstanding or incorrect transcription of data. If there is a transcription error in the data, it is sometimes easiest to detect it as an outlier in a histogram.</p>
+<p><br> <br></p>
+</div>
+</div>
+<div id="spread-of-a-distribution" class="section level2">
+<h2>Spread of a Distribution</h2>
+<p>You have studied two important characteristics of a distribution: the <strong>shape</strong> and the <strong>center</strong>. In this section, you will discover ways to summarize the <strong>spread</strong> of a distribution of data. The spread of a distribution of data describes how far the observations tend to be from each other. There are many ways to describe the spread of a distribution. <br></p>
+<div id="standard-deviation-and-variance" class="section level3">
+<h3>Standard Deviation and Variance</h3>
+<p>This activity introduces two measures of spread: the standard deviation and the variance.</p>
+<p><img src="Images/StepsAll.png"></p>
+<p><strong>Diving Elephant Seals</strong></p>
+<p><img src="Images/Step1.png"></p>
+<p>Researchers Jessica Meir and Paul Ponganis studied the characteristics of the northern elephant seal, <em>Mirounga angustirostris</em> (Meir, 2010). These seals have the ability to dive deep into the ocean. Researchers placed a thermistor (thermometer) and a backpack recorder on 13 different seals.</p>
+<p><img src="Images/Step2.png"></p>
+<p>Data were collected over several days for each seal. The results are given in the file <a href="./Data/DivingElephantSeals.xlsx">DivingElephantSeals</a>.</p>
+<center>
+<figure>
+<img src="Images/ElephantSeals-flickr-223778.png" alt="Small picture of a kitten" />
+<figcaption>
+Two male Northern Elephant Seals battling over breeding territory<br> Piedras Blancas, San Simeon, California<br> Photo by Michael “Mike” L. Baird bairdphotos.com</a>
+</figcaption>
+</figure>
+</center>
+<p><br></p>
+<!-- http://www.fotopedia.com/items/flickr-2237782585 -->
+<p>The following table summarizes some of the measurements collected on the seals:</p>
+<center>
+<table>
+<thead>
+<tr class="header">
+<th>
+<p>
+Seal’s Name
+</p>
+</th>
+<th>
+<p>
+Number<br /> of Dives
+</p>
+</th>
+<th>
+<p>
+Mass<br /> (kg)
+</p>
+</th>
+<th>
+<p>
+Length of<br /> Deployment<br /> (Days at Sea)
+</p>
+</th>
+<th>
+<p>
+Thermistor<br /> Location
+</p>
+</th>
+<th>
+<p>
+Representative<br /> Temperature<br /> (<span class="math inline">\(^\circ \text{C}\)</span>)
+</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>
+<p>
+Chick
+</p>
+</td>
+<td>
+<p>
+267
+</p>
+</td>
+<td>
+<p>
+238
+</p>
+</td>
+<td>
+<p>
+3.5
+</p>
+</td>
+<td>
+<p>
+Extradural
+</p>
+</td>
+<td>
+<p>
+36.70
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+Starburst
+</p>
+</td>
+<td>
+<p>
+33
+</p>
+</td>
+<td>
+<p>
+162
+</p>
+</td>
+<td>
+<p>
+3
+</p>
+</td>
+<td>
+<p>
+Extradural
+</p>
+</td>
+<td>
+<p>
+37.19
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+Patty
+</p>
+</td>
+<td>
+<p>
+81
+</p>
+</td>
+<td>
+<p>
+191
+</p>
+</td>
+<td>
+<p>
+1
+</p>
+</td>
+<td>
+<p>
+Extradural
+</p>
+</td>
+<td>
+<p>
+37.85
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+Bodil
+</p>
+</td>
+<td>
+<p>
+192
+</p>
+</td>
+<td>
+<p>
+160
+</p>
+</td>
+<td>
+<p>
+21
+</p>
+</td>
+<td>
+<p>
+Hepatic Sinus
+</p>
+</td>
+<td>
+<p>
+37.91
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+Roberta
+</p>
+</td>
+<td>
+<p>
+480
+</p>
+</td>
+<td>
+<p>
+148
+</p>
+</td>
+<td>
+<p>
+15
+</p>
+</td>
+<td>
+<p>
+Hepatic Sinus
+</p>
+</td>
+<td>
+<p>
+37.25
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+Larry
+</p>
+</td>
+<td>
+<p>
+218
+</p>
+</td>
+<td>
+<p>
+158
+</p>
+</td>
+<td>
+<p>
+9
+</p>
+</td>
+<td>
+<p>
+Hepatic Sinus
+</p>
+</td>
+<td>
+<p>
+38.98
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+Per
+</p>
+</td>
+<td>
+<p>
+160
+</p>
+</td>
+<td>
+<p>
+163
+</p>
+</td>
+<td>
+<p>
+1.2
+</p>
+</td>
+<td>
+<p>
+Hepatic Sinus
+</p>
+</td>
+<td>
+<p>
+38.16
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+Sir Richard
+</p>
+</td>
+<td>
+<p>
+312
+</p>
+</td>
+<td>
+<p>
+226
+</p>
+</td>
+<td>
+<p>
+2
+</p>
+</td>
+<td>
+<p>
+Arterial (femoral)
+</p>
+</td>
+<td>
+<p>
+39.32
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+Jerry
+</p>
+</td>
+<td>
+<p>
+132
+</p>
+</td>
+<td>
+<p>
+180
+</p>
+</td>
+<td>
+<p>
+1.4
+</p>
+</td>
+<td>
+<p>
+Arterial (brachial)
+</p>
+</td>
+<td>
+<p>
+39.70
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+Sammy
+</p>
+</td>
+<td>
+<p>
+70
+</p>
+</td>
+<td>
+<p>
+211
+</p>
+</td>
+<td>
+<p>
+1
+</p>
+</td>
+<td>
+<p>
+Arterial (brachial)
+</p>
+</td>
+<td>
+<p>
+39.71
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+Knut
+</p>
+</td>
+<td>
+<p>
+242
+</p>
+</td>
+<td>
+<p>
+288
+</p>
+</td>
+<td>
+<p>
+2
+</p>
+</td>
+<td>
+<p>
+Arterial (brachial)
+</p>
+</td>
+<td>
+<p>
+35.77
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+Jonesie
+</p>
+</td>
+<td>
+<p>
+401
+</p>
+</td>
+<td>
+<p>
+261
+</p>
+</td>
+<td>
+<p>
+3.5
+</p>
+</td>
+<td>
+<p>
+Arterial (brachial)
+</p>
+</td>
+<td>
+<p>
+38.47
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+Butler
+</p>
+</td>
+<td>
+<p>
+621
+</p>
+</td>
+<td>
+<p>
+151
+</p>
+</td>
+<td>
+<p>
+8
+</p>
+</td>
+<td>
+<p>
+Arterial (brachial)
+</p>
+</td>
+<td>
+<p>
+39.74
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p><img src="Images/Step3.png"></p>
+<p><strong>Mass</strong></p>
+<p>The data file <a href="./Data/DivingElephantSeals.xlsx">DivingElephantSeals</a> contains the mass in kilograms (kg) of the seals. How do we describe the distribution of the masses of the seals?</p>
+<p>Use the data in the column labeled “Mass (kg)” to create a histogram and calculate the descriptive statistics.</p>
+<div class="stats A">
+<p><strong>Your histogram should look like this (a title and axis label have been added here)</strong>:</p>
+<center>
+<p>Mass (kg) of the Diving Elephant Seals in Excel:</p>
+<img src="Images/DiveSeals-Mass-Hist.png">
+</center>
+<p><strong>The descriptive statistics are summarized as follows</strong>:</p>
+<center>
+<img src="Images/DiveSeals-Mass-Stats.png">
+</center>
+</div>
+<!--
+<div class="stats B C">
+**Your histogram should look like this (a title and axis label have been added here)**:
+
+<center>Mass (kg) of the Diving Elephant Seals:</center>
+
+<img src="./Images/SPSS Histogram Diving Seals mass.jpg">
+
+**The descriptive statistics are summarized as follows**:
+
+<img src="./Images/SPSS_output_for_Diving_Seals_mass.jpg">
+</div>
+-->
+<p>Some of these statistics, such as the mean and median, should be familiar to you by now. In this section, you will learn about the standard deviation and the variance. Later in this reading assignment we will discuss the minimum, <span class="math inline">\(Q_1\)</span>, median, <span class="math inline">\(Q_3\)</span>, and the maximum.</p>
+<p>The mean mass of the 13 seals is <span class="math inline">\(\bar x = 195.2\)</span> kg. (Note that this value was rounded with one more decimal place of accuracy compared to the raw data). The mean is a measure of the <em>center</em> of the distribution.</p>
+<p>There is a fairly large difference in the masses of the different seals. The smallest seal has a mass of 148 kg. The largest has a mass of 288 kg.</p>
+<p>The <strong>standard deviation</strong> is a measure of the <em>spread</em> in the distribution. If the standard deviation is relatively small, then the data tend to be close together. If the standard deviation is relatively large, the data tend to be more spread out.</p>
+<p>The standard deviation of the seals’ body mass is 45.8 kg. This number contains information from all the seals. If the seals’ masses had been more diverse, the standard deviation would be larger. If the seals were more uniform in their masses, then the standard deviation would have been smaller. If all the seals somehow had the same mass, then the standard deviation would be zero.</p>
+<p>We are working with a sample. To be explicit, we call 45.8 kg the <em>sample standard deviation</em>. The symbol for the sample standard standard deviation is <span class="math inline">\(s\)</span>. This is a statistic. The parameter representing the population standard deviation is <span class="math inline">\(\sigma\)</span> (pronounced /SIG-ma/). In practice, we rarely know the value of the population standard deviation, so we use the sample standard deviation <span class="math inline">\(s\)</span> as an approximation for the unknown population standard deviation <span class="math inline">\(\sigma\)</span>.</p>
+<p>At this point, you probably do not have much intuition regarding the standard deviation. We will use this statistic frequently. By the end of the semester, you can expect to become very comfortable with this idea. For now, all you need to know is that if two variables are measured on the same scale, the variable with values that are further apart will have the larger standard deviation.</p>
+<p><strong>Man vs. Seal</strong></p>
+<!-- http://lib.stat.cmu.edu/datasets/bodyfat -->
+<p>Roger Johnson compiled a collection of measurements on 252 men. The mean mass of the men was <span class="math inline">\(\bar x = 81.2\)</span> kg. The standard deviation of the weights was <span class="math inline">\(s = 13.3\)</span> kg.</p>
+<p>The mean and standard deviation of the masses are in both cases smaller for the men than the the seals. This says that seals are generally larger than men and vary more in their weights. We compare these two distributions in the following histogram:</p>
+<center>
+Weights of Men Compared to Weights of Seals<br> <img src="Images/DiveSealsVsMenWeights-Hist.png">
+</center>
+<p>The mean mass of the men is less than the mean mass of the seals. We can see this, because the bulk of the data in the histogram for the men’s masses is to the left of the seals’. You will also note that the masses of the seals are more spread out than the masses of the men.</p>
+<center>
+<table>
+<thead>
+<tr class="header">
+<th>
+</th>
+<th>
+<p>
+Men
+</p>
+</th>
+<th>
+<p>
+Seals
+</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>
+<p>
+Mean (kg)
+</p>
+</td>
+<td>
+<p>
+81.2
+</p>
+</td>
+<td>
+<p>
+195.2
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+Standard Deviation (kg)
+</p>
+</td>
+<td>
+<p>
+13.3
+</p>
+</td>
+<td>
+<p>
+45.8
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+Sample Size
+</p>
+</td>
+<td>
+<p>
+252
+</p>
+</td>
+<td>
+<p>
+13
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p><strong>Length of Deployment (Days at Sea)</strong></p>
+<p>The variable “Length of Deployment (Days at Sea)” indicates the the number of days researchers collected data from each subject. The next two questions ask you to use the file <a href="./Data/DivingElephantSeals.xlsx">DivingElephantSeals</a> to create a histogram and compute the summary statistics for the “Length of Deployment (Days at Sea).”</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="7" style="list-style-type: decimal">
+<li>Using Excel, create a histogram for the “Length of Deployment (Days at Sea)” data.</li>
+</ol>
+<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q6" style="display:none;">
+<div class="stats A">
+<center>
+<strong>Length of Time Data were Collected on each Seal</strong>
+</center>
+<p><img src="Images/DiveSeals-Deployment-Hist.png"></p>
+</div>
+<div class="stats B C">
+<center>
+<strong>Length of Time Data were Collected on each Seal</strong>
+</center>
+<p><img src="Images/SPSS_Histogram_Diving_Seals_length_of_deployment.jpg"></p>
+</div>
+</div>
+<p><br></p>
+<ol start="8" style="list-style-type: decimal">
+<li>Find the missing value in the following table:</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Summary Statistics</strong></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Mean:</td>
+<td align="center"><span class="math inline">\(\bar x = 5.51\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Standard Deviation:</td>
+<td align="center"><span class="math inline">\(s = ?\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">Sample Size:</td>
+<td align="center"><span class="math inline">\(n = 13\)</span></td>
+</tr>
+</tbody>
+</table>
+<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q7" style="display:none;">
+<ul>
+<li>The sample standard deviation of the length of deployment is <span class="math inline">\(s = 6.22\)</span> days.</li>
+<li>Note that this number was rounded to one more decimal place than is given in the original data.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<center>
+<figure>
+<img src="Images/DivingElephantSeals-flickr-.png" alt="Small picture of a kitten" />
+<figcaption>
+Northern Elephant Seal, Piedras Blancas, San Simeon, California.<br> Photo by Michael “Mike” L. Baird bairdphotos.com</a>
+</figcaption>
+</figure>
+</center>
+<p><strong>Representative Temperature</strong></p>
+<p>Consider the last column in the table of data. The “representative temperature” is the mean body temperature of the seal right before a new dive begins. The researchers were very interested in this information. One of the key things they studied was the change in the body temperature of the seals as they dove. They wanted to know if a decrease in their body temperature allows seals to dive for longer periods of time. It was important for them to establish a baseline temperature for each seal.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="9" style="list-style-type: decimal">
+<li>Create a <nowiki>*</nowiki>histogram to illustrate the “Representative Temperature” data.</li>
+</ol>
+<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q8" style="display:none;">
+<center>
+<p><strong>Representative Body Temperature of Northern Elephant Seals before Diving</strong></p>
+<img src="Images/DiveSeals-Temp-Hist.png"> <br> Representative Temperature (<span class="math inline">\(^\circ \text{C}\)</span>)
+</center>
+</div>
+<p><br></p>
+<ol start="10" style="list-style-type: decimal">
+<li>Using Excel<!--{{Course_Filter|course=B C|content=SPSS}}-->, find the mean, standard deviation and sample size for the “Representative Temperature” data.</li>
+</ol>
+<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q9" style="display:none;">
+<center>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Summary Statistics</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Mean: <span class="math inline">\(\bar x = 38.212\, ^\circ \text{C}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Standard Deviation: <span class="math inline">\(s = 1.262\, ^\circ \text{C}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">Sample Size: <span class="math inline">\(n = 13\)</span></td>
+</tr>
+</tbody>
+</table>
+<center>
+</div>
+<p><br></p>
+<p><nowiki>*</nowiki>Click the link below for a review of how to create a histogram.</p>
+<a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Refresh My Memory</span></a>
+<div id="Q10" style="display:none;">
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<p>To make a histogram in Excel, you can use the Excel file <a href="./Data/QuantitativeDescriptiveStatistics.xlsx">Quantitative Descriptive Statistics</a>. Copy and paste the desired data values into the first column (on the left side) of the tool. The histogram will be generated automatically.</p>
+<center>
+<img src="Images/Lesson_2_Activity_2-2.JPG">
+</center>
+</div>
+ 
+</div>
+<p><br></p>
+<p>The standard deviation of the representative temperatures is <span class="math inline">\(s = 1.262\, ^\circ \text{C}\)</span>. When we consider body temperature measurements, this is a fairly small amount. Note that in this case, the standard deviation (<span class="math inline">\(s = 1.262\, ^\circ \text{C}\)</span>) is much smaller than the mean (<span class="math inline">\(\bar x = 38.212\, ^\circ \text{C}\)</span>).</p>
+<br>
+<div class="message Tip">
+<strong>Rounding:</strong> As a general rule, when rounding your results, round to three decimal places unless otherwise specified.
+</div>
+<p><br> <br></p>
+<div id="calculating-the-standard-deviation-by-hand" class="section level4">
+<h4>Calculating the Standard Deviation by Hand</h4>
+<p>How is the standard deviation computed? Where does this “magic” number come from? How does one number include the information about the spread of all the points?</p>
+<p><strong>Bird Flu Fever</strong></p>
+<p><img src="Images/Peuquito.jpg"></p>
+<p>Avian Influenza A H5N1, commonly called the bird flu, is a deadly illness that is currently only passed to humans from infected birds. This illness is particularly dangerous because at some point it is likely to mutate to allow human-to-human transmission. Health officials worldwide are preparing for the possibility of a bird flu pandemic.</p>
+<p><img src="Images/Step1.png"></p>
+<p>Dr. K. Y. Yuen led a team of researchers who reported the body temperatures of people admitted to Chinese hospitals with confirmed cases of Avian Influenza. Their research team collected data on the body temperature at the time that people with the bird flu were admitted to the hospital. In the article, they reported on two groups of people, those with relatively uncomplicated cases of the bird flu and those with severe cases.</p>
+<p><img src="Images/Step2.png"></p>
+<p>The table below presents the data representative of the body temperatures for the two groups of bird flu patients:</p>
+<table style="width:65%;">
+<colgroup>
+<col width="45%" />
+<col width="19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Relatively Uncomplicated Cases</th>
+<th align="center">Severe Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">38.1</td>
+<td align="center">39.1</td>
+</tr>
+<tr class="even">
+<td align="center">38.3</td>
+<td align="center">39.5</td>
+</tr>
+<tr class="odd">
+<td align="center">38.4</td>
+<td align="center">38.9</td>
+</tr>
+<tr class="even">
+<td align="center">39.5</td>
+<td align="center">39.2</td>
+</tr>
+<tr class="odd">
+<td align="center">39.7</td>
+<td align="center">39.9</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center">39.7</td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">39</td>
+</tr>
+</tbody>
+</table>
+<p><img src="Images/Step3.png"></p>
+<p>We will use these data to investigate some measures of the spread in a data set.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="11" style="list-style-type: decimal">
+<li>Draw the number line below and illustrate the relatively uncomplicated cases by marking an â€œxâ€ for each point. The first point has been plotted for you. <img src="Images/BirdFlu-DotPlotQuestion.png"> <br></li>
+</ol>
+<a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q11" style="display:none;">
+<ul>
+<li>Here is the completed plot:</li>
+<li><img src="Images/BirdFlu-DotPlotAnswer.png"></li>
+</ul>
+</div>
+<p><br></p>
+<ol start="12" style="list-style-type: decimal">
+<li>What is the mean of the body temperatures for the relatively uncomplicated cases? <!--Draw a vertical line on your number line to represent this point. --></li>
+</ol>
+<a href="javascript:showhide('Q12')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q12" style="display:none;">
+<ul>
+<li>The mean body temperature for the relatively uncomplicated cases is 38.8 degrees Centigrade.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="13" style="list-style-type: decimal">
+<li>How spread out are the “relatively uncomplicated” cases of the bird flu? Are the points relatively close together or spread apart?</li>
+</ol>
+<a href="javascript:showhide('Q13')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q13" style="display:none;">
+<ul>
+<li>Answers will vary. The difference between the largest and the smallest degree is 1.6 degrees. Most students will likely identify these observations as being relatively close together. There is not a huge spread in the temperatures.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p>Think about the points you marked in question 5 above. On your sketch of the number line, draw a vertical line at 38.8 degrees, the sample mean. Now, draw horizontal lines from the mean to each of your <span class="math inline">\(\times\)</span>’s. These horizontal line segments represent the spread of the data about the mean. Your plot should look something like this:</p>
+<p><img src="Images/BirdFlu-DotPlotAnswer-Lines.png"></p>
+<p>The length of each of the line segments represents how far each observation is from the mean. If the data are close together, these lines will be fairly short. If the distribution has a large spread, the line segments will be longer. The standard deviation is a measure of how long these lines are, as a whole. It is a little tedious to compute the standard deviation by hand. However, the process is very instructive. As you work through the following steps, please remember the goal is to find a measure of the spread in a data set. We want one number that describes how spread out the data are.</p>
+<p>The deviation of an observation from the mean is the directed distance from the observation to the mean. In other words, deviations are the lengths of the line segments you drew in the previous set of questions.</p>
+<p><span class="math display">\[
+\begin{array}{1cl}
+\text{Deviation} &amp; = &amp; \text{Value} - \text{Mean} \\
+\text{Deviation} &amp; = &amp; x - \bar x
+\end{array}
+\]</span></p>
+<p>If the observed value is greater than the mean, the deviation is positive. If the value is less than the mean, the deviation is negative.</p>
+<p>The standard deviation is a complicated sort of average of the deviations. Making a table like the one below will help you keep track of your calculations. Please participate fully in this exercise. Writing your answers at each step and to developing a table as instructed will greatly enhance the learning experience. By following these steps, you will be able to compute the standard deviation by hand.</p>
+<p><strong>Step 01</strong>: The first step in computing the standard deviation by hand is to create a table, like the following. Enter the observed data in the first column.</p>
+<center>
+<table>
+<thead>
+<tr class="header">
+<th>
+<p>
+Observation (<span class="math inline">\(x\)</span>)
+</p>
+</td>
+</p>
+</th>
+<th>
+<p>
+Deviation from the Mean (<span class="math inline">\(x-\bar x\)</span>)
+</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.1\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.1-38.8=-0.7\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(38.3\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.4\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(39.5\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(39.7\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(\bar x = 38.8\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p><strong>Step 02</strong>: The second column of the table contains the deviations from the mean. Complete column 2 of the table above.</p>
+<a href="javascript:showhide('Q14')"><span style="font-size:8pt;">Check Results for Step 2</span></a>
+<div id="Q14" style="display:none;">
+<table>
+<thead>
+<tr class="header">
+<th>
+<p>
+Observation (<span class="math inline">\(x\)</span>)
+</p>
+</th>
+<th>
+<p>
+Deviation from the Mean (<span class="math inline">\(x-\bar x\)</span>)
+</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.1\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.1-38.8=-0.7\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(38.3\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.3-38.8=-0.5\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.4-38.8=-0.4\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(39.5\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(39.5-38.8=0.7\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(39.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(39.7-38.8=0.9\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(\bar x = 38.8\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br></p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="14" style="list-style-type: decimal">
+<li>How could we use this table to find the “typical” distance from each point to the mean? Think carefully about this, and then write down your answer before continuing.</li>
+</ol>
+<a href="javascript:showhide('Q15')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q15" style="display:none;">
+<ul>
+<li>You may have suggested that we compute the mean of these values. This seems like a good idea. If we compute the mean, it will tell us the average deviation from the mean. <br> <br> Compute the mean of Column 2. What do you get?</li>
+</ul>
+<a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Click Here to Continue</span></a>
+<div id="Q16" style="display:none;">
+<ul>
+<li>You should have found that the mean of the deviations is zero. This is true for <em>every</em> data set. If you add up the deviations from the mean, the positive values will cancel with the negative values. The sum of the deviations from the mean will be zero, so the mean also must equal zero.</li>
+<li>The good news is that you can use this fact to check if you are on the right track. If the deviations from the mean do not add up to zero, then you have made a mistake in the calculations. The bad news is that the deviations always add up to 0, making it look like the distance from the data to the mean is 0. Nonsense!</li>
+<li>The mean of the deviations from the mean cannot be used to find a measure of the spread in a data set, but it does provide a guidepost that shows we are on the right track. We must find another way to estimate the spread of a data set.</li>
+</ul>
+</div>
+</div>
+<p><br></p>
+<ol start="15" style="list-style-type: decimal">
+<li>We need a way to work with the negative deviations from the mean, so they do not cancel with the positive ones. What could we do? (Choose one of the four options below.)</li>
+</ol>
+<a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Option #1: Take the absolute value of the deviations</span></a>
+<div id="Q17" style="display:none;">
+<ul>
+<li><p>Option #1:</p></li>
+<li><p>This is an excellent suggestion. This is probably one of the first things statisticians used to estimate the spread in the data.</p></li>
+<li><p>If we take the absolute value of the deviations, then all the values are positive. By taking the mean of these numbers, we do get a measure of spread. This quantity is called the mean absolute deviation (MAD).</p></li>
+<li>There is good news and bad news. The good news is, you discovered a way to estimate the spread in a data set. (In fact, the MAD is used as one estimate of the volatility of stocks.) The bad news is that the MAD does not have good theoretical properties. A proof of this claim requires calculus, and so will not be discussed here. For most applications, there is a better choice. Please select another option.</li>
+</ul>
+</div>
+<p><br></p>
+<a href="javascript:showhide('Q18')"><span style="font-size:8pt;">Option #2: Square the deviations from the mean</span></a>
+<div id="Q18" style="display:none;">
+<ul>
+<li><p>Option #2:</p></li>
+<li>If we square the deviations from the mean, the values that were negative will become positive. This leads to an estimator of the spread that has excellent theoretical properties. This is the best of the four options. You will apply this idea in Step 03.</li>
+</ul>
+</div>
+<p><br></p>
+<a href="javascript:showhide('Q19')"><span style="font-size:8pt;">Option #3: Delete all the negative deviations</span></a>
+<div id="Q19" style="display:none;">
+<ul>
+<li><p>Option #3:</p></li>
+<li>Sorry, you can’t make your troubles go away by deleting things you don’t like. Please try again.</li>
+</ul>
+</div>
+<p><br></p>
+<a href="javascript:showhide('Q20')"><span style="font-size:8pt;">Option #4: Do something entirely different</span></a>
+<div id="Q20" style="display:none;">
+<ul>
+<li><p>Option #4:</p></li>
+<li>You probably have an ingenious idea. Surprisingly enough, there <em>is</em> a right answer to the question. Please choose a different option.</li>
+</ul>
+</div>
+<p><br> <br></p>
+<ul>
+<li>Please do not go on to Step 03 until you have finished this exploration.</li>
+</ul>
+</div>
+<p><br></p>
+<center>
+“Piled Higher and Deeper” by Jorge Cham <br> <img src="Images/Phd062307s.png">
+</center>
+<p><strong>Step 03</strong>: Add a third column to your table. To get the values in this column, square the deviations from the mean that you found in Column 2.</p>
+<a href="javascript:showhide('Q21')"><span style="font-size:8pt;">Click Here for a Blank Table</span></a>
+<div id="Q21" style="display:none;">
+<table>
+<thead>
+<tr class="header">
+<th>
+<p>
+Observation <span class="math inline">\(x\)</span>
+</p>
+</th>
+<th>
+<p>
+Deviation<br /> from the Mean<br /> <span class="math inline">\(x-\bar x\)</span>
+</p>
+</th>
+<th>
+<p>
+Squared Deviation<br /> from the Mean<br /> <span class="math inline">\(\left(x-\bar x\right)^2\)</span>
+</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.1\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.1-38.8=-0.7\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(38.3\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.3-38.8=-0.5\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.4-38.8=-0.4\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(39.5\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(39.5-38.8=0.7\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(39.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(39.7-38.8=0.9\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(\bar x = 38.8\)</span>
+</p>
+</td>
+<td>
+<p>
+Sum <span class="math inline">\(=0\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p></br></p>
+<a href="javascript:showhide('Q22')"><span style="font-size:8pt;">Check Results for Step 03</span></a>
+<div id="Q22" style="display:none;">
+<table>
+<thead>
+<tr class="header">
+<th>
+<p>
+Observation <span class="math inline">\(x\)</span>
+</p>
+</th>
+<th>
+<p>
+Deviation<br /> from the Mean<br /> <span class="math inline">\(x-\bar x\)</span>
+</p>
+</th>
+<th>
+<p>
+Squared Deviation<br /> from the Mean<br /> <span class="math inline">\(\left(x-\bar x\right)^2\)</span>
+</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.1\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.1-38.8=-0.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.7)^2=0.49\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(38.3\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.3-38.8=-0.5\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.5)^2=0.25\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.4-38.8=-0.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.4)^2=0.16\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(9.5\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(39.5-38.8=0.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((0.7)^2=0.49\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(39.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(39.7-38.8=0.9\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((0.9)^2=0.81\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(\bar x = 38.8\)</span>
+</p>
+</td>
+<td>
+<p>
+Sum <span class="math inline">\(=0\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br></p>
+<p><strong>Step 04</strong>: Now, add up the squared deviations from the mean.</p>
+<a href="javascript:showhide('Q23')"><span style="font-size:8pt;">Check Results for Step 04</span></a>
+<div id="Q23" style="display:none;">
+<table>
+<thead>
+<tr class="header">
+<th>
+<p>
+Observation <span class="math inline">\(x\)</span>
+</p>
+</th>
+<th>
+<p>
+Deviation<br /> from the Mean<br /> <span class="math inline">\(x-\bar x\)</span>
+</p>
+</th>
+<th>
+<p>
+Squared Deviation<br /> from the Mean<br /> <span class="math inline">\(\left(x-\bar x\right)^2\)</span>
+</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.1\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.1-38.8=-0.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.7)^2=0.49\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(38.3\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.3-38.8=-0.5\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.5)^2=0.25\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.4-38.8=-0.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.4)^2=0.16\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(39.5\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(39.5-38.8=0.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((0.7)^2=0.49\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(39.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(39.7-38.8=0.9\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((0.9)^2=0.81\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(\bar x = 38.8\)</span>
+</p>
+</td>
+<td>
+<p>
+Sum <span class="math inline">\(=0\)</span>
+</p>
+</td>
+<td>
+<p>
+Sum <span class="math inline">\(=2.20\)</span>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The sum of the squared deviations is 2.20.</p>
+</div>
+<p><br></p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="16" style="list-style-type: decimal">
+<li>Suppose, that the researchers had collected body temperature data on 500 bird flu patients instead of 5. What would happen to the sum of the squared deviations, if the distribution of the data is the same for the 500 patients as the 5 patients?</li>
+</ol>
+<a href="javascript:showhide('Q24')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q24" style="display:none;">
+<ul>
+<li>We would expect the sum of the squared deviations to be a lot larger than it is now. We would be adding squared deviations for 500 observations instead of 5. So, the sum of the squared deviations would be about 100 times larger.<br />
+</li>
+<li>Remember, we are trying to find a measure of the spread of a data set. Our final measure should not be dependent on the sample size. We need to do something else.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="17" style="list-style-type: decimal">
+<li>What could we do to make sure the sample size does not inflate our estimate of the spread of the data?</li>
+</ol>
+<a href="javascript:showhide('Q25')"><span style="font-size:8pt;">Option #1: Divide by n</span></a>
+<div id="Q25" style="display:none;">
+<ul>
+<li><p>Option #1:</p></li>
+<li>This is an excellent suggestion. There are good reasons to choose this option. Unfortunately, dividing by <span class="math inline">\(n\)</span> to estimate the spread of data gives estimates that are too low, on average. There is a surprising, yet simple fix: divide by <span class="math inline">\(n-1\)</span> instead of <span class="math inline">\(n\)</span>. Please examine Option #2.</li>
+</ul>
+</div>
+<p><br></p>
+<a href="javascript:showhide('Q26')"><span style="font-size:8pt;">Option #2: Divide by n-1</span></a>
+<div id="Q26" style="display:none;">
+<ul>
+<li><p>Option #2:</p></li>
+<li><p>This seems very odd, but it avoids the problem of underestimating the spread in the data, a problem that dividing by <span class="math inline">\(n\)</span> has. Ultimately, dividing by <span class="math inline">\(n-1\)</span> will lead us to the standard deviation you computed using <!--{{Course_Filter|course=B C|content=SPSS}}--> earlier. In Step 05, you will divide the sum of the squared deviations by <span class="math inline">\(n-1\)</span>. Here is how your table should look so far.</p></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>
+<p>
+Observation <span class="math inline">\(x\)</span>
+</p>
+</th>
+<th>
+<p>
+Deviation<br /> from the Mean<br /> <span class="math inline">\(x-\bar x\)</span>
+</p>
+</th>
+<th>
+<p>
+Squared Deviation<br /> from the Mean<br /> <span class="math inline">\(\left(x-\bar x\right)^2\)</span>
+</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.1\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.1-38.8=-0.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.7)^2=0.49\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(38.3\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.3-38.8=-0.5\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.5)^2=0.25\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.4-38.8=-0.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.4)^2=0.16\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(39.5\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(39.5-38.8=0.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((0.7)^2=0.49\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(39.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(39.7-38.8=0.9\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((0.9)^2=0.81\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(\bar x = 38.8\)</span>
+</p>
+</td>
+<td>
+<p>
+Sum <span class="math inline">\(=0\)</span>
+</p>
+</td>
+<td>
+<p>
+Sum <span class="math inline">\(=2.20\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+</td>
+<td>
+<p>
+<span class="math inline">\(\displaystyle{s^2=\frac{sum}{n-1}=\frac{2.20}{5-1}=0.55}\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br></p>
+<a href="javascript:showhide('Q27')"><span style="font-size:8pt;">Option #3: Neither of these</span></a>
+<div id="Q27" style="display:none;">
+<ul>
+<li><p>Option #3:</p></li>
+<li>You probably have an ingenious idea. Nevertheless, please choose a different option.</li>
+</ul>
+</div>
+<p><br></p>
+<ul>
+<li>Please do not go on until you have finished this exercise.</li>
+</ul>
+</div>
+<p><br></p>
+<p><strong>Step 05</strong>: Divide the sum of the squared deviations by <span class="math inline">\(n - 1\)</span>. Write this value at the bottom of Column 3 of your table.</p>
+<p>The number you computed in Step 05 is called the <span id="Sample Variance"><strong>sample variance</strong></span>. It is a measure of the spread in a data set. It has very nice theoretical properties. The variance plays an important role in Statistics. We denote the sample variance by the symbol <span class="math inline">\(s^2\)</span>.</p>
+<p>It can be shown that the sample variance is an unbiased estimator of the true population variance (which is denoted <span class="math inline">\(\sigma^2\)</span>.) This means that the sample variance can be considered a reasonable estimator of the population variance. If the sample size is large, this estimator tends to be very good.</p>
+<a href="javascript:showhide('Q28')"><span style="font-size:8pt;">Check the Results for Step 05</span></a>
+<div id="Q28" style="display:none;">
+<p>The sum of the squared deviations is the sum of the values in Column 3. This sum equals 2.20. We divide the sum of Column 3 (<span class="math inline">\(2.20\)</span>) by <span class="math inline">\(n-1=5-1=4\)</span> to get the sample variance, <span class="math inline">\(s^2\)</span>:</p>
+<p><span class="math display">\[s^2=\frac{sum}{n-1}=\frac{2.20}{5-1}=0.55\]</span></p>
+<p>This is the sample variance.</p>
+<table>
+<thead>
+<tr class="header">
+<th>
+<p>
+Observation <span class="math inline">\(x\)</span>
+</p>
+</th>
+<th>
+<p>
+Deviation<br /> from the Mean<br /> <span class="math inline">\(x-\bar x\)</span>
+</p>
+</th>
+<th>
+<p>
+Squared Deviation<br /> from the Mean<br /> <span class="math inline">\(\left(x-\bar x\right)^2\)</span>
+</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.1\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.1-38.8=-0.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.7)^2=0.49\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(38.3\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.3-38.8=-0.5\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.5)^2=0.25\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.4-38.8=-0.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.4)^2=0.16\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(39.5\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(39.5-38.8=0.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((0.7)^2=0.49\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(39.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(39.7-38.8=0.9\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((0.9)^2=0.81\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(\bar x = 38.8\)</span>
+</p>
+</td>
+<td>
+<p>
+Sum <span class="math inline">\(=0\)</span>
+</p>
+</td>
+<td>
+<p>
+Sum <span class="math inline">\(=2.20\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+Variance:
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(\displaystyle{s^2=\frac{sum}{n-1}=\frac{2.20}{5-1}=0.55}\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br></p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="18" style="list-style-type: decimal">
+<li>The temperature data for the bird flu patients are in degrees Centigrade. What are the units of the variance?</li>
+</ol>
+<a href="javascript:showhide('Q29')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q29" style="display:none;">
+<ul>
+<li>The data in column 1 of the table is in degrees Centigrade. The mean also is in degrees Centigrade.</li>
+<li>To get the numbers in Column 2, we subtracted the mean from each of the values in Column 1.</li>
+<li>We squared the values in Column 2 to get Column 3. The units for this column are degrees Centigrade squared.<br />
+</li>
+<li>The sum of the numbers in Column 3 will also be in units of degrees Centigrade squared.</li>
+<li>When we divided that sum by <span class="math inline">\(n-1\)</span>, we obtained the sample variance. The sample variance has units of degrees Centigrade squared. This is not easily interpretable. It would be much easier to think about it if our measure of spread was in the same units as the data.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="19" style="list-style-type: decimal">
+<li>What operation can we do to the variance to get a quantity with units degrees Centigrade?</li>
+</ol>
+<a href="javascript:showhide('Q30')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q30" style="display:none;">
+<ul>
+<li>If we take the square root of the variance, we get a quantity that has units of degrees Centigrade. This quantity is the standard deviation.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p><strong>Step 06</strong>: Take the square root of the sample variance to get the sample standard deviation.</p>
+<p>The sample standard deviation is defined as the square root of the sample variance.</p>
+<p><span class="math display">\[\text{Sample Standard Deviation} = s = \sqrt{ s^2 } = \sqrt{\strut\text{Sample Variance}}\]</span></p>
+<p>The standard deviation has the same units as the original observations. We use the standard deviation heavily in statistics.</p>
+<p>The sample standard deviation (<span class="math inline">\(s\)</span>) is an estimate of the true population standard deviation (<span class="math inline">\(\sigma\)</span>).</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="20" style="list-style-type: decimal">
+<li>What is the sample standard deviation, <span class="math inline">\(s\)</span>, of the temperatures of the five patients with relatively uncomplicated cases of the bird flu?</li>
+</ol>
+<a href="javascript:showhide('Q31')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q31" style="display:none;">
+<ul>
+<li>The sum of the squared deviations is the sum of the values in Column 3. This sum equals 2.20. We divide the sum of Column 3 (<span class="math inline">\(2.20\)</span>) by <span class="math inline">\(n-1=5-1=4\)</span> to get the sample variance, <span class="math inline">\(s^2\)</span>:</li>
+</ul>
+<center>
+<span class="math inline">\(s^2=\frac{sum}{n-1}=\frac{2.20}{5-1}=0.55\)</span>
+</center>
+<ul>
+<li>This is the sample variance.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>
+<p>
+Observation <span class="math inline">\(x\)</span>
+</p>
+</th>
+<th>
+<p>
+Deviation<br /> from the Mean<br /> <span class="math inline">\(x-\bar x\)</span>
+</p>
+</th>
+<th>
+<p>
+Squared Deviation<br /> from the Mean<br /> <span class="math inline">\(\left(x-\bar x\right)^2\)</span>
+</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.1\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.1-38.8=-0.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.7)^2=0.49\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(38.3\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.3-38.8=-0.5\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.5)^2=0.25\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(38.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(38.4-38.8=-0.4\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((-0.4)^2=0.16\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(39.5\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(39.5-38.8=0.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((0.7)^2=0.49\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(39.7\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(39.7-38.8=0.9\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\((0.9)^2=0.81\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+<span class="math inline">\(\bar x = 38.8\)</span>
+</p>
+</td>
+<td>
+<p>
+Sum <span class="math inline">\(=0\)</span>
+</p>
+</td>
+<td>
+<p>
+Sum <span class="math inline">\(=2.20\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+Variance:
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(\displaystyle{s^2=\frac{sum}{n-1}=\frac{2.20}{5-1}=0.55}\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+Standard Deviation:
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(\displaystyle{s = \sqrt{s^2}=\sqrt{0.55} \approx 0.742}\)</span>
+</p>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>The sample standard deviation is <span class="math inline">\(s = 0.742\)</span> degrees Centigrade.</p></li>
+<li>Take a few minutes to verify that you can recreate this table on your own.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+</div>
+<div id="summary" class="section level4">
+<h4>Summary</h4>
+<div class="Emphasis">
+<p>  <strong>Standard Deviation</strong></p>
+<p>  The <strong>standard deviation</strong> is one number that describes the spread in a set of data. If the data points are close together, the standard deviation will be smaller than if they are spread out.</p>
+<p>  At this point, it may be difficult to understand the meaning and usefulness of the standard deviation. For now, it is enough for you to recognize the following points:</p>
+<ul>
+<li>The standard deviation is a measure of how spread out the data are.</li>
+<li>If the standard deviation is large, then the data are very spread out.</li>
+<li>If the standard deviation is zero, then all the values are the identical–there is no spread in the data.</li>
+<li>The standard deviation cannot be negative. <br></li>
+</ul>
+</div>
+<p><strong>Variance</strong></p>
+<p>The variance is the square of the standard deviation. The sample variance is denoted by the symbol <span class="math inline">\(s^2\)</span>. The sample standard deviation for the GPAs in the histogram above is <span class="math inline">\(s = 0.663\)</span>. So, the sample variance for this data set is <span class="math inline">\(s^2 = 0.663^2 = 0.440\)</span>. <!-- [[NEED TO DISCUSS STATISTIC v. PARAMETER.]] --></p>
+<p>The standard deviation and variance are two commonly used measures of the spread in a data set. Why is there more than one measure of the spread? The standard deviation and the variance each have their own pros and cons.</p>
+<p>The variance has excellent theoretical properties. It is an unbiased estimator of the true population variance. That means that if many, many samples of <span class="math inline">\(n\)</span> observations were drawn, the variances computed for all the samples would be centered nicely around the true population variance, <span class="math inline">\(\sigma^2\)</span>. Because of these benefits, the variance is regularly used in higher-level statistics applications. One drawback of the variance is that the units for the variance are the square of the units for the original data. In the bird flu example, the body temperatures were measured in degrees Centigrade. So, the variance will have units of degrees Centigrade squared <span class="math inline">\((^\circ \text{C})^2\)</span>. What does degrees Centigrade squared mean? How do you interpret this? It doesn’t make any sense. This is one of the major drawbacks of the sample variance.</p>
+<p>Because we take the square root of the variance to get the standard deviation, the standard deviation is in the same units as the original data. This is a great advantage, and is one of the reasons that the standard deviation is commonly used to describe the spread of data.</p>
+<p>Neither the standard deviation nor the variance is <strong>resistant</strong> to outliers. This means that when there are outliers in the data set, the standard deviation and the variance become artificially large. It is worth noting that the mean is also not resistant. When there are outliers, the mean will be “pulled” in the direction of the outliers.</p>
+<p>The mean and standard deviation are used to describe the center and spread when the distribution of the data is symmetric and bell-shaped. If a data are not symmetric and bell-shaped, we typically use the five-number summary (discussed below) to describe the spread, because this summary is resistant.</p>
+<p><strong>Review of Parameters and Statistics</strong></p>
+<p>We have now learned some statistics that can be used to estimate population parameters. For example, we use <span class="math inline">\(\bar x\)</span> to estimate the population mean <span class="math inline">\(\mu\)</span>. The sample statistics <span class="math inline">\(s\)</span> estimates the true population standard deviation <span class="math inline">\(\sigma\)</span>. The following table summarizes what we have done so far:</p>
+<center>
+<table>
+<thead>
+<tr class="header">
+<th>
+</th>
+<th>
+<p>
+Sample Statistic
+</p>
+</th>
+<th>
+<p>
+Population Parameter
+</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>
+<p>
+Mean
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(\bar x\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(\mu\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+Standard Deviation
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(s\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(\sigma\)</span>
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+Variance
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(s^2\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(\sigma^2\)</span>
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+<span class="math inline">\(\vdots\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(\vdots\)</span>
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(\vdots\)</span>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>Unless otherwise specified, we will always use {{Course_Filter|course=A|content=Excel}}<!--{{Course_Filter|course=B C|content=SPSS}}--> to find the sample variance and sample mean. In each case, the sample statistic estimates the population parameter. The ellipses <span class="math inline">\(\vdots\)</span> in this table hint that we will add rows in the future.</p>
+<p><br></p>
+<p><strong>Optional Reading: Formulas for <span class="math inline">\(s\)</span> and <span class="math inline">\(s^2\)</span> (Hidden)</strong></p>
+<a href="javascript:showhide('Q32')"><span style="font-size:8pt;">Click Here if you love Math</span></a>
+<div id="Q32" style="display:none;">
+<p><strong>Formulas</strong></p>
+<p>For those who like formulas, the equation for the sample variance and sample standard deviation are given here.</p>
+<p><strong>Sample variance</strong>:</p>
+<p><span class="math display">\[\displaystyle{ s^2=\frac{\sum\limits_{i=1}^n (x_i-\bar x)^2}{n-1} }\]</span></p>
+<p><strong>Sample standard deviation</strong>:</p>
+<p><span class="math display">\[\displaystyle{ s=\sqrt{s^2}=\sqrt{\frac{\sum\limits_{i=1}^n (x_i-\bar x)^2}{n-1}} }\]</span></p>
+<p>where <span class="math inline">\(x_i\)</span> is the <span class="math inline">\(i^{th}\)</span> observed data value, and <span class="math inline">\(i=1, 2, \ldots, n\)</span>.</p>
+<p>Unless otherwise specified, we will always use Excel<!--{{Course_Filter|course=B C|content=SPSS}}--> to find the sample variance and sample mean.</p>
+<p><strong>Why do we divide by <span class="math inline">\(n-1\)</span>?</strong></p>
+<p>When computing the standard deviation or the variance, we are finding a value that describes the spread of data values. It is a measure of how far the data are from the mean. Since we do not know the true mean (<span class="math inline">\(\mu\)</span>,) we use the sample mean (<span class="math inline">\(\bar x\)</span>,) to estimate it. Typically, the data will be closer to <span class="math inline">\(\bar x\)</span> than to <span class="math inline">\(\mu\)</span>, since <span class="math inline">\(\bar x\)</span> was computed using the data. To compensate for this, we divide by <span class="math inline">\(n-1\)</span> rather than <span class="math inline">\(n\)</span> when we find the “average” of the squared deviations from the mean. It turns out, that subtracting 1 from <span class="math inline">\(n\)</span> inflates this average by the precise amount needed to compensate for the use of <span class="math inline">\(\bar x\)</span> as an estimate for <span class="math inline">\(\mu\)</span>. As a result, the sample variance (<span class="math inline">\(s^2\)</span>) is a good estimator of the population variance (<span class="math inline">\(\sigma^2\)</span>.)</p>
+</div>
+<p><br></p>
+</div>
+</div>
+</div>
+<div id="tools-to-describe-the-data" class="section level2">
+<h2>Tools to Describe the Data</h2>
+<p>Recall the five steps of the Statistical Process (and the mnemonic “Daniel Can Discern More Truth).</p>
+<center>
+<table>
+<tbody>
+<tr class="odd">
+<td>
+<p>
+Step 1:
+</p>
+</td>
+<td>
+<p>
+<strong>D</strong>aniel
+</p>
+</td>
+<td>
+<p>
+<strong>D</strong>esign the study
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+Step 2:
+</p>
+</td>
+<td>
+<p>
+<strong>C</strong>an
+</p>
+</td>
+<td>
+<p>
+<strong>C</strong>ollect data
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+Step 3:
+</p>
+</td>
+<td>
+<p>
+<strong>D</strong>iscern
+</p>
+</td>
+<td>
+<p>
+<strong>D</strong>escribe the data
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+Step 4:
+</p>
+</td>
+<td>
+<p>
+<strong>M</strong>ore
+</p>
+</td>
+<td>
+<p>
+<strong>M</strong>ake inferences
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+Step 5:
+</p>
+</td>
+<td>
+<p>
+<strong>T</strong>ruth
+</p>
+</td>
+<td>
+<p>
+<strong>T</strong>ake action
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<img src="Images/StepsAll.png">
+</center>
+<p><strong>Step 3</strong> of this process is “<strong>Describe the data</strong>.” The following information on percentiles, quartiles, 5-number summaries, and boxplots will help you learn common ways to describe data.</p>
+<p><strong>Wrong Site/Wrong Patient Lawsuits</strong></p>
+<p><img src="Images/Step3.png"></p>
+<p>For symmetric, bell-shaped data, the mean and standard deviation provide a good description of the center and shape of the distribution. The mean and standard deviation are not sufficient to describe a distribution that is skewed or has outliers. An <strong>outlier</strong> is any observation that is very far from the others. The mean is â€œpulledâ€ in the direction of the outlier. Also, the standard deviation is inflated by points that are very far from the mean.</p>
+<p>Percentiles can be used to describe the center and spread of any distribution and are particularly useful when the distribution is skewed or has outliers. To explore this issue, you will use software to calculate percentiles of data on costs incurred by hospitals due to certain lawsuits. The lawsuits in question were about surgeries performed on the wrong patient, or on the right patient but the wrong part of the patient’s body (the wrong site).</p>
+<p>Now, you have probably had some experience with percentiles in the pastâ€”especially when you received a score on a standardized test such as the ACT. Even though percentiles are commonly used, they are generally misunderstood. Before examining the wrong site/wrong patient data, let’s review percentiles. Even if you think you understand percentiles, please study this section carefully.</p>
+<p><br></p>
+<div id="percentiles-and-quartiles" class="section level3">
+<h3>Percentiles and Quartiles</h3>
+<p>Imagine a very long street with houses on one side. The houses increase in value from left to right. At the left end of the street is a small cardboard box with a leaky roof. Next door is a slightly larger cardboard box that does not leak. The houses eventually get larger and more valuable. The rightmost house on the street is a huge mansion.</p>
+<div class="QuestionsHeading">
+Answer the following question:
+</div>
+<div class="Questions">
+<ol start="21" style="list-style-type: decimal">
+<li>There are 100 homes with increasing property values. How many fences are needed to separate the 100 properties?</li>
+</ol>
+<a href="javascript:showhide('Q33')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q33" style="display:none;">
+<ul>
+<li>In order to separate the 100 homes, 99 fences are required.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p>The home values are representative of data. If we have a list of data, sorted in increasing order, and we want to divide it into 100 equal groups, we only need 99 dividers (like fences) to divide up the data. The first divider is as large or larger than 1% of the data. The second divider is as large or larger than 2% of the data, and so on. The last divider, the 99<sup>th</sup>, is the value that is as large or larger than 99% of the data. These â€œdividersâ€ are called percentiles. A <strong>percentile</strong> is a number such that a specified percentage of the data are at or below this number. For example, the 99<sup>th</sup> percentile is a number such that 99% of the data are at or below this value. As another example, half (50%) of the data lie at or below the 50<sup>th</sup> percentile. The word â€œpercentâ€ means â€œ<span class="math inline">\(\div 100\)</span>.â€ This can help you remember that the percentiles divide the data into 100 equal groups.</p>
+<p><strong>Quartiles</strong> are special percentiles. The word â€œquartileâ€ is from the Latin <em>quartus</em>, which means “fourth.” The quartiles divide the data into four equal groups. The quartiles correspond to specific percentiles. The first quartile, Q<sub>1</sub>, is the 25<sup>th</sup> percentile. The second quartile, Q<sub>2</sub>, is the same as the 50<sup>th</sup> percentile or the median. The third quartile, Q<sub>3</sub>, is equivalent to the 75<sup>th</sup> percentile.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="22" style="list-style-type: decimal">
+<li>How many quartiles are there?</li>
+</ol>
+<a href="javascript:showhide('Q34')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q34" style="display:none;">
+<ul>
+<li>There are 3 quartiles! To divide the data into 100 equal groups, we needed 99 percentiles. To divide the data into 4 equal groups, we need 3 quartiles.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p>  <strong>To calculate percentiles and quartiles in Excel, do the following</strong></p>
+<ul>
+<li><p>Open the data file you are using. For this example, open the file <a href="./Data/WrongSiteWrongPatient.xlsx">WrongSiteWrongPatient.xlsx</a>.</p></li>
+<li><p>Copy and paste the desired data into Column A of the spreadsheet <a href="./Data/QuantitativeDescriptiveStatistics.xlsx">Dquantitative Descriptive Statistics</a>.</p></li>
+<li><p>The percentiles and quartiles are listed below the Numerical Descriptive Statistics. Scroll to find the percentile you need.</p></li>
+</ul>
+<p>  You may notice that some of the values for percentiles given in Excel are different from those given in SPSS. This is due to the different ways in which Excel and SPSS calculate percentiles. Since you are using Excel, be sure to use the percentiles calculated in Excel. <br></p>
+</div>
+<p><br></p>
+<p>The first quartile (<span class="math inline">\(Q_1\)</span>) or 25<sup>th</sup> percentile (calculated in Excel) of the wrong site data is: $29,496. (This result is illustrated in the figure below.) This means that 25 percent of the time hospitals lost a wrong-site lawsuit, they had to pay $29,496 or less. The 25<sup>th</sup> percentile can be written symbolically as: P<sub>25</sub> = $29,496. Other percentiles can be written the same way. The 99<sup>th</sup> percentile can be written as P<sub>99</sub>.</p>
+<center>
+<strong>Percentiles (Calculated in Excel)</strong>
+</center>
+<table>
+<thead>
+<tr class="header">
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1st percentile</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>2nd percentile</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>3rd percentile</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>…</td>
+<td>…</td>
+</tr>
+<tr class="odd">
+<td>24th percentile</td>
+<td>28633.4</td>
+</tr>
+<tr class="even">
+<td>25th percentile</td>
+<td>29496</td>
+</tr>
+<tr class="odd">
+<td>26th percentile</td>
+<td>31067</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="23" style="list-style-type: decimal">
+<li>What is the 13<sup>th</sup> percentile of the wrong site data?</li>
+</ol>
+<a href="javascript:showhide('Q35')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q35" style="display:none;">
+<ul>
+<li>$6343.40 <!--::{{Course_Filter|course=B C|content=?5946.72}}--></li>
+</ul>
+</div>
+<p><br></p>
+<ol start="24" style="list-style-type: decimal">
+<li>How would you interpret the 13<sup>th</sup> percentile (assuming the 13<sup>th</sup> percentile is $6343.40)?</li>
+</ol>
+<ul>
+<li><ol style="list-style-type: lower-alpha">
+<li>100 of the lawsuits cost more than 13%.</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: lower-alpha">
+<li>13% of the lawsuits cost the hospital over $6343.40.</li>
+</ol></li>
+<li><ol start="3" style="list-style-type: lower-alpha">
+<li>In 13% of the wrong-site lawsuits, hospitals had to pay $6343.40 or less.</li>
+</ol></li>
+<li><ol start="4" style="list-style-type: lower-alpha">
+<li>For 13% of the wrong-site lawsuits, the hospitals had to pay $6343.40 to the patient.</li>
+</ol></li>
+</ul>
+<a href="javascript:showhide('Q36')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q36" style="display:none;">
+<ul>
+<li>Correct Answer: C</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="25" style="list-style-type: decimal">
+<li>Find P<sub>90</sub>.</li>
+</ol>
+<a href="javascript:showhide('Q37')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q37" style="display:none;">
+<ul>
+<li>$149,963.00 <!--::{{Course_Filter|course=B C|content=?149,992.60}}--></li>
+</ul>
+</div>
+<p><br></p>
+<ol start="26" style="list-style-type: decimal">
+<li>The quartiles divide a sorted list of data into four equal groups. So, each group contains 25% of the data. The first quartile is the value that is greater than or equal to 25% of the data. What is another name for this number?</li>
+</ol>
+<a href="javascript:showhide('Q38')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q38" style="display:none;">
+<ul>
+<li>The 25th percentile.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="27" style="list-style-type: decimal">
+<li>What is the value of the third quartile?</li>
+</ol>
+<a href="javascript:showhide('Q39')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q39" style="display:none;">
+<ul>
+<li>$124,280.00 <!--::{{Course_Filter|course=B C|content=?124,513.00}}--></li>
+</ul>
+</div>
+<p><br></p>
+<ol start="28" style="list-style-type: decimal">
+<li>Half of the wrong-site lawsuits judgments were less than or equal to what value?</li>
+</ol>
+<a href="javascript:showhide('Q40')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q40" style="display:none;">
+<ul>
+<li>$68,552.00</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="29" style="list-style-type: decimal">
+<li>The median is the middle observation in a sorted list of data. What percentile is always equal to the median?</li>
+</ol>
+<a href="javascript:showhide('Q41')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q41" style="display:none;">
+<ul>
+<li>The 50th percentile</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+</div>
+<div id="the-five-number-summary" class="section level3">
+<h3>The Five-Number Summary</h3>
+<p>Another way to summarize data is with the five-number summary. <strong>The five-number summary</strong> is comprised of the minimum, the first quartile, the second quartile (or median), the third quartile and the maximum. The values in the five-number summary are <em>always</em> presented in this order. Since the order of the numbers in the five number summary is fixed, it is not necessary to label each of the values individually.</p>
+<p>Statistical packages can give different results for some computations. This is because there are several reasonable ways to define certain quantities, such as the quartiles. As such, you may find that some of the values that are given in Excel<!--{{Course_Filter|course=B C|content=SPSS}}--> are different than what other software may give.</p>
+<!--Please be sure to use the values that you calculate using the software designated for your particular class ({{Course_Filter|course=A|content=Excel}}{{Course_Filter|course=B C|content=SPSS}}-->
+<p>.</p>
+<p>  <strong>To find the values for a five-number summary in Excel, do the following</strong></p>
+<ul>
+<li><p>Copy and paste the desired data into Column A of the spreadsheet <a href="./Data/QuantitativeDescriptiveStatistics.xlsx">Quantitative Descriptive Statistics</a>.</p></li>
+<li><p>The minimum, maximum, and quartiles are listed in the Numerical Descriptive Statistics area. <br></p></li>
+</ul>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="30" style="list-style-type: decimal">
+<li>Give the five-number summary for the Wrong Site data.</li>
+</ol>
+<a href="javascript:showhide('Q42')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q42" style="display:none;">
+<center>
+<span class="math display">\[\displaystyle{\$0,~~\$29,496,~~\$68,552,~~\$124,280,~~\$780,575}\]</span> <!--::{{Course_Filter|course=B C|content=$ \displaystyle{\$0,~~\$29,379,~~\$68,552,~~\$124,513,~~\$780,575} $}}-->
+</center>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<br>
+<div class="message Caution">
+Some students mistakenly include the mean in the five-number summary. The third value in the five-number summary is the median.
+</div>
+<p><br> <br></p>
+</div>
+<div id="boxplots" class="section level3">
+<h3>Boxplots</h3>
+<p>A <strong>boxplot</strong> is a graphical representation of the five-number summary. Unlike the mean or standard deviation, a boxplot is resistant to outliers. That means that it won’t be “pulled” one way or the other by extraordinarily large or small values in the data as will a mean, for instance. We will illustrate the process of making a boxplot using the wrong-site data.</p>
+<p>Follow the steps below to learn how to draw a boxplot.</p>
+<p><strong>Step 01:</strong> To draw a boxplot, start with a number line.</p>
+<p><img src="Images/Lesson_2_Activity_6_BoxPlot_1.jpg"></p>
+<p><strong>Step 02:</strong> Draw a vertical line segment above each of the quartiles. <img src="Images/Lesson_2_Activity_6_BoxPlot_2.jpg"></p>
+<p><strong>Step 03:</strong> Connect the tops and bottoms of the line segments, making a box. <img src="Images/Lesson_2_Activity_6_BoxPlot_3.jpg"></p>
+<p><strong>Step 04:</strong> Make a smaller mark above the values corresponding to the minimum and the maximum. <img src="Images/Lesson_2_Activity_6_BoxPlot_4.jpg"></p>
+<p><strong>Step 05:</strong> Draw a line from the left side of the box to the minimum, and draw another line from the right side of the box the maximum. <img src="Images/Lesson_2_Activity_6_BoxPlot_5.jpg"></p>
+<p><strong>Step 06:</strong> These last two lines look like whiskers, so this is sometimes called a box-and-whisker plot.</p>
+<p><img src="Images/Lesson_2_Activity_6_BoxPlot_6.jpg"></p>
+<p><br></p>
+</div>
+</div>
+<div id="summary-1" class="section level2">
+<h2>Summary</h2>
+<div class="SummaryHeading">
+Remember…
+</div>
+<div class="Summary">
+<ul>
+<li><p>A <strong>histogram</strong> allows us to visually interpret data. Histograms can be left-skewed, right-skewed, or symmetrical and bell-shaped.</p></li>
+<li><p>The <strong>mean</strong>, <strong>median</strong>, and <strong>mode</strong> are measures of the center of a distribution. The mean is the most common measure of center, and is computed by adding up the observed data and dividing by the number of observations in the data set.</p></li>
+<li><p>The <strong>standard deviation</strong> is a number that describes how spread out the data are. A larger standard deviation means the data are more spread out than data with a smaller standard deviation.</p></li>
+<li><p>A <strong>parameter</strong> is a true (but usually unknown) number that describes a population. A <strong>statistic</strong> is an estimate of a parameter obtained from a sample.</p></li>
+<li><strong>Quartiles/percentiles</strong>, <strong>Five-Number Summaries</strong>, and <strong>Boxplots</strong> are tools that help us understand data. The five-number summary of a data set contains the minimum value, the first quartile, the median, the third quartile, and the maximum value. A boxplot is a graphical representation of the five-number summary.</li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="navigation" class="section level2">
+<h2>Navigation</h2>
+<center>
+<table style="width:76%;">
+<colgroup>
+<col width="29%" />
+<col width="23%" />
+<col width="23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Previous Reading</strong></th>
+<th align="center"><strong>This Reading</strong></th>
+<th align="center"><strong>Next Reading</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><a href="Lesson02.html">Lesson 2: The Statistical Process &amp; Design of Studies</a></td>
+<td align="center">Lesson 03: Describing Quantitative Data: Shape, Center &amp; Spread</td>
+<td align="center"><a href="Lesson04.html">Lesson 4: Probability; Discrete Random Variables</a></td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+
+<br />
+<hr />
+<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

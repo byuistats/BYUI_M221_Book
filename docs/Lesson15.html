@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Lesson 15: Review for Exam 2</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 221B</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+    </li>
+    <li>
+      <a href="Lesson04.html">Lesson 4: Rules of Probability</a>
+    </li>
+    <li>
+      <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
+    </li>
+    <li>
+      <a href="Lesson06.html">Lesson 6: The Central Limit Theorem</a>
+    </li>
+    <li>
+      <a href="Lesson07.html">Lesson 7: Probability Calculations for a Sample Mean</a>
+    </li>
+    <li>
+      <a href="Lesson08.html">Lesson 8: Unit 1 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson09.html">Lesson 9: Hypothesis Test for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson10.html">Lesson 10: Confidence Interval for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson11.html">Lesson 11: Inference for One Mean (Sigma Unknown)</a>
+    </li>
+    <li>
+      <a href="Lesson12.html">Lesson 12: Inference for Match Pairs</a>
+    </li>
+    <li>
+      <a href="Lesson13.html">Lesson 13: Inference for Two Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson14.html">Lesson 14: Inference for Several Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson15.html">Lesson 15: Unit 2 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson16.html">Lesson 16: Describing Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson17.html">Lesson 17: Inference for One Proportion</a>
+    </li>
+    <li>
+      <a href="Lesson18.html">Lesson 18: Inference for Two Proportions</a>
+    </li>
+    <li>
+      <a href="Lesson19.html">Lesson 19: Inference for Independence of Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson20.html">Lesson 20: Unit 3 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson21.html">Lesson 21: Describing Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson22.html">Lesson 22: Simple Linear Regression</a>
+    </li>
+    <li>
+      <a href="Lesson23.html">Lesson 23: Inference for Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson24.html">Lesson 24: Unit 4 Review</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="Data.html">Data</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lesson 15: Review for Exam 2</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#lesson-outcomes">Lesson Outcomes</a></li>
+<li><a href="#lesson-summaries">Lesson Summaries</a></li>
+<li><a href="#review-questions">Review Questions</a></li>
+<li><a href="#navigation">Navigation</a></li>
+</ul>
+</div>
+
+<script type="text/javascript">
+ function showhide(id) {
+    var e = document.getElementById(id);
+    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+ }
+</script>
+<p>The following questions are intended to help you judge your preparation for this exam. Carefully work through the problems.<br/> <strong>These questions are repeated on the preparation quiz for this lesson.</strong></p>
+<p>This is not designed to be a comprehensive review. There may be items on the exam that are not covered in this review. Similarly, there may be items in this review that are not tested on this exam. You are strongly encouraged to review the readings, homework exercises, and other activities from Units 1 and 2 as you prepare for the exam. In particular, you should go over the <a href="Lesson08.html">Lesson 8: Review for Exam 1</a>.</p>
+<!-- Use the <span style="font-variant:small-caps"> -->
+<!-- [[Index]]</span> to review definitions of important terms. 
+Needs to be built-->
+<div id="lesson-outcomes" class="section level2">
+<h2>Lesson Outcomes</h2>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="oc" style="display:none;">
+<p>The expectation on the exam is the following outcomes. You should be able to do:</p>
+<ul>
+<li>All of the Outcomes from Lesson 08 (Unit 1)</li>
+<li>Confidence Intervals:</li>
+<li>Calculate and interpret a confidence interval given a confidence level and a given parameter.</li>
+<li>Explain how the margin of error changes with the sample size and the level of confidence.</li>
+<li>Identify a point estimate and margin of error for a given confidence interval.</li>
+<li>Show the appropriate connections between the numerical and graphical summaries that support a confidence interval.</li>
+<li>Check the requirements for a confidence interval.</li>
+<li>Determining correct confidence interval for a given scenario</li>
+<li>Calculate a confidence interval for</li>
+<li>A single mean with Ïƒ known.</li>
+<li>A single mean with Ïƒ unknown.</li>
+<li>The mean of differences with dependent samples.</li>
+<li>Difference of two means of independent samples.</li>
+<li>Hypothesis Testing</li>
+<li>State the null and alternative hypothesis for the chosen test.</li>
+<li>Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.</li>
+<li>Assess the statistical significance by comparing the p-value to the Î±-level.</li>
+<li>Check the requirements for the hypothesis test.</li>
+<li>Show the appropriate connections between the numerical and graphical summaries that support a hypothesis test.</li>
+<li>Draw a correct conclusion for a hypothesis test.</li>
+<li>Interpret a Type I and II error.</li>
+<li>Determining correct hypothesis test for a given scenario.</li>
+<li>Conduct a Hypothesis Test for</li>
+<li>A single mean with Ïƒ known.</li>
+<li>A single mean with Ïƒ unknown.</li>
+<li>Difference of two means with dependent samples.</li>
+<li>The mean of differences with independent samples.</li>
+<li>Several means (ANOVA).</li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="lesson-summaries" class="section level2">
+<h2>Lesson Summaries</h2>
+<a href="javascript:showhide('ls')"><span style="font-size:8pt;">Show/Hide Unit 1 Summaries</span></a>
+<div id="ls" style="display:none;">
+<br>
+<div class="RecapHeading">
+Lesson 09 Recap
+</div>
+<div class="Summary">
+<ul>
+<li><p>The <strong>null hypothesis (<span class="math inline">\(H_0\)</span>)</strong> is the foundational assumption about a population and represents the status quo. It is a statement of equality (<span class="math inline">\(=\)</span>). The <strong>alternative hypothesis (<span class="math inline">\(H_a\)</span>)</strong> is a different assumption about a population and is a statement of inequality (<span class="math inline">\(&lt;\)</span>, <span class="math inline">\(&gt;\)</span>, or <span class="math inline">\(\ne\)</span>). Using a <strong>hypothesis test</strong>, we determine whether it is more likely that the null hypothesis or the alternative hypothesis is true.</p></li>
+<li><p>The <strong><span class="math inline">\(P\)</span>-value</strong> is the probability of getting a test statistic at least as extreme as the one you got, assuming <span class="math inline">\(H_0\)</span> is true. A <span class="math inline">\(P\)</span>-value is calculated by finding the area under the normal distribution curve that is more extreme (farther away from the mean) than the z-score. The alternative hypothesis tells us whether we look at both tails or only one.</p></li>
+<li><p>The <strong>level of significance (<span class="math inline">\(\alpha\)</span>)</strong> is the standard for determining whether or not the null hypothesis should be rejected. Typical values for <span class="math inline">\(\alpha\)</span> are <span class="math inline">\(0.05\)</span>, <span class="math inline">\(0.10\)</span>, and <span class="math inline">\(0.01\)</span>. If the <span class="math inline">\(P\)</span>-value is less than <span class="math inline">\(\alpha\)</span> we reject the null. If the <span class="math inline">\(P\)</span>-value is not less than <span class="math inline">\(\alpha\)</span> we fail to reject the null.</p></li>
+<li>A <strong>Type I error</strong> is committed when we reject a null hypothesis that is, in reality, true. A <strong>Type II error</strong> is committed when we fail to reject a null hypothesis that is, in reality, not true. The value of <span class="math inline">\(\alpha\)</span> is the probability of committing a Type I error. <br></li>
+</ul>
+</div>
+<p><br></p>
+<div class="RecapHeading">
+Lesson 10 Recap
+</div>
+<div class="Summary">
+<ul>
+<li><p>The <strong>margin of error</strong> gives an estimate of the variability of responses. It is calculated as <span class="math inline">\(\displaystyle{m=z^*\frac{\sigma}{\sqrt{n}}}\)</span> where <span class="math inline">\(z^*\)</span> represents a calculated z-score corresponding to a particular confidence level.</p></li>
+<li><p>A <strong>confidence interval</strong> is an interval estimator used to give a range of plausible values for a parameter. The width of a confidence interval depends on the chosen confidence level (and its corresponding value of <span class="math inline">\(z^*\)</span>) as well as the sample size (<span class="math inline">\(n\)</span>). This is the equation for calculating confidence intervals: <span class="math display">\[\displaystyle{\left(\bar x-z^*\frac{\sigma}{\sqrt{n}},~\bar x+z^*\frac{\sigma}{\sqrt{n}}\right)}\]</span></p></li>
+<li>The <strong>sample size formula</strong> allows us to estimate the number of observations required to obtain a specific margin of error. <span class="math inline">\(\displaystyle{n=\left(\frac{z^*\sigma}{m}\right)^2}\)</span> <br></li>
+</ul>
+</div>
+<p><br></p>
+<div class="RecapHeading">
+Lesson 11 Recap
+</div>
+<div class="Summary">
+<ul>
+<li><p>In practice we rarely know the true standard deviation <span class="math inline">\(\sigma\)</span> and will therefore be unable to calculate a z-score. <strong>Student’s t-distribution</strong> gives us a new test statistic, <span class="math inline">\(t\)</span>, that is calculated using the sample standard deviation (<span class="math inline">\(s\)</span>) instead. <span class="math display">\[ \displaystyle{ t = \frac {\bar x - \mu} {s / \sqrt{n}} } \]</span></p></li>
+<li><p>The <span class="math inline">\(t\)</span>-distribution is similar to a normal distribution in that it is bell-shaped and symmetrical, but the exact shape of the <span class="math inline">\(t\)</span>-distribution depends on the <strong>degrees of freedom (<span class="math inline">\(df\)</span>)</strong>. <span class="math display">\[df=n-1\]</span></p></li>
+<li>You will use Excel to carry out hypothesis testing and create confidence intervals involving <span class="math inline">\(t\)</span>-distributions. <br></li>
+</ul>
+</div>
+<p><br></p>
+<div class="RecapHeading">
+Lesson 12 Recap
+</div>
+<div class="Summary">
+<ul>
+<li><p>The key characteristic of <strong>dependent samples</strong> (or <strong>matched pairs</strong>) is that knowing which subjects will be in group 1 determines which subjects will be in group 2.</p></li>
+<li><p>We use slightly different variables when conducting inference using dependent samples:</p>
+<p>Group 1 values: <span class="math inline">\(x_1\)</span>  Group 2 values: <span class="math inline">\(x_2\)</span>  Differences: <span class="math inline">\(d\)</span>  Population mean: <span class="math inline">\(\mu_d\)</span>  Sample mean: <span class="math inline">\(\bar d\)</span>  Sample standard deviation: <span class="math inline">\(s_d\)</span></p></li>
+<li>When conducting hypothesis tests using dependent samples, the null hypothesis is always <span class="math inline">\(\mu_d=0\)</span>, indicating that there is no change between the first population and the second population. The alternative hypothesis can be left-tailed (<span class="math inline">\(&lt;\)</span>), right-tailed(<span class="math inline">\(&gt;\)</span>), or two-tailed(<span class="math inline">\(\ne\)</span>). <br></li>
+</ul>
+</div>
+<p><br></p>
+<div class="RecapHeading">
+Lesson 13 Recap
+</div>
+<div class="Summary">
+<ul>
+<li><p>In contrast to dependent samples, two samples are independent if knowing which subjects are in group 1 tells you nothing about which subjects will be in group 2. With <strong>independent samples</strong>, there is no pairing between the groups.</p></li>
+<li><p>When conducting inference using independent samples we use <span class="math inline">\(\bar x_1\)</span>, <span class="math inline">\(s_1\)</span>, and <span class="math inline">\(n_1\)</span> for the mean, standard deviation, and sample size, respectively, of group 1. We use the symbols <span class="math inline">\(\bar x_2\)</span>, <span class="math inline">\(s_2\)</span>, and <span class="math inline">\(n_2\)</span> for group 2.</p></li>
+<li><p>When working with independent samples it is important to graphically illustrate each sample separately. Combining the groups to create a single graph is not appropriate.</p></li>
+<li><p>When conducting hypothesis tests using independent samples, the null hypothesis is always <span class="math inline">\(\mu_1=\mu_2\)</span>, indicating that there is no difference between the two populations. The alternative hypothesis can be left-tailed (<span class="math inline">\(&lt;\)</span>), right-tailed(<span class="math inline">\(&gt;\)</span>), or two-tailed(<span class="math inline">\(\ne\)</span>).</p></li>
+<li>Whenever zero is contained in the confidence interval of the difference of the true means we conclude that there is no significant difference between the two populations. <br></li>
+</ul>
+</div>
+<p><br></p>
+<div class="RecapHeading">
+Lesson 14 Recap
+</div>
+<div class="Summary">
+<p>*<strong>ANOVA</strong> is used to compare the means for several groups. The hypotheses for the test are always: <span class="math display">\[
+\begin{align}
+H_0: &amp; ~ \textrm{All the means are equal} \\
+H_a: &amp; ~ \textrm{At least one of the means differs}
+\end{align}
+\]</span></p>
+<ul>
+<li><p>For ANOVA testing we use an <strong><span class="math inline">\(F\)</span>-distribution</strong>, which is right-skewed. The <span class="math inline">\(P\)</span>-value of an ANOVA test is always the area to the right of the <span class="math inline">\(F\)</span>-statistic.</p></li>
+<li>We can conduct ANOVA testing when the following three requirements are satisfied:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>The data come from a simple random sample.</li>
+<li>The data are normally distributed within each group.</li>
+</ol>
+<ul>
+<li>This is satisfied when Q-Q Plots for the data in each group roughly follow a straight line.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>The variance is constant.</li>
+</ol>
+<ul>
+<li>This is satisfied when the largest variance is not more than four times the smallest variance. <br></li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<p><br></p>
+</div>
+<div id="review-questions" class="section level2">
+<h2>Review Questions</h2>
+<p><strong>Questions 1 through 6: Understanding Confidence Intervals</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Given a 90% confidence interval of (45, 105) for mean heart rate, which of the following is the best interpretation of this confidence interval?</p>
+<ol style="list-style-type: lower-alpha">
+<li>We are 90% confident that the true mean heart rate is between 45 and 105.<br />
+</li>
+<li>There is a 90% chance that the true mean heart rate is between 45 and 105.</li>
+<li>90% of all people have heart rate between 45 and 105.</li>
+<li>There is a 90% chance that the sample mean heart rate is between 45 and 105.</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ul>
+<li>Researchers at the University of Mississippi wanted to determine whether the reaction time (in seconds) to go/no go stimulus of males differed from that of females. The researchers randomly selected 20 females and 15 males to participate. The go/no go stimulus required the student to respond to a particular stimulus and not to respond to other stimuli. Use this information to answer questions 2 and 3.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><p>The researchers decided to construct a confidence interval to determine if the difference of the means is significant. To determine whether the confidence interval would be reliable they create Q-Q plots of both random samples and see that they are approximately normal. Are the requirements for constructing a confidence interval satisfied? Why or why not?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Yes. The distribution of the mean for each sample is normal since the researchers can apply the Central Limit theorem.</li>
+<li>Yes. The distribution of the mean of each sample is normal since the data have been determined to be normal.<br />
+</li>
+<li>No. The distribution of the mean of each sample is not normal since the sample size is not large enough.</li>
+<li>No. The company needs to check that all the data combined is normal.</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Of the four types of confidence intervals listed below, which one is appropriate for this experiment?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Confidence interval for <span class="math inline">\(Î¼\)</span> when <span class="math inline">\(Ïƒ\)</span> is known.</li>
+<li>Confidence interval for <span class="math inline">\(Î¼\)</span> when <span class="math inline">\(Ïƒ\)</span> is unknown.</li>
+<li>Confidence interval for the mean of differences, using dependent samples.</li>
+<li>Confidence interval for the difference of means, using independent samples.</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>A researcher is interested in estimating the savings account balance of customers at a large bank. She obtains the savings account balance of a random sample of 30 customers. A 95% confidence interval for the mean savings account balance of bank customers is found to be ($3402.08, $4142.75). Which of the following would produce a confidence interval with a smaller margin of error than this 95% confidence interval?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Obtain the savings account balances of only 10 bank customers rather than 30, because 10 are likely to be more uniform than 30.</li>
+<li>Obtain the balances of 90 bank customers rather than 30.<br />
+</li>
+<li>Compute a 99% confidence interval rather than a 95% confidence interval.</li>
+<li>None of the above.</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="5" style="list-style-type: decimal">
+<li><p>A factory makes propeller drive shafts for ships. A quality assurance engineer at the factory needs to estimate the true mean length of the shafts. She randomly selects four drive shafts made at the factory, measures their lengths, and finds their sample mean to be 1000 mm. The lengths are known to follow a normal distribution whose standard deviation is 2 mm. Calculate a 95% confidence interval for the true mean length of the shafts.</p>
+<ol style="list-style-type: lower-alpha">
+<li>(998.040, 1001.960)<br />
+</li>
+<li>(996.080, 1003.920)</li>
+<li>(998.355, 1001.645)</li>
+<li>(997.424, 1002.576)</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="6" style="list-style-type: decimal">
+<li><p>To assess the accuracy of a laboratory scale, a standard weight that is known to weigh 1 gram is repeatedly weighed a total of n times and the mean of the weighings is computed. Suppose the scale readings are normally distributed with unknown mean <span class="math inline">\(Î¼\)</span> and standard deviation <span class="math inline">\(Ïƒ\)</span> = 0.01 g. How large should n be so that a 95% confidence interval for <span class="math inline">\(Î¼\)</span> has a margin of error of Â± 0.0001?</p>
+<ol style="list-style-type: lower-alpha">
+<li>1960</li>
+<li>12988</li>
+<li>38416<br />
+</li>
+<li>45455</li>
+</ol></li>
+</ol>
+<p><br></p>
+<p><strong>Questions 7 through 14: Understanding Hypothesis Testing</strong></p>
+<ol start="7" style="list-style-type: decimal">
+<li><p>The mean area <span class="math inline">\(Î¼\)</span> of the several thousand apartments in a new development is advertised to be 1250 square feet. A tenant group thinks that the apartments are smaller than advertised. They hire an engineer to measure a random sample of apartments to test their suspicion. The appropriate null and alternative hypotheses, <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_a\)</span>, for <span class="math inline">\(Î¼\)</span> are</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(H_0: Î¼=1250\)</span> <span class="math inline">\(H_a: Î¼&lt;1250\)</span><br />
+</li>
+<li><span class="math inline">\(H_0: Î¼=1250\)</span> <span class="math inline">\(H_a: Î¼â‰ 1250\)</span></li>
+<li><span class="math inline">\(H_0: Î¼=1250\)</span> <span class="math inline">\(H_a: Î¼&gt;1250\)</span></li>
+<li>Canâ€™t specify without knowing the size of the sample used by the engineer</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="8" style="list-style-type: decimal">
+<li><p>In a statistical test of hypotheses, we say the test result is statistically significant at the level of significance (<span class="math inline">\(Î±\)</span>) if</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(Î±\)</span> = 0.05</li>
+<li>the <span class="math inline">\(P\)</span>-<span class="math inline">\(\text{value}\)</span> is less than <span class="math inline">\(Î±\)</span><br />
+</li>
+<li><span class="math inline">\(Î±\)</span> is small</li>
+<li>the <span class="math inline">\(P\)</span>-<span class="math inline">\(\text{value}\)</span> is larger than <span class="math inline">\(Î±\)</span></li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="9" style="list-style-type: decimal">
+<li><p>A group of statistics students wants to determine if students in some apartment buildings get better grades than students in other apartment buildings. They collect GPAs from an anonymous random sample of size 15 from each of four different apartment buildings. The data for each apartment building are bell-shaped with no outliers and the sample standard deviations are nearly equal. Can they use an ANOVA hypothesis test to answer their question?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Yes. It is enough that the data are bell-shaped with no outliers and the sample standard deviations are nearly equal.<br />
+</li>
+<li>Yes. They have a total of 60 GPAs in all, so they can apply the Central Limit theorem.</li>
+<li>No. They do not have enough data.</li>
+<li>No. They do not know the true standard deviations of each sample.</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="10" style="list-style-type: decimal">
+<li><p>A medical researcher is working on a new treatment for a certain type of cancer. The average survival time after diagnosis for the standard treatment is two years. So the null hypothesis is that average survival time after diagnosis is the same for the new treatment and the standard treatment. In an early trial, she tries the new treatment on three subjects, who have an average survival time after diagnosis of 4.5 years. Even though the sample is small, the null hypothesis would be rejected at the 0.05 significance level. Consequently, she rejects the null hypothesis. In a future study, it is determined that the new treatment does not increase the mean survival time in the population of all patients with this particular type of cancer. The researcher has</p>
+<ol style="list-style-type: lower-alpha">
+<li>Committed a type I error.<br />
+</li>
+<li>Committed a type II error.</li>
+<li>Incorrectly used a 0.05 significance level when she should have used a 0.01 significance level.</li>
+<li>Incorrectly used a 0.05 significance test when she should have computed the <span class="math inline">\(P\)</span>-<span class="math inline">\(\text{value}\)</span>.</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="11" style="list-style-type: decimal">
+<li><p>If the level of significance, <span class="math inline">\(Î±\)</span> , is made very small, thereby making the probability of committing a Type 1 error very small, what happens to the probability of committing a Type 2 error?</p>
+<ol style="list-style-type: lower-alpha">
+<li>By reducing the probability of committing a Type 1 error, we also reduce the probability of committing a Type 2 error.</li>
+<li>The relationship between the two probabilities depends on how the study is set up.</li>
+<li>There is no specific relationship between the two probabilities.</li>
+<li>By reducing the probability of committing a Type 1 error, we increase the probability of committing a Type 2 error.</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="12" style="list-style-type: decimal">
+<li>The nicotine content in cigarettes of a certain brand is normally distributed, with mean (in milligrams) <span class="math inline">\(Î¼\)</span> and a known standard deviation of <span class="math inline">\(Ïƒ\)</span>=0.17. The brand advertises that the mean nicotine content of its cigarettes is 1.5, but measurements on a random sample of 100 cigarettes of this brand give a sample mean of x Ì… = 1.53. Is this evidence that the mean nicotine content is actually higher than advertised? To answer this, test the hypotheses</li>
+</ol>
+<p><span class="math display">\[H_0: Î¼=1.5\]</span></p>
+<p><span class="math display">\[H_a: Î¼&gt;1.5\]</span></p>
+<p>at the 5% level of significance. You conclude that you should…</p>
+<ol style="list-style-type: lower-alpha">
+<li>reject <span class="math inline">\(H_a\)</span></li>
+<li>fail to reject <span class="math inline">\(H_0\)</span></li>
+<li>there is a 5% chance that the null hypothesis is true</li>
+<li>reject <span class="math inline">\(H_0\)</span></li>
+</ol>
+<p><br></p>
+<ol start="13" style="list-style-type: decimal">
+<li><p>You would like to look at the mean number of hours worked for wages per week by male students and female students. You would like a random sample of 100 for each group and test if those means are different. What is the correct statistical procedure?</p>
+<ol style="list-style-type: lower-alpha">
+<li>One-sample z-test</li>
+<li>One-sample t-test</li>
+<li>Dependent samples test (or, “matched-pairs” test)</li>
+<li>Independent samples test<br />
+</li>
+<li>ANOVA (analysis of variance)</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="14" style="list-style-type: decimal">
+<li><p>An educator is interested in academic achievement by males and females with similar academic support systems. She decides to use brothers and sisters raised in the same home. Furthermore, she decides to use only brother-sister pairs when they are next to each other in sibling order. Should she use a hypothesis test based on independent or dependent sampling?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Independent sampling. The brother and sister are separate people who make their own choices, so the brotherâ€™s academic achievement shouldnâ€™t depend on his sisterâ€™s academic achievement.</li>
+<li>Independent sampling. Knowing the brothers included in the study tells you nothing about which sisters are included in the study.</li>
+<li>Dependent sampling. The sisterâ€™s academic achievement depends to some degree on her brotherâ€™s academic achievement.</li>
+<li>Dependent sampling. If you select a brother so as to compare his academic achievement to his sister, you must include the sister in your study.</li>
+</ol></li>
+</ol>
+<p><br></p>
+<p><strong>Questions 15 through 26: Select and carry out the correct inferential procedure for each set of problems</strong></p>
+<ul>
+<li>A soil scientist collected random soil samples from a field and measured the dissolved organic carbon (mg/L) level of each sample. Dissolved organic carbon molecules are an important part of an ecosystem and help plants to process organic compounds. The researcher would like to construct a 95% confidence interval for the mean dissolved organic carbon level in the field. Open the data file <a href="./Data/DissolvedOrganicCarbon.xlsx">DissolvedOrganicCarbon.xlsx</a>. Use this information to answer questions 15 and 16.</li>
+</ul>
+<ol start="15" style="list-style-type: decimal">
+<li><p>Of the four types of confidence intervals listed below, which one is appropriate for this situation?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Confidence interval for <span class="math inline">\(Î¼\)</span> when <span class="math inline">\(Ïƒ\)</span> is known.</li>
+<li>Confidence interval for <span class="math inline">\(Î¼\)</span> when <span class="math inline">\(Ïƒ\)</span> is unknown.<br />
+</li>
+<li>Confidence interval for the mean of differences, using dependent samples.</li>
+<li>Confidence interval for the difference of means, using independent samples.</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="16" style="list-style-type: decimal">
+<li><p>Which of the following is the 95% confidence interval for these data?</p>
+<ol style="list-style-type: lower-alpha">
+<li>(11.520, 14.865)</li>
+<li>(10.425, 15.960)</li>
+<li>(11.909, 14.477)</li>
+<li>(11.168, 15.217)</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ul>
+<li>A random sample of Hummers for sale in Los Angeles and New York were taken from listings at cars.com. We want to know if there is a difference in mean listing prices between Hummers for sale in Los Angeles (group 1) and Hummers for sale in New York (group 2). Create a 95% confidence interval for the true difference of mean listing prices between the two cities. Open the data file <a href="./Data/UsedHummersNYandLA.xlsx">UsedHummersNYandLA.xlsx</a>. Use this information to answer questions 17 and 18.</li>
+</ul>
+<ol start="17" style="list-style-type: decimal">
+<li><p>Of the four types of confidence intervals listed below, which one is appropriate for this situation?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Confidence interval for <span class="math inline">\(Î¼\)</span> when <span class="math inline">\(Ïƒ\)</span> is known.</li>
+<li>Confidence interval for <span class="math inline">\(Î¼\)</span> when <span class="math inline">\(Ïƒ\)</span> is unknown.</li>
+<li>Confidence interval for the mean of differences, using dependent samples.</li>
+<li>Confidence interval for the difference of means, using independent samples.</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="18" style="list-style-type: decimal">
+<li><p>Which of the following is the 95% confidence interval for the true difference of mean listing prices between Hummers from LA and NY?</p>
+<ol style="list-style-type: lower-alpha">
+<li>(-770, 5764)</li>
+<li>(-210, 6221)</li>
+<li>(-423, 5417)<br />
+</li>
+<li>(-402, 5396)</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ul>
+<li>Many studies have suggested that there is a link between exercise and healthy bones. Exercise stresses the bones and this causes them to get stronger. One study examined the effect of jumping on the bone density of growing rats. There were three groups (rats were selected at random for the three groups): a control with no jumping, a low-jump group (the jump height was 30 centimeters), and a high-jump group (60 centimeters). After 8 weeks of 10 jumps per day, 5 days per week, the bone density of the rats (expressed in mg/cm3) was measured. The rats were selected at random for the three groups. Researchers would like to perform a hypothesis test to determine if the mean levels of bone density are different between the three different groups of rats listed above. Use a level of significance of <span class="math inline">\(\alpha=0.05\)</span>. Open the data file <a href="./Data/ExercisedBoneDensity.xlsx">Exercised Bone Density.xlsx</a>. Use this information to answer questions 19 through 22.</li>
+</ul>
+<ol start="19" style="list-style-type: decimal">
+<li><p>What is the correct hypothesis test for this situation?</p>
+<ol style="list-style-type: lower-alpha">
+<li>One-sample z-test</li>
+<li>One-sample t-test</li>
+<li>Dependent samples test (or, “matched-pairs” test)</li>
+<li>Independent samples test<br />
+</li>
+<li>ANOVA (analysis of variance)</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="20" style="list-style-type: decimal">
+<li><p>Calculate the test statistic.</p>
+<ol style="list-style-type: lower-alpha">
+<li>1.578</li>
+<li>2.193</li>
+<li>7.978<br />
+</li>
+<li>3.442</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="21" style="list-style-type: decimal">
+<li><p>Give the <span class="math inline">\(P\)</span>-value.</p>
+<ol style="list-style-type: lower-alpha">
+<li>0.485</li>
+<li>0.002<br />
+</li>
+<li>0.115</li>
+<li>0.028</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="22" style="list-style-type: decimal">
+<li><p>Which of the following best expresses the conclusion of this test? Use a level of significance of <span class="math inline">\(\alpha=0.05\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>There is sufficient evidence to conclude that the bone density of all three groups is about the same.</li>
+<li>There is sufficient evidence to conclude that the bone density of at least one of the groups is different from the bone density of at least one of the other groups.<br />
+</li>
+<li>There is insufficient evidence to conclude that the bone density of all three groups is about the same.</li>
+<li>There is sufficient evidence to conclude that the bone density between all of the groups are different.</li>
+<li>There is insufficient evidence to conclude that the bone density of at least one of the groups is different from the bone density of at least one of the other groups.</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ul>
+<li>Pressures of supply and demand act directly on the prices for an airline ticket. As the seats available on the plane begin to fill, airlines raise the price. If seats on a flight do not sell well, an airline may discount the tickets or even cancel the flight. A study was undertaken to determine if there is a difference in the mean cost of an airline ticket purchased 90 days in advance of a scheduled flight compared with a ticket purchased only 14 days in advance. Data were collected on the cost of a one-way ticket from London’s Heathrow Airport to a variety of destinations in Europe. The lowest published ticket prices of one-way flights from Heathrow to various destinations in Europe was recorded for each scheduled flight 90 days in advance and then again 14 days in advance. Perform a hypothesis test to determine if there is a difference in the cost of the nonstop flights when tickets are purchased 14 days in advance compared to 90 days in advance. Use a level of significance of <span class="math inline">\(\alpha=0.10\)</span>. Open the data file <a href="./Data/DirectFlightCosts.xlsx">DirectFlightCosts.xlsx</a>. Use this information to answer questions 23 through 26.</li>
+</ul>
+<ol start="23" style="list-style-type: decimal">
+<li><p>What is the correct hypothesis test for this situation?</p>
+<ol style="list-style-type: lower-alpha">
+<li>One-sample z-test</li>
+<li>One-sample t-test</li>
+<li>Dependent samples test (or, “matched-pairs” test)<br />
+</li>
+<li>Independent samples test</li>
+<li>ANOVA (analysis of variance)</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="24" style="list-style-type: decimal">
+<li><p>Calculate the test statistic.</p>
+<ol style="list-style-type: lower-alpha">
+<li>1.685<br />
+</li>
+<li>1.361</li>
+<li>1.834</li>
+<li>1.518</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="25" style="list-style-type: decimal">
+<li><p>Give the <span class="math inline">\(P\)</span>-value.</p>
+<ol style="list-style-type: lower-alpha">
+<li>0.129</li>
+<li>0.096<br />
+</li>
+<li>0.174</li>
+<li>0.067</li>
+</ol></li>
+</ol>
+<p><br></p>
+<ol start="26" style="list-style-type: decimal">
+<li><p>Which of the following best expresses the conclusion of this test? Use a level of significance of <span class="math inline">\(\alpha=0.10\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>There is sufficient evidence to conclude that there is no difference in the cost of tickets purchased 14 days in advance compared to 90 days in advance.</li>
+<li>There is sufficient evidence to conclude that there is a difference in the cost of tickets purchased 14 days in advance compared to 90 days in advance.<br />
+</li>
+<li>There is insufficient evidence to conclude that there is no difference in the cost of tickets purchased 14 days in advance compared to 90 days in advance.</li>
+<li>There is insufficient evidence to conclude that there is a difference in the cost of tickets purchased 14 days in advance compared to 90 days in advance.</li>
+</ol></li>
+</ol>
+<p><br></p>
+</div>
+<div id="navigation" class="section level2">
+<h2>Navigation</h2>
+<center>
+<table style="width:76%;">
+<colgroup>
+<col width="29%" />
+<col width="23%" />
+<col width="23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Previous Reading</strong></th>
+<th align="center"><strong>This Reading</strong></th>
+<th align="center"><strong>Next Reading</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><a href="Lesson14.html">Lesson 14: <br> Inference for Several Means (ANOVA)</a></td>
+<td align="center">Lesson 15: <br> Review for Exam 2</td>
+<td align="center"><a href="Lesson16.html">Lesson 16: <br> Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion</a></td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+
+<br />
+<hr />
+<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

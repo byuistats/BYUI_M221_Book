@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Lesson 7: Probability Calculations involving a Mean Response</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 221B</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+    </li>
+    <li>
+      <a href="Lesson04.html">Lesson 4: Rules of Probability</a>
+    </li>
+    <li>
+      <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
+    </li>
+    <li>
+      <a href="Lesson06.html">Lesson 6: The Central Limit Theorem</a>
+    </li>
+    <li>
+      <a href="Lesson07.html">Lesson 7: Probability Calculations for a Sample Mean</a>
+    </li>
+    <li>
+      <a href="Lesson08.html">Lesson 8: Unit 1 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson09.html">Lesson 9: Hypothesis Test for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson10.html">Lesson 10: Confidence Interval for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson11.html">Lesson 11: Inference for One Mean (Sigma Unknown)</a>
+    </li>
+    <li>
+      <a href="Lesson12.html">Lesson 12: Inference for Match Pairs</a>
+    </li>
+    <li>
+      <a href="Lesson13.html">Lesson 13: Inference for Two Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson14.html">Lesson 14: Inference for Several Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson15.html">Lesson 15: Unit 2 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson16.html">Lesson 16: Describing Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson17.html">Lesson 17: Inference for One Proportion</a>
+    </li>
+    <li>
+      <a href="Lesson18.html">Lesson 18: Inference for Two Proportions</a>
+    </li>
+    <li>
+      <a href="Lesson19.html">Lesson 19: Inference for Independence of Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson20.html">Lesson 20: Unit 3 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson21.html">Lesson 21: Describing Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson22.html">Lesson 22: Simple Linear Regression</a>
+    </li>
+    <li>
+      <a href="Lesson23.html">Lesson 23: Inference for Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson24.html">Lesson 24: Unit 4 Review</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="Data.html">Data</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lesson 7: Probability Calculations involving a Mean Response</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#lesson-outcomes">Lesson Outcomes</a></li>
+<li><a href="#review-of-sampling-distributions">Review of Sampling Distributions</a></li>
+<li><a href="#probabilities-involving-a-mean">Probabilities Involving a Mean</a></li>
+<li><a href="#review-of-key-concepts">Review of Key Concepts</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#navigation">Navigation</a></li>
+</ul>
+</div>
+
+<script type="text/javascript">
+ function showhide(id) {
+    var e = document.getElementById(id);
+    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+ }
+</script>
+<div style="float:right;width=40%;">
+<br/>
+<div style="padding-left:10%;">
+<strong>Optional Lesson Video</strong>
+</div>
+<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9Vm2oOb7MbspQvlvrkQba1" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+</div>
+<p><br></p>
+<div id="lesson-outcomes" class="section level2">
+<h2>Lesson Outcomes</h2>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="oc" style="display:none;">
+<p>By the end of this lesson, you should be able to:</p>
+<ul>
+<li>Calculate probabilities using a distribution of sample means.</li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="review-of-sampling-distributions" class="section level2">
+<h2>Review of Sampling Distributions</h2>
+<p>When is the sample mean normally distributed (or approximately normally distributed)? This happens when either of the two conditions are satisfied:</p>
+<ul>
+<li>The parent population is normally distributed, so the sample mean is automatically normally distributed.</li>
+<li>The sample size is large, and the Central Limit Theorem implies that the sample mean is normally distributed.</li>
+</ul>
+<p>For the mean of draws from a random variable with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>, the following are true:</p>
+<ul>
+<li>The mean of the random variable <span class="math inline">\(\bar X\)</span> is <span class="math inline">\(\mu\)</span>.</li>
+<li>The standard deviation of the random variable <span class="math inline">\(\bar X\)</span> is <span class="math inline">\(\displaystyle{\frac{Ïƒ}{\sqrt{n}}}\)</span>.</li>
+</ul>
+<p>Previously, you learned how to use the normal probability applet to convert a <span class="math inline">\(z\)</span>-score to a corresponding area under the curve. These skills will be applied again in this activity. The following questions will help you brush up on how to use the applet.</p>
+<center>
+<img src="Images/L04_A06_Graph.jpg">
+</center>
+<p><br></p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol style="list-style-type: decimal">
+<li>Look at the output from the applet, given above. What is the probability that a standard normal random variable will be below 1.25?</li>
+</ol>
+<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q1" style="display:none;">
+<center>
+<span class="math inline">\(0.8944\)</span>
+</center>
+</div>
+<p><br></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Look at the output from the applet, given above. What is the probability that a standard normal random variable will be above 1.25?</li>
+</ol>
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<center>
+<span class="math inline">\(1 â€“ 0.8944 = 0.1056\)</span>
+</center>
+</div>
+<p><br></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Challenge problem: Use the output from the applet above to determine the probability that a standard normal random variable will be between â€“1.25 and 1.25.</li>
+</ol>
+<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q3" style="display:none;">
+<ul>
+<li>Since the probability in the right tail above 1.25 is 0.106, the probability in the left tail is also 0.106. So, the probability in the middle, between â€“1.25 and 1.25 must be <span class="math inline">\(1 â€“ 2(0.106) = 1 â€“ 0.212 = 0.788\)</span>.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Use the normal probability applet to find the probability that a standard normal random variable will be greater than â€“0.75.</li>
+</ol>
+<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q4" style="display:none;">
+<ul>
+<li>Using the normal probability applet, we find that the area to the right of <span class="math inline">\(z\)</span> = â€“0.75 is <span class="math inline">\(0.773\)</span>.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="5" style="list-style-type: decimal">
+<li>If the mean of a normally distributed random variable is â€“23 and the standard deviation is 7, what is the probability that the random variable will have a value that is less than â€“25?</li>
+</ol>
+<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q5" style="display:none;">
+<ul>
+<li>The <span class="math inline">\(z\)</span>-score is: <br>
+<center>
+<span class="math inline">\(\displaystyle{z = \frac{-25 â€“ (-23)}{7} = â€“0.2857}\)</span>
+</center>
+<br></li>
+<li>Using the normal probability applet, we find that the area to the left of <span class="math inline">\(z\)</span> = â€“0.2857 is <span class="math inline">\(0.3876\)</span>.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+</div>
+<div id="probabilities-involving-a-mean" class="section level2">
+<h2>Probabilities Involving a Mean</h2>
+<p>If the sample mean is normally distributed, then we can consider the sample mean, <span class="math inline">\(\bar x\)</span>, as one observation from a normal distribution with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\displaystyle{\frac{Ïƒ}{\sqrt{n}}}\)</span>. With this in mind, we can compute the <span class="math inline">\(z\)</span>-score for any value of this random variable:</p>
+<p><span class="math display">\[z = \frac{\text{value} - \text{mean}}{\text{standard deviation}}=\frac{\bar x-\mu}{\sigma / \sqrt{n} }\]</span></p>
+<p>Notice that we just replaced the â€œvalueâ€ with the normal random variable, the â€œmeanâ€ with its mean and â€œstandard deviationâ€ with its standard deviation.</p>
+<p>The <span class="math inline">\(z\)</span>-score follows a standard normal distribution. That is, it has a mean of 0 and a standard deviation of 1. After we compute the <span class="math inline">\(z\)</span>-score, we can use the applet to find the probability that a randomly selected mean will be above or below a given value of <span class="math inline">\(\bar x\)</span>.</p>
+<p><strong>Worked Example: Finding the Area under a Normal Curve (Based on a Sample Mean)</strong></p>
+<p>After finding the <span class="math inline">\(z\)</span>-score, we can use the normal probability applet to find the area under the curve (i.e. the probability.) Suppose that a sample of size <span class="math inline">\(n = 4\)</span> has been drawn from a normal population with mean <span class="math inline">\(\mu = 7\)</span> and standard deviation <span class="math inline">\(\sigma = 3\)</span>. Since the parent population is normal, we know the sampling distribution of the sample mean <span class="math inline">\(\bar x\)</span> will be normal with mean <span class="math inline">\(\mu = 7\)</span> and standard deviation <span class="math inline">\(\displaystyle{ \frac{Ïƒ}{\sqrt{n}} = \frac{3}{\sqrt{4}} = 1.5}\)</span>. We can use this information to find the probability that <span class="math inline">\(\bar x\)</span> will be greater than 10.</p>
+<p>The <span class="math inline">\(z\)</span>-score is</p>
+<p><span class="math display">\[z=\frac{\bar x-\mu}{\sigma / \sqrt{n} } = \frac{10 - 7}{3 / \sqrt{4} }=2.0\]</span></p>
+<p>The probability that <span class="math inline">\(z\)</span> will be greater than <span class="math inline">\(2.00\)</span> is the area under the standard normal distribution to the right of <span class="math inline">\(2.00\)</span>. We find this area using the normal probability applet.</p>
+<p><img src="Images/L04_A06_Graph_2.jpg"></p>
+<p>The area to the right of <span class="math inline">\(z = 2.00\)</span> is <span class="math inline">\(0.02275\)</span>. This is the probability that the random sample of <span class="math inline">\(n = 4\)</span> items will have a mean that is greater than <span class="math inline">\(10\)</span>.</p>
+<p>In this example, the sample mean was automatically normally distributed because the parent population was normally distributed. This will always be true, no matter what size sample is drawn.</p>
+<p><strong>Worked Example: Finding the Area under a Normal Curve (Based on a Sample Mean)</strong></p>
+<p>What do we do if the parent population is not normally distributed? If the sample size is large, then the Central Limit Theorem guarantees that the sample mean will be approximately normally distributed. Based on this, we can still do normal probability calculations for the mean of a random sample.</p>
+<p>The distribution of the weekly costs incurred by Global Solutions Unlimited is right skewed. The population mean of the costs is $26,400 and the standard deviation is $23,200. A random sample of <span class="math inline">\(n = 40\)</span> weeks is to be selected, what is the probability that the mean weekly costs will be less than $20,000?</p>
+<p>Since the number of observations is large, the Central Limit Theorem assures that the sample mean will follow a normal distribution. The <span class="math inline">\(z\)</span>-score for <span class="math inline">\(\bar x =\)</span> $20,000 is:</p>
+<p><span class="math display">\[z = \frac{\bar x-\mu}{\sigma / \sqrt{n} } = \frac{20,000-26,400}{23,200 / \sqrt{40}} = -1.745 \]</span></p>
+<p>Using the normal probability applet, we can find the area to the left of this <span class="math inline">\(z\)</span>-score:</p>
+<p><img src="Images/L04_A06_Graph_3.jpg"></p>
+<p>The area to the left of <span class="math inline">\(z= â€“1.745\)</span> is <span class="math inline">\(0.04049\)</span>. This is the probability that the mean costs for the <span class="math inline">\(n = 40\)</span> weeks will be less than $20,000.</p>
+<p><br></p>
+<div id="example-environmental-clean-up" class="section level4">
+<h4>Example: Environmental Clean Up</h4>
+<!-- This picture comes from http://happeningstock.deviantart.com/art/Grass-Hill-Area-Closed-Sign-255592183 and has an open license -->
+<p><img src="Images/L07_AREA_CLOSED_sign.jpg"></p>
+<p>We will now consider a complete example that shows how these probabilities are used in practice.</p>
+<p>The United States Government decided to open some land near a uranium enrichment facility to public use. After a few years of the public hiking, biking, and sometimes even hunting on this land, workers from the facility noticed that there were several unnatural-looking mounds in the earth near the area. Because this land was once used by the facility and nobody knew the origin of these piles, the government closed public access to the land until they could assess if the mounds were safe.</p>
+<p><br></p>
+<p><img src="Images/Step1.png"></p>
+<p><strong>Step 1: Design the study.</strong></p>
+<p>Measurements were taken from the mounds to assess one of the contaminants, lead. The tests involved are very expensive. Each sample costs about $600 to process. The Environmental Protection Agency (EPA) has set a â€œNo Action Levelâ€ (NAL) for lead. If the mean concentration in the soil of the contaminant is less than the NAL, then the area can be declared safe for public use. If the concentration of the contaminant reaches or exceeds the NAL, the site must be cleaned additionally before it is declared safe. The NAL for lead is 50 milligrams of lead per kilogram of soil (mg/kg).</p>
+<p>The hypothesis for this test are:</p>
+<p><span class="math inline">\(H_0:~~\mu = 50 \frac{\text{mg}}{\text{kg}}\)</span></p>
+<p><span class="math inline">\(H_a:~~\mu &lt; 50 \frac{\text{mg}}{\text{kg}}\)</span></p>
+<p>In environmental testing, we always assume the site is dirty. That is, our null hypothesis is that the mean level of contamination is at the NAL. We gather data to determine if there is sufficient evidence to support rejecting the null hypothesis.</p>
+<p><br></p>
+<p><img src="Images/Step2.png"></p>
+<p><strong>Step 2: Collect Data</strong></p>
+<p>Scientists collected <span class="math inline">\(n = 61\)</span> measurements of the lead concentration in the soil, measured in mg/kg. The data are given in the file <a href="http://statistics.byuimath.com/index.php?title=Data" target="&quot;_blank">Uranium Plant Data-Lead</a>.</p>
+<p><br></p>
+<p><img src="Images/Step3.png"></p>
+<p><strong>Step 3: Describe the Data</strong></p>
+<div class="QuestionsHeading">
+Answer the following question:
+</div>
+<div class="Questions">
+<ol start="6" style="list-style-type: decimal">
+<li>Create a histogram of the lead contamination data.</li>
+</ol>
+<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q6" style="display:none;">
+<p><img src="Images/LeadContamination-Histogram.png"></p>
+</div>
+<p><br></p>
+<ol start="7" style="list-style-type: decimal">
+<li>What is the shape of the distribution of the data?</li>
+</ol>
+<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q7" style="display:none;">
+<ul>
+<li>The lead concentration data are right skewed.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="8" style="list-style-type: decimal">
+<li>Are any of the measured values above the NAL (50 mg/kg)? What might this suggest?</li>
+</ol>
+<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q8" style="display:none;">
+<ul>
+<li>Yes, there are several observations that are above the NAL. This may suggest that the lead concentrations are very high in some isolated soil samples. It may also be an indication of variability in the test results.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="9" style="list-style-type: decimal">
+<li>Visually, does it look like the mean lead concentration is less than 50 mg/kg?</li>
+</ol>
+<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q9" style="display:none;">
+<ul>
+<li>Answers may vary.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="10" style="list-style-type: decimal">
+<li>What is the value of the sample mean?</li>
+</ol>
+<a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q10" style="display:none;">
+<ul>
+<li>The sample mean is 29.13 mg/kg.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p><img src="Images/Step4.png"></p>
+<p><strong>Step 4: Make Inferences</strong></p>
+<p>We assume the null hypothesis is true and we gather evidence against this requirement. We will find the probability that the mean lead concentration is less than <span class="math inline">\(\bar x\)</span> = 29.13 mg/kg, assuming that the true mean lead concentration is <span class="math inline">\(\mu\)</span> = 50 mg/kg. This probability is called the <span class="math inline">\(P\)</span>-value.</p>
+<p>Since the sample size is large (<span class="math inline">\(n = 61\)</span>), we can conclude that the sample mean is normally distributed. So, we can use the normal probability applet to find the probability that the sample mean will be less than 29.13. Historical analyses show that the population standard deviation is Ïƒ = 24 mg/kg.</p>
+<p>First, we compute the <span class="math inline">\(z\)</span>-score.</p>
+<p><span class="math display">\[z=\frac{\bar x-\mu}{\sigma / \sqrt{n} } = \frac{29.13 - 50}{24 / \sqrt{61} }=-6.79\]</span></p>
+<p>Using the applet, we find the area to the left of <span class="math inline">\(z = â€“6.79\)</span>. This is the <span class="math inline">\(P\)</span>-value. It is not clear from the image of the applet, but the area to the left was shaded before the <span class="math inline">\(z\)</span>-score was entered.</p>
+<p><img src="Images/L04_A06_Graph_4.jpg"></p>
+<p>The <span class="math inline">\(P\)</span>-value for this test is <span class="math inline">\(5.6 \times 10^{â€“12} = 0.000~000~000~005~6\)</span>. This is a very small probability. Assuming the null hypothesis is trueâ€”that is, the site is unacceptably contaminatedâ€”it is very unlikely that we would find such a low mean contamination level among the <span class="math inline">\(n = 61\)</span> randomly selected soil samples.</p>
+<p>Since the <span class="math inline">\(P\)</span>-value is low, we reject the null hypothesis.</p>
+<p><br></p>
+<p><img src="Images/Step5.png"></p>
+<p><strong>Step 5: Take Action</strong></p>
+<p>There is sufficient evidence to suggest that the mean lead level is less than 50 mg/kg. We conclude that the lead concentration in the soil is low enough that it is not a danger to the public. Based on the results of this and other similar test results, the government has reopened public access to this area.</p>
+<p><br></p>
+</div>
+</div>
+<div id="review-of-key-concepts" class="section level2">
+<h2>Review of Key Concepts</h2>
+<ol style="list-style-type: decimal">
+<li>To compute probabilities involving the sample mean <span class="math inline">\(\bar{x}\)</span> we must first determine if <span class="math inline">\(\bar{x}\)</span> is normally distributed. If it is not, we cannot compute probabilities. There are two cases when <span class="math inline">\(\bar{x}\)</span> is guaranteed to be normally distributed. They are:</li>
+</ol>
+<ul>
+<li><p>The parent population is Normally distributed.</p></li>
+<li><p>The Central Limit Theorem guarantees the distribution of <span class="math inline">\(\bar{x}\)</span> is Normal if the sample size <span class="math inline">\(n\)</span> is large enough. For this course, we require <span class="math inline">\(n \geq 30\)</span>.</p></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><p>The collection of all possible sample means <span class="math inline">\(\bar{x}\)</span> is also a population. The mean of the distribution of sample means is the population mean <span class="math inline">\(\mu\)</span>. The standard deviation of the distribution of sample means is <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span>, where <span class="math inline">\(\sigma\)</span> is the parent population standard deviation and <span class="math inline">\(n\)</span> is the sample size.</p></li>
+<li><p>Once we have determined that the sample mean is Normally distributed, we can compute probabilities with <span class="math inline">\(\bar{x}\)</span>. We first compute <span class="math inline">\(z = \frac{\bar{x} - \mu}{\sigma/\sqrt{n}}\)</span> and then use the Normal Probability Applet to compute probabilities about <span class="math inline">\(z\)</span>.</p></li>
+</ol>
+<p><br></p>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<div class="SummaryHeading">
+Remember…
+</div>
+<div class="Summary">
+<ul>
+<li><p>When the distribution of sample means is normally distributed, we can use <strong>z-scores</strong> and the <strong>probability applet</strong> to calculate proportions and probabilities. A z-score is calculated as: <span class="math inline">\(\displaystyle{z = \frac{\text{value}-\text{mean}}{\text{standard deviation}} = \frac{\bar x-\mu}{\sigma/\sqrt{n}}}\)</span></p></li>
+<li>The <strong><span class="math inline">\(P\)</span>-value</strong> is the probability of getting a test statistic at least as extreme as the one you got, assuming <span class="math inline">\(H_0\)</span> is true. A <span class="math inline">\(P\)</span>-value is calculated by finding the area under the normal distribution curve that is more extreme (farther away from the mean) than the z-score.</li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="navigation" class="section level2">
+<h2>Navigation</h2>
+<center>
+<table style="width:76%;">
+<colgroup>
+<col width="29%" />
+<col width="23%" />
+<col width="23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Previous Reading</strong></th>
+<th align="center"><strong>This Reading</strong></th>
+<th align="center"><strong>Next Reading</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><a href="Lesson06.html">Lesson 6: <br> Distribution of Sample Means &amp; The Central Limit Theorem</a></td>
+<td align="center">Lesson 07: <br> Probability Calculations involving a Mean Response</td>
+<td align="center"><a href="Lesson08.html">Lesson 8: <br> Review for Exam 1</a></td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+
+<br />
+<hr />
+<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

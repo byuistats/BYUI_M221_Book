@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Lesson 23: Inference for Bivariate Data</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 221B</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+    </li>
+    <li>
+      <a href="Lesson04.html">Lesson 4: Rules of Probability</a>
+    </li>
+    <li>
+      <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
+    </li>
+    <li>
+      <a href="Lesson06.html">Lesson 6: The Central Limit Theorem</a>
+    </li>
+    <li>
+      <a href="Lesson07.html">Lesson 7: Probability Calculations for a Sample Mean</a>
+    </li>
+    <li>
+      <a href="Lesson08.html">Lesson 8: Unit 1 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson09.html">Lesson 9: Hypothesis Test for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson10.html">Lesson 10: Confidence Interval for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson11.html">Lesson 11: Inference for One Mean (Sigma Unknown)</a>
+    </li>
+    <li>
+      <a href="Lesson12.html">Lesson 12: Inference for Match Pairs</a>
+    </li>
+    <li>
+      <a href="Lesson13.html">Lesson 13: Inference for Two Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson14.html">Lesson 14: Inference for Several Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson15.html">Lesson 15: Unit 2 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson16.html">Lesson 16: Describing Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson17.html">Lesson 17: Inference for One Proportion</a>
+    </li>
+    <li>
+      <a href="Lesson18.html">Lesson 18: Inference for Two Proportions</a>
+    </li>
+    <li>
+      <a href="Lesson19.html">Lesson 19: Inference for Independence of Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson20.html">Lesson 20: Unit 3 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson21.html">Lesson 21: Describing Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson22.html">Lesson 22: Simple Linear Regression</a>
+    </li>
+    <li>
+      <a href="Lesson23.html">Lesson 23: Inference for Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson24.html">Lesson 24: Unit 4 Review</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="Data.html">Data</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lesson 23: Inference for Bivariate Data</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#lesson-outcomes">Lesson Outcomes</a></li>
+<li><a href="#theory-of-simple-linear-regression">Theory of Simple Linear Regression</a></li>
+<li><a href="#checking-requirements-of-simple-linear-regression">Checking Requirements of Simple Linear Regression</a><ul>
+<li><a href="#scatterplot">Scatterplot</a></li>
+<li><a href="#residuals">Residuals</a></li>
+<li><a href="#residual-plot">Residual Plot</a></li>
+<li><a href="#q-q-plot-of-the-residuals">Q-Q Plot of the Residuals</a></li>
+<li><a href="#requirements-summary">Requirements Summary</a></li>
+</ul></li>
+<li><a href="#hypothesis-test-for-regression-coefficients">Hypothesis Test for Regression Coefficients</a><ul>
+<li><a href="#estuarine-crocodiles">Estuarine Crocodiles</a></li>
+<li><a href="#manatees">Manatees</a></li>
+</ul></li>
+<li><a href="#confidence-intervals-for-regression-coefficients">Confidence Intervals for Regression Coefficients</a><ul>
+<li><a href="#manatees-1">Manatees</a></li>
+<li><a href="#estuarine-crocodiles-1">Estuarine Crocodiles</a></li>
+</ul></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#navigation">Navigation</a></li>
+</ul>
+</div>
+
+<script type="text/javascript">
+ function showhide(id) {
+    var e = document.getElementById(id);
+    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+ }
+</script>
+<div style="float:right;width=40%;">
+<br/>
+<div style="padding-left:10%;">
+<strong>Optional Lesson Video</strong>
+</div>
+<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC8-A6W3DcLXUyoR8x0dpTgs" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+</div>
+<p><br></p>
+<div id="lesson-outcomes" class="section level2">
+<h2>Lesson Outcomes</h2>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="oc" style="display:none;">
+<p>By the end of this lesson, you should be able to:</p>
+<ul>
+<li>Confidence Intervals for the slope of the regression line:</li>
+<li>Calculate and interpret a confidence interval for the slope of the regression line given a confidence level.</li>
+<li>Identify a point estimate and margin of error for the confidence interval.</li>
+<li>Show the appropriate connections between the numerical and graphical summaries that support the confidence interval.</li>
+<li>Check the requirements for the confidence interval.</li>
+<li>Hypothesis Testing for the slope of the regression line:</li>
+<li>State the null and alternative hypothesis.</li>
+<li>Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.</li>
+<li>Assess the statistical significance by comparing the p-value to the Î±-level.</li>
+<li>Check the requirements for the hypothesis test.</li>
+<li>Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test.</li>
+<li>Draw a correct conclusion for the hypothesis test.</li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="theory-of-simple-linear-regression" class="section level2">
+<h2>Theory of Simple Linear Regression</h2>
+<p><img src="Images/line_on_coordinate_plane.jpg"></p>
+<p>When we compute an estimated regression equation, we assume that there is some true equation that describes the relationship between <span class="math inline">\(X\)</span> and the mean value of <span class="math inline">\(Y\)</span>. This equation is unknown to us. In particular, we don’t know what the coefficients are in this equation. In the estimated regression equation, we used <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> to represent the <span class="math inline">\(Y\)</span>-intercept and slope, respectively. These two coefficients are estimates of the unknown regression coefficients in the true equation. We will use the Greek letter <span class="math inline">\(\beta\)</span> (pronounced “beta”) to denote these true unknown coefficients.</p>
+<p>The true regression line is written as: <span class="math display">\[
+\textrm{Expected value of }~Y = \beta_0 + \beta_1 X
+\]</span> where <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are parameters. These are unknown constants representing the true values for the population.</p>
+<p>We know that <span class="math inline">\(Y\)</span> will not fall exactly on this line. There will be some randomness in the observed values of <span class="math inline">\(Y\)</span>. So, we add a term, called the <em>error term</em>, to this equation. This is a random variable, and we denote it by the Greek letter <span class="math inline">\(\epsilon\)</span> (pronounced “epsilon”.) The true regression equation is: <span class="math display">\[
+Y = \beta_0 + \beta_1 X + \epsilon
+\]</span> where <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are parameters, and <span class="math inline">\(\epsilon\)</span> is a (normal) random variable.</p>
+</div>
+<div id="checking-requirements-of-simple-linear-regression" class="section level2">
+<h2>Checking Requirements of Simple Linear Regression</h2>
+<p>In order to do hypothesis tests and confidence intervals using a regression line, we need to be sure that certain conditions are satisfied. There are five requirements for a linear regression model: 1.<span id='linear'><span> There is a linear relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. 2.<span id='normal'><span> The error term (<span class="math inline">\(\epsilon\)</span>) is normally distributed. 3.<span id='const'><span> The variance of the error terms is constant for all values of <span class="math inline">\(X\)</span>. 4.<span id='fixed'><span> The <span class="math inline">\(X\)</span>’s are fixed and measured without error. (In other words, the <span class="math inline">\(X\)</span>’s can be considered as known constants.) 5.<span id='indep'><span> The observations are independent. These must be satisfied in order to conduct a hypothesis test or create confidence intervals involving regression lines.</p>
+<p>We will illustrate the process of checking requirements using the estuarine crocodile data.</p>
+<div id="scatterplot" class="section level3">
+<h3>Scatterplot</h3>
+<p>To check requirement 1, we do two things. The first is to make a scatterplot and to visually check to see if there is a linear relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. This has been referred to as a “hot dog” shape in the data.</p>
+<p>We want to make sure that there is no distinct curvature or other nonlinear characteristics. This is simply a visual check of the data.</p>
+<p>Consider the scatterplot of the estuarine crocodile data <a href="./Data/Estuarine_Crocodile_(Modified).xlsx">EstuarineCrocodile(Modified).xlsx</a>:</p>
+<p><img src="Images/EstuarineCrocodile-Scatterplot-RegLine-SPSS.png"></p>
+<p>Notice how the data follow a linear shape. This data set shows a particularly strong linear relationship. In many cases, the data will show more spread than is illustrated here.</p>
+</div>
+<div id="residuals" class="section level3">
+<h3>Residuals</h3>
+<p>The <em>residual</em> for an observation is defined as the difference between the observed value of <span class="math inline">\(Y\)</span> and the value that would have been predicted by the regression line. As an equation, this is expressed as: <span class="math display">\[
+Residual = Y - \hat Y = Y - (b_0 + b_1 X)
+\]</span></p>
+<p>It is tedious to calculate the residuals by hand, but software can be used to find the residuals.</p>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<!-- {{Software_Filter | PageName=CalculateResiduals }} -->
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p><strong>To find the residuals in Excel, do the following:</strong></p>
+<ul>
+<li>Open <a href="./Data/QuantitativeInferenceProcedures.xlsx">QuantitativeInferenceProcedures.xlsx</a> and click on the “Linear Regression” tab</li>
+<li>Copy and Paste the dependent (or response) variable into the “Response Variable” column (Column B). The dependent variable is also known as the response variable. It is the thing you are trying to predict. Often it is the more difficult/expensive variable to measure.</li>
+<li>Copy and paste the independent (or explanatory) variable into the “explanatory variable” column (Column A).</li>
+<li>Your residuals will then be calculated in column E of the Excel Spreadsheet. <br></li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="residual-plot" class="section level3">
+<h3>Residual Plot</h3>
+<p>The residual is calculated for each data point, so you have one residual for every observation in the data set. It is hard to use so many numbers to make decisions. How do you comprehend so much information at once? To help us understand the information in the residuals, we make what is called a <em>residual plot</em>. A residual plot is a scatterplot where the <span class="math inline">\(X\)</span>-axis shows the independent variable (<span class="math inline">\(X\)</span>) and the <span class="math inline">\(Y\)</span>-axis presents the residuals for each value of <span class="math inline">\(X\)</span>.</p>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<!-- {{Software_Filter | PageName=ResidualPlot }} -->
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p><strong>To make a residual plot in Excel do the following:</strong></p>
+<ul>
+<li>Once you have already entered in the explanatory and response variables into the correct columns in the <a href="./Data/QuantitativeInferenceProcedures.xlsx">QuantitativeInferenceProcedures.xlsx</a> spreadsheet, you are given a column of residuals in column E.<br />
+</li>
+<li>Highlight both column D and E (Explanatory Variable and Residuals)</li>
+<li>Click on the Insert Tab, and then click on “Scatter”. You want the first choice (Scatter with only markers), so select the first scatter plot choice. <br></li>
+</ul>
+</div>
+<p><br></p>
+<p>The following image shows the residual plot for the estuarine crocodile data.</p>
+<p><img src="Images/EstuarineCrocodile-ResidualPlot-SPSS.png"></p>
+<p>This residual plot shows random scatter. There is no obvious pattern in the data. If linear regression is appropriate, then the residual plot will show no patterns and will consist of random scatter. If there is a pattern in the residuals, it suggests that linear regression is not appropriate.</p>
+<p>There are several patterns that could arise in a residual plot:</p>
+<ul>
+<li><strong>Curvature</strong> If the residual plot shows curvature, that suggests that the data are not linearly related.</li>
+<li><strong>Megaphone</strong> A megaphone shape occurs when points tend to be close together on one side of the graph and farther apart on the other side of the graph. If there is a megaphone shape apparent in the residuals, it suggests that the variance of the error terms is not constant for all values of <span class="math inline">\(X\)</span>. It suggests that there is a difference in the spread of the residuals depending on the value of <span class="math inline">\(X\)</span>.</li>
+<li><strong>Outliers</strong> If there are outliers in the residual plot, that suggests that the error terms are not normally distributed. This should also be apparent in the Q-Q plot of the residuals.</li>
+</ul>
+</div>
+<div id="q-q-plot-of-the-residuals" class="section level3">
+<h3>Q-Q Plot of the Residuals</h3>
+<p>Once the residuals have been calculated in Excel, we can assess if they are normally distributed using a Q-Q plot. We simply make a Q-Q plot of the residuals. If the points in the Q-Q plot are close to the line, then we conclude that the residuals are normally distributed.</p>
+<p><img src="Images/EstuarineCrocodile-QQplot-Residuals-SPSS.png"></p>
+<p>The Q-Q plot of the residuals for the estuarine crocodile data show a straight line. We do not have evidence of nonnormality in the residuals. We conclude that the residuals are normally distributed.</p>
+</div>
+<div id="requirements-summary" class="section level3">
+<h3>Requirements Summary</h3>
+<p>The following table describes how to check each of the requirements above.</p>
+<table>
+<thead>
+<tr class="header">
+<th>
+</th>
+<th>
+<p>
+Requirement
+</p>
+</th>
+<th>
+<p>
+How to Check
+</p>
+</th>
+<th>
+<p>
+What you hope to see
+</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>
+<p>
+1.
+</p>
+</td>
+<td>
+<p>
+Linear Relationship
+</p>
+</td>
+<td>
+<p>
+Scatterplot
+</p>
+</td>
+<td>
+<p>
+“Hot dog” shape
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+</td>
+<td>
+</td>
+<td>
+<p>
+Residual Plot
+</p>
+</td>
+<td>
+<p>
+No pattern in the residuals
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+2.
+</p>
+</td>
+<td>
+<p>
+Normal Error Term
+</p>
+</td>
+<td>
+<p>
+Q-Q Plot of the Residuals
+</p>
+</td>
+<td>
+<p>
+Points in the Q-Q plot are close to the line
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+3.
+</p>
+</td>
+<td>
+<p>
+Constant Variance
+</p>
+</td>
+<td>
+<p>
+Residual Plot
+</p>
+</td>
+<td>
+<p>
+No megaphone shape in the residuals
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+<p>
+4.
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(X\)</span>’s are Known<br /> Constants
+</p>
+</td>
+<td>
+<p>
+Cannot be checked directly
+</p>
+</td>
+<td>
+<p>
+<span class="math inline">\(X\)</span>’s should be measured<br /> accurately and precisely
+</p>
+</td>
+</tr>
+<tr class="even">
+<td>
+<p>
+5.
+</p>
+</td>
+<td>
+<p>
+Observations are<br /> Independent
+</p>
+</td>
+<td>
+<p>
+Cannot be checked directly
+</p>
+</td>
+<td>
+<p>
+Knowing the value of one of the <span class="math inline">\(Y\)</span>’s<br /> tells you nothing about any other points
+</p>
+</td>
+</tr>
+<tr class="odd">
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- {| class="basic" style="text-align:left" -->
+<!-- ! !! Requirement                      !! How to Check      !! What you hope to see -->
+<!-- |- -->
+<!-- |1. || Linear Relationship           || Scatterplot || "Hot dog" shape   -->
+<!-- |- -->
+<!-- | ||            || Residual Plot|| No pattern in the residuals  -->
+<!-- |- -->
+<!-- |2. || Normal Error Term             || Q-Q Plot of the Residuals  || Points in the Q-Q plot are close to the line  -->
+<!-- |- -->
+<!-- |3.  || Constant Variance             || Residual Plot              || No megaphone shape in the residuals  -->
+<!-- |- -->
+<!-- |4.  || $X$'s are Known <br> Constants|| Cannot be checked directly || $X$'s should be measured <br> accurately and precisely  -->
+<!-- |- -->
+<!-- |5.  || Observations are <br> Independent|| Cannot be checked directly || Knowing the value of one of the $Y$'s <br> tells you nothing about any other points  -->
+<!-- |- -->
+<!-- |} -->
+<p>If these requirements are met, then it is reasonable to assume that the use of regression with the data is appropriate.</p>
+</div>
+</div>
+<div id="hypothesis-test-for-regression-coefficients" class="section level2">
+<h2>Hypothesis Test for Regression Coefficients</h2>
+<div id="estuarine-crocodiles" class="section level3">
+<h3>Estuarine Crocodiles</h3>
+<p>We want to know if there is a linear relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. To test for this, we need to determine if the slope is different from zero. If the slope is zero, then that suggests that there is no linear relationship between the two variables. If the slope is not zero, that suggests that there is a linear relationship between the two variables.</p>
+<p>The regression output will include all the calculations you need to conduct a hypothesis test for the regression slope:</p>
+<p><img src="Images/SPSS_Estuarine_Croc_Regression_output.PNG"></p>
+<p>In this course, we will test if the true slope is different from zero. If the slope equals zero, then the regression line reduces from: <span class="math display">\[Y = \beta_0 + \beta_1 X + \epsilon\]</span></p>
+<p>to: <span class="math display">\[Y = \beta_0 + \epsilon\]</span></p>
+<p>In other words, the independent variable <span class="math inline">\(X\)</span> does not affect the value of the dependent variable <span class="math inline">\(Y\)</span>.</p>
+<p>The null and alternative hypotheses for this test are: <span class="math display">\[
+\begin{array}{ll}
+H_0: &amp; \beta_1  =  0\\
+H_a: &amp; \beta_1 \ne 0\\
+\end{array}
+\]</span></p>
+<p>We will assume the <span class="math inline">\(0.05\)</span> level of significance.</p>
+<p>The relevant summary statistics include the sample size and the estimated regression equation (<span class="math inline">\(\hat Y = b_0 + b_1 X\)</span>). For the estuarine crocodile data, we get: <span class="math display">\[
+\begin{array}{c}
+n=28 \\
+\hat Y = -18.274 + 7.660 X \\
+\end{array}
+\]</span></p>
+<p>The test statistic follows a <span class="math inline">\(t\)</span>-distribution. We are conducting a test for the slope. The information related to the slope is given in the second row of the “Coefficients” table, which is labeled “Head Length (cm)”. Looking across the second row, we find the value of <span class="math inline">\(t\)</span> is given as 35.588. <span class="math display">\[
+t=35.588
+\]</span></p>
+<p>This is a tremendously large value for t. This indicates that there is a lot of evidence against the null hypothesis.</p>
+<p>The degrees of freedom are given in the ANOVA table in the “Residual” row under the “df” column:</p>
+<p><img src="Images/SPSS_Estuarine_Croc_Regression_output_df.PNG"></p>
+<p>Remember, the <span class="math inline">\(t\)</span> has one number describing its degrees of freedom. The degrees of freedom equals 26 for the estuarine crocodile data. <span class="math display">\[
+df=26
+\]</span></p>
+<p>The <span class="math inline">\(P\)</span>-value is given under the “Sig.” column of the Coefficients table. With a test statistic of <span class="math inline">\(t=35.588\)</span>, we get a very small <span class="math inline">\(P\)</span>-value.</p>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<!-- {{Software_Filter | PageName=EstuarineCrocodilePvalue }} -->
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p>Note that in the output for Excel, the <span class="math inline">\(P\)</span>-value is given in scientific notation. Also note that there are two values under <span class="math inline">\(P\)</span>-value. One is for the slope and the other is for the y-intercept. In this class we will always be looking at the slope, which is the bottom or the “Predictors”. So, our <span class="math inline">\(P\)</span>-value for this test is written as:</p>
+<span class="math display">\[
+P\textrm{-value} = 0.0000000000000000000000107211   
+\]</span>
+<center>
+or as
+</center>
+<p><span class="math display">\[
+1.07211E^-23
+\]</span></p>
+<p>Assuming <span class="math inline">\(\alpha=0.05\)</span>, then <span class="math inline">\(P\textrm{-value} = 1.07211E^-23 &lt; 0.05 = \alpha\)</span>. <br></p>
+</div>
+<p><br></p>
+<p>We reject the null hypothesis, since the <span class="math inline">\(P\)</span>-value is less than the level of significance. There is sufficient evidence to suggest that there is a linear relationship between the head length and the body length of estuarine crocodiles.</p>
+<p>It was appropriate to conduct this analysis, since the requirements of simple linear regression were satisfied.</p>
+</div>
+<div id="manatees" class="section level3">
+<h3>Manatees</h3>
+<p>Here is an excerpt from the output for the <a href="./Data/Manatees.xlsx">Manatees.xlsx</a> data set: <!--<cite>Manatees06</cite>--></p>
+<p><img src="Images/Manatees-RegressionOutput-SPSS.png"></p>
+<p>The null and alternative hypotheses for this test are: <span class="math display">\[
+\begin{array}{ll}
+H_0: &amp; \beta_1  =  0\\
+H_a: &amp; \beta_1 \ne 0\\
+\end{array}
+\]</span></p>
+<p>The relevant summary statistics include the sample size and the estimated regression equation (<span class="math inline">\(\hat Y = b_0 + b_1 X\)</span>). <span class="math display">\[
+\begin{array}{c}
+n=30 \\
+\hat Y = -42.542 + 0.129 X \\
+\end{array}
+\]</span></p>
+<p>The test statistic follows a <span class="math inline">\(t\)</span>-distribution. Remember, we are conducting a test for the slope, so the information we need is given in the second row of the table labeled “Power Boats (in 1000’s)”. Looking across the second row, we find the value of <span class="math inline">\(t\)</span> is given as 15.491. <span class="math display">\[
+t=15.491
+\]</span></p>
+<p>Think about this result. Is this a large or a small value for <span class="math inline">\(t\)</span>? What does this say about the conclusion to our test?</p>
+<p>The degrees of freedom are given in the ANOVA table:</p>
+<p><img src="Images/Manatees-RegressionOutput-SPSS.png"></p>
+<p>Remember, the <span class="math inline">\(t\)</span> has one number describing its degrees of freedom. For this test, the degrees of freedom are listed in the “Residual” row under the “df” column. For the manatees example, the degrees of freedom equals 28. <span class="math display">\[
+df=28
+\]</span></p>
+<p>The <span class="math inline">\(P\)</span>-value is given under the “Sig.” column of the Coefficients table. With a test statistic of <span class="math inline">\(t=15.491\)</span>, we get a very small <span class="math inline">\(P\)</span>-value.</p>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<!-- {{Software_Filter | PageName=ManateePvalue }} -->
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p>Note that in the output for Excel, the <span class="math inline">\(P\)</span>-value is given in scientific notation. Also note that there are two values under <span class="math inline">\(P\)</span>-value. One is for the slope and the other is for the y-intercept. In this class we will always be looking at the slope, which is the bottom or the “Predictors”. So, our <span class="math inline">\(P\)</span>-value for this test is written as:</p>
+<span class="math display">\[
+P\textrm{-value} = 0.000000000000000000105954   
+\]</span>
+<center>
+or as
+</center>
+<p><span class="math display">\[
+1.05954E^-19
+\]</span></p>
+<p>Assuming <span class="math inline">\(\alpha=0.05\)</span>, then <span class="math inline">\(P\textrm{-value} = 1.05954E^-19 &lt; 0.05 = \alpha\)</span>. <br></p>
+</div>
+<p><br></p>
+<p>Our decision rule is to reject the null hypothesis, since the <span class="math inline">\(P\)</span>-value is less than the level of significance. There is sufficient evidence to suggest that there is a linear relationship between the number of powerboats registered in Florida and the number of manatees killed by powerboats. This conclusion fits our intuition. If there are more boats on the water, it seems plausible that this will affect the number of manatees killed. If any statistical conclusion is counterintuitive, you should always be very wary!</p>
+<p><br></p>
+</div>
+</div>
+<div id="confidence-intervals-for-regression-coefficients" class="section level2">
+<h2>Confidence Intervals for Regression Coefficients</h2>
+<div id="manatees-1" class="section level3">
+<h3>Manatees</h3>
+<p>We are often interested in the range of plausible values for the true regression coefficients. We can create a confidence interval for the slope and the <span class="math inline">\(Y\)</span>-intercept in Excel.</p>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<!-- {{Software_Filter | PageName=ManateeCIforRegressionCoefficients }} -->
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p><strong>To find the residuals in Excel, do the following:</strong></p>
+<ul>
+<li>Open <a href="./Data/QuantitativeInferenceProcedures.xlsx">QuantitativeInferenceProcedures.xlsx</a> and click on the “Linear Regression” tab</li>
+<li>Copy and Paste the dependent (or response) variable into the “Response Variable” column (Column B). The dependent variable is also known as the response variable. It is the thing you are trying to predict. Often it is the more difficult/expensive variable to measure.</li>
+<li>Copy and paste the independent (or explanatory) variable into the “explanatory variable” column (Column A).</li>
+<li>You can change the confidence level in cell H3. The default is 95%.<br />
+</li>
+<li>The confidence interval for the slope (X) is found in cells L14 and M14.<br />
+</li>
+<li>The confidence interval for the y-intercept (Y) is found in cells L13 and M13. <br></li>
+</ul>
+</div>
+<p><br></p>
+<p>The confidence intervals will be presented in the Coefficients box in the output.</p>
+<p><img src="Images/Manatees-RegressionOutputCIs-SPSS.png"></p>
+<p>In this case, the 95% confidence interval for the true slope of the regression line relating the number of thousand powerboats registered in Florida to the number of manatees killed is <span class="math inline">\((0.112, 0.146)\)</span>. Remember the slope is the amount that <span class="math inline">\(Y\)</span> is expected to change if <span class="math inline">\(X\)</span> changes by one unit. Also, recall that <span class="math inline">\(X\)</span> is given in terms of thousands of powerboats registered. If an additional one thousand powerboats are registered (one unit increase in <span class="math inline">\(X\)</span>,) we are 95% confident that the number of manatees killed will increase between 0.112 and 0.146. Or in other words, if 100 thousand additional powerboats are registered in Florida, we expect 11.2 to 14.6 manatees will be killed.</p>
+<p>The 95% confidence interval for the <span class="math inline">\(Y\)</span>-intercept is <span class="math inline">\((-55.460, -29.623)\)</span>. We are 95% confident that the expected number of manatees that will be killed if there are zero powerboats registered in Florida is between <span class="math inline">\(-55.5\)</span> and <span class="math inline">\(-29.6\)</span>. This is illogical. There cannot be a negative number of manatees killed. The <span class="math inline">\(Y\)</span>-intercept is not interpretable.</p>
+<p>Sometimes the <span class="math inline">\(Y\)</span>-intercept makes sense in the context of the problem, but in many cases it is just used to get the best fit for the regression equation.</p>
+</div>
+<div id="estuarine-crocodiles-1" class="section level3">
+<h3>Estuarine Crocodiles</h3>
+<p>We can compute a 95% confidence interval for the estuarine crocodile data in a similar manner.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol style="list-style-type: decimal">
+<li>Find a 95% confidence interval for the slope of the regression line relating the head lengths and body lengths of estuarine crocodiles.</li>
+</ol>
+<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q1" style="display:none;">
+<center>
+<span class="math display">\[
+(7.218,~8.103)
+\]</span>
+</center>
+</div>
+<p><br></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Interpret the confidence interval you created in the previous problem.</li>
+</ol>
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<ul>
+<li>We are 95% confident that the true slope of the regression line relating the head length and the body length of estuarine crocodiles is between 7.218 and 8.103. So, we are 95% confident that if the length of the head increases by 1 cm, then the mean increase in the body length is expected to be between 7.218 and 8.103.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+</div>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<div class="SummaryHeading">
+Remember…
+</div>
+<div class="Summary">
+<ul>
+<li><p>The unknown <strong>true linear regression line</strong> is <span class="math inline">\(Y=\beta_0+\beta_1X\)</span> where <span class="math inline">\(\beta_0\)</span> is the true y-intercept of the line and <span class="math inline">\(\beta_1\)</span> is the true slope of the line.</p></li>
+<li><p>A <strong>residual</strong> is the difference between the observed value of <span class="math inline">\(Y\)</span> for a given <span class="math inline">\(X\)</span> and the predicted value of <span class="math inline">\(Y\)</span> on the regression line for the same <span class="math inline">\(X\)</span>. It can be expressed as: <span class="math display">\[
+Residual = Y - \hat Y = Y - (b_0 + b_1 X)
+\]</span></p></li>
+<li><p>To check all the requirements for bivariate inference you will need to create a <strong>scatterplot</strong> of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, a <strong>residual plot</strong>, and a <strong>Q-Q plot of the residuals</strong>.</p></li>
+<li><p>We conduct a hypothesis test on bivariate data to know if there is a linear relationship between the two variables. To determine this, we test the slope (<span class="math inline">\(\beta_1\)</span>) on whether or not it equals zero. The appropriate hypotheses for this test are: <span class="math display">\[
+\begin{array}{1cl}
+H_0: &amp; \beta_1=0 \\
+H_a: &amp; \beta_1\ne0
+\end{array}
+\]</span></p></li>
+<li>For bivariate inference we use software to calculate the sample coefficients, residuals, test statistic, <span class="math inline">\(P\)</span>-value, and confidence intervals of the true linear regression coefficients. <br></li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="navigation" class="section level2">
+<h2>Navigation</h2>
+<center>
+<table style="width:76%;">
+<colgroup>
+<col width="29%" />
+<col width="23%" />
+<col width="23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Previous Reading</strong></th>
+<th align="center"><strong>This Reading</strong></th>
+<th align="center"><strong>Next Reading</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><a href="Lesson22.html">Lesson 22: <br> Simple Linear Regression</a></td>
+<td align="center">Lesson 23: <br> Inference for Bivariate Data</td>
+<td align="center"><a href="Lesson24.html">Lesson 24: <br> Review for Exam 4</a></td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+
+<br />
+<hr />
+<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

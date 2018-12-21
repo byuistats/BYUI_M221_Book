@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Lesson 19</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 221B</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+    </li>
+    <li>
+      <a href="Lesson04.html">Lesson 4: Rules of Probability</a>
+    </li>
+    <li>
+      <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
+    </li>
+    <li>
+      <a href="Lesson06.html">Lesson 6: The Central Limit Theorem</a>
+    </li>
+    <li>
+      <a href="Lesson07.html">Lesson 7: Probability Calculations for a Sample Mean</a>
+    </li>
+    <li>
+      <a href="Lesson08.html">Lesson 8: Unit 1 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson09.html">Lesson 9: Hypothesis Test for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson10.html">Lesson 10: Confidence Interval for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson11.html">Lesson 11: Inference for One Mean (Sigma Unknown)</a>
+    </li>
+    <li>
+      <a href="Lesson12.html">Lesson 12: Inference for Match Pairs</a>
+    </li>
+    <li>
+      <a href="Lesson13.html">Lesson 13: Inference for Two Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson14.html">Lesson 14: Inference for Several Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson15.html">Lesson 15: Unit 2 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson16.html">Lesson 16: Describing Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson17.html">Lesson 17: Inference for One Proportion</a>
+    </li>
+    <li>
+      <a href="Lesson18.html">Lesson 18: Inference for Two Proportions</a>
+    </li>
+    <li>
+      <a href="Lesson19.html">Lesson 19: Inference for Independence of Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson20.html">Lesson 20: Unit 3 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson21.html">Lesson 21: Describing Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson22.html">Lesson 22: Simple Linear Regression</a>
+    </li>
+    <li>
+      <a href="Lesson23.html">Lesson 23: Inference for Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson24.html">Lesson 24: Unit 4 Review</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="Data.html">Data</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lesson 19</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#lesson-outcomes">Lesson Outcomes</a></li>
+<li><a href="#the-chi2-chi-squared-test-of-independence">The <span class="math inline">\(\chi^2\)</span> (Chi-squared) Test of Independence</a><ul>
+<li><a href="#requirements">Requirements</a></li>
+</ul></li>
+<li><a href="#reasons-for-seeking-chiropractic-care">Reasons for Seeking Chiropractic Care</a></li>
+<li><a href="#other-considerations">Other considerations</a><ul>
+<li><a href="#swapping-the-row-and-column-variables">Swapping the Row and Column Variables</a></li>
+<li><a href="#why-h_a-is-worded-as-it-is">Why <span class="math inline">\(H_a\)</span> is Worded As It Is</a></li>
+<li><a href="#no-confidence-intervals">No Confidence Intervals</a></li>
+</ul></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#navigation">Navigation</a></li>
+</ul>
+</div>
+
+<script type="text/javascript">
+ function showhide(id) {
+    var e = document.getElementById(id);
+    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+ }
+</script>
+<div style="float:right;width=40%;">
+<br/>
+<div style="padding-left:10%;">
+<strong>Optional Lesson Video</strong>
+</div>
+<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9acEfJHNYCs9N93R2CJ8zB" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+</div>
+<div id="lesson-outcomes" class="section level2">
+<h2>Lesson Outcomes</h2>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="oc" style="display:none;">
+<p>By the end of this lesson, you should be able to:</p>
+<ul>
+<li>Hypothesis Testing for a Test of independence for categorical data:</li>
+<li>State the null and alternative hypothesis for the chosen test.</li>
+<li>Calculate the test-statistic, df and p-value of the hypothesis test.</li>
+<li>Assess the statistical significance by comparing the p-value to the Î±-level.</li>
+<li>Check the requirements for the hypothesis test.</li>
+<li>Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test.</li>
+<li>Draw a correct conclusion for the hypothesis test.</li>
+<li>Hypothesis Testing for a goodness of fitness test:</li>
+<li>State the null and alternative hypothesis for the chosen test.</li>
+<li>Calculate the test-statistic, df and p-value of the hypothesis test.</li>
+<li>Assess the statistical significance by comparing the p-value to the Î±-level.</li>
+<li>Check the requirements for the hypothesis test.</li>
+<li>Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test.</li>
+<li>Draw a correct conclusion for the hypothesis test.</li>
+</ul>
+</div>
+<p><br></p>
+<!-- -------------------------- BEGIN HIDDEN COMMENTED SECTION --------------------------
+
+
+## Introduction
+In this section, we will explore three different, but related hypothesis tests. We will not compute confidence intervals for these tests. 
+The first test we will consider is a test for several proportions.  This is used when one categorical variable is measured on units (i.e. subjects) within several populations or treatment groups.  The test for two proportions measures a categorical variable that can take one of two values for subjects in two populations.  The test for several proportions is the natural extension of the test for two proportions.  With this test, we measure a categorical variable across several proportions.
+
+Next, we will explore a test for independence of two categorical variables.  This procedure applies when two categorical variables are measured on each subject.  This test is used to determine whether there is a relationship between the two variables.
+
+Lastly, we will study a test to determine whether the values of a categorical variable follow a specified distribution.
+
+The three tests are related in that they rely in much the same way on frequencies. We can't do arithmetic with categorical data for the purpose of calculating a test statistic, like we can with numeric data. Our only recourse is to convert categorical data into numbers from which a test statistic *can* be calculated. Frequencies can be used for this purpose.
+
+## The $\chi^2$ (Chi-square) Test for Several Proportions
+### Nurses' Weight Loss
+Dr. Bruce Zitkus, an advanced practice registered nurse, conducted a study in which a convenience sample of 721 registered nurses were 
+{| class="basic"  width="60%"
+|- 
+! || colspan="6"| Weight Loss Regimen 
+|- 
+! Outcome || Diet || Exercise || Social <br> Interaction  || Medication
+|- align="center"
+! Helpful 
+| 71 || 121 || 12 || 17 
+|- align="center"
+! Not helpful 
+| 278 || 291 || 22 || 44 
+|- 
+|} 
+-------------------------- END HIDDEN COMMENTED SECTION -------------------------- -->
+</div>
+<div id="the-chi2-chi-squared-test-of-independence" class="section level2">
+<h2>The <span class="math inline">\(\chi^2\)</span> (Chi-squared) Test of Independence</h2>
+<p><img src="Images/oc-chiropractor.jpg"></p>
+<p>People often wonder whether two things influence each other. For example, people seek chiropractic care for different reasons. We may want to know if those reasons are different for Europeans than for Americans or Australians. This question can be expressed as “Do reasons for seeking chiropractic care depend on the location in which one lives?”</p>
+<p>This question has only two possible answers: “yes” and “no.” The answer “no” can be written as “Motivations for seeking chiropractic care and one’s location are independent.” (The statistical meaning of “independent” is too technical to give here. However, for now, you can think of it as meaning that the two variables are not associated in any way. For example, neither variable depends on the other.) Writing the answer “no” this way allows us to use it as the null hypothesis of a test. We can write the alternative hypothesis by expressing the answer “yes” as “Motivations for seeking chirporactic care and one’s location are not independent.” (Reasons for wording it this way will be given after you’ve been through the entire hypothesis test.)</p>
+<p>To prepare for the hypothesis test, recall that our hyopthesis tests always measure how different two or more things are. For example, in the 2-sample <span class="math inline">\(t\)</span>-test, we compare two population means by seeing how different they are. In a test of one proportion, we measure the difference between a sample proportion and a population proportion. Each of these tests requires some information about at least one parameter. That information is given in the null hypothesis of the test, which we’ve always been able to write with one or more “=” signs, because we’ve always used numeric parameters.</p>
+<p>Unfortunately, we have no parameter we can use measure the independence of the variables “location” and “motivation”. Nevertheless, we have to be able to calculate a <span class="math inline">\(P\)</span>-value, and the only approach we have so far is to measure differences between things. “Difference” means “subtraction” in Statistics, and if the measurements are categorical, we cannot subtract them. Therefore, as in the other lessons of this unit, we will count occurences of each value of each variable to get some numbers. (The example that follows will show how this is handled.) The numbers we get will be called “counts” or “observed counts”.</p>
+<p>When we have our observed counts in hand, software will calculate the counts we should <em>expect</em> to see, <em>if the null hypothesis is true.</em> We call these the “expected counts.” The software will then subtract the observed counts from the expected counts and combine these differences to create a single number that we can use to get a <span class="math inline">\(P\)</span>-value. That single number is called the <span class="math inline">\(\chi^2\)</span> test statistic. (Note that <span class="math inline">\(\chi\)</span> is a Greek letter, and its name is “ki”, as in “kite”. The symbol <span class="math inline">\(\chi^2\)</span> should be pronounced “ki squared,” but many people pronounce it “ki-square.”)</p>
+<p>In this course, software will calculate the <span class="math inline">\(\chi^2\)</span> test statistic for you, but you need to understand that the <span class="math inline">\(\chi^2\)</span> test statistic compares the observed counts to the expected counts—that is, to the counts we should expect to get if the null hypothesis is true. The larger the <span class="math inline">\(\chi^2\)</span> test statistic is, the smaller the <span class="math inline">\(P\)</span>-value will be. If the <span class="math inline">\(\chi^2\)</span> test statistic is large enough that the <span class="math inline">\(P\)</span>-value is less than <span class="math inline">\(\alpha\)</span>, we will conclude that the observed counts and expected counts are too different for the null hypothesis to be plausible, and will therefore reject <span class="math inline">\(H_0\)</span>. Otherwise, we will fail to reject <span class="math inline">\(H_0\)</span>, as always.</p>
+<p>For organizational reasons, counts are traditionally arranged in a table called a “contingency table.” One variable is chosen as the “row variable,” so called because its values are the row headers for the table. The other variable is called the “column variable,” because its values are the column headers. Different <span class="math inline">\(\chi^2\)</span> distributions are distinguished by the number of degrees of freedom, which are determined by the number of rows and columns in the table:</p>
+<p><span class="math display">\[df = (\text{number of rows }-1)(\text{number of columns }-1)\]</span></p>
+<p>Note that the number of degrees of freedom does not depend on the number of subjects in the study.</p>
+<div id="requirements" class="section level3">
+<h3>Requirements</h3>
+<p>The following requirements must be met in order to conduct a <span class="math inline">\(\chi^2\)</span> test of independence: 1. You must use simple random sampling to obtain a sample from a single population. 2. Each expected count must be greater than or equal to 5.</p>
+<p>Let’s walk through the rest of the chiropractic care example.</p>
+<p><br></p>
+</div>
+</div>
+<div id="reasons-for-seeking-chiropractic-care" class="section level2">
+<h2>Reasons for Seeking Chiropractic Care</h2>
+<p>A study was conducted to determine why patients seek chiropractic care<!--<cite>Blum08</cite>-->. Patients were classified based on their location and their motivation for seeking treatment. Using descriptions developed by Green and Krueter, patients were asked which of the five reasons led them to seek chiropractic care <!--<cite>Blum08,Green99</cite>-->:</p>
+<ul>
+<li><em>Wellness</em>: defined as optimizing health among the self-identified healthy</li>
+<li><em>Preventive health</em>: defined as preventing illness among the self-identified healthy</li>
+<li><em>At risk</em>: defined as preventing illness among the currently healthy who are at heightened risk to develop a specific condition</li>
+<li><em>Sick role</em>: defined as getting well among those self-perceived as ill with an emphasis on therapist-directed treatment</li>
+<li><em>Self care</em>: defined as getting well among those self-perceived as ill favoring the use of self vs. therapist directed strategies</li>
+</ul>
+<p>The data from the study are summarized in the following contingency table <!--<cite>Blum08</cite>-->:</p>
+<table>
+<caption><strong>Motivation</strong></caption>
+<colgroup>
+<col width="19%" />
+<col width="13%" />
+<col width="15%" />
+<col width="12%" />
+<col width="14%" />
+<col width="14%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Location</th>
+<th>Wellness</th>
+<th>Preventive Health</th>
+<th>At Risk</th>
+<th>Sick Role</th>
+<th>Self Care</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Europe</p></td>
+<td><p>23</p></td>
+<td><p>28</p></td>
+<td><p>59</p></td>
+<td><p>77</p></td>
+<td><p>95</p></td>
+<td><p>282</p></td>
+</tr>
+<tr class="even">
+<td><p>Australia</p></td>
+<td><p>71</p></td>
+<td><p>59</p></td>
+<td><p>83</p></td>
+<td><p>68</p></td>
+<td><p>188</p></td>
+<td><p>469</p></td>
+</tr>
+<tr class="odd">
+<td><p>United States</p></td>
+<td><p>90</p></td>
+<td><p>76</p></td>
+<td><p>65</p></td>
+<td><p>82</p></td>
+<td><p>252</p></td>
+<td><p>565</p></td>
+</tr>
+<tr class="even">
+<td><p>Total</p></td>
+<td><p>184</p></td>
+<td><p>163</p></td>
+<td><p>207</p></td>
+<td><p>227</p></td>
+<td><p>535</p></td>
+<td><p>1316</p></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- {| class="basic" style="text-align:center" -->
+<!-- |+ **Motivation** -->
+<!-- ! Location || Wellness || Preventive<br>Health || At Risk || Sick Role || Self Care || Total -->
+<!-- |- -->
+<!-- !Europe     -->
+<!-- |             23       || 28                   || 59      || 77        || 95        || 282  -->
+<!-- |- -->
+<!-- !Australia        -->
+<!-- |             71       || 59                   || 83      || 68        || 188       || 469  -->
+<!-- |- -->
+<!-- !United States    -->
+<!-- |             90       || 76                   || 65      || 82        || 252       || 565 -->
+<!-- |- -->
+<!-- !Total  -->
+<!-- |             184  || 163              || 207 || 227   || 535   || 1316  -->
+<!-- |- -->
+<!-- |} -->
+<p>The research question was whether people’s motivation for seeking chiropractic care was independent of their location: Europe, Australia, or the United States. The hypothesis test used to address this question was the chi-squared (<span class="math inline">\(\chi^2\)</span>) test of independence. (Recall that the Greek letter <span class="math inline">\(\chi\)</span> is pronounced, “ki” as in “kite.”)</p>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<!-- {{Software_Filter | PageName=TestForIndependence-ChiropracticCare-DataEntry }} -->
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<ul>
+<li>In the Excel sheet <a href="./Data/CategoricalDataAnalysis_Hat.xlsx">CategoricalDataAnalysis.xlsx</a>, go to the third tab on the file. This tab, entitled “Chi-Square”, will allow you to perform tests for independence. Excel allows us to enter data in the same way as the table above, so enter the data in the following manner on the excel sheet:</li>
+</ul>
+<p><img src="Images/Excel-Chi-Square-Filled-Out.png"></p>
+<ul>
+<li>Note: The boxes without data are left blank; entering zeros will cause unintended results. <br></li>
+</ul>
+</div>
+<p><br></p>
+<p>The null and alternative hypotheses for this chi-squared test of independence are: <span class="math display">\[
+\begin{array}{rl}
+H_0\colon &amp; \text{The location and the motivation for seeking treatment are independent} \\
+H_a\colon &amp; \text{The location and the motivation for seeking treatment are not independent} \\
+\end{array}
+\]</span></p>
+<p>Note: When speaking of the hypotheses in the absence of a context, we can write them in the form <span class="math display">\[
+\begin{array}{rl}
+H_0\colon &amp; \text{The row variable and the column variable are independent} \\
+H_a\colon &amp; \text{The row variable and the column variable are not independent.} \\
+\end{array}
+\]</span> But when there’s a context, please make sure you write your hypotheses in terms of the context.</p>
+<p>If the row and column variable are independent, then no matter which row you consider, the proportion of observations in each column should be roughly the same. For example, if motivation for seeking chiropractic care is independent of location, then the proportion of people who seek chiropractic care for, say, wellness will be approximately the same in each row. That is, it will be approximately the same for Australians, Europeans, and Americans.</p>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<!-- {{Software_Filter | PageName=TestForIndependence-ChiropracticCare-Calculations }} -->
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<ul>
+<li>After entering the data correctly into <a href="./Data/CategoricalDataAnalysis_Hat.xlsx">CategoricalDataAnalysis.xlsx</a>, the Chi-Square statistic, degrees of freedom, and <span class="math inline">\(P\)</span>-value are all displayed in the top right of the excel sheet. The data for this example will look like:</li>
+</ul>
+<p><img src="Images/Excel-Chi-Square-Results.png"></p>
+<ul>
+<li><p>If we reject the null hypothesis, we state, “There is sufficient evidence to suggest that (restate the alternative hypothesis.)” If we failed to reject the null hypothesis, we would replace the word, “sufficient” with “insufficient.”</p></li>
+<li>The requirement for this test is that the sample size is sufficiently large. Another requirement is that no cells have expected counts less than 5. At the bottom left of the excel sheet, we check that 0 cells have expected counts less than 5. If this is true, then we can conclude that the requirements of the test are satisfied. <br></li>
+</ul>
+</div>
+<p><br></p>
+<p>For the chiropractic data set, the analysis would be conducted as follows <!--[To do: Flesh this out a bit]:--></p>
+<p><strong>Background:</strong></p>
+<ul>
+<li>Context of the study: The population of interest consisted of chiropractic patients in three locations: Australia, Europe, and the United States. The objective was to determine whether reasons for seeking chiropractic care are different in the different locations.</li>
+<li>Research question: Is a patient’s location independent of their motivation for seeking treatment? In other words, do people in Australia, Europe, and the United States seek chiropractic care for the same reasons?</li>
+<li>Data collection procedures: Upon check-in at their visit, patients were provided a brief questionnaire regarding the reason they were seeking care. Responses were categorized and tabulated. (Note that the table contains statistics (frequencies) that describe the patients in the sample.)</li>
+</ul>
+<p><br></p>
+<p><strong>Descriptive statistics:</strong></p>
+<table>
+<caption><strong>Motivation</strong></caption>
+<colgroup>
+<col width="19%" />
+<col width="13%" />
+<col width="15%" />
+<col width="12%" />
+<col width="14%" />
+<col width="14%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Location</th>
+<th>Wellness</th>
+<th>Preventive Health</th>
+<th>At Risk</th>
+<th>Sick Role</th>
+<th>Self Care</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Europe</p></td>
+<td><p>23</p></td>
+<td><p>28</p></td>
+<td><p>59</p></td>
+<td><p>77</p></td>
+<td><p>95</p></td>
+<td><p>282</p></td>
+</tr>
+<tr class="even">
+<td><p>Australia</p></td>
+<td><p>71</p></td>
+<td><p>59</p></td>
+<td><p>83</p></td>
+<td><p>68</p></td>
+<td><p>188</p></td>
+<td><p>469</p></td>
+</tr>
+<tr class="odd">
+<td><p>United States</p></td>
+<td><p>90</p></td>
+<td><p>76</p></td>
+<td><p>65</p></td>
+<td><p>82</p></td>
+<td><p>252</p></td>
+<td><p>565</p></td>
+</tr>
+<tr class="even">
+<td><p>Total</p></td>
+<td><p>184</p></td>
+<td><p>163</p></td>
+<td><p>207</p></td>
+<td><p>227</p></td>
+<td><p>535</p></td>
+<td><p>1316</p></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- {| class="basic" style="text-align:center" -->
+<!-- |+ **Motivation** -->
+<!-- ! Location || Wellness || Preventive<br>Health || At Risk || Sick Role || Self Care || Total -->
+<!-- |- -->
+<!-- !Europe     -->
+<!-- |             23       || 28                   || 59      || 77        || 95        || 282  -->
+<!-- |- -->
+<!-- !Australia        -->
+<!-- |             71       || 59                   || 83      || 68        || 188       || 469  -->
+<!-- |- -->
+<!-- !United States    -->
+<!-- |             90       || 76                   || 65      || 82        || 252       || 565  -->
+<!-- |- -->
+<!-- !Total  -->
+<!-- |             184  || 163              || 207 || 227   || 535   || 1316 -->
+<!-- |- -->
+<!-- |} -->
+<p><strong>Inferential statistics:</strong></p>
+<ul>
+<li>The appropriate hypothesis test is the chi-squared test for independence.</li>
+<li>The requirement that the expected counts are at least 5 in each cell are met. (This is given in the output.)</li>
+<li>Conduct hypothesis test</li>
+</ul>
+<p><span class="math inline">\(~~~~~H_0\colon\)</span> Location and the motivation to visit a chiropractor are independent.</p>
+<p><span class="math inline">\(~~~~~H_a\colon\)</span> Location and the motivation to visit a chiropractor are not independent.</p>
+<ul>
+<li>Let <span class="math inline">\(\alpha=0.05\)</span>.</li>
+<li>The test statistic is: <span class="math inline">\(\chi^2 = 49.743\)</span>, with <span class="math inline">\(df=8\)</span>.</li>
+</ul>
+<!--:*Sketch of the sampling distribution of $\chi^2$: (Draw a right skewed distribution that looks somewhat like an $F$.)-->
+<ul>
+<li>The <span class="math inline">\(P\)</span>-value is rounded to .000 in the output. Double-clicking twice on this value gives the actual <span class="math inline">\(P\)</span>-value: <span class="math inline">\(P\textrm{-value} = 4.58 \times 10^{-8} &lt; 0.05 = \alpha\)</span></li>
+<li>Decision: Reject the null hypothesis.</li>
+<li>Conclusion: There is sufficient evidence to suggest that the motivation to visit a chiropractor is not independent of the location.</li>
+</ul>
+<!--The following observation really needs to be supported by an appropriate table of percentages or a clustered bar chart, or something.-->
+<!--:*Further discussion: <br> People in these three locations evidently have different reasons for seeking chiropractic care. It appears that individuals in Europe are much more likely to seek chiropractic care in the sick role than individuals in the United States and Australia. The Europeans are also less likely to visit a chiropractor for wellness reasons.-->
+<p><br></p>
+</div>
+<div id="other-considerations" class="section level2">
+<h2>Other considerations</h2>
+<div id="swapping-the-row-and-column-variables" class="section level3">
+<h3>Swapping the Row and Column Variables</h3>
+<p>There is no general guideline for deciding which variable is the row variable and which variable is the column variable in a <span class="math inline">\(\chi^2\)</span> test of independence. To see why not, complete the questions that follow.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol style="list-style-type: decimal">
+<li>Re-do the <span class="math inline">\(\chi^2\)</span> test of independence for the chiropractic care data, but use “Motivation” as the row variable. Then compare the degrees of freedom, <span class="math inline">\(\chi^2\)</span> test statistic, and <span class="math inline">\(P\)</span>-value of this test, with the degrees of freedom, <span class="math inline">\(\chi^2\)</span> test statistic, and <span class="math inline">\(P\)</span>-value for the test conducted above, when “Location” was the row variable.</li>
+</ol>
+<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q1" style="display:none;">
+<ul>
+<li>In both tests, <span class="math inline">\(df = 8\)</span>, <span class="math inline">\(\chi^2 = 49.743\)</span>, and the <span class="math inline">\(P\)</span>-value is <span class="math inline">\(4.58 \times 10^{-8} &lt; 0.05 = \alpha\)</span>. They are the same for both tests.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="2" style="list-style-type: decimal">
+<li>What do you conclude about swapping the row and column variables in a <span class="math inline">\(\chi^2\)</span> test of independence?</li>
+</ol>
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<ul>
+<li>Swapping the row and column variables in a <span class="math inline">\(\chi^2\)</span> test of independence does not change the conclusion of the test.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p>There may be no general guideline for deciding which variable is the row variable, but the graphics produced by your software may depend on this decision. For example, Excel will give you a different clustered bar chart when you use “Location” as the row variable than when you use “Motivation” as the row variable.</p>
+</div>
+<div id="why-h_a-is-worded-as-it-is" class="section level3">
+<h3>Why <span class="math inline">\(H_a\)</span> is Worded As It Is</h3>
+<p>Recall that in the chiropractic care example, the hypotheses for the <span class="math inline">\(\chi^2\)</span> test of independence were</p>
+<p><span class="math inline">\(H_0\colon\)</span> Location and the motivation to visit a chiropractor are independent. <span class="math inline">\(H_a\colon\)</span> Location and the motivation to visit a chiropractor are not independent.</p>
+<p>You may wonder why we don’t write “<span class="math inline">\(H_a\colon\)</span> The motivation to visit a chiropractor depends on location.” Well, couldn’t we say just as easily that location depends on the motivation to visit a chiropractor? It may seem a little strange when phrased this way. Let’s use the following exercises to look briefly at a somewhat less strange example, then return to this example.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="3" style="list-style-type: decimal">
+<li>Suppose you want to know whether a student’s stress level and the degree to which they feel a need to succeed are independent. What should your hypotheses be?</li>
+</ol>
+<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q3" style="display:none;">
+<ul>
+<li><span class="math inline">\(H_0\colon\)</span> Stress level and the need to succeed are independent.</li>
+<li><span class="math inline">\(H_a\colon\)</span> Stress level and the need to succeed are not independent.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="4" style="list-style-type: decimal">
+<li>For their alternative hypothesis, a student erroneously writes “<span class="math inline">\(H_a\colon\)</span> Stress level depends on the need to succeed.” If they reject <span class="math inline">\(H_0\)</span>, what will they conclude?</li>
+</ol>
+<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q4" style="display:none;">
+<ul>
+<li>They will conclude that a student’s stress level depends on their need to succeed.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="5" style="list-style-type: decimal">
+<li>Another student erroneously writes “<span class="math inline">\(H_a\colon\)</span> Need to succeed depends on stress levels.” If they reject <span class="math inline">\(H_0\)</span>, what will they conclude?</li>
+</ol>
+<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q5" style="display:none;">
+<ul>
+<li>They will conclude that the degree to which a student feels a need to succeed depends on their stress level.</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Could it be that a student’s need to succeed depends on their stress level? Could it be that their stress level depends on their need to succeed? How can the <span class="math inline">\(\chi^2\)</span> test of independence distinguish between these two possibilities?</li>
+</ol>
+<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q6" style="display:none;">
+<ul>
+<li><p>Students that feel a more intense need to succeed than others might very well experience higher stress levels. Likewise, a student who feels their stress levels rising might subconsiously feel that success will decrease their stress level, which could result in their feeling an increased need to succed.</p></li>
+<li><p>The <span class="math inline">\(\chi^2\)</span> test statistic and the <span class="math inline">\(P\)</span>-value will be the same, whether we write down the correct alternative hypothesis or one of the two erroneous ones mentioned above. The <span class="math inline">\(\chi^2\)</span> test of independence is not capable of telling whether stress levels depend on the need to succeed or whether the need to succeed depends on the stress level.</p></li>
+<li><p>If swapping the row and column variables made a difference in the outcome of the hypothesis test, then the test might be able to tell which variable depends on the other. But swapping the row and column variables does not change the outcome of the test.</p></li>
+<li>The full truth is worse than this: It may be that one’s need to succed and one’s stress level depend on each other. It may be that neither depends on the other, but that both depend on something else, in a way that makes it look like they depend on each other. The <span class="math inline">\(\chi^2\)</span> test of independence is incapable of distinguishing among the many possible kinds of dependence.</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p><br></p>
+<p>According to the exercises you just did, we are not justified in writing an alternative hypothesis that specifies which variable depends on which. Could we write “<span class="math inline">\(H_a\colon\)</span> Stress level and need to succed are dependent”? After all, “independent” and “dependent” are opposites, aren’t they? This may seem reasonable, but we have to be careful of the technical terms. Statisticians have gone to some trouble to carefully define “independent.” They have not defined “dependent.” (As suggested by the exercises you just did, dependence is complicated, perhaps too complicated to be able to be defined conveniently.) They use the phrase “not independent” as the opposite of “independent.” So will we, writing “<span class="math inline">\(H_a\colon\)</span> Stress level and need to succeed are not independent.”</p>
+<p>Likewise, in the chiropractic care example, we can’t say in the alternative hypothesis that location depends on motivation, nor that motivation depends on location, nor that each depends on the other, nor that both depend on something else, nor that location and motivation are dependent. Instead, we write “<span class="math inline">\(H_a\colon\)</span> The location and the motivation for seeking treatment are not independent,” as statisticians do. <!--
+
+## The $\chi^2$ (Chi-squared) Goodness of Fit Test
+This test is used to compare the observed counts of two or more categories to the expected counts for those same categories. For example, the Mars company claims that the colors of M&Ms are distributed as follows: 24% Blue, 13% Brown, 16% Green, 20% Orange, 13% Red, 14% Yellow. (see http://joshmadison.com/2007/12/02/mms-color-distribution-analysis/) These are the expected proportions (not counts). In a bag of $200$ M&Ms, the expected number of Blue M&Ms is $48$, the expected number of Brown M&Ms is $26$, etc.
+
+To verify the Mars company claim, you could buy several bags of M&Ms and count the number of each color. These would be the observed counts. The $\chi^2$ (Chi-squared) Goodness of Fit Test can be used to compare the expected counts to the observed counts and decide if they are similar or not.
+
+The test is based on the $\chi^2$ statistic that is defined here:
+
+$\chi^2 = \Sigma \frac{(Observed - Expected)^2}{Expected}$
+
+The $\chi^2$ statistic can be used to conduct a hypothesis test.
+
+We illustrate this test using a Sudden Infant Death Syndrome (SIDS) study conducted in King County Washington. The research question in this study was, "Do SIDS deaths occur uniformly across all four seasons?" We will conduct this hypothesis test using a level of significance $\alpha = 0.05$. The null hypothesis is that the answer to this question is, "Yes." So the null and alternative hypotheses can be expressed as follows.
+
+$H_0:$ SIDS deaths are equally likely in winter, spring, summer, and fall
+$H_a:$ SIDS deaths are not equally likely in winter, spring, summer, and fall
+
+The number if SIDS deaths that occurred during the observation period in each season were: 78 (winter), 71 (spring), 87 (summer), 86 (fall). The total number of deaths is $78 + 71 + 87 + 86 = 322$. So the expected number of SIDS deaths in each season is $322/4 = 80.5$.
+
+Then $\chi^2 = \frac{(78 - 80.5)^2}{80.5} + \frac{(71 - 80.5)^2}{80.5} + \frac{(87 - 80.5)^2}{80.5} + \frac{(86 - 80.5)^2}{80.5} = 2.1$.
+
+The sample data (observed values) and the the expected counts are summarized in this table.
+
+<center>
+{| class="basic" style="text-align:center"
+! Season || Winter || Spring || Summer || Fall
+|-
+! Expected Proportion ||  80.5 || 80.5 || 80.5 || 80.5 
+|-
+! Observed Count || 78 || 71 || 87 || 86
+|-
+|}
+</center>
+
+The degrees of freedom $df$ equals the number of categories minus one or $df = 4 - 1 = 3$. The $P$-value is the probability that $\chi^2$ is greater then the observed value of the test statistic, or $P(\chi^2 > 2.1)$. This probability is the area under the curve to the right of $2.1$ of a $\chi^2$ distribution curve, illustrated here.
+
+insert graphic
+
+In this case, the $P$-value = 0.5519. Since the $P$-value = 0.5519 > 0.05 = $\alpha$, we fail to reject the null hypothesis. This means there is not enough evidence to conclude that the proportion of SIDS deaths is different from one season to another.
+
+
+See - http://wiener.math.csi.cuny.edu/Statistics/R/simpleR/stat013.html
+
+
+Another example: The letter distribution of the 5 most popular letters in the English language is known to be approximately
+
+<center>
+{| class="basic" style="text-align:center"
+! Letter || E || T || N || R || O
+|-
+! Frequency ||  29 || 21 || 17 || 17 || 16 
+|-
+|}
+</center>
+
+That is, when either E, T, N, R, O appear, on average 29 times out of 100 it is an E and not the other 4. This information is useful in cryptography to break some basic secret codes.
+
+We want to test the null hypothesis against the alternative hypothesis as follows.
+
+$H_0:$ The frequency of E, T, N, R, O is consistent with English
+$H_a:$ The frequency of E, T, N, R, O is not consistent with English
+
+A text of  unknown origin is analyzed and the number of E, T, N, R, and O's is counted. The following distribution is found.
+
+<center>
+{| class="basic" style="text-align:center"
+! Letter || E || T || N || R || O
+|-
+! Count ||  100 || 110 || 80 || 55 || 14 
+|-
+|}
+</center>
+
+We now do a chi-square goodness of fit hypothesis test to see if the letter frequencies for this text are consistent with the English language or not.
+
+The chi-squared test requires the independence of each letter, which is not quite true in most languages. Even so, this type of analysis reveals valuable insights.
+
+In this case $\chi^2 = 55.3955$, $df = 4$, and the $P$-value = 2.685e-11. Remember, the $P$-value is the probability of obtaining a test statistic at least as extreme as the one you calculated, assuming the null hypothesis is true. Since the $P$-value is effectively 0, it is very unlikely that this text is written in English.
+
+Remark: need to add Excel and SPSS instructions.
+
+--></p>
+</div>
+<div id="no-confidence-intervals" class="section level3">
+<h3>No Confidence Intervals</h3>
+<p>We do not calculate confidence intervals when working with contingency tables. Think about it: With three rows and five columns in the table for the chiropractic care example, there are 15 proportions, which means there would be 105 pairs of proportions to compare. How could we possibly interpret a collection of 105 confidence intervals? Also, if our confidence level is 95%, we would expect that about 5 of our confidence intervals would not contain the true difference between proportions, but we wouldn’t know which ones. Rather than take the risks this would cause, the Statistics culture has agreed not to calculate confidence intervals for contingency tables.</p>
+<!-- TO-DO LIST
+
+## To-do list for the authors of this wiki
+- Make sure all the vocabulary is defined.
+- Add another example.
+- Test of several proportions?
+- Goodness-of-fit tests
+- Lesson summary
+- Add an optional section that shows how the $\chi^2$ statistic is calculated.
+
+-->
+<p><br></p>
+</div>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<div class="SummaryHeading">
+Remember…
+</div>
+<div class="Summary">
+<ul>
+<li><p>The <strong><span class="math inline">\(\chi^2\)</span> hypothesis test</strong> is a test of independence between two variables. These variables are either associated or they are not. Therefore, the null and alternative hypotheses are the same for every test: <span class="math display">\[
+\begin{array}{1cl}
+H_0: &amp; \text{The (first variable) and the (second variable) are independent.} \\
+H_a: &amp; \text{The (first variable) and the (second variable) are not independent.}
+\end{array}
+\]</span></p></li>
+<li><p>The <strong>degrees of freedom (<span class="math inline">\(df\)</span>)</strong> for a <span class="math inline">\(\chi^2\)</span> test of independence are calculated using the formula <span class="math inline">\(df=(\text{number of rows}-1)(\text{number of columns}-1)\)</span></p></li>
+<li>In our hypothesis testing for <span class="math inline">\(\chi^2\)</span> we never conclude that two variables are <em>dependent</em>. Instead, we say that two variables are <em>not independent</em>. <br></li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="navigation" class="section level2">
+<h2>Navigation</h2>
+<center>
+<table style="width:76%;">
+<colgroup>
+<col width="29%" />
+<col width="23%" />
+<col width="23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Previous Reading</strong></th>
+<th align="center"><strong>This Reading</strong></th>
+<th align="center"><strong>Next Reading</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><a href="Lesson18.html">Lesson 18: <br> Inference for Two Proportions</a></td>
+<td align="center">Lesson 19: <br> Inference for Independence of Categorical Data</td>
+<td align="center"><a href="Lesson20.html">Lesson 20: <br> Review for Exam 3</a></td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+
+<br />
+<hr />
+<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
