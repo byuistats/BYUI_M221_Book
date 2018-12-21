@@ -1,77 +1,74 @@
-name: Math 221B-Biostatistics
-output_dir: docs
+name: "Math 221B-Biostatistics"
+output_dir: 'docs'
 navbar:
-  title: Math 221B
+  title: "Math 221B"
   left:
-  - text: Home
-    href: index.html
-  - text: Unit 1
-    menu:
-    - text: 'Lesson 1: Course Introduction'
-      href: Lesson01.html
-    - text: 'Lesson 2: The Statistical Process'
-      href: Lesson02.html
-    - text: 'Lesson 3: Describing Quantitative Data'
-      href: Lesson03.html
-    - text: 'Lesson 4: Rules of Probability'
-      href: Lesson04.html
-    - text: 'Lesson 5: Normal Distributions'
-      href: Lesson05.html
-    - text: 'Lesson 6: The Central Limit Theorem'
-      href: Lesson06.html
-    - text: 'Lesson 7: Probability Calculations for a Sample Mean'
-      href: Lesson07.html
-    - text: 'Lesson 8: Unit 1 Review'
-      href: Lesson08.html
-  - text: Unit 2
-    menu:
-    - text: 'Lesson 9: Hypothesis Test for One Mean (Sigma Known)'
-      href: Lesson09.html
-    - text: 'Lesson 10: Confidence Interval for One Mean (Sigma Known)'
-      href: Lesson10.html
-    - text: 'Lesson 11: Inference for One Mean (Sigma Unknown)'
-      href: Lesson11.html
-    - text: 'Lesson 12: Inference for Match Pairs'
-      href: Lesson12.html
-    - text: 'Lesson 13: Inference for Two Independent Samples'
-      href: Lesson13.html
-    - text: 'Lesson 14: Inference for Several Independent Samples'
-      href: Lesson14.html
-    - text: 'Lesson 15: Unit 2 Review'
-      href: Lesson15.html
-  - text: Unit 3
-    menu:
-    - text: 'Lesson 16: Describing Categorical Data'
-      href: Lesson16.html
-    - text: 'Lesson 17: Inference for One Proportion'
-      href: Lesson17.html
-    - text: 'Lesson 18: Inference for Two Proportions'
-      href: Lesson18.html
-    - text: 'Lesson 19: Inference for Independence of Categorical Data'
-      href: Lesson19.html
-    - text: 'Lesson 20: Unit 3 Review'
-      href: Lesson20.html
-  - text: Unit 4
-    menu:
-    - text: 'Lesson 21: Describing Bivariate Data'
-      href: Lesson21.html
-    - text: 'Lesson 22: Simple Linear Regression'
-      href: Lesson22.html
-    - text: 'Lesson 23: Inference for Bivariate Data'
-      href: Lesson23.html
-    - text: 'Lesson 24: Unit 4 Review'
-      href: Lesson24.html
+    - text: "Home"
+      href: index.html
+    - text: "Unit 1"
+      menu:
+        - text: "Lesson 1: Course Introduction"
+          href: Lesson01.html
+        - text: "Lesson 2: The Statistical Process"
+          href: Lesson02.html
+        - text: "Lesson 3: Describing Quantitative Data"
+          href: Lesson03.html
+        - text: "Lesson 4: Rules of Probability"
+          href: Lesson04.html
+        - text: "Lesson 5: Normal Distributions"
+          href: Lesson05.html
+        - text: "Lesson 6: The Central Limit Theorem"
+          href: Lesson06.html          
+        - text: "Lesson 7: Probability Calculations for a Sample Mean"
+          href: Lesson07.html
+        - text: "Lesson 8: Unit 1 Review"
+          href: Lesson08.html
+    - text: "Unit 2"
+      menu: 
+        - text: "Lesson 9: Hypothesis Test for One Mean (Sigma Known)"
+          href: Lesson09.html
+        - text: "Lesson 10: Confidence Interval for One Mean (Sigma Known)"
+          href: Lesson10.html
+        - text: "Lesson 11: Inference for One Mean (Sigma Unknown)"
+          href: Lesson11.html
+        - text: "Lesson 12: Inference for Match Pairs"
+          href: Lesson12.html
+        - text: "Lesson 13: Inference for Two Independent Samples"
+          href: Lesson13.html
+        - text: "Lesson 14: Inference for Several Independent Samples"
+          href: Lesson14.html
+        - text: "Lesson 15: Unit 2 Review"
+          href: Lesson15.html
+    - text: "Unit 3"
+      menu:
+        - text: "Lesson 16: Describing Categorical Data"
+          href: Lesson16.html
+        - text: "Lesson 17: Inference for One Proportion"
+          href: Lesson17.html
+        - text: "Lesson 18: Inference for Two Proportions"
+          href: Lesson18.html
+        - text: "Lesson 19: Inference for Independence of Categorical Data"
+          href: Lesson19.html
+        - text: "Lesson 20: Unit 3 Review"
+          href: Lesson20.html
+    - text: "Unit 4"
+      menu: 
+        - text: "Lesson 21: Describing Bivariate Data"
+          href: Lesson21.html
+        - text: "Lesson 22: Simple Linear Regression"
+          href: Lesson22.html
+        - text: "Lesson 23: Inference for Bivariate Data"
+          href: Lesson23.html
+        - text: "Lesson 24: Unit 4 Review"
+          href: Lesson24.html
   right:
-  - text: Data
-    href: Data.html
-output:
+    - text: Data
+      href: Data.html
+output: 
   html_document:
     theme: cerulean
-    toc: yes
+    toc: true
     include:
       after_body: footer.html
-    toc_float: yes
+    toc_float: true
     css: styles.css
-    lib_dir: site_libs
-    self_contained: no
-

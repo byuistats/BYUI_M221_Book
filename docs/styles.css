@@ -1,0 +1,624 @@
+h2 {
+  padding-top: 50px;
+}
+
+.introduction {
+    border-radius: 25px;
+    border: 2px solid 	#2173AD;
+    padding: 20px; 
+    padding-left: 15px;
+    margin-bottom:30px;
+}
+
+.outcomes {
+    border-radius: 25px;
+    border: 2px solid 	#2173AD;
+    padding: 20px; 
+    padding-left: 15px;
+    margin-bottom:30px;
+}
+
+.casestudy {
+    border-radius: 25px;
+    border: 2px solid 	#2173AD;
+    padding: 20px; 
+    padding-left: 15px;
+    margin-bottom:30px;
+}
+
+.casestudystep {
+  padding-left:20px;
+}
+
+.casestudyimage {
+  float:right;
+  padding-left:15px;
+  width:50%;
+  border:1;
+}
+
+.concepts {
+    border-radius: 25px;
+    border: 2px solid 	#2173AD;
+    padding: 20px; 
+    padding-left: 15px;
+    margin-bottom:30px;
+}
+
+.myemphasis{
+    border-radius: 25px;
+    border: 2px solid 	#2173AD;
+    background-color: #ffff88;
+    padding: 20px; 
+    padding-left: 15px;
+    margin-bottom:30px;
+}
+
+.conceptparagraph{
+  padding-left:20px;
+}
+
+
+hr.conceptsplit {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.53), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.75));
+}
+
+div.hidden {
+  visibility: none;
+}
+
+
+.workedexample {
+    border-radius: 25px;
+    border: 2px solid 	#2173AD;
+    padding: 20px; 
+    padding-left: 15px;
+    margin-bottom:30px;
+}
+
+
+.plainlinks a {
+	background: none !important;
+	padding: 0 !important;
+	color: #002bb8 !important;
+}
+
+.nextpage{
+  float:right;
+  padding-right:15px;
+  padding-left:15px;
+  background:#3f3f3f;
+  border-radius:25px;
+  cell-padding:2px;
+}
+
+.nextpage a:link, .nextpage a:visited{
+  color:#ffffff; 
+  font-weight:bold;
+}
+
+.blockquote {
+  padding-left:15px;
+  padding-right:15px;
+}
+
+.note {
+  font-size:.8em;
+  padding:5px;
+}
+
+
+
+/* ****************** Table Testing Area (This code isn't in the wiki anywhere but a sandbox)  ************************ */
+
+table.test {
+border-collapse: separate;
+border-spacing: 0;
+border-style:none;
+}
+
+table.test th {
+color:black;
+background-color:#FFE4B5;
+padding: 12px 10px;
+}
+
+table.test td {
+color:black;
+text-align:center;
+background-color:#fffafa;
+padding: 12px 10px;
+}
+
+table.test tr td, table.test tr th {
+border-top: 1px #D2B48C solid;
+border-left: 1px #D2B48C solid;
+}
+
+table.test tr:last-child td, table.test tr:last-child th {
+border-bottom: 1px #D2B48C solid;
+}
+
+table.test tr td:last-child, table.test tr th:last-child {
+border-right: 1px #D2B48C solid;
+}
+
+table.test tr:first-child td:first-child, table.test tr:first-child th:first-child {
+	border-top-left-radius: 5px;
+}
+table.test tr:first-child td:last-child, table.test tr:first-child th:last-child {
+	border-top-right-radius: 5px;
+}
+table.test tr:last-child td:first-child, table.test tr:last-child th:first-child {
+	border-bottom-left-radius: 5px;
+}
+table.test tr:last-child td:last-child, table.test tr:last-child th:last-child {
+	border-bottom-right-radius: 5px;
+}
+
+/* ************************ END TEST AREA **************************** */
+
+
+#returnimg {
+opacity:0.75;
+filter:alpha(opacity=75);
+margin: 15px 0px 15px 40px;
+}
+
+#returnimg:hover {
+opacity:1.0;
+filter:alpha(opacity=100);
+}
+
+table, table.wikitable {
+margin-left:auto;
+margin-right:auto;
+}
+
+table.basic {
+border-collapse: separate;
+border-spacing: 0;
+border-style:none;
+}
+
+table.basic th {
+color:black;
+background-color:#FFE4B5;
+padding: 12px 10px;
+}
+
+table.basic td {
+color:black;
+text-align:center;
+background-color:#fffafa;
+padding: 12px 10px;
+}
+
+table.basic tr td, table.basic tr th {
+border-top: 1px #D2B48C solid;
+border-left: 1px #D2B48C solid;
+}
+
+table.basic tr:last-child td, table.basic tr:last-child th {
+border-bottom: 1px #D2B48C solid;
+}
+
+table.basic tr td:last-child, table.basic tr th:last-child {
+border-right: 1px #D2B48C solid;
+}
+
+table.basic tr:first-child td:first-child, table.basic tr:first-child th:first-child {
+	border-top-left-radius: 5px;
+}
+table.basic tr:first-child td:last-child, table.basic tr:first-child th:last-child {
+	border-top-right-radius: 5px;
+}
+table.basic tr:last-child td:first-child, table.basic tr:last-child th:first-child {
+	border-bottom-left-radius: 5px;
+}
+table.basic tr:last-child td:last-child, table.basic tr:last-child th:last-child {
+	border-bottom-right-radius: 5px;
+}
+
+/* *********************This code modifies the wiki.css code for TOC********************* */
+#toc {
+ width: auto;
+ border: none;
+ margin-left: 0;
+ margin-right: 0;
+} 
+
+#toc ul {
+ margin-top: 0px;
+} 
+
+#toc ul {
+ margin-left: 1em;
+}
+
+/* *********************Main Page styling********************* */
+
+
+
+#mtext {
+margin-left:auto;
+margin-right:auto;
+margin-top:15px;
+text-align:center;
+font-size:2em;
+color:#514F4F;
+}
+
+#mtitle {
+position:absolute;
+left:50%;
+top:40px;
+text-align:center;
+font-size:2.5em;
+color:#318FD7;
+text-shadow:1px 1px #E0E0E0;
+width:920px;
+}
+
+#mtitle div {
+position: relative; 
+left: -50%;
+padding-top:0px;
+padding-bottom:0px;
+background-color:rgba(224,224,224,0.7);
+border-radius:3px;
+width:920px;
+}
+
+.mbox {
+background-color:#24384D; 
+border: 1px #5960A8 solid; 
+text-align:center; 
+color:white; 
+font-size:1.3em;  
+min-height:28px;
+opacity:0.85;
+filter:alpha(opacity=85);
+border-radius: 3px;
+cursor:pointer;
+}
+
+.mbox:hover {
+opacity:1.0;
+filter:alpha(opacity=100);
+border: 1px #FFD700 solid;
+}
+
+.mboxclicked {
+opacity:1.0;
+filter:alpha(opacity=100);
+border: 1px #FFD700 solid;
+}
+
+.mboxfull {
+width:80%;
+margin-left:auto; 
+margin-right:auto;
+}
+
+.tmain
+{
+width:100%;
+border-collapse:collapse;
+margin-left:auto;
+margin-right:auto;
+}
+
+.tmain td
+{
+font-size:1em;
+border:1px solid #5960A8;
+padding:3px 7px 2px 7px;
+}
+
+.tmain tr.alt td 
+{
+color:#000000;
+background-color:#DCDCDC;
+}
+/* *********************End main page styling********************* */
+
+.Custom {
+color:#B22222; 
+font-weight:bold; 
+font-style:italic;
+}
+
+.Link {
+font-variant:small-caps;
+}
+
+/* ********************** Message Styling ******************* */
+
+.message {
+padding: 8px 12px 4px 0px;
+margin: 0px 20px 0px 20px;
+display:inline-block;
+background-position: 4px 4px;
+background-repeat: no-repeat;
+min-height:26px;
+}
+
+.Note {
+background-color: #F0F0E7;
+border: 1px solid #cc9933;
+background-image: url(./Images/Bulb.png);
+padding-left: 30px;
+}
+
+.Warning {
+background-color: #F0E7E7;
+border: 1px solid #cc3333;
+background-image: url(./Images/Warning.png);
+padding-left: 32px;
+}
+
+.Caution {
+background-color: #FFFFE9;
+border: 1px solid #F4C930;
+background-image: url(./Images/Caution.png);
+padding-left: 38px;
+}
+
+.Tip {
+background-color: #CCFFCC;
+border: 1px solid #59D156;
+background-image: url("./Images/Check.png");
+padding-left: 30px;
+}
+
+/* ********************** End Message Styling ******************* */
+
+.Emphasis {
+margin-left:auto;
+margin-right:auto;
+margin-top:15px;
+margin-bottom:15px;
+background-color: #FFFF99;
+border-top:7px solid #FFCC66;
+border-radius:8px;
+width: 95%;
+box-shadow: 4px 4px 5px #888888;
+}
+
+.QuestionsHeading {
+margin-left:auto;
+margin-right:auto;
+padding-top:5px;
+width:80%;
+background-color:#cadfc6;
+text-align:center;
+border-top-left-radius: 12px 20px;
+border-top-right-radius: 12px 20px;
+font-size:1.3em;
+min-height: 22px;
+box-shadow: 4px 4px 5px #888888;
+}
+
+.Questions {
+margin-left:auto;
+margin-right:auto;
+padding-top:5px;
+padding-bottom:10px;
+padding-left:15px;
+width:80%;
+font-size:.95em;
+background-color: #edf9f9;
+border-bottom-left-radius: 3px;
+border-bottom-right-radius: 3px;
+box-shadow: 4px 4px 5px #888888;
+}
+
+.DocHeading {
+margin-left:auto;
+margin-right:auto;
+padding-top:5px;
+width:80%;
+background-color:#FF6347;
+text-align:center;
+border-top-left-radius: 12px 20px;
+border-top-right-radius: 12px 20px;
+font-size:1.3em;
+min-height: 22px;
+box-shadow: 4px 4px 5px #888888;
+}
+
+.Doc {
+margin-left:auto;
+margin-right:auto;
+width:80%;
+font-size:.95em;
+background-color: #F8F8FF;
+border-bottom-left-radius: 3px;
+border-bottom-right-radius: 3px;
+box-shadow: 4px 4px 5px #888888;
+}
+
+.SummaryHeading {
+margin-left:auto;
+margin-right:auto;
+width:80%;
+background-color:#E9967A;
+text-align:center;
+border-top-left-radius: 12px 20px;
+border-top-right-radius: 12px 20px;
+font-size:1.3em;
+padding-top:5px;
+min-height: 22px;
+box-shadow: 4px 4px 5px #888888;
+}
+
+.Summary {
+        margin-left:auto;
+        margin-right:auto;
+        width:80%;
+        font-size:.95em;
+        background-color: #FFF6F3;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        box-shadow: 4px 4px 5px #888888;
+}
+
+.RecapHeading {
+        margin-left:auto;
+        margin-right:auto;
+padding-top:5px;
+        width:80%;
+        background-color:#BC8F8F;
+        text-align:center;
+        border-top-left-radius: 12px 20px;
+        border-top-right-radius: 12px 20px;
+        font-size:1.3em;
+        min-height: 22px;
+        box-shadow: 4px 4px 5px #888888;
+}
+
+.SoftwareHeading {
+        margin-left:auto;
+        margin-right:auto;
+padding-top:5px;
+        width:80%;
+        background-color:#7F9FC6;
+        text-align:center;
+        border-top-left-radius: 12px 20px;
+        border-top-right-radius: 12px 20px;
+        font-size:1.3em;
+        min-height: 22px;
+        box-shadow: 4px 4px 5px #888888;
+}
+
+.Software {
+        margin-left:auto;
+        margin-right:auto;
+        width:80%;
+        font-size:.95em;
+        background-color: #E8F2FC;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        box-shadow: 4px 4px 5px #888888;
+}
+
+/***************** This sets the style for the drop down menus above *******************/
+
+#p-personal select {
+margin-right:20px;
+}
+
+.filter-container {
+text-align:center;
+}
+
+.filter-div {
+display:inline-block;
+}
+
+/* ******************** Misc Styles *********************** */
+
+.sp-fix {
+margin-top:-26px;
+}
+
+/* Navigation - For use in the table of lessons. ******************************/
+
+table.navigation td {
+  color: #0071B1;
+  font-weight: bold;
+  width: 20px;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 1px;
+ 
+  border-left: 1px #bfbfbf solid;
+  border-right: 1px #adadad solid;
+  border-bottom: 1px #cfcfcf solid;
+  border-top: 1px #dfdfdf solid;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+   background-color: #1a82f7; 
+
+   /* Safari 4+, Chrome 1-9 */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.4)));
+
+   /* Safari 5.1+, Mobile Safari, Chrome 10+ */
+   background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+
+   /* Firefox 3.6+ */
+   background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+
+   /* IE 10+ */
+   background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+
+   /* Opera 11.10+ */
+   background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+
+   /* IE6-8 */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#66000000',GradientType=0 );
+
+}
+
+
+
+
+
+/* Standard Navigationsleisten, aka box hiding thingy
+   from .de.  Documentation at [[Wikipedia:NavFrame]]. */
+div.NavFrame {
+	margin: 0;
+	padding: 4px;
+	border: 1px solid #a2a9b1;
+	text-align: center;
+	border-collapse: collapse;
+	font-size: 95%;
+}
+div.NavFrame + div.NavFrame {
+	border-top-style: none;
+	border-top-style: hidden;
+}
+div.NavPic {
+	background-color: #fff;
+	margin: 0;
+	padding: 2px;
+	/* @noflip */
+	float: left;
+}
+div.NavFrame div.NavHead {
+	line-height: 1.6em;
+	font-weight: bold;
+	background-color: #ccf;
+	position: relative;
+}
+div.NavFrame p,
+div.NavFrame div.NavContent,
+div.NavFrame div.NavContent p {
+	font-size: 100%;
+}
+div.NavEnd {
+	margin: 0;
+	padding: 0;
+	line-height: 1px;
+	clear: both;
+}
+a.NavToggle {
+	position: absolute;
+	top: 0;
+	/* @noflip */
+	right: 3px;
+	font-weight: normal;
+	font-size: 90%;
+}
+
+.client-js .NavFrame.collapsed > .NavContent {
+	display: none;
+}
