@@ -88,37 +88,37 @@ The following icons can help you remember these steps. Notice that each icon has
 
 An important step in scientific inquiry or problem solving can be to state a research question such as:
 
-*Will internet advertising increase a company's revenue?
-*Does expressing gratitude increase a person’s satisfaction with life in general?
-*Does a newly developed vaccine prevent the spread of disease?
+* Will internet advertising increase a company's revenue?
+* Does expressing gratitude increase a person's satisfaction with life in general?
+* Does a newly developed vaccine prevent the spread of disease?
 
 Researchers also investigate the background of the situation. What have other people discovered about this situation?  How can we find the answer to the research question?  What do we need to do?  What is the **population** (or total collection of all individuals) under consideration?  What kind of data need to be collected?
 
 Before collecting data, researchers make a hypothesis, or an educated guess about the outcome of their research. A hypothesis is a statement such as the following:
 
-* Using internet advertising will increase the company’s sales revenue.
+* Using internet advertising will increase the company's sales revenue.
 * People who express gratitude will be more satisfied with life than those who do not.
 * A newly-developed vaccine is effective at preventing tuberculosis.
 
 <br>
 
-#### Daniel’s Experiment
+#### Daniel's Experiment
 
-After taking Israel captive, Babylon’s King Nebuchadnezzar asked his chief officer to bring Israelite children who were “well favoured, and skilful in all wisdom, and cunning in knowledge, and understanding science…to stand in the king’s palaces” [(Daniel 1:4)](https://www.lds.org/scriptures/ot/dan/1.4?lang=eng#3){target="_blank"}.  To aid their preparation, Nebuchadnezzar planned to feed them his meat and wine for three years [(Daniel 1:5)](https://www.lds.org/scriptures/ot/dan/1.5?lang=eng#4){target="_blank"}.
+After taking Israel captive, Babylon's King Nebuchadnezzar asked his chief officer to bring Israelite children who were well favoured, and skilful in all wisdom, and cunning in knowledge, and understanding science�to stand in the king's palaces [(Daniel 1:4)](https://www.lds.org/scriptures/ot/dan/1.4?lang=eng#3){target="_blank"}.  To aid their preparation, Nebuchadnezzar planned to feed them his meat and wine for three years [(Daniel 1:5)](https://www.lds.org/scriptures/ot/dan/1.5?lang=eng#4){target="_blank"}.
 
-Daniel did not want to defile himself by partaking of the king’s meat and wine. He asked permission to eat pulse[^1] and drink water instead. His supervisor, Melzar, was afraid to displease the king. He thought that after eating pulse and water, the selected Israelites would look worse than their peers, and he would be punished [(Daniel 1:8-10)](https://www.lds.org/scriptures/ot/dan/1.8-10?lang=eng#3){target="_blank"}.
+Daniel did not want to defile himself by partaking of the king's meat and wine. He asked permission to eat pulse[^1] and drink water instead. His supervisor, Melzar, was afraid to displease the king. He thought that after eating pulse and water, the selected Israelites would look worse than their peers, and he would be punished [(Daniel 1:8-10)](https://www.lds.org/scriptures/ot/dan/1.8-10?lang=eng#3){target="_blank"}.
 
-With an understanding of the background of the situation, Daniel proposed an experiment. He said, “Prove thy servants, I beseech thee, ten days; and let them give us pulse to eat, and water to drink. Then let our countenances be looked upon before thee, and the countenance of the children that eat of the portion of the king’s meat: and as thou seest, deal with thy servants” [(Daniel 1:12-13.)](https://www.lds.org/scriptures/ot/dan/1.12-13?lang=eng#3){target="_blank"}.  In short, Daniel’s implied research question can be stated as: Will those who eat pulse and drink water appear healthier than those who eat the king’s meat and drink his wine? Melzar agreed to the experiment.
+With an understanding of the background of the situation, Daniel proposed an experiment. He said, Prove thy servants, I beseech thee, ten days; and let them give us pulse to eat, and water to drink. Then let our countenances be looked upon before thee, and the countenance of the children that eat of the portion of the king's meat: and as thou seest, deal with thy servants [(Daniel 1:12-13.)](https://www.lds.org/scriptures/ot/dan/1.12-13?lang=eng#3){target="_blank"}.  In short, Daniel's implied research question can be stated as: Will those who eat pulse and drink water appear healthier than those who eat the king's meat and drink his wine? Melzar agreed to the experiment.
 
 <div class="QuestionsHeading">Answer the following question:</div>
 <div class="Questions">
 
-1. What is Daniel’s hypothesis?
+1. What is Daniel's hypothesis?
 
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 
 <div id="Q1" style="display:none;">
-Daniel's hypothesis is that the Israelite children who eat pulse and drink water will appear healthier in just ten days, compared to those who eat the king’s meat and drink his wine.
+Daniel's hypothesis is that the Israelite children who eat pulse and drink water will appear healthier in just ten days, compared to those who eat the king's meat and drink his wine.
 </div>
 
 </div>
@@ -132,7 +132,7 @@ Daniel's hypothesis is that the Israelite children who eat pulse and drink water
 
 When designing a study, much attention is given to the process by which data are observed. When examining data, it is also important to understand the data collection procedures. A **sample** is a subset (a portion) of a population. How is this sample obtained?  How are the observations made?
 
-Daniel’s study design required that data be collected at the end of 10 days. Melzar would compare the appearances of two groups of people: (1) Israelites who ate pulse and drank water versus (2) Israelites who ate the king’s meat and drank his wine.
+Daniel's study design required that data be collected at the end of 10 days. Melzar would compare the appearances of two groups of people: (1) Israelites who ate pulse and drank water versus (2) Israelites who ate the king's meat and drank his wine.
 
 <br>
 
@@ -142,7 +142,7 @@ Daniel’s study design required that data be collected at the end of 10 days. M
 
 When we describe data, we use any tools appropriate to the situation. This can include creating graphs or calculating statistics to help understand or visualize the data.
 
-For Daniel’s experiment, the data are described in [Daniel 1:15](https://www.lds.org/scriptures/ot/dan/1.15?lang=eng#3){target="_blank"}:  “And at the end of ten days [the] countenances [of those who ate pulse] appeared fairer and fatter in flesh than all the children which did eat the portion of the king’s meat.”
+For Daniel's experiment, the data are described in [Daniel 1:15](https://www.lds.org/scriptures/ot/dan/1.15?lang=eng#3){target="_blank"}:  And at the end of ten days [the] countenances [of those who ate pulse] appeared fairer and fatter in flesh than all the children which did eat the portion of the king's meat.
 
 <br>
 
@@ -152,7 +152,7 @@ For Daniel’s experiment, the data are described in [Daniel 1:15](https://www.l
 
 Inference is the process of using the information contained in a sample from a population to make a general statement (i.e. to infer something) about the entire population. Later in the course we will learn techniques that make this type of analysis possible.
 
-Melzar made an inference. Based on the results of the sample, he determined that (in general) those who eat pulse and drink water will be healthier than those who eat the king’s meat and drink his wine [Daniel 1:15-16](https://www.lds.org/scriptures/ot/dan/1.15-16?lang=eng#3){target="_blank"}.
+Melzar made an inference. Based on the results of the sample, he determined that (in general) those who eat pulse and drink water will be healthier than those who eat the king's meat and drink his wine [Daniel 1:15-16](https://www.lds.org/scriptures/ot/dan/1.15-16?lang=eng#3){target="_blank"}.
 
 <br>
 
@@ -162,16 +162,18 @@ Melzar made an inference. Based on the results of the sample, he determined that
 
 The goal of a statistical analysis is to determine which action to take in a particular situation. Actions can include many things: launching an internet ad campaign (or not), expressing gratitude (or not), getting vaccinated (or not), etc.
 
-Melzar took action as described in [Daniel 1:16](https://www.lds.org/scriptures/ot/dan/1.16?lang=eng#3){target="_blank"}:  “Thus Melzar took away the portion of their meat, and the wine that they should drink; and gave [all the Israelite children] pulse.”
+Melzar took action as described in [Daniel 1:16](https://www.lds.org/scriptures/ot/dan/1.16?lang=eng#3){target="_blank"}:  Thus Melzar took away the portion of their meat, and the wine that they should drink; and gave [all the Israelite children] pulse.
 
-Was the experiment a success?  “Now at the end of the days that the king had said he should bring them in…the king communed with them; and among them all was found none like Daniel, Hananiah, Mishael, and Azariah… And in all matters of wisdom and understanding, that the king enquired of them, he found them ten times better than all the magicians and astrologers that were in all his realm” [Daniel 1:18-20](https://www.lds.org/scriptures/ot/dan/1.18-20?lang=eng#3){target="_blank"}.
+Was the experiment a success?  
+
+"Now at the end of the days that the king had said he should bring them in the king communed with them; and among them all was found none like Daniel, Hananiah, Mishael, and Azariah And in all matters of wisdom and understanding, that the king enquired of them, he found them ten times better than all the magicians and astrologers that were in all his realm [Daniel 1:18-20](https://www.lds.org/scriptures/ot/dan/1.18-20?lang=eng#3){target="_blank"}.
 
 <br>
 
 ### Summary of the Statistical Process
 
 <div class="myemphasis">
-Daniel’s experience can also help you learn the Statistical Process. Look at the first letter of each of the steps in the Statistical Process. You can use the phrase "Daniel Can Discern More Truth" to help you to help you remember the five steps in the Statistical Process.
+Daniel's experience can also help you learn the Statistical Process. Look at the first letter of each of the steps in the Statistical Process. You can use the phrase "Daniel Can Discern More Truth" to help you to help you remember the five steps in the Statistical Process.
 
 <center>
 **The Statistical Process**
@@ -193,12 +195,12 @@ The Statistical Process will be used throughout the course. Take time to memoriz
 </div>
 <br>
 
-The study designed by the Old Testament prophet Daniel provides an ancient example of a designed experiment. Daniel’s experiment included two groups of people: those who had the experimental treatment—eating pulse and drinking water (called the **treatment** group) and those who ate the standard food—the king’s meat (called the **control** group.)  The treatment group receives the experimental procedure. The control group is used for comparison.
+The study designed by the Old Testament prophet Daniel provides an ancient example of a designed experiment. Daniel's experiment included two groups of people: those who had the experimental treatment eating pulse and drinking water (called the **treatment** group) and those who ate the standard food the king's meat (called the **control** group.)  The treatment group receives the experimental procedure. The control group is used for comparison.
 
 <div class="QuestionsHeading">Answer the following question:</div>
 <div class="Questions">
 
-2. Why was it important that Daniel’s experiment included a control group?
+2. Why was it important that Daniel's experiment included a control group?
 
 <a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 
@@ -221,7 +223,7 @@ Most research projects can be classified into one of two basic categories: obser
 
 In a **designed experiment**, researchers manipulate the conditions that the participants experience. They often do this by randomly assigning subjects to one of two groups, a "treatment" group and a "control" group. The experiment is conducted by applying some kind of treatment to the subjects in the treatment group, and observing the effect of the treatment. Those in the control group do not receive the treatment and are also observed. In this way researchers can determine the effects of the treatment. The following example illustrates the use of these two groups.
 
-**Jonas Salk’s First Polio Vaccine Trial**
+**Jonas Salk's First Polio Vaccine Trial**
 
 The Salk Polio Trials comprised one of the most famous designed experiments in history. Please follow the link to view the following video (6 min 31 sec). Before you do, please review the questions that follow it. Once you have completed the video, please answer the questions. (Note: You do not need to submit answers to the questions, but do consider them carefully. They are designed to help you think about various aspects of the Statistical Process.)
 
@@ -236,13 +238,13 @@ Answer the questions about the video in each of the following steps of the Stati
 
 1. What year did the Salk polio vaccine trials occur?
 
-2. At that time, parents were afraid to let their children…
+2. At that time, parents were afraid to let their children
 
 3. How many children participated in the trial?
 
 4. The children were separated into two groups. What did the video say would practically guarantee that the two groups would be nearly identical?
 
-5. How was Salk’s vaccine administered?
+5. How was Salk's vaccine administered?
 
 
 <img src="./Images/Step2.png" width="100px;">
@@ -258,14 +260,14 @@ Answer the questions about the video in each of the following steps of the Stati
 
 **Step 3: Describe the Data**
 
-8. Complete the quote from the video:  “As the Salk trial progressed, it did appear as if the group that got the vaccine had ________ instances of polio.”
+8. Complete the quote from the video:  As the Salk trial progressed, it did appear as if the group that got the vaccine had ________ instances of polio.
 
 
 <img src="./Images/Step4.png" width="100px;">
 
 **Step 4: Make Inferences**
 
-9. Complete the quote from the video:  “As the researchers tabulated the data, they found that the differences were...
+9. Complete the quote from the video:  As the researchers tabulated the data, they found that the differences were...
 
 
 <img src="./Images/Step5.png" width="100px;">
@@ -276,7 +278,7 @@ Answer the questions about the video in each of the following steps of the Stati
 
 Elizabeth Toy, a former BYU-Idaho teacher, was one of the children in the Salk trials.
 
-Jonas Salk’s vaccine trial was a great example of a designed experiment. However, it did not start out that way. Initially, there were some serious flaws in their design. Other researchers sharply criticized these errors. Almost 1.1 million children participated in the initial study. Even though the sample size was large, the flawed study design made the data useless!
+Jonas Salk's vaccine trial was a great example of a designed experiment. However, it did not start out that way. Initially, there were some serious flaws in their design. Other researchers sharply criticized these errors. Almost 1.1 million children participated in the initial study. Even though the sample size was large, the flawed study design made the data useless!
 
 **Jonas Salk's Second Study**
 
@@ -416,7 +418,7 @@ When the hypothesis test to compare the proportions was conducted, the probabili
 
 **Step 5: Take action**
 
-Once it was clear that the vaccine was effective, children who were unvaccinated or had received the placebo were given Salk’s vaccine. Since 1954, there has been a marked decrease in the number of polio cases worldwide (Offit, 2005). Public health researchers continue to work to eradicate this disease around the world.
+Once it was clear that the vaccine was effective, children who were unvaccinated or had received the placebo were given Salk's vaccine. Since 1954, there has been a marked decrease in the number of polio cases worldwide (Offit, 2005). Public health researchers continue to work to eradicate this disease around the world.
 
 <br>
 
@@ -424,7 +426,7 @@ Once it was clear that the vaccine was effective, children who were unvaccinated
 
 In an **observational study** researchers observe the responses of the individuals, without controlling the conditions experienced by the individuals. Therefore, they do not assign the participants to treatment or control groups.
 
-Observational studies commonly occur in business settings. One example is a financial audit. The purpose of a financial audit is to assess the accuracy of a company’s financial business practices. ImmunAvance Ltd., a non-government health care organization, hired the Accounting Office at Global Optimization Unlimited to perform an independent audit of their financial practices. ImmunAvance provides inoculation and other preventative health care services in rural African communities.
+Observational studies commonly occur in business settings. One example is a financial audit. The purpose of a financial audit is to assess the accuracy of a company's financial business practices. ImmunAvance Ltd., a non-government health care organization, hired the Accounting Office at Global Optimization Unlimited to perform an independent audit of their financial practices. ImmunAvance provides inoculation and other preventative health care services in rural African communities.
 
 <center>
 <img src="./Images/StepsAll.png">
@@ -437,7 +439,7 @@ Imagine you are assigned to serve as a member of the team that will perform this
 
 **Step 1: Design the study**
 
-The volume of financial transactions conducted by ImmunAvance makes it impossible to conduct a **census** or an examination of the entire collection of ImmunAvance’s financial documents. Instead, you will collect a manageable group of items (called the **sample**) from the entire collection of financial documents (called the **population**.)  A sample is a subset or a portion of a population. The information gained from the sample is used to make an **inference** (or generalization) about the population.
+The volume of financial transactions conducted by ImmunAvance makes it impossible to conduct a **census** or an examination of the entire collection of ImmunAvance's financial documents. Instead, you will collect a manageable group of items (called the **sample**) from the entire collection of financial documents (called the **population**.)  A sample is a subset or a portion of a population. The information gained from the sample is used to make an **inference** (or generalization) about the population.
 
 Auditors typically cannot consider every item in a population, because there are too many. When it is not possible to conduct a census, auditors face **sampling risk**. Sampling risk is the risk affiliated with not auditing every item in the population. It is the risk that the sample may not adequately reflect the population. The only way to eliminate sampling risk is to conduct a census, which is usually not practical. Auditors can reduce sampling risk by obtaining a sample randomly. This is called **random selection**. Another way to reduce sampling risk is to increase the **sample size**, the number of items sampled.
 
@@ -454,7 +456,7 @@ There are several procedures that can be used to select a random sample from a p
 
 A **simple random sampling (SRS)** is the best method for obtaining a random sample. If there is a list of all items in the population and they are all accessible, a SRS can be collected. For example, suppose there are 2,000 accounts receivable items in the population. Auditors can use a random number generator to choose values between 1 and 2,000 to identify which items are to be audited. Software can be used to create a list of random numbers corresponding to items for the audit. In Excel, the command to obtain a random number between 1 and 2,000 is =*RANDBETWEEN(1,2000)*. Sometimes it is necessary for auditors to renumber the items (1 to 2000) to help create random sample. A simple random sample can be obtained any time there is a complete list of the items to be sampled and they are all assessible. All the statistical procedures in this course assume that simple random sampling has been used.
 
-A **systematic sample** is where auditors select every $k^{\text{th}}$ item in the population, beginning at a random starting point. As an example, suppose there are 2,000 accounts receivable items to be audited, and the auditors want to get a sample of 40 items from this population. The auditors would sample every 2000÷40=50<sup>th</sup> item. The auditors will use a random starting point in the first 50 items. So, suppose a random number generator gave 41 as a random number between 1 and 50. The auditors select the 41st item. The next item chosen will be item number 41+50=91. After that, the auditors will choose item number 91+50=141, and so on. Systematic sampling works well when the items are in a random, sequential ordering. If the items are not arranged randomly, a systematic sample can miss important parts of the population.
+A **systematic sample** is where auditors select every $k^{\text{th}}$ item in the population, beginning at a random starting point. As an example, suppose there are 2,000 accounts receivable items to be audited, and the auditors want to get a sample of 40 items from this population. The auditors would sample every 2000/40 =50<sup>th</sup> item. The auditors will use a random starting point in the first 50 items. So, suppose a random number generator gave 41 as a random number between 1 and 50. The auditors select the 41st item. The next item chosen will be item number 41+50=91. After that, the auditors will choose item number 91+50=141, and so on. Systematic sampling works well when the items are in a random, sequential ordering. If the items are not arranged randomly, a systematic sample can miss important parts of the population.
 
 A **cluster sample** (sometimes called a *block sample*) consists of taking all items in one or more randomly selected clusters, or blocks. For example, all the accounts receivable items in a few randomly selected months (the blocks) could be sampled. When the variation from one block to another is relatively low, compared to the variation within the block, cluster sampling is a reasonable way to get a sample. However, in many cases, the number of blocks that must be sampled must be large in order to draw a reasonable audit conclusion. For this reason, a cluster sample is usually not recommended for audits.
 
@@ -470,7 +472,7 @@ Auditors meticulously record information on every item audited, thus generating 
 
 **Quantitative variables** provide numerical information. They represent things that are numeric in nature; things that are measured. For a quantitative variable, it makes sense to apply arithmetic operations to the data (such as adding one to a value, doubling a value, or comparing two values). The net worth of a company or the number of people it employs are both examples of quantitative variables: If one company is worth \$1,000,000 and a second company is worth \$2,000,000 then the second company really is worth twice the value of the first.
 
-**Categorical variables** yield data that can only be considered as categories. Categorical variables are labels, and it does not make sense to do arithmetic with them. The following are examples of categorical variables: gender, nationality, job title, telephone number, etc. Even though a telephone number is made of digits, it does not make sense to double someone’s phone number, to add one to their number, or to say one phone number is smaller than another. In Unit 3 we will learn more about Categorical variables and proportions.
+**Categorical variables** yield data that can only be considered as categories. Categorical variables are labels, and it does not make sense to do arithmetic with them. The following are examples of categorical variables: gender, nationality, job title, telephone number, etc. Even though a telephone number is made of digits, it does not make sense to double someone's phone number, to add one to their number, or to say one phone number is smaller than another. In Unit 3 we will learn more about Categorical variables and proportions.
 
 The sample accounts receivable record has information on both types of variables.
 
@@ -530,13 +532,13 @@ Auditors use the information drawn from the sample to form an opinion about the 
 
 When conducting an audit, the implicit assumption is that transactions have been posted properly. This foundational assumption is called the null hypothesis. The **null hypothesis** is a statement about the population that represents the status quo, convential wisdom, or what is generally accepted as true. In the audit we're considering, the null hypothesis is
 
-$H_0$:  ImmunAvance’s financial statements are materially correct.
+$H_0$:  ImmunAvance's financial statements are materially correct.
 
-Auditors sample the company’s records to collect evidence against the null hypothesis. If there is sufficient evidence, we reject the null hypothesis. If the null hypothesis is rejected, it is rejected in favor of another statement about the population: the **alternative hypothesis**. In the case of this audit, the alternative hypothesis is
+Auditors sample the company's records to collect evidence against the null hypothesis. If there is sufficient evidence, we reject the null hypothesis. If the null hypothesis is rejected, it is rejected in favor of another statement about the population: the **alternative hypothesis**. In the case of this audit, the alternative hypothesis is
 
-$H_a$:  ImmunAvance’s financial statements are not materially correct.
+$H_a$:  ImmunAvance's financial statements are not materially correct.
 
-Notice that both the null and alternative hypotheses are statements about the state of *all* of ImmunAvance’s financial documents, not just the documents included in the sample.
+Notice that both the null and alternative hypotheses are statements about the state of *all* of ImmunAvance's financial documents, not just the documents included in the sample.
 
 
 <center>
@@ -545,9 +547,9 @@ Notice that both the null and alternative hypotheses are statements about the st
 <img src="./Images/Phd121911s.png">
 </center>
 
-There is a formal procedure for testing the null and alternative hypotheses, called a **hypothesis test**. In a hypothesis test, the null hypothesis is always assumed to be true. If there is sufficient evidence against the null hypothesis, it is rejected. The evidence against the null hypothesis is assessed using a number called the $P$-value. The **P-value** is the probability of obtaining a result (called a test statistic) at least as extreme as the one you calculated, assuming the null hypothesis is true. We reject the null hypothesis if the $P$-value is small, say less than 0.05. If we assume the company’s financial statements are materially correct, the $P$-value is the probability of observing errors with a total value that is as large or larger than that which was observed in the audit.
+There is a formal procedure for testing the null and alternative hypotheses, called a **hypothesis test**. In a hypothesis test, the null hypothesis is always assumed to be true. If there is sufficient evidence against the null hypothesis, it is rejected. The evidence against the null hypothesis is assessed using a number called the $P$-value. The **P-value** is the probability of obtaining a result (called a test statistic) at least as extreme as the one you calculated, assuming the null hypothesis is true. We reject the null hypothesis if the $P$-value is small, say less than 0.05. If we assume the company's financial statements are materially correct, the $P$-value is the probability of observing errors with a total value that is as large or larger than that which was observed in the audit.
 
-For ImmunAvance’s audit, the $P$-value was determined to be 0.79. Assuming the null hypothesis is true, the probability of observing inconsistencies that are at least as great as those observed in the audit was 0.79. This is a very large value. So, it is not surprising to have observed the total number of the errors in this case. The probability that these differences could occur due to chance is very high. The conclusion is that the null hypothesis should not be rejected.
+For ImmunAvance's audit, the $P$-value was determined to be 0.79. Assuming the null hypothesis is true, the probability of observing inconsistencies that are at least as great as those observed in the audit was 0.79. This is a very large value. So, it is not surprising to have observed the total number of the errors in this case. The probability that these differences could occur due to chance is very high. The conclusion is that the null hypothesis should not be rejected.
 
 If the $P$-value is low, the null hypothesis is rejected. If this probability is large, the null hypothesis is not rejected.
 
@@ -567,9 +569,9 @@ Such errors are no one's fault; they are an inherent part of hypothesis testing.
 
 **Step 5: Take Action**
 
-The auditors prepare a report in which they give their opinion on the status of the company’s current operations.
+The auditors prepare a report in which they give their opinion on the status of the company's current operations.
 
-There is not enough evidence to suggest that ImmunAvance’s financial statements are not materially correct. The auditor’s conclusion is that no adjustment is necessary, since the observed discrepancies could be attributed to chance.
+There is not enough evidence to suggest that ImmunAvance's financial statements are not materially correct. The auditor's conclusion is that no adjustment is necessary, since the observed discrepancies could be attributed to chance.
 
 <br>
 
