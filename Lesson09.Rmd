@@ -17,8 +17,9 @@ output:
 <div style="float:right;width=40%;">
 <br/>
 <div style="padding-left:10%;">**Optional Lesson Video**</div>
-<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9C5z9NWEjdRaS7h--99Kwv" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9C5z9NWEjdRaS7h--99Kwv" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
+<br/>
 
 ## Lesson Outcomes
 
