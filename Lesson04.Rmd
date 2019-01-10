@@ -21,6 +21,7 @@ output:
 </div>
 <br>
 
+
 ## Lesson Outcomes
 
 <a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
@@ -37,7 +38,7 @@ By the end of this lesson, you should be able to:
 
 <img src="./Images/Columbus_taking_possession_of_the_new_country.jpg">
 
-On August 3, 1492, Columbus set sail from Spain for his intended destination: the Indies (Caso, Adolph 1990). He was on the Santa Maria, which had a crew of approximately 41 men ("Crist'obal col'on" 1991; "Christopher Columbus"). Several other men were aboard the Niña and the Pinta ("Crist'obal col'on" 1991). On October 12, he landed on an island in the Bahamas he called San Salvador.
+On August 3, 1492, Columbus set sail from Spain for his intended destination: the Indies (Caso, Adolph 1990). He was on the Santa Maria, which had a crew of approximately 41 men ("Crist'obal col'on" 1991; "Christopher Columbus"). Several other men were aboard the Nina and the Pinta ("Crist'obal col'on" 1991). On October 12, he landed on an island in the Bahamas he called San Salvador.
 
 The return trip was not without challenges. The Santa Maria ran aground on Christmas Day, 1492, and was abandoned on the island we now call Haiti. Following this incident, Columbus sailed for Spain. Severe storms made the journey difficult. A particularly bad storm on February 14, 1493 made the crew fear for their lives. By morning, the storm was even worse!
 
