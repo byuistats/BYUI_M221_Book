@@ -94,7 +94,7 @@ We will use the five steps in the Statistical Process throughout the course. Rec
 
 Tuberculosis (TB) is the most deadly bacterial disease in the world. In 2009, nine million new cases of tuberculosis were diagnosed, leading to almost 2 million deaths worldwide. Currently, the principal vaccine used to prevent tuberculosis is Bacille Calmette Guerin (BCG). Unfortunately, BCG is only moderately effective at preventing tuberculosis. Historically, India has had a high number of tuberculosis cases. The Indian Government wants to reduce the prevalence of this disease.
 
-In this activity, you will compare the “average” costs of treating a person who contracts tuberculosis to the costs of preventing a case of tuberculosis in India.
+In this activity, you will compare the average costs of treating a person who contracts tuberculosis to the costs of preventing a case of tuberculosis in India.
 
 
 <img src="./Images/Step2.png">
@@ -189,11 +189,11 @@ For each of these intervals, we draw a bar on the histogram. The width of the ba
 <div class="Summary">
 **Instructions for Creating a Histogram in Excel:**
 
-To make a histogram in Excel, you can use the Excel file [Quantitative Descriptive Statistics](./Data/QuantitativeDescriptiveStatistics.xlsx). First, enter the 10 data values in the first column (on the left side) of the tool, the histogram will be generated automatically. You can practice creating a histogram in Excel using the data provided on the 10 patients.
+To make a histogram in Excel, you can use the Excel file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx). First, enter the 10 data values in the first column (on the left side) of the tool, the histogram will be generated automatically. You can practice creating a histogram in Excel using the data provided on the 10 patients.
 
 Using 8 intervals, the tuberculosis cost data can be represented by the following histogram.
 
-<img src="./Images/Lesson_2_Activity_2-1.JPG">
+<img src="./Images/Lesson_2_Activity_2-2.JPG">
 
 This histogram differs slightly from the first example. The width of the intervals is smaller and the starting value for the first interval is different. However, both graphs illustrate the same data.
 
@@ -245,7 +245,7 @@ After making inferences, you take action. The motivation for conducting a study 
 
 <a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
-* Answers may vary.  -- We fail to reject the null hypothesis.  That means that we could not say that the true mean cost is not equal to $13,800.  So, there is not enough evidence of inflation.  There is no need to for the Government of India to take action.
+* Answers may vary.  -- We fail to reject the null hypothesis.  That means that we could not say that the true mean cost is not equal to $13,800.  So, there is not enough evidence of inflation.  There is no need for the Government of India to take action.
 </div>
 &nbsp;
 </div>
@@ -261,7 +261,7 @@ A distribution is right-skewed if a histogram of the distribution shows a long r
 
 <img src="./Images/Lesson_2_Activity_2-3.JPG">
 
-If a distribution has only one peak, it is said to be **unimodal**. The three distributions illustrated above are all unimodal distributions. Some people might argue that there are several peaks in the GPA data, so it should not be considered unimodal. Even though there are jagged bumps in the histogram, it is important to visualize the overall shape in the data. When interpreting a histogram, it can be helpful to blur your eyes and imagine the overall shape—after smoothing out the bumps. If the overall trend indicates that there is more than one bump, then we do not consider the distribution to be unimodal.
+If a distribution has only one peak, it is said to be **unimodal**. The three distributions illustrated above are all unimodal distributions. Some people might argue that there are several peaks in the GPA data, so it should not be considered unimodal. Even though there are jagged bumps in the histogram, it is important to visualize the overall shape in the data. When interpreting a histogram, it can be helpful to blur your eyes and imagine the overall shape after smoothing out the bumps. If the overall trend indicates that there is more than one bump, then we do not consider the distribution to be unimodal.
 
 Some distributions have no distinct peak, others have more than one peak. When there is no distinct peak, and the histogram shows a relatively flat shape, we might say the data follow a **uniform** distribution. If there are two distinct peaks, a distribution is called bimodal. If there are more than two peaks, we refer to the distribution as **multimodal**.
 
@@ -276,7 +276,7 @@ Some distributions have no distinct peak, others have more than one peak. When t
 
 **Step 3: Describe the data.** 
 
-Sometimes people talk about the "typical" BYU-Idaho student or the “average” waiting time for a bus. But what does it mean for something or someone to be "average?" How can we quantify what it means to be “typical” or “average?” In the example below, we will explore one way to define what "average" means. 
+Sometimes people talk about the "typical" BYU-Idaho student or the average waiting time for a bus. But what does it mean for something or someone to be "average?" How can we quantify what it means to be typical or average? In the example below, we will explore one way to define what "average" means. 
 
 When we talk about the "typical" or "average" value, we are essentially describing the center of a population. If we want to estimate the "average" costs to treat a tuberculosis patient, there are several ways we can do it.
 
@@ -290,7 +290,7 @@ The sample mean or sample arithmetic mean is the most common tool to estimate th
 
 In Statistics, important ideas are given a name. Very important ideas are given a symbol. The sample mean has both a name (mean) and a symbol ($\bar x$).
 
-You may have heard people refer to the sample mean as the “average.” The word “average” refers to any number that is used to estimate the center of a distribution. The mean, median and mode are all examples of averages. To avoid confusion in this course, the word “average” will not be used to describe the mean.
+You may have heard people refer to the sample mean as the average. The word average refers to any number that is used to estimate the center of a distribution. The mean, median and mode are all examples of averages. To avoid confusion in this course, the word average will not be used to describe the mean.
 
 <div class="QuestionsHeading">Answer the following question:</div>
 <div class="Questions">
@@ -307,7 +307,7 @@ $$\bar x=\frac{15100 + 19000 + 4800 + 6500 + 14900 + 600 + 23500 + 11500 + 12900
 
 #### Median
 
-The median is the “middle” value in a sorted data set. Half of the observations in the data set are below the median and half are above the median. To find the median, you:
+The median is the middle value in a sorted data set. Half of the observations in the data set are below the median and half are above the median. To find the median, you:
 
 * Sort the values from smallest to largest
   + Do one of the following:
@@ -352,7 +352,7 @@ The middle two numbers are 12900 and 14900.  The mean of these two numbers is:
 
 <center>$\text{Median } = \frac{12900 + 14900}{2} = 13900$</center>
 
-The median cost to treat the ten TB patients in India is ?13,900.
+The median cost to treat the ten TB patients in India is $13,900.
 </div>
 &nbsp;
 </div>
@@ -388,9 +388,9 @@ e. A, B, and C can all occur.
 <div class="Summary">
 &nbsp;&nbsp;**To calculate the mean, median, and mode in Excel, do the following**
 
-&nbsp;&nbsp;If you do not know how to use Excel to find the mean and median, the spreadsheet {{Spreadsheet|QDS}} has been created to make these calculations for you.
+&nbsp;&nbsp;If you do not know how to use Excel to find the mean and median, the spreadsheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) has been created to make these calculations for you.
 
-- Download and open the Excel spreadsheet. 
+- Download and open the Excel spreadsheet. Make sure you are on the worksheet labeled "Descriptive Stats". (This is the red tab at the bottom the far left).
 - Copy and paste your data into the blue column found on the left side of the page. 
 - The mean, median, mode, and other statistics will be located in the "Numerical Descriptive Statistics" table found in the center of the worksheet. A histogram will be shown above this table.
 
@@ -414,8 +414,8 @@ The sample mean is an example of a statistic. A statistic is a number that descr
 
 An easy way to distinguish between a parameter and a statistic is to note the repetition in the first letters:
 
-- **P**opulation **P**arameter – True (usually unknown) value describing a population
-- **S**ample **S**tatistic – Estimate of the population parameter obtained from a sample
+- **P**opulation **P**arameter True (usually unknown) value describing a population
+- **S**ample **S**tatistic Estimate of the population parameter obtained from a sample
 
 In the example above, the sample mean $\bar x$ = \$14,100 is a statistic. Over the last few years, the total mean cost to treat tuberculosis in India has been \$13,800. This is considered a parameter.
 
@@ -423,7 +423,7 @@ Different symbols are used to distinguish between the sample mean (a statistic) 
 
 **Perspective**
 
-The mean cost to treat the ten tuberculosis patients in the sample was $\bar x$ = \$14,100. This number gives us some useful information. However, if this was all we were given, we would not be able to distinguish the data above from a situation where the cost for each of the ten patents was exactly \$14,100. Notice that if the cost for each patient was \$14,100, the mean would be:
+The mean cost to treat the ten tuberculosis patients in the sample was $\bar x$ = \$14,100. This number gives us some useful information. However, if this was all we were given, we would not be able to distinguish the data above from a situation where the cost for each of the ten patients was exactly \$14,100. Notice that if the cost for each patient was \$14,100, the mean would be:
 
 $$\bar x=\frac{14100 + 14100 + 14100 + 14100 + 14100 + 14100 + 14100 + 14100 + 14100 + 14100}{10} =14,100$$
 
@@ -653,7 +653,7 @@ At this point, you probably do not have much intuition regarding the standard de
 <!-- http://lib.stat.cmu.edu/datasets/bodyfat -->
 Roger Johnson compiled a collection of measurements on 252 men. The mean mass of the men was $\bar x = 81.2$ kg.  The standard deviation of the weights was $s = 13.3$ kg.  
 
-The mean and standard deviation of the masses are in both cases smaller for the men than the the seals. This says that seals are generally larger than men and vary more in their weights. We compare these two distributions in the following histogram:
+The mean and standard deviation of the masses are in both cases smaller for the men than for the seals. This says that seals are generally larger than men and vary more in their weights. We compare these two distributions in the following histogram:
 
 
 <center>
@@ -781,7 +781,7 @@ Consider the last column in the table of data.  The "representative temperature"
 <div id="Q10" style="display:none;">
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 To make a histogram in Excel, you can use the Excel file 
-[Quantitative Descriptive Statistics](./Data/QuantitativeDescriptiveStatistics.xlsx). 
+[Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx). 
 Copy and paste the desired data values into the first column (on the left side) of the tool. The histogram will be generated automatically.
 
 <center><img src="./Images/Lesson_2_Activity_2-2.JPG"></center>
@@ -837,7 +837,7 @@ We will use these data to investigate some measures of the spread in a data set.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
-11. Draw the number line below and illustrate the relatively uncomplicated cases by marking an “x” for each point. The first point has been plotted for you. 
+11. Draw the number line below and illustrate the relatively uncomplicated cases by marking an x for each point. The first point has been plotted for you. 
 <img src="./Images/BirdFlu-DotPlotQuestion.png">
 <br>
 
@@ -883,7 +883,7 @@ $$
 
 If the observed value is greater than the mean, the deviation is positive.  If the value is less than the mean, the deviation is negative. 
 
-The standard deviation is a complicated sort of average of the deviations. Making a table like the one below will help you keep track of your calculations. Please participate fully in this exercise. Writing your answers at each step and to developing a table as instructed will greatly enhance the learning experience. By following these steps, you will be able to compute the standard deviation by hand.
+The standard deviation is a complicated sort of average of the deviations. Making a table like the one below will help you keep track of your calculations. Please participate fully in this exercise. Writing your answers at each step and developing a table as instructed will greatly enhance the learning experience. By following these steps, you will be able to compute the standard deviation by hand.
 
 **Step 01**: The first step in computing the standard deviation by hand is to create a table, like the following. Enter the observed data in the first column.
 
@@ -1546,7 +1546,7 @@ We have now learned some statistics that can be used to estimate population para
 </table>
 </center>
 
-Unless otherwise specified, we will always use {{Course_Filter|course=A|content=Excel}}<!--{{Course_Filter|course=B C|content=SPSS}}--> to find the sample variance and sample mean.
+Unless otherwise specified, we will always use Excel to find the sample variance and sample mean.
 In each case, the sample statistic estimates the population parameter.  The ellipses $\vdots$ in this table hint that we will add rows in the future.
 
 <br>
@@ -1624,11 +1624,11 @@ Recall the five steps of the Statistical Process (and the mnemonic "Daniel Can D
 
 <img src="./Images/Step3.png">
 
-For symmetric, bell-shaped data, the mean and standard deviation provide a good description of the center and shape of the distribution.  The mean and standard deviation are not sufficient to describe a distribution that is skewed or has outliers. An **outlier** is any observation that is very far from the others.  The mean is “pulled” in the direction of the outlier.  Also, the standard deviation is inflated by points that are very far from the mean.
+For symmetric, bell-shaped data, the mean and standard deviation provide a good description of the center and shape of the distribution.  The mean and standard deviation are not sufficient to describe a distribution that is skewed or has outliers. An **outlier** is any observation that is very far from the others.  The mean is pulled in the direction of the outlier.  Also, the standard deviation is inflated by points that are very far from the mean.
 
 Percentiles can be used to describe the center and spread of any distribution and are particularly useful when the distribution is skewed or has outliers.  To explore this issue, you will use software to calculate percentiles of data on costs incurred by hospitals due to certain lawsuits. The lawsuits in question were about surgeries performed on the wrong patient, or on the right patient but the wrong part of the patient's body (the wrong site).
 
-Now, you have probably had some experience with percentiles in the past—especially when you received a score on a standardized test such as the ACT.  Even though percentiles are commonly used, they are generally misunderstood.  Before examining the wrong site/wrong patient data, let's review percentiles. Even if you think you understand percentiles, please study this section carefully. 
+Now, you have probably had some experience with percentiles in the past especially when you received a score on a standardized test such as the ACT.  Even though percentiles are commonly used, they are generally misunderstood.  Before examining the wrong site/wrong patient data, let's review percentiles. Even if you think you understand percentiles, please study this section carefully. 
 
 <br>
 
@@ -1648,9 +1648,9 @@ Imagine a very long street with houses on one side.  The houses increase in valu
 </div>
 <br>
 
-The home values are representative of data.  If we have a list of data, sorted in increasing order, and we want to divide it into 100 equal groups, we only need 99 dividers (like fences) to divide up the data.  The first divider is as large or larger than 1% of the data.  The second divider is as large or larger than 2% of the data, and so on.  The last divider, the 99<sup>th</sup>, is the value that is as large or larger than 99% of the data.  These “dividers” are called percentiles. A **percentile** is a number such that a specified percentage of the data are at or below this number.  For example, the 99<sup>th</sup> percentile is a number such that 99% of the data are at or below this value.  As another example, half (50%) of the data lie at or below the 50<sup>th</sup> percentile.  The word “percent” means “$\div 100$.”  This can help you remember that the percentiles divide the data into 100 equal groups. 
+The home values are representative of data.  If we have a list of data, sorted in increasing order, and we want to divide it into 100 equal groups, we only need 99 dividers (like fences) to divide up the data.  The first divider is as large or larger than 1% of the data.  The second divider is as large or larger than 2% of the data, and so on.  The last divider, the 99<sup>th</sup>, is the value that is as large or larger than 99% of the data.  These dividers are called percentiles. A **percentile** is a number such that a specified percentage of the data are at or below this number.  For example, the 99<sup>th</sup> percentile is a number such that 99% of the data are at or below this value.  As another example, half (50%) of the data lie at or below the 50<sup>th</sup> percentile.  The word percent means $\div 100$.  This can help you remember that the percentiles divide the data into 100 equal groups. 
 
-**Quartiles** are special percentiles. The word “quartile” is from the Latin *quartus*, which means "fourth." The quartiles divide the data into four equal groups. The quartiles correspond to specific percentiles.  The first quartile, Q<sub>1</sub>, is the 25<sup>th</sup> percentile. The second quartile, Q<sub>2</sub>, is the same as the 50<sup>th</sup> percentile or the median.  The third quartile, Q<sub>3</sub>, is equivalent to the 75<sup>th</sup> percentile.
+**Quartiles** are special percentiles. The word quartile is from the Latin *quartus*, which means "fourth." The quartiles divide the data into four equal groups. The quartiles correspond to specific percentiles.  The first quartile, Q<sub>1</sub>, is the 25<sup>th</sup> percentile. The second quartile, Q<sub>2</sub>, is the same as the 50<sup>th</sup> percentile or the median.  The third quartile, Q<sub>3</sub>, is equivalent to the 75<sup>th</sup> percentile.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
@@ -1671,7 +1671,7 @@ The home values are representative of data.  If we have a list of data, sorted i
 
 - Open the data file you are using. For this example, open the file [WrongSiteWrongPatient.xlsx](./Data/WrongSiteWrongPatient.xlsx).
 
-- Copy and paste the desired data into Column A of the spreadsheet [Dquantitative Descriptive Statistics](./Data/QuantitativeDescriptiveStatistics.xlsx).
+- Copy and paste the desired data into Column A of the spreadsheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx).
 
 - The percentiles and quartiles are listed below the Numerical Descriptive Statistics.  Scroll to find the percentile you need.
 
@@ -1769,11 +1769,11 @@ Another way to summarize data is with the five-number summary.  **The five-numbe
 
 Statistical packages can give different results for some computations.  This is because there are several reasonable ways to define certain quantities, such as the quartiles. As such, you may find that some of the values that are given in Excel<!--{{Course_Filter|course=B C|content=SPSS}}--> are different than what other software may give. 
 
-<!--Please be sure to use the values that you calculate using the software designated for your particular class ({{Course_Filter|course=A|content=Excel}}{{Course_Filter|course=B C|content=SPSS}}-->.
+<!--Please be sure to use the values that you calculate using the software designated for your particular class ({{Course_Filter|course=A|content=Excel}}{{Course_Filter|course=B C|content=SPSS}}-->
 
 &nbsp;&nbsp;**To find the values for a five-number summary in Excel, do the following**
 
-- Copy and paste the desired data into Column A of the spreadsheet [Quantitative Descriptive Statistics](./Data/QuantitativeDescriptiveStatistics.xlsx).
+- Copy and paste the desired data into Column A of the spreadsheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx).
 
 - The minimum, maximum, and quartiles are listed in the Numerical Descriptive Statistics area.
 <br>
@@ -1786,7 +1786,7 @@ Statistical packages can give different results for some computations.  This is 
 <a href="javascript:showhide('Q42')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q42" style="display:none;">
 <center>
-$$\displaystyle{\$0,~~\$29,496,~~\$68,552,~~\$124,280,~~\$780,575}$$
+$$\displaystyle{\$0,~~\$29,496;~~\$68,552;~~\$124,280;~~\$780,575}$$
 <!--::{{Course_Filter|course=B C|content=$ \displaystyle{\$0,~~\$29,379,~~\$68,552,~~\$124,513,~~\$780,575} $}}-->
 </center>
 </div>
