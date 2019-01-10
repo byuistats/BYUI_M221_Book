@@ -19,6 +19,7 @@ output:
 <div style="padding-left:10%;">**Optional Lesson Video**</div>
 <iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-a7rYECFUKhL6yMzvOIwCO" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
+<br>
 
 ## Lesson Outcomes
 
@@ -32,17 +33,17 @@ By the end of this lesson, you should be able to:
 
 ## Probability
 
-### Christopher Columbus’ First Voyage
+### Christopher Columbus' First Voyage
 
 <img src="./Images/Columbus_taking_possession_of_the_new_country.jpg">
 
-On August 3, 1492, Columbus set sail from Spain for his intended destination: the Indies (Caso, Adolph 1990). He was on the Santa Maria, which had a crew of approximately 41 men ("Crist'obal col'on" 1991; "Christopher Columbus"). Several other men were aboard the Niña and the Pinta ("Crist'obal col'on" 1991). On October 12, he landed on an island in the Bahamas he called San Salvador.
+On August 3, 1492, Columbus set sail from Spain for his intended destination: the Indies (Caso, Adolph 1990). He was on the Santa Maria, which had a crew of approximately 41 men ("Crist'obal col'on" 1991; "Christopher Columbus"). Several other men were aboard the Ni�a and the Pinta ("Crist'obal col'on" 1991). On October 12, he landed on an island in the Bahamas he called San Salvador.
 
 The return trip was not without challenges. The Santa Maria ran aground on Christmas Day, 1492, and was abandoned on the island we now call Haiti. Following this incident, Columbus sailed for Spain. Severe storms made the journey difficult. A particularly bad storm on February 14, 1493 made the crew fear for their lives. By morning, the storm was even worse!
 
 Recognizing his dependence upon God, Columbus ordered that a pilgrimage should be made to a particular shrine upon their safe arrival in Spain. He decided that they would use random chance to determine who would make the pilgrimage. They took one chick pea for each man on board. A knife was used to mark one of the chick peas with a cross. The chick peas were placed in a hat and shaken up. Each man was to draw a chick pea, and the one who had the cross would make the pilgrimage.
 
-“The ﬁrst who put in his hand was [Columbus,] and he drew out the bean with a cross, so the lot fell on him; and he was bound to go on the pilgrimage and fulfil the vow” (Caso, Adolph 1990).
+The first who put in his hand was [Columbus,] and he drew out the bean with a cross, so the lot fell on him; and he was bound to go on the pilgrimage and fulfil the vow (Caso, Adolph 1990).
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
@@ -67,7 +68,7 @@ Recognizing his dependence upon God, Columbus ordered that a pilgrimage should b
 </br>
 
 **Additional Drawings**<br>
-Columbus’ promise to make the pilgrimage did not stop the storm. It was determined that there should be a pilgrimage to another site they held sacred. Again, chick peas representing each member of the crew were placed in a hat and shaken up. “The lot fell on a sailor...named Pedro de Villa” (Caso, Adolph 1990).
+Columbus' promise to make the pilgrimage did not stop the storm. It was determined that there should be a pilgrimage to another site they held sacred. Again, chick peas representing each member of the crew were placed in a hat and shaken up. The lot fell on a sailor...named Pedro de Villa (Caso, Adolph 1990).
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
@@ -128,7 +129,7 @@ To put some perspective on this, a high school athlete in the United States is o
 
 <a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q8" style="display:none;">
-* The probability of rolling a six is $ \displaystyle{\frac{1}{6}} $ and the probability of not rolling a six is $ \displaystyle{\frac{5}{6} } $.  These things cannot happen at the same time, so the probability of either rolling a six or not rolling a six is
+* The probability of rolling a six is $\displaystyle{\frac{1}{6}}$ and the probability of not rolling a six is $\displaystyle{\frac{5}{6}}$.  These things cannot happen at the same time, so the probability of either rolling a six or not rolling a six is
 $$ \frac{1}{6} + \frac{5}{6} = \frac{6}{6} = 1 $$
 
 *The only possible outcomes in this case are that you either roll a six or that you do not roll a six.  The probability that one of these will happen is 1.  If we list all the possible outcomes, the probability that at least one of them will occur is 1.
@@ -157,11 +158,11 @@ P (Roll a 6 on a die)= $\displaystyle{\frac{1}{6}}$
 
 ### Rules of Probability
 
-Probabilities follow patterns, called **probability distributions,** or “distributions,“ for short. There are three rules that a probability distribution must follow. Answer the following questions to explore what these three rules might be.
+Probabilities follow patterns, called **probability distributions,** or distributions, for short. There are three rules that a probability distribution must follow. Answer the following questions to explore what these three rules might be.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
-10. As an answer to a homework problem, a student reported, “The probability of ﬁnding life on Mars is −0.35.” What is wrong with this statement?
+10. As an answer to a homework problem, a student reported, The probability of finding life on Mars is -0.35. What is wrong with this statement?
 
 <a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q10" style="display:none;">
@@ -169,7 +170,7 @@ Probabilities follow patterns, called **probability distributions,** or “distr
 </div>
 </br>
 
-11. A student in an introductory statistics class wrote the following statement on an exam: “The probability that the event will occur is 1.25 (i.e. 125%).” What is wrong with this statement?
+11. A student in an introductory statistics class wrote the following statement on an exam: The probability that the event will occur is 1.25 (i.e. 125%). What is wrong with this statement?
 
 <a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q11" style="display:none;">
@@ -177,7 +178,7 @@ Probabilities follow patterns, called **probability distributions,** or “distr
 </div>
 </br>
 
-12. A student estimated that the probability that he would finish his homework is 0.45 (i.e., 45%), and the probability that he would not finish his homework is 0.35 (i.e., 35%). What is wrong with this student’s statement?
+12. A student estimated that the probability that he would finish his homework is 0.45 (i.e., 45%), and the probability that he would not finish his homework is 0.35 (i.e., 35%). What is wrong with this student's statement?
 
 <a href="javascript:showhide('Q12')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q12" style="display:none;">
@@ -200,7 +201,7 @@ In this course we are interested in experiments where the outcomes are influence
 
 - **Rule 1**: The probability of an event $X$ is a number between 0 and 1. 
 
-$$0 ≤ P(X) ≤ 1$$
+$$0 \leq P(X) \leq 1$$
 
 - **Rule 2**: If you list all the outcomes of an experiment (such as rolling a die) the probability that one of these outcomes will occur is 1. In other words, the sum of the probabilities of all the possible outcomes of any experiment is 1.
 
@@ -338,37 +339,37 @@ Notice that the sample mean is what you get when you multiply each of the values
 <tbody>
 <tr class="odd">
 <td><p>Value</p></td>
-<td><p>Count</p></td>
+<td><p>Proportion</p></td>
 <td><p>Value $\times$ Proportion</p></td>
 </tr>
 <tr class="even">
 <td><p>$$1$$</p></td>
-<td><p>$\displaystyle{\frac{1047}{6000}≈ 0.1745}$</p></td>
+<td><p>$\displaystyle{\frac{1047}{6000} = 0.1745}$</p></td>
 <td><p>$$1(0.1745)$$</p></td>
 </tr>
 <tr class="odd">
 <td><p>$$2$$</p></td>
-<td><p>$\displaystyle{\frac{968}{6000}≈ 0.1613}$</p></td>
+<td><p>$\displaystyle{\frac{968}{6000} = 0.1613}$</p></td>
 <td><p>$$2(0.1613)$$</p></td>
 </tr>
 <tr class="even">
 <td><p>$$3$$</p></td>
-<td><p>$\displaystyle{\frac{961}{6000}≈ 0.1602}$</p></td>
+<td><p>$\displaystyle{\frac{961}{6000} = 0.1602}$</p></td>
 <td><p>$$3(0.1602)$$</p></td>
 </tr>
 <tr class="odd">
 <td><p>$$4$$</p></td>
-<td><p>$\displaystyle{\frac{1006}{6000}≈ 0.1677}$</p></td>
+<td><p>$\displaystyle{\frac{1006}{6000} = 0.1677}$</p></td>
 <td><p>$$4(0.1677)$$</p></td>
 </tr>
 <tr class="even">
 <td><p>$$5$$</p></td>
-<td><p>$\displaystyle{\frac{980}{6000}≈ 0.1633}$</p></td>
+<td><p>$\displaystyle{\frac{980}{6000} = 0.1633}$</p></td>
 <td><p>$$5(0.1633)$$</p></td>
 </tr>
 <tr class="odd">
 <td><p>$$6$$</p></td>
-<td><p>$\displaystyle{\frac{1038}{6000}≈ 0.1730}$</p></td>
+<td><p>$\displaystyle{\frac{1038}{6000} = 0.1730}$</p></td>
 <td><p>$$6(0.1730)$$</p></td>
 </tr>
 <tr class="even">
@@ -387,14 +388,14 @@ What could we do to calculate the population mean? Remember that the true probab
 
 Column 1   Column 2                               Column 3
 ---------- -------------------------------------- ---------------------------
-Value      Count                                  Value $\times$ Proportion
+Value      Proportion                             Value $\times$ Proportion
 $x$        $P(x)$                                 $x \times P(x)$
-$$1$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$1(0.1667)$$
-$$2$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$2(0.1667)$$
-$$3$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$3(0.1667)$$
-$$4$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$4(0.1667)$$
-$$5$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$5(0.1667)$$
-$$6$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$6(0.1667)$$
+$$1$$      $\displaystyle{\frac{1}{6}= 0.1667}$   $$1(0.1667)$$
+$$2$$      $\displaystyle{\frac{1}{6}= 0.1667}$   $$2(0.1667)$$
+$$3$$      $\displaystyle{\frac{1}{6}= 0.1667}$   $$3(0.1667)$$
+$$4$$      $\displaystyle{\frac{1}{6}= 0.1667}$   $$4(0.1667)$$
+$$5$$      $\displaystyle{\frac{1}{6}= 0.1667}$   $$5(0.1667)$$
+$$6$$      $\displaystyle{\frac{1}{6}= 0.1667}$   $$6(0.1667)$$
            Sum: 1                                 Sum: $\mu\approx 3.5$
 
 
@@ -414,15 +415,15 @@ Let's calculate the population standard deviation for the number that results fr
 
   Column 1   Column 2                               Column 3                    Column 4
   ---------- -------------------------------------- --------------------------- -------------------------------------
-  Value      Count                                  Value $\times$ Proportion   
+  Value      Proportion                             Value $\times$ Proportion   
   $x$        $P(x)$                                 $x \times P(x)$             $(x-\mu)^2 \times P(x)$
-  $$1$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$1(0.1667)$$               $(1-3.5)^2\times(0.1667) = 1.0417$
-  $$2$$      $\displaystyle{\frac{1}{6}≈ 0.1667}$   $$2(0.1667)$$               $(2-3.5)^2\times(0.1667) = 0.3750$
-  $$3$$      $\displaystyle\frac{1}{6}≈ 0.1667$     $$3(0.1667)$$               $(3-3.5)^2\times(0.1667) = 0.0417$
-  $$4$$      $\displaystyle\frac{1}{6}≈ 0.1667$     $$4(0.1667)$$               $(4-3.5)^2\times(0.1667) = 0.0417$
-  $$5$$      $\displaystyle\frac{1}{6}≈ 0.1667$     $$5(0.1667)$$               $(5-3.5)^2\times(0.1667) = 0.3750$
-  $$6$$      $\displaystyle\frac{1}{6}≈ 0.1667$     $$6(0.1667)$$               $(6-3.5)^2\times(0.1667) = 1.0417$
-             $$1$$                                  Sum: $\mu≈3.5$              Sum: Variance = $\sigma^2 = 2.9167$
+  $$1$$      $\displaystyle{\frac{1}{6}= 0.1667}$   $$1(0.1667)$$               $(1-3.5)^2\times(0.1667) = 1.0417$
+  $$2$$      $\displaystyle{\frac{1}{6}= 0.1667}$   $$2(0.1667)$$               $(2-3.5)^2\times(0.1667) = 0.3750$
+  $$3$$      $\displaystyle\frac{1}{6}= 0.1667$     $$3(0.1667)$$               $(3-3.5)^2\times(0.1667) = 0.0417$
+  $$4$$      $\displaystyle\frac{1}{6}= 0.1667$     $$4(0.1667)$$               $(4-3.5)^2\times(0.1667) = 0.0417$
+  $$5$$      $\displaystyle\frac{1}{6}= 0.1667$     $$5(0.1667)$$               $(5-3.5)^2\times(0.1667) = 0.3750$
+  $$6$$      $\displaystyle\frac{1}{6}= 0.1667$     $$6(0.1667)$$               $(6-3.5)^2\times(0.1667) = 1.0417$
+             $$1$$                                  Sum: $\mu=3.5$              Sum: Variance = $\sigma^2 = 2.9167$
 
 The standard deviation is $$\sigma=\sqrt{\sigma^2}=\sqrt{(2.9167)}=1.7078$$
 
@@ -438,7 +439,7 @@ The table below illustrates the profit for all possible outcomes in a drawing wh
 
   Outcome         Payoff           Profit         Probability
   --------------- ---------------- -------------- ----------------------------------------------------------------
-                  Gross Winnings   \$x$             P$(x)$
+                  Gross Winnings    $x$             $P(x)$
   OOOOOP          \$200,000,000     \$199,999,998   $\dfrac{1}{175,223,510}$
   OOOOO           \$1,000,000       \$999,998       $\dfrac{34}{175,223,510}$
   OOOO P          \$10,000          \$9,998         $\dfrac{270}{175\text{,}223\text{,}510}$
@@ -458,16 +459,16 @@ What is the population mean of the profits for those who play Powerball? To find
   Outcome         Profit                            Probability                                                       
   --------------- --------------------------------- ----------------------------------------------------------------- -----------------------------------------------------------------------------------------------------
                   Gross Winnings, $x$               $P(x)$                                                            $x \times P(x)$
-  OOOOOP          \$199,999,998                     $$\frac{1}{175\text{,}223\text{,}510}$$                           $\displaystyle{\$199\text{,}999\text{,}998\times\frac{1}{175\text{,}223\text{,}510}≈0.00000000571}$
-  OOOOO           \$999,998                         $$\frac{34}{175\text{,}223\text{,}510}$$                          $\displaystyle{\$999\text{,}998\times\frac{34}{175\text{,}223\text{,}510}≈0.000000194}$
-  OOOOP           \$9,998                           $$\frac{270}{175\text{,}223\text{,}510}$$                         $\displaystyle{\$9\text{,}998\times\frac{270}{175\text{,}223\text{,}510}≈0.000001541}$
-  OOOO            \$98                              $$\frac{9\text{,}1890}{175223\text{,}510}$$                       $\displaystyle{\$98\times\frac{9\text{,}180}{175\text{,}223\text{,}510}≈0.000052390}$
-  OOOP            \$98                              $$\frac{14\text{,}310}{175\text{,}223\text{,}510}$$               $\displaystyle{\$98\times\frac{14\text{,}310}{175\text{,}223\text{,}510}≈0.000081660}$
-  OOO             \$5                               $$\frac{486\text{,}540}{175\text{,}223\text{,}510}$$              $\displaystyle{\$5\times\frac{486\text{,}540}{175\text{,}223\text{,}510}≈0.002776682}$
-  OOP             \$5                               $$\frac{248\text{,}040}{175\text{,}223\text{,}510}$$              $\displaystyle{\$5\times\frac{248\text{,}040}{175\text{,}223\text{,}510}≈0.001415563}$
-  OP              \$2                               $$\frac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}$$     $\displaystyle{\$2\times\frac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}≈0.009024217}$
-  P               \$2                               $$\frac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}$$     $\displaystyle{\$2\times\frac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}≈0.018048434}$
-  Losing ticket   \$-2                              $$\frac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}$$   $\displaystyle{\$-2\times\frac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}≈0.968599305}$
+  OOOOOP          \$199,999,998                     $$\frac{1}{175\text{,}223\text{,}510}$$                           $\displaystyle{\$199\text{,}999\text{,}998\times\frac{1}{175\text{,}223\text{,}510}=0.00000000571}$
+  OOOOO           \$999,998                         $$\frac{34}{175\text{,}223\text{,}510}$$                          $\displaystyle{\$999\text{,}998\times\frac{34}{175\text{,}223\text{,}510}=0.000000194}$
+  OOOOP           \$9,998                           $$\frac{270}{175\text{,}223\text{,}510}$$                         $\displaystyle{\$9\text{,}998\times\frac{270}{175\text{,}223\text{,}510}=0.000001541}$
+  OOOO            \$98                              $$\frac{9\text{,}1890}{175223\text{,}510}$$                       $\displaystyle{\$98\times\frac{9\text{,}180}{175\text{,}223\text{,}510}=0.000052390}$
+  OOOP            \$98                              $$\frac{14\text{,}310}{175\text{,}223\text{,}510}$$               $\displaystyle{\$98\times\frac{14\text{,}310}{175\text{,}223\text{,}510}=0.000081660}$
+  OOO             \$5                               $$\frac{486\text{,}540}{175\text{,}223\text{,}510}$$              $\displaystyle{\$5\times\frac{486\text{,}540}{175\text{,}223\text{,}510}=0.002776682}$
+  OOP             \$5                               $$\frac{248\text{,}040}{175\text{,}223\text{,}510}$$              $\displaystyle{\$5\times\frac{248\text{,}040}{175\text{,}223\text{,}510}=0.001415563}$
+  OP              \$2                               $$\frac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}$$     $\displaystyle{\$2\times\frac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}=0.009024217}$
+  P               \$2                               $$\frac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}$$     $\displaystyle{\$2\times\frac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}=0.018048434}$
+  Losing ticket   \$-2                              $$\frac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}$$   $\displaystyle{\$-2\times\frac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}=0.968599305}$
 
 
 The fact that the mean is -$0.4981 says that the average profit of each Powerball lottery ticket is actually a loss of 50 cents. In other words, players lose 50 cents on average, every time they play.
@@ -504,13 +505,11 @@ What about those who have won? Read one of the Powerball winner's story, in the 
 <a href="javascript:showhide('Q18')"><span style="font-size:8pt;">Click Here to Explore this Optional Section</span></a>
 <div id="Q18" style="display:none;">
 
-The following stories describe how winning a huge Powerball jackpot changed the life of Jack Whittaker, for the worse.
+The following story describe how winning a huge Powerball jackpot changed the life of Jack Whittaker, for the worse.
 
 [Print story](http://abcnews.go.com/2020/powerball-winner-cursed/story?id=3012631#.TxRrefkprTp){target="_blank"}
 
-[Lottery Curse Video](http://abcnews.go.com/2020/video/unlucky-lotto-winner-3023380){target="_blank"}
 
-[Lottery Curse Video–Part II](http://abcnews.go.com/2020/video/lotto-winner-wishes-hed-torn-ticket-3016773){target="_blank"}
 
 </div>
 <br>
@@ -523,7 +522,7 @@ The following stories describe how winning a huge Powerball jackpot changed the 
 - The three **rules of probability** are:
 
 1. A probability is a number between 0 and 1. 
-$$0 ≤ P(X) ≤ 1$$
+$$0 \leq P(X) \leq 1$$
 
 2. If you list all the outcomes of a probability experiment (such as rolling a die) the probability that one of these outcomes will occur is 1. In other words, the sum of the probabilities in any probability is 1. 
 $$\sum P(X) = 1$$
