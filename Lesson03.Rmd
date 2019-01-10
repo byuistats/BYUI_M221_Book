@@ -1765,7 +1765,7 @@ The first quartile ($Q_1$) or 25<sup>th</sup> percentile (calculated in Excel) o
 
 ### The Five-Number Summary
 
-Another way to summarize data is with the five-number summary.  **The five-number summary** is comprised of the minimum, the first quartile, the second quartile (or median), the third quartile and the maximum.  The values in the five-number summary are *always* presented in this order.  Since the order of the numbers in the five number summary is fixed, it is not necessary to label each of the values individually. 
+Another way to summarize data is with the five-number summary.  **The five-number summary** is comprised of the minimum, the first quartile, the second quartile (or median), the third quartile and the maximum.  
 
 Statistical packages can give different results for some computations.  This is because there are several reasonable ways to define certain quantities, such as the quartiles. As such, you may find that some of the values that are given in Excel<!--{{Course_Filter|course=B C|content=SPSS}}--> are different than what other software may give. 
 
