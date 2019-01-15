@@ -93,7 +93,7 @@ We will return to this example later, and we will find the area shaded in blue.
 
 In Ghana, the mean height of young adult women is normally distributed with mean $159.0$ cm and standard deviation $4.9$ cm. (Monden & Smits, 2009) Serwa, a female BYU-Idaho student from Ghana, is $169.0$ cm tall. Her height is $169.0 - 159.0 = 10$ cm greater than the mean. When compared to the standard deviation, she is about two standard deviations ($\approx 2 \times 4.9$ cm) taller than the mean. <!-- Two standard deviations is only an approximate.  Since $10/4.9 = 2.041$, she is 2.04 standard deviations greater than the mean.-->
 
-The heights of men are also normally distributed. The mean height of young adult men in Brazil is $173.0$ cm ("Orçamento," 2010), and the standard deviation for the population is $6.3$ cm. (Castilho & Lahr, 2001) A Brazilian BYU-Idaho student, Gustavo, is $182.5$ cm tall. Compared to other Brazilians, he is taller than the mean height of Brazilian men.
+The heights of men are also normally distributed. The mean height of young adult men in Brazil is $173.0$ cm ("Or�amento," 2010), and the standard deviation for the population is $6.3$ cm. (Castilho & Lahr, 2001) A Brazilian BYU-Idaho student, Gustavo, is $182.5$ cm tall. Compared to other Brazilians, he is taller than the mean height of Brazilian men.
 
 <div class="QuestionsHeading">Answer the following question:</div>
 <div class="Questions">
@@ -101,7 +101,7 @@ The heights of men are also normally distributed. The mean height of young adult
 
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
--  Gustavo’s height is $182.5 − 173.0 = 9.5 \text{ cm  }$    above the mean. The standard deviation of the height of Brazilian men is 6.3 cm, so his height is   $\displaystyle{ \frac{9.5}{6.3} =1.508 }$  standard deviations above the mean.
+-  Gustavo�'s height is $182.5 - 173.0 = 9.5 \text{ cm  }$    above the mean. The standard deviation of the height of Brazilian men is 6.3 cm, so his height is   $\displaystyle{ \frac{9.5}{6.3} =1.508 }$  standard deviations above the mean.
 </div>
 &nbsp;
 </div>
@@ -142,17 +142,17 @@ This is called the 68-95-99.7% Rule for Bell-shaped Distributions. Some statisti
 <img src="./Images/L03_A06_R04.jpg">
 
 Approximately 68% of the observations from a bell-shaped distribution will be between the values of $\mu -~\sigma~$and $\mu +~\sigma~$. Consider the heights of young adult women in Ghana. We expect that about 68% of Ghanian women have a height between the values of
-$$\mu -~\sigma = 159.0 − 4.9 = 154.1~\text{cm}$$
+$$\mu -~\sigma = 159.0 - 4.9 = 154.1~\text{cm}$$
 and
 $$\mu +~\sigma = 159.0 + 4.9 = 163.9~\text{cm}.$$
 
 So, if a female is chosen at random from all the young adult women in Ghana, about 68% of those chosen will have a height between 154.1 and 163.9 cm. Similarly, 95% of the women’s heights will be between the values of
-$$\mu − 2\sigma = 159.0 − 2(4.9) = 149.2~\text{cm}$$
+$$\mu - 2\sigma = 159.0 - 2(4.9) = 149.2~\text{cm}$$
 and
 $$\mu + 2\sigma = 159.0 + 2(4.9) = 168.8~\text{cm}.$$
 
-Finally, 99.7% of the women’s heights will be between
-$$\mu − 3\sigma = 159.0 − 3(4.9) = 144.3~\text{cm}$$
+Finally, 99.7% of the women's heights will be between
+$$\mu - 3\sigma = 159.0 - 3(4.9) = 144.3~\text{cm}$$
 and
 $$\mu + 3\sigma = 159.0 + 3(4.9) = 173.7~\text{cm}.$$
 
@@ -160,7 +160,7 @@ $$\mu + 3\sigma = 159.0 + 3(4.9) = 173.7~\text{cm}.$$
 
 If a $z$-score is extreme (either a large positive number or a large negative number), then that suggests that that observed value is very far from the mean. The 68-95-99.7% rule states that 95% of the observed data values will be within two standard deviations of the mean. This means that 5% of the observations will be more than 2 standard deviations away from the mean (either to the left or to the right).
 
-We define an **unusual observation** to be something that happens less than 5% of the time. For normally distributed data, we determine if an observation is unusual based on its $z$-score. We call an observation unusual if $z < –2$ or if $z > 2$.  In other words, we will call an event unusual if the absolute value of its $z$-score is greater than 2.
+We define an **unusual observation** to be something that happens less than 5% of the time. For normally distributed data, we determine if an observation is unusual based on its $z$-score. We call an observation unusual if $z < 2$ or if $z > 2$.  In other words, we will call an event unusual if the absolute value of its $z$-score is greater than 2.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
@@ -184,7 +184,7 @@ We define an **unusual observation** to be something that happens less than 5% o
 
 <a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q4" style="display:none;">
--  Serwa’s height is unusual.  Her $z$-score is: $z = 2.041$ This is more than two standard deviations away from the mean. Gustavo’s height is not unusual.  His $z$-score is less than two standard deviations away from the mean.
+-  Serwa's height is unusual.  Her $z$-score is: $z = 2.041$ This is more than two standard deviations away from the mean. Gustavo's height is not unusual.  His $z$-score is less than two standard deviations away from the mean.
 </div>
 &nbsp;
 </div>
@@ -201,7 +201,7 @@ An important part of the practice of statistics is finding areas under a normal 
 
 ### Introduction to the Normal Probability Applet
 
-The Normal Probability Applet is a visualization program offering statistics students insights and computations for the relationship between $z$-scores and areas under the standard normal curve. You can find a link to this applet on the [[Main Page]] of the wiki under Course Resources. This app is also compatible to use on your phone, iPad, and other mobile devices.  The app is stored at http://byuimath.com/apps/normprob.html.  If you want a copy you can open from your desktop, just right click the link and save it to your computer.
+The Normal Probability Applet is a visualization program offering statistics students insights and computations for the relationship between $z$-scores and areas under the standard normal curve. You can find a link to this applet on I-learn, under the Course Resources module. This app is also compatible to use on your phone, iPad, and other mobile devices.  The app is stored at http://byuimath.com/apps/normprob.html.  If you want a copy you can open from your desktop, just right click the link and save it to your computer.
 
 To use this applet follow these instructions:
 
@@ -212,14 +212,13 @@ To use this applet follow these instructions:
 
 <br>
 <center>
-{{#widget:Iframe
-|url=http://byuimath.com/apps/normprob.html?width={{{width|600}}}&z={{{z|1}}}&height={{{height|400}}}&left={{{left|1}}}&mid={{{mid|0}}}&right={{{right|1}}}&area={{{area|a}}}&static={{{static|0}}}&title={{{title|1}}}&border={{{border|0}}}
-|width={{{fwidth|650}}}
-|height={{{fheight|450}}}
-|border=0
-}}
-</center>
-<br>
+<div width="90%">
+<iframe height="500" width="700" align="center" frameborder="0" src="http://byuimath.com/apps/normprob.html?width=600&z=1&height=400&left=1&mid=0&right=1&area=a&static=0&title=1&border=0" ></iframe>
+</div>
+
+```{r, echo=FALSE}
+#htmltools::includeHTML("http://byuimath.com/apps/normprob.html")
+```
 
 ### Converting a $z$-score to a Probability
 
@@ -227,9 +226,9 @@ Using this applet we can calculate proportions and probabilities based on the ar
 
 #### Heights of Ghanian Women
 
-We will use the example of Serwa's height to find the proportion of young Ghanian women who are shorter than Serwa. Recall that for the height of young Ghanian women, the population mean is 159.0 cm and the population standard deviation is 4.9 cm. Serwa's height is 169.0 cm. We found the $z$-score of Serwa’s height as:
+We will use the example of Serwa's height to find the proportion of young Ghanian women who are shorter than Serwa. Recall that for the height of young Ghanian women, the population mean is 159.0 cm and the population standard deviation is 4.9 cm. Serwa's height is 169.0 cm. We found the $z$-score of Serwa's height as:
 
-$$z = \frac{x – \mu}{\sigma} = \frac{169.0 – 159.0}{4.9} = 2.041$$
+$$z = \frac{x -\mu}{\sigma} = \frac{169.0- 159.0}{4.9} = 2.041$$
 
 What proportion of young Ghanian women reach a height that is at or below 169 cm? To answer this question, we need to find the area under a normal density curve (i.e. the probability) that is to the left of $z = 2.041$.
 
@@ -249,7 +248,7 @@ The area to the left of our chosen $z$-score is also the probability that a rand
 
 We now return to the example of the baseball batting averages. We want to find the probability that a randomly selected player will have a batting average that is above 0.280. The population mean is 0.261 and the population standard deviation is 0.034. We can use this information to find a $z$-score. Then we use the applet to find the area under the normal curve to the right of this $z$-score.
 
-$$z = \frac{x – \mu}{\sigma} = \frac{0.280 – 0.261}{0.034} = 0.559$$
+$$z = \frac{x -\mu}{\sigma} = \frac{0.280 - 0.261}{0.034} = 0.559$$
 
 Type the $z$-score of $0.559$ in one of the boxes below the horizontal axis in the applet. Click on the areas under the curve until only the region on the right is highlighted in blue.
 
@@ -267,8 +266,8 @@ The applet does not allow us to find the probability of being between two values
 
 We illustrate the procedure for finding the probability that the height of a randomly selected young Ghanian woman is between two values. For example, "What is the probability that a randomly selected young Ghanian women will be between 155.0 cm and 165.0 cm tall?" Recall that for the height of young Ghanian women, the population mean is $159.0$ cm and the population standard deviation is $4.9$ cm. We want to find the probability that a randomly selected woman's height is between $155.0$ cm and $165.0$ cm. To do this we find the $z$-score for both values:
 
-$$z_1 = \frac{x – \mu}{\sigma} = \frac{155.0 – 159.0}{4.9} = -0.82$$
-$$z_2 = \frac{x – \mu}{\sigma} = \frac{165.0 – 159.0}{4.9} = 1.22$$
+$$z_1 = \frac{x- \mu}{\sigma} = \frac{155.0 - 159.0}{4.9} = -0.82$$
+$$z_2 = \frac{x - \mu}{\sigma} = \frac{165.0 -159.0}{4.9} = 1.22$$
 
 We now answer the question by finding the area under the normal density curve (i.e. the probability) to the left of $z = 1.22$ which is $0.8888$ and also the area under the normal density curve to the left of $z = -0.82$ which is $0.2061$. To find the area between $z = 1.22$ and $z = -0.82$, we subtract the smaller area from the larger.
 
@@ -294,11 +293,11 @@ For example, to find the $z$-score corresponding to the 90<sup>th</sup> percenti
 
 So, $z = 1.282$ is the $z$-score that corresponds to the 90th percentile of a normal distribution. How do we find the batting average that corresponds to the 90<sup>th</sup> percentile? We can solve for $x$ in the equation for the $z$-score.
 
-$$\displaystyle{z=\frac{x – \mu}{\sigma}}$$
+$$\displaystyle{z=\frac{x - \mu}{\sigma}}$$
 
 We know $z = 1.282$, $\mu = 0.261$, and $\sigma = 0.034$. Substituting these values into the equation for the $z$-score, we have:
 
-$$1.282 = \frac{x – 0.261}{0.034 }$$
+$$1.282 = \frac{x -0.261}{0.034 }$$
 
 <br>
 
@@ -306,13 +305,13 @@ Solve for $x$:
 
 |                                          |                                             |     |                                                                |
 |------------------------------------------|--------------------------------------------:|-----|----------------------------------------------------------------|
-| Original Equation                        |            $\displaystyle{ 1.282 }\space$   | $=$ | $\displaystyle{ \frac{x – 0.261}{0.034 }}$                     |
+| Original Equation                        |            $\displaystyle{ 1.282 }\space$   | $=$ | $\displaystyle{ \frac{x - 0.261}{0.034 }}$                     |
 | $~$                                      |                                             |     |                                                                |
-| Multiply both sides by 0.034             |    $\displaystyle{ 1.282 (0.034) }\space$   | $=$ | $\displaystyle{ \frac{x – 0.261}{0.034 } \cdot (0.034) }$      |
+| Multiply both sides by 0.034             |    $\displaystyle{ 1.282 (0.034) }\space$   | $=$ | $\displaystyle{ \frac{x -0.261}{0.034 } \cdot (0.034) }$      |
 | $~$                                      |                                             |     |                                                                |
-| Simplify the right-hand side             |    $\displaystyle{ 1.282 (0.034) }\space$   | $=$ | $\displaystyle{ x – 0.261 }$                                   |
+| Simplify the right-hand side             |    $\displaystyle{ 1.282 (0.034) }\space$   | $=$ | $\displaystyle{ x - 0.261 }$                                   |
 | $~$                                      |                                             |     |                                                                |
-| Add 0.261 to both sides                  |$\displaystyle{ 0.261 + 1.282(0.034)}\space$ | $=$ | $\displaystyle{ 0.261 + (x – 0.261) }$                         |
+| Add 0.261 to both sides                  |$\displaystyle{ 0.261 + 1.282(0.034)}\space$ | $=$ | $\displaystyle{ 0.261 + (x - 0.261) }$                         |
 | $~$                                      |                                             |     |                                                                |
 | Simplify the right-hand side             |$\displaystyle{ 0.261 + 1.282(0.034)}\space$ | $=$ | $\displaystyle{ x }$                                           |
 | $~$                                      |                                             |     |                                                                |
@@ -345,7 +344,7 @@ In a Q-Q plot, the $z$-scores for the observed values in the data set are plotte
 
 Notice that the points fall in a fairly straight line. These data appear to follow a normal distribution.
 
-In any Q-Q plot, we expect little “wiggles” in the points. If the points in the Q-Q plot are essentially in a line, then we conclude that the data are normally distributed.
+In any Q-Q plot, we expect little wiggles in the points. If the points in the Q-Q plot are essentially in a line, then we conclude that the data are normally distributed.
 
 **Instructions for creating a Q-Q Plot:**
 
@@ -355,8 +354,8 @@ In any Q-Q plot, we expect little “wiggles” in the points. If the points in 
 - **Here is how to make a Q-Q plot in Excel**
 - Open the data file [BattingAverages.xlsx](./Data/BattingAverages.xlsx)
 - Copy the data you needs from this file (the column labeled BattingAvg)
-- Open the file [Quantitative Descriptive Statistics](./Data/QuantitativeDescriptiveStatistics.xlsx)
-- Click on the tab labeled “QQ Plots”
+- Open the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx)
+- Click on the tab labeled QQ Plots
 - Paste the data into Column A of the QQ plots worksheet
   + Sort Column A in order from smallest to largest.
   + The graph on the right will be your Q-Q plot.
@@ -425,7 +424,7 @@ Note that the mean is 98.23, standard deviation is 0.738, and sample size is n =
 - **Instructions for Creating a Histogram in Excel**
 
 - To make a histogram in Excel, you can use the Excel file 
-[Quantitative Descriptive Statistics](./Data/QuantitativeDescriptiveStatistics.xlsx). 
+[Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx). 
 Copy and paste the desired data values into the first column (on the left side) of the tool. The histogram will be generated automatically. 
 
 <img src="./Images/Lesson_2_Activity_2-2.JPG">
@@ -473,7 +472,7 @@ The following Q-Q plot represents right-skewed data. The data are not normal.
 
 <img src="./Images/L04_QQ_Plot_06.jpg">
 
-When assessing a Q-Q plot, you should be a little “forgiving” of the points on the two ends. If there are some points that are slight outliers, you do not need to worry very much about them. If there is not a sustained curve—either upward or downward—or an S-shape in the data, then you can conclude the data are normally distributed.
+When assessing a Q-Q plot, you should be a little forgiving of the points on the two ends. If there are some points that are slight outliers, you do not need to worry very much about them. If there is not a sustained curve either upward or downward or an S-shape in the data, then you can conclude the data are normally distributed.
 
 The ability to determine if data follow a normal distribution will be important later in the course.
 
@@ -515,11 +514,11 @@ Despite having studied statistics at BYU-Idaho several years ago (in fact, I nea
 
 <div style="font-size:75%">
 Biography:<br>
-Adam D. Andersen is the Human Capital Management System Lead for Battelle Energy Alliance, LLC at the U.S. Department of Energy’s Idaho National Laboratory in Idaho Falls, Idaho.  He is responsible for creating and revising employment policies and procedures; coordinating human capital assurance; leading measurement and reporting; managing contract and regulatory requirements; and assisting in-house legal counsel in employee disciplinary advisory groups and in representing the company in disputes involving its five labor unions.
+Adam D. Andersen is the Human Capital Management System Lead for Battelle Energy Alliance, LLC at the U.S. Department of Energy's Idaho National Laboratory in Idaho Falls, Idaho.  He is responsible for creating and revising employment policies and procedures; coordinating human capital assurance; leading measurement and reporting; managing contract and regulatory requirements; and assisting in-house legal counsel in employee disciplinary advisory groups and in representing the company in disputes involving its five labor unions.
 <br>
 Adam has served as a full-time missionary for The Church of Jesus Christ of Latter-Day Saints in the Philippines Tacloban Mission, twice as a counselor in Elders Quorum Presidencies, as a leader in the Cub and Boy Scouts, and as a counselor in a student-ward Bishopric at BYU-Idaho.  He currently serves as a counselor in the Bishopric in his home ward in Idaho Falls, Idaho.
 <br>
-Adam holds a Bachelor of Science in Accounting, Cum Laude, from BYU-Idaho, a Juris Doctor, Honors, from Washburn University School of Law, and is admitted to practice law in the state of Idaho.  He is married to Katarzyna Zamarlik of Bielsko-Biała, Poland.  They have three children, Spencer, Lea, and Scott.
+Adam holds a Bachelor of Science in Accounting, Cum Laude, from BYU-Idaho, a Juris Doctor, Honors, from Washburn University School of Law, and is admitted to practice law in the state of Idaho.  He is married to Katarzyna Zamarlik of Bielsko-Biala, Poland.  They have three children, Spencer, Lea, and Scott.
 </div>
 
 </div>
@@ -536,7 +535,7 @@ Lahman, S.Sean lahman's baseball archive. Retrieved November, 2010, from http://
 
 Monden, C. W. S., & Smits, J. (2009). Maternal height and child mortality in 42 developing countries. American Journal of Human Biology, 21(3), 305.
 
-Orçamento e Gestão Ministério do Planejamento. Pesquisa de orçamentos familiars 2008-2009: Antropometria e estado nutricional de crianças, adolescentes e adultos no brasil. Technical report, Instituto Brasileiro de Geografi a e Estatística – IBGE, Rio de Janeiro, Brazil 2010.
+Or�amento e Gest�o Minist�rio do Planejamento. Pesquisa de or�amentos familiars 2008-2009: Antropometria e estado nutricional de crian�as, adolescentes e adultos no brasil. Technical report, Instituto Brasileiro de Geografi a e Estat�stica - IBGE, Rio de Janeiro, Brazil 2010.
 
 <br>
 
