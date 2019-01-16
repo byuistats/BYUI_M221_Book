@@ -499,9 +499,787 @@ Answer the following questions:
 <br>
 <center>
 <div width="90%">
-<iframe height="500" width="700" align="center" frameborder="0" src="http://byuimath.com/apps/normprob.html?width=600&amp;z=1&amp;height=400&amp;left=1&amp;mid=0&amp;right=1&amp;area=a&amp;static=0&amp;title=1&amp;border=0">
-</iframe>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Normal Probability Applet</title>
+
+<script>
+//The computation functions.  This is the only part that has to be updated to use a different two tailed distributaion.
+
+//Obtained from  https://lyle.smu.edu/~aleskovs/emis/sqc2/accuratecumnorm.pdf
+function cdfnorm (zScore)
+  { zScore=(zScore*1).toFixed(3);
+    var d2 = Math.abs(zScore);
+    var d1;
+    if (d2 > 37.0)
+    {
+      d1 = 0.0;
+    }
+    else
+    {
+      var d5 = -Math.pow(d2, 2.0);
+      var d3 = Math.exp(d5 / 2.0);
+      var d4;
+      if (d2 < 7.07106781186547)
+      {
+        d4 = 0.0352624965998911 * d2 + 0.700383064443688;
+        d4 = d4 * d2 + 6.37396220353165;
+        d4 = d4 * d2 + 33.912866078382997;
+        d4 = d4 * d2 + 112.079291497871;
+        d4 = d4 * d2 + 221.21359616993101;
+        d4 = d4 * d2 + 220.206867912376;
+        d1 = d3 * d4;
+        d4 = 0.08838834764831841 * d2 + 1.75566716318264;
+        d4 = d4 * d2 + 16.064177579207001;
+        d4 = d4 * d2 + 86.780732202946098;
+        d4 = d4 * d2 + 296.56424877967402;
+        d4 = d4 * d2 + 637.333633378831;
+        d4 = d4 * d2 + 793.82651251994798;
+        d4 = d4 * d2 + 440.413735824752;
+        d1 /= d4;
+      }
+      else
+      {
+        d4 = d2 + 0.65;
+        d4 = d2 + 4.0 / d4;
+        d4 = d2 + 3.0 / d4;
+        d4 = d2 + 2.0 / d4;
+        d4 = d2 + 1.0 / d4;
+        d1 = d3 / d4 / 2.506628274631;
+      }
+    }
+
+    return d1;
+  }
+
+
+
+
+
+
+
+
+//It would be nice to have the URL for where this code came from.
+//http://read.pudn.com/downloads27/sourcecode/windows/control/85297/cSVM/src/ppnd16.f__.htm
+//We are not using this much precision, so we could probably shrink the code to something much faster....
+var cdfnorminv = function(areaToLeft) {
+ var 
+  d1 = 0.0,  
+  d2 = 1.0, 
+  d3 = 0.5,
+  d4 = 0.425, 
+  d5 = 5.0,
+  d6 = 0.180625, 
+  d7 = 1.6;
+
+ var arrayOfDouble1 = [ 3.387132872796367, 133.14166789178438, 1971.5909503065513, 13731.693765509461, 45921.95393154987, 67265.770927008707, 33430.575583588128, 2509.0809287301227];
+
+ var arrayOfDouble2 = [ 0.0, 42.313330701600911, 687.18700749205789, 5394.1960214247511, 21213.794301586597, 39307.895800092709, 28729.085735721943, 5226.4952788528544 ];
+
+ var arrayOfDouble3 = [ 1.423437110749684, 4.630337846156546, 5.769497221460691, 3.647848324763205, 1.270458252452368, 0.2417807251774506, 0.02272384498926918, 0.0007745450142783414 ];
+
+ var arrayOfDouble4 = [ 0.0, 2.053191626637759, 1.676384830183804, 0.6897673349851, 0.1481039764274801, 0.01519866656361646, 0.0005475938084995346, 1.050750071644417e-09 ];
+
+ var arrayOfDouble5 = [ 6.657904643501103, 5.463784911164114, 1.784826539917291, 0.2965605718285049, 0.02653218952657612, 0.001242660947388078, 2.711555568743488e-05, 2.010334399292288e-07 ];
+
+ var arrayOfDouble6 = [ 0.0, 0.599832206555888, 0.1369298809227358, 0.01487536129085062, 0.0007868691311456133, 1.846318317510055e-05, 1.421511758316446e-07, 2.04426310338994e-15 ];
+
+ var d8 = areaToLeft - d3;
+ var d10;
+ if (Math.abs(d8) <= d4){
+  d9 = d6 - d8 * d8;
+  d10 = d8 * (((((((arrayOfDouble1[7] * d9 + arrayOfDouble1[6]) * d9 + arrayOfDouble1[5]) * d9 + arrayOfDouble1[4]) * d9 + arrayOfDouble1[3]) * d9 + arrayOfDouble1[2]) * d9 + arrayOfDouble1[1]) * d9 + arrayOfDouble1[0]) / (((((((arrayOfDouble2[7] * d9 + arrayOfDouble2[6]) * d9 + arrayOfDouble2[5]) * d9 + arrayOfDouble2[4]) * d9 + arrayOfDouble2[3]) * d9 + arrayOfDouble2[2]) * d9 + arrayOfDouble2[1]) * d9 + d2);
+  return d10;
+ }
+ 
+ if (d8 < d1){
+  d9 = areaToLeft;
+ }
+ else
+ {
+  d9 = d2 - areaToLeft;
+ }
+
+ if (d9 <= d1)
+ {
+  return d1;
+ }
+
+ var d9 = Math.sqrt(-Math.log(d9));
+ if (d9 <= d5)
+ {
+  d9 -= d7;
+  d10 = (((((((arrayOfDouble3[7] * d9 + arrayOfDouble3[6]) * d9 + arrayOfDouble3[5]) * d9 + arrayOfDouble3[4]) * d9 + arrayOfDouble3[3]) * d9 + arrayOfDouble3[2]) * d9 + arrayOfDouble3[1]) * d9 + arrayOfDouble3[0]) / (((((((arrayOfDouble4[7] * d9 + arrayOfDouble4[6]) * d9 + arrayOfDouble4[5]) * d9 + arrayOfDouble4[4]) * d9 + arrayOfDouble4[3]) * d9 + arrayOfDouble4[2]) * d9 + arrayOfDouble4[1]) * d9 + d2);
+ }
+ else
+ {
+  d9 -= d5;
+  d10 = (((((((arrayOfDouble5[7] * d9 + arrayOfDouble5[6]) * d9 + arrayOfDouble5[5]) * d9 + arrayOfDouble5[4]) * d9 + arrayOfDouble5[3]) * d9 + arrayOfDouble5[2]) * d9 + arrayOfDouble5[1]) * d9 + arrayOfDouble5[0]) / (((((((arrayOfDouble6[7] * d9 + arrayOfDouble6[6]) * d9 + arrayOfDouble6[5]) * d9 + arrayOfDouble6[4]) * d9 + arrayOfDouble6[3]) * d9 + arrayOfDouble6[2]) * d9 + arrayOfDouble6[1]) * d9 + d2);
+ }
+
+ if (d8 < d1)
+ {
+  d10 = -d10;
+ }
+ return d10;
+};
+
+
+
+</script>
+
+</head>
+<body id='b' 
+   onmouseup="bodyMouseUp(event)"
+>
+<div id='d' >
+<canvas id='c' 
+   onmousemove="canvasMouseMove(event)" 
+   onmousedown="canvasMouseDown(event)"
+   onmouseup="canvasMouseUp(event)" 
+></canvas>
+<input type="text" id="input3" size="12" onchange="changedA()" onclick="this.select()"/>
+<div id="div1"> <span id="div1left">z-score</span> <input type="text" id="input1" size="4" onchange="changedZ1()" onclick="this.select()"/> <span id="div1right">z-score</span></div>
+<div id="div2"> <span id="div2left">z-score</span> <input type="text" id="input2" size="4" onchange="changedZ2()" onclick="this.select()"/> <span id="div2right">z-score</span> </div>
 </div>
+<script>
+
+function parseURLParams(url) {
+  var queryStart = url.indexOf("?") + 1;
+  var queryEnd   = url.indexOf("#") + 1 || url.length + 1;
+  var query      = url.slice(queryStart, queryEnd - 1);
+
+  if (query === url || query === "") return;
+
+  var params  = {};
+  var nvPairs = query.replace(/\+/g, " ").split("&");
+
+  for (var i=0; i<nvPairs.length; i++) {
+    var nv = nvPairs[i].split("=");
+    var n  = decodeURIComponent(nv[0]);
+    var v  = decodeURIComponent(nv[1]);
+    if ( !(n in params) ) {
+      params[n] = [];
+    }
+    params[n].push(nv.length === 2 ? v : null);
+  }
+  return params;
+}
+
+
+function setDefaults() {
+ var params = parseURLParams(document.URL);
+
+ var z=1; //The default starting value.
+ var shadeL=1; 
+ var shadeM=0;
+ var shadeR=1;
+ var area="";
+ for(i in params) {
+  if (i=='width')
+   width=params[i]*1;
+  else if (i=='height')
+   height=params[i]*1;
+  else if (i=='z')
+   z=params[i]*1;
+  else if (i=='left')
+   shadeL=params[i]*1;
+  else if (i=='mid')
+   shadeM=params[i]*1;
+  else if (i=='right')
+   shadeR=params[i]*1;
+  else if (i=='area')
+   area=params[i]*1;
+  else if(i=='static')
+   makeStatic(params[i]);
+  else if(i=='title')
+   useTitle(params[i]);
+  else if(i=='border')
+   useBorder(params[i]);
+
+//  console.log (i, params[i]*1)
+ }
+ 
+ shadeLeft(shadeL);
+ shadeMiddle(shadeM);
+ shadeRight(shadeR);
+
+ setWidth(width);
+ setHeight(height);
+
+//Set the width and height of the div and the canvas.  
+ c.width = width+paddingLeft+paddingRight;
+ c.height = height+paddingTop+paddingBot;
+ d.width = width+paddingLeft+paddingRight;
+ d.height = height+paddingTop+paddingBot;
+
+//Create the arrays used for Plotting
+ setPlottingArrays();  
+//Add the banner on the top with the title and area.
+ drawTopBanner();
+ updateInputFieldsFromZ(z);
+ if(0<area*1 && area*1<1)
+  updateInputFieldsFromArea(area);
+
+}
+
+function useTitle(bool){
+  if(bool==0) {paddingTop = 50;  showTitle = 0;}
+}
+function useBorder(bool){
+ if(bool==1){
+ c.style.border = "#000000 1px solid";
+ console.log("I made it here.")
+ }
+}
+
+function makeStatic(bool){
+ if(bool==1){
+  input1.disabled=true;
+  input2.disabled=true;
+  input3.disabled=true;
+  document.getElementById('b').onmouseup=null;
+  c.onmousemove=null; 
+  c.onmousedown=null;
+  c.onmouseup=null; 
+ }
+}
+
+function setWidth(w){
+ docWidth=w;
+ width=docWidth-paddingLeft-paddingRight;
+ xScale= width/8;
+ xCenter= width/2;
+ xMouseShift=.07*width/800;
+ c.width = docWidth;
+ d.width = docWidth;
+}
+
+
+
+function setHeight(h){
+ docHeight=h;
+ height=docHeight-paddingTop-paddingBot;
+ c.height = docHeight;
+ d.height = docHeight;
+ 
+ inputOffSet = pYFromY(-20); 
+ div1.style.top=inputOffSet+"px";
+ div2.style.top=inputOffSet+"px";
+}
+
+
+ 
+var 
+ showTitle = 1,
+ paddingTop = 100,
+ paddingBot = 50,
+ paddingLeft = 20,
+ paddingRight = 20,
+ width = 800,
+ docWidth=width+paddingLeft+paddingRight;
+ height = 450,
+ docHeight=width+paddingTop+paddingBot;
+ d = document.getElementById('d'), 
+ c = document.getElementById('c'), 
+ ctx = c.getContext('2d'),
+ xLeft= -1,
+ xRight= 1,
+ myFill='#0000FF', //Used to fill in selected areas
+ myBlank= '#FFFFFF', //Blank Areas
+ useLeftTail=1, //Should you inlude this in the computation?
+ useRightTail=1,
+ useMiddle=0,
+ leftColor=myFill, //Stores the color.  Perhaps redundant.
+ rightColor=myFill,
+ midColor=myBlank,
+ beyondRange=0;
+
+var
+ xScale= width/8, 
+ xCenter= width/2,
+ xMouseShift=.07*width/800;
+
+function shadeLeft(bool){
+ if(bool==1){useLeftTail=1;leftColor=myFill;}
+ else{useLeftTail=0;leftColor=myBlank;}
+}
+function shadeMiddle(bool){
+ if(bool==1){useMiddle=1;midColor=myFill;}
+ else{useMiddle=0;midColor=myBlank;}
+}
+function shadeRight(bool){
+ if(bool==1){useRightTail=1;rightColor=myFill;}
+ else{useRightTail=0;rightColor=myBlank;}
+}
+
+
+ 
+//These functions allow me to convert between the standard cartesian coordinates and the pixel coordinates.  
+//pX and pY are pixel coordinates, whereas x and y are Cartesian.
+//These could be removed to make things faster.
+function pXFromX(x) { return x*xScale+xCenter+paddingLeft };
+function xFrompX(px) { return (px-xCenter-paddingLeft)/xScale };
+function pYFromY(y) { return height-y+paddingTop };
+function yFrompY(py) { return height-py+paddingTop };
+function yFromx (x) {return height*Math.exp( -x*x/2) };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//You can give it any z-score (positive or negative), and this code will compute the correct area, based on which areas are shaded.
+function areaFromZ (za) {
+ la = cdfnorm(-Math.abs(za));
+ ra = la;
+ ma = 1-2*la;
+ return useLeftTail*la + useRightTail*ra + useMiddle*ma;
+};
+//Give it an area, and this code computes the z-score that has that area to the left.  This code assumes the number is greater than zero, and less than 1. Check for this before sending a number in.
+function zFromArea (areaZ){
+ return cdfnorminv( (useMiddle-areaZ)/(2*useMiddle-(useLeftTail + useRightTail))) ;
+};
+
+//This positions the div relatively, which is needed to set the position of the input boxes.
+//You have to put everything in a relatively placed div so that you can use the 
+//attribute "position:absolute" to place the input boxes.  
+ d.style.position="relative";
+ var input1 = document.getElementById('input1');
+ var input2 = document.getElementById('input2');
+ var input3 = document.getElementById('input3');
+
+//We need to make sure that the input boxes are positioned relative to the top left corner of the division. The position attribute "absolute" makes sure this occures.
+ var inputOffSet = pYFromY(-20); 
+ div1.style.position="absolute";
+ div2.style.position="absolute";
+
+//This draws the top banner (Title, Area, and InputArea box)
+function drawTopBanner(){
+ input3.style.position="absolute";
+ input3.style.left=paddingLeft+width/2-20+"px";
+ input3.style.top=paddingTop-40+"px";
+ ctx.fillStyle = "black";
+ ctx.font = (10+10*width/800)+"px Arial";
+ ctx.fillText("Area", paddingLeft+width/2-70, paddingTop-20);
+ if(showTitle==1){
+  ctx.fillStyle = "black";
+  ctx.font = "bold "+(12+18*width/800)+"px Arial";
+  ctx.textAlign = 'center';
+  ctx.fillText("Normal Probability Applet", paddingLeft+width/2, paddingTop-60);
+ }
+}
+
+//I use these arrays to create the graphics. I figured array calling would be faster than function calling. I might be wrong.
+var yValues= [];
+var xValues= [];
+var pxValues= [];
+var pyValues= [];
+
+function setPlottingArrays(){
+  yValues= [];
+  xValues= [];
+  pxValues= [];
+  pyValues= [];
+ 
+ for (var i = 0; i < width; i++){ 
+  px=i+paddingLeft;
+  xValues.push( xFrompX(px) );
+  yValues.push( yFromx(xFrompX(px) ) );
+  pxValues.push( px );
+  pyValues.push( height - yValues[i] + paddingTop );
+ }
+}
+
+//This funcion draws all the curves, the axes, and the red lines. It might be better to split it into smaller functions at some point.
+function DrawCurves(){
+  ctx.clearRect(0, paddingTop-15, width+paddingLeft+paddingRight, height+paddingBot+15);
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = 'black';
+//Draw the left tail
+  ctx.fillStyle = leftColor;
+  ctx.beginPath();
+  ctx.moveTo(pXFromX(-4),pYFromY(0));
+  var i=0;
+  for(; xValues[i] < xLeft; i++) {
+    ctx.lineTo(pxValues[i],pyValues[i]);
+  };
+  ctx.lineTo(pXFromX(xLeft),pYFromY(yFromx(xLeft)));
+  ctx.lineTo(pXFromX(xLeft),pYFromY(0));
+  ctx.fill();
+  ctx.stroke();
+  ctx.closePath();
+
+//Draw the middle
+  ctx.fillStyle = midColor;
+  ctx.beginPath();
+  ctx.moveTo(pXFromX(xLeft),pYFromY(0));
+  ctx.lineTo(pXFromX(xLeft),pYFromY(yFromx(xLeft)));
+  for(; xValues[i] < xRight; i++) {
+    ctx.lineTo(pxValues[i],pyValues[i]);
+  };
+  ctx.lineTo(pXFromX(xRight),pYFromY(yFromx(xRight)));
+  ctx.lineTo(pXFromX(xRight),pYFromY(0));
+  ctx.fill();
+  ctx.stroke();
+  ctx.closePath();
+
+//Draw the right tail
+  ctx.fillStyle = rightColor;
+  ctx.beginPath();
+  ctx.moveTo(pXFromX(xRight),pYFromY(0));
+  ctx.lineTo(pXFromX(xRight),pYFromY(yFromx(xRight)));
+  for(; i < width; i++) {
+    ctx.lineTo(pxValues[i],pyValues[i]);
+  };
+  ctx.lineTo(pXFromX(4),pYFromY(0));
+  ctx.fill();
+  ctx.stroke();
+  ctx.closePath();
+
+//Draw the axes
+  ctx.beginPath();
+  ctx.lineWidth = 1;
+  ctx.moveTo(pXFromX(-4),pYFromY(0));
+  ctx.lineTo(pXFromX(4) ,pYFromY(0));
+  ctx.stroke();
+  ctx.closePath();
+
+//Draw the red lines
+  ctx.beginPath();
+  ctx.strokeStyle = 'red';
+  ctx.lineWidth = 4;
+  ctx.moveTo(pXFromX(xLeft),pYFromY(-20));
+  ctx.lineTo(pXFromX(xLeft) ,pYFromY(yFromx(xLeft)+10));
+  ctx.moveTo(pXFromX(xRight),pYFromY(-20));
+  ctx.lineTo(pXFromX(xRight) ,pYFromY(yFromx(xRight)+10));
+  ctx.stroke();
+  ctx.closePath();
+
+//Draw the tick marks on the axes. Could be optimized.
+  ctx.beginPath();
+  ctx.strokeStyle = 'black';
+  ctx.lineWidth = .5;
+  ctx.moveTo(pXFromX(-4),pYFromY(0));
+  ctx.lineTo(pXFromX(-4) ,pYFromY(-8));
+  ctx.moveTo(pXFromX(-3),pYFromY(0));
+  ctx.lineTo(pXFromX(-3) ,pYFromY(-8));
+  ctx.moveTo(pXFromX(-2),pYFromY(0));
+  ctx.lineTo(pXFromX(-2) ,pYFromY(-8));
+  ctx.moveTo(pXFromX(-1),pYFromY(0));
+  ctx.lineTo(pXFromX(-1) ,pYFromY(-8));
+  ctx.moveTo(pXFromX(0),pYFromY(0));
+  ctx.lineTo(pXFromX(0) ,pYFromY(-8));
+  ctx.moveTo(pXFromX(4),pYFromY(0));
+  ctx.lineTo(pXFromX(4) ,pYFromY(-8));
+  ctx.moveTo(pXFromX(3),pYFromY(0));
+  ctx.lineTo(pXFromX(3) ,pYFromY(-8));
+  ctx.moveTo(pXFromX(2),pYFromY(0));
+  ctx.lineTo(pXFromX(2) ,pYFromY(-8));
+  ctx.moveTo(pXFromX(1),pYFromY(0));
+  ctx.lineTo(pXFromX(1) ,pYFromY(-8));
+  ctx.stroke();
+  ctx.closePath();
+
+//Draw the numbers on the axes.
+  ctx.font = "12px Arial";
+  ctx.fillStyle = 'black';
+  ctx.fillText("-3", pXFromX(-3) ,pYFromY(-16));
+  ctx.fillText("-2", pXFromX(-2) ,pYFromY(-16));
+  ctx.fillText("-1", pXFromX(-1) ,pYFromY(-16));
+  ctx.fillText("0", pXFromX(0) ,pYFromY(-16));
+  ctx.fillText("3", pXFromX(3) ,pYFromY(-16));
+  ctx.fillText("2", pXFromX(2) ,pYFromY(-16));
+  ctx.fillText("1", pXFromX(1) ,pYFromY(-16));
+
+//Draw the squiggles if the inputed z-score is too large.
+ if(beyondRange==1){
+  ctx.beginPath();
+  ctx.strokeStyle = 'white';
+  ctx.lineWidth = 2;
+  ctx.moveTo(pXFromX(3.5),pYFromY(-12));
+  ctx.lineTo(pXFromX(3.5) ,pYFromY(12));
+  ctx.moveTo(pXFromX(-3.5),pYFromY(-12));
+  ctx.lineTo(pXFromX(-3.5) ,pYFromY(12));
+  ctx.stroke();
+  ctx.closePath();
+  ctx.beginPath();
+  ctx.strokeStyle = 'black';
+  ctx.moveTo(pXFromX(3.48),pYFromY(-12));
+  ctx.lineTo(pXFromX(3.48) ,pYFromY(12));
+  ctx.moveTo(pXFromX(3.52),pYFromY(-12));
+  ctx.lineTo(pXFromX(3.52) ,pYFromY(12));
+  ctx.moveTo(pXFromX(-3.48),pYFromY(-12));
+  ctx.lineTo(pXFromX(-3.48) ,pYFromY(12));
+  ctx.moveTo(pXFromX(-3.52),pYFromY(-12));
+  ctx.lineTo(pXFromX(-3.52) ,pYFromY(12));
+  ctx.stroke();
+  ctx.closePath();
+ }
+ else{
+  ctx.fillText("-4", pXFromX(-4) ,pYFromY(-16));
+  ctx.fillText("4", pXFromX(4) ,pYFromY(-16));
+ }
+}
+
+//The *1 below makes sure that each value is actually a number (otherwise the .toFixed method fails)
+var updateInputFields = function(l,r,a){
+ if(r>4) beyondRange=1;
+ else beyondRange=0;
+ xRight = Math.min(r,4)
+ xLeft=-xRight;
+ input1.value=(l*1).toFixed(3);
+ input2.value=(r*1).toFixed(3);
+ if(useLeftTail==0&&useRightTail==0&&useMiddle==0){input3.value=0}
+ else if(a*1<.001){ input3.value = (a*1).toExponential(4);}
+ else if ((a*1).toFixed(4)==1){
+  if(useRightTail==0 || useLeftTail==0){input3.value=('>0.9999');}
+  else {input3.value=1;}; 
+ }
+ else {input3.value=(a*1).toFixed(4);};
+
+ if(xRight<3){
+  div1.style.left=(pXFromX(xLeft)-110)+"px"; //The 65 and 5 are needed to position the boxes correctly.
+  div2.style.left=(pXFromX(xRight)+5)+"px";
+  document.getElementById('div1left').style.display="inline";
+  document.getElementById('div1right').style.display="none";
+  document.getElementById('div2left').style.display="none";
+  document.getElementById('div2right').style.display="inline";
+ }
+ else {
+  div1.style.left=(pXFromX(xLeft)+5)+"px";
+  div2.style.left=(pXFromX(xRight)-110)+"px";
+  document.getElementById('div1left').style.display="none";
+  document.getElementById('div1right').style.display="inline";
+  document.getElementById('div2left').style.display="inline";
+  document.getElementById('div2right').style.display="none";
+ }
+ DrawCurves();
+ showZScoreLabel(l,r);
+}
+
+//////////////////////////////////////////////////////////
+//This puts the words "z-score" next to each box
+var showZScoreLabel = function(l,r)
+{
+ if(r<1){
+  
+ }
+ else {
+ }
+
+}
+
+var selectInputBox = function(inputBox){inputBox.select();}
+var whichBox;
+
+
+//Given a z-score, this will update the position of the input boxes, and redraw the curves.
+var updateInputFieldsFromZ = function(z){
+ if((z*1).toFixed(4)==0){}
+ else if(useRightTail==0 && useLeftTail==1){//When the left tail is selected
+  if(z*1>0){ shadeMiddle(1);whichBox=input2;}
+  else{ shadeMiddle(0);whichBox=input1;}
+ }
+ else if(useRightTail==1 && useLeftTail==0){//When the right tail is selected
+  if(z*1<0){ useMiddle = 1; midColor=myFill;whichBox=input1;}
+  else{ useMiddle =0; midColor=myBlank;whichBox=input2;}
+ }
+ 
+ if(z*1<0){whichBox=input1;}
+ else{whichBox=input2;}
+ r=Math.abs(z);
+ l=-r;
+ area=areaFromZ(z);
+ if(isNaN(r)){
+  updateInputFields(xLeft,xRight,input3.value); 
+ }
+ else{
+  updateInputFields(l,r,area);
+ }
+}
+
+var changedZ1 = function(){ 
+ whichBox = input1; 
+ if(input1.value.length == 0){ input1.value = -1*input2.value;}
+ updateInputFieldsFromZ(input1.value);  
+ selectInputBox(whichBox);
+}
+var changedZ2 = function(){ 
+ whichBox = input2; 
+ if(input2.value.length == 0){ input2.value = -1*input1.value;}
+ updateInputFieldsFromZ(input2.value); 
+ selectInputBox(whichBox);
+}
+var changedA = function(){ updateInputFieldsFromArea(input3.value); input3.select();}
+
+
+var updateInputFieldsFromArea = function(az){
+ if(isNaN(az)){
+  input3.value="Type a Number";
+ }
+ else if(az > 1){
+  input3.value="0 < Area <= 1";
+ }
+ else if(az<=0){
+  input3.value="0 < Area <= 1";
+ }
+ else if(useMiddle==0 && useRightTail==0 && useLeftTail==0){
+  input3.value=(0*1).toFixed(4);
+ }
+ else if(useMiddle==1 && useRightTail==1 && useLeftTail==1){
+  input3.value=(1*1).toFixed(4);
+ }
+ else{//Now determine if we should shade or unshade the middle.
+  if(useMiddle==0 && useRightTail==0 && az*1>.5){
+   useMiddle = 1; midColor=myFill;
+  }
+  else if(useMiddle==0 && useLeftTail==0 && az*1>.5){
+   useMiddle = 1; midColor=myFill;
+  }
+  if(useMiddle==1 && useRightTail==1 && az<.5*1){
+   useMiddle = 0; midColor=myBlank;
+  }
+  else if(useMiddle==1 && useLeftTail==1 && az*1<.5){
+   useMiddle = 0; midColor=myBlank;
+  }
+  else{
+  }
+//Now update things
+  zz=zFromArea(az);
+  lz=-Math.abs(zz);
+  rz=-lz;
+  updateInputFields(lz,rz,az);
+ }
+}
+
+
+//The remaining functions deal with mouse events. 
+//When you press down the mouse: If it's over the red bars, signal that you're moving them. Move them as you move the mouse until you get a mouse up.
+//When you let the mouse go up, unsignal.  That's basically it.
+//I think I can tackle this with 3 signals.  onmousedown, onmousemove, onmouseup.
+//I may add a tool tip later. 
+
+var movingRedBars = false;
+
+//This makes is so the text cursor won't show when moving the red bars.
+c.onselectstart = function(){ return false; }
+
+var canvasMouseMove=function (e)
+{
+ px=e.clientX;
+ py=e.clientY;
+ x=xFrompX(px);
+ y=yFrompY(py);
+ maxY=yFromx(x);
+
+//The sliders only update if you stay inside the drawing region.  I don't know how to make it work outside.  I don't really think this is a crucial deal breaker.
+ if(movingRedBars==true){
+//  r=Math.min(4,Math.abs(x-.07));//The .07 is a visual shift.  With this, it appears that things SNAP to the grid.
+// l=-r;
+//  area=areaFromZ(x-.07);
+  if(x>0){ updateInputFieldsFromZ(Math.min(4,x-.07)) ;}
+  else{updateInputFieldsFromZ(Math.max(-4,x-.07)) ;}
+  document.body.style.cursor='col-resize';
+  return;
+ }
+
+ if(x-.07<xLeft+.035 && x-.07>xLeft-.035 && y>-20 && y< maxY+10) {
+  document.body.style.cursor='col-resize';
+ } 
+ else if(x-.07<xRight+.035 && x-.07>xRight-.035 && y>-20 && y< maxY+10) {
+  document.body.style.cursor='col-resize';
+ } 
+ else if (x-.07<4+.035 && x-.07>-4-.035 && y>-20 && y< maxY+10) {
+  document.body.style.cursor='pointer';
+ }
+ else {
+ document.body.style.cursor='default';
+ }
+}
+
+var canvasMouseDown=function (e)
+{
+ px=e.clientX;
+ py=e.clientY;
+ x=xFrompX(px);
+ y=yFrompY(py);
+ maxY=yFromx(x);
+ if (y<-25){}
+ else if (y>maxY+10){}
+ else if(x-.07<xLeft+.035 && x-.07>xLeft-.035) {
+  movingRedBars=true;
+  document.onselectstart = function(){ return false; }
+ } 
+ else if(x-.07<xRight+.035 && x-.07>xRight-.035) {
+  movingRedBars=true;
+  document.onselectstart = function(){ return false; }
+ } 
+ else if (x-.07<xLeft+.035 && x-.07>-4-.035) {
+  if(useLeftTail==1){useLeftTail=0;leftColor=myBlank;}
+  else if(useLeftTail==0){useLeftTail=1;leftColor=myFill;}
+  area = areaFromZ(xLeft)
+  updateInputFields(xLeft,xRight,area);
+ }
+ else if (x-.07<xRight+.035 && x-.07>xLeft-.035) {
+  if(useMiddle==1){useMiddle=0;midColor=myBlank;}
+  else if(useMiddle==0){useMiddle=1;midColor=myFill;}
+  area = areaFromZ(xLeft)
+  updateInputFields(xLeft,xRight,area);
+ }
+ else if (x-.07<4+.035 && x-.07>xRight-.035) {
+  if(useRightTail==1){useRightTail=0;rightColor=myBlank;}
+  else if(useRightTail==0){useRightTail=1;rightColor=myFill;}
+  area = areaFromZ(xLeft)
+  updateInputFields(xLeft,xRight,area);
+ }
+}
+
+var canvasMouseUp=function (e)
+{
+ if(movingRedBars==true){
+ px=e.clientX;
+ py=e.clientY;
+ x=xFrompX(px);
+ y=yFrompY(py);
+ maxY=yFromx(x);
+
+  movingRedBars=false;
+  if(x>0){ updateInputFieldsFromZ(Math.min(4,x-.07)) ;}
+  else{updateInputFieldsFromZ(Math.max(-4,x-.07)) ;}
+  document.onselectstart = function(){ return true; }
+ }
+}
+
+var bodyMouseUp=function (e)
+{
+ if(movingRedBars==true){
+  movingRedBars=false;
+  document.onselectstart = function(){ return true; }
+  document.body.style.cursor='default';
+ }
+}
+
+
+
+//This starts the program.
+setDefaults();
+</script>
+</body>
+</html>
+
 </div>
 <div id="converting-a-z-score-to-a-probability" class="section level3">
 <h3>Converting a <span class="math inline">\(z\)</span>-score to a Probability</h3>

@@ -213,11 +213,10 @@ To use this applet follow these instructions:
 <br>
 <center>
 <div width="90%">
-<iframe height="500" width="700" align="center" frameborder="0" src="http://byuimath.com/apps/normprob.html?width=600&z=1&height=400&left=1&mid=0&right=1&area=a&static=0&title=1&border=0" ></iframe>
-</div>
+
 
 ```{r, echo=FALSE}
-#htmltools::includeHTML("http://byuimath.com/apps/normprob.html")
+htmltools::includeHTML("http://byuimath.com/apps/normprob.html")
 ```
 
 ### Converting a $z$-score to a Probability
