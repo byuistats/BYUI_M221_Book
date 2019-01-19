@@ -354,7 +354,7 @@ $(document).ready(function () {
 <p>For the mean of draws from a random variable with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>, the following are true:</p>
 <ul>
 <li>The mean of the random variable <span class="math inline">\(\bar X\)</span> is <span class="math inline">\(\mu\)</span>.</li>
-<li>The standard deviation of the random variable <span class="math inline">\(\bar X\)</span> is <span class="math inline">\(\displaystyle{\frac{Ï}{\sqrt{n}}}\)</span>.</li>
+<li>The standard deviation of the random variable <span class="math inline">\(\bar X\)</span> is <span class="math inline">\(\displaystyle{\frac{\sigma}{\sqrt{n}}}\)</span>.</li>
 </ul>
 <p>Previously, you learned how to use the normal probability applet to convert a <span class="math inline">\(z\)</span>-score to a corresponding area under the curve. These skills will be applied again in this activity. The following questions will help you brush up on how to use the applet.</p>
 <center>
@@ -381,42 +381,42 @@ Answer the following questions:
 <a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
 <center>
-<span class="math inline">\(1 â 0.8944 = 0.1056\)</span>
+<span class="math inline">\(1 - 0.8944 = 0.1056\)</span>
 </center>
 </div>
 <p><br></p>
 <ol start="3" style="list-style-type: decimal">
-<li>Challenge problem: Use the output from the applet above to determine the probability that a standard normal random variable will be between â“1.25 and 1.25.</li>
+<li>Challenge problem: Use the output from the applet above to determine the probability that a standard normal random variable will be between -1.25 and 1.25.</li>
 </ol>
 <a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q3" style="display:none;">
 <ul>
-<li>Since the probability in the right tail above 1.25 is 0.106, the probability in the left tail is also 0.106. So, the probability in the middle, between â“1.25 and 1.25 must be <span class="math inline">\(1 â 2(0.106) = 1 â 0.212 = 0.788\)</span>.</li>
+<li>Since the probability in the right tail above 1.25 is 0.106, the probability in the left tail is also 0.106. So, the probability in the middle, between -1.25 and 1.25 must be <span class="math inline">\(1 â 2(0.106) = 1 â 0.212 = 0.788\)</span>.</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="4" style="list-style-type: decimal">
-<li>Use the normal probability applet to find the probability that a standard normal random variable will be greater than â“0.75.</li>
+<li>Use the normal probability applet to find the probability that a standard normal random variable will be greater than -0.75.</li>
 </ol>
 <a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q4" style="display:none;">
 <ul>
-<li>Using the normal probability applet, we find that the area to the right of <span class="math inline">\(z\)</span> = â“0.75 is <span class="math inline">\(0.773\)</span>.</li>
+<li>Using the normal probability applet, we find that the area to the right of <span class="math inline">\(z\)</span> = -0.75 is <span class="math inline">\(0.773\)</span>.</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="5" style="list-style-type: decimal">
-<li>If the mean of a normally distributed random variable is â“23 and the standard deviation is 7, what is the probability that the random variable will have a value that is less than â“25?</li>
+<li>If the mean of a normally distributed random variable is -23 and the standard deviation is 7, what is the probability that the random variable will have a value that is less than -25?</li>
 </ol>
 <a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q5" style="display:none;">
 <ul>
 <li>The <span class="math inline">\(z\)</span>-score is: <br>
 <center>
-<span class="math inline">\(\displaystyle{z = \frac{-25 â (-23)}{7} = â0.2857}\)</span>
+<span class="math inline">\(\displaystyle{z = \frac{-25 - (-23)}{7} = -0.2857}\)</span>
 </center>
 <br></li>
-<li>Using the normal probability applet, we find that the area to the left of <span class="math inline">\(z\)</span> = â“0.2857 is <span class="math inline">\(0.3876\)</span>.</li>
+<li>Using the normal probability applet, we find that the area to the left of <span class="math inline">\(z\)</span> = -0.2857 is <span class="math inline">\(0.3876\)</span>.</li>
 </ul>
 </div>
 <p> </p>
@@ -425,12 +425,12 @@ Answer the following questions:
 </div>
 <div id="probabilities-involving-a-mean" class="section level2">
 <h2>Probabilities Involving a Mean</h2>
-<p>If the sample mean is normally distributed, then we can consider the sample mean, <span class="math inline">\(\bar x\)</span>, as one observation from a normal distribution with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\displaystyle{\frac{Ï}{\sqrt{n}}}\)</span>. With this in mind, we can compute the <span class="math inline">\(z\)</span>-score for any value of this random variable:</p>
+<p>If the sample mean is normally distributed, then we can consider the sample mean, <span class="math inline">\(\bar x\)</span>, as one observation from a normal distribution with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\displaystyle{\frac{\sigma}{\sqrt{n}}}\)</span>. With this in mind, we can compute the <span class="math inline">\(z\)</span>-score for any value of this random variable:</p>
 <p><span class="math display">\[z = \frac{\text{value} - \text{mean}}{\text{standard deviation}}=\frac{\bar x-\mu}{\sigma / \sqrt{n} }\]</span></p>
-<p>Notice that we just replaced the âvalueâ with the normal random variable, the âmeanâ with its mean and âstandard deviationâ with its standard deviation.</p>
+<p>Notice that we just replaced the “value”&quot; with the normal random variable, the “mean”&quot; with its mean and “standard deviation”&quot; with its standard deviation.</p>
 <p>The <span class="math inline">\(z\)</span>-score follows a standard normal distribution. That is, it has a mean of 0 and a standard deviation of 1. After we compute the <span class="math inline">\(z\)</span>-score, we can use the applet to find the probability that a randomly selected mean will be above or below a given value of <span class="math inline">\(\bar x\)</span>.</p>
 <p><strong>Worked Example: Finding the Area under a Normal Curve (Based on a Sample Mean)</strong></p>
-<p>After finding the <span class="math inline">\(z\)</span>-score, we can use the normal probability applet to find the area under the curve (i.e. the probability.) Suppose that a sample of size <span class="math inline">\(n = 4\)</span> has been drawn from a normal population with mean <span class="math inline">\(\mu = 7\)</span> and standard deviation <span class="math inline">\(\sigma = 3\)</span>. Since the parent population is normal, we know the sampling distribution of the sample mean <span class="math inline">\(\bar x\)</span> will be normal with mean <span class="math inline">\(\mu = 7\)</span> and standard deviation <span class="math inline">\(\displaystyle{ \frac{Ï}{\sqrt{n}} = \frac{3}{\sqrt{4}} = 1.5}\)</span>. We can use this information to find the probability that <span class="math inline">\(\bar x\)</span> will be greater than 10.</p>
+<p>After finding the <span class="math inline">\(z\)</span>-score, we can use the normal probability applet to find the area under the curve (i.e. the probability.) Suppose that a sample of size <span class="math inline">\(n = 4\)</span> has been drawn from a normal population with mean <span class="math inline">\(\mu = 7\)</span> and standard deviation <span class="math inline">\(\sigma = 3\)</span>. Since the parent population is normal, we know the sampling distribution of the sample mean <span class="math inline">\(\bar x\)</span> will be normal with mean <span class="math inline">\(\mu = 7\)</span> and standard deviation <span class="math inline">\(\displaystyle{ \frac{\sigma}{\sqrt{n}} = \frac{3}{\sqrt{4}} = 1.5}\)</span>. We can use this information to find the probability that <span class="math inline">\(\bar x\)</span> will be greater than 10.</p>
 <p>The <span class="math inline">\(z\)</span>-score is</p>
 <p><span class="math display">\[z=\frac{\bar x-\mu}{\sigma / \sqrt{n} } = \frac{10 - 7}{3 / \sqrt{4} }=2.0\]</span></p>
 <p>The probability that <span class="math inline">\(z\)</span> will be greater than <span class="math inline">\(2.00\)</span> is the area under the standard normal distribution to the right of <span class="math inline">\(2.00\)</span>. We find this area using the normal probability applet.</p>
@@ -444,7 +444,7 @@ Answer the following questions:
 <p><span class="math display">\[z = \frac{\bar x-\mu}{\sigma / \sqrt{n} } = \frac{20,000-26,400}{23,200 / \sqrt{40}} = -1.745 \]</span></p>
 <p>Using the normal probability applet, we can find the area to the left of this <span class="math inline">\(z\)</span>-score:</p>
 <p><img src="Images/L04_A06_Graph_3.jpg"></p>
-<p>The area to the left of <span class="math inline">\(z= â1.745\)</span> is <span class="math inline">\(0.04049\)</span>. This is the probability that the mean costs for the <span class="math inline">\(n = 40\)</span> weeks will be less than $20,000.</p>
+<p>The area to the left of <span class="math inline">\(z= -1.745\)</span> is <span class="math inline">\(0.04049\)</span>. This is the probability that the mean costs for the <span class="math inline">\(n = 40\)</span> weeks will be less than $20,000.</p>
 <p><br></p>
 <div id="example-environmental-clean-up" class="section level4">
 <h4>Example: Environmental Clean Up</h4>
@@ -455,7 +455,7 @@ Answer the following questions:
 <p><br></p>
 <p><img src="Images/Step1.png"></p>
 <p><strong>Step 1: Design the study.</strong></p>
-<p>Measurements were taken from the mounds to assess one of the contaminants, lead. The tests involved are very expensive. Each sample costs about $600 to process. The Environmental Protection Agency (EPA) has set a âNo Action Levelâ (NAL) for lead. If the mean concentration in the soil of the contaminant is less than the NAL, then the area can be declared safe for public use. If the concentration of the contaminant reaches or exceeds the NAL, the site must be cleaned additionally before it is declared safe. The NAL for lead is 50 milligrams of lead per kilogram of soil (mg/kg).</p>
+<p>Measurements were taken from the mounds to assess one of the contaminants, lead. The tests involved are very expensive. Each sample costs about $600 to process. The Environmental Protection Agency (EPA) has set a “No Action Level” (NAL) for lead. If the mean concentration in the soil of the contaminant is less than the NAL, then the area can be declared safe for public use. If the concentration of the contaminant reaches or exceeds the NAL, the site must be cleaned additionally before it is declared safe. The NAL for lead is 50 milligrams of lead per kilogram of soil (mg/kg).</p>
 <p>The hypothesis for this test are:</p>
 <p><span class="math inline">\(H_0:~~\mu = 50 \frac{\text{mg}}{\text{kg}}\)</span></p>
 <p><span class="math inline">\(H_a:~~\mu &lt; 50 \frac{\text{mg}}{\text{kg}}\)</span></p>
@@ -524,12 +524,12 @@ Answer the following question:
 <p><img src="Images/Step4.png"></p>
 <p><strong>Step 4: Make Inferences</strong></p>
 <p>We assume the null hypothesis is true and we gather evidence against this requirement. We will find the probability that the mean lead concentration is less than <span class="math inline">\(\bar x\)</span> = 29.13 mg/kg, assuming that the true mean lead concentration is <span class="math inline">\(\mu\)</span> = 50 mg/kg. This probability is called the <span class="math inline">\(P\)</span>-value.</p>
-<p>Since the sample size is large (<span class="math inline">\(n = 61\)</span>), we can conclude that the sample mean is normally distributed. So, we can use the normal probability applet to find the probability that the sample mean will be less than 29.13. Historical analyses show that the population standard deviation is Ï = 24 mg/kg.</p>
+<p>Since the sample size is large (<span class="math inline">\(n = 61\)</span>), we can conclude that the sample mean is normally distributed. So, we can use the normal probability applet to find the probability that the sample mean will be less than 29.13. Historical analyses show that the population standard deviation is <span class="math inline">\(\sigma\)</span> = 24 mg/kg.</p>
 <p>First, we compute the <span class="math inline">\(z\)</span>-score.</p>
 <p><span class="math display">\[z=\frac{\bar x-\mu}{\sigma / \sqrt{n} } = \frac{29.13 - 50}{24 / \sqrt{61} }=-6.79\]</span></p>
-<p>Using the applet, we find the area to the left of <span class="math inline">\(z = â6.79\)</span>. This is the <span class="math inline">\(P\)</span>-value. It is not clear from the image of the applet, but the area to the left was shaded before the <span class="math inline">\(z\)</span>-score was entered.</p>
+<p>Using the applet, we find the area to the left of <span class="math inline">\(z = -6.79\)</span>. This is the <span class="math inline">\(P\)</span>-value. It is not clear from the image of the applet, but the area to the left was shaded before the <span class="math inline">\(z\)</span>-score was entered.</p>
 <p><img src="Images/L04_A06_Graph_4.jpg"></p>
-<p>The <span class="math inline">\(P\)</span>-value for this test is <span class="math inline">\(5.6 \times 10^{â12} = 0.000~000~000~005~6\)</span>. This is a very small probability. Assuming the null hypothesis is trueâthat is, the site is unacceptably contaminatedâit is very unlikely that we would find such a low mean contamination level among the <span class="math inline">\(n = 61\)</span> randomly selected soil samples.</p>
+<p>The <span class="math inline">\(P\)</span>-value for this test is <span class="math inline">\(5.6 \times 10^{-12} = 0.000~000~000~005~6\)</span>. This is a very small probability. Assuming the null hypothesis is true-that is, the site is unacceptably contaminated-it is very unlikely that we would find such a low mean contamination level among the <span class="math inline">\(n = 61\)</span> randomly selected soil samples.</p>
 <p>Since the <span class="math inline">\(P\)</span>-value is low, we reject the null hypothesis.</p>
 <p><br></p>
 <p><img src="Images/Step5.png"></p>

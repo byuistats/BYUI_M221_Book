@@ -42,7 +42,7 @@ When is the sample mean normally distributed (or approximately normally distribu
 For the mean of draws from a random variable with mean $\mu$ and standard deviation $\sigma$, the following are true:
 
 - The mean of the random variable  $\bar X$ is $\mu$.
-- The standard deviation of the random variable $\bar X$ is $\displaystyle{\frac{σ}{\sqrt{n}}}$.
+- The standard deviation of the random variable $\bar X$ is $\displaystyle{\frac{\sigma}{\sqrt{n}}}$.
 
 Previously, you learned how to use the normal probability applet to convert a $z$-score to a corresponding area under the curve.  These skills will be applied again in this activity.  The following questions will help you brush up on how to use the applet.
 
@@ -65,37 +65,37 @@ Previously, you learned how to use the normal probability applet to convert a $z
 
 <a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
-<center>$1 – 0.8944 = 0.1056$</center>
+<center>$1 - 0.8944 = 0.1056$</center>
 </div>
 <br>
 
-3. Challenge problem:  Use the output from the applet above to determine the probability that a standard normal random variable will be between –1.25 and 1.25.
+3. Challenge problem:  Use the output from the applet above to determine the probability that a standard normal random variable will be between -1.25 and 1.25.
 
 <a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q3" style="display:none;">
-* Since the probability in the right tail above 1.25 is 0.106, the probability in the left tail is also 0.106.  So, the probability in the middle, between –1.25 and 1.25 must be $1 – 2(0.106) = 1 – 0.212 = 0.788$.
+* Since the probability in the right tail above 1.25 is 0.106, the probability in the left tail is also 0.106.  So, the probability in the middle, between -1.25 and 1.25 must be $1 – 2(0.106) = 1 – 0.212 = 0.788$.
 </div>
 <br>
 
-4. Use the normal probability applet to find the probability that a standard normal random variable will be greater than –0.75.
+4. Use the normal probability applet to find the probability that a standard normal random variable will be greater than -0.75.
 
 <a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q4" style="display:none;">
-* Using the normal probability applet, we find that the area to the right of $z$ = –0.75 is $0.773$.
+* Using the normal probability applet, we find that the area to the right of $z$ = -0.75 is $0.773$.
 </div>
 <br>
 
-5. If the mean of a normally distributed random variable is –23 and the standard deviation is 7, what is the probability that the random variable will have a value that is less than –25?
+5. If the mean of a normally distributed random variable is -23 and the standard deviation is 7, what is the probability that the random variable will have a value that is less than -25?
 
 <a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q5" style="display:none;">
 * The $z$-score is:
 <br>
 <center>
-$\displaystyle{z = \frac{-25 – (-23)}{7} = –0.2857}$
+$\displaystyle{z = \frac{-25 - (-23)}{7} = -0.2857}$
 </center>
 <br>
-* Using the normal probability applet, we find that the area to the left of $z$ = –0.2857 is $0.3876$.
+* Using the normal probability applet, we find that the area to the left of $z$ = -0.2857 is $0.3876$.
 </div>
 &nbsp;
 </div>
@@ -103,17 +103,17 @@ $\displaystyle{z = \frac{-25 – (-23)}{7} = –0.2857}$
 
 ## Probabilities Involving a Mean
 
-If the sample mean is normally distributed, then we can consider the sample mean, $\bar x$, as one observation from a normal distribution with mean $\mu$ and standard deviation $\displaystyle{\frac{σ}{\sqrt{n}}}$. With this in mind, we can compute the $z$-score for any value of this random variable:
+If the sample mean is normally distributed, then we can consider the sample mean, $\bar x$, as one observation from a normal distribution with mean $\mu$ and standard deviation $\displaystyle{\frac{\sigma}{\sqrt{n}}}$. With this in mind, we can compute the $z$-score for any value of this random variable:
 
 $$z = \frac{\text{value} - \text{mean}}{\text{standard deviation}}=\frac{\bar x-\mu}{\sigma / \sqrt{n} }$$
 
-Notice that we just replaced the “value” with the normal random variable, the “mean” with its mean and “standard deviation” with its standard deviation.
+Notice that we just replaced the "value"" with the normal random variable, the "mean"" with its mean and "standard deviation"" with its standard deviation.
 
 The $z$-score follows a standard normal distribution. That is, it has a mean of 0 and a standard deviation of 1.  After we compute the $z$-score, we can use the applet to find the probability that a randomly selected mean will be above or below a given value of $\bar x$.
 
 **Worked Example:  Finding the Area under a Normal Curve (Based on a Sample Mean)**
 
-After finding the $z$-score, we can use the normal probability applet to find the area under the curve (i.e. the probability.)  Suppose that a sample of size $n = 4$ has been drawn from a normal population with mean $\mu = 7$ and standard deviation $\sigma = 3$. Since the parent population is normal, we know the sampling distribution of the sample mean $\bar x$ will be normal with mean $\mu = 7$ and standard deviation $\displaystyle{ \frac{σ}{\sqrt{n}} = \frac{3}{\sqrt{4}} = 1.5}$. We can use this information to find the probability that $\bar x$ will be greater than 10.
+After finding the $z$-score, we can use the normal probability applet to find the area under the curve (i.e. the probability.)  Suppose that a sample of size $n = 4$ has been drawn from a normal population with mean $\mu = 7$ and standard deviation $\sigma = 3$. Since the parent population is normal, we know the sampling distribution of the sample mean $\bar x$ will be normal with mean $\mu = 7$ and standard deviation $\displaystyle{ \frac{\sigma}{\sqrt{n}} = \frac{3}{\sqrt{4}} = 1.5}$. We can use this information to find the probability that $\bar x$ will be greater than 10.
 
 The $z$-score is
 
@@ -141,7 +141,7 @@ Using the normal probability applet, we can find the area to the left of this $z
 
 <img src="./Images/L04_A06_Graph_3.jpg">
 
-The area to the left of $z= –1.745$ is $0.04049$.  This is the probability that the mean costs for the $n = 40$ weeks will be less than \$20,000.
+The area to the left of $z= -1.745$ is $0.04049$.  This is the probability that the mean costs for the $n = 40$ weeks will be less than \$20,000.
 
 <br>
 
@@ -163,7 +163,7 @@ The United States Government decided to open some land near a uranium enrichment
 **Step 1: Design the study.**
 
 Measurements were taken from the mounds to assess one of the contaminants, lead.  The tests involved are very expensive.  Each sample costs about \$600 to process.
-The Environmental Protection Agency (EPA) has set a “No Action Level” (NAL) for lead. If the mean concentration in the soil of the contaminant is less than the NAL, then the area can be declared safe for public use.  If the concentration of the contaminant reaches or exceeds the NAL, the site must be cleaned additionally before it is declared safe.  The NAL for lead is 50 milligrams of lead per kilogram of soil (mg/kg).
+The Environmental Protection Agency (EPA) has set a "No Action Level" (NAL) for lead. If the mean concentration in the soil of the contaminant is less than the NAL, then the area can be declared safe for public use.  If the concentration of the contaminant reaches or exceeds the NAL, the site must be cleaned additionally before it is declared safe.  The NAL for lead is 50 milligrams of lead per kilogram of soil (mg/kg).
 
 The hypothesis for this test are:
 
@@ -241,17 +241,17 @@ Scientists collected $n = 61$ measurements of the lead concentration in the soil
 
 We assume the null hypothesis is true and we gather evidence against this requirement.  We will find the probability that the mean lead concentration is less than $\bar x$ = 29.13 mg/kg, assuming that the true mean lead concentration is $\mu$ = 50 mg/kg.  This probability is called the $P$-value.
 
-Since the sample size is large ($n = 61$), we can conclude that the sample mean is normally distributed.  So, we can use the normal probability applet to find the probability that the sample mean will be less than 29.13.  Historical analyses show that the population standard deviation is σ = 24 mg/kg.
+Since the sample size is large ($n = 61$), we can conclude that the sample mean is normally distributed.  So, we can use the normal probability applet to find the probability that the sample mean will be less than 29.13.  Historical analyses show that the population standard deviation is $\sigma$ = 24 mg/kg.
 
 First, we compute the $z$-score.
 
 $$z=\frac{\bar x-\mu}{\sigma / \sqrt{n} } = \frac{29.13 - 50}{24 / \sqrt{61} }=-6.79$$
 
-Using the applet, we find the area to the left of $z = –6.79$.  This is the $P$-value.  It is not clear from the image of the applet, but the area to the left was shaded before the $z$-score was entered.
+Using the applet, we find the area to the left of $z = -6.79$.  This is the $P$-value.  It is not clear from the image of the applet, but the area to the left was shaded before the $z$-score was entered.
 
 <img src="./Images/L04_A06_Graph_4.jpg">
 
-The $P$-value for this test is $5.6 \times 10^{–12} = 0.000~000~000~005~6$.  This is a very small probability.  Assuming the null hypothesis is true—that is, the site is unacceptably contaminated—it is very unlikely that we would find such a low mean contamination level among the $n = 61$ randomly selected soil samples.
+The $P$-value for this test is $5.6 \times 10^{-12} = 0.000~000~000~005~6$.  This is a very small probability.  Assuming the null hypothesis is true-that is, the site is unacceptably contaminated-it is very unlikely that we would find such a low mean contamination level among the $n = 61$ randomly selected soil samples.
 
 Since the $P$-value is low, we reject the null hypothesis.
 
