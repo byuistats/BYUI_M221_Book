@@ -117,7 +117,7 @@ The expectation on the exam is that you should be able to do the following:
 
 - The three **rules of probability** are:
 1. A probability is a number between 0 and 1. 
-$$0 ≤ P(X) ≤ 1$$
+$$0 \leq P(X) \leq 1$$
 
 2. If you list all the outcomes of a probability experiment (such as rolling a die) the probability that one of these outcomes will occur is 1. In other words, the sum of the probabilities in any probability is 1. 
 $$\sum P(X) = 1$$
