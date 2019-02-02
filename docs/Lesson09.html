@@ -350,19 +350,20 @@ $(document).ready(function () {
 <div style="padding-left:10%;">
 <strong>Optional Lesson Video</strong>
 </div>
-<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9C5z9NWEjdRaS7h--99Kwv" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
+<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9C5z9NWEjdRaS7h--99Kwv" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
 </iframe>
 </div>
+<p><br></p>
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
 <a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="oc" style="display:none;">
 <p>By the end of this lesson, you should be able to:</p>
 <ul>
-<li>Conduct a Hypothesis Test for a single mean with Ïƒ known:</li>
+<li>Conduct a Hypothesis Test for a single mean with σ known:</li>
 <li>State the null and alternative hypothesis.</li>
 <li>Calculate the test-statistic and p-value of the hypothesis test.</li>
-<li>Assess the statistical significance by comparing the p-value to the Î±-level.</li>
+<li>Assess the statistical significance by comparing the p-value to the α-level.</li>
 <li>Check the requirements for the hypothesis test.</li>
 <li>Show the appropriate connections between the numerical and graphical summaries that support this hypothesis test.</li>
 <li>Draw a correct conclusion for the hypothesis test.</li>
@@ -384,71 +385,81 @@ $(document).ready(function () {
 <p>In contrast to the null hypothesis, we write the alternative hypothesis. This is typically the statement that a researcher suspects is the actual truth. In our case, we suspect that “The mean weight of tour boat passengers is greater than 140 pounds.”</p>
 <p><span class="math inline">\(H_a:~~\mu &gt; 140\)</span> pounds</p>
 <p>We label the null hypothesis <span class="math inline">\(H_0\)</span> and the alternative hypothesis <span class="math inline">\(H_a\)</span>. In every hypothesis test in this class, the null hypothesis will be a statement involving equality. The alternative hypothesis can include greater than (<span class="math inline">\(&gt;\)</span>), less than (<span class="math inline">\(&lt;\)</span>), or not equal (<span class="math inline">\(\ne\)</span>).</p>
-<p>When we test hypotheses, we assume the null hypothesis is true. Because of this requirement, whenever we need to use Î¼ in a calculation, we can use the value specified in the null hypothesis. When we conduct a hypothesis test, we gather evidence against the requirement that the null hypothesis is true. If we get enough evidence against the null hypothesis, we reject it. If we do not have sufficient evidence against the null hypothesis, we do not reject it.</p>
+<p>When we test hypotheses, we assume the null hypothesis is true. Because of this requirement, whenever we need to use μ in a calculation, we can use the value specified in the null hypothesis. When we conduct a hypothesis test, we gather evidence against the requirement that the null hypothesis is true. If we get enough evidence against the null hypothesis, we reject it. If we do not have sufficient evidence against the null hypothesis, we do not reject it.</p>
 <p><img src="Images/Step2.png"></p>
 <p>How do we gather evidence against a null hypothesis? We collect data.</p>
 <p>The marine accident report gives the weight (in pounds) of each of the passengers and the crew member. These values are reproduced below. <!-- [Cite: "Capsizing of New York State-Certificated Vessel Ethan Allen, Lake George, New York October 2, 2005"] --></p>
-<table>
+<table style="width:67%;">
+<colgroup>
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+</colgroup>
 <tbody>
 <tr class="odd">
-<td align="left">189</td>
-<td align="left">110</td>
-<td align="left">144</td>
-<td align="left">141</td>
-<td align="left">185</td>
-<td align="left">194</td>
-<td align="left">180</td>
-<td align="left">211</td>
+<td align="center">189</td>
+<td align="center">110</td>
+<td align="center">144</td>
+<td align="center">141</td>
+<td align="center">185</td>
+<td align="center">194</td>
+<td align="center">180</td>
+<td align="center">211</td>
 </tr>
 <tr class="even">
-<td align="left">128</td>
-<td align="left">135</td>
-<td align="left">141</td>
-<td align="left">205</td>
-<td align="left">200</td>
-<td align="left">164</td>
-<td align="left">150</td>
-<td align="left">170</td>
+<td align="center">128</td>
+<td align="center">135</td>
+<td align="center">141</td>
+<td align="center">205</td>
+<td align="center">200</td>
+<td align="center">164</td>
+<td align="center">150</td>
+<td align="center">170</td>
 </tr>
 <tr class="odd">
-<td align="left">194</td>
-<td align="left">260</td>
-<td align="left">165</td>
-<td align="left">137</td>
-<td align="left">198</td>
-<td align="left">195</td>
-<td align="left">158</td>
-<td align="left">204</td>
+<td align="center">194</td>
+<td align="center">260</td>
+<td align="center">165</td>
+<td align="center">137</td>
+<td align="center">198</td>
+<td align="center">195</td>
+<td align="center">158</td>
+<td align="center">204</td>
 </tr>
 <tr class="even">
-<td align="left">170</td>
-<td align="left">190</td>
-<td align="left">129</td>
-<td align="left">146</td>
-<td align="left">135</td>
-<td align="left">176</td>
-<td align="left">204</td>
-<td align="left">170</td>
+<td align="center">170</td>
+<td align="center">190</td>
+<td align="center">129</td>
+<td align="center">146</td>
+<td align="center">135</td>
+<td align="center">176</td>
+<td align="center">204</td>
+<td align="center">170</td>
 </tr>
 <tr class="odd">
-<td align="left">142</td>
-<td align="left">210</td>
-<td align="left">180</td>
-<td align="left">155</td>
-<td align="left">217</td>
-<td align="left">198</td>
-<td align="left">126</td>
-<td align="left">247</td>
+<td align="center">142</td>
+<td align="center">210</td>
+<td align="center">180</td>
+<td align="center">155</td>
+<td align="center">217</td>
+<td align="center">198</td>
+<td align="center">126</td>
+<td align="center">247</td>
 </tr>
 <tr class="even">
-<td align="left">173</td>
-<td align="left">155</td>
-<td align="left">165</td>
-<td align="left">175</td>
-<td align="left">235</td>
-<td align="left">230</td>
-<td align="left">268</td>
-<td align="left">170</td>
+<td align="center">173</td>
+<td align="center">155</td>
+<td align="center">165</td>
+<td align="center">175</td>
+<td align="center">235</td>
+<td align="center">230</td>
+<td align="center">268</td>
+<td align="center">170</td>
 </tr>
 </tbody>
 </table>
@@ -523,7 +534,7 @@ $(document).ready(function () {
 <p>It is not sufficient to gain an intuitive sense for the data. We will test if there is sufficient evidence to reject the null hypothesis that the true mean weight of tour boat passengers is 140 pounds.</p>
 <p>Assuming the null hypothesis is true, what is the probability that we would observe a sample mean as extreme or more extreme than the values we observed? This probability is called the <span class="math inline">\(P\)</span>-value.</p>
 <p>To find the <span class="math inline">\(P\)</span>-value, we first calculate the number of standard deviations that <span class="math inline">\(\bar x\)</span> is away from the assumed value of true mean <span class="math inline">\(\mu=140\)</span> pounds. This is our <span class="math inline">\(z\)</span>-score. Then we use the applet to determine the probability of observing a value of <span class="math inline">\(z\)</span> that is as large or larger than the value we observed.</p>
-<p><span class="math display">\[\displaystyle{ z= \frac{ \bar x âˆ’ \mu}{\sigma/\sqrt{n}} = \frac{177.6âˆ’140}{26.7/\sqrt{48}}=9.757 }\]</span></p>
+<p><span class="math display">\[\displaystyle{ z= \frac{ \bar x − \mu}{\sigma/\sqrt{n}} = \frac{177.6−140}{26.7/\sqrt{48}}=9.757 }\]</span></p>
 <p>We use the applet to determine the probability of observing a value of <span class="math inline">\(z\)</span> that is as large or larger than <span class="math inline">\(9.757\)</span>. This is the same as the probability of observing a value of <span class="math inline">\(\bar x =177.6\)</span> or more pounds, given that the true mean really is <span class="math inline">\(\mu = 140\)</span> pounds.</p>
 <p>The area to the right of <span class="math inline">\(z=9.757\)</span> is so small, the normal probability applet gives the area as “1.7217e-22.” This is how a computer represents scientific notation. This number is actually <span class="math inline">\(1.7217x10^{-22}\)</span> or in other words, 0.000 000 000 000 000 000 000 172 17. This is the probability that a mean of <span class="math inline">\(\bar x=177.6\)</span> pounds was observed just by chance assuming the true mean is <span class="math inline">\(\mu = 140\)</span> lbs. This is very, very unlikely. A more plausible explanation is that the mean weight of individuals in the population is greater than 140 pounds.</p>
 <p>Based on this analysis and the hypothesis test, the evidence against <span class="math inline">\(H_0\)</span> is strong enough to conclude that if every seat on the Ethan Allen was occupied, that the boat would be carrying a greater load than it was certified to handle.</p>
@@ -895,26 +906,8 @@ Reject <span class="math inline">\(H_0\)</span>
 <div id="level-of-significance-alpha" class="section level3">
 <h3>Level of Significance, <span class="math inline">\(\alpha\)</span></h3>
 <p>How do we decide if the <span class="math inline">\(P\)</span>-value is small enough to reject the null hypothesis? We need a way to determine if there is enough evidence to reject the null hypothesis that does not depend on the data. We need a number that can be used to determine if the <span class="math inline">\(P\)</span>-value is small enough to reject the null hypothesis. This number is called the <strong>level of significance</strong> and is often denoted by the symbol <strong><span class="math inline">\(\alpha\)</span></strong> (pronounced “alpha”.)</p>
-<center>
-<table>
-<tbody>
-<tr class="odd">
-<td>
-<p>
-<strong>Memory Aid:</strong><br /> Some students find it helpful to remember the decision rule using the couplet:<br />
-</p>
-</td>
-</tr>
-<tr class="even">
-<td>
-<p>
-“If the <span class="math inline">\(P\)</span> is low,<br /> Reject the null.”
-</p>
-</td>
-</tr>
-</tbody>
-</table>
-</center>
+<p><strong>Memory Aid:</strong> Some students find it helpful to remember the decision rule using the couplet:<br /></p>
+<p><strong>If the <span class="math inline">\(P\)</span> is low, reject the null.</strong></p>
 <!--
 <center>
 {| class="wikitable"
@@ -1073,7 +1066,7 @@ Answer the following questions:
 <a href="javascript:showhide('Q15')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q15" style="display:none;">
 <ul>
-<li>A Type I error would be committed if the FDA decided that the drug improves patientâ€™s conditions, when in actuality it does not.</li>
+<li>A Type I error would be committed if the FDA decided that the drug improves patient’s conditions, when in actuality it does not.</li>
 </ul>
 </div>
 <p><br></p>
@@ -1349,7 +1342,7 @@ n = 50
 <h2>Structure</h2>
 <p>When <span class="math inline">\(\sigma\)</span> is known, we conduct the hypothesis test by hand. (Note that this is not realistic, since <span class="math inline">\(\sigma\)</span> is not known in most interesting real situations. However, this will help you learn how to do hypothesis tests.)</p>
 <p>Be sure to always conduct a test using <span class="math inline">\(P\)</span>-values. In this course, we will never compute or use critical values as part of a hypothesis test.</p>
-<p>In the <span class="math inline">\(P\)</span>-value method, you compare a computed <span class="math inline">\(P\)</span>-value to your selected <span class="math inline">\(\alpha\)</span>-level. If the <span class="math inline">\(P\)</span>-value is less than <span class="math inline">\(\alpha\)</span>, you will reject the null hypothesis. Otherwise, you fail to reject the null hypothesis. We never say we â€œacceptâ€ the null hypothesis.</p>
+<p>In the <span class="math inline">\(P\)</span>-value method, you compare a computed <span class="math inline">\(P\)</span>-value to your selected <span class="math inline">\(\alpha\)</span>-level. If the <span class="math inline">\(P\)</span>-value is less than <span class="math inline">\(\alpha\)</span>, you will reject the null hypothesis. Otherwise, you fail to reject the null hypothesis. We never say we “accept” the null hypothesis.</p>
 <p>Hypothesis tests follow the same basic pattern.</p>
 <p><img src="Images/Step1.png"></p>
 <ol style="list-style-type: decimal">
@@ -1404,7 +1397,7 @@ n = 50
 </ol>
 <ul>
 <li><p>The New York Times is a large newspaper that is available both in the traditional print format and online. It is known that the mean age of readers of the print edition is <span class="math inline">\(42\)</span> years. The research question is: Is the mean age of readers of the online version of the Times less than <span class="math inline">\(42\)</span> years?</p></li>
-<li><p>The population is all people who read the Times online. The observational units are the individual customers. The age of each person who was selected and agreed to participate was measured. The customerâ€™s age is a quantitative random variable.</p></li>
+<li><p>The population is all people who read the Times online. The observational units are the individual customers. The age of each person who was selected and agreed to participate was measured. The customer’s age is a quantitative random variable.</p></li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
 <li>State the null and alternative hypotheses and the level of significance</li>
@@ -1501,7 +1494,7 @@ H_a:&amp;~~\mu &lt; 42
 <p><br></p>
 <p><img src="Images/StepsAll.png"></p>
 <h3 id="mean-gpa-of-early-risers">Mean GPA of early risers</h3>
-<p>In Doctrine and Covenants 88:124, the Lord commands, “â€¦cease to sleep longer than is needful; retire to thy bed early, that ye may not be weary; arise early, that your bodies and your minds may be invigorated.” Are there academic benefits from obeying this commandment? People who sleep late tend to be stereotyped as slackers. It is not fair to make these claims without any scientific evidence. The purpose of this study is used to address whether early risers earn better grades.</p>
+<p>In Doctrine and Covenants 88:124, the Lord commands, “…cease to sleep longer than is needful; retire to thy bed early, that ye may not be weary; arise early, that your bodies and your minds may be invigorated.” Are there academic benefits from obeying this commandment? People who sleep late tend to be stereotyped as slackers. It is not fair to make these claims without any scientific evidence. The purpose of this study is used to address whether early risers earn better grades.</p>
 <p>Researcher K. Clay and others presented a paper at the Associated Professional Sleep Societies meeting [4]. They suggested that the mean GPA of students who are early risers tends to be higher than average. The mean grade point average (GPA) of all students at BYU-Idaho is <span class="math inline">\(\mu = 3.15\)</span>. The population standard deviation for the grades of students at BYU-Idaho is <span class="math inline">\(\sigma= 0.68\)</span>.</p>
 <p>A simple random sample of <span class="math inline">\(n = 378\)</span> early-rising BYU-Idaho students was collected. The students were asked to report their BYU-Idaho GPA. The GPA of each person who was selected and signed the informed consent statement (to authorize the use of their data) was recorded.</p>
 <p><img src="Images/Step1.png"></p>
@@ -1679,8 +1672,8 @@ Remember…
 <div id="references" class="section level2">
 <h2>References</h2>
 <p>[1] R. A. Fisher. Statistical tests. Nature, 136, 1935.</p>
-<p>[2] H. Kieler, O. Axelsson, Nilsson S., and U. Waldenstr. The length of human pregnancy as calculated by ultrasonographic measurement of the fetal biparietal diameter. Ultrasound in Obstetrics and Gynecology, 6(5):353â€“357, 1995.</p>
-<p>[3] Timothy Harper. All the news thatâ€™s fit to BYTE. Delta Sky Magazine, 106:92â€“96, May 2007.</p>
+<p>[2] H. Kieler, O. Axelsson, Nilsson S., and U. Waldenstr. The length of human pregnancy as calculated by ultrasonographic measurement of the fetal biparietal diameter. Ultrasound in Obstetrics and Gynecology, 6(5):353–357, 1995.</p>
+<p>[3] Timothy Harper. All the news that’s fit to BYTE. Delta Sky Magazine, 106:92–96, May 2007.</p>
 <p>[4] K. Clay et. al. Morningness and eveningness relationship to college GPA. APSS Meeting, 2008.</p>
 <p><br></p>
 </div>

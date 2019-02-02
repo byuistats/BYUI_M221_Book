@@ -19,7 +19,7 @@ output:
 <div style="padding-left:10%;">**Optional Lesson Video**</div>
 <iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9C5z9NWEjdRaS7h--99Kwv" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
-<br/>
+<br>
 
 ## Lesson Outcomes
 
@@ -75,15 +75,63 @@ How do we gather evidence against a null hypothesis?  We collect data.
 
 The marine accident report gives the weight (in pounds) of each of the passengers and the crew member. These values are reproduced below. <!-- [Cite: "Capsizing of New York State-Certificated Vessel Ethan Allen, Lake George, New York October 2, 2005"] -->
 
+```{r, echo = FALSE, results = "asis"}
+#library(knitr)
+ w <- c(189,
+ 110,
+ 144,
+ 141,
+ 185,
+ 194,
+ 180,
+ 211,
+ 128,
+ 135 ,		
+ 141 ,		
+ 205 ,		
+ 200 ,		
+ 164 ,		
+ 150 ,		
+ 170,
+ 194 ,
+ 260 ,		
+ 165 ,		
+ 137 ,		
+ 198 ,		
+ 195 ,		
+ 158 ,		
+ 204,
+ 170 ,
+ 190, 		
+ 129 ,		
+ 146 ,		
+ 135 ,	
+ 176 ,
+ 204 ,		
+ 170,
+ 142,
+ 210 ,		
+ 180 ,		
+ 155 ,		
+ 217 ,		
+ 198 ,		
+ 126 ,		
+ 247,
+ 173 ,
+ 155 ,		
+ 165 ,		
+ 175 ,		
+ 235 ,		
+ 230 ,		
+ 268 ,		
+ 170)
+ 
 
-  ----- ----- ----- ----- ----- ----- ----- -----
-  189   110   144   141   185   194   180   211
-  128   135   141   205   200   164   150   170
-  194   260   165   137   198   195   158   204
-  170   190   129   146   135   176   204   170
-  142   210   180   155   217   198   126   247
-  173   155   165   175   235   230   268   170
-  ----- ----- ----- ----- ----- ----- ----- -----
+library(pander)
+pander(matrix(data = w, nrow = 6, ncol=8, byrow=TRUE))
+
+```
+
 
 <!--
 <center>
@@ -501,21 +549,10 @@ In the case of the body temperatures, a large $z$-score ($z=-6.669$) led to a sm
 How do we decide if the $P$-value is small enough to reject the null hypothesis?  We need a way to determine if there is enough evidence to reject the null hypothesis that does not depend on the data.
 We need a number that can be used to determine if the $P$-value is small enough to reject the null hypothesis. This number is called the **level of significance** and is often denoted by the symbol **$\alpha$** (pronounced "alpha".)
 
-<center>
-<table>
-<tbody>
-<tr class="odd">
-<td><p>**Memory Aid:**<br />
-Some students find it helpful to remember the decision rule using the couplet:<br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>&quot;If the $P$ is low,<br />
-Reject the null.&quot;</p></td>
-</tr>
-</tbody>
-</table>
-</center>
+**Memory Aid:** Some students find it helpful to remember the decision rule using the couplet:<br />
+
+**If the $P$ is low, reject the null.**
+
 
 <!--
 <center>
