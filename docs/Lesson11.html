@@ -335,7 +335,7 @@ $(document).ready(function () {
 <div style="padding-left:10%;">
 <strong>Optional Lesson Video</strong>
 </div>
-<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-eXvWi8id9S0NiKSyGYr6j" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
+<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-eXvWi8id9S0NiKSyGYr6j" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
 </iframe>
 </div>
 <div id="lesson-outcomes" class="section level2">
@@ -344,15 +344,15 @@ $(document).ready(function () {
 <div id="outcomes" style="display:none;">
 <p>By the end of this lesson, you should be able to:</p>
 <ul>
-<li>Confidence Intervals for a single mean with Ïƒ unknown:</li>
+<li>Confidence Intervals for a single mean with <span class="math inline">\(\sigma\)</span> unknown:</li>
 <li>Calculate and interpret a confidence interval for a population mean given a confidence level.</li>
 <li>Identify a point estimate and margin of error for the confidence interval.</li>
 <li>Show the appropriate connections between the numerical and graphical summaries that support the confidence interval.</li>
 <li><p>Check the requirements the confidence interval.</p></li>
-<li>Hypothesis Testing for a single mean with Ïƒ unknown:</li>
+<li>Hypothesis Testing for a single mean with <span class="math inline">\(\sigma\)</span> unknown:</li>
 <li>State the null and alternative hypothesis.</li>
 <li>Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.</li>
-<li>Assess the statistical significance by comparing the p-value to the Î±-level.</li>
+<li>Assess the statistical significance by comparing the p-value to the α-level.</li>
 <li>Check the requirements for the hypothesis test.</li>
 <li>Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test.</li>
 <li>Draw a correct conclusion for the hypothesis test.</li>
@@ -373,7 +373,7 @@ t = \frac{ \bar x - \mu }{ s / \sqrt{n} }
 <p>The <span class="math inline">\(t\)</span>-distribution is bell-shaped and symmetrical. The <span class="math inline">\(t\)</span>-distribution has a mean of 0, but it has more area in the tails than the standard normal distribution. The exact shape of the <span class="math inline">\(t\)</span>-distribution depends on a parameter called the <strong>degrees of freedom</strong> (abbreviated <span class="math inline">\(df\)</span>). The degrees of freedom is related to the sample size. As the sample size goes up, the degrees of freedom increase accordingly. For the procedures discussed in this lesson, the degrees of freedom equal the sample size minus one: <span class="math inline">\(df = n-1\)</span>.</p>
 <p><a href="http://byuimath.com/apps/normprobwitht.html" target="_blank">Click here</a> to explore how the shape of the <span class="math inline">\(t\)</span>-distribution changes with the degrees of freedom. Notice that as the degrees of freedom increases, the shape of the <span class="math inline">\(t\)</span>-distribution (black curve) gets closer to the standard normal distribution (red curve). The red curve is identical in the three images below.</p>
 <center>
-<table>
+<table style="table-layout: fixed; width: 100%;">
 <thead>
 <tr class="header">
 <th>
@@ -395,17 +395,17 @@ t = \frac{ \bar x - \mu }{ s / \sqrt{n} }
 </thead>
 <tbody>
 <tr class="odd">
-<td>
+<td style="width:33.3%;">
 <p>
 <img src="Images/T-dist-df-01.png">
 </p>
 </td>
-<td>
+<td style="width:33.3%;">
 <p>
 <img src="Images/T-dist-df-05.png">
 </p>
 </td>
-<td>
+<td style="width:33.3%;">
 <p>
 <img src="Images/T-dist-df-15.png">
 </p>
@@ -414,7 +414,7 @@ t = \frac{ \bar x - \mu }{ s / \sqrt{n} }
 <tr class="even">
 <td>
 <p>
-(Image credit: Webster West, <a href="http://www.stat.tamu.edu/~west/applets/tdemo1.html">http://www.stat.tamu.edu/~west/applets/tdemo1.html</a>)
+(Image credit: Webster West, <a href="http://www.stat.tamu.edu/~west/applets/tdemo1.html"> http://www.stat.tamu.edu/~west/applets/tdemo1.html</a>)
 </p>
 </td>
 <td>
@@ -483,7 +483,7 @@ n = 148
 </ul>
 <p><strong>Give the test statistic and its value</strong></p>
 <p>We will need to conduct the analysis using software, so we can report this value.</p>
-<p><strong>Instructions for conducting a test for one mean with <span class="math inline">\(sigma\)</span> unknown:</strong></p>
+<p><strong>Instructions for conducting a test for one mean with <span class="math inline">\(\sigma\)</span> unknown:</strong></p>
 <p><br></p>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <div class="SoftwareHeading">
@@ -491,27 +491,27 @@ Excel Instructions
 </div>
 <div class="Summary">
 <p>Here are the instructions for conducting the one sample t-test in Excel:</p>
-<p>The Excel file needed for this analysis is <a href="./Data/QuantitativeInferenceProcedures.xlsx">Quantitative Inference Procedures.xlsx</a>. We will use this Excel file to conduct the hypothesis tests for a single mean with <span class="math inline">\(\sigma\)</span> unknown.</p>
+<p>The Excel file needed for this analysis is <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>. We will use this Excel file to conduct the hypothesis tests for a single mean with <span class="math inline">\(\sigma\)</span> unknown.</p>
 <ul>
 <li>After opening the file, please click on the tab labeled “One-sample t-test”.<br />
 </li>
 <li>Paste the data in the appropriate place in Column A.</li>
-<li>Set the null hypothesis value in cell D10. For this example, the value should be 98.6.</li>
-<li>Click in cell D11 and use the drop down menu to set the alternative hypothesis to: “Not Equal To”</li>
+<li>Set the null hypothesis value in cell O5. For this example, the value should be 98.6.</li>
+<li>Click in cell N6 and use the drop down menu to set the alternative hypothesis to: “Not Equal To”</li>
 </ul>
 <p>The image below shows the Excel file after these changes have been made.</p>
 <center>
-<img src="Images/BodyTemp-tTest-Excel.png">
+<img src="Images/BodyTemp-tTest-Excel_Toolbox.png">
 </center>
 <p>Consider each of the following alternative hypotheses that could be used in a test for a single mean where the null hypothesis is <span class="math inline">\(H_0: \mu = 98.6\)</span>.</p>
 <ul>
 <li><span class="math inline">\(H_a: \mu \ne 98.6\)</span></li>
-<li>Choose “Not Equal To” in the drop-down menu in cell D11.</li>
+<li>Choose “Not Equal To” in the drop-down menu in cell N6.</li>
 <li><span class="math inline">\(H_a: \mu &lt; 98.6\)</span></li>
-<li>Choose “Less Than” in the drop-down menu in cell D11.</li>
+<li>Choose “Less Than” in the drop-down menu in cell N6.</li>
 <li><span class="math inline">\(H_a: \mu &gt; 98.6\)</span><br />
 </li>
-<li>Choose “Greater Than” in the drop-down menu in cell D11.</li>
+<li>Choose “Greater Than” in the drop-down menu in cell N6.</li>
 </ul>
 <p>You will have opportunities to practice using each of these. <br></p>
 </div>
@@ -526,7 +526,7 @@ t &amp;= \frac{ \bar x - \mu }{ s / \sqrt{n} } \\
 \end{align}
 \]</span> Any differences are due to rounding.</p>
 <p><strong>State the degrees of freedom</strong></p>
-<p>In Excel, the degrees of freedom (<span class="math inline">\(df\)</span>) are given in cell E21.</p>
+<p>In Excel, the degrees of freedom (<span class="math inline">\(df\)</span>) are given in cell N9.</p>
 <p><span class="math display">\[df = 147\]</span> <!-- **Mark the test statistic and $P$-value on a graph of the sampling distribution** --> <!-- CONSOLIDATED and UPDATED --></p>
 <p><strong>Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance</strong></p>
 <p>The <span class="math inline">\(P\)</span>-value is given in the software as “1.2723E-08”. Writing this properly and comparing it to <span class="math inline">\(\alpha\)</span>, we have: <span class="math display">\[
@@ -567,16 +567,16 @@ Answer the following questions:
 </ol>
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
-<p>When the data are entered into the file <a href="./Data/QuantitativeInferenceProcedures.xlsx">Quantitative Inference Procedures.xlsx</a>, the following output is generated:</p>
-<p><img src="Images/BabyBoom-Ttest-Excel.png"> <br></p>
+<p>When the data are entered into the file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>, the following output is generated:</p>
+<p><img src="Images/BabyBoom-Ttest-Excel_Toolbox.png"> <br></p>
 <ul>
 <li>The relevant summary statistics are:
 <center></li>
 </ul>
 <span class="math display">\[
 \begin{align}
-\bar x &amp;= 3275.95 \textrm{g}\\
-s &amp;= 528.03 \textrm{g}\\
+\bar x &amp;= 3275.955 \textrm{g}\\
+s &amp;= 528.032 \textrm{g}\\
 n &amp;= 44
 \end{align}
 \]</span>
@@ -588,7 +588,7 @@ n &amp;= 44
 </ol>
 <a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
-<p><img src="Images/BabyBoom-JSE-Histogram.png"></p>
+<p>The histogram is included in the above image.</p>
 </div>
 <p> </p>
 </div>
@@ -632,7 +632,7 @@ df = 43
 <p>The <span class="math inline">\(P\)</span>-value is shaded in green:</p>
 <p><img src="Images/BabyBoom-JSE-TwoSidedT1-2.png"></p>
 <p><strong>Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance</strong></p>
-<p><span class="math display">\[P\text{-value}=0.228 &gt; 0.05 = \alpha\]</span></p>
+<p><span class="math display">\[P\text{-value}=0.2295 &gt; 0.05 = \alpha\]</span></p>
 <p><strong>State your decision</strong></p>
 <p>Since the <span class="math inline">\(P\)</span>-value is greater than the level of significance, we fail to reject the null hypothesis.</p>
 <p><img src="Images/Step5.png"></p>
@@ -669,9 +669,9 @@ df = 43
 Excel Instructions
 </div>
 <div class="Summary">
-<p>Copying the <a href="./Data/BLEU-Scores.xlsx">BLEU-Scores</a> data into the <a href="./Data/QuantitativeInferenceProcedures.xlsx">Quantitative Inference Procedures.xlsx</a> file in Excel, we get the following:</p>
+<p>Copying the <a href="./Data/BLEU-Scores.xlsx">BLEU-Scores</a> data into the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> file in Excel, we get the following:</p>
 <center>
-<img src="Images/BLEUscores-Exceloutput.png">
+<img src="Images/BLEUscores-Excel_Toolbox.png">
 </center>
 <p><br></p>
 </div>
@@ -679,14 +679,13 @@ Excel Instructions
 <p>The summary statistics are:</p>
 <p><span class="math display">\[
 \begin{align}
-\bar x =&amp; 0.2876 \\ 
-s =&amp; 0.0264 \\
+\bar x =&amp; 0.288 \\ 
+s =&amp; 0.026 \\
 n =&amp; 100
 \end{align}
 \]</span></p>
 <p><strong>Make an appropriate graph to illustrate the data</strong></p>
-<p>Here is a histogram of the data showing 10 bins.</p>
-<p><img src="Images/BLEUscores-Histogram-Excel.png"></p>
+<p>The histogram is included in the image above.</p>
 <p><img src="Images/Step4.png"></p>
 <p><strong>Verify the requirements have been met</strong></p>
 <p>The requirements for creating a confidence interval for a mean with <span class="math inline">\(\sigma\)</span> unknown are the same as the requirements for this procedure when <span class="math inline">\(\sigma\)</span> is known:</p>
@@ -729,12 +728,12 @@ Excel Instructions
 <p>We will use Excel to find the confidence intervals for the mean.</p>
 <p>Do the following:</p>
 <ul>
-<li>Open the file <a href="./Data/QuantitativeInferenceProcedures.xlsx">Quantitative Inference Procedures.xlsx</a></li>
+<li>Open the file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a></li>
 <li>Click on the tab labeled “One-sample t-test”</li>
 <li>Enter the data, and</li>
 <li>Set the confidence level.</li>
 </ul>
-<p>In this case, we are using a 95% confidence level. So, you set the confidence level in the Excel file to 0.95 (i.e., 95%). The confidence interval is given to you in cells G21 and H21. <br></p>
+<p>In this case, we are using a 95% confidence level. So, you set the confidence level in the Excel file to 0.95 (i.e., 95%). The confidence interval is given to you in cells N14 and O14. <br></p>
 </div>
 <p><br></p>
 <p>The 95% confidence interval for the true mean BLEU score is:</p>
@@ -800,9 +799,9 @@ Answer the following questions:
 </ol>
 <a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q8" style="display:none;">
-<p>The following output was generated using the Excel file <a href="./Data/QuantitativeInferenceProcedures.xlsx">Quantitative Inference Procedures.xlsx</a>:</p>
+<p>The following output was generated using the Excel file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>:</p>
 <center>
-<img src="Images/EuroWeights-Output-Excel.png">
+<img src="Images/EuroWeights-Histogram.png">
 </center>
 <ul>
 <li>Typically, we round our computations to one more decimal place of precision than was given in the original data. This means we need one more decimal place than is shown in the output above. We can increase the precision by selecting the cell we want to modify and then clicking on the following button in the “Home” menu ribbon in Excel:</li>
@@ -818,7 +817,7 @@ Answer the following questions:
 <span class="math display">\[
 \begin{align}
 \bar x =&amp; 7.521 \\ 
-s =&amp; 0.034 \\
+s =&amp; 0.0344 \\
 n =&amp; 2000
 \end{align}
 \]</span>
@@ -831,7 +830,7 @@ n =&amp; 2000
 <a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q9" style="display:none;">
 <center>
-<img src="Images/EuroWeights-Histogram-SPSS.png">
+The graph is included in the image above.
 </center>
 </div>
 <p> </p>
@@ -917,7 +916,7 @@ Remember…
 <tr class="odd">
 <td align="center"><a href="Lesson10.html">Lesson 10: <br> Inference for One Mean: Sigma Known (Confidence Interval)</a></td>
 <td align="center">Lesson 11: <br> Inference for One Mean: Sigma Unknown</td>
-<td align="center">[Lesson 12: <br> Inference for Two Means: Paired Data</td>
+<td align="center"><a href="Lesson12.html">Lesson 12: <br> Inference for Two Means: Paired Data</a></td>
 </tr>
 </tbody>
 </table>

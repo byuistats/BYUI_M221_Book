@@ -27,7 +27,7 @@ output:
 <div id="out"p style="display:none;">
 By the end of this lesson, you should be able to:
 
-- Confidence Intervals for a single mean with σ known: 
+- Confidence Intervals for a single mean with $\sigma$ known: 
   + Calculate and interpret a confidence interval for a population mean given a confidence level.
   + Explain how the margin of error changes with the sample size and the level of confidence. 
   + Identify a point estimate and margin of error for the confidence interval.
@@ -244,6 +244,8 @@ estimate   & ~ ~- & of~error & ~ ~,   & estimate   & ~ ~+ & of~error
 $$
 or 
 $$(\text{point estimate}) \pm (\text{margin of error})$$
+</br>
+<a id="z"></a>
 
 
 ### A Little More Precision
@@ -309,7 +311,7 @@ $$
 (2.37, ~ 3.71)
 $$
 
-#### What about Other Confidence Levels?
+#### <a id = "z*"></a>What about Other Confidence Levels?
 
 Most of the time, researchers report 95% confidence intervals.  The number 95% is called the **confidence level**.  Sometimes it is desirable to use a level of confidence that is different than 95%.  In that case, we need to use a number besides 1.96 in the calculations.
 
@@ -319,7 +321,7 @@ $$
 $$
 Another way to state this question is to ask, between what two $z$-scores will 90% of the data in a standard normal distribution fall?  We need to find the values of $-z$ and $z$ such that the area between them is equal to 0.90.  Again, we use the [Normal Probability Applet](http://statistics.byuimath.com/index.php?title=Normal_Probability_Applet){target="_blank"}.
 
-<img src="./Images/updated_z-score_curve.JPG">
+<img src="./Images/Updated_z-score_curve.JPG">
 
 So, for a 90% confidence interval, the value of $z*$ would be 1.645.  Note: We use an asterisk ($*$) to indicate that $z$ was not computed from data, but was determined based on a *chosen* confidence level, 90%.
 
@@ -665,7 +667,7 @@ $$
 Once the level of confidence is selected, $z^*$ is automatically determined. In practice, the most common level of confidence is 95%, which means that $z^*$ would equal 1.96.
 
 <br>
-<div class="message Note">If you need a reminder on finding the value of $z^*$, click [[#z|here]].</div>
+<div class="message Note">If you need a reminder on finding the value of $z^*$, click [here](#z).</div>
 <br>
 <br>
 
@@ -725,7 +727,7 @@ n &= \left( \frac{z^*\sigma}{m} \right)^2 \\
 \end{array}
 $$
 </center>
- We always round up in sample size calculations, so the required sample size is $ n=3166$.
+ We always round up in sample size calculations, so the required sample size is $n=3166$.
 </div>
 <br>
 
@@ -765,7 +767,7 @@ n &= \left( \frac{z^*\sigma}{m} \right)^2 \\
 \end{array}
 $$
 </center>
-We always round up in sample size calculations, so the required sample size is $ n=1367$.
+We always round up in sample size calculations, so the required sample size is $n=1367$.
 </div>
 <br>
 
@@ -927,6 +929,6 @@ $$\displaystyle{\left(\bar x-z^*\frac{\sigma}{\sqrt{n}},~\bar x+z^*\frac{\sigma}
 <center>
 | **Previous Reading** | **This Reading** | **Next Reading** |
 | :------------------: | :--------------: | :--------------: |
-| [Lesson 9: <br> Inference for One Mean: Sigma Known (Hypothesis Test)](Lesson09.html) | Lesson 10: <br> Inference for One Mean: Sigma Known (Confidence Interval) | [Lesson 11: <br> Inference for One Mean: Sigma Unknown|Inference for One Mean: Sigma Unknown](Lesson11.html) |
+| [Lesson 9: <br> Inference for One Mean: Sigma Known (Hypothesis Test)](Lesson09.html) | Lesson 10: <br> Inference for One Mean: Sigma Known (Confidence Interval) | [Lesson 11: <br> Inference for One Mean: Sigma Unknown](Lesson11.html) |
 </center>
 

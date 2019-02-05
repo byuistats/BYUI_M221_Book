@@ -17,7 +17,7 @@ output:
 <div style="float:right;width=40%;">
 <br/>
 <div style="padding-left:10%;">**Optional Lesson Video**</div>
-<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-eXvWi8id9S0NiKSyGYr6j" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-eXvWi8id9S0NiKSyGYr6j" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
 ## Lesson Outcomes
@@ -26,13 +26,13 @@ output:
 <div id="outcomes" style="display:none;">
 By the end of this lesson, you should be able to:
 
--  Confidence Intervals for a single mean with σ unknown: 
+* Confidence Intervals for a single mean with $\sigma$ unknown:
   + Calculate and interpret a confidence interval for a population mean given a confidence level.
   + Identify a point estimate and margin of error for the confidence interval.
   + Show the appropriate connections between the numerical and graphical summaries that support the confidence interval. 
   + Check the requirements the confidence interval.
  
--  Hypothesis Testing for a single mean with σ unknown:
+* Hypothesis Testing for a single mean with $\sigma$ unknown:
   + State the null and alternative hypothesis. 
   + Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.
   + Assess the statistical significance by comparing the p-value to the α-level.
@@ -63,7 +63,7 @@ The $t$-distribution is bell-shaped and symmetrical.  The $t$-distribution has a
 [Click here](http://byuimath.com/apps/normprobwitht.html){target="_blank"} to explore how the shape of the $t$-distribution changes with the degrees of freedom.  Notice that as the degrees of freedom increases, the shape of the $t$-distribution (black curve) gets closer to the standard normal distribution (red curve).  The red curve is identical in the three images below.
 
 <center>
-<table>
+<table style="table-layout: fixed; width: 100%;">
 <thead>
 <tr class="header">
 <th><p>$t$-distribution<br />
@@ -76,12 +76,12 @@ with $df = 15$</p></th>
 </thead>
 <tbody>
 <tr class="odd">
-<td><p><img src="./Images/T-dist-df-01.png"></p></td>
-<td><p><img src="./Images/T-dist-df-05.png"></p></td>
-<td><p><img src="./Images/T-dist-df-15.png"></p></td>
+<td style="width:33.3%;"><p><img src="./Images/T-dist-df-01.png"></p></td>
+<td style="width:33.3%;"><p><img src="./Images/T-dist-df-05.png"></p></td>
+<td style="width:33.3%;"><p><img src="./Images/T-dist-df-15.png"></p></td>
 </tr>
 <tr class="even">
-<td><p>(Image credit: Webster West, <a href="http://www.stat.tamu.edu/~west/applets/tdemo1.html">http://www.stat.tamu.edu/~west/applets/tdemo1.html</a>)</p></td>
+<td><p>(Image credit: Webster West, <a href="http://www.stat.tamu.edu/~west/applets/tdemo1.html"> http://www.stat.tamu.edu/~west/applets/tdemo1.html</a>) </p></td>
 <td></td>
 <td></td>
 </tr>
@@ -172,7 +172,7 @@ $$
 
 We will need to conduct the analysis using software, so we can report this value.
 
-**Instructions for conducting a test for one mean with $sigma$ unknown:**
+**Instructions for conducting a test for one mean with $\sigma$ unknown:**
 
 <br>
 
@@ -181,25 +181,25 @@ We will need to conduct the analysis using software, so we can report this value
 <div class="Summary">
 Here are the instructions for conducting the one sample t-test in Excel:
 
-The Excel file needed for this analysis is [Quantitative Inference Procedures.xlsx](./Data/QuantitativeInferenceProcedures.xlsx).  We will use this Excel file to conduct the hypothesis tests for a single mean with $\sigma$ unknown.
+The Excel file needed for this analysis is [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx).  We will use this Excel file to conduct the hypothesis tests for a single mean with $\sigma$ unknown.
 
   +  After opening the file, please click on the tab labeled "One-sample t-test".  
   +  Paste the data in the appropriate place in Column A.
-  +  Set the null hypothesis value in cell D10.  For this example, the value should be 98.6.
-  +  Click in cell D11 and use the drop down menu to set the alternative hypothesis to: "Not Equal To"
+  +  Set the null hypothesis value in cell O5.  For this example, the value should be 98.6.
+  +  Click in cell N6 and use the drop down menu to set the alternative hypothesis to: "Not Equal To"
 
 The image below shows the Excel file after these changes have been made.
 
-<center><img src="./Images/BodyTemp-tTest-Excel.png"></center>
+<center><img src="./Images/BodyTemp-tTest-Excel_Toolbox.png"></center>
 
 Consider each of the following alternative hypotheses that could be used in a test for a single mean where the null hypothesis is $H_0: \mu = 98.6$.
 
 - $H_a: \mu \ne 98.6$
-  + Choose "Not Equal To" in the drop-down menu in cell D11.
+  + Choose "Not Equal To" in the drop-down menu in cell N6.
 - $H_a: \mu < 98.6$
-  + Choose "Less Than" in the drop-down menu in cell D11.
+  + Choose "Less Than" in the drop-down menu in cell N6.
 - $H_a: \mu > 98.6$  
-  + Choose "Greater Than" in the drop-down menu in cell D11.
+  + Choose "Greater Than" in the drop-down menu in cell N6.
 
 You will have opportunities to practice using each of these.
 <br>
@@ -223,7 +223,7 @@ Any differences are due to rounding.
 
 **State the degrees of freedom**
 
-In Excel, the degrees of freedom ($df$) are given in cell E21.
+In Excel, the degrees of freedom ($df$) are given in cell N9.
 
 $$df = 147$$
 <!-- **Mark the test statistic and $P$-value on a graph of the sampling distribution** --> <!-- CONSOLIDATED and UPDATED -->
@@ -290,9 +290,9 @@ Using this data set, test the hypothesis that the mean weight of babies born in 
 <div id="Q1" style="display:none;">
 
 When the data are entered into the file 
-[Quantitative Inference Procedures.xlsx](./Data/QuantitativeInferenceProcedures.xlsx), the following output is generated:
+[Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx), the following output is generated:
 
-<img src="./Images/BabyBoom-Ttest-Excel.png">
+<img src="./Images/BabyBoom-Ttest-Excel_Toolbox.png">
 <br>
 
 * The relevant summary statistics are:
@@ -300,8 +300,8 @@ When the data are entered into the file
 
 $$
 \begin{align}
-\bar x &= 3275.95 \textrm{g}\\
-s &= 528.03 \textrm{g}\\
+\bar x &= 3275.955 \textrm{g}\\
+s &= 528.032 \textrm{g}\\
 n &= 44
 \end{align}
 $$
@@ -314,7 +314,7 @@ $$
 <a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
 
-<img src="./Images/BabyBoom-JSE-Histogram.png">
+The histogram is included in the above image.
 
 </div>
 &nbsp;
@@ -361,7 +361,8 @@ The $P$-value is shaded in green:
 
 **Find the $P$-value and compare it to the level of significance**
 
-$$P\text{-value}=0.228 > 0.05 = \alpha$$
+$$P\text{-value}=0.2295 > 0.05 = \alpha$$
+
 
 **State your decision**
 
@@ -428,10 +429,10 @@ Koehn wants to find an estimate of the true mean BLEU score for text translated 
 Copying the 
 [BLEU-Scores](./Data/BLEU-Scores.xlsx) 
 data into the 
-[Quantitative Inference Procedures.xlsx](./Data/QuantitativeInferenceProcedures.xlsx) 
+[Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) 
 file in Excel, we get the following:
 
-<center><img src="./Images/BLEUscores-Exceloutput.png"></center>
+<center><img src="./Images/BLEUscores-Excel_Toolbox.png"></center>
 <br>
 </div>
 <br>
@@ -441,17 +442,15 @@ The summary statistics are:
 
 $$
 \begin{align}
-\bar x =& 0.2876 \\ 
-s =& 0.0264 \\
+\bar x =& 0.288 \\ 
+s =& 0.026 \\
 n =& 100
 \end{align}
 $$
 
 **Make an appropriate graph to illustrate the data**
 
-Here is a histogram of the data showing 10 bins.
-
-<img src="./Images/BLEUscores-Histogram-Excel.png">
+The histogram is included in the image above.
 
 
 <img src="./Images/Step4.png">
@@ -514,12 +513,12 @@ We will use Excel to find the confidence intervals for the mean.
 
 Do the following:
 
-- Open the file [Quantitative Inference Procedures.xlsx](./Data/QuantitativeInferenceProcedures.xlsx)
+- Open the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx)
 - Click on the tab labeled "One-sample t-test"
 - Enter the data, and
 - Set the confidence level.  
 
-In this case, we are using a 95% confidence level.  So, you set the confidence level in the Excel file to 0.95 (i.e., 95%).  The confidence interval is given to you in cells G21 and H21.
+In this case, we are using a 95% confidence level.  So, you set the confidence level in the Excel file to 0.95 (i.e., 95%).  The confidence interval is given to you in cells N14 and O14.
 <br>
 </div>
 <br>
@@ -592,9 +591,9 @@ The coins were "borrowed" from a bank in Belgium, one batch at a time. The weigh
 <div id="Q8" style="display:none;">
 
 The following output was generated using the Excel file 
-[Quantitative Inference Procedures.xlsx](./Data/QuantitativeInferenceProcedures.xlsx):
+[Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx):
 
-<center><img src="./Images/EuroWeights-Output-Excel.png"></center>
+<center><img src="./Images/EuroWeights-Histogram.png"></center>
 
 * Typically, we round our computations to one more decimal place of precision than was given in the original data.  This means we need one more decimal place than is shown in the output above.  We can increase the precision by selecting the cell we want to modify and then clicking on the following button in the "Home" menu ribbon in Excel:
 
@@ -608,7 +607,7 @@ The following output was generated using the Excel file
 $$
 \begin{align}
 \bar x =& 7.521 \\ 
-s =& 0.034 \\
+s =& 0.0344 \\
 n =& 2000
 \end{align}
 $$
@@ -622,7 +621,7 @@ $$
 <div id="Q9" style="display:none;">
 
 <center>
-<img src="./Images/EuroWeights-Histogram-SPSS.png">
+The graph is included in the image above.
 </center>
 </div>
 &nbsp;
@@ -691,5 +690,5 @@ $$df=n-1$$
 <center>
 | **Previous Reading** | **This Reading** | **Next Reading** |
 | :------------------: | :--------------: | :--------------: |
-| [Lesson 10: <br> Inference for One Mean: Sigma Known (Confidence Interval)](Lesson10.html) | Lesson 11: <br> Inference for One Mean: Sigma Unknown | [Lesson 12: <br> Inference for Two Means: Paired Data|Inference for Two Means: Paired Data](Lesson12.html) |
+| [Lesson 10: <br> Inference for One Mean: Sigma Known (Confidence Interval)](Lesson10.html) | Lesson 11: <br> Inference for One Mean: Sigma Unknown | [Lesson 12: <br> Inference for Two Means: Paired Data](Lesson12.html) |
 </center>

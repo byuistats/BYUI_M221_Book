@@ -354,7 +354,7 @@ $(document).ready(function () {
 <div id="out" p="" style="display:none;">
 <p>By the end of this lesson, you should be able to:</p>
 <ul>
-<li>Confidence Intervals for a single mean with Ï known:</li>
+<li>Confidence Intervals for a single mean with <span class="math inline">\(\sigma\)</span> known:</li>
 <li>Calculate and interpret a confidence interval for a population mean given a confidence level.</li>
 <li>Explain how the margin of error changes with the sample size and the level of confidence.</li>
 <li>Identify a point estimate and margin of error for the confidence interval.</li>
@@ -582,7 +582,7 @@ point~ ~ ~ &amp;      &amp; margin~  &amp;        &amp; point~ ~ ~ &amp;      &a
 estimate   &amp; ~ ~- &amp; of~error &amp; ~ ~,   &amp; estimate   &amp; ~ ~+ &amp; of~error
 \end{align}
 \right) 
-\]</span> or <span class="math display">\[(\text{point estimate}) \pm (\text{margin of error})\]</span></p>
+\]</span> or <span class="math display">\[(\text{point estimate}) \pm (\text{margin of error})\]</span> </br> <a id="z"></a></p>
 <div id="a-little-more-precision" class="section level3">
 <h3>A Little More Precision</h3>
 <div id="what-z-corresponds-to-95-of-the-area" class="section level4">
@@ -637,12 +637,12 @@ Answer the following question:
 \]</span></p>
 </div>
 <div id="what-about-other-confidence-levels" class="section level4">
-<h4>What about Other Confidence Levels?</h4>
+<h4><a id = "z*"></a>What about Other Confidence Levels?</h4>
 <p>Most of the time, researchers report 95% confidence intervals. The number 95% is called the <strong>confidence level</strong>. Sometimes it is desirable to use a level of confidence that is different than 95%. In that case, we need to use a number besides 1.96 in the calculations.</p>
 <p>Suppose we want to create a 90% confidence interval. What value would we put in the blanks in the confidence interval formula below? <span class="math display">\[
 \left( \bar x - \underline{~ ~ ~ ? ~ ~ ~} \frac{\sigma}{\sqrt{n}}, ~ \bar x + \underline{~ ~ ~ ? ~ ~ ~} \frac{\sigma}{\sqrt{n}} \right)
 \]</span> Another way to state this question is to ask, between what two <span class="math inline">\(z\)</span>-scores will 90% of the data in a standard normal distribution fall? We need to find the values of <span class="math inline">\(-z\)</span> and <span class="math inline">\(z\)</span> such that the area between them is equal to 0.90. Again, we use the <a href="http://statistics.byuimath.com/index.php?title=Normal_Probability_Applet" target="_blank">Normal Probability Applet</a>.</p>
-<p><img src="Images/updated_z-score_curve.JPG"></p>
+<p><img src="Images/Updated_z-score_curve.JPG"></p>
 <p>So, for a 90% confidence interval, the value of <span class="math inline">\(z*\)</span> would be 1.645. Note: We use an asterisk (<span class="math inline">\(*\)</span>) to indicate that <span class="math inline">\(z\)</span> was not computed from data, but was determined based on a <em>chosen</em> confidence level, 90%.</p>
 <p>The formula for a 90% confidence interval for a mean when <span class="math inline">\(\sigma\)</span> is known is: <span class="math display">\[
 \left( \bar x - 1.645 \frac{\sigma}{\sqrt{n}}, ~ \bar x + 1.645 \frac{\sigma}{\sqrt{n}} \right)
@@ -973,7 +973,7 @@ n = \left( \frac{z^*\sigma}{m} \right)^2
 <p>Once the level of confidence is selected, <span class="math inline">\(z^*\)</span> is automatically determined. In practice, the most common level of confidence is 95%, which means that <span class="math inline">\(z^*\)</span> would equal 1.96.</p>
 <br>
 <div class="message Note">
-If you need a reminder on finding the value of <span class="math inline">\(z^*\)</span>, click [[#z|here]].
+If you need a reminder on finding the value of <span class="math inline">\(z^*\)</span>, click <a href="#z">here</a>.
 </div>
 <p><br> <br></p>
 <div class="QuestionsHeading">
@@ -1036,7 +1036,7 @@ n &amp;= \left( \frac{z^*\sigma}{m} \right)^2 \\
 \end{array}
 \]</span>
 </center>
-<p>We always round up in sample size calculations, so the required sample size is $ n=3166$.</p>
+<p>We always round up in sample size calculations, so the required sample size is <span class="math inline">\(n=3166\)</span>.</p>
 </div>
 <p><br></p>
 <ol start="16" style="list-style-type: decimal">
@@ -1081,7 +1081,7 @@ n &amp;= \left( \frac{z^*\sigma}{m} \right)^2 \\
 \end{array}
 \]</span>
 </center>
-<p>We always round up in sample size calculations, so the required sample size is $ n=1367$.</p>
+<p>We always round up in sample size calculations, so the required sample size is <span class="math inline">\(n=1367\)</span>.</p>
 </div>
 <p><br></p>
 <ol start="19" style="list-style-type: decimal">
@@ -1288,7 +1288,7 @@ Remember…
 <tr class="odd">
 <td align="center"><a href="Lesson09.html">Lesson 9: <br> Inference for One Mean: Sigma Known (Hypothesis Test)</a></td>
 <td align="center">Lesson 10: <br> Inference for One Mean: Sigma Known (Confidence Interval)</td>
-<td align="center">[Lesson 11: <br> Inference for One Mean: Sigma Unknown</td>
+<td align="center"><a href="Lesson11.html">Lesson 11: <br> Inference for One Mean: Sigma Unknown</a></td>
 </tr>
 </tbody>
 </table>
