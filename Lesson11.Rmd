@@ -434,7 +434,7 @@ data into the
 [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) 
 file in Excel, we get the following:
 
-<center><img src="./Images/BLEUscores-Excel_Toolbox.png"></center>
+<center><img src="./Images/BLEUscores-Excel_Toolbox.PNG"></center>
 <br>
 </div>
 <br>
