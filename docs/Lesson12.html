@@ -336,7 +336,7 @@ $(document).ready(function () {
 <div style="padding-left:10%;">
 <strong>Optional Lesson Video</strong>
 </div>
-<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-jykAMUjbIFLALZmXRadUa" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
+<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-jykAMUjbIFLALZmXRadUa" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
 </iframe>
 </div>
 <div id="lesson-outcomes" class="section level2">
@@ -344,16 +344,18 @@ $(document).ready(function () {
 <a href="javascript:showhide('outcome')"><span style="font-size:8pt;">Click here to Show/Hide Outcomes for this Lesson</span></a>
 <div id="outcome" style="display:none;">
 <p>By the end of this lesson, you should be able to:</p>
+<p><strong>Confidence Intervals for the mean of differences with dependent samples: </strong></p>
 <ul>
-<li>Confidence Intervals for the mean of differences with dependent samples:</li>
 <li>Calculate and interpret a confidence interval for the mean of differences given a confidence level.</li>
 <li>Identify a point estimate and margin of error for the confidence interval.</li>
 <li>Show the appropriate connections between the numerical and graphical summaries that support the confidence interval.</li>
-<li><p>Check the requirements for the confidence interval.</p></li>
-<li>Hypothesis Testing for the mean of differences with dependent samples:</li>
+<li>Check the requirements for the confidence interval.</li>
+</ul>
+<p><strong>Hypothesis Testing for the mean of differences with dependent samples:</strong></p>
+<ul>
 <li>State the null and alternative hypothesis.</li>
 <li>Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.</li>
-<li>Assess the statistical significance by comparing the p-value to the Î±-level.</li>
+<li>Assess the statistical significance by comparing the p-value to the α-level.</li>
 <li>Check the requirements for the hypothesis test.</li>
 <li>Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test.</li>
 <li>Draw a correct conclusion for the hypothesis test.</li>
@@ -367,7 +369,7 @@ $(document).ready(function () {
 <p>This is called a <strong>matched-pairs</strong> design or we say we have <strong>dependent samples</strong>. Matched-pairs (or <strong>paired-data</strong>) designs typically involve only one population, and a pair of observations is drawn on the individuals selected for the sample. In the context of the educational study, the two observations are student’s scores on (1) the pre-test and (2) the post-test. If a student is selected to participate in the pre-test (i.e., they are selected to be part of group 1), they are automatically selected to participate in the post-test (i.e., they are chosen to be in group 2 automatically.)</p>
 <p>There is a lot of merit in subtracting the individual scores and looking at the mean <em>gain</em>. The researchers are not really interested in the students knowledge before the instruction. This is used as a baseline to measure how much was gained during the instruction. There is great value in looking at the difference. This removes the effect of the individual students’ ability, and it measures their learning during the unit.</p>
 <p>To analyze the data, the researchers first find the difference in the post- and pre-test scores. At that point, the data have been reduced to a list of numbers (representing the increase in scores). Now, the researchers can conduct inference on the mean of these values. In other words, they can do a hypothesis test for the mean of the difference in the post- and pre-test scores.</p>
-<p>A hypothesis test for two means with paired data (dependent samples) is conducted in the same way as a hypothesis test for a single mean with <span class="math inline">\(\sigma\)</span> unknown. The only exception is that the pairs of data must be subtracted before you start any computations. From a practical perspective, after you subtract, then you apply the one-sample procedures you have already learned. So, there is nothing new that you need to learn to compute a confidence interval for two means with paired data…except how to subtract in Excel.</p>
+<p>A hypothesis test for two means with paired data (dependent samples) is conducted in the same way as a hypothesis test for a single mean with <span class="math inline">\(\sigma\)</span> unknown. The only exception is that the pairs of data must be subtracted before you start any computations. From a practical perspective, after you subtract, then you apply the one-sample procedures you have already learned. So, there is nothing new that you need to learn to compute a confidence interval for two means with paired data; just that we will be using a different sheet in the Math221 Statistics Toolbox that automatically calculates the differences.</p>
 <p>We will first explore an application of pre- and post-testing in a weight loss study.</p>
 </div>
 <div id="hypothesis-tests" class="section level2">
@@ -546,8 +548,8 @@ Answer the following question:
 </div>
 <p><br></p>
 <p><strong>Computing New Variables in Excel</strong></p>
-<p>Annie Mahon and her research team are interested in the difference of the weights after the study compared with before: <span class="math display">\[\text{Difference} = \text{Post} - \text{Pre}\]</span></p>
-<p>Appending the column of differences to the table above, we have:</p>
+<p>The researchers are not interested in the weights of the women, they are more interested in the <em>change</em> in the women’s weights. This will give them a measure of the effectiveness of the low-calorie diet. In other words, they are interested in the difference of the weights after the study compared with before: <span class="math display">\[\text{Difference} = \text{Post} - \text{Pre}\]</span></p>
+<p>We can calculate the difference for each woman in the study:</p>
 <table>
 <thead>
 <tr class="header">
@@ -728,57 +730,26 @@ Difference
 Excel Instructions
 </div>
 <div class="Summary">
-<p>Here is how you can subtract two columns of data in Excel:</p>
+<p>Fortunately, the “Paired Data t-test” tab in the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> will automatically compute the differences when you paste in the data. <strong>The Toolbox always takes the data in column A - data in column B.</strong> Because we want to take Post - Pre, you will need to swap the order of the column when pasting the data into the Math221 Statistics Toolbox. Follow this process:</p>
 <ul>
-<li>If the data are in columns, you might want to give a label to the new column, such as “Differences”</li>
-<li>Within Excel, click on the cell where you want the difference to be calculated. Typically, this will be adjacent to the two values you want to subtract.</li>
-<li>Type an equal sign (=)</li>
-<li>Click on the cell containing the first number to be subtracted</li>
-<li>Then type the subtraction sign (-)</li>
-<li>Now, click on the cell containing the second value to be subtracted.</li>
-<li>:The following image shows the subtraction of the pre-study weights from the post-study weights of Mahon’s volunteers (The post-study will not always be on the left, so pay attention to how you subtract, post - pre):</li>
+<li>Copy the “Pre” column and paste it into column B, labeled “Data2” of the Toolbox.</li>
+<li>Copy the “Post” column and paste it into column A, labeled “Data1” of the Toolbox.</li>
+<li>Notice in column C the differences are automatically calculated.</li>
+<li>A excerpt of how the data looks in the Math221 Statistics Toolbox is shown below:</li>
 </ul>
-<p><img src="Images/Mahon-DifferencesInExcel.png"></p>
-<ul>
-<li>When you click elsewhere, the difference will be computed.</li>
-<li><p>If the data are in columns, you can easily compute the difference for the remaining data values.</p></li>
-<li>Select the cell containing the difference you just computed.</li>
-<li>Copy the value in the cell ([Ctrl]-c is the keyboard shortcut for PCs.)</li>
-<li>Then simultaneously select all the cells in which you want the data to be pasted.</li>
-<li><p>Finally, paste the formula into these cells ([Ctrl]-v is the keyboard shortcut for PCs.)</p>
-<p>You have now computed the column of differences. Your file should look like this when you are finished:</p></li>
-</ul>
-<p><img src="Images/Mahon-DifferencesInExcel-2.png"></p>
-<p>If you want to remove the formulas to make it easier to paste the differences into the <a href="./Data/QuantitativeInferenceProcedures.xlsx">Quantitative Inference Procedures.xlsx</a> file, do the following:</p>
-<ul>
-<li>Select the column of differences</li>
-<li>Copy the column ([Ctrl]-c is the keyboard shortcut for PCs.)</li>
-<li>Click on the bottom half of the “Paste” button in the “File” ribbon of Excel: <img src="Images/PasteButtonInFileRibbon.png" /></li>
-<li>Choose Paste Values, as illustrated below:</li>
-</ul>
-<p><img src="Images/Mahon-DifferencesInExcel-3.png"></p>
-<p>Now, the cells contain the subtracted differences, rather than the equation for these differences. You are now ready to perform the calculations for a hypothesis test. The hypothesis test will be conducted using the file <a href="./Data/QuantitativeInferenceProcedures.xlsx">Quantitative Inference Procedures.xlsx</a>.</p>
-<ul>
-<li>Copy the first 2 columns of data that you generated above</li>
-<li>Open the file <a href="./Data/QuantitativeInferenceProcedures.xlsx">Quantitative Inference Procedures.xlsx</a></li>
-<li>Click on the tab “Paired Sample t-test”, which is located at the bottom of the Excel window</li>
-<li>Paste the data in columns A, B, and C, with the first data value in row 5</li>
-</ul>
-<p>Your file should look like this:</p>
-<p><img src="Images/Mahon-Output-Excel-95CI.png"> <br></p>
+<p><img src="Images/Mahon-Differences_Excel_Toolbox.png"></p>
 </div>
 <p><br></p>
-<p>The researchers are not interested in the weights of the women, they are more interested in the <em>change</em> in the women’s weights. This will give them a measure of the effectiveness of the low-calorie diet. Notice that in this weight loss study, the change in the weights is negative. This indicates that the final weight was lower than the initial weight.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="2" style="list-style-type: decimal">
-<li>Following the directions above, compute the difference in the women’s weights by subtracting the pre-study weights from the post-study weights using software. Call this new column <em>Difference</em>.</li>
+<li>Following the directions above, compute the difference in the women’s weights by pasting the data in the Math221 Statistics Toolbox.</li>
 </ol>
 <p><br></p>
 <ol start="3" style="list-style-type: decimal">
-<li>What is the mean of the values in the <em>Difference</em> column?</li>
+<li>What is the mean of the values in the <em>Difference</em> column? (Look in cell J7)</li>
 </ol>
 <a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q3" style="display:none;">
@@ -795,10 +766,12 @@ Answer the following questions:
 <a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q4" style="display:none;">
 <ul>
-<li>The mean weight change experienced by the women in the study was <span class="math inline">\(-6.80\)</span> kg. In other words, the mean weight loss was <span class="math inline">\(6.80\)</span> kg.</li>
+<li>The mean weight change experienced by the women in the study was <span class="math inline">\(-6.80\)</span> kg. It can be tricky to know if this means they gained or lost weight. Remember, we calculated Post-Pre. A negative difference indicates the Pre weight was higher than the Post weight. In other words, there was a mean weight loss of <span class="math inline">\(6.80\)</span> kg.</li>
 </ul>
 </div>
 <p> </p>
+</div>
+<br>
 </div>
 <p><br></p>
 <p><strong>Relationship to a One Sample t-test</strong></p>
@@ -824,7 +797,9 @@ H_a: &amp;~~ \mu_d &lt; 0
 <p>The women’s weights were recorded at the beginning of the study. The women were provided a reduced calorie diet for nine weeks. Then, their weights were measured again at the end of the study. A calibrated scale was used to provide an accurate weight.</p>
 <p><img src="Images/Step3.png"></p>
 <p><strong>Give the relevant summary statistics</strong></p>
-<p>From the Excel output illustrated above, we get the following:</p>
+<p>Here is the Excel output:</p>
+<p><img src="Images/Mahon_Paired_t-test_Excel_Toolbox.png"></p>
+<p>From the Excel output illustrated above, we can see a histogram of the data and get the following numerical summaries:</p>
 <p><span class="math display">\[
 \begin{align}
 \bar d &amp;= -6.80 \\
@@ -833,11 +808,6 @@ n &amp;= 27
 \end{align}
 \]</span></p>
 <p>The mean and standard deviation are rounded to one decimal place more than the original data.</p>
-<p><strong>Make an appropriate graph (histogram) to illustrate the data</strong></p>
-This histogram was created in Excel with seven bins:
-<center>
-<img src="Images/Mahon-Histogram-Excel.png">
-</center>
 <p><img src="Images/Step4.png"></p>
 <p><strong>Verify the requirements have been met</strong></p>
 <p>Like the one-sample t-test, this procedure is robust, meaning that it is not very sensitive to the requirements. If they are violated, it will probably still give reasonably good results.</p>
@@ -849,17 +819,18 @@ This histogram was created in Excel with seven bins:
 <p>The subjects were recruited via advertisements for a research study. The participants volunteered to participate. It is not a simple random sample of all middle-aged women, but there is nothing about the selection of the sample that would invalidate the results.</p>
 <p>From a practical perspective, it is impossible to get a simple random sample of people in the general population. When research trials are conducted, people must volunteer to participate. This can lead to a selection bias, but it is usually negligible.</p>
 <p>The requirement of normality is satisfied for Mahon’s data. The differences appear to follow a normal distribution, so <span class="math inline">\(\bar d\)</span> will be approximately normal.</p>
-<p>The sample size (n=27) is fairly large. The histogram shows a mound shape. Here is a Q-Q plot of the differences:</p>
+<p>The sample size (n=27) is fairly large. The histogram shows a mound shape. By scrolling to the right in the Excel sheet you can see a Q-Q plot of the differences:</p>
 <center>
-<img src="Images/Mahon-Differences-QQ-SPSS.png">
+<img src="Images/Mahon-Differences-QQ_Excel_Toolbox.png">
 </center>
-<p>With this Q-Q plot, we could conclude that the data follow a normal distribution. Even if we had had a small sample size, we could still conduct this test.</p>
+<p>With this Q-Q plot, we could conclude that the data follow a normal distribution. Even with a small sample size, we can still conduct this test.</p>
 <p><strong>Give the test statistic and its value</strong></p>
-<p>The test statistic for a test involving paired data when <span class="math inline">\(\sigma\)</span> is unknown is a <span class="math inline">\(t\)</span>. For this situation, the value is: <span class="math display">\[t= \frac{-6.8 - 0}{3.17/\sqrt{27}} =-11.145\]</span></p>
+<p>The test statistic for a test involving paired data when <span class="math inline">\(\sigma\)</span> is unknown is a <span class="math inline">\(t\)</span>. For this situation, the value is: <span class="math display">\[t= \frac{-6.8 - 0}{3.17/\sqrt{27}} =-11.145\]</span> See that this calculation matches the test statistic given in the Excel output. The degrees of freedom and p-value can also be found in the Excel output.</p>
 <p><strong>State the degrees of freedom</strong></p>
 <p><span class="math display">\[df = 26\]</span></p>
 <p><strong>Mark the test statistic and <span class="math inline">\(P\)</span>-value on a graph of the sampling distribution</strong></p>
-<p>The test statistic, <span class="math inline">\(t\)</span>, is labeled on the horizontal axis. The <span class="math inline">\(P\)</span>-value is the area to the left of <span class="math inline">\(t\)</span> under the curve. This area is so small, it is not illustrated on this plot. Please note that this image was taken from the normal probability applet. The test statistic for two means with paired data is a <span class="math inline">\(t\)</span>. This image was designed for a <span class="math inline">\(z\)</span>-curve. This is not the right image for this procedure. For this reason, we labeled the image, “For illustrative purposes only”.</p>
+<p>The test statistic and p-value can be found in the Excel output. The following calculations show conceptually how the p-value is calculated:</p>
+<p>The test statistic, <span class="math inline">\(t\)</span>, is labeled on the horizontal axis. The <span class="math inline">\(P\)</span>-value is the area to the left of <span class="math inline">\(t\)</span> under the curve. This area is so small, it is not illustrated on this plot.</p>
 <p><img src="Images/Mahon-Applet.png"></p>
 <p>It is important to note that only the left tail is shaded, even though we cannot see it in this illustration.</p>
 <p><strong>Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance</strong></p>
@@ -870,7 +841,7 @@ P\text{-value} = 1.06 \times 10^{-11} &lt; 0.05 = \alpha
 <p>Since the <span class="math inline">\(P\)</span>-value is less than the level of significance, we reject the null hypothesis.</p>
 <p><img src="Images/Step5.png"></p>
 <p><strong>Present your conclusion in an English sentence, relating the result to the context of the problem</strong></p>
-<p>There is sufficient evidence to suggest that the reduced calorie diet used in this study results in weight loss for middle-aged women.</p>
+<p>There is sufficient evidence to suggest that the reduced calorie diet used in this study results in weight loss for middle-aged women. <br></p>
 <p><img src="Images/StepsAll.png"></p>
 </div>
 <div id="nosocomial-infections" class="section level3">
@@ -910,6 +881,8 @@ H_a: &amp;~~ \mu_d &gt; 0 \\
 </div>
 <p> </p>
 </div>
+<p>In order to get the correct <span class="math inline">\(P\)</span>-value, we need to indicate the proper alternative hypothesis in Excel. In cell Q6 be sure the “Greater Than” symbol is selected in the drop-down menu.</p>
+<p><img src="Images/TypeOfTest-GreaterThan-Excel.png"></p>
 <p><br></p>
 <p><img src="Images/Step2.png"></p>
 <div class="QuestionsHeading">
@@ -1008,7 +981,7 @@ df = 51
 <a href="javascript:showhide('Q12')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q12" style="display:none;">
 <ul>
-<li>Your sketch should show the value of <span class="math inline">\(t=5.935\)</span> on the horizontal axis, with only the tiny area to the right of 5.935 shaded.</li>
+<li>The test statistic and p-value can be found in the Excel output and you should not need to calculate it by hand. Your sketch should show the value of <span class="math inline">\(t=5.935\)</span> on the horizontal axis, with only the tiny area to the right of 5.935 shaded.</li>
 </ul>
 </div>
 <p><br></p>
@@ -1017,6 +990,7 @@ df = 51
 </ol>
 <a href="javascript:showhide('Q13')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q13" style="display:none;">
+The p-value can be found in the Excel output and you should not need to calculate it by hand. The calculation below shows how the p-value in Excel is being calculated:
 <center>
 <span class="math display">\[
 P\textrm{-value}=\frac{\textrm{Sig. (2-tailed)}}{2}=\frac{2.592\times 10^{-7}}{2}=1.296 \times 16^{-7} = 0.0000001296 &lt; 0.05 = \alpha
@@ -1069,7 +1043,7 @@ Answer the following questions:
 <p>Obesity is a growing problem worldwide. Many scientists are seeking creative solutions to trim down this epidemic. Reduced energy expenditure is a potential cause of obesity.</p>
 <p>Resting Energy Expenditure (REE) is defined as the amount of energy a person would use if resting for 24 hours. In essence, this is the amount of energy that a person’s body will consume if they do not do any physical activity. REE is measured in terms of kilo-Joules per day (kJ/d).</p>
 <p>REE accounts for approximately 70 to 80% of all energy that a person will expend in a day. <!--<cite>Carlsson05</cite>--> If researchers can find simple, enjoyable activities that will increase REE, it may be possible to minimize the spread of obesity around the world.</p>
-<p>Ebba Carlsson and other researchers in Sweden investigated whether listening to stressful classical music increases a person’s REE. <!--<cite>Carlsson05</cite>--> Each subject’s REE was measuring during silence and again while listening to stressful classical music. Data representing their results are given in the file <a href="./Data/Ree-ClassicalMusic.xlsx">REE-ClassicalMusic</a>.</p>
+<p>Ebba Carlsson and other researchers in Sweden investigated whether listening to stressful classical music increases a person’s REE. <!--<cite>Carlsson05</cite>--> Each subject’s REE was measuring during silence and again while listening to stressful classical music. Data representing their results are given in the file <a href="./Data/REE-ClassicalMusic.xlsx">REE-ClassicalMusic</a>.</p>
 <p>Notice that this is not a pre- and post-test, but it is still a test involving paired data. Two REE measurements were made for each subject: (1) in silence (<span class="math inline">\(REE_1\)</span>) and (2) while listening to stressful classical music (<span class="math inline">\(REE_2\)</span>).</p>
 <p><strong>State the null and alternative hypotheses and the level of significance</strong></p>
 <p>Since we are testing for an increase in the mean REE, we let <span class="math inline">\(d = REE_2 - REE_1\)</span>. Our alternative hypothesis will be that <span class="math inline">\(\mu_d &gt; 0\)</span>. The null and alternative hypotheses are: <span class="math display">\[
@@ -1078,9 +1052,8 @@ H_0: &amp;~~ \mu_d = 0 \\
 H_a: &amp;~~ \mu_d &gt; 0 
 \end{align}
 \]</span></p>
+<p>Note that the data set has the columns listed with <span class="math inline">\(d = REE_2\)</span> in the first column and <span class="math inline">\(d = REE_1\)</span> in the second column. You will need to switch the order of the columns when pasting them into the Excel Toolbox.</p>
 <p>We will use the <span class="math inline">\(\alpha = 0.1\)</span> level of significance.</p>
-<p>In order to get the correct <span class="math inline">\(P\)</span>-value, we need to indicate the proper alternative hypothesis in Excel. In the cell next to “Type of Test”, choose “Greater Than” in the drop-down menu in the file <a href="./Data/QuantitativeInferenceProcedures.xlsx">Quantitative Inference Procedures.xlsx</a>.</p>
-<p><img src="Images/TypeOfTest-GreaterThan-Excel.png"></p>
 <p><img src="Images/Step2.png"></p>
 <p><strong>Describe the data collection procedures</strong></p>
 <p>The REE was measured by a technique called “indirect calorimetry” using a Deltatrac II Metabolic Monitor. <!--<cite>Carlsson05</cite>--> The REE was measured twice for each person: while the person was (1) resting in silence or (2) resting while listening to stressful classical music. These trials were conducted in random order. Some of the subjects had the “silence” treatment first, and others had the “stressful” treatment first.</p>
@@ -1124,7 +1097,7 @@ Difference = Stressful - Silence
 <div id="Q18" style="display:none;">
 The following image illustrates the Excel file used to get the summary statistics.
 <center>
-<img src="Images/REE-Output-Excel.png">
+<img src="Images/REE-Output-Excel_Toolbox.png">
 </center>
 <p><span class="math display">\[
 \begin{align}
@@ -1136,22 +1109,15 @@ s_d &amp;= 160~\text{kJ}
 </div>
 <p><br></p>
 <ol start="19" style="list-style-type: decimal">
-<li><strong>Make an appropriate graph to illustrate the data</strong></li>
+<li><strong>See above output for a graph of the data</strong></li>
 </ol>
-<a href="javascript:showhide('Q19')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q19" style="display:none;">
-<center>
-<img src="Images/REE-Histogram-Excel.png">
-</center>
-</div>
-<p> </p>
 </div>
 <p><br></p>
 <p><img src="Images/Step4.png"></p>
 <p><strong>Verify the requirements have been met</strong></p>
 <p>We can consider the sample representative of the population. The “difference” data appear to follow a normal distribution. This is illustrated in the following Q-Q plot:</p>
 <center>
-<img src="Images/REE-QQ-SPSS.png">
+<img src="Images/REE-QQ-Excel_Toolbox.png">
 </center>
 <p>The requirements for this test appear to have been satisfied.</p>
 <div class="QuestionsHeading">
@@ -1186,7 +1152,8 @@ df = 39
 <a href="javascript:showhide('Q22')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q22" style="display:none;">
 <ul>
-<li>The test statistic is plotted on the horizontal axis. The <span class="math inline">\(P\)</span>-value is shaded in blue. This image was copied from the normal probability applet. Since the test statistic is a <span class="math inline">\(t\)</span>, not a <span class="math inline">\(z\)</span>, this is not the exact image for this procedure. We label the image, “For illustrative purposes only”:
+<li>The test statistic is plotted on the horizontal axis. The <span class="math inline">\(P\)</span>-value is shaded in green. The same value can be found on the Excel output in cell R10.<br />
+&amp;nbsp
 <center>
 <img src="Images/REE-Applet.png">
 </center></li>
@@ -1236,7 +1203,7 @@ Answer the following questions:
 <p> </p>
 </div>
 <p><br></p>
-<p>Note that we did not say we “accept” the null hypothesis. We do not know that listening to stressful classical music has no effect on a person’s REE. Based on the data available to us, we were not able to reject the requirement that this type of music does not increase the mean REE.</p>
+<p>Note that we did not say we “accept” the null hypothesis. We do not know that listening to stressful classical music has no effect on a person’s REE. Based on the data available to us, we were not able to reject the requirement that this type of music does not increase the mean REE. <br></p>
 <p><img src="Images/StepsAll.png"></p>
 </div>
 <div id="cost-of-airline-tickets" class="section level4">
@@ -1385,7 +1352,7 @@ df = 86
 <a href="javascript:showhide('Q33')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q33" style="display:none;">
 <ul>
-<li>The test statistic is plotted on the horizontal axis. The <span class="math inline">\(P\)</span>-value is shaded in blue. This image was copied from the normal probability applet. Since the test statistic is a <span class="math inline">\(t\)</span>, not a <span class="math inline">\(z\)</span>, this is not the exact image for this procedure. We label the image, “For illustrative purposes only”:
+<li>The test statistic is plotted on the horizontal axis. The <span class="math inline">\(P\)</span>-value is shaded in green:
 <center>
 <img src="Images/DirectFlightCosts-Applet.png">
 </center></li>
@@ -1442,18 +1409,28 @@ Answer the following questions:
 Excel Instructions
 </div>
 <div class="Summary">
-<p><strong>To calculate confidence intervals for the true mean of the difference in Excel, do the following</strong>: - Follow the directions given <strong><a href="#SubtractDifferences">above</a></strong> for creating a new column containing the differences between two variables. - Open the file <a href="./Data/QuantitativeInferenceProcedures.xlsx">Quantitative Inference Procedures.xlsx</a> - Click on the tab labeled “One-sample t-test” - Enter the values of the differences you calculated. - Set the desired confidence level. <br></p>
+<p><strong>To calculate confidence intervals for the true mean of the difference in Excel, do the following</strong>:</p>
+<ul>
+<li>Open the file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a></li>
+<li>Click on the tab labeled “One-sample t-test”</li>
+<li>Enter the columns of paired data into column A and B</li>
+<li>Set the desired confidence level. <br></li>
+</ul>
 </div>
 <p><br></p>
-<p>The requirements for creating a confidence interval for the difference of means are the same as the requirements for the hypothesis test. We assume: - A simple random sample was drawn from the population - The mean of the differences is normally distributed</p>
-<p><img src="Images/StepsAll.png"></p>
+<p>The requirements for creating a confidence interval for the difference of means are the same as the requirements for the hypothesis test. We assume:</p>
+<ul>
+<li>A simple random sample was drawn from the population</li>
+<li>The mean of the differences is normally distributed</li>
+</ul>
+<p>  <img src="Images/StepsAll.png"></p>
 <p><img src="Images/PineBeetleDamage-1441150-LG.png"></p>
 <div id="mountain-pine-beetle-attacks" class="section level3">
 <h3>Mountain Pine Beetle Attacks</h3>
 <p><img src="Images/Step1.png"></p>
 <p><strong>Summarize the relevant background information</strong></p>
 <p>Mountain pine beetles are small insects that bore into the bark of trees. The female beetles that first infest the tree emit pheromones to attract other beetles. In response to the pheromones, many beetles bore into the tree and ultimately kill it. The insects can destroy large tree stands within one year.</p>
-<p>Lodgepole pine (<em>Pinus contorta</em> Dougl.ex Loud.) are particularly susceptible to mountain pine beetle (<em>Dendroctonus ponderosae</em> Hopkins) outbreaks. The image to the right shows the destruction that can be caused by these insects. The large brown patches are pines that have been killed by the beetles.</p>
+<p>Lodgepole pine (<em>Pinus contorta</em> Dougl.ex Loud.) are particularly susceptible to mountain pine beetle (<em>Dendroctonus ponderosae</em> Hopkins) outbreaks. The image above shows the destruction that can be caused by these insects. The large brown patches are pines that have been killed by the beetles.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
@@ -1467,7 +1444,7 @@ Answer the following questions:
 <ul>
 <li>There are many great diverse answers that could be presented. Please share your thoughts with someone in your group.</li>
 </ul>
-<!--: The story of President Hinckleyâ€™s axe head in the notch of a tree provides a similar analogy.-->
+<!--: The story of President Hinckley’s axe head in the notch of a tree provides a similar analogy.-->
 </div>
 <p> </p>
 </div>
@@ -1506,8 +1483,9 @@ Answer the following questions:
 </div>
 <p><br></p>
 <ol start="40" style="list-style-type: decimal">
-<li>Create a new column of data in the file <a href="./Data/PineBeetle.xlsx">PineBeetle.xlsx</a> by subtracting the “before” counts from the “after” counts: <span class="math display">\[Difference = After - Before\]</span></li>
+<li>Find the differences by subtracting the “before” counts from the “after” counts:</li>
 </ol>
+<p><span class="math display">\[Difference = After - Before\]</span> You will need to change the order of the columns so that “after” is in column A, and “before” is in column B in the Math221 Statistics Toolbox. The differences are located in column C.</p>
 <ul>
 <li>For these differences, report the mean, the standard deviation, and the sample size.</li>
 </ul>
@@ -1602,13 +1580,14 @@ Answer the following questions:
 <p><img src="Images/Step5.png"></p>
 <p><strong>Present your observations in an English sentence, relating the result to the context of the problem</strong></p>
 <p>Interpret the confidence interval we created. We are 95% confident that the true mean change in the number of trees per hectare after a pine beetle outbreak is between <span class="math inline">\(-438.121\)</span> and <span class="math inline">\(-432.948\)</span> trees per hectare. Stated differently, we are 95% confident that the true mean <em>decrease</em> in the number of trees per hectare after a pine beetle outbreak is between <span class="math inline">\(432.948\)</span> and <span class="math inline">\(438.121\)</span> trees per hectare.</p>
+<p> </p>
 <p><img src="Images/StepsAll.png"></p>
 </div>
 <div id="sleep-inducing-drugs" class="section level3">
 <h3>Sleep Inducing Drugs</h3>
 <p><img src="Images/Step1.png"></p>
 <p><strong>Summarize the relevant background information</strong></p>
-<p>In William Sealy Gosset’s landmark paper on the <span class="math inline">\(t\)</span>-distribution, he cites data on a sleep-inducing drug. In a paper published in 1905, Arthur R. Cushny and A. Roy Peebles reported the effect of LÃ¦vorotary Hyoscyamine Hydrobromate (L-Hyoscyamine) on the length of time that people sleep before waking. <!-- cite{Cushny05} --> The primary research question is: does L-Hyoscyamine impact the mean amount of time that people sleep? We will compute a 90% confidence for the true mean difference in the times.</p>
+<p>In William Sealy Gosset’s landmark paper on the <span class="math inline">\(t\)</span>-distribution, he cites data on a sleep-inducing drug. In a paper published in 1905, Arthur R. Cushny and A. Roy Peebles reported the effect of Laevorotatory Hyoscyamine Hydrobromate (L-Hyoscyamine) on the length of time that people sleep before waking. <!-- cite{Cushny05} --> The primary research question is: does L-Hyoscyamine impact the mean amount of time that people sleep? We will compute a 90% confidence for the true mean difference in the times.</p>
 <p><img src="Images/Step2.png"></p>
 <p><strong>Describe the data collection procedures</strong></p>
 <p>Eleven subjects were included in the study. At the start of the study, the researchers observed the average length of time that each of the participants slept before waking. Later, each subject was given 0.6 mg of L-Hyoscyamine and the duration of uninterrupted sleep was again measured.</p>
