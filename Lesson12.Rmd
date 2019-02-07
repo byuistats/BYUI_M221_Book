@@ -769,7 +769,9 @@ $P\textrm{-value}=0.2163 > 0.1 = \alpha$
 <br>
 
 Note that we did not say we "accept" the null hypothesis.  We do not know that listening to stressful classical music has no effect on a person's REE.  Based on the data available to us, we were not able to reject the requirement that this type of music does not increase the mean REE.
+&nbsp;
 <br>
+
 
 <img src="./Images/StepsAll.png">
 
@@ -1048,7 +1050,7 @@ In a study conducted in the Arapaho National Forest in Colorado, researchers fro
 40. Find the differences by subtracting the "before" counts from the "after" counts:
 
 $$Difference = After - Before$$
-You will need to change the order of the columns so that "after" is in column A, and "before" is in column B in the Math221 Statistics Toolbox. The differences are located in column C.
+**You will need to change the order of the columns so that "after" is in column A, and "before" is in column B in the Math221 Statistics Toolbox.** The differences are located in column C.
 
 * For these differences, report the mean, the standard deviation, and the sample size.
 
