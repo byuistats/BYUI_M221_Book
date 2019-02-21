@@ -185,7 +185,7 @@ The following points will help you interpret the output.
 To check your requirements, do the following:
 
 - To determine if the data are normally distributed, we will look at a Q-Q plot for each group separately.
-    + While still on the ANOVA tab, scroll to the right so that columns Y through AI are visible. You should see a Q-Q plot. In a yellow highlighted drop-down box directly above the plot you can select the sample you would like to see a Q-Q plot for (see the picture below). Make sure that you evaluate each sample's data. They all must look approximately normal to meet the assumption.
+    + While still on the ANOVA tab, scroll to the right so that columns Y through AI are visible. You should see a Q-Q plot. In a yellow highlighted drop-down box directly above the plot you can select the sample you would like to see a Q-Q plot for (see the picture below). Make sure that you evaluate each sample's data. They all must look approximately normal to meet the requirement.
   
   <img src="./Images/ANOVA_QQplot.PNG">
   
