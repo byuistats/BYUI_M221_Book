@@ -334,19 +334,18 @@ $(document).ready(function () {
 <div style="padding-left:10%;">
 <strong>Optional Lesson Video</strong>
 </div>
-<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC8BeDBR9mQR2d8nnqK_iQ0j" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
+<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC8BeDBR9mQR2d8nnqK_iQ0j" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
 </iframe>
 </div>
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
 <a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="oc" style="display:none;">
-<p>By the end of this lesson, you should be able to:</p>
+<p>By the end of this lesson, you should be able to do the following for a hypothesis test for several means (ANOVA):</p>
 <ul>
-<li>Hypothesis Testing for several means (ANOVA):</li>
 <li>State the null and alternative hypothesis.</li>
 <li>Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.</li>
-<li>Assess the statistical significance by comparing the p-value to the Î±-level.</li>
+<li>Assess the statistical significance by comparing the p-value to the <span class="math inline">\(\alpha\)</span>-level.</li>
 <li>Check the requirements for the hypothesis test.</li>
 <li>Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test.</li>
 <li>Draw a correct conclusion for the hypothesis test.</li>
@@ -438,7 +437,12 @@ What is the solution?  Conduct only one test: an analysis of variance (ANOVA).
 <div id="f-distribution" class="section level3">
 <h3><span class="math inline">\(F\)</span>-distribution</h3>
 <p><img src="Images/Gratitude-F.png"> The test statistic in ANOVA follows an <span class="math inline">\(F\)</span>-distribution. This is the first time we have encountered this distribution. In previous tests, we have used the test statistics <span class="math inline">\(z\)</span> and <span class="math inline">\(t\)</span>. For the ANOVA test, we use the <span class="math inline">\(F\)</span>-statistic.</p>
-<p>Here is a brief summary of the characteristics of the <span class="math inline">\(F\)</span>-distribution: - It is right skewed. - The values of <span class="math inline">\(F\)</span> are never negative. - The <span class="math inline">\(P\)</span>-value for the ANOVA test is the area in the <em>right tail</em>. We will never divide the area in the tail.</p>
+<p>Here is a brief summary of the characteristics of the <span class="math inline">\(F\)</span>-distribution:</p>
+<ul>
+<li>It is right skewed.</li>
+<li>The values of <span class="math inline">\(F\)</span> are never negative.</li>
+<li>The <span class="math inline">\(P\)</span>-value for the ANOVA test is the area in the <em>right tail</em>. We will never divide the area in the tail.</li>
+</ul>
 </div>
 <div id="requirements-of-anova" class="section level3">
 <h3>Requirements of ANOVA</h3>
@@ -472,29 +476,39 @@ Excel Instructions
 </div>
 <div class="Summary">
 <p>To conduct a test for several means (ANOVA) in Excel, do the following:</p>
-<p>Open the file <a href="./Data/QuantitativeInferenceProcedures.xlsx">Quantitative Inference Procedures.xlsx</a> and do the following:</p>
+<p>Open the file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> and do the following:</p>
 <ul>
 <li>Click on the tab labeled “ANOVA”</li>
-<li>Paste the data from each group into their own column</li>
+<li>Paste the data from each group into their own column
+<ul>
 <li>Paste the data from the first group in the appropriate part of Column A</li>
 <li>Paste the data for the second group in the designated part of Column B</li>
 <li>Continue copy and pasting each group in the appropriate columns</li>
-<li>The test statistic, <span class="math inline">\(F\)</span>, is given in cell L15</li>
-<li>The degrees of freedom are presented in cells J15 and J16</li>
-<li>The <span class="math inline">\(P\)</span>-value is reported in cell M15</li>
+</ul></li>
+<li>The test statistic, <span class="math inline">\(F\)</span>, is given in cell V7</li>
+<li>The degrees of freedom are presented in cells T7 and T8</li>
+<li>The <span class="math inline">\(P\)</span>-value is reported in cell W7</li>
 </ul>
 <p>The following points will help you interpret the output.</p>
 <ul>
-<li><p>The “Descriptive Statistics” section of the output gives the sample size, mean and standard deviation for each of the groups in your sample.</p></li>
-<li><p>In the ANOVA table, you will find the test statistic (<span class="math inline">\(F\)</span>), the <span class="math inline">\(P\)</span>-value (Sig.), and the degrees of freedom (df) for the <span class="math inline">\(F\)</span> statistic. Note that there are two numbers specifying the degrees of freedom. These are given as the between groups and within groups df, respectively. Do not worry about the total df. This number is the sum of the other two.</p></li>
+<li><p>The “Numerical Summary of the Data” (Step 3) section of the output gives the sample size, mean and standard deviation for each of the groups in your sample.</p></li>
+<li><p>In the ANOVA table, you will find the test statistic (<span class="math inline">\(F\)</span>), the <span class="math inline">\(P\)</span>-value (Sig.), and the degrees of freedom (df) for the <span class="math inline">\(F\)</span> statistic. Note that there are two numbers specifying the degrees of freedom. These are given as the between groups and within groups df, respectively. Do not worry about the total degrees of freedom. This number is the sum of the other two.</p></li>
 </ul>
 <p>To check your requirements, do the following:</p>
 <ul>
-<li>To determine if the data are normally distributed, we will make a Q-Q plot for each group separately.</li>
-<li>Using <a href="./Data/QuantitativeDescriptiveStatistics.xlsx">QuantitativeDescriptiveStatistics.xlsx</a>, under the Q-Q plot tab you can paste in each of the three groups of data separately, to test for normality.</li>
-<li>To determine if the population variances are equal, we will use a very simple check:</li>
+<li>To determine if the data are normally distributed, we will look at a Q-Q plot for each group separately.
+<ul>
+<li>While still on the ANOVA tab, scroll to the right so that columns Y through AI are visible. You should see a Q-Q plot. In a yellow highlighted drop-down box directly above the plot you can select the sample you would like to see a Q-Q plot for (see the picture below). Make sure that you evaluate each sample’s data. They all must look approximately normal to meet the assumption.</li>
+</ul></li>
+</ul>
+<p><img src="Images/ANOVA_QQplot.PNG"></p>
+<ul>
+<li>To determine if the population variances are equal, we will use a very simple check:
+<ul>
 <li>If the largest variance is at least four times as big as the smallest variance, we will conclude that the population variances are not equal. (Remember, the variance is the square of the standard deviation.)</li>
 <li>If the largest variance is <em>not</em> four times as big as the smallest variance, we will conclude that the population variances are close enough that we can assume the variances are all equal.</li>
+<li>To help you check this assumption the smallest and largest sample variance are displayed in a table spanning cells Y4 to AA6.</li>
+</ul></li>
 </ul>
 <p><br></p>
 </div>
@@ -524,9 +538,8 @@ Excel Instructions
 <div class="Summary">
 <p>Follow these instructions to apply the ANOVA procedure using Excel:</p>
 <p>Data representative of the values reported by Emmons and McCullough are given in the file <a href="./Data/Gratitude.xlsx">Gratitude-Stacked.xlsx</a>. The data is divided up into three columns which represent Grateful, Hassels, and Events.</p>
-<p>The summary statistics can be obtained using the <a href="./Data/QuantitativeInferenceProcedures.xlsx">QuantitativeInferenceProcedures.xlsx</a>. Paste the three columns of data into the appropriate areas of column A, B, and C. The summary statistics will appear in the table to the right labeled “Descriptive Statistics”.</p>
-<p>This yields the following output:</p>
-<p><img src="Images/Gratitude-ANOVA-Output-Excel.png"> <br></p>
+<p>The summary statistics can be obtained using the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>. Paste the three columns of data into the appropriate areas of column A, B, and C. The summary statistics will appear in the table to the right labeled “Numerical Summary of the Data”.</p>
+<p><br></p>
 </div>
 <p><br></p>
 <p>The summary statistics are presented in the following table:</p>
@@ -586,15 +599,19 @@ Excel Instructions
 <!-- |} -->
 <!-- </center> -->
 <p>Please do not blindly cut-and-paste computer output. It can include a lot of information that we do not use. Identify the relevant parts and only report those pieces of information. Present only those portions of the output that are relevant.</p>
-<p>Since the largest variance (<span class="math inline">\(s^2\)</span>) is not four times larger than the smallest variance, we can assume the variances are equal. The points in the Q-Q plots for each of the three groups (not shown) follow the line closely, suggesting that the data can be assumed to be normally distributed. We conclude that the requirements are satisfied and it is appropriate to use ANOVA.</p>
 <ul>
 <li><strong>Make an appropriate graph to illustrate the data</strong></li>
 </ul>
+<p>Side-by-side box plots are an excellent way to display data from multiple samples.</p>
 <p><img src="Images/Gratitude-Boxplots.png"></p>
+<p>The Math221 Statistics Toolbox Excel file also produces a means plot graph just below the numerical summary. This plot is acceptable, but unfortunately, from this plot you don’t get an idea about the spread of the data like you do with a boxplot.</p>
+<p><img src="Images/ANOVA_MeanPlot.PNG"></p>
+<p><br></p>
 <p><img src="Images/Step4.png"></p>
 <p><strong>Verify the requirements have been met</strong></p>
-<p>Q-Q plots indicate that it is reasonable to conclude that the data are normally distributed in each group.<br />
-The largest variance (0.8917 from the Grateful group) is not four times the smallest (0.6922 from the Hassles group), so we conclude that the variances are equal for the three groups.</p>
+<p>The points in the Q-Q plots for each of the three groups (not shown) follow the line closely, suggesting that the data can be assumed to be normally distributed.</p>
+<p>The largest variance (0.8917 from the Grateful group) is not four times the smallest (0.6922 from the Hassles group), so we conclude that the variances are equal for the three groups.</p>
+<p>We conclude that the requirements are satisfied and it is appropriate to use ANOVA.</p>
 <p><strong>Give the test statistic and its value</strong></p>
 <p>This can be found in the output. Our test statistic, <span class="math inline">\(F\)</span>, is: <span class="math display">\[F = 4.075\]</span></p>
 <p><strong>State the degrees of freedom</strong></p>
