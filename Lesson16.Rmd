@@ -17,7 +17,7 @@ output:
 <div style="float:right;width=40%;">
 <br/>
 <div style="padding-left:10%;">**Optional Lesson Video**</div>
-<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC_379i2-P7s9yhiqN2Vt6zD" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC_379i2-P7s9yhiqN2Vt6zD" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
 ## Lesson Outcomes
@@ -70,7 +70,7 @@ We can represent the reasons the students did not click in their searches using 
 
 - Open the data file [NoClickQuery-Summary.xlsx](./Data/NoClickQuery-Summary.xlsx).  This file contains a summary of the NoClickQuery data.  Notice that each row in this data file represents the responses of several individuals.  The *Count* column tells how many times each response was given.  The data in this file have been summarized.  
 - Make sure the categorical column (Reason) and the Count column are next to each other with the Count column on the right and highlight both of them.
-- Click on the Insert tab, then click on the Pie tab.
+- Click on the Insert tab, then click on the Pie chart button.
 - Please choose the basic 2D pie.
 
 The pie chart will look like this:
@@ -94,7 +94,7 @@ Bar charts can be considered a companion plot to the pie chart. They present the
 **To make a bar chart in Excel:**
 
 - Highlight the categorical column and the count column.
-- Click on the Insert tab and then click on column tab.
+- Click on the Insert tab and then click on column chart button.
 - Again, please choose the simple 2D column chart.
 
 
@@ -118,8 +118,8 @@ A Pareto chart is a bar chart where the bars are presented in descending order.
 - Begin by creating a bar chart.  You can use the one you created above.
 - Highlight the "Count" column.
 - Click on the Sort and Filter tab in the right hand corner of the screen.
-- Click on Sort Largest to Smallest(A little window will pop up and click on "Expand the Selection" then "Sort".
-- Your bar chart should have been converted to a Pareto chart.
+- Click on Sort Largest to Smallest (A little window will pop up, select "Expand the Selection" then "Sort".)
+- The bars is your chart should now be resorted to create a Pareto chart.
 
 Your Pareto chart will look like this:
 
@@ -209,13 +209,15 @@ $$
 
 7. Remember that the $z$-score for an observed data value can be computed as:
 
-<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+
 <center>
 $$
 \displaystyle { z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}} }
 $$
 </center>
 * Use the mean and standard deviation given in question 6, to find the $z$-score corresponding to *your* sample proportion.
+
+<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 
 <div id="Q7" style="display:none;">
 <center>
@@ -248,6 +250,7 @@ If the sample size is large, the sample proportion, $\hat p$, will be approximat
 #### How Large is Large Enough?
 
 We can apply the Central Limit Theorem to a sample proportion (and conclude that $\hat p$ follows a normal distribution) if both of the following conditions are satisfied:
+
 - $np \ge 10$
 - $n(1-p) \ge 10$
 

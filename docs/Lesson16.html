@@ -336,7 +336,7 @@ $(document).ready(function () {
 <div style="padding-left:10%;">
 <strong>Optional Lesson Video</strong>
 </div>
-<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC_379i2-P7s9yhiqN2Vt6zD" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
+<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC_379i2-P7s9yhiqN2Vt6zD" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
 </iframe>
 </div>
 <div id="lesson-outcomes" class="section level2">
@@ -386,7 +386,7 @@ Excel Instructions
 <li>Open the data file <a href="./Data/NoClickQuery-Summary.xlsx">NoClickQuery-Summary.xlsx</a>. This file contains a summary of the NoClickQuery data. Notice that each row in this data file represents the responses of several individuals. The <em>Count</em> column tells how many times each response was given. The data in this file have been summarized.<br />
 </li>
 <li>Make sure the categorical column (Reason) and the Count column are next to each other with the Count column on the right and highlight both of them.</li>
-<li>Click on the Insert tab, then click on the Pie tab.</li>
+<li>Click on the Insert tab, then click on the Pie chart button.</li>
 <li>Please choose the basic 2D pie.</li>
 </ul>
 <p>The pie chart will look like this:</p>
@@ -406,7 +406,7 @@ Excel Instructions
 <p><strong>To make a bar chart in Excel:</strong></p>
 <ul>
 <li>Highlight the categorical column and the count column.</li>
-<li>Click on the Insert tab and then click on column tab.</li>
+<li>Click on the Insert tab and then click on column chart button.</li>
 <li>Again, please choose the simple 2D column chart.</li>
 </ul>
 <p>Your bar chart will look like this:</p>
@@ -425,8 +425,8 @@ Excel Instructions
 <li>Begin by creating a bar chart. You can use the one you created above.</li>
 <li>Highlight the “Count” column.</li>
 <li>Click on the Sort and Filter tab in the right hand corner of the screen.</li>
-<li>Click on Sort Largest to Smallest(A little window will pop up and click on “Expand the Selection” then “Sort”.</li>
-<li>Your bar chart should have been converted to a Pareto chart.</li>
+<li>Click on Sort Largest to Smallest (A little window will pop up, select “Expand the Selection” then “Sort”.)</li>
+<li>The bars is your chart should now be resorted to create a Pareto chart.</li>
 </ul>
 <p>Your Pareto chart will look like this:</p>
 <p><img src="Images/NoClickQuery-Pareto-Excel.png"> <br></p>
@@ -524,7 +524,6 @@ where <span class="math inline">\(p\)</span> is the true population proportion, 
 <ol start="7" style="list-style-type: decimal">
 <li>Remember that the <span class="math inline">\(z\)</span>-score for an observed data value can be computed as:</li>
 </ol>
-<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <center>
 <span class="math display">\[
 \displaystyle { z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}} }
@@ -533,6 +532,7 @@ where <span class="math inline">\(p\)</span> is the true population proportion, 
 <ul>
 <li>Use the mean and standard deviation given in question 6, to find the <span class="math inline">\(z\)</span>-score corresponding to <em>your</em> sample proportion.</li>
 </ul>
+<p><a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a></p>
 <div id="Q7" style="display:none;">
 <center>
 <span class="math display">\[
@@ -563,7 +563,11 @@ You may want to refresh your memory on our definition of “unusual events” in
 <p>If the sample size is large, the sample proportion, <span class="math inline">\(\hat p\)</span>, will be approximately normally distributed. This is a direct consequence of the Central Limit Theorem.</p>
 <div id="how-large-is-large-enough" class="section level4">
 <h4>How Large is Large Enough?</h4>
-<p>We can apply the Central Limit Theorem to a sample proportion (and conclude that <span class="math inline">\(\hat p\)</span> follows a normal distribution) if both of the following conditions are satisfied: - <span class="math inline">\(np \ge 10\)</span> - <span class="math inline">\(n(1-p) \ge 10\)</span></p>
+<p>We can apply the Central Limit Theorem to a sample proportion (and conclude that <span class="math inline">\(\hat p\)</span> follows a normal distribution) if both of the following conditions are satisfied:</p>
+<ul>
+<li><span class="math inline">\(np \ge 10\)</span></li>
+<li><span class="math inline">\(n(1-p) \ge 10\)</span></li>
+</ul>
 <p>It is important to check both conditions. If one of them is not satisfied, we cannot conclude that <span class="math inline">\(\hat p\)</span> follows a normal distribution. Observe that the effect of these two conditions is that if <span class="math inline">\(p\)</span> is very close to 0 or 1, then <span class="math inline">\(\hat{p}\)</span> isn’t close to normal unless <span class="math inline">\(n\)</span> is very large.</p>
 </div>
 <div id="mean-and-standard-deviation" class="section level4">
