@@ -17,7 +17,7 @@ output:
 <div style="float:right;width=40%;">
 <br/>
 <div style="padding-left:10%;">**Optional Lesson Video**</div>
-<iframe width="90%" align="right" src="http://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9acEfJHNYCs9N93R2CJ8zB" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9acEfJHNYCs9N93R2CJ8zB" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
 ## Lesson Outcomes
@@ -26,14 +26,17 @@ output:
 <div id="oc" style="display:none;">
 By the end of this lesson, you should be able to:
 
-- Hypothesis Testing for a Test of independence for categorical data:
+**Hypothesis Testing for a Test of independence for categorical data: **
+
   + State the null and alternative hypothesis for the chosen test. 
   + Calculate the test-statistic, df and p-value of the hypothesis test.
   + Assess the statistical significance by comparing the p-value to the α-level.
   + Check the requirements for the hypothesis test.
   + Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
   + Draw a correct conclusion for the hypothesis test.
-- Hypothesis Testing for a goodness of fitness test:
+  
+**Hypothesis Testing for a goodness of fitness test:**
+
   + State the null and alternative hypothesis for the chosen test. 
   + Calculate the test-statistic, df and p-value of the hypothesis test.
   + Assess the statistical significance by comparing the p-value to the α-level.
@@ -76,7 +79,7 @@ Dr. Bruce Zitkus, an advanced practice registered nurse, conducted a study in wh
 
 ## The $\chi^2$ (Chi-squared) Test of Independence
 
-<img src="./Images/oc-chiropractor.jpg">
+<img src="./Images/Oc-chiropractor.jpg">
 
 People often wonder whether two things influence each other. For example, people seek chiropractic care for different reasons. We may want to know if those reasons are different for Europeans than for Americans or Australians. This question can be expressed as "Do reasons for seeking chiropractic care depend on the location in which one lives?"
 
@@ -96,13 +99,7 @@ $$df = (\text{number of rows }-1)(\text{number of columns }-1)$$
 
 Note that the number of degrees of freedom does not depend on the number of subjects in the study.
 
-### Requirements
 
-The following requirements must be met in order to conduct a $\chi^2$ test of independence:
-1. You must use simple random sampling to obtain a sample from a single population.
-2. Each expected count must be greater than or equal to 5.
-
-Let's walk through the rest of the chiropractic care example.
 
 <br>
 
@@ -162,11 +159,11 @@ The research question was whether people's motivation for seeking chiropractic c
 <div class="SoftwareHeading">Excel Instructions</div>
 <div class="Summary">
 
-- In the Excel sheet [CategoricalDataAnalysis.xlsx](./Data/CategoricalDataAnalysis_Hat.xlsx), go to the third tab on the file.  This tab, entitled "Chi-Square", will allow you to perform tests for independence.  Excel allows us to enter data in the same way as the table above, so enter the data in the following manner on the excel sheet:
+- In the Excel sheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx), go to the tab labeled "Chi Squared".  This tab will allow you to perform tests for independence.  Excel allows us to enter data in the same way as the table above, so enter the data in the following manner on the excel sheet:
 
 <img src="./Images/Excel-Chi-Square-Filled-Out.png">
 
-- Note: The boxes without data are left blank; entering zeros will cause unintended results.
+- Note: The boxes without data are left blank.
 <br>
 </div>
 <br>
@@ -195,18 +192,31 @@ If the row and column variable are independent, then no matter which row you con
 
 <div class="SoftwareHeading">Excel Instructions</div>
 <div class="Summary">
-- After entering the data correctly into [CategoricalDataAnalysis.xlsx](./Data/CategoricalDataAnalysis_Hat.xlsx), the Chi-Square statistic, degrees of freedom, and $P$-value are all displayed in the top right of the excel sheet.  The data for this example will look like:
+- The Chi-Square statistic, degrees of freedom, and $P$-value of the hypotheiss test are all displayed to the right of the where the data is entered in. .  The data for this example will look like:
 
 <img src="./Images/Excel-Chi-Square-Results.png">
 
 - If we reject the null hypothesis, we state, "There is sufficient evidence to suggest that (restate the alternative hypothesis.)" If we failed to reject the null hypothesis, we would replace the word, "sufficient" with "insufficient."
 
-- The requirement for this test is that the sample size is sufficiently large. Another requirement is that no cells have expected counts less than 5. At the bottom left of the excel sheet, we  check that 0 cells have expected counts less than 5. If this is true, then we can conclude that the requirements of the test are satisfied.
+
 <br>
 </div>
 <br>
 
-For the chiropractic data set, the analysis would be conducted as follows <!--[To do: Flesh this out a bit]:-->
+### Requirements
+
+The following requirements must be met in order to conduct a $\chi^2$ test of independence:
+
+1. You must use simple random sampling to obtain a sample from a single population.
+2. Each expected count must be greater than or equal to 5.
+
+A table of expected counts is found starting in cell U4 (scroll to the right of the data entry area and hypothesis test results). If one of the expected counts is less than 5 the cell will be red, otherwise they all remain gray as seen here:
+
+<img src="./Images/Excel-Chi-Req-Expected-Counts.png">
+
+<br>
+
+Let's walk through the chiropractice example now from beginning to end: <!--[To do: Flesh this out a bit]:-->
 
 **Background:**
 
@@ -256,21 +266,24 @@ For the chiropractic data set, the analysis would be conducted as follows <!--[T
 
 **Inferential statistics:**
 
-- The appropriate hypothesis test is the chi-squared test for independence.
-- The requirement that the expected counts are at least 5 in each cell are met. (This is given in the output.)
-- Conduct hypothesis test
+The appropriate hypothesis test is the chi-squared test for independence. The requirement that the expected counts are all at least 5 is met. (Check the picture of the Expected Counts table already shown above.)
+
+Conduct the hypothesis test:
 
 $~~~~~H_0\colon$ Location and the motivation to visit a chiropractor are independent.
 
 $~~~~~H_a\colon$ Location and the motivation to visit a chiropractor are not independent.
 
-- Let $\alpha=0.05$.
-- The test statistic is: $\chi^2 = 49.743$, with $df=8$.
+Let $\alpha=0.05$.
+
+The test statistic is: $\chi^2 = 49.743$, with $df=8$.
   
 <!--:*Sketch of the sampling distribution of $\chi^2$: (Draw a right skewed distribution that looks somewhat like an $F$.)-->
-- The $P$-value is rounded to .000 in the output. Double-clicking twice on this value gives the actual $P$-value:   $P\textrm{-value} = 4.58 \times 10^{-8}  < 0.05 = \alpha$
-- Decision: Reject the null hypothesis.
-- Conclusion: There is sufficient evidence to suggest that the motivation to visit a chiropractor is not independent of the location.
+The $P$-value is rounded to .000 in the output. Double-clicking twice on this value gives the actual $P$-value:   $P\textrm{-value} = 4.58 \times 10^{-8}  < 0.05 = \alpha$
+
+Decision: Reject the null hypothesis.
+
+Conclusion: There is sufficient evidence to suggest that the motivation to visit a chiropractor is not independent of the location.
 
 <!--The following observation really needs to be supported by an appropriate table of percentages or a clustered bar chart, or something.-->
 <!--:*Further discussion: <br> People in these three locations evidently have different reasons for seeking chiropractic care. It appears that individuals in Europe are much more likely to seek chiropractic care in the sick role than individuals in the United States and Australia. The Europeans are also less likely to visit a chiropractor for wellness reasons.-->
@@ -303,7 +316,7 @@ There is no general guideline for deciding which variable is the row variable an
 </div>
 <br>
 
-There may be no general guideline for deciding which variable is the row variable, but the graphics produced by your software may depend on this decision. For example, Excel will give you a different clustered bar chart when you use "Location" as the row variable than when you use "Motivation" as the row variable.
+There may be no general guideline for deciding which variable is the row variable, but the graphics produced by your software may depend on this decision. For example, Excel will give you a different clustered bar chart when you use "Location" as the row variable than when you use "Motivation" as the row variable. Sometimes, choosing one of the variables as the row variable makes the clustered bar chart easier to understand. The bar chart is just just below the data entry area in Excel.
 
 ### Why $H_a$ is Worded As It Is
 
