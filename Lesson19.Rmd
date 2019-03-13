@@ -216,7 +216,7 @@ A table of expected counts is found starting in cell U4 (scroll to the right of 
 
 <br>
 
-Let's walk through the chiropractice example now from beginning to end: <!--[To do: Flesh this out a bit]:-->
+Let's walk through the chiropractic example now from beginning to end: <!--[To do: Flesh this out a bit]:-->
 
 **Background:**
 
@@ -316,7 +316,7 @@ There is no general guideline for deciding which variable is the row variable an
 </div>
 <br>
 
-There may be no general guideline for deciding which variable is the row variable, but the graphics produced by your software may depend on this decision. For example, Excel will give you a different clustered bar chart when you use "Location" as the row variable than when you use "Motivation" as the row variable. Sometimes, choosing one of the variables as the row variable makes the clustered bar chart easier to understand. The bar chart is just just below the data entry area in Excel.
+There may be no general guideline for deciding which variable is the row variable, but the graphics produced by your software may depend on this decision. For example, Excel will give you a different clustered bar chart when you use "Location" as the row variable than when you use "Motivation" as the row variable. Sometimes, choosing one of the variables as the row variable makes the clustered bar chart easier to understand. The bar chart is just below the data entry area in Excel.
 
 ### Why $H_a$ is Worded As It Is
 
