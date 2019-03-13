@@ -34,30 +34,30 @@ The expectation on the exam is the following outcomes. You should be able to do:
 - Determine the mean, standard deviation and shape of a distribution of sample proportions.
 - Calculate probabilities using a distribution of sample proportions.
 - Confidence Intervals: 
-  + Determining correct confidence interval for a given scenario. 
-  + Calculate and interpret a confidence interval given a confidence level and a given parameter.
-  + Identify a point estimate and margin of error for a given confidence interval.
-  + Show the appropriate connections between the numerical and graphical summaries that support a confidence interval. 
-  + Check the requirements for a confidence interval.
-  + Calculate a confidence interval for a comparison of two proportions. 
+    + Determining correct confidence interval for a given scenario. 
+    + Calculate and interpret a confidence interval given a confidence level and a given parameter.
+    + Identify a point estimate and margin of error for a given confidence interval.
+    + Show the appropriate connections between the numerical and graphical summaries that support a confidence interval. 
+    + Check the requirements for a confidence interval.
+    + Calculate a confidence interval for a comparison of two proportions. 
 - Conduct a Hypothesis Test for
-  + A single mean with σ known.
-  + A single mean with σ unknown.
-  + Difference of two means with dependent samples.
-  + The mean of differences with dependent samples.
-  + Several means (ANOVA).
-  + A single proportion.
-  + A comparison of two proportions.
-  + Test of Independence for categorical data.
-  + A goodness of fitness test.
+    + A single mean with σ known.
+    + A single mean with σ unknown.
+    + Difference of two means with dependent samples.
+    + The mean of differences with dependent samples.
+    + Several means (ANOVA).
+    + A single proportion.
+    + A comparison of two proportions.
+    + Test of Independence for categorical data.
+    + A goodness of fitness test.
 - Hypothesis Testing
-  + Determining correct hypothesis test for a given scenario
-  + State the null and alternative hypothesis for the chosen test. 
-  + Calculate the test-statistic and p-value of the hypothesis test.
-  + Assess the statistical significance by comparing the p-value to the α-level.
-  + Check the requirements for the hypothesis test.
-  + Show the appropriate connections between the numerical and graphical summaries that support a hypothesis test. 
-  + Draw a correct conclusion for a hypothesis test.
+    + Determining correct hypothesis test for a given scenario
+    + State the null and alternative hypothesis for the chosen test. 
+    + Calculate the test-statistic and p-value of the hypothesis test.
+    + Assess the statistical significance by comparing the p-value to the α-level.
+    + Check the requirements for the hypothesis test.
+    + Show the appropriate connections between the numerical and graphical summaries that support a hypothesis test. 
+    + Draw a correct conclusion for a hypothesis test.
 </div>
 <br>
 
@@ -94,7 +94,7 @@ $$
 
 - The **estimator** of $p$ is $\hat p$. $\displaystyle{ \hat p = \frac {x}{n}}$ and is used for both confidence intervals and hypothesis testing.
 
-- You will use the Excel spreadsheet [CategoricalDataAnalysis.xlsx](./Data/CategoricalDataAnalysis_Hat.xlsx) to perform hypothesis testing and calculate confidence intervals for problems involving one proportion.
+- You will use the Excel spreadsheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx), to perform hypothesis testing and calculate confidence intervals for problems involving one proportion.
 
 - The requirements for a confidence interval are $n \hat p \ge 10$ and $n(1-\hat p) \ge 10$. The requirements for hypothesis tests involving one proportion are $np\ge10$ and $n(1-p)\ge10$.
 
@@ -126,7 +126,7 @@ $$
 
 - Whenever zero is contained in the confidence interval of the difference of the true proportions we conclude that there is no significant difference between the two proportions.
 
-- You will use the Excel spreadsheet [CategoricalDataAnalysis.xlsx](./Data/CategoricalDataAnalysis_Hat.xlsx) to perform hypothesis testing and calculate confidence intervals for problems involving two proportions.
+- You will use the Excel spreadsheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) to perform hypothesis testing and calculate confidence intervals for problems involving two proportions.
 <br>
 </div>
 <br>
@@ -167,13 +167,13 @@ $$
     h. Chi-Squared test of independence
 
 
-1. In an article in the Journal of Small Business Management successful start-up businesses in the United States and Korea were compared. One set of data compared educational level (high school, undergraduate degree, master’s degree, doctoral degree) of people who managed successful start-up companies in the United States and Korea. You want to determine if education level differs between managers of successful start-up companies differs between these two countries. Which hypothesis test would be most appropriate for this analysis?
+1. In an article in the Journal of Small Business Management successful start-up businesses in the United States and Korea were compared. One set of data compared educational level (high school, undergraduate degree, master's degree, doctoral degree) of people who managed successful start-up companies in the United States and Korea. You want to determine if education level differs between managers of successful start-up companies differs between these two countries. Which hypothesis test would be most appropriate for this analysis?
 
 
 2. A human resources manager reported data from a recent involuntary Reduction in Force (RIF) at her company. You are an attorney and want to determine if age discrimination was a factor (it is illegal to discriminate against employees because of age). The company reported the number of employees in two groups: 40 years old or younger, and over 40 years old. They also reported the number of employees in each group who were terminated. You want to determine if both age groups were treated equally. Which hypothesis test would be most appropriate for this analysis?
 
 
-3. A survey was conducted by a group of state lotteries. A random sample of 2406 adults completed the survey. A total of 248 were classified as “heavy” players. Of these, 152 were male. You want to determine if the proportion of male “heavy” lottery players is different than the proportion of males in the population, which is 48.5%. Which hypothesis test would be most appropriate for this analysis?
+3. A survey was conducted by a group of state lotteries. A random sample of 2406 adults completed the survey. A total of 248 were classified as heavy players. Of these, 152 were male. You want to determine if the proportion of male heavy lottery players is different than the proportion of males in the population, which is 48.5%. Which hypothesis test would be most appropriate for this analysis?
 
 
 4. A student project compared the effectiveness of two different combination locks. One of the locks turned clockwise first and the other lock turned counterclockwise first. They asked 25 students to participate in the study. Each student was given the combination to each lock and asked to open the locks. The time it took them to open each lock was recorded. They want to determine if one of the locks is easier to open. Which hypothesis test would be most appropriate for this analysis?
@@ -194,7 +194,7 @@ f. Confidence interval for two proportions
 5. A bank employs two appraisers. When approving borrowers for mortgages, it is imperative that the appraisers value the same types of properties consistently. To make sure this is the case, the bank evaluates six properties that both appraisers have recently valued.  Which confidence interval would be most appropriate for this study?
 
 
-6. In a Wall Street Journal article on satisfaction with career paths, the percentage of psychology majors reporting they were “satisfied” or “very satisfied” with their career path was reported. The same data was also reported for accounting majors. You decide to construct a 95% confidence interval to see if the observed difference is significant. Which confidence interval would be most appropriate for this study?
+6. In a Wall Street Journal article on satisfaction with career paths, the percentage of psychology majors reporting they were "satisfied" or "very satisfied" with their career path was reported. The same data was also reported for accounting majors. You decide to construct a 95% confidence interval to see if the observed difference is significant. Which confidence interval would be most appropriate for this study?
 
 
 7. DoubleStuf Oreo cookies are supposed to have twice the filling of regular Oreo cookies. You and some friends decide you want to know if that is a true assertion by the company who makes them. You take a sample of 55 DoubleStuf Oreo cookies and measure the amount of filling in each one. You need to construct a confidence interval to estimate the true mean filling amount of DoubleStuf Oreos in order to compare it to the filling amount found in regular Oreos. Which confidence interval would be most appropriate for this study?
@@ -216,7 +216,7 @@ f. Confidence interval for two proportions
     d. The probability of the type II error
 
 
-10. Suppose you create a 95% confidence interval for a mean, and get (10, 20). You've been told to report this by saying something similar to, “We are 95% confident that the true mean is between 10 and 20." Exactly what does this mean?
+10. Suppose you create a 95% confidence interval for a mean, and get (10, 20). You've been told to report this by saying something similar to, "We are 95% confident that the true mean is between 10 and 20." Exactly what does this mean?
 
     a. 95% of the data are between 10 and 20.
     b. 95% of the sample means are between 10 and 20.
@@ -306,7 +306,7 @@ f. Confidence interval for two proportions
 
 **Questions 19 through 22: Use the following information and table.**
 
-- A survey was conducted of 1279 randomly selected adults aged 18 and older. They were asked “Are you a morning person or a night person?”
+- A survey was conducted of 1279 randomly selected adults aged 18 and older. They were asked "Are you a morning person or a night person?"
 
 <br>
 <br>
@@ -473,7 +473,7 @@ d. 0.289, 0.297-->
 b. -2.803-->
 
 
-32. Calculate the `P`-value for a test of $H_0: \mu = 0.295$ against $H_a: \mu \ne 0.295$. Assume the requirements are satisfied.
+32. Calculate the p-value for a test of $H_0: \mu = 0.295$ against $H_a: \mu \ne 0.295$. Assume the requirements are satisfied.
 <!--a. 0.005..0.007-->
 
 
