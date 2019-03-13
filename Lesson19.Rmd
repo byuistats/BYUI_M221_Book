@@ -212,7 +212,7 @@ The following requirements must be met in order to conduct a $\chi^2$ test of in
 
 A table of expected counts is found starting in cell U4 (scroll to the right of the data entry area and hypothesis test results). If one of the expected counts is less than 5 the cell will be red, otherwise they all remain gray as seen here:
 
-<img src="./Images/Excel-Chi-Req-Expected-Counts.png">
+<img src="./Images/Excel-Chi-Req-Expected-Counts.PNG">
 
 <br>
 

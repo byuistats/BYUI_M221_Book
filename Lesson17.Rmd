@@ -117,7 +117,7 @@ For this example we will consider the "Honesty at Medical School" data above.
 
 - **Step 1**: Open the Math 221 Statistics Toolbox and click on the "One Proportion" tab. 
 
-- The yellow boxes indicate the input spaces. The first step, getting an estimate of $\hat{p}$, is accomplished by putting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell E7. (You can ignore column A which asks you to paste in data. We will only be putting in summary data of counts, not individual observations.)  
+- The yellow boxes indicate the input spaces. The first step, getting an estimate of $\hat{p}$, is accomplished by inputting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell E7. (You can ignore column A which asks you to paste in data. We will only be putting in summary data of counts, not individual observations.)  
 
 <img src="./Images/Lesson_17_pic_1.PNG">
 
@@ -382,7 +382,7 @@ For this example we will consider the "PTC" data above.
 
 - **Step 1**: Open the Math 221 Statistics Toolbox and click on the "One Proportion" tab. 
 
-- The yellow boxes indicate the input spaces. The first step, getting an estimate of $\hat{p}$, is accomplished by putting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell E7. (You can ignore column A which asks you to paste in data. We will only be putting in summary data of counts, not individual observations.)  
+- The yellow boxes indicate the input spaces. The first step, getting an estimate of $\hat{p}$, is accomplished by inputting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell E7. (You can ignore column A which asks you to paste in data. We will only be putting in summary data of counts, not individual observations.)  
 
 <img src="./Images/Lesson_17_pic_6.PNG">
 
