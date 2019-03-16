@@ -59,7 +59,7 @@ where $Y$ is the dependent variable, $X$ is the independent variable, $m$ is the
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
 
-A. If the equation of a line is $Y = 3 X – 2$, where does it cross the Y-axis?
+A. If the equation of a line is $Y = 3 X - 2$, where does it cross the Y-axis?
 
 <a href="javascript:showhide('A')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="A" style="display:none;">
@@ -67,7 +67,7 @@ A. If the equation of a line is $Y = 3 X – 2$, where does it cross the Y-axis?
 </div>
 <br>
 
-B. If the equation of a line is $Y = 3 X – 2$, what happens to the value of $Y$ as $X$ increases?
+B. If the equation of a line is $Y = 3 X - 2$, what happens to the value of $Y$ as $X$ increases?
 
 <a href="javascript:showhide('B')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="B" style="display:none;">
@@ -109,7 +109,7 @@ $$Y = b_0 + b_1 X_1 + b_2 X_2 + b_3 X_3 + b_4 X_4$$
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
 
-A. For the linear regression equation, $Y = 1.2 – 3.4 X$, what is the slope?
+A. For the linear regression equation, $Y = 1.2 - 3.4 X$, what is the slope?
 
 <a href="javascript:showhide('a2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="a2" style="display:none;">
@@ -117,7 +117,7 @@ A. For the linear regression equation, $Y = 1.2 – 3.4 X$, what is the slope?
 </div>
 <br>
 
-B. For the linear regression equation, $Y = 1.2 – 3.4 X$, what is the Y-intercept?
+B. For the linear regression equation, $Y = 1.2 - 3.4 X$, what is the Y-intercept?
 
 <a href="javascript:showhide('b2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="b2" style="display:none;">
@@ -143,7 +143,7 @@ $Y = -3 + \frac{5}{2}X$
 <!-- END EXPLANATION OF FORM ***********************************************  -->
 
 
-### Video Example: SuperCroc
+## Video Example: SuperCroc
 
 A partial skeleton of an enormous extinct crocodilian was found in the Sahara Desert.  With a skull that is about six feet long, this massive creature was a fierce hunter.  Unfortunately, the skeleton is incomplete.  Almost none of the bones for the legs and tail were recovered.  How big was this massive creature?
 
@@ -154,14 +154,16 @@ To answer this question, paleontologist Paul Sereno teamed up with modern crocod
 <br>
 <br>
 
-<img src="./Images/video-icon.png">
+[![](./Images/video-icon.png)](http://stream.byui.edu/VideoPlayer/BYUIplayer.html?StartCue=0&EndCue=5776&VideoName=1817_dvd&VideoType=libraryvideos)
+
+<!-- <img src="./Images/video-icon.png"> -->
 <!-- Need exported video -->
 
-### Estuarine Crocodiles
+## Estuarine Crocodiles
 
 We will use Sereno and Barr's measurements on the lengths of Estuarine, or saltwater, Crocodiles' heads to estimate the length of their bodies.  Their measurements are given in the file [EstuarineCrocodiles(Modified).xlsx](./Data/Estuarine_Crocodile_(Modified).xlsx).  In the previous reading assignment, we created a scatterplot for these data.  We saw that there is a strong positive linear relationship between these two measurements.  In this lesson, we will fit a line to the data.  This line can be used to predict the length of a crocodile with a known head length.  In particular, we will use this line to estimate the length of SuperCroc.
 
-### Regression Equation
+## Regression Equation
 
 We can use simple linear regression to develop an equation relating the head length of an estuarine crocodile to its body length.  Let $Y$ be the body length (in cm) and $X$ be the head length (in cm).
 
@@ -178,24 +180,24 @@ where $\hat Y$ represents the predicted body length of an estuarine crocodile wi
 <div class="Summary">
 **To find the estimated regression coefficients ($b_0$ and $b_1$) in Excel, do the following:**
 
-- Open the [QuantitativeInferenceProcedures.xlsx](./Data/QuantitativeInferenceProcedures.xlsx) file.
+- Open the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) file.
 - Click on the "Linear Regression" tab.
 - Paste your data for the explanatory variable (x) in the first column.  For this example, this is the head lengths.
 - The data for the response variable (y) is pasted in the second column.  This is the variable you want to predict based upon the value of (x).  Our response variable is the body length of the crocodiles.
-- The regression coefficients are given in the table under the heading "Unstandardized Coefficients" below the sub-heading "B".
+- The Y-intercept and slope coefficient are given in the Numerical Summary table.
 <br>
 </div>
 <br>
 
-### Interpreting the Regression Output
+## Interpreting the Regression Output
 
 The output from the commands given above will include a table similar to the one shown here:
 
-<img src="./Images/SPSS_Estuarine_Croc_Regression_output.PNG">
+<img src="./Images/EstuarineCrocodile-Regression-Output.PNG">
 
 The regression coefficients are given in the column labeled "B".  The first row gives the constant term (or the term that is not multiplied by anything.)  In other words, the first row gives the value of $b_0$, in this case, $b_0=-18.274$.  The second row of the table gives the value that is to be multiplied by $X$; this is the slope of the regression equation.  In our model, $X$ represents the head length, in centimeters.  The row is labeled as "Head Length (cm)".  The slope in our regression equation is $b_1=7.660$.  Putting all this together, we get the equation:
 
-<img src="./Images/640px-Large_Crocodylus_porosus_small.png">
+
 
 $$
 \hat Y = -18.274 + 7.660 X
@@ -210,7 +212,7 @@ The slope of the regression equation is 7.660.  This means that for each one-uni
 
 The $Y$-intercept is $-18.274$.  How should we interpret this value?  If there was an estuarine crocodile with a head length of $X=0$ cm, our equation predicts that its body length would be approximately negative 20 cm, or ($-20$) cm.  This is silly.  If it does not make sense to interpret the $Y$-intercept, we simply state the it is not interpretable.  The $Y$-intercept is included in the regression equation, even though it may not be interpretable.  It must be included to make the predictions more reasonable.
 
-### Predictions
+## Predictions
 
 An 87 cm skull from a juvenile sarcosuchus was discovered.  We want to estimate the body length of this crocodilian using the regression equation we calculated for the estuarine crocodiles.  
 
@@ -229,12 +231,13 @@ Even though we can do this with a calculator, it is a little tedious and is subj
 **To use Excel to predict the value of $Y$ for any specified value of $X$, do the following:**
 
 - Enter the explanatory (x) and response (y) variables in the first two columns of the Linear Regression spreadsheet.
-- Find cell G18, which is labeled as "x" in the "Confidence and Prediction Intervals for Regression Response" table. 
-- In cell G18, enter the value of x for which you wish to predict y.  For this example, enter 87 for x, which is the skull length of the juvenile sarcosuchus.
+- Find cell J12, which is labeled as "x" in the "Predicted Value" table to the right of the scatter plot. 
+- In cell J12, enter the value of x for which you wish to predict y.  For this example, enter 87 for x, which is the skull length of the juvenile sarcosuchus.
 - The predicted value is given in the cell labeled "predicted."
 <br>
+<img src="./Images/LinearRegressionPredictedValue.png">
+- Notice that the point representing your predicted value shows up on the scatterplot in orange.
 
-[Click for details](./IMages/LinearRegressionPredictedValue.png){target="_blank"}
 <!-- [http://www.byuimath.com/statisticswiki/images/0/01/LinearRegressionPredictedValue.png Click for details.] -->
 </div>
 <br>
@@ -257,7 +260,7 @@ Stop and think about this for a minute.  This juvenile sarcosuchus is estimated 
 </div>
 <br>
 
-### Drawing the Regression Line on a Scatterplot
+## Drawing the Regression Line on a Scatterplot
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <!-- {{Software_Filter | PageName=DrawingRegressionLine }} -->
@@ -345,9 +348,9 @@ Notice that this is the equation of a straight line. You might have written line
 
 The output from the commands given above will include a table similar to the one shown here:
 
-<img src="./Images/Manatees-RegressionOutput-SPSS.png">
+<img src="./Images/Manatees-RegressionOutput.png">
 
-The regression coefficients are given in the column labeled "B".  Notice that the first row gives the constant term.  This term is not multiplied by anything except 1.  This is the value of $b_0$: $b_0=-42.542$.  The second row of the table gives the value that is to be multiplied by $X$; this is the slope of the regression equation.  In our model, $X$ represents the number of powerboat registrations in Florida, in thousands.  The slope for our regression equation is $b_1=0.129$.  We get the equation:
+The Y-intercept term is not multiplied by anything except 1.  This is the value of $b_0$: $b_0=-42.542$.  The value of the slope is to be multiplied by $X$; this is the slope of the regression equation.  In our model, $X$ represents the number of powerboat registrations in Florida, in thousands.  The slope for our regression equation is $b_1=0.129$.  We get the equation:
 $$
 \hat Y = -42.542 + 0.129 X
 $$
