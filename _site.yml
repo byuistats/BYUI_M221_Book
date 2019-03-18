@@ -1,7 +1,7 @@
-name: "Math 221B-Biostatistics"
+name: "Math 221-Introductory Statistics"
 output_dir: 'docs'
 navbar:
-  title: "Math 221B"
+  title: "Math 221"
   left:
     - text: "Home"
       href: index.html
