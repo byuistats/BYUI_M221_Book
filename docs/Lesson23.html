@@ -352,25 +352,29 @@ $(document).ready(function () {
 <div id="oc" style="display:none;">
 <p>By the end of this lesson, you should be able to:</p>
 <ul>
-<li>Confidence Intervals for the slope of the regression line:</li>
+<li>Confidence Intervals for the slope of the regression line:
+<ul>
 <li>Calculate and interpret a confidence interval for the slope of the regression line given a confidence level.</li>
 <li>Identify a point estimate and margin of error for the confidence interval.</li>
 <li>Show the appropriate connections between the numerical and graphical summaries that support the confidence interval.</li>
 <li>Check the requirements for the confidence interval.</li>
-<li>Hypothesis Testing for the slope of the regression line:</li>
+</ul></li>
+<li>Hypothesis Testing for the slope of the regression line:
+<ul>
 <li>State the null and alternative hypothesis.</li>
 <li>Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.</li>
-<li>Assess the statistical significance by comparing the p-value to the Î±-level.</li>
+<li>Assess the statistical significance by comparing the p-value to the α-level.</li>
 <li>Check the requirements for the hypothesis test.</li>
 <li>Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test.</li>
 <li>Draw a correct conclusion for the hypothesis test.</li>
+</ul></li>
 </ul>
 </div>
 <p><br></p>
 </div>
 <div id="theory-of-simple-linear-regression" class="section level2">
 <h2>Theory of Simple Linear Regression</h2>
-<p><img src="Images/line_on_coordinate_plane.jpg"></p>
+<p><img src="Images/Line_on_coordinate_plane.jpg"></p>
 <p>When we compute an estimated regression equation, we assume that there is some true equation that describes the relationship between <span class="math inline">\(X\)</span> and the mean value of <span class="math inline">\(Y\)</span>. This equation is unknown to us. In particular, we don’t know what the coefficients are in this equation. In the estimated regression equation, we used <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> to represent the <span class="math inline">\(Y\)</span>-intercept and slope, respectively. These two coefficients are estimates of the unknown regression coefficients in the true equation. We will use the Greek letter <span class="math inline">\(\beta\)</span> (pronounced “beta”) to denote these true unknown coefficients.</p>
 <p>The true regression line is written as: <span class="math display">\[
 \textrm{Expected value of }~Y = \beta_0 + \beta_1 X
@@ -381,7 +385,15 @@ Y = \beta_0 + \beta_1 X + \epsilon
 </div>
 <div id="checking-requirements-of-simple-linear-regression" class="section level2">
 <h2>Checking Requirements of Simple Linear Regression</h2>
-<p>In order to do hypothesis tests and confidence intervals using a regression line, we need to be sure that certain conditions are satisfied. There are five requirements for a linear regression model: 1.<span id='linear'><span> There is a linear relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. 2.<span id='normal'><span> The error term (<span class="math inline">\(\epsilon\)</span>) is normally distributed. 3.<span id='const'><span> The variance of the error terms is constant for all values of <span class="math inline">\(X\)</span>. 4.<span id='fixed'><span> The <span class="math inline">\(X\)</span>’s are fixed and measured without error. (In other words, the <span class="math inline">\(X\)</span>’s can be considered as known constants.) 5.<span id='indep'><span> The observations are independent. These must be satisfied in order to conduct a hypothesis test or create confidence intervals involving regression lines.</p>
+<p>In order to do hypothesis tests and confidence intervals using a regression line, we need to be sure that certain conditions are satisfied. There are five requirements for a linear regression model:</p>
+<ol style="list-style-type: decimal">
+<li><span id='linear'><span> There is a linear relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</li>
+<li><span id='normal'><span> The error term (<span class="math inline">\(\epsilon\)</span>) is normally distributed.</li>
+<li><span id='const'><span> The variance of the error terms is constant for all values of <span class="math inline">\(X\)</span>.</li>
+<li><span id='fixed'><span> The <span class="math inline">\(X\)</span>’s are fixed and measured without error. (In other words, the <span class="math inline">\(X\)</span>’s can be considered as known constants.)</li>
+<li><span id='indep'><span> The observations are independent.</li>
+</ol>
+<p>These must be satisfied in order to conduct a hypothesis test or create confidence intervals involving regression lines.</p>
 <p>We will illustrate the process of checking requirements using the estuarine crocodile data.</p>
 <div id="scatterplot" class="section level3">
 <h3>Scatterplot</h3>
@@ -405,10 +417,10 @@ Excel Instructions
 <div class="Summary">
 <p><strong>To find the residuals in Excel, do the following:</strong></p>
 <ul>
-<li>Open <a href="./Data/QuantitativeInferenceProcedures.xlsx">QuantitativeInferenceProcedures.xlsx</a> and click on the “Linear Regression” tab</li>
-<li>Copy and Paste the dependent (or response) variable into the “Response Variable” column (Column B). The dependent variable is also known as the response variable. It is the thing you are trying to predict. Often it is the more difficult/expensive variable to measure.</li>
-<li>Copy and paste the independent (or explanatory) variable into the “explanatory variable” column (Column A).</li>
-<li>Your residuals will then be calculated in column E of the Excel Spreadsheet. <br></li>
+<li>Open <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> and click on the “Linear Regression” tab</li>
+<li>Copy and Paste the dependent (or response) variable into the “Y” column (Column B). The dependent variable (or response variable) is the thing you are trying to predict. Often it is the more difficult/expensive variable to measure.</li>
+<li>Copy and paste the independent (or explanatory) variable into the “X” column (Column A).</li>
+<li>Your residuals will then be calculated in column Y of the Excel Spreadsheet. <br></li>
 </ul>
 </div>
 <p><br></p>
@@ -424,10 +436,9 @@ Excel Instructions
 <div class="Summary">
 <p><strong>To make a residual plot in Excel do the following:</strong></p>
 <ul>
-<li>Once you have already entered in the explanatory and response variables into the correct columns in the <a href="./Data/QuantitativeInferenceProcedures.xlsx">QuantitativeInferenceProcedures.xlsx</a> spreadsheet, you are given a column of residuals in column E.<br />
+<li>Once you have already entered in the explanatory and response variables into the correct columns in the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> spreadsheet, you are given a scatter plot of residuals starting in cell S21, just below the Normal Q-Q plot.<br />
 </li>
-<li>Highlight both column D and E (Explanatory Variable and Residuals)</li>
-<li>Click on the Insert Tab, and then click on “Scatter”. You want the first choice (Scatter with only markers), so select the first scatter plot choice. <br></li>
+<li>To create a residual plot on your own, you can highlight columns X and Y, then click on the Insert Ribbon, and then click on “Scatter” (or the icon that looks like a scatter plot). You want the first choice (Scatter with only markers), so select the first scatter plot choice. <br></li>
 </ul>
 </div>
 <p><br></p>
@@ -445,7 +456,7 @@ Excel Instructions
 <h3>Q-Q Plot of the Residuals</h3>
 <p>Once the residuals have been calculated in Excel, we can assess if they are normally distributed using a Q-Q plot. We simply make a Q-Q plot of the residuals. If the points in the Q-Q plot are close to the line, then we conclude that the residuals are normally distributed.</p>
 <p><img src="Images/EstuarineCrocodile-QQplot-Residuals-SPSS.png"></p>
-<p>The Q-Q plot of the residuals for the estuarine crocodile data show a straight line. We do not have evidence of nonnormality in the residuals. We conclude that the residuals are normally distributed.</p>
+<p>The Q-Q plot of the residuals for the estuarine crocodile data show a straight line. We do not have evidence of nonnormality in the residuals. We conclude that the residuals are normally distributed. Looking at a histogram of the residuals is another tool to help you assess whether the residuals are normally distributed.</p>
 </div>
 <div id="requirements-summary" class="section level3">
 <h3>Requirements Summary</h3>
@@ -636,7 +647,7 @@ Knowing the value of one of the <span class="math inline">\(Y\)</span>’s<br />
 <h3>Estuarine Crocodiles</h3>
 <p>We want to know if there is a linear relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. To test for this, we need to determine if the slope is different from zero. If the slope is zero, then that suggests that there is no linear relationship between the two variables. If the slope is not zero, that suggests that there is a linear relationship between the two variables.</p>
 <p>The regression output will include all the calculations you need to conduct a hypothesis test for the regression slope:</p>
-<p><img src="Images/SPSS_Estuarine_Croc_Regression_output.PNG"></p>
+<p><img src="Images/EstuarineCrocodile_HypTest_Output.PNG"></p>
 <p>In this course, we will test if the true slope is different from zero. If the slope equals zero, then the regression line reduces from: <span class="math display">\[Y = \beta_0 + \beta_1 X + \epsilon\]</span></p>
 <p>to: <span class="math display">\[Y = \beta_0 + \epsilon\]</span></p>
 <p>In other words, the independent variable <span class="math inline">\(X\)</span> does not affect the value of the dependent variable <span class="math inline">\(Y\)</span>.</p>
@@ -657,38 +668,40 @@ n=28 \\
 t=35.588
 \]</span></p>
 <p>This is a tremendously large value for t. This indicates that there is a lot of evidence against the null hypothesis.</p>
-<p>The degrees of freedom are given in the ANOVA table in the “Residual” row under the “df” column:</p>
-<p><img src="Images/SPSS_Estuarine_Croc_Regression_output_df.PNG"></p>
-<p>Remember, the <span class="math inline">\(t\)</span> has one number describing its degrees of freedom. The degrees of freedom equals 26 for the estuarine crocodile data. <span class="math display">\[
+<!-- The degrees of freedom are given in the ANOVA table in the "Residual" row under the "df" column:
+
+<img src="Images/SPSS_Estuarine_Croc_Regression_output_df.PNG"> -->
+<p>Remember, the <span class="math inline">\(t\)</span> distribution has one number describing its degrees of freedom. The degrees of freedom for this test is not shown on the Excel sheet, but is easy to calculate by hand. Because we used the dataset to estimate two population parameters (a slope and a y-intercept) we have used two degrees of freedom. There are 28 observations in our dataset. The degrees of freedom equals <span class="math inline">\(28-26 = 2\)</span> for the estuarine crocodile data. <span class="math display">\[
 df=26
 \]</span></p>
-<p>The <span class="math inline">\(P\)</span>-value is given under the “Sig.” column of the Coefficients table. With a test statistic of <span class="math inline">\(t=35.588\)</span>, we get a very small <span class="math inline">\(P\)</span>-value.</p>
+<p>With a test statistic of <span class="math inline">\(t=35.588\)</span>, we get a very small <span class="math inline">\(P\)</span>-value, shown in cell Q9.</p>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <!-- {{Software_Filter | PageName=EstuarineCrocodilePvalue }} -->
-<div class="SoftwareHeading">
-Excel Instructions
-</div>
+<!--
+<div class="SoftwareHeading">Excel Instructions</div>
 <div class="Summary">
-<p>Note that in the output for Excel, the <span class="math inline">\(P\)</span>-value is given in scientific notation. Also note that there are two values under <span class="math inline">\(P\)</span>-value. One is for the slope and the other is for the y-intercept. In this class we will always be looking at the slope, which is the bottom or the “Predictors”. So, our <span class="math inline">\(P\)</span>-value for this test is written as:</p>
-<span class="math display">\[
+Note that in the output for Excel, the $P$-value is given in scientific notation.  Also note that there are two values under $P$-value.  One is for the slope and the other is for the y-intercept.  In this class we will always be looking at the slope, which is the bottom or the "Predictors".  So, our $P$-value for this test is written as:
+
+$$
 P\textrm{-value} = 0.0000000000000000000000107211   
-\]</span>
-<center>
-or as
-</center>
-<p><span class="math display">\[
+$$
+<center>or as</center>
+$$
 1.07211E^-23
-\]</span></p>
-<p>Assuming <span class="math inline">\(\alpha=0.05\)</span>, then <span class="math inline">\(P\textrm{-value} = 1.07211E^-23 &lt; 0.05 = \alpha\)</span>. <br></p>
+$$
+
+Assuming $\alpha=0.05$, then $P\textrm{-value} = 1.07211E^-23 < 0.05 = \alpha$.
+<br>
 </div>
-<p><br></p>
-<p>We reject the null hypothesis, since the <span class="math inline">\(P\)</span>-value is less than the level of significance. There is sufficient evidence to suggest that there is a linear relationship between the head length and the body length of estuarine crocodiles.</p>
+<br>
+-->
+<p>Assuming <span class="math inline">\(\alpha=0.05\)</span>, we reject the null hypothesis since the <span class="math inline">\(P\)</span>-value is less than the level of significance. There is sufficient evidence to suggest that there is a linear relationship between the head length and the body length of estuarine crocodiles.</p>
 <p>It was appropriate to conduct this analysis, since the requirements of simple linear regression were satisfied.</p>
 </div>
 <div id="manatees" class="section level3">
 <h3>Manatees</h3>
 <p>Here is an excerpt from the output for the <a href="./Data/Manatees.xlsx">Manatees.xlsx</a> data set: <!--<cite>Manatees06</cite>--></p>
-<p><img src="Images/Manatees-RegressionOutput-SPSS.png"></p>
+<p><img src="Images/Manatees-RegressionOutput.png"></p>
 <p>The null and alternative hypotheses for this test are: <span class="math display">\[
 \begin{array}{ll}
 H_0: &amp; \beta_1  =  0\\
@@ -697,40 +710,42 @@ H_a: &amp; \beta_1 \ne 0\\
 \]</span></p>
 <p>The relevant summary statistics include the sample size and the estimated regression equation (<span class="math inline">\(\hat Y = b_0 + b_1 X\)</span>). <span class="math display">\[
 \begin{array}{c}
-n=30 \\
+n=35 \\
 \hat Y = -42.542 + 0.129 X \\
 \end{array}
 \]</span></p>
-<p>The test statistic follows a <span class="math inline">\(t\)</span>-distribution. Remember, we are conducting a test for the slope, so the information we need is given in the second row of the table labeled “Power Boats (in 1000’s)”. Looking across the second row, we find the value of <span class="math inline">\(t\)</span> is given as 15.491. <span class="math display">\[
+<p>The test statistic follows a <span class="math inline">\(t\)</span>-distribution.</p>
+<p><img src="Images/Manatees-RegressionOutput-HypTest.png"></p>
+<p>Remember, we are conducting a test for the slope, so the information we need is given in the block of output labeled “Hypothesis Test of the Regression Slope”. We find the value of <span class="math inline">\(t\)</span> is given as 15.491. <span class="math display">\[
 t=15.491
 \]</span></p>
 <p>Think about this result. Is this a large or a small value for <span class="math inline">\(t\)</span>? What does this say about the conclusion to our test?</p>
-<p>The degrees of freedom are given in the ANOVA table:</p>
-<p><img src="Images/Manatees-RegressionOutput-SPSS.png"></p>
-<p>Remember, the <span class="math inline">\(t\)</span> has one number describing its degrees of freedom. For this test, the degrees of freedom are listed in the “Residual” row under the “df” column. For the manatees example, the degrees of freedom equals 28. <span class="math display">\[
-df=28
+<p>Remember, the <span class="math inline">\(t\)</span> has one number describing its degrees of freedom. For this test, the degrees of freedom <span class="math inline">\(35-2 = 33\)</span>. We subtract two from the total number of observations because we estimated a 2 population parameters for the line: a y-intercept and a slope.<br />
+<span class="math display">\[
+df=33
 \]</span></p>
-<p>The <span class="math inline">\(P\)</span>-value is given under the “Sig.” column of the Coefficients table. With a test statistic of <span class="math inline">\(t=15.491\)</span>, we get a very small <span class="math inline">\(P\)</span>-value.</p>
+<p>With a test statistic of <span class="math inline">\(t=15.491\)</span> and <span class="math inline">\(33\)</span> degrees of freedom, we get a very small <span class="math inline">\(P\)</span>-value. The value is so small that when we round to just three decimal places, the <span class="math inline">\(P\)</span>-value appears to be zero.</p>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <!-- {{Software_Filter | PageName=ManateePvalue }} -->
-<div class="SoftwareHeading">
-Excel Instructions
-</div>
+<!--
+<div class="SoftwareHeading">Excel Instructions</div>
 <div class="Summary">
-<p>Note that in the output for Excel, the <span class="math inline">\(P\)</span>-value is given in scientific notation. Also note that there are two values under <span class="math inline">\(P\)</span>-value. One is for the slope and the other is for the y-intercept. In this class we will always be looking at the slope, which is the bottom or the “Predictors”. So, our <span class="math inline">\(P\)</span>-value for this test is written as:</p>
-<span class="math display">\[
+Note that in the output for Excel, the $P$-value is given in scientific notation.  Also note that there are two values under $P$-value.  One is for the slope and the other is for the y-intercept.  In this class we will always be looking at the slope, which is the bottom or the "Predictors".  So, our $P$-value for this test is written as:
+
+$$
 P\textrm{-value} = 0.000000000000000000105954   
-\]</span>
-<center>
-or as
-</center>
-<p><span class="math display">\[
+$$
+<center>or as</center>
+$$
 1.05954E^-19
-\]</span></p>
-<p>Assuming <span class="math inline">\(\alpha=0.05\)</span>, then <span class="math inline">\(P\textrm{-value} = 1.05954E^-19 &lt; 0.05 = \alpha\)</span>. <br></p>
+$$
+
+Assuming $\alpha=0.05$, then $P\textrm{-value} = 1.05954E^-19 < 0.05 = \alpha$.
+<br>
 </div>
-<p><br></p>
-<p>Our decision rule is to reject the null hypothesis, since the <span class="math inline">\(P\)</span>-value is less than the level of significance. There is sufficient evidence to suggest that there is a linear relationship between the number of powerboats registered in Florida and the number of manatees killed by powerboats. This conclusion fits our intuition. If there are more boats on the water, it seems plausible that this will affect the number of manatees killed. If any statistical conclusion is counterintuitive, you should always be very wary!</p>
+<br>
+-->
+<p>Assuming <span class="math inline">\(\alpha=0.05\)</span>, our decision rule is to reject the null hypothesis, since the <span class="math inline">\(P\)</span>-value is less than the level of significance. There is sufficient evidence to suggest that there is a linear relationship between the number of powerboats registered in Florida and the number of manatees killed by powerboats. This conclusion fits our intuition. If there are more boats on the water, it seems plausible that this will affect the number of manatees killed. If any statistical conclusion is counterintuitive, you should always be very wary!</p>
 <p><br></p>
 </div>
 </div>
@@ -747,21 +762,18 @@ Excel Instructions
 <div class="Summary">
 <p><strong>To find the residuals in Excel, do the following:</strong></p>
 <ul>
-<li>Open <a href="./Data/QuantitativeInferenceProcedures.xlsx">QuantitativeInferenceProcedures.xlsx</a> and click on the “Linear Regression” tab</li>
-<li>Copy and Paste the dependent (or response) variable into the “Response Variable” column (Column B). The dependent variable is also known as the response variable. It is the thing you are trying to predict. Often it is the more difficult/expensive variable to measure.</li>
-<li>Copy and paste the independent (or explanatory) variable into the “explanatory variable” column (Column A).</li>
-<li>You can change the confidence level in cell H3. The default is 95%.<br />
+<li>Open <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> and click on the “Linear Regression” tab</li>
+<li>Copy and Paste the dependent (or response) variable into the “Y” column (Column B). The dependent variable is also known as the response variable. It is the thing you are trying to predict. Often it is the more difficult/expensive variable to measure.</li>
+<li>Copy and paste the independent (or explanatory) variable into the “X” column (Column A).</li>
+<li>You can change the confidence level in cell N12.<br />
 </li>
-<li>The confidence interval for the slope (X) is found in cells L14 and M14.<br />
-</li>
-<li>The confidence interval for the y-intercept (Y) is found in cells L13 and M13. <br></li>
+<li>The confidence interval for the slope is found in cells P15 and Q15.</li>
 </ul>
+<p><img src="Images/Manatees-RegressionOutputCIs.png"> <br></p>
 </div>
 <p><br></p>
-<p>The confidence intervals will be presented in the Coefficients box in the output.</p>
-<p><img src="Images/Manatees-RegressionOutputCIs-SPSS.png"></p>
 <p>In this case, the 95% confidence interval for the true slope of the regression line relating the number of thousand powerboats registered in Florida to the number of manatees killed is <span class="math inline">\((0.112, 0.146)\)</span>. Remember the slope is the amount that <span class="math inline">\(Y\)</span> is expected to change if <span class="math inline">\(X\)</span> changes by one unit. Also, recall that <span class="math inline">\(X\)</span> is given in terms of thousands of powerboats registered. If an additional one thousand powerboats are registered (one unit increase in <span class="math inline">\(X\)</span>,) we are 95% confident that the number of manatees killed will increase between 0.112 and 0.146. Or in other words, if 100 thousand additional powerboats are registered in Florida, we expect 11.2 to 14.6 manatees will be killed.</p>
-<p>The 95% confidence interval for the <span class="math inline">\(Y\)</span>-intercept is <span class="math inline">\((-55.460, -29.623)\)</span>. We are 95% confident that the expected number of manatees that will be killed if there are zero powerboats registered in Florida is between <span class="math inline">\(-55.5\)</span> and <span class="math inline">\(-29.6\)</span>. This is illogical. There cannot be a negative number of manatees killed. The <span class="math inline">\(Y\)</span>-intercept is not interpretable.</p>
+<p>Though the Math221 Excel toolbox does not compute a 95% confidence interval for the <span class="math inline">\(Y\)</span>-intercept, many softwares do. The 95% confidence interval for the <span class="math inline">\(Y\)</span>-intercept is <span class="math inline">\((-55.460, -29.623)\)</span>. We are 95% confident that the expected number of manatees that will be killed if there are zero powerboats registered in Florida is between <span class="math inline">\(-55.5\)</span> and <span class="math inline">\(-29.6\)</span>. This is illogical. There cannot be a negative number of manatees killed. The <span class="math inline">\(Y\)</span>-intercept is not interpretable.</p>
 <p>Sometimes the <span class="math inline">\(Y\)</span>-intercept makes sense in the context of the problem, but in many cases it is just used to get the best fit for the regression equation.</p>
 </div>
 <div id="estuarine-crocodiles-1" class="section level3">
