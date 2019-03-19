@@ -397,6 +397,8 @@ We are often interested in the range of plausible values for the true regression
 - The confidence interval for the slope is found in cells P15 and Q15.  
 
 <img src="./Images/Manatees-RegressionOutputCIs.png">
+
+
 <br>
 </div>
 <br>
