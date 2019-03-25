@@ -408,8 +408,8 @@ The following figures illustrate possible situations where the relationship betw
 <table>
 <thead>
 <tr class="header">
-<th><p>Figure 13</p></th>
-<th><p>Figure 14</p></th>
+<th><p>Figure 15</p></th>
+<th><p>Figure 16</p></th>
 </tr>
 </thead>
 <tbody>
