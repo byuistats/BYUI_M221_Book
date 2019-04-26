@@ -174,7 +174,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Math 221B</a>
+      <a class="navbar-brand" href="index.html">Math 221</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -534,7 +534,7 @@ $(document).ready(function () {
 <p>It is not sufficient to gain an intuitive sense for the data. We will test if there is sufficient evidence to reject the null hypothesis that the true mean weight of tour boat passengers is 140 pounds.</p>
 <p>Assuming the null hypothesis is true, what is the probability that we would observe a sample mean as extreme or more extreme than the values we observed? This probability is called the <span class="math inline">\(P\)</span>-value.</p>
 <p>To find the <span class="math inline">\(P\)</span>-value, we first calculate the number of standard deviations that <span class="math inline">\(\bar x\)</span> is away from the assumed value of true mean <span class="math inline">\(\mu=140\)</span> pounds. This is our <span class="math inline">\(z\)</span>-score. Then we use the applet to determine the probability of observing a value of <span class="math inline">\(z\)</span> that is as large or larger than the value we observed.</p>
-<p><span class="math display">\[\displaystyle{ z= \frac{ \bar x − \mu}{\sigma/\sqrt{n}} = \frac{177.6−140}{26.7/\sqrt{48}}=9.757 }\]</span></p>
+<p><span class="math display">\[\displaystyle{ z= \frac{ \bar{x} − \mu}{\sigma/\sqrt{n}} = \frac{177.6−140}{26.7/\sqrt{48}}=9.757 }\]</span></p>
 <p>We use the applet to determine the probability of observing a value of <span class="math inline">\(z\)</span> that is as large or larger than <span class="math inline">\(9.757\)</span>. This is the same as the probability of observing a value of <span class="math inline">\(\bar x =177.6\)</span> or more pounds, given that the true mean really is <span class="math inline">\(\mu = 140\)</span> pounds.</p>
 <p>The area to the right of <span class="math inline">\(z=9.757\)</span> is so small, the normal probability applet gives the area as “1.7217e-22.” This is how a computer represents scientific notation. This number is actually <span class="math inline">\(1.7217x10^{-22}\)</span> or in other words, 0.000 000 000 000 000 000 000 172 17. This is the probability that a mean of <span class="math inline">\(\bar x=177.6\)</span> pounds was observed just by chance assuming the true mean is <span class="math inline">\(\mu = 140\)</span> lbs. This is very, very unlikely. A more plausible explanation is that the mean weight of individuals in the population is greater than 140 pounds.</p>
 <p>Based on this analysis and the hypothesis test, the evidence against <span class="math inline">\(H_0\)</span> is strong enough to conclude that if every seat on the Ethan Allen was occupied, that the boat would be carrying a greater load than it was certified to handle.</p>
@@ -701,7 +701,12 @@ Answer the following questions:
 <p>If we gather enough evidence against the null hypothesis and determine that it should be rejected, we need another hypothesis to propose in its place. This is called the <strong>alternative hypothesis</strong>. If 98.6° F is not the correct body temperature, then it is logical to propose the following alternative hypothesis:</p>
 <p><span class="math display">\[H_a: \mu \ne 98.6\]</span></p>
 <p>To be brief in writing, we label the null hypothesis <span class="math inline">\(H_0\)</span>. The zero in the subscript represents “null,” “baseline,” “default,” “no effect,” etc. Similarly, we label the alternative hypothesis <span class="math inline">\(H_a\)</span>.</p>
-<p>Our alternative hypothesis could have been written as: - <span class="math inline">\(H_a: \mu \ne 98.6\)</span> (two-sided hypothesis; two-tailed) - <span class="math inline">\(H_a: \mu &lt; 98.6\)</span> (one-sided hypothesis; left-tailed) - <span class="math inline">\(H_a: \mu &gt; 98.6\)</span> (one-sided hypothesis; right-tailed)</p>
+<p>Our alternative hypothesis could have been written as:</p>
+<ul>
+<li><span class="math inline">\(H_a: \mu \ne 98.6\)</span> (two-sided hypothesis; two-tailed)</li>
+<li><span class="math inline">\(H_a: \mu &lt; 98.6\)</span> (one-sided hypothesis; left-tailed)</li>
+<li><span class="math inline">\(H_a: \mu &gt; 98.6\)</span> (one-sided hypothesis; right-tailed)</li>
+</ul>
 <p>Notice that each of these is a viable alternative to the requirement that the mean is 98.6 degrees. We would only use <span class="math inline">\(&lt;\)</span> or <span class="math inline">\(&gt;\)</span> if we had a belief in advance that the mean was less than or greater than 98.6. If we do not have a strong reason to believe the mean is either smaller or larger than the stated value–before we collect our data–then, we use <span class="math inline">\(\ne\)</span> in our alternative hypothesis.</p>
 <p>It is important that the null and alternative hypotheses be determined prior to collecting the data. It is not appropriate to use the data from your study to choose the alternative hypothesis that will be used to test the same data! This is an example of using data twice, once to choose the test and again to conduct the test. It is okay to use data from a previous study to determine your null and alternative hypotheses, but it is an improper use of the statistical procedures to use the data to define <em>and</em> conduct a hypothesis test.</p>
 <p>Notice that the null and alternative hypotheses are statements about a population parameter (e.g. <span class="math inline">\(\mu\)</span>.) They will never involve a sample statistic (e.g. <span class="math inline">\(\bar x\)</span>.) Population parameters are unknown, and we are trying to make a judgement about whether or not they are equal to a particular value. Sample statistics are calculated from our data, so there is no reason to do any test to assess what their value is.</p>
