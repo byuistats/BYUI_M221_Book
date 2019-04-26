@@ -216,7 +216,7 @@ Assuming the null hypothesis is true, what is the probability that we would obse
 
 To find the $P$-value, we first calculate the number of standard deviations that $\bar x$ is away from the assumed value of true mean $\mu=140$ pounds.  This is our $z$-score.  Then we use the applet to determine the probability of observing a value of $z$ that is as large or larger than the value we observed.
 
-$$\displaystyle{ z= \frac{ \bar x − \mu}{\sigma/\sqrt{n}} = \frac{177.6−140}{26.7/\sqrt{48}}=9.757 }$$
+$$\displaystyle{ z= \frac{ \bar{x} − \mu}{\sigma/\sqrt{n}} = \frac{177.6−140}{26.7/\sqrt{48}}=9.757 }$$
 
 We use the applet to determine the probability of observing a value of $z$ that is as large or larger than $9.757$.  This is the same as the probability of observing a value of $\bar x =177.6$ or more pounds, given that the true mean really is $\mu = 140$ pounds.
 
@@ -375,6 +375,7 @@ $$H_a: \mu \ne 98.6$$
 To be brief in writing, we label the null hypothesis $H_0$. The zero in the subscript represents "null," "baseline," "default," "no effect," etc.  Similarly, we label the alternative hypothesis $H_a$.
 
 Our alternative hypothesis could have been written as:
+
 - $H_a: \mu \ne 98.6$  (two-sided hypothesis; two-tailed)
 - $H_a: \mu < 98.6$    (one-sided hypothesis; left-tailed)
 - $H_a: \mu > 98.6$    (one-sided hypothesis; right-tailed)
@@ -699,7 +700,7 @@ $$
 
 <a href="javascript:showhide('Q15')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q15" style="display:none;">
-* A Type I error would be committed if the FDA decided that the drug improves patient’s conditions, when in actuality it does not.
+* A Type I error would be committed if the FDA decided that the drug improves patient's conditions, when in actuality it does not.
 </div>
 <br>
 
