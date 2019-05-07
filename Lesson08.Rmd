@@ -14,10 +14,14 @@ output:
 </script>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 To prepare for the exam, you are strongly encouraged to review the readings, homework exercises, and other activities from Unit 1.
 =======
 This is not designed to be a comprehensive review.  There may be items on the exam that are not covered in this review.  Similarly, there may be items in this review that are not tested on this exam.  You are strongly encouraged to review the readings, homework exercises, and other activities from Unit 1 as you prepare for the exam. 
 >>>>>>> Nabber cleanup of "221B" to just "221"
+=======
+To prepare for the exam, you are strongly encouraged to review the readings, homework exercises, and other activities from Unit 1.
+>>>>>>> origin/master
 
 <!-- Use the [Index](http://statistics.byuimath.com/index.php?title=Index){target="_blank"} to review definitions of important terms. 
 Index needs to be built-->
@@ -177,9 +181,12 @@ $$P(\text{not}~X) = 1 - P(X)$$
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> Nabber cleanup of "221B" to just "221"
+=======
+>>>>>>> origin/master
 ## Navigation
 
 <center>
