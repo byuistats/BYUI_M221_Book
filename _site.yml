@@ -72,3 +72,4 @@ output:
       after_body: footer.html
     toc_float: true
     css: styles.css
+    js: custom.js

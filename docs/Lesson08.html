@@ -70,9 +70,7 @@ h6 {
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -91,8 +89,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -108,7 +112,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -128,6 +131,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -149,19 +189,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -174,7 +280,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Math 221B</a>
+      <a class="navbar-brand" href="index.html">Math 221</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -309,9 +415,8 @@ $(document).ready(function () {
 
 <div id="TOC">
 <ul>
-<li><a href="#lesson-outcomes">Lesson Outcomes</a></li>
-<li><a href="#lesson-summaries">Lesson Summaries</a></li>
-<li><a href="#review-questions">Review Questions</a></li>
+<li><a href="#unit-1-lesson-outcomes">Unit 1 Lesson Outcomes</a></li>
+<li><a href="#unit-1-lesson-summaries">Unit 1 Lesson Summaries</a></li>
 <li><a href="#navigation">Navigation</a></li>
 </ul>
 </div>
@@ -322,13 +427,12 @@ $(document).ready(function () {
     e.style.display = (e.style.display == 'block') ? 'none' : 'block';
  }
 </script>
-<p>The following questions are intended to help you judge your preparation for this exam. Carefully work through the problems.<br /> <strong>These questions are repeated on the preparation quiz for this lesson.</strong></p>
 <p>This is not designed to be a comprehensive review. There may be items on the exam that are not covered in this review. Similarly, there may be items in this review that are not tested on this exam. You are strongly encouraged to review the readings, homework exercises, and other activities from Unit 1 as you prepare for the exam.</p>
 <!-- Use the [Index](http://statistics.byuimath.com/index.php?title=Index){target="_blank"} to review definitions of important terms. 
 Index needs to be built-->
 <p><br></p>
-<div id="lesson-outcomes" class="section level2">
-<h2>Lesson Outcomes</h2>
+<div id="unit-1-lesson-outcomes" class="section level2">
+<h2>Unit 1 Lesson Outcomes</h2>
 <a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Lesson Outcomes</span></a>
 <div id="oc" style="display:none;">
 <p>The expectation on the exam is that you should be able to do the following:</p>
@@ -365,8 +469,8 @@ Index needs to be built-->
 </div>
 <p><br></p>
 </div>
-<div id="lesson-summaries" class="section level2">
-<h2>Lesson Summaries</h2>
+<div id="unit-1-lesson-summaries" class="section level2">
+<h2>Unit 1 Lesson Summaries</h2>
 <a href="javascript:showhide('su')"><span style="font-size:8pt;">Show/Hide Unit 1 Summaries</span></a>
 <div id="su" style="display:none;">
 <br>
@@ -461,403 +565,6 @@ Lesson 07 Recap
 </div>
 <p><br></p>
 </div>
-<p><br></p>
-</div>
-<div id="review-questions" class="section level2">
-<h2>Review Questions</h2>
-<ol style="list-style-type: decimal">
-<li><p>What is the name of the important statistical result that guarantees that the sampling distribution of the sample mean <span class="math inline">\(\bar x\)</span> will be normal, if the sample size is large?</p></li>
-<li><p>What is the name of the important statistical result that states that when the sample size is large, the sample mean <span class="math inline">\(\bar x\)</span> will be close to the population mean <span class="math inline">\(\mu\)</span>?</p></li>
-<li><p>Which of the following variables is/are categorical?</p>
-<p>The number of animals in the local zoo</p>
-<p>A randomly selected brand of toothpaste at a convenience store</p>
-<p>Age in years of a randomly selected vehicle in a parking lot</p></li>
-<li><p>The mean I.Q. test score in the United States is 100. Twenty randomly selected Statistics students took an I.Q. test, and the mean of their scores was 112. Which of these two numbers is a parameter and which is a statistic?</p></li>
-<li><p>Rotham City has four distinct neighborhoods. The property values are very similar within each neighborhood, but they vary considerably from neighborhood to neighborhood. One neighborhood has very low property values and another has extremely high property values. Property taxes are usually roughly proportional to the property values. What type of sample should we collect to gauge the residents’ responses to a proposed increase in property taxes?</p></li>
-<li><p>When designed experiments are conducted in public school systems, researchers typically choose a particular district, and randomly select teachers of, say, fourth grade students in that district. The experiment is then conducted using all the students in the selected classes. Which type of sampling scheme is implemented?</p></li>
-<li><p>At a school fund raiser, the name of every person who attended was entered into a drawing. At the end of the evening, six names were selected to receive door prizes. Which type of sampling scheme was implemented?</p></li>
-<li><p>A special interest group is conducting a survey regarding wolves in Yellowstone National Park. To adequately gauge opinions on both sides of the political spectrum, the researchers took the list of registered Democrats and selected a simple random sample of 100 people. Then, they took a list of registered Republicans and selected a simple random sample of 100 people. Which type of sampling scheme was implemented?</p></li>
-</ol>
-<p>A survey was taken of purchases at the Crossroads. Open the data file <a href="./Data/CrossroadsPurchases.xlsx">CrossroadsPurchases.xlsx</a> and use this data to answer questions 9 and 10.</p>
-<ol start="9" style="list-style-type: decimal">
-<li><p>Calculate the descriptive statistics of the amounts spent in Crossroads purchases. Give the mean, standard deviation, and five-number summary of the data.</p></li>
-<li><p>Create a histogram representing the amounts spent in Crossroads purchases.</p></li>
-</ol>
-<ul>
-<li><p>Jessica Meir and her research team measured the body temperatures of a sample of diving elephant seals.<!-- \cite{Meir10} --> A thermistor was placed at a specific location on each seal to measure its body temperature. The body temperature of seals tends to decrease as they dive. The researchers estimated the typical body temperature of each seal at the time they initiate a dive and called this the “representative temperature” of the seal.</p></li>
-<li><p>Thermistors were placed in the hepatic sinus of four of the seals (named Bodil, Roberta, Larry, and Per.) The seal’s body temperature at the start of the dive was calculated to be:</p></li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th>
-<p>
-Seal
-</p>
-</th>
-<th>
-<p>
-Representative<br /> Temperature (<span class="math inline">\(^\circ\text{C}\)</span>)
-</p>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>
-<p>
-Bodil
-</p>
-</td>
-<td>
-<p>
-37.91
-</p>
-</td>
-</tr>
-<tr class="even">
-<td>
-<p>
-Roberta
-</p>
-</td>
-<td>
-<p>
-37.25
-</p>
-</td>
-</tr>
-<tr class="odd">
-<td>
-<p>
-Larry
-</p>
-</td>
-<td>
-<p>
-38.98
-</p>
-</td>
-</tr>
-<tr class="even">
-<td>
-<p>
-Per
-</p>
-</td>
-<td>
-<p>
-38.16
-</p>
-</td>
-</tr>
-<tr class="odd">
-<td>
-</td>
-<td>
-</td>
-</tr>
-</tbody>
-</table>
-<p>Complete the following table and answer questions 11 through 14 below.</p>
-<table>
-<thead>
-<tr class="header">
-<th>
-</th>
-<th>
-<p>
-Representative<br /> Temperature (<span class="math inline">\(^\circ\text{C}\)</span>)
-</p>
-</th>
-<th>
-<p>
-Deviation from<br /> the mean
-</p>
-</th>
-<th>
-<p>
-Squared<br /> Deviations
-</p>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>
-<p>
-Seal
-</p>
-</td>
-<td>
-<p>
-<span class="math inline">\(x\)</span>
-</p>
-</td>
-<td>
-<p>
-<span class="math inline">\((x-\bar x)\)</span>
-</p>
-</td>
-<td>
-<p>
-<span class="math inline">\((x-\bar x)^2\)</span>
-</p>
-</td>
-</tr>
-<tr class="even">
-<td>
-<p>
-Bodil
-</p>
-</td>
-<td>
-<p>
-37.91
-</p>
-</td>
-<td>
-<p>
-“A”
-</p>
-</td>
-<td>
-</td>
-</tr>
-<tr class="odd">
-<td>
-<p>
-Roberta
-</p>
-</td>
-<td>
-<p>
-37.25
-</p>
-</td>
-<td>
-</td>
-<td>
-<p>
-“B”
-</p>
-</td>
-</tr>
-<tr class="even">
-<td>
-<p>
-Larry
-</p>
-</td>
-<td>
-<p>
-38.98
-</p>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-<tr class="odd">
-<td>
-<p>
-Per
-</p>
-</td>
-<td>
-<p>
-38.16
-</p>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-<tr class="even">
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-</tbody>
-</table>
-<ol start="11" style="list-style-type: decimal">
-<li><p>What is the value of the number that goes in the position marked with an “A” in the table above?</p></li>
-<li><p>What is the value of the number that goes in the position marked with an “B” in the table above?</p></li>
-<li><p>What quantity is equal to the sum of the numbers in the “Squared Deviations” column?</p>
-<p>A. The mean B. The standard deviation C. The variance D. None of these is correct</p></li>
-<li><p>What is the standard deviation of these temperatures?</p></li>
-<li><p>(True or False) Under certain conditions, the standard deviation can be negative.</p></li>
-<li><p>In the same study, the researchers placed thermistors (temperature sensors) in the three seals (named Chick, Starburst, and Patty) near their spinal cord and brain in the extradural vein. They placed thermistors in six other seals (named Sir Richard, Jerry, Sammy, Knut, Jonesie, and Butler) in their aorta, the largest artery in the body. Finally, they placed thermistors in four other seals (named Bodil, Roberta, Larry, and Per) in their hepatic sinus. The results from this study are summarized in the table below.</p></li>
-</ol>
-<table>
-<thead>
-<tr class="header">
-<th>
-</th>
-<th>
-<p>
-Sample<br /> Size
-</p>
-</th>
-<th>
-<p>
-Mean
-</p>
-</th>
-<th>
-<p>
-Standard<br /> Deviation
-</p>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>
-<p>
-Location
-</p>
-</td>
-<td>
-<p>
-<span class="math inline">\(n\)</span>
-</p>
-</td>
-<td>
-<p>
-<span class="math inline">\(\bar x\)</span>
-</p>
-</td>
-<td>
-<p>
-<span class="math inline">\(s\)</span>
-</p>
-</td>
-</tr>
-<tr class="even">
-<td>
-<p>
-Arterial
-</p>
-</td>
-<td>
-<p>
-6
-</p>
-</td>
-<td>
-<p>
-38.785
-</p>
-</td>
-<td>
-<p>
-1.554
-</p>
-</td>
-</tr>
-<tr class="odd">
-<td>
-<p>
-Extradural
-</p>
-</td>
-<td>
-<p>
-3
-</p>
-</td>
-<td>
-<p>
-37.247
-</p>
-</td>
-<td>
-<p>
-0.577
-</p>
-</td>
-</tr>
-<tr class="even">
-<td>
-<p>
-Hepatic Sinus
-</p>
-</td>
-<td>
-<p>
-4
-</p>
-</td>
-<td>
-<p>
-38.070
-</p>
-</td>
-<td>
-<p>
-0.715
-</p>
-</td>
-</tr>
-<tr class="odd">
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-</tbody>
-</table>
-<p>Which location resulted in the most consistent temperature measurements from one seal to another? Justify your answer.</p>
-<ol start="17" style="list-style-type: decimal">
-<li>In your own words, and without using any mathematical symbols or statistical jargon, explain what the standard deviation is. Do not tell how to calculate the standard deviation, but explain what it represents.</li>
-</ol>
-<ul>
-<li>The number of hours students spent studying for an exam were recorded. The data are represented by the boxplot below. Use this boxplot to answer questions 18 and 19.</li>
-</ul>
-<p><img src="Images/Review_1_Boxplot.jpg"></p>
-<p><br></p>
-<ol start="18" style="list-style-type: decimal">
-<li><p>Give the five-number summary of this data.</p></li>
-<li><p>What percentage of the data lies between 4 hours and 8 hours?</p></li>
-</ol>
-<ul>
-<li>An observation from a normally distributed population is considered “unusual” if it is more than 2 standard deviations away from the mean. There are several contaminants that can harm a city’s water supply. Nitrate concentrations above 10 ppm (parts per million) are considered a health risk for infants less than six month of age. The City of Rexburg reports that the nitrate concentration in the city’s drinking water supply is between 1.59 and 2.52 ppm (parts per million,) and values outside of this range are unusual. We will assume 1.59 ppm is the value of <span class="math inline">\(\mu-2\sigma\)</span> and <span class="math inline">\(\mu+2\sigma\)</span> is equal to 2.52 ppm. It is reasonable to assume the measured nitrate concentration is normally distributed. <!-- (Source:  \texttt{http://www.rexburg.org/departments/publicworks/pdfs/waterQuality2007.pdf}) --> Use this information to answer questions 20 through 22.</li>
-</ul>
-<ol start="20" style="list-style-type: decimal">
-<li><p>Estimate the mean of the measured nitrate concentration in Rexburg’s drinking water.</p></li>
-<li><p>Estimate the standard deviation of the measured nitrate concentration in Rexburg’s drinking water.</p></li>
-<li><p>Between what two measured nitrate concentrations do approximately 68% of the data values lie?</p></li>
-<li><p>What is the mean and standard deviation of the standard normal distribution?</p></li>
-</ol>
-<ul>
-<li>The admissions committees for most masters of business administration (MBA) programs require the Graduate Management Admission Test (GMAT) as part of the application for new students. It has been shown that the scores on the GMAT are normally distributed with a mean of 542.3 and a standard deviation of 120.54. <!-- (Source: www.mba.com.) --> The minimum GMAT score required for admission to the MAcc program in the School of Accountancy at BYU is 500, but it is rare for students with scores less than 600 to be admitted. <!-- (Source: http://marriottschool.byu.edu/soa/macc/admission.cfm.) --> Use this information to answer questions 24 through 32.</li>
-</ul>
-<ol start="24" style="list-style-type: decimal">
-<li><p>What is the probability that a randomly selected student will score above 542.3 on the GMAT?</p></li>
-<li><p>What is the probability that a randomly selected student will score below 600 on the GMAT?</p></li>
-<li><p>What is the probability that a randomly selected student will score 600 or above on the GMAT?</p></li>
-<li><p>Find the GMAT score that corresponds to the 10th percentile.</p></li>
-<li><p>Find the GMAT score that corresponds to the 90th percentile.</p></li>
-<li><p>Find the first quartile of the distribution of GMAT scores.</p></li>
-<li><p>Find the third quartile of the distribution of GMAT scores.</p></li>
-</ol>
-<p>Consider a simple random sample of <span class="math inline">\(n=15\)</span> students taking the GMAT.</p>
-<ol start="31" style="list-style-type: decimal">
-<li><p>What are the mean and standard deviation of the distribution of sample mean scores for all such samples?</p></li>
-<li><p>What is the probability that the sample mean GMAT score for a SRS of <span class="math inline">\(n=15\)</span> students will be greater than 600?</p></li>
-</ol>
 <p><br></p>
 </div>
 <div id="navigation" class="section level2">

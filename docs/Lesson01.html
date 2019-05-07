@@ -70,9 +70,7 @@ h6 {
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -91,8 +89,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -108,7 +112,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -128,6 +131,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -149,19 +189,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -174,7 +280,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Math 221B</a>
+      <a class="navbar-brand" href="index.html">Math 221</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -407,7 +513,7 @@ $(document).ready(function () {
 <div id="course-structure" class="section level2">
 <h2>Course Structure</h2>
 <p>The structure of this course is based on scientific research on student learning and retention. The activities, structure, pace, and repetition are all grounded in modern educational theories and practices. This course has been designed with you, the student, in mind.</p>
-<p>This course consists of 25 lessons. They are presented in a topical order in which concepts and skills learned in the earlier lessons provide the requisite knowledge to succeed in later lessons. If the general order of the lessons doesnâ€™t make sense at first, donâ€™t worry. It will all come together in the end, and youâ€™ll see the reasoning behind why the lessons have been presented in this particular order.</p>
+<p>This course consists of 25 lessons. They are presented in a topical order in which concepts and skills learned in the earlier lessons provide the requisite knowledge to succeed in later lessons. If the general order of the lessons doesn’t make sense at first, don’t worry. It will all come together in the end, and you’ll see the reasoning behind why the lessons have been presented in this particular order.</p>
 <p>Your main goal as a student will be to complete all of the learning activities within each lesson by their due dates every week. These activities follow a consistent weekly schedule, and it will be up to you to make sure that you keep on pace with all your assignments. These weekly activities may include the following:</p>
 <ul>
 <li>Reading assigned texts or viewing presentations.</li>
@@ -417,7 +523,7 @@ $(document).ready(function () {
 <li>Participating in meetings with the instructor, teaching assistants, and other students.</li>
 </ul>
 <p>For many of these activities, the due dates will fall on the same time each week. This will make it easier for you to plan out your weekly study schedule. However, there may be a need to make adjustments to the schedule from time to time. If in doubt, refer to the due dates your instructor has posted in Brainhoney.</p>
-<p>And now for a word of warning. If you start to fall behind, this course has built-in automatic â€œearly warning signalsâ€ that will alert your instructor to possible problems. If your instructor contacts you to check on your progress, it is most likely because you’ve fallen behind in your assignments and triggered an â€œearly warning signal.â€ If this happens, please work with your instructor. Youâ€™ll need to create a study schedule that will catch you up and keep you on pace throughout the semester. This is a rigorous course with a lot of subject matter to cover, and it can be extremely difficult to recover if you fall too far behind in your work. So, please make every effort to study on a regular basis and get your work turned in on time. <br></p>
+<p>And now for a word of warning. If you start to fall behind, this course has built-in automatic “early warning signals” that will alert your instructor to possible problems. If your instructor contacts you to check on your progress, it is most likely because you’ve fallen behind in your assignments and triggered an “early warning signal.” If this happens, please work with your instructor. You’ll need to create a study schedule that will catch you up and keep you on pace throughout the semester. This is a rigorous course with a lot of subject matter to cover, and it can be extremely difficult to recover if you fall too far behind in your work. So, please make every effort to study on a regular basis and get your work turned in on time. <br></p>
 <div id="lesson-pattern" class="section level3">
 <h3>Lesson Pattern</h3>
 <p>The lessons in this course have a similar structure and contain similar basic elements. A typical week consists of two lessons.</p>
@@ -532,7 +638,7 @@ Take a few minutes now to familiarize yourself with the <a href="http://byu-idah
 </div>
 <div id="conclusion" class="section level2">
 <h2>Conclusion</h2>
-<p>As with all the classes you take at BYU-Idaho, in the end it is up to you to decide what you want to get out of this class. If you choose to approach the things you study in class with an open mind, if you prepare diligently and work hard to complete all the learning activities, and if you humbly seek the Lordâ€™s help to understand the intellectual and spiritual truths discussed in this course, you will have an outstanding educational experience that will be a blessing to you throughout your life.</p>
+<p>As with all the classes you take at BYU-Idaho, in the end it is up to you to decide what you want to get out of this class. If you choose to approach the things you study in class with an open mind, if you prepare diligently and work hard to complete all the learning activities, and if you humbly seek the Lord’s help to understand the intellectual and spiritual truths discussed in this course, you will have an outstanding educational experience that will be a blessing to you throughout your life.</p>
 <p><br></p>
 </div>
 <div id="summary" class="section level2">
