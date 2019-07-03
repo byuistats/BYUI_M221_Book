@@ -97,7 +97,7 @@ A sample of 66 females and 52 males were provided with PTC strips and asked to i
 
 <img src="./Images/Step3.png">
 
-When working with quantitative data, it is natural to summarize the data by computing proportions. If someone has the ability to taste PTC, we will call this a success.  The sample proportion is defined as the number of successes observed divided by the total number of observations.  For the females, the proportion of the sample who could taste the PTC was:
+When working with categorical data, it is natural to summarize the data by computing proportions. If someone has the ability to taste PTC, we will call this a success.  The sample proportion is defined as the number of successes observed divided by the total number of observations.  For the females, the proportion of the sample who could taste the PTC was:
 $$
 \hat p_1 = \frac{x_1}{n_1} = \frac{51}{66}
 $$
