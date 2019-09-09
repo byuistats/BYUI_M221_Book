@@ -27,7 +27,10 @@ Use the menus along the top, or the links in the table below to navigate to the 
 
 <table class="tmain">
 <tr>
-<td>[Lesson 1: Course Introduction](Lesson01.html)</td>
+<td>[Lesson 1: On Campus Course Introduction](Lesson01_Campus.html)</td>
+</tr>
+<tr>
+<td>[Lesson 1: Online Course Introduction](Lesson01.html)</td>
 </tr>
 <tr class="alt">
 <td>[Lesson 2: The Statistical Process & Design of Studies](Lesson02.html)</td>

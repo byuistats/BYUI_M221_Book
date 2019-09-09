@@ -7,7 +7,9 @@ navbar:
       href: index.html
     - text: "Unit 1"
       menu:
-        - text: "Lesson 1: Course Introduction"
+        - text: "Lesson 1: On Campus Course Introduction"
+          href: Lesson01_Campus.html
+        - text: "Lesson 1: Online Course Introduction"
           href: Lesson01.html
         - text: "Lesson 2: The Statistical Process"
           href: Lesson02.html

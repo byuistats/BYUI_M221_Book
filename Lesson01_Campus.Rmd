@@ -1,5 +1,5 @@
 ---
-title: 'Lesson 1: Online Course Introduction'
+title: 'Lesson 1: On Campus Course Introduction'
 output: 
   html_document:
     theme: cerulean
@@ -14,7 +14,7 @@ output:
  }
 </script>
 
-## Lesson Outcomes
+## Lesson 01 Outcomes
 
 <a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="oc" style="display:none;">
@@ -31,8 +31,6 @@ By the end of this lesson, you should be able to:
 ## Welcome to the Course!
 
 In this course, you will explore important connections between the academic discipline of Statistics and the world around us. By pondering these ideas, your understanding of statistics will increase, as will your knowledge and testimony of the restored Gospel of Jesus Christ. In addition, that which you learn in this course will increase your ability to serve others as a disciple of Jesus Christ and help build Zion.
-
-If you have never taken an online class before, you are in for a new and exciting learning experience. This course uses some of the most advanced educational tools. These technologies will help you learn in an effective and efficient way, often allowing you to learn more than you would in a traditional Statistics class---and in less time. Although some of the learning activities will require you to work on your own, you will also be engaged in activities with other students and your instructor. Through your group interactions, you will have many opportunities to teach one another by sharing ideas and solving problems together.
 
 This course has been designed to help you slowly build up a knowledge base of ideas and skills. Not all of these ideas and skills will come easily. It takes a lot of work and practice before some things will even start to make sense, so you should not be surprised to find that it may take you a little time to comprehend these ideas. Just be patient. Once you're far enough into the course, the ideas will start to come together, and you will see how much progress you have really made. You will understand what this course is all about, and you will be glad you persisted in your efforts to learn.
 
@@ -103,8 +101,6 @@ In a spirit of love and service, please reach out to others.  You are not graded
 
 ## Course Structure
 
-The structure of this course is based on scientific research on student learning and retention.  The activities, structure, pace, and repetition are all grounded in modern educational theories and practices.  This course has been designed with you, the student, in mind.
-
 This course consists of 24 lessons. They are presented in a topical order in which concepts and skills learned in the earlier lessons provide the requisite knowledge to succeed in later lessons. If the general order of the lessons doesn’t make sense at first, don’t worry. It will all come together in the end, and you’ll see the reasoning behind why the lessons have been presented in this particular order.
 
 Your main goal as a student will be to complete all of the learning activities within each lesson by their due dates every week. These activities follow a consistent weekly schedule, and it will be up to you to make sure that you keep on pace with all your assignments. These weekly activities may include the following:
@@ -117,84 +113,26 @@ Your main goal as a student will be to complete all of the learning activities w
 
 For many of these activities, the due dates will fall on the same time each week. This will make it easier for you to plan out your weekly study schedule. However, there may be a need to make adjustments to the schedule from time to time. If in doubt, refer to the due dates your instructor has posted in I-learn. 
 
-And now for a word of warning. If you start to fall behind, this course has built-in automatic “early warning signals” that will alert your instructor to possible problems. If your instructor contacts you to check on your progress, it is most likely because you've fallen behind in your assignments and triggered an “early warning signal.” If this happens, please work with your instructor. You’ll need to create a study schedule that will catch you up and keep you on pace throughout the semester. This is a rigorous course with a lot of subject matter to cover, and it can be extremely difficult to recover if you fall too far behind in your work. So, please make every effort to study on a regular basis and get your work turned in on time.
-<br>
+You should create a study schedule that will catch you up and keep you on pace throughout the semester. This is a rigorous course with a lot of subject matter to cover, and it can be extremely difficult to recover if you fall too far behind in your work. So, please make every effort to study on a regular basis and get your work turned in on time.
 
-### Lesson Pattern
+The lessons in this course have a similar structure and contain similar basic elements.  A typical week consists of two lessons.Each lesson will consist of a reading assignment, a reading/preparation quiz, and a homework quiz.
 
-The lessons in this course have a similar structure and contain similar basic elements.  A typical week consists of two lessons.
+The structure of this course fully integrates the BYU-Idaho Learning model with a mixture of preparation activities, teach-one-another activities, and ponder-and-prove activities.
 
-The learning activities fully integrate the BYU-Idaho Learning model.  They contain a mixture of preparation activities, teach-one-another activities, and ponder-and-prove activities. You will need to complete these activities in the order in which they are listed.
-
-#### Individual Preparation
-
-Each lesson begins with a reading assignment.  These readings are provided in this e-textbook.  Be sure to answer the questions in the textbook, since these are an important part of the learning process.  A note page is provided for each reading which you should use to write down the most important concepts from the reading.  Taking good notes is an important part of being prepared for future quizzes and exams.  The reading assignment must be completed before attending Group Preparation.
-
-#### Group Preparation
-
-Group Preparation is an opportunity to share what you have learned from Individual Preparation with your group and to learn from one another. This will help to solidify the concepts presented in the reading. Group Preparation is held twice a week at the same time of day as your class meeting. The Group Preparation session provides opportunities to work in small groups with specially trained TAs. You may choose to meet with your group via [[#Zoom Video Conferencing | Zoom]] or in person.  If you meet in person, one group member will need to be on [[#Zoom Video Conferencing | Zoom]] in order to communicate with the TAs. One member of your group will be chosen to be the Group Leader.  He or she will be responsible for reporting group attendance as well as submitting questions from the group to the TAs which will be communicated to the instructor.  
-
-Please purchase a headset with a microphone and earphones.  You will use these to participate via [[#Zoom Video Conferencing | Zoom]]. Make sure you arrive a little early to each session in order to have time to join the meeting and set up your microphone and headphones.
-
-As a group you will complete the practice problems provided in Part 2 of your Reading Notes and will submit your answers to the TAs for feedback. When you have successfully completed the practice problems and received feedback you may begin the Group Quiz.  While you are encouraged to work together on this quiz, each member of the group must submit his or her own answers in order to receive credit.  Attendance to Group Preparation is a requirement and will be reported to the TAs via the Group Leader. No credit will be given for the group assignment or quiz if you do not attend.
-
-#### Class Meeting
-
-The day after Group Preparation, we will meet as a class.  During the Class Meeting, you will work with students in your group to apply the principles of that lesson. Your instructor will address any questions that were communicated by the TAs from Group Preparation.
-
-#### Homework
-
-The homework is divided into two parts: the homework assignment and the homework quiz. Complete the homework assignment before beginning the quiz. This assignment comes with an answer key so that you may check your work. You are encouraged to collaborate with other students on the homework assignment, but it is important to the learning process that you do your own work. Before working with someone else on the assignment, you should attempt each problem on your own. After you have completed the homework assignment you may begin the homework quiz. You may use your notes, but you should complete the homework quiz without help from others. The quiz will have questions similar to the ones found in the homework assignment, so it is important that you understand well how to work through the problems in the homework assignment before beginning the quiz.
-
-### Benefits of Lesson Schedule
-
-You can use the calendar feature in I-learn to see the schedule of lessons. A typical week consists of two lessons.
-
-There are several benefits of this consistent lesson structure. First, it helps you establish a regular schedule for studying and participating in class activities. Second, it helps you learn more in less time. By the third or fourth lesson, you will find that it takes you less time to navigate through the course and complete certain activities and you will know what you need to do to succeed. Third, it gives you an opportunity to develop discipleship and leadership by teaching other students on a regular basis through class meetings and small group activities. Finally, the lesson structure makes it easier for you to give feedback to the instructor so that future lessons may be improved. This is an important part of the "teach one another" concept in the BYU-Idaho learning model. By giving feedback on what does and does not work for you in each lesson, you help other BYU-Idaho students get more out of the class. So, as you go through each lesson, feel free to make notes about the things that worked well for you, as well as the things that could be improved. Include these ideas in the Lesson Evaluation Survey. Your efforts to provide feedback to the instructor will not only help improve the course, but by taking the time to think about these things, you will become a better teacher yourself.
-
-<br>
 
 ## Course Materials
 
 This course has been designed with the student in mind.  Every effort has been made to provide a high quality experience at the lowest possible cost.
 
-To keep costs as low as possible for students and their families, no textbook is required for this class.  The readings for this course are provided in this wiki.
+**Textbook**
+
+To keep costs as low as possible for students and their families, no physical textbook is required for this class.  The readings for this course are provided on this website and will continue to be available to you after the course is completed.  Please report any problems with the textbook (links not working, loading slowly, inability to view images, etc.) to your instructor. A link to the textbook is found in the resources module. It is highly recommended you bookmark the textbook so that you can easily reference each lesson's reading. 
 
 **Computer Equipment**
 
 You will need:
 -  A laptop
 -  Access to Microsoft Excel 2016 or later
--  A headset with a microphone and earphones is also recommended
-
-**Wiki**
-
-The readings for this course will all be presented in this wiki.  Take some time to explore it.  You can click on [[Main Page]] in the navigation menu (upper left part of the page) to get to the main directory.
-<!--
-Please make an account, so you can get credit for your submissions to the wiki. To set up an account, do the following:
-
-**Step 01**: Click on [http://byui-fdmat-wiki.pagodabox.com/index.php?title=Special:UserLogin&returnto=Main+Page Log in / create account] in the upper right-hand corner of this page.
-
-**Step 02**: Click on "Create an account".
-
-**Step 03**: Choose a user name and password.
-*  <span style="color:red">CAUTION:</span> Do not use your BYU-Idaho (or any other important) password!  This page is not secure.  The information you submit can be viewed by others as it is transmitted.  The company hosting this wiki is working on this issue, but it has not yet been resolved.
-
-**Step 04**: Be sure to give your real name, so you can receive the appropriate points for work you do in the wiki.
-
-**Step 05**: Click "Create account"
--->
-
-##### Zoom Video Conferencing
-
-We will use the software package ''Zoom'' to hold the online course meetings.  Zoom is a software package that allows for virtual meetings, chat, and white board discussions.  Once you get used to its functionality, it will be a great tool for learning.
-
-<br>
-<br>
-<div class="message Note">Take a few minutes now to familiarize yourself with the [Zoom tool](http://byu-idaho.screenstepslive.com/s/17057/m/72167/l/787891-how-do-i-get-started-with-zoom){target="_blank"}</div>
-<br>
-<br>
-
 
 ## Course Resources
 
@@ -273,11 +211,9 @@ As with all the classes you take at BYU-Idaho, in the end it is up to you to dec
 
 <div class="SummaryHeading">Remember...</div>
 <div class="Summary">
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
-- Each lesson follows the same schedule: **Individual and Group Preparation**, **Class Meeting**, and **Homework Assignment and Quiz**. Understanding this layout will help you successfully manage the workload of this class.
 
 - In this class you will use the online textbook that has been written for you by your statistics teachers. All of the assignments and quizzes will be based on the readings, so study it well.
-
+- Most weeks will cover two lessons
 - By doing the work, staying on schedule, and living the Honor Code you _can_ succeed in this class!
 </div>
 <br>
