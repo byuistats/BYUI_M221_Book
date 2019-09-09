@@ -19,6 +19,7 @@ output:
 <a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="oc" style="display:none;">
 By the end of this lesson, you should be able to:
+
 - Understand and explain the course policies
 - Access course resources (course outline, lesson schedule, preparation activities, reading quizzes, homework assignments, assessments, Zoom, etc.)
 - Communicate with your instructor
@@ -31,7 +32,7 @@ By the end of this lesson, you should be able to:
 
 In this course, you will explore important connections between the academic discipline of Statistics and the world around us. By pondering these ideas, your understanding of statistics will increase, as will your knowledge and testimony of the restored Gospel of Jesus Christ. In addition, that which you learn in this course will increase your ability to serve others as a disciple of Jesus Christ and help build Zion.
 
-If you have never taken a hybrid class before, you are in for a new and exciting learning experience. This course uses some of the most advanced educational tools. These technologies will help you learn in an effective and efficient way, often allowing you to learn more than you would in a traditional Statistics class---and in less time. Although some of the learning activities will require you to work on your own, you will also be engaged in activities with other students and your instructor. Through your group interactions, you will have many opportunities to teach one another by sharing ideas and solving problems together.
+If you have never taken an online class before, you are in for a new and exciting learning experience. This course uses some of the most advanced educational tools. These technologies will help you learn in an effective and efficient way, often allowing you to learn more than you would in a traditional Statistics class---and in less time. Although some of the learning activities will require you to work on your own, you will also be engaged in activities with other students and your instructor. Through your group interactions, you will have many opportunities to teach one another by sharing ideas and solving problems together.
 
 This course has been designed to help you slowly build up a knowledge base of ideas and skills. Not all of these ideas and skills will come easily. It takes a lot of work and practice before some things will even start to make sense, so you should not be surprised to find that it may take you a little time to comprehend these ideas. Just be patient. Once you're far enough into the course, the ideas will start to come together, and you will see how much progress you have really made. You will understand what this course is all about, and you will be glad you persisted in your efforts to learn.
 
@@ -127,7 +128,7 @@ The learning activities fully integrate the BYU-Idaho Learning model.  They cont
 
 #### Individual Preparation
 
-Each lesson begins with a reading assignment.  These readings are provided in this wiki.  Be sure to answer the questions in the wiki, since these are an important part of the learning process.  A note page is provided for each reading which you should use to write down the most important concepts from the reading.  Taking good notes is an important part of being prepared for future quizzes and exams.  The reading assignment must be completed before attending Group Preparation.
+Each lesson begins with a reading assignment.  These readings are provided in this e-textbook.  Be sure to answer the questions in the textbook, since these are an important part of the learning process.  A note page is provided for each reading which you should use to write down the most important concepts from the reading.  Taking good notes is an important part of being prepared for future quizzes and exams.  The reading assignment must be completed before attending Group Preparation.
 
 #### Group Preparation
 
@@ -145,16 +146,9 @@ The day after Group Preparation, we will meet as a class.  During the Class Meet
 
 The homework is divided into two parts: the homework assignment and the homework quiz. Complete the homework assignment before beginning the quiz. This assignment comes with an answer key so that you may check your work. You are encouraged to collaborate with other students on the homework assignment, but it is important to the learning process that you do your own work. Before working with someone else on the assignment, you should attempt each problem on your own. After you have completed the homework assignment you may begin the homework quiz. You may use your notes, but you should complete the homework quiz without help from others. The quiz will have questions similar to the ones found in the homework assignment, so it is important that you understand well how to work through the problems in the homework assignment before beginning the quiz.
 
-### Weekly Schedule
+### Benefits of Lesson Schedule
 
-Here is a link to the {{Schedule_Link}} we will use this semester. <br>
-The schedule is also available under Course Resources on the [[Main Page]].
-
-The lesson pattern discussed above is repeated twice a week.  
-
-{{Type_Filter|type=Online|content={{:Online:Weekly_Schedule}} }}
-
-{{Type_Filter|type=Classroom|content={{:Classroom:Weekly_Schedule}} }}
+You can use the calendar feature in I-learn to see the schedule of lessons. A typical week consists of two lessons.
 
 There are several benefits of this consistent lesson structure. First, it helps you establish a regular schedule for studying and participating in class activities. Second, it helps you learn more in less time. By the third or fourth lesson, you will find that it takes you less time to navigate through the course and complete certain activities and you will know what you need to do to succeed. Third, it gives you an opportunity to develop discipleship and leadership by teaching other students on a regular basis through class meetings and small group activities. Finally, the lesson structure makes it easier for you to give feedback to the instructor so that future lessons may be improved. This is an important part of the "teach one another" concept in the BYU-Idaho learning model. By giving feedback on what does and does not work for you in each lesson, you help other BYU-Idaho students get more out of the class. So, as you go through each lesson, feel free to make notes about the things that worked well for you, as well as the things that could be improved. Include these ideas in the Lesson Evaluation Survey. Your efforts to provide feedback to the instructor will not only help improve the course, but by taking the time to think about these things, you will become a better teacher yourself.
 
