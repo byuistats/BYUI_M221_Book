@@ -11,7 +11,7 @@
 
 
 
-<title>Lesson 22</title>
+<title>Lesson 22: Simple Linear Regression</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -295,7 +295,10 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -409,7 +412,7 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Lesson 22</h1>
+<h1 class="title toc-ignore">Lesson 22: Simple Linear Regression</h1>
 
 </div>
 
@@ -555,8 +558,8 @@ Answer the following questions:
 This video is an hour and a half long. <strong>YOU DO NOT NEED TO WATCH THE ENTIRE VIDEO</strong>. Please watch only the last fifteen minutes, beginning at 1:19:00
 </div>
 <p><br> <br></p>
-<p><a href="http://stream.byui.edu/VideoPlayer/BYUIplayer.html?StartCue=0&amp;EndCue=5776&amp;VideoName=1817_dvd&amp;VideoType=libraryvideos"><img src="Images/Video-icon.png" /></a></p>
-<!-- <img src="Images/Video-icon.png"> -->
+<p><a href="http://stream.byui.edu/VideoPlayer/BYUIplayer.html?StartCue=0&amp;EndCue=5776&amp;VideoName=1817_dvd&amp;VideoType=libraryvideos"><img src="Images/video-icon.png" /></a></p>
+<!-- <img src="Images/video-icon.png"> -->
 <!-- Need exported video -->
 </div>
 <div id="estuarine-crocodiles" class="section level2">
@@ -693,22 +696,22 @@ The equation of this line is $\hat Y = b_0 + b_1 X$.  This is the equation obtai
 </thead>
 <tbody>
 <tr class="odd">
-<td><p><strong>Type</strong></p></td>
-<td><p>Linear Pattern</p></td>
-<td><p>Apparent Random Scatter</p></td>
-<td><p>Nonlinear Pattern</p></td>
+<td><strong>Type</strong></td>
+<td>Linear Pattern</td>
+<td>Apparent Random Scatter</td>
+<td>Nonlinear Pattern</td>
 </tr>
 <tr class="even">
-<td><p><strong>Description</strong></p></td>
-<td><p>“Hot Dog” Shape</p></td>
-<td><p>“Hamburger” Shape</p></td>
-<td><p>“Banana” Shape</p></td>
+<td><strong>Description</strong></td>
+<td>“Hot Dog” Shape</td>
+<td>“Hamburger” Shape</td>
+<td>“Banana” Shape</td>
 </tr>
 <tr class="odd">
-<td><p><strong>Decision</strong></p></td>
-<td><p>Conduct regression analysis to determine if there is a significant linear relationship</p></td>
-<td><p>Linear regression is not appropriate</p></td>
-<td><p>Linear regression is not appropriate</p></td>
+<td><strong>Decision</strong></td>
+<td>Conduct regression analysis to determine if there is a significant linear relationship</td>
+<td>Linear regression is not appropriate</td>
+<td>Linear regression is not appropriate</td>
 </tr>
 </tbody>
 </table>
@@ -741,7 +744,7 @@ The equation of this line is $\hat Y = b_0 + b_1 X$.  This is the equation obtai
 <div id="interpreting-the-regression-output-1" class="section level3">
 <h3>Interpreting the Regression Output</h3>
 <p>The output from the commands given above will include a table similar to the one shown here:</p>
-<p><img src="Images/Manatees-RegressionOutput.PNG"></p>
+<p><img src="Images/Manatees-RegressionOutput.png"></p>
 <p>The Y-intercept term is not multiplied by anything except 1. This is the value of <span class="math inline">\(b_0\)</span>: <span class="math inline">\(b_0=-42.542\)</span>. The value of the slope is to be multiplied by <span class="math inline">\(X\)</span>; this is the slope of the regression equation. In our model, <span class="math inline">\(X\)</span> represents the number of powerboat registrations in Florida, in thousands. The slope for our regression equation is <span class="math inline">\(b_1=0.129\)</span>. We get the equation: <span class="math display">\[
 \hat Y = -42.542 + 0.129 X
 \]</span></p>
@@ -805,11 +808,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">

@@ -1,5 +1,5 @@
 ---
-title: "Lesson 24"
+title: "Lesson 24: Review for Exam 4"
 output: 
   html_document:
     theme: cerulean
@@ -50,12 +50,10 @@ The expectation on the exam is the following outcomes. You should be able to do:
 
 ## Unit 4 Lesson Summaries
 
-<span class="Custom">Click on the link below</span> for a review of the summaries from each lesson.
+Here are the summaries for each lesson in unit 4. Reviewing these key points from each lesson will help you in your preparation for the exam.
 
 <a href="javascript:showhide('su')"><span style="font-size:8pt;">Show/Hide Summaries</span></a>
-<div id="su" style="display:none;">
-
-**Here are the summaries for each lesson in unit 4. Reviewing these key points from each lesson will help you in your preparation for the exam.**
+<div id="su">
 
 <div class="RecapHeading">Lesson 21 Recap</div>
 <div class="Summary">

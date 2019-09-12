@@ -64,8 +64,10 @@ The expectation on the exam is the following outcomes. You should be able to do:
 
 ## Unit 2 Lesson Summaries
 
-<a href="javascript:showhide('ls')"><span style="font-size:8pt;">Show/Hide Unit 1 Summaries</span></a>
-<div id="ls" style="display:none;">
+Here are the summaries for each lesson in Unit 2. Reviewing these key points from each lesson will help you in your preparation for the exam.
+
+<a href="javascript:showhide('ls')"><span style="font-size:8pt;">Show/Hide Summaries</span></a>
+<div id="ls">
 <br>
 <div class="RecapHeading">Lesson 09 Recap</div>
 <div class="Summary">

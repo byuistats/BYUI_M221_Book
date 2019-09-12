@@ -1,5 +1,5 @@
 ---
-title: "Lesson 22"
+title: "Lesson 22: Simple Linear Regression"
 output: 
   html_document:
     theme: cerulean

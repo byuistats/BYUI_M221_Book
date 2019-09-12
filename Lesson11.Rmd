@@ -1,5 +1,5 @@
 ---
-title: "Lesson 11"
+title: "Lesson 11 Inference for One Mean (Sigma Unknown)"
 output: 
   html_document:
     theme: cerulean

@@ -1,5 +1,5 @@
 ---
-title: "Lesson 21"
+title: "Lesson 21: Describing Bivariate Data"
 output: 
   html_document:
     theme: cerulean

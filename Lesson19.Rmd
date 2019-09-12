@@ -1,5 +1,5 @@
 ---
-title: "Lesson 19"
+title: "Lesson 19 Inference for Independence of Categorical Data"
 output: 
   html_document:
     theme: cerulean
