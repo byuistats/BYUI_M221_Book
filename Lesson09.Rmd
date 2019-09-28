@@ -75,7 +75,7 @@ How do we gather evidence against a null hypothesis?  We collect data.
 
 The marine accident report gives the weight (in pounds) of each of the passengers and the crew member. These values are reproduced below. <!-- [Cite: "Capsizing of New York State-Certificated Vessel Ethan Allen, Lake George, New York October 2, 2005"] -->
 
-```{r, echo = FALSE, results = "asis"}
+```{r, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
 #library(knitr)
  w <- c(189,
  110,
@@ -458,7 +458,7 @@ If the alternative hypothesis involves less than (such as $\mu<98.6$,) we call i
 
 In the case of a right-tailed test, the $P$-value is the area to the right of the test statistic, $z$.
 
-The three possibilities are illustrated in the figures below.
+In cases of very large or very small $z$ statistics sometimes the shaded area is so small it can't be seen. This is the case for $z=-6.669$. It is such an extreme value for $z$, it is hard to see the actual shading. However, shading is happening and the applet is calculating the right p-value. To help you visually see how the shading works, the three possibilities for alternative hypotheses are illustrated in the figures below, using a less extreme value of $z=-1.2$.
 
 
 <center>
