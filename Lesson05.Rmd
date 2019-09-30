@@ -160,7 +160,7 @@ $$\mu + 3\sigma = 159.0 + 3(4.9) = 173.7~\text{cm}.$$
 
 If a $z$-score is extreme (either a large positive number or a large negative number), then that suggests that that observed value is very far from the mean. The 68-95-99.7% rule states that 95% of the observed data values will be within two standard deviations of the mean. This means that 5% of the observations will be more than 2 standard deviations away from the mean (either to the left or to the right).
 
-We define an **unusual observation** to be something that happens less than 5% of the time. For normally distributed data, we determine if an observation is unusual based on its $z$-score. We call an observation unusual if $z < 2$ or if $z > 2$.  In other words, we will call an event unusual if the absolute value of its $z$-score is greater than 2.
+We define an **unusual observation** to be something that happens less than 5% of the time. For normally distributed data, we determine if an observation is unusual based on its $z$-score. We call an observation unusual if $z < -2$ or if $z > 2$.  In other words, we will call an event unusual if the absolute value of its $z$-score is greater than 2.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
