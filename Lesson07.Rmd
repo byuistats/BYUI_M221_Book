@@ -95,7 +95,7 @@ Previously, you learned how to use the normal probability applet to convert a $z
 $\displaystyle{z = \frac{-25 - (-23)}{7} = -0.2857}$
 </center>
 <br>
-* Using the normal probability applet, we find that the area to the left of $z$ = -0.2857 is $0.3876$.
+* Using the normal probability applet, we find that the area to the left of $z$ = -0.2857 is $0.3874$.
 </div>
 &nbsp;
 </div>
