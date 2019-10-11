@@ -396,7 +396,7 @@ See Lesson \ref{Reading:SampDistOfXbar} to review the concept of the distributio
 
 The null hypothesis will always be a statement involving equality.  This gives us a starting point in our analysis.  In the reading for [Normal Distributions](Lesson05.html){target="_blank"}, we assumed that the true mean body temperature was 98.6&deg; F.  This becomes the assumed value of the mean of the distribution of the random variable $\bar{x}$.
 
-The scientific method demands that we make a hypothesis (a claim or an educated guess).  We assume that the null hypothesis is true and gather e  vidence against it.  In other words, we "do research" (e.g., collect data) to gather evidence against that hypothesis.  If we can gather enough evidence to discredit our initial hypothesis, we conclude that it was false, and begin the process again.
+The scientific method demands that we make a hypothesis (a claim or an educated guess).  We assume that the null hypothesis is true and gather evidence against it.  In other words, we "do research" (e.g., collect data) to gather evidence against that hypothesis.  If we can gather enough evidence to discredit our initial hypothesis, we conclude that it was false, and begin the process again.
 If we are unable to reject the original hypothesis, we do not conclude that it is correct.  For example, we do not know that Einstein's Theory of Relativity is correct.  We have simply not been able to disprove it$\ldots$yet.
 
 In the same way, we never can prove a null hypothesis is true.  We can only gather evidence against it.  If we get enough evidence, we reject the null hypothesis.
@@ -434,7 +434,7 @@ You should always convert the computer's notation involving "E" to scientific no
 <div class="Emphasis">
 &nbsp;&nbsp;**Scientific Notation:**
 
-- Scientific notation is a method used to write very large or very small numbers without a lot of extra zeros. Computers express scientific notation using the letter "E." For example, to write $7.8\times 10^3$, a computer would output the expression 7.8E3. For example, the number  $7.8\times 10^3$ is $7.8 \times 1000=7300$, since $10^3 = 10 \cdot 10 \cdot 10 = 1000$.  Another way to think of this is to move the decimal place in the number 7.8 three places to the right, which gives you 
+- Scientific notation is a method used to write very large or very small numbers without a lot of extra zeros. Computers express scientific notation using the letter "E." For example, to write $7.8\times 10^3$, a computer would output the expression 7.8E3. For example, the number  $7.8\times 10^3$ is $7.8 \times 1000=7800$, since $10^3 = 10 \cdot 10 \cdot 10 = 1000$.  Another way to think of this is to move the decimal place in the number 7.8 three places to the right, which gives you 
 $$ 7~\underset{\rightarrow}{8} \underset{\rightarrow}{0} \underset{\rightarrow}{0}. $$  
 
 - This is an example of how very large numbers can be represented.  To express small numbers (close to zero,) we use negative exponents.  The number $9.12 \times 10^{-5}$ is the same as $9.12 \times (10^5)^{-1} = 9.12 \times (10000)^{-1}$.  This can be written as $9.12 \times 0.00001 = 0.0000912$.  Since the exponent on the 10 is $-5$, you move the decimal place in the number 9.1 five places to the left: 
@@ -637,7 +637,7 @@ Error</p></td>
 We do not want to commit Type I errors, so why not choose a very small value for $\alpha$?  If we choose $\alpha$ to be so small that we rarely commit a Type I error, what would happen to the probability of committing a Type II error?  (Think about it.)
 
 If the $\alpha$ value (the probability of committing a Type I error) is very small, the probability of committing a Type II error will be large.  Conversely, if $\alpha$ is allowed to be very large, then the probability of committing a Type II error will be very small.
-A level of significance of $\alpha=0.05$ seems to strike a good balance between the probabilities of committing a Type I versus a Type II error.  However, there may be instances where it will be important to choose a different value for $\alpha$.  The important thing is to choose $\alpha$ before you collect your data.
+A level of significance of $\alpha=0.05$ seems to strike a good balance between the probabilities of committing a Type I versus a Type II error.  However, there may be instances where it will be important to choose a different value for $\alpha$.  The important thing is to choose $\alpha$ before you collect your data. Typical choices of $\alpha$ are $0.05$ (most common), $0.1$, and $0.01$.
 
 Read each of the following scenarios, and answer the questions.
 
@@ -1050,7 +1050,7 @@ In practice, we never really know $\sigma$.  This procedure is primarily used to
 
 ## Additional Worked Examples
 
-Conducting a hypothesis test involves the application of all of the processes we have learned in this course.  Viewing additional examples can help your understanding.  Click on the link at right to see three other examples.
+Conducting a hypothesis test involves the application of all of the processes we have learned in this course.  Viewing additional examples can help your understanding.  Click on the link at right to see two more examples.
 
 <a href="javascript:showhide('Q32')"><span style="font-size:8pt;">Show Additional Examples</span></a>
 <div id="Q32" style="display:none;">
@@ -1066,7 +1066,7 @@ Conducting a hypothesis test involves the application of all of the processes we
 
 1. Summarize the relevant background information
 
-* The New York Times is a large newspaper that is available both in the traditional print format and online. It is known that the mean age of readers of the print edition is $42$ years. The research question is: Is the mean age of readers of the online version of the Times less than $42$ years?
+* The New York Times is a large newspaper that is available both in the traditional print format and online. It is known that the mean age of readers of the print edition is $42$ years. The standard deviation of the age of readers is known to be $12$ years. The research question is: Is the mean age of readers of the online version of the Times less than $42$ years?
 
 * The population is all people who read the Times online. The observational units are the individual customers. The age of each person who was selected and agreed to participate was measured. The customer’s age is a quantitative random variable.
 
@@ -1164,7 +1164,7 @@ $$P\text{-value} = 0.0027 < 0.05 = \alpha$$
 
 * Reject Ho. There is sufficient evidence to suggest that the mean age of readers of the online edition of the Times is less than 42 years.
 
-* SIt is reasonable to conclude that the mean age of those who read the Times online is less than 42. There does appear to be a difference in the ages of those who read the print ($\mu = 42$) years and the online editions of the paper.
+* It is reasonable to conclude that the mean age of those who read the Times online is less than 42. There does appear to be a difference in the ages of those who read the print ($\mu = 42$) years and the online editions of the paper.
 
 <br>
 
@@ -1259,7 +1259,7 @@ $$P\text{-value} = 0.0431 < 0.05 =  \alpha$$
 
 ### Summary
 
-The previous three examples illustrate the three types of alternative hypotheses: two-tailed, left-tailed and right-tailed.  In each case, the structure of the hypothesis test is basically the same.  However, when the $z$-score is entered into the applet to compute the $P$-value, it is important to note whether to shade both tails, the left tail, or the right tail of the standard normal or ($z$) distribution.
+The previous examples in this reading illustrate the three types of alternative hypotheses: two-tailed, left-tailed and right-tailed.  In each case, the structure of the hypothesis test is basically the same.  However, when the $z$-score is entered into the applet to compute the $P$-value, it is important to note whether to shade both tails, the left tail, or the right tail of the standard normal or ($z$) distribution.
 
 </div>
 
