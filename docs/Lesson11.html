@@ -477,27 +477,27 @@ $(document).ready(function () {
 <p>In practice, we almost never know the population standard deviation, <span class="math inline">\(\sigma\)</span>. So, it is generally not appropriate to use the formula <span class="math display">\[
 z = \frac{ \bar x - \mu }{ \sigma / \sqrt{n} }
 \]</span> In 1908, William Sealy Gosset published a solution to this problem <!--<cite>Gosset08</cite>-->. He found a way to appropriately compute the confidence interval for the mean when <span class="math inline">\(\sigma\)</span> is not known. The basic idea is to use the sample standard deviation, <span class="math inline">\(s\)</span> in the place of the true population standard deviation, <span class="math inline">\(\sigma\)</span>. If <span class="math inline">\(\sigma\)</span> is not known, we cannot base the calculations on the standard normal distribution, and we cannot use the formula above to conduct hypothesis tests.</p>
-<p>In a remarkable piece of work, Gosset found the appropriate distribution to use when <span class="math inline">\(\sigma\)</span> is unknown. At the time of this discovery, Gosset worked for the Guinness brewery. To avoid problems with industrial espionage, Guinness prohibited employees from publishing any research results. Knowing his work provided a significant contribution to Statistics, Gosset chose convinced his employer to allow him to publish under a pseudonum. He chose the pseudonym “Student”. Gosset’s test statistic was denoted by the letter <span class="math inline">\(t\)</span>, this distribution has come to be known as <strong>Student’s t-distribution</strong>.</p>
+<p>In a remarkable piece of work, Gosset found the appropriate distribution to use when <span class="math inline">\(\sigma\)</span> is unknown. At the time of this discovery, Gosset worked for the Guinness brewery. To avoid problems with industrial espionage, Guinness prohibited employees from publishing any research results. Knowing his work provided a significant contribution to Statistics, Gosset convinced his employer to allow him to publish under a pseudonym. He chose the pseudonym “Student”. Gosset’s test statistic was denoted by the letter <span class="math inline">\(t\)</span>, this distribution has come to be known as <strong>Student’s t-distribution</strong>.</p>
 <p><span class="math display">\[
 t = \frac{ \bar x - \mu }{ s / \sqrt{n} }
 \]</span></p>
-<p>The <span class="math inline">\(t\)</span>-distribution is bell-shaped and symmetrical. The <span class="math inline">\(t\)</span>-distribution has a mean of 0, but it has more area in the tails than the standard normal distribution. The exact shape of the <span class="math inline">\(t\)</span>-distribution depends on a parameter called the <strong>degrees of freedom</strong> (abbreviated <span class="math inline">\(df\)</span>). The degrees of freedom is related to the sample size. As the sample size goes up, the degrees of freedom increase accordingly. For the procedures discussed in this lesson, the degrees of freedom equal the sample size minus one: <span class="math inline">\(df = n-1\)</span>.</p>
-<p><a href="http://byuimath.com/apps/normprobwitht.html" target="_blank">Click here</a> to explore how the shape of the <span class="math inline">\(t\)</span>-distribution changes with the degrees of freedom. Notice that as the degrees of freedom increases, the shape of the <span class="math inline">\(t\)</span>-distribution (black curve) gets closer to the standard normal distribution (red curve). The red curve is identical in the three images below.</p>
+<p>The <span class="math inline">\(t\)</span>-distribution is bell-shaped and symmetrical. The <span class="math inline">\(t\)</span>-distribution has a mean of 0, but it has more area in the tails than the standard normal distribution. The exact shape of the <span class="math inline">\(t\)</span>-distribution depends on a parameter called the <strong>degrees of freedom</strong> (abbreviated <span class="math inline">\(df\)</span>). The degrees of freedom is related to the sample size. As the sample size goes up, the degrees of freedom increase accordingly. For the procedures discussed in this lesson, the degrees of freedom is one less than the sample size: <span class="math inline">\(df = n-1\)</span>.</p>
+<p><a href="http://byuimath.com/apps/normprobwitht.html" target="_blank">Click here</a> to explore how the shape of the <span class="math inline">\(t\)</span>-distribution changes with the degrees of freedom. Notice that as the degrees of freedom increases, the shape of the <span class="math inline">\(t\)</span>-distribution (dark curve) gets closer to the standard normal distribution (lighter curve). The lighter gray curve is identical (always normal) in the three images below, while the darker curve changes shape as the degrees of freedom increase.</p>
 <center>
 <table style="table-layout: fixed; width: 100%;">
 <thead>
 <tr class="header">
-<th>
+<th style="text-align:center;">
 <p>
 <span class="math inline">\(t\)</span>-distribution<br /> with <span class="math inline">\(df = 1\)</span>
 </p>
 </th>
-<th>
+<th style="text-align:center;">
 <p>
 <span class="math inline">\(t\)</span>-distribution<br /> with <span class="math inline">\(df = 5\)</span>
 </p>
 </th>
-<th>
+<th style="text-align:center;">
 <p>
 <span class="math inline">\(t\)</span>-distribution<br /> with <span class="math inline">\(df = 15\)</span>
 </p>
@@ -507,26 +507,17 @@ t = \frac{ \bar x - \mu }{ s / \sqrt{n} }
 <tbody>
 <tr class="odd">
 <td style="width:33.3%;">
-<p>
-<img src="Images/T-dist-df-01.png">
-</p>
+<p><img src="Lesson11_files/figure-html/unnamed-chunk-1-1.png" width="384" /></p>
 </td>
 <td style="width:33.3%;">
-<p>
-<img src="Images/T-dist-df-05.png">
-</p>
+<p><img src="Lesson11_files/figure-html/unnamed-chunk-2-1.png" width="384" /></p>
 </td>
 <td style="width:33.3%;">
-<p>
-<img src="Images/T-dist-df-15.png">
-</p>
+<p><img src="Lesson11_files/figure-html/unnamed-chunk-3-1.png" width="384" /></p>
 </td>
 </tr>
 <tr class="even">
 <td>
-<p>
-(Image credit: Webster West, <a href="http://www.stat.tamu.edu/~west/applets/tdemo1.html"> http://www.stat.tamu.edu/~west/applets/tdemo1.html</a>)
-</p>
 </td>
 <td>
 </td>
@@ -612,22 +603,17 @@ Excel Instructions
 </ul>
 <p>The image below shows the Excel file after these changes have been made.</p>
 <center>
-<img src="Images/BodyTemp-tTest-Excel_Toolbox.png">
+<img src="Images/BodyTemp-tTest-Excel_Toolbox.PNG">
 </center>
 <p>Consider each of the following alternative hypotheses that could be used in a test for a single mean where the null hypothesis is <span class="math inline">\(H_0: \mu = 98.6\)</span>.</p>
 <ul>
-<li><span class="math inline">\(H_a: \mu \ne 98.6\)</span>
-<ul>
+<li><span class="math inline">\(H_a: \mu \ne 98.6\)</span></li>
 <li>Choose “Not Equal To” in the drop-down menu in cell N6.</li>
-</ul></li>
-<li><span class="math inline">\(H_a: \mu &lt; 98.6\)</span>
-<ul>
+<li><span class="math inline">\(H_a: \mu &lt; 98.6\)</span></li>
 <li>Choose “Less Than” in the drop-down menu in cell N6.</li>
-</ul></li>
-<li><span class="math inline">\(H_a: \mu &gt; 98.6\)</span>
-<ul>
+<li><span class="math inline">\(H_a: \mu &gt; 98.6\)</span><br />
+</li>
 <li>Choose “Greater Than” in the drop-down menu in cell N6.</li>
-</ul></li>
 </ul>
 <p>You will have opportunities to practice using each of these. <br></p>
 </div>
@@ -645,7 +631,7 @@ t &amp;= \frac{ \bar x - \mu }{ s / \sqrt{n} } \\
 <p>In Excel, the degrees of freedom (<span class="math inline">\(df\)</span>) are given in cell N9.</p>
 <p><span class="math display">\[df = 147\]</span> <!-- **Mark the test statistic and $P$-value on a graph of the sampling distribution** --> <!-- CONSOLIDATED and UPDATED --></p>
 <p><strong>Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance</strong></p>
-<p>The <span class="math inline">\(P\)</span>-value is given in the software as “1.2723E-08”. Writing this properly and comparing it to <span class="math inline">\(\alpha\)</span>, we have: <span class="math display">\[
+<p>The <span class="math inline">\(P\)</span>-value is given in the software as “0.000.” (The actual value is 1.2723e-08, a very small number that rounds to 0.000 at three decimal places.) Writing this properly and comparing it to <span class="math inline">\(\alpha\)</span>, we have: <span class="math display">\[
 P\text{-value} = 1.2723 \times 10^{-8} = 0.000~000~012~723 &lt; 0.05 = \alpha
 \]</span></p>
 <p><strong>State your decision</strong></p>
@@ -684,7 +670,7 @@ Answer the following questions:
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
 <p>When the data are entered into the file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>, the following output is generated:</p>
-<p><img src="Images/BabyBoom-Ttest-Excel_Toolbox.png"> <br></p>
+<p><img src="Images/BabyBoom-Ttest-Excel_Toolbox.PNG"> <br></p>
 <ul>
 <li>The relevant summary statistics are:
 <center></li>
@@ -857,7 +843,7 @@ Excel Instructions
 <p><img src="Images/Step5.png"></p>
 <p><strong>Present your observations in an English sentence, relating the result to the context of the problem</strong></p>
 <p>We are 95% confident that the true mean BLEU score for all translations by the Pharaoh program is between 0.2824 and 0.2928.</p>
-<p>Answer the following questions using the data set <a href="./Data/DLEU-Scores.xslx">BLEU-Scores</a>, which gives the BLEU scores for <span class="math inline">\(n=100\)</span> translations from Spanish to English by the computer program Pharaoh.</p>
+<p>Answer the following questions using the data set <a href="./Data/BLEU-Scores.xslx">BLEU-Scores</a>, which gives the BLEU scores for <span class="math inline">\(n=100\)</span> translations from Spanish to English by the computer program Pharaoh.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
@@ -917,7 +903,7 @@ Answer the following questions:
 <div id="Q8" style="display:none;">
 <p>The following output was generated using the Excel file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>:</p>
 <center>
-<img src="Images/EuroWeights-Histogram.png">
+<img src="Images/EuroWeights-Histogram.PNG">
 </center>
 <ul>
 <li>Typically, we round our computations to one more decimal place of precision than was given in the original data. This means we need one more decimal place than is shown in the output above. We can increase the precision by selecting the cell we want to modify and then clicking on the following button in the “Home” menu ribbon in Excel:</li>
@@ -1015,11 +1001,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table>
+<table style="width:76%;">
 <colgroup>
-<col width="38%" />
-<col width="30%" />
-<col width="30%" />
+<col width="29%" />
+<col width="23%" />
+<col width="23%" />
 </colgroup>
 <thead>
 <tr class="header">
