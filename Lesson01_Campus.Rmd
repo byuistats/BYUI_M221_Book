@@ -48,12 +48,13 @@ This course covers the following topics as they are applied to Statistics: graph
 
 In this course, we will:
 
-1. Develop skills in using statistical software tools (e.g., spreadsheets).
-2. Determine the correct procedures to use in a given situation.
-3. Explain how the Central Limit Theorem applies in inference.
-4. Interpret the meaning of confidence intervals in context.
-5. Interpret the results of hypothesis tests.
-6. Make informed decisions, based on the results of inferential procedures.
+1.	Summarize data numerically and graphically using spreadsheets
+2.	Make decisions regarding situations with inherent randomness
+3.	Apply probability distributions to investigate questions
+4.	Employ confidence intervals in various situations
+5.	Implement tests of diverse hypotheses
+6.	Communicate the results of statistical analyses to relevant audiences
+
 
 <br>
 
