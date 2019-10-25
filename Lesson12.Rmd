@@ -370,7 +370,7 @@ $$df = 26$$
 
 The test statistic and p-value can be found in the Excel output. The following calculations show conceptually how the p-value is calculated:
 
-The test statistic, $t$, is labeled on the horizontal axis.  The $P$-value is the area to the left of $t$ under the curve.  This area is so small, it is not illustrated on this plot.  
+The test statistic, $t$, is labeled on the horizontal axis.  The $P$-value is the area to the left of $t$ under the curve.  This area is so small, it is hiding out on the edges (not actuall visible) on this plot.  
 
 <img src="./Images/Mahon-Applet.png">
 
@@ -580,7 +580,7 @@ $$
 
 ### Additional Worked Examples
 
-Viewing additional examples can help your understanding.  Click on the link at right to see two more examples of hypothesis tests.
+Viewing additional examples can help your understanding.  Click on the link below to see two more examples of hypothesis tests.
 
 <a href="javascript:showhide('ae')"><span style="font-size:8pt;">Show/Hide Additional Examples</span></a>
 <div id="ae" style="display:none;">
@@ -614,7 +614,7 @@ H_a: &~~ \mu_d > 0
 \end{align}
 $$
 
-Note that the data set has the columns listed with $d = REE_2$ in the first column and $d = REE_1$ in the second column. You will need to switch the order of the columns when pasting them into the Excel Toolbox.
+Note that the data set has the columns listed with $d = REE_1$ in the first column and $d = REE_2$ in the second column. You will need to switch the order of the columns when pasting them into the Excel Toolbox.
 
 We will use the $\alpha = 0.1$ level of significance.
 
@@ -768,7 +768,7 @@ $P\textrm{-value}=0.2163 > 0.1 = \alpha$
 </div>
 <br>
 
-Note that we did not say we "accept" the null hypothesis.  We do not know that listening to stressful classical music has no effect on a person's REE.  Based on the data available to us, we were not able to reject the requirement that this type of music does not increase the mean REE.
+Note that we did not say we "accept" the null hypothesis.  We do not know that listening to stressful classical music has no effect on a person's REE.  Based on the data available to us, we were not able to reject the assertion that this type of music does not increase the mean REE.
 &nbsp;
 <br>
 
@@ -785,7 +785,7 @@ Pressures of supply and demand act directly on the prices for an airline ticket.
 
 Allie Henrich, a BYU-Idaho student, compared the lowest published ticket prices of one-way flights from Heathrow to various destinations in Europe.  Using Travelocity.com, she recorded the lowest published fares for nonstop midweek flights booked either 14 days in advance or 90 days in advance.  The prices (in US dollars) are given in the file [DirectFlightCosts.xlsx](./Data/DirectFlightCosts.xlsx).  Notice that for some destinations, flights were not available.
 
-The data are paired, because measuring the costs twice for each city.  The 14-day ticket price is paired with the 90-day price for each city.
+The data are paired, because we are measuring the costs twice for each city.  The 14-day ticket price is paired with the 90-day price for each city.
 
 We will conduct a hypothesis test to determine if there is a difference in the cost of the nonstop flights when tickets are purchased 14 days in advance compared to 90 days in advance. We will use the 0.01 level of significance.
 
@@ -1042,7 +1042,7 @@ In a study conducted in the Arapaho National Forest in Colorado, researchers fro
 <a href="javascript:showhide('Q39')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q39" style="display:none;">
 * The mean was 592.87 trees per hectare and the standard deviation was 45.31 trees per hectare.
-* Answers will vary regarding the description of the density.  Here is one possible respons.
+* Answers will vary regarding the description of the density.  Here is one possible response.
 * The trees are about half as dense as they were before the pine beetle infestation.  About $\frac{592.87}{1028.41} = 0.58 = 58\%$ of the trees remained, so $100\% - 58\% = 42\%$ of the trees were killed by the pine beetles!
 </div>
 <br>

@@ -295,7 +295,10 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -904,7 +907,7 @@ H_a: &amp;~~ \mu_d &lt; 0
 <p><img src="Images/Step3.png"></p>
 <p><strong>Give the relevant summary statistics</strong></p>
 <p>Here is the Excel output:</p>
-<p><img src="Images/Mahon_Paired_t-test_Excel_Toolbox.PNG"></p>
+<p><img src="Images/Mahon_Paired_t-test_Excel_Toolbox.png"></p>
 <p>From the Excel output illustrated above, we can see a histogram of the data and get the following numerical summaries:</p>
 <p><span class="math display">\[
 \begin{align}
@@ -936,7 +939,7 @@ n &amp;= 27
 <p><span class="math display">\[df = 26\]</span></p>
 <p><strong>Mark the test statistic and <span class="math inline">\(P\)</span>-value on a graph of the sampling distribution</strong></p>
 <p>The test statistic and p-value can be found in the Excel output. The following calculations show conceptually how the p-value is calculated:</p>
-<p>The test statistic, <span class="math inline">\(t\)</span>, is labeled on the horizontal axis. The <span class="math inline">\(P\)</span>-value is the area to the left of <span class="math inline">\(t\)</span> under the curve. This area is so small, it is not illustrated on this plot.</p>
+<p>The test statistic, <span class="math inline">\(t\)</span>, is labeled on the horizontal axis. The <span class="math inline">\(P\)</span>-value is the area to the left of <span class="math inline">\(t\)</span> under the curve. This area is so small, it is hiding out on the edges (not actuall visible) on this plot.</p>
 <p><img src="Images/Mahon-Applet.png"></p>
 <p>It is important to note that only the left tail is shaded, even though we cannot see it in this illustration.</p>
 <p><strong>Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance</strong></p>
@@ -1136,7 +1139,7 @@ Answer the following questions:
 </div>
 <div id="additional-worked-examples" class="section level3">
 <h3>Additional Worked Examples</h3>
-<p>Viewing additional examples can help your understanding. Click on the link at right to see two more examples of hypothesis tests.</p>
+<p>Viewing additional examples can help your understanding. Click on the link below to see two more examples of hypothesis tests.</p>
 <a href="javascript:showhide('ae')"><span style="font-size:8pt;">Show/Hide Additional Examples</span></a>
 <div id="ae" style="display:none;">
 
@@ -1158,7 +1161,7 @@ H_0: &amp;~~ \mu_d = 0 \\
 H_a: &amp;~~ \mu_d &gt; 0 
 \end{align}
 \]</span></p>
-<p>Note that the data set has the columns listed with <span class="math inline">\(d = REE_2\)</span> in the first column and <span class="math inline">\(d = REE_1\)</span> in the second column. You will need to switch the order of the columns when pasting them into the Excel Toolbox.</p>
+<p>Note that the data set has the columns listed with <span class="math inline">\(d = REE_1\)</span> in the first column and <span class="math inline">\(d = REE_2\)</span> in the second column. You will need to switch the order of the columns when pasting them into the Excel Toolbox.</p>
 <p>We will use the <span class="math inline">\(\alpha = 0.1\)</span> level of significance.</p>
 <p><img src="Images/Step2.png"></p>
 <p><strong>Describe the data collection procedures</strong></p>
@@ -1309,7 +1312,7 @@ Answer the following questions:
 <p> </p>
 </div>
 <p><br></p>
-<p>Note that we did not say we “accept” the null hypothesis. We do not know that listening to stressful classical music has no effect on a person’s REE. Based on the data available to us, we were not able to reject the requirement that this type of music does not increase the mean REE.   <br></p>
+<p>Note that we did not say we “accept” the null hypothesis. We do not know that listening to stressful classical music has no effect on a person’s REE. Based on the data available to us, we were not able to reject the assertion that this type of music does not increase the mean REE.   <br></p>
 <p><img src="Images/StepsAll.png"></p>
 </div>
 <div id="cost-of-airline-tickets" class="section level4">
@@ -1318,7 +1321,7 @@ Answer the following questions:
 <p><strong>Summarize the relevant background information</strong></p>
 <p>Pressures of supply and demand act directly on the prices for an airline ticket. As the seats available on the plane begin to fill, airlines raise the price. If seats on a flight do not sell well, an airline may discount the tickets or even cancel the flight. Business travelers frequently demand travel booked on short notice. They must pay the current price. Typically, tourists book their flights well in advance, hoping to buy tickets before the price rises. We will consider the cost of a one-way ticket from London’s Heathrow Airport to a variety of destinations in Europe.</p>
 <p>Allie Henrich, a BYU-Idaho student, compared the lowest published ticket prices of one-way flights from Heathrow to various destinations in Europe. Using Travelocity.com, she recorded the lowest published fares for nonstop midweek flights booked either 14 days in advance or 90 days in advance. The prices (in US dollars) are given in the file <a href="./Data/DirectFlightCosts.xlsx">DirectFlightCosts.xlsx</a>. Notice that for some destinations, flights were not available.</p>
-<p>The data are paired, because measuring the costs twice for each city. The 14-day ticket price is paired with the 90-day price for each city.</p>
+<p>The data are paired, because we are measuring the costs twice for each city. The 14-day ticket price is paired with the 90-day price for each city.</p>
 <p>We will conduct a hypothesis test to determine if there is a difference in the cost of the nonstop flights when tickets are purchased 14 days in advance compared to 90 days in advance. We will use the 0.01 level of significance.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
@@ -1583,7 +1586,7 @@ Answer the following questions:
 <div id="Q39" style="display:none;">
 <ul>
 <li>The mean was 592.87 trees per hectare and the standard deviation was 45.31 trees per hectare.</li>
-<li>Answers will vary regarding the description of the density. Here is one possible respons.</li>
+<li>Answers will vary regarding the description of the density. Here is one possible response.</li>
 <li>The trees are about half as dense as they were before the pine beetle infestation. About <span class="math inline">\(\frac{592.87}{1028.41} = 0.58 = 58\%\)</span> of the trees remained, so <span class="math inline">\(100\% - 58\% = 42\%\)</span> of the trees were killed by the pine beetles!</li>
 </ul>
 </div>
