@@ -458,7 +458,7 @@ If the alternative hypothesis involves less than (such as $\mu<98.6$,) we call i
 
 In the case of a right-tailed test, the $P$-value is the area to the right of the test statistic, $z$.
 
-In cases of very large or very small $z$ statistics sometimes the shaded area is so small it can't be seen. This is the case for $z=-6.669$. It is such an extreme value for $z$, it is hard to see the actual shading. However, shading is happening and the applet is calculating the right p-value. To help you visually see how the shading works, the three possibilities for alternative hypotheses are illustrated in the figures below, using a less extreme value of $z=-1.2$.
+In cases of very large or very small $z$ statistics sometimes the shaded area is so small it can't be seen. This is the case for $z=-6.669$. It is such an extreme value for $z$, it is hard to see the actual shading. However, shading is happening and the applet is calculating the right p-value. To help you visually see how the shading works, the three possibilities for alternative hypotheses are illustrated in the figures below, using a less extreme value of $z=-1.6$.
 
 
 <center>
