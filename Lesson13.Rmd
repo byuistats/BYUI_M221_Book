@@ -186,11 +186,9 @@ There are two populations, and it is important to illustrate both of them separa
 <div class="Summary">
 **To create side-by-side histograms in Excel, do the following:**
 
-Use the file [QuantitativeDescriptiveStatistics.xlsx](./Data/QuantitativeDescriptiveStatistics.xlsx) and create separate histograms for the two groups.  This requires pasting the data for one of the groups, deleting the data, and pasting the data for the other group.
+Use the "Two-sample t Test" tab of the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) to create separate histograms, one for each group.  
 
-Using 7 bins, the data are represented in the following histograms:
-
-<img src="./Images/ReadingPractices-Histogram-Excel.png">
+<img src="./Images/ReadingPractices-two-Histograms-Excel.png">
 
 
 <span class=Custom>Click the link at right for a helpful tip.</span>
@@ -199,7 +197,7 @@ Using 7 bins, the data are represented in the following histograms:
 **Tip for Excel users:**
 
 If you copy and paste the graphs into Microsoft Word, you will want to use the "Paste Special" option.  If you simply paste the histogram from Excel, it is treated as a "Microsoft Office Graphic Object."  This means that it will update if your Excel file is changed. To copy and paste side-by-side histograms into Microsoft word, do the following:
-- Create the graph for the first group in Excel
+- Create the graph in Excel
 - Select the graph by clicking on it
 - Copy the graph
 - In Microsoft Word, click on the lower part of the "Paste" icon under the "Home" ribbon:
@@ -208,7 +206,6 @@ If you copy and paste the graphs into Microsoft Word, you will want to use the "
 - A list of options will appear; from this list choose one of the "Picture" options, such as "Picture (PNG)"
 - This will paste a static image of the graph in the Word document, which you can move around or shrink as desired
 - You should create a title for the graph and place it above the graph in your document
-- Repeat this process for the second data set
 </div>
 <br>
 </div>
