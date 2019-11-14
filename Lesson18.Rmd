@@ -840,6 +840,7 @@ Notice that zero is not in this confidence interval, so zero is not a plausible 
 
 As you may have guessed, the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) can be used to calculate confidence intervals for the difference of two proportions.
 
+
 ### Checking Requirements for a Confidence Interval
 
 
