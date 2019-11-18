@@ -155,7 +155,7 @@ When a positive association exists in the data, the correlation coefficient will
 
 There are many examples of positive associations.  It has been demonstrated that  a student's level of motivation is positively associated with academic success <!--<cite>Busato00</cite>-->.  Students who are highly motivated tend to do better academically.  As another example, there is a positive association between the height of a person and their weight.  If someone's height increases, we would expect that their weight would typically increase as well.  
 
-When an *increase* in one variable is associated with a *decrease* in the other variable, we say that there is a **negative** association between the two variables.  Several studies have demonstrated that there is a negative association between the amount of time spent playing video games play and academic performance<!--<cite>Gentile04</cite>-->.  Students who spend a lot of time on video games tend to do worse in school than their peers who do not spend much time gaming.
+When an *increase* in one variable is associated with a *decrease* in the other variable, we say that there is a **negative** association between the two variables.  Several studies have demonstrated that there is a negative association between the amount of time spent playing video games and academic performance<!--<cite>Gentile04</cite>-->.  Students who spend a lot of time on video games tend to do worse in school than their peers who do not spend much time gaming.
 
 #### Describing Strength: The Correlation Coefficient
 
@@ -597,7 +597,7 @@ The covariance of $X$ and $Y$ will be positive if increasing values of $X$ corre
 
 <a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q17" style="display:none;">
-- It is impossible for the covariance of $X$ and $Y$ to be negative when the correlation coefficient is positive.  The covariance is the correlation coefficient multiplied by the standard deviations.  Since the standard deviation of any variable can not be negative, the sign of the correlation coefficient will be the same as the sign of the covariance.
+- It is impossible for the covariance of $X$ and $Y$ to be negative when the correlation coefficient is positive.  The covariance is the correlation coefficient multiplied by the standard deviations.  Since the standard deviation of any variable cannot be negative, the sign of the correlation coefficient will be the same as the sign of the covariance.
 </div>
 &nbsp;
 </div>
