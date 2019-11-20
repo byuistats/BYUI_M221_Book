@@ -44,7 +44,7 @@ During political elections in the United States, residents are inundated with po
 
 In these polls, individuals are asked the question, "If the election were held today, which candidate would you most likely support?"  In one survey, $n=1024$ people were polled, and $x=565$ of the respondents said that they would vote for the Republican candidate. In this case, the "proportion" of people who favored the Republican candidate was:
 $$
-\hat p = \frac{x}{n} = \frac{565}{1024} = 0.552
+\widehat p = \frac{x}{n} = \frac{565}{1024} = 0.552
 $$
 That suggests that 55.2% of the people polled plan to vote for the Republican.  This does not mean that this candidate will win the election.  However, it looks like they might be in the lead at this point.
 
@@ -146,7 +146,7 @@ Answer the following questions. For this exercise, you will need a coin.
 
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
-* In this example, we tossed heads 12/25 times, which is equivalent to a 0.48 proportion. Your proportion may vary.
+* In this example, we tossed heads 12/25 times, which is equivalent to a $\widehat{p} = 0.48$ proportion. Your proportion may vary.
 </div>
 <br>
 
@@ -154,7 +154,7 @@ Answer the following questions. For this exercise, you will need a coin.
 
 <a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
-* Judging just from the histogram it shows that the observed proportions are normally distributed.
+* Judging just from the histogram it shows that the observed sample proportions are normally distributed.
 </div>
 &nbsp;
 </div>
@@ -165,7 +165,7 @@ Answer the following questions. For this exercise, you will need a coin.
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
 
-3. Find the spot on the horizontal axis of the histogram indicating the proportion of heads that *you* observed in Question 1.  Based on your visual observation, would you say your proportion of heads is unusual?
+3. Find the spot on the horizontal axis of the histogram indicating the proportion of heads ($\widehat{p}$) that *you* observed in Question 1.  Based on your visual observation, would you say your proportion of heads is unusual?
 
 <a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q3" style="display:none;">
@@ -173,35 +173,35 @@ Answer the following questions. For this exercise, you will need a coin.
 </div>
 <br>
 
-4. Visually, estimate the mean and standard deviation of the observed data. Please write your answer to this question before continuing.
+4. Visually, estimate the mean and standard deviation of the observed sample proportions. Please write your answer to this question before continuing.
 
 <a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q4" style="display:none;">
-* We estimate the mean at 0.5 and the standard deviation at 0.1. Almost all data is found between .2 and .8, which represents the mean plus or minus three standard deviations of the mean.  Your answers may vary.
+* We estimate the mean of the sample proportions at 0.5 and the standard deviation of all of these sample proportions at 0.1. Almost all the sample proportions are found between .2 and .8, which represents the mean plus or minus three standard deviations of the mean.  Your answers may vary.
 </div>
 <br>
 
-5. The proportion of heads that you will observe in $n=25$ tosses of a fair coin, $\hat p$, is a random variable.  The true theoretical mean for this random variable is $p=0.5$.  Explain why this value would make sense.
+5. The proportion of heads that you will observe in $n=25$ tosses of a fair coin, $\widehat p$, is a random variable.  The true theoretical mean for this random variable is $p=0.5$.  Explain why this value would make sense.
 
 <a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q5" style="display:none;">
-* Since getting a "heads" is just as likely as getting a "tails", you should end up with half your flips landing as "tails". The theoretical mean of  $p=0.5$ is logical.
+* Since getting a "heads" is just as likely as getting a "tails", you should end up with half your flips landing as "tails". The theoretical proportion of $p=0.5$ is logical.
 </div>
 <br>
 
-6. The true theoretical standard deviation of $\hat p$ in this case is 0.1.  This can be obtained using the formula
+6. The true theoretical standard deviation of $\widehat p$ in this case is $\sigma_{\widehat{p}} = 0.1$.  This can be obtained using the formula
 <center>
 $$
-\displaystyle{\text{Standard deviation of}~\hat{p} = \sqrt{ \frac{p(1-p)}{n} } }
+\displaystyle{\text{Standard deviation of}~\widehat{p} = \sigma_{\widehat{p}} = \sqrt{ \frac{p(1-p)}{n} } }
 $$
 </center>
-where $p$ is the true population proportion, which is also the mean of the distribution of $\hat{p}$.
+where $p$ is the true population proportion, which is also the mean of the distribution of $\widehat{p}$.
 
 <a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q6" style="display:none;">
 <center>
 $$
-\text{Standard deviation of}~\hat{p} = \sqrt{ \frac{p(1-p)}{n} } = \sqrt{ \frac{0.5(1-0.5)}{25} } = 0.1
+\text{Standard deviation of}~\widehat{p} = \sqrt{ \frac{p(1-p)}{n} } = \sqrt{ \frac{0.5(1-0.5)}{25} } = 0.1
 $$
 </center>
 </div>
@@ -245,26 +245,26 @@ $$
 
 ### Sampling Distribution of the Sample Proportion
 
-If the sample size is large, the sample proportion, $\hat p$, will be approximately normally distributed.  This is a direct consequence of the Central Limit Theorem.
+If the sample size is large, the sample proportion, $\widehat p$, will be approximately normally distributed.  This is a direct consequence of the Central Limit Theorem.
 
 #### How Large is Large Enough?
 
-We can apply the Central Limit Theorem to a sample proportion (and conclude that $\hat p$ follows a normal distribution) if both of the following conditions are satisfied:
+We can apply the Central Limit Theorem to a sample proportion (and conclude that $\widehat p$ follows a normal distribution) if both of the following conditions are satisfied:
 
 - $np \ge 10$
 - $n(1-p) \ge 10$
 
-It is important to check both conditions.  If one of them is not satisfied, we cannot conclude that $\hat p$ follows a normal distribution. Observe that the effect of these two conditions is that if $p$ is very close to 0 or 1, then $\hat{p}$ isn't close to normal unless $n$ is very large.
+It is important to check both conditions.  If one of them is not satisfied, we cannot conclude that $\widehat p$ follows a normal distribution. Observe that the effect of these two conditions is that if $p$ is very close to 0 or 1, then $\widehat{p}$ isn't close to normal unless $n$ is very large.
 
 #### Mean and Standard Deviation
 
-The sample proportion, $\hat p$, is normally distributed if $n$ is large.  The true population mean of the random variable $\hat p$ is:
+The sample proportion, $\widehat p$, is normally distributed if $n$ is large.  The true population mean of the random variable $\widehat p$ is:
 $$
-\textrm{Mean of}~\hat p = p
+\underbrace{\mu_\widehat{p}}_{\textrm{Mean of}~\widehat{p}} = p
 $$
 and the true population standard deviation is:
 $$
-\textrm{Standard Deviation of}~\hat p = \sqrt{\frac{p \cdot (1-p)}{n}}
+\underbrace{\sigma_\widehat{p}}_{\textrm{Standard Deviation of}~\widehat p} = \sqrt{\frac{p \cdot (1-p)}{n}}
 $$
 
 Answer the following questions.  Consider exercise 1, in which you tossed a coin $n=25$ times and recorded the proportion of heads.
@@ -275,7 +275,7 @@ Answer the following questions.  Consider exercise 1, in which you tossed a coin
 
 <a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q9" style="display:none;">
-* If we tossed a coin many, many times, we would expect to see 0.5 as the proportion of heads (the mean of $\hat p = p$, and $p$ was shown earlier to be 0.5)
+* If we tossed a coin many, many times, we would expect to see 0.5 as the proportion of heads. We can convince ourselvses of this by thinking about the mean of the sample proportion $\mu_\widehat{p}$, which is given by $\mu_{\widehat p} = p$, and $p$ was shown earlier to be 0.5.
 </div>
 <br>
 
@@ -283,7 +283,7 @@ Answer the following questions.  Consider exercise 1, in which you tossed a coin
 
 <a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q10" style="display:none;">
-* Standard deviation of $\displaystyle { \hat p = \sqrt{\frac{0.5 \cdot (0.5)}{25}} = \sqrt{\frac{.25}{25}} = \sqrt{.01} =.1}$
+* The standard deviation of the sample proportion ($\sigma_\widehat{p}$) is given by $\displaystyle { \sigma_{ \widehat p } = \sqrt{\frac{0.5 \cdot (0.5)}{25}} = \sqrt{\frac{.25}{25}} = \sqrt{.01} =.1}$
 </div>
 &nbsp;
 </div
@@ -301,7 +301,7 @@ If the sample size is sufficiently large, we can use the Normal Probability Appl
 
 $$
 z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}}
-= \frac{\hat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}
+= \frac{\widehat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}
 $$
 
 Then, we can enter this $z$-score in the Normal Probability Applet to find the area more extreme than the $z$-score.
@@ -309,15 +309,15 @@ Then, we can enter this $z$-score in the Normal Probability Applet to find the a
 #### Worked Example
 
 If a coin is tossed $n=25$ times, and heads is observed 17 times, the sample proportion of heads is
-$\displaystyle{\hat p = \frac{x}{n} = \frac{17}{25} = 0.68}$
-The proportion of heads tossed by the first student in the file [CoinTossHeads.xlsx](./Data/CoinTossHeads.xlsx) is $\hat p = 0.68$.
+$\displaystyle{\widehat p = \frac{x}{n} = \frac{17}{25} = 0.68}$
+The proportion of heads tossed by the first student in the file [CoinTossHeads.xlsx](./Data/CoinTossHeads.xlsx) is $\widehat p = 0.68$.
 We will find the probability that a sample proportion will exceed 0.68.
 
-First, we compute the $z$-score corresponding to $\hat p = 0.68$.  We can use the mean and standard deviation, which were given in questions 9 and 10, or simply substitute the values of $p=0.5$ and $n=25$ in the equation for the $z$-score.
+First, we compute the $z$-score corresponding to $\widehat p = 0.68$.  We can use the mean and standard deviation, which were given in questions 9 and 10, or simply substitute the values of $p=0.5$ and $n=25$ in the equation for the $z$-score.
 
 $$
 z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}}
-= \frac{\hat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}
+= \frac{\widehat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}
 = \frac{0.68 - 0.5}{\sqrt{\frac{0.5 (1-0.5)}{25}}}
 = \frac{0.18}{0.1}
 = 1.800
@@ -331,7 +331,7 @@ The area to the right of $z=1.800$ is $0.0359$.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
-11. The second student with data listed in the file [CoinTossHeads.xlsx](./Data/CoinTossHeads.xlsx) had $\hat p = 0.44$, or 44% of their coin tosses resulted in heads.  Find the $z$-score corresponding to this value.
+11. The second student with data listed in the file [CoinTossHeads.xlsx](./Data/CoinTossHeads.xlsx) had $\widehat p = 0.44$, or 44% of their coin tosses resulted in heads.  Find the $z$-score corresponding to this value.
 
 <a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q11" style="display:none;">
@@ -339,15 +339,15 @@ The area to the right of $z=1.800$ is $0.0359$.
 </div>
 <br>
 
-12. Use the $z$-score you computed in question 11 to find the probability that the proportion of successes, $\hat p$, will be greater than 0.44 if a coin is tossed $n=25$ times.  In other words, find $P(\hat p > 0.44)$.
+12. Use the $z$-score you computed in question 11 to find the probability that the proportion of successes, $\widehat p$, will be greater than 0.44 if a coin is tossed $n=25$ times.  In other words, find $P(\widehat p > 0.44)$.
 
 <a href="javascript:showhide('Q12')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q12" style="display:none;">
-* $P(\hat p > 0.44)= 0.7257$
+* $P(\widehat p > 0.44)= 0.7257$
 </div>
 <br>
 
-13. For $n=25$ coin tosses, find the probability that $P(0.44 < \hat p < 0.68)$.
+13. For $n=25$ coin tosses, find the probability that $P(0.44 < \widehat p < 0.68)$.
 
 <a href="javascript:showhide('Q13')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q13" style="display:none;">
@@ -365,15 +365,15 @@ Consider the following question:
 
 "If the true proportion of people who support a particular political candidate is $p=0.48$, and if $n=1041$ people are surveyed, what is the probability that the results of the survey will suggest that the candidate will win the election?"
 
-To address this question, we first note that the survey will suggest that the candidate will win if more than 50% of the people surveyed favor the candidate. So, we need to find the following probability: $P(\hat p > 0.5)$.  First we find the $z$ score:
+To address this question, we first note that the survey will suggest that the candidate will win if more than 50% of the people surveyed favor the candidate. So, we need to find the following probability: $P(\widehat p > 0.5)$.  First we find the $z$ score:
 
 $$
-z = \frac{\hat p - p}{\sqrt{\frac{p(1-p)}{n}}} = \frac{0.5-0.48}{\sqrt{\frac{0.48(1-0.48)}{1041}}} = 1.292
+z = \frac{\widehat p - p}{\sqrt{\frac{p(1-p)}{n}}} = \frac{0.5-0.48}{\sqrt{\frac{0.48(1-0.48)}{1041}}} = 1.292
 $$
 
-Now, we look up this value using the Normal Probability Applet and find the area to the right. Using the Normal Probability Applet, we find that $P(\hat p > 0.5)=0.0982$.  So, even though this candidate is actually behind in the popular vote, there is a chance of 0.0982 that they will appear to be winning!
+Now, we look up this value using the Normal Probability Applet and find the area to the right. Using the Normal Probability Applet, we find that $P(\widehat p > 0.5)=0.0982$.  So, even though this candidate is actually behind in the popular vote, there is a chance of 0.0982 that they will appear to be winning!
 
-This calculation was done in the same way we have done normal calculations in the past.  The only difference is that instead of using $\bar x$ and its mean and standard deviation, we used $\hat p$ and its mean and standard deviation.  Otherwise, they are the same.
+This calculation was done in the same way we have done normal calculations in the past.  The only difference is that instead of using $\bar x$ and its mean and standard deviation, we used $\widehat p$ and its mean and standard deviation.  Otherwise, they are the same.
 
 <br>
 
@@ -386,14 +386,14 @@ This calculation was done in the same way we have done normal calculations in th
 
 - **Bar charts** present the same information as pie charts and are used when our data represent counts. A **Pareto chart** is a bar chart where the height of the bars is presented in descending order.
 
-- $\hat p$ is a point estimator for true proportion $p$. $\displaystyle{\hat p = \frac{x}{n}}$
+- $\widehat p$ is a point estimator for true proportion $p$. $\displaystyle{\widehat p = \frac{x}{n}}$
 
-- The sampling distribution of $\hat p$ has a mean of $p$ and a standard deviation of $\displaystyle{\sqrt{\frac{p\cdot(1-p)}{n}}}$
+- The sampling distribution of $\widehat p$ has a mean of $\mu_{\widehat{p}} = p$ and a standard deviation of $\sigma_{\widehat{p}} = \displaystyle{\sqrt{\frac{p\cdot(1-p)}{n}}}$
 
 - If $np \ge 10$ and $n(1-p) \ge 10$, you can conduct **probability calculations** using the Normal Probability Applet. 
 $$
 \displaystyle {z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}}
-= \frac{\hat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}}
+= \frac{\widehat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}}
 $$
 <br>
 </div>
