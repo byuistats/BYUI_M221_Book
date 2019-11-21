@@ -969,7 +969,7 @@ We can compute a confidence interval for the true mean of the differences for pa
 **To calculate confidence intervals for the true mean of the difference in Excel, do the following**:
 
 * Open the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx)
-* Click on the tab labeled "One-sample t-test"
+* Click on the tab labeled "Paired Data t-test"
 * Enter the columns of paired data into column A and B
 * Set the desired confidence level.
 <br>
