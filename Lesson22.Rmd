@@ -37,7 +37,7 @@ By the end of this lesson, you should be able to:
 
 Simple linear regression is a method used to fit a line to data.  This provides a powerful tool to model bivariate data (i.e., data involving two variables.)  Regression allows us to write a linear equation that models the relationship between the **independent variable** ($X$) and the **dependent variable** ($Y$) which we can use to predict the value of $Y$ for any given variable $X$.  For the crocodile data, the independent variable is the head length and we will use this to predict the dependent variable, the body length.  Sometimes the independent variable is also called the **explanatory variable**, and the dependent variable is also called the **response variable**.
 
-We will be using linear equations throughout this lesson.  Click on the link at right if you would like to review lines and linear equations.
+We will be using linear equations throughout this lesson.  Click on the link below if you would like to review lines and linear equations.
 
 <!-- BEGIN REVIEW OF LINES  ***********************************************  -->
 <a href="javascript:showhide('re')"><span style="font-size:8pt;">Click Here for a Review of Linear Equations</span></a>
@@ -91,7 +91,7 @@ This leads to the following representation of the linear equation:
 $$\widehat Y = b_0 + b_1 X$$
 We use the symbol $\widehat Y$ to indicate a predicted value for $Y$. The value $b_0$ is the Y-intercept and $b_1$ is the slope.  Compare this notation to traditional slope-intercept form. 
 
-You may wonder why we would use this form (rather than traditional slope-intercept form) to express the equation.  Click on the link at right for a brief explanation.
+You may wonder why we would use this form (rather than traditional slope-intercept form) to express the equation.  Click on the link below for a brief explanation.
 
 <!-- START EXPLANATION OF FORM ***********************************************  -->
 <a href="javascript:showhide('ex')"><span style="font-size:8pt;">Click Here for an Explanation</span></a>
@@ -135,8 +135,6 @@ $Y = -3 + \frac{5}{2}X$
 </div>
 &nbsp;
 </div>
-<div>
-
 </div>
 <br>
 <br>
@@ -195,7 +193,7 @@ The output from the commands given above will include a table similar to the one
 
 <img src="./Images/EstuarineCrocodile-Regression-Output.PNG">
 
-The regression coefficients are given in the column labeled "B".  The first row gives the constant term (or the term that is not multiplied by anything.)  In other words, the first row gives the value of $b_0$, in this case, $b_0=-18.274$.  The second row of the table gives the value that is to be multiplied by $X$; this is the slope of the regression equation.  In our model, $X$ represents the head length, in centimeters.  The row is labeled as "Head Length (cm)".  The slope in our regression equation is $b_1=7.660$.  Putting all this together, we get the equation:
+The regression coefficients are given in the columns labeled "Y-intercept ($b_0$)" and "Slope ($b_1$)".  The y-intercept gives the constant term (or the term that is not multiplied by $x$) which is the value of $b_0$. In this case, $b_0=-18.274$.  The "Slope" entry of the table gives the value that is to be multiplied by $X$; this is the slope of the regression equation.  In our model, $X$ represents the head length, in centimeters. The slope in our regression equation is $b_1=7.660$.  Putting all this together, we get the equation:
 
 
 

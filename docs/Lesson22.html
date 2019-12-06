@@ -473,7 +473,7 @@ $(document).ready(function () {
 <div id="introduction-to-regression" class="section level2">
 <h2>Introduction to Regression</h2>
 <p>Simple linear regression is a method used to fit a line to data. This provides a powerful tool to model bivariate data (i.e., data involving two variables.) Regression allows us to write a linear equation that models the relationship between the <strong>independent variable</strong> (<span class="math inline">\(X\)</span>) and the <strong>dependent variable</strong> (<span class="math inline">\(Y\)</span>) which we can use to predict the value of <span class="math inline">\(Y\)</span> for any given variable <span class="math inline">\(X\)</span>. For the crocodile data, the independent variable is the head length and we will use this to predict the dependent variable, the body length. Sometimes the independent variable is also called the <strong>explanatory variable</strong>, and the dependent variable is also called the <strong>response variable</strong>.</p>
-<p>We will be using linear equations throughout this lesson. Click on the link at right if you would like to review lines and linear equations.</p>
+<p>We will be using linear equations throughout this lesson. Click on the link below if you would like to review lines and linear equations.</p>
 <!-- BEGIN REVIEW OF LINES  ***********************************************  -->
 <a href="javascript:showhide('re')"><span style="font-size:8pt;">Click Here for a Review of Linear Equations</span></a>
 <div id="re" style="display:none;">
@@ -512,7 +512,7 @@ Answer the following questions:
 Notice that this is the equation of a straight line. You might have written linear equations in the form $Y=mX+b$ in your algebra classes.  Notice that our equation has the same form.  The slope is given by $b_1$ and the $Y$-intercept is given by $b_0$.
 -->
 <p>This leads to the following representation of the linear equation: <span class="math display">\[\widehat Y = b_0 + b_1 X\]</span> We use the symbol <span class="math inline">\(\widehat Y\)</span> to indicate a predicted value for <span class="math inline">\(Y\)</span>. The value <span class="math inline">\(b_0\)</span> is the Y-intercept and <span class="math inline">\(b_1\)</span> is the slope. Compare this notation to traditional slope-intercept form.</p>
-<p>You may wonder why we would use this form (rather than traditional slope-intercept form) to express the equation. Click on the link at right for a brief explanation.</p>
+<p>You may wonder why we would use this form (rather than traditional slope-intercept form) to express the equation. Click on the link below for a brief explanation.</p>
 <!-- START EXPLANATION OF FORM ***********************************************  -->
 <a href="javascript:showhide('ex')"><span style="font-size:8pt;">Click Here for an Explanation</span></a>
 <div id="ex" style="display:none;">
@@ -547,8 +547,6 @@ Answer the following questions:
 </div>
 <p> </p>
 </div>
-<div>
-
 </div>
 <p><br> <br> <!-- END EXPLANATION OF FORM ***********************************************  --></p>
 </div>
@@ -596,7 +594,7 @@ Excel Instructions
 <h2>Interpreting the Regression Output</h2>
 <p>The output from the commands given above will include a table similar to the one shown here:</p>
 <p><img src="Images/EstuarineCrocodile-Regression-Output.PNG"></p>
-<p>The regression coefficients are given in the column labeled “B”. The first row gives the constant term (or the term that is not multiplied by anything.) In other words, the first row gives the value of <span class="math inline">\(b_0\)</span>, in this case, <span class="math inline">\(b_0=-18.274\)</span>. The second row of the table gives the value that is to be multiplied by <span class="math inline">\(X\)</span>; this is the slope of the regression equation. In our model, <span class="math inline">\(X\)</span> represents the head length, in centimeters. The row is labeled as “Head Length (cm)”. The slope in our regression equation is <span class="math inline">\(b_1=7.660\)</span>. Putting all this together, we get the equation:</p>
+<p>The regression coefficients are given in the columns labeled “Y-intercept (<span class="math inline">\(b_0\)</span>)” and “Slope (<span class="math inline">\(b_1\)</span>)”. The y-intercept gives the constant term (or the term that is not multiplied by <span class="math inline">\(x\)</span>) which is the value of <span class="math inline">\(b_0\)</span>. In this case, <span class="math inline">\(b_0=-18.274\)</span>. The “Slope” entry of the table gives the value that is to be multiplied by <span class="math inline">\(X\)</span>; this is the slope of the regression equation. In our model, <span class="math inline">\(X\)</span> represents the head length, in centimeters. The slope in our regression equation is <span class="math inline">\(b_1=7.660\)</span>. Putting all this together, we get the equation:</p>
 <p><span class="math display">\[
 \widehat Y = -18.274 + 7.660 X
 \]</span></p>

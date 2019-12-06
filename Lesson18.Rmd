@@ -691,7 +691,7 @@ During the mid 1800's, European foxes were introduced to the Australian mainland
 
 <br/>
 
-The Royal Botanic Gardens Cranbourne is a 914 acre (370 ha) conservation reserve outside Melbourne, Australia.  Predation by foxes has be an ongoing problem in the gardens.  To reduce the risk to native species, a systematic program of killing foxes was implemented.
+The Royal Botanic Gardens Cranbourne is a 914 acre (370 ha) conservation reserve outside Melbourne, Australia.  Predation by foxes has been an ongoing problem in the gardens.  To reduce the risk to native species, a systematic program of killing foxes was implemented.
 
 One way to monitor the presence of foxes is to look for fox tracks in specific sandy areas, called sand-pads.  Before beginning a systematic effort to reduce the fox population, ecologists observed fox tracks in the sand-pads 576 out of the 950 times the sand-pads were observed.  After eliminating some of the foxes, the ecologists observed fox tracks in the sand-pads 268 times out of the 1359 times they checked the sand-pads <!--<cite>Coates08</cite>-->.  The ecologists want to know if there is a difference in the proportion of times fox tracks are observed before versus after the intervention to reduce the fox population.
 
