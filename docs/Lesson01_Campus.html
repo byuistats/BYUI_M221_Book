@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Lesson 1: On Campus Course Introduction</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 221</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
+    </li>
+    <li>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+    </li>
+    <li>
+      <a href="Lesson04.html">Lesson 4: Rules of Probability</a>
+    </li>
+    <li>
+      <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
+    </li>
+    <li>
+      <a href="Lesson06.html">Lesson 6: The Central Limit Theorem</a>
+    </li>
+    <li>
+      <a href="Lesson07.html">Lesson 7: Probability Calculations for a Sample Mean</a>
+    </li>
+    <li>
+      <a href="Lesson08.html">Lesson 8: Unit 1 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson09.html">Lesson 9: Hypothesis Test for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson10.html">Lesson 10: Confidence Interval for One Mean (Sigma Known)</a>
+    </li>
+    <li>
+      <a href="Lesson11.html">Lesson 11: Inference for One Mean (Sigma Unknown)</a>
+    </li>
+    <li>
+      <a href="Lesson12.html">Lesson 12: Inference for Match Pairs</a>
+    </li>
+    <li>
+      <a href="Lesson13.html">Lesson 13: Inference for Two Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson14.html">Lesson 14: Inference for Several Independent Samples</a>
+    </li>
+    <li>
+      <a href="Lesson15.html">Lesson 15: Unit 2 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson16.html">Lesson 16: Describing Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson17.html">Lesson 17: Inference for One Proportion</a>
+    </li>
+    <li>
+      <a href="Lesson18.html">Lesson 18: Inference for Two Proportions</a>
+    </li>
+    <li>
+      <a href="Lesson19.html">Lesson 19: Inference for Independence of Categorical Data</a>
+    </li>
+    <li>
+      <a href="Lesson20.html">Lesson 20: Unit 3 Review</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Lesson21.html">Lesson 21: Describing Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson22.html">Lesson 22: Simple Linear Regression</a>
+    </li>
+    <li>
+      <a href="Lesson23.html">Lesson 23: Inference for Bivariate Data</a>
+    </li>
+    <li>
+      <a href="Lesson24.html">Lesson 24: Unit 4 Review</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="Data.html">Data</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lesson 1: On Campus Course Introduction</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#lesson-01-outcomes">Lesson 01 Outcomes</a></li>
+<li><a href="#welcome-to-the-course">Welcome to the Course!</a></li>
+<li><a href="#course-description">Course Description</a><ul>
+<li><a href="#course-learning-outcomes">Course Learning Outcomes</a></li>
+<li><a href="#how-the-outcomes-will-be-assessed">How the Outcomes will Be Assessed</a></li>
+<li><a href="#keys-to-success">Keys to Success</a></li>
+</ul></li>
+<li><a href="#course-structure">Course Structure</a></li>
+<li><a href="#course-materials">Course Materials</a></li>
+<li><a href="#course-resources">Course Resources</a></li>
+<li><a href="#plan-to-succeed">Plan to Succeed</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#navigation">Navigation</a></li>
+</ul>
+</div>
+
+<script type="text/javascript">
+ function showhide(id) {
+    var e = document.getElementById(id);
+    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+ }
+</script>
+<div id="lesson-01-outcomes" class="section level2">
+<h2>Lesson 01 Outcomes</h2>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="oc" style="display:none;">
+<p>By the end of this lesson, you should be able to:</p>
+<ul>
+<li>Understand and explain the course policies</li>
+<li>Access course resources (course outline, lesson schedule, preparation activities, reading quizzes, homework assignments, assessments, Zoom, etc.)</li>
+<li>Communicate with your instructor</li>
+<li>Obtain access to a spreadsheet program (Microsoft Excel)</li>
+<li>Discuss ways in which you will apply gospel principles to your work in this class</li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="welcome-to-the-course" class="section level2">
+<h2>Welcome to the Course!</h2>
+<p>In this course, you will explore important connections between the academic discipline of Statistics and the world around us. By pondering these ideas, your understanding of statistics will increase, as will your knowledge and testimony of the restored Gospel of Jesus Christ. In addition, that which you learn in this course will increase your ability to serve others as a disciple of Jesus Christ and help build Zion.</p>
+<p>This course has been designed to help you slowly build up a knowledge base of ideas and skills. Not all of these ideas and skills will come easily. It takes a lot of work and practice before some things will even start to make sense, so you should not be surprised to find that it may take you a little time to comprehend these ideas. Just be patient. Once you’re far enough into the course, the ideas will start to come together, and you will see how much progress you have really made. You will understand what this course is all about, and you will be glad you persisted in your efforts to learn.</p>
+<p>As you thoughtfully prepare, teach one another, ponder/prove what you have learned, and as you humbly seek the guidance of the Holy Spirit, the Lord will bless you with a greater knowledge of His mercy and love. You will have the opportunity to increase your testimony of the Gospel of Jesus Christ. You will also learn about Statistics, more deeply and permanently than you would have otherwise.</p>
+<p><br></p>
+</div>
+<div id="course-description" class="section level2">
+<h2>Course Description</h2>
+<p>This course covers the following topics as they are applied to Statistics: graphical representations of data, measures of center and spread; elementary probability; sampling distributions; correlation and regression; statistical inference involving means, proportions, and contingency tables.</p>
+<p><br></p>
+<div id="course-learning-outcomes" class="section level3">
+<h3>Course Learning Outcomes</h3>
+<p>In this course, we will:</p>
+<ol style="list-style-type: decimal">
+<li>Summarize data numerically and graphically using spreadsheets</li>
+<li>Make decisions regarding situations with inherent randomness</li>
+<li>Apply probability distributions to investigate questions</li>
+<li>Employ confidence intervals in various situations</li>
+<li>Implement tests of diverse hypotheses</li>
+<li>Communicate the results of statistical analyses to relevant audiences</li>
+</ol>
+<p><br></p>
+</div>
+<div id="how-the-outcomes-will-be-assessed" class="section level3">
+<h3>How the Outcomes will Be Assessed</h3>
+<p>While you may not be tested on everything you learn in this course, the instructor will be assessing your mastery of the <strong>Course Learning Outcomes</strong>. The general types of assessments used to measure these outcomes may include selected response tests such as multiple-choice, true-false, matching, and fill-in-the-blank questions. You may also be asked to complete essays or other writing assignments. At times, the instructor may assess your performance of a skill, or the instructor may assess products you create using particular skills. In addition, the instructor may engage in personal communication with you to determine how well you understand the course content.</p>
+<p><br></p>
+</div>
+<div id="keys-to-success" class="section level3">
+<h3>Keys to Success</h3>
+<div id="five-principles-of-the-learning-model" class="section level4">
+<h4>Five Principles of the Learning Model</h4>
+<p>You will experience much deeper learning if you follow the Five Principles of the <a href="http://www.byui.edu/LearningModel" target="_blank">BYU-Idaho Learning Model</a></p>
+<ul>
+<li><strong>Exercise Faith</strong>: Exercise faith in the Lord Jesus Christ as a principle of action and power.</li>
+<li><strong>Learn by the Holy Ghost</strong>: Understand that true teaching is done by and with the Holy Ghost.</li>
+<li><strong>Lay Hold on the Word of God</strong>: Lay hold of the word of God.</li>
+<li><strong>Act for Themselves</strong>: Act for yourself and accept responsibility for learning and teaching.</li>
+<li><strong>Love, Serve, and Teach One Another</strong>: Love, serve, and teach other students in your classes.</li>
+</ul>
+</div>
+<div id="three-process-steps-of-the-learning-model" class="section level4">
+<h4>Three Process Steps of the Learning Model</h4>
+<p>You will learn more in less time if you follow the Three Process Steps of the <a href="http://www.byui.edu/LearningModel" target="_blank">BYU-Idaho Learning Model</a></p>
+<ul>
+<li><strong>Prepare</strong>: This involves (a) spiritual preparation, (b) individual preparation, and (c) group preparation.</li>
+<li><strong>Teach One Another</strong>: You should (a) be on time, (b) pray together, and (c) actively engage with other students.</li>
+<li><strong>Ponder/Prove</strong>: You should (a) ponder what you have learned, (b) record your learning, and (c) pursue unanswered questions and discuss what you learn with others.</li>
+</ul>
+<p>If you feel confused or have questions about anything in the lesson, take immediate action (Exercise Faith; Act for Themselves) and talk with your classmates, the teaching assistant, or the instructor (Love, Serve, and Teach One Another).</p>
+<p><strong>Teach One Another</strong></p>
+<p>At BYU-Idaho, an “A” student will demonstrate “diligent application of Learning Model principles, including initiative in serving other students” (BYU-Idaho Catalog). In this class, you will have the opportunity to work with other students.</p>
+<p>Doctrine and Covenants 84:106 states, “And if any man among you be strong in the Spirit, let him take with him him that is weak, that he may be edified in all meekness, that he may become strong also.” In the spirit of this revelation, you will have the opportunity to help others in the class when you have developed an understanding of a principle. Likewise, you will be able to receive help from others (peers, tutors, TA, and your instructor) when you are still working to understand concepts.</p>
+<p>This course represents a collaborative effort between faculty, TA’s, tutors, students and the Lord. You are encouraged to seek the help from seen and unseen resources as you grapple with the principles of Statistics.</p>
+<p>In a spirit of love and service, please reach out to others. You are not graded on a curve. If someone else does well, it does not affect you adversely. Research has shown that students who help other students to understand the material gain a much deeper grasp on the concepts of the course. Please take opportunities to help your peers succeed.</p>
+<p><br></p>
+</div>
+</div>
+</div>
+<div id="course-structure" class="section level2">
+<h2>Course Structure</h2>
+<p>This course consists of 24 lessons. They are presented in a topical order in which concepts and skills learned in the earlier lessons provide the requisite knowledge to succeed in later lessons. If the general order of the lessons doesn’t make sense at first, don’t worry. It will all come together in the end, and you’ll see the reasoning behind why the lessons have been presented in this particular order.</p>
+<p>Your main goal as a student will be to complete all of the learning activities within each lesson by their due dates every week. These activities follow a consistent weekly schedule, and it will be up to you to make sure that you keep on pace with all your assignments. These weekly activities may include the following:</p>
+<ul>
+<li>Reading assigned texts or viewing presentations.</li>
+<li>Taking quizzes.</li>
+<li>Participating in group discussions and assignments with other class members.</li>
+<li>Writing papers and developing presentations.</li>
+<li>Participating in meetings with the instructor, teaching assistants, and other students.</li>
+</ul>
+<p>For many of these activities, the due dates will fall on the same time each week. This will make it easier for you to plan out your weekly study schedule. However, there may be a need to make adjustments to the schedule from time to time. If in doubt, refer to the due dates your instructor has posted in I-learn.</p>
+<p>You should create a study schedule that will catch you up and keep you on pace throughout the semester. This is a rigorous course with a lot of subject matter to cover, and it can be extremely difficult to recover if you fall too far behind in your work. So, please make every effort to study on a regular basis and get your work turned in on time.</p>
+<p>The lessons in this course have a similar structure and contain similar basic elements. A typical week consists of two lessons.Each lesson will consist of a reading assignment, a reading/preparation quiz, and a homework quiz.</p>
+<p>The structure of this course fully integrates the BYU-Idaho Learning model with a mixture of preparation activities, teach-one-another activities, and ponder-and-prove activities.</p>
+</div>
+<div id="course-materials" class="section level2">
+<h2>Course Materials</h2>
+<p>This course has been designed with the student in mind. Every effort has been made to provide a high quality experience at the lowest possible cost.</p>
+<p><strong>Textbook</strong></p>
+<p>To keep costs as low as possible for students and their families, no physical textbook is required for this class. The readings for this course are provided on this website and will continue to be available to you after the course is completed. Please report any problems with the textbook (links not working, loading slowly, inability to view images, etc.) to your instructor. A link to the textbook is found in the resources module. It is highly recommended you bookmark the textbook so that you can easily reference each lesson’s reading.</p>
+<p><strong>Computer Equipment</strong></p>
+<p>You will need: - A laptop - Access to Microsoft Excel 2016 or later</p>
+</div>
+<div id="course-resources" class="section level2">
+<h2>Course Resources</h2>
+<p><strong>Peer Support</strong></p>
+<p>Your experience in this course will be enhanced as you work with other students to learn and grow together.</p>
+<p><strong>Help Desk</strong></p>
+<p>The BYU-Idaho Help Desk has been established to help students with technological problems related to approved course software. You can access the Help Desk at any time in three ways: - Walk-in: The Help Desk is located in room 322 of the McKay Library - Call in: 208-496-1411 (toll free) - Email: <a href="mailto:helpdesk@byui.edu" class="email">helpdesk@byui.edu</a> Additional information is available at the Help Desk web page: <a href="http://www.byui.edu/helpdesk/" class="uri">http://www.byui.edu/helpdesk/</a></p>
+<p>When you have technical problems with I-Learn, you should first try contacting the Help Desk before you contact your instructor. They are connected with the IT support staff who can resolve problems with I-Learn. Please take 5 minutes now to look at the Help Desk web page. That way, if a problem does arise later on in the course, you will know where to go for help.</p>
+<p><strong>Tutoring Center</strong></p>
+<p>The BYU-Idaho Study Skills/Tutoring Center is a powerful resource for students who would like a little extra help with a course. The Tutoring Center is located in the McKay Library in room 272. This is in the east wing of the second floor.</p>
+<p>The Tutoring Center provides many services to help students succeed: - Individual tutors - Walk-in tutoring in the Math Study Center (McKay 266 &amp; 270)</p>
+<p>Please take 5 minutes to explore the [<a href="http://www.byui.edu/academic-support-centers/tutoring-center" class="uri">http://www.byui.edu/academic-support-centers/tutoring-center</a> Study Skills/Tutoring Center web site].</p>
+<p><strong>TA Support</strong></p>
+<p>In addition to the faculty who teach this course, specially trained teaching assistants (TAs) will help you through the course. The Guided Practice sessions will be lead by TAs, under the direction of the faculty. The TAs will work with you on specific discovery activities in the Guided Practice sessions.</p>
+<p><strong>Faculty Support</strong></p>
+<p>Your instructor is committed to your success. If you have any needs or concerns, please contact your instructor for help. If you feel yourself getting behind or struggling, talk to your teacher right away. If caught in time, a small problem can be addressed quickly before it grows.</p>
+<p><br></p>
+</div>
+<div id="plan-to-succeed" class="section level2">
+<h2>Plan to Succeed</h2>
+<!--**How to Succeed in This Course**-->
+<p>There are three basic things you must do to succeed in this course.</p>
+<ol style="list-style-type: decimal">
+<li>Do the work.</li>
+<li>Stay on schedule.</li>
+<li>Follow the Honor Code.</li>
+</ol>
+<p>If you do these three things, you will not only get a passing grade for the course, but you will have an excellent educational experience. Here’s why.</p>
+<div id="do-the-work" class="section level4">
+<h4>Do the Work</h4>
+<p>This is a rigorous course. To get a passing grade, you will have to put forth a good deal of effort to complete all of the assignments. When you see a time estimate next to a learning activity, that is the approximate amount of time it will take IF you are focused on the assignment and IF you are not allowing yourself to be distracted by other things. You will have a very difficult time completing these assignments if you do them at the same time you watch TV, cook food, talk with your roommates or family members, and send text messages to your friends every three minutes. You must set aside sufficient time to do the work throughout the week (you can’t do it all in one night!). And you must find a place to do the work where you will not be distracted by anything (you can’t get it done with a cell phone call interrupting you every few minutes!). Then you must commit to focus your attention on the work and do your very best to complete it in the amount of time you have scheduled. If you do this, you will learn more in less time, and you will find the work much more pleasurable.</p>
+</div>
+<div id="stay-on-schedule" class="section level4">
+<h4>Stay on Schedule</h4>
+<p>Once you have set up a regular study schedule, keep it. One of the biggest problems that students have with their courses is that they procrastinate doing the work. They put it off until they have so much work to do that they cannot figure out a way to get it all done before the due date arrives. In this course, you cannot do this and still expect to receive a passing grade. There are assignments that must be completed by specific days and times every week. If you put off doing the work until just before an assignment is due, you will find it much more difficult to concentrate on getting the work done. To succeed in this class, you will have to follow your regular study schedule every week to ensure that you do your best work and that it gets done on time.</p>
+</div>
+<div id="follow-the-honor-code" class="section level4">
+<h4>Follow the Honor Code</h4>
+<p>Although there are several types of group learning activities in every lesson, this course requires a lot of individual study and work. In particular, most assignments involving a study guide and quiz are meant to be learning activities you complete on your own. If you decide to work with others to try find all the quiz answers without having to do all the assigned work, you are not only cheating yourself out of an education, you are cheating your way to a failing grade. There are other assignments throughout the course that will require you to recall information or use skills that you should have developed as you completed the learning activities. If you don’t do the work, and you try to cheat your way to higher quiz grades, you will hinder your ability to complete these other assignments. Most likely, you will fail those assignments. So, do yourself and others a favor–do not cheat on any assignments, no matter how tempting it might be. Instead, renew your commitment to follow the BYU-Idaho Honor Code, double your efforts to do the work, and follow your study schedule.</p>
+</div>
+<div id="plan-for-success" class="section level4">
+<h4>Plan for Success</h4>
+<p>Clearly, if you want to succeed in this course, you need to figure out how you will do the work and how you will stay on schedule. Doing this will help you avoid situations in which you might be tempted to violate the Honor Code and cheat. Such situations can arise quicker in the semester than you might think. So, it is important for you to start making a plan for success right away. Take time now to write your own plan for success. This plan should include a weekly study schedule and a general list of things you think you will need to do each week to get the work done. Be prepared to discuss this plan with your study group and with the instructor.</p>
+<ul>
+<li>Write your own Plan for Success in this course. The plan should include a weekly study schedule and a general list of things you think you will need to do each week to get the work done.</li>
+</ul>
+<p><br></p>
+</div>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>As with all the classes you take at BYU-Idaho, in the end it is up to you to decide what you want to get out of this class. If you choose to approach the things you study in class with an open mind, if you prepare diligently and work hard to complete all the learning activities, and if you humbly seek the Lord’s help to understand the intellectual and spiritual truths discussed in this course, you will have an outstanding educational experience that will be a blessing to you throughout your life.</p>
+<p><br></p>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<div class="SummaryHeading">
+Remember…
+</div>
+<div class="Summary">
+<ul>
+<li>In this class you will use the online textbook that has been written for you by your statistics teachers. All of the assignments and quizzes will be based on the readings, so study it well.</li>
+<li>Most weeks will cover two lessons</li>
+<li>By doing the work, staying on schedule, and living the Honor Code you <em>can</em> succeed in this class!</li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="navigation" class="section level2">
+<h2>Navigation</h2>
+<center>
+<table>
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>This Reading</strong></th>
+<th align="center"><strong>Next Reading</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Lesson 01: <br> Course Introduction</td>
+<td align="center"><a href="Lesson02.html">Lesson 2: <br> The Statistical Process &amp; Design of Studies</a></td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+
+<br />
+<hr />
+<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

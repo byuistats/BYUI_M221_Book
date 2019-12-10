@@ -40,7 +40,7 @@ By the end of this lesson, you should be able to:
 
 On August 3, 1492, Columbus set sail from Spain for his intended destination: the Indies (Caso, Adolph 1990). He was on the Santa Maria, which had a crew of approximately 41 men ("Crist'obal col'on" 1991; "Christopher Columbus"). Several other men were aboard the Nina and the Pinta ("Crist'obal col'on" 1991). On October 12, he landed on an island in the Bahamas he called San Salvador.
 
-The return trip was not without challenges. The Santa Maria ran aground on Christmas Day, 1492, and was abandoned on the island we now call Haiti. Following this incident, Columbus sailed for Spain. Severe storms made the journey difficult. A particularly bad storm on February 14, 1493 made the crew fear for their lives. By morning, the storm was even worse!
+The return trip was not without challenges. The Santa Maria ran aground on Christmas Day, 1492, and was abandoned on the island we now call Hispaniola (home to Haiti and the Dominican Republic). Following this incident, Columbus sailed for Spain. Severe storms made the journey difficult. A particularly bad storm on February 14, 1493 made the crew fear for their lives. By morning, the storm was even worse!
 
 Recognizing his dependence upon God, Columbus ordered that a pilgrimage should be made to a particular shrine upon their safe arrival in Spain. He decided that they would use random chance to determine who would make the pilgrimage. They took one chick pea for each man on board. A knife was used to mark one of the chick peas with a cross. The chick peas were placed in a hat and shaken up. Each man was to draw a chick pea, and the one who had the cross would make the pilgrimage.
 
@@ -445,11 +445,11 @@ The table below illustrates the profit for all possible outcomes in a drawing wh
   OOOOO           \$1,000,000       \$999,998       $\dfrac{34}{175,223,510}$
   OOOO P          \$10,000          \$9,998         $\dfrac{270}{175\text{,}223\text{,}510}$
   OOOO            \$100             \$98            $\dfrac{9\text{,}180}{175\text{,}223\text{,}510}$
-  OOO$P$          \$100             \$98            $\dfrac{14\text{,}310}{175\text{,}223\text{,}510}$
+  OOOP            \$100             \$98            $\dfrac{14\text{,}310}{175\text{,}223\text{,}510}$
   OOO             \$7               \$5             $\dfrac{486\text{,}540}{175\text{,}223\text{,}510}$
-  OO$P$           \$7               \$5             $\dfrac{248\text{,}040}{175\text{,}223\text{,}510}$
-  O$P$            \$4               \$2             $\dfrac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}$
-  $P$             \$4               \$2             $\dfrac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}$
+  OOP             \$7               \$5             $\dfrac{248\text{,}040}{175\text{,}223\text{,}510}$
+  OP              \$4               \$2             $\dfrac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}$
+  P               \$4               \$2             $\dfrac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}$
   Losing ticket   \$0               -\$2            $\dfrac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}$
 
 
@@ -480,16 +480,16 @@ If we add another column and compute the standard deviation of the profits, we g
   Outcome         Profit                Probability                            
   --------------- --------------------- --------------- ---------------------- -----------------------------
                   Gross Winnings, $x$   $P(x)$          $x \times P(x)$        $(x-\mu)^2 \times P(x)$
-  OOOOOP         \$199,999,998          0.00000000571   1.141399               228279866.1
-  OOOOO          \$999,998              0.000000194     0.194038               194037.3062
-  OOOOP          \$9,998                0.000001541     0.015406               154.0426305
-  OOOO           \$98                   0.000052390     0.005134               0.508283622
-  OOOP           \$98                   0.000081660     0.008003               0.79232447
-  OOO            \$5                    0.002776682     0.013883               0.083936974
-  OOP            \$5                    0.001415563     0.007078               0.042791399
-  OP             \$2                    0.009024217     0.018148               0.056316192
-  P              \$2                    0.018048434     0.036097               0.112632684
-  Losing ticket  \$-2                   0.968599305     (1.937199)             2.184838583
+  OOOOOP         $199,999,998           0.00000000571   1.141399               228279866.1
+  OOOOO          $999,998               0.000000194     0.194038               194037.3062
+  OOOOP          $9,998                 0.000001541     0.015406               154.0426305
+  OOOO           $98                    0.000052390     0.005134               0.508283622
+  OOOP           $98                    0.000081660     0.008003               0.79232447
+  OOO            $5                     0.002776682     0.013883               0.083936974
+  OOP            $5                     0.001415563     0.007078               0.042791399
+  OP             $2                     0.009024217     0.018148               0.056316192
+  P              $2                     0.018048434     0.036097               0.112632684
+  Losing ticket  $-2                    0.968599305     (1.937199)             2.184838583
                   Total                 Sum: 1          Sum: $\mu=\$-0.4981$   Sum: $\sigma^2$=228474061.2
 
 

@@ -70,9 +70,7 @@ h6 {
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -91,8 +89,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -108,7 +112,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -128,6 +131,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -149,19 +189,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -174,7 +280,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Math 221B</a>
+      <a class="navbar-brand" href="index.html">Math 221</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -189,7 +295,10 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -507,13 +616,12 @@ Excel Instructions
 </div>
 <div class="Summary">
 <p><strong>To create side-by-side histograms in Excel, do the following:</strong></p>
-<p>Use the file <a href="./Data/QuantitativeDescriptiveStatistics.xlsx">QuantitativeDescriptiveStatistics.xlsx</a> and create separate histograms for the two groups. This requires pasting the data for one of the groups, deleting the data, and pasting the data for the other group.</p>
-<p>Using 7 bins, the data are represented in the following histograms:</p>
-<p><img src="Images/ReadingPractices-Histogram-Excel.png"></p>
+<p>Use the “Two-sample t Test” tab of the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> to create separate histograms, one for each group.</p>
+<p><img src="Images/ReadingPractices-two-Histograms-Excel.png"></p>
 <span class="Custom">Click the link at right for a helpful tip.</span> <a href="javascript:showhide('tip')"><span style="font-size:8pt;">Show/Hide Tip</span></a>
 <div id="tip" style="display:none;">
 <p><strong>Tip for Excel users:</strong></p>
-<p>If you copy and paste the graphs into Microsoft Word, you will want to use the “Paste Special” option. If you simply paste the histogram from Excel, it is treated as a “Microsoft Office Graphic Object.” This means that it will update if your Excel file is changed. To copy and paste side-by-side histograms into Microsoft word, do the following: - Create the graph for the first group in Excel - Select the graph by clicking on it - Copy the graph - In Microsoft Word, click on the lower part of the “Paste” icon under the “Home” ribbon: <img src="Images/PasteButtonInFileRibbon.png"> - Then, choose “Paste Special” - A list of options will appear; from this list choose one of the “Picture” options, such as “Picture (PNG)” - This will paste a static image of the graph in the Word document, which you can move around or shrink as desired - You should create a title for the graph and place it above the graph in your document - Repeat this process for the second data set</p>
+<p>If you copy and paste the graphs into Microsoft Word, you will want to use the “Paste Special” option. If you simply paste the histogram from Excel, it is treated as a “Microsoft Office Graphic Object.” This means that it will update if your Excel file is changed. To copy and paste side-by-side histograms into Microsoft word, do the following: - Create the graph in Excel - Select the graph by clicking on it - Copy the graph - In Microsoft Word, click on the lower part of the “Paste” icon under the “Home” ribbon: <img src="Images/PasteButtonInFileRibbon.png"> - Then, choose “Paste Special” - A list of options will appear; from this list choose one of the “Picture” options, such as “Picture (PNG)” - This will paste a static image of the graph in the Word document, which you can move around or shrink as desired - You should create a title for the graph and place it above the graph in your document</p>
 </div>
 <p><br></p>
 </div>

@@ -70,9 +70,7 @@ h6 {
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -91,8 +89,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -108,7 +112,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -128,6 +131,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -149,19 +189,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -174,7 +280,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Math 221B</a>
+      <a class="navbar-brand" href="index.html">Math 221</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -189,7 +295,10 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -316,7 +425,9 @@ $(document).ready(function () {
 <li><a href="#mortality-rates-and-day-of-admission-aortic-aneurysms">Mortality Rates and Day of Admission: Aortic Aneurysms</a></li>
 <li><a href="#mortality-rates-and-day-of-admission-heart-attacks">Mortality Rates and Day of Admission: Heart Attacks</a></li>
 </ul></li>
-<li><a href="#confidence-intervals-managing-fox-populations">Confidence Intervals: Managing Fox Populations</a></li>
+<li><a href="#confidence-intervals-managing-fox-populations">Confidence Intervals: Managing Fox Populations</a><ul>
+<li><a href="#checking-requirements-for-a-confidence-interval">Checking Requirements for a Confidence Interval</a></li>
+</ul></li>
 <li><a href="#summary">Summary</a></li>
 <li><a href="#navigation">Navigation</a></li>
 </ul>
@@ -420,7 +531,7 @@ $(document).ready(function () {
 <p><img src="Images/Step2.png"></p>
 <p>A sample of 66 females and 52 males were provided with PTC strips and asked to indicate if they could taste the chemical or not. (This research was approved by the BYU-Idaho Institutional Review Board.)</p>
 <p><img src="Images/Step3.png"></p>
-<p>When working with quantitative data, it is natural to summarize the data by computing proportions. If someone has the ability to taste PTC, we will call this a success. The sample proportion is defined as the number of successes observed divided by the total number of observations. For the females, the proportion of the sample who could taste the PTC was: <span class="math display">\[
+<p>When working with categorical data, it is natural to summarize the data by computing proportions. If someone has the ability to taste PTC, we will call this a success. The sample proportion is defined as the number of successes observed divided by the total number of observations. For the females, the proportion of the sample who could taste the PTC was: <span class="math display">\[
 \hat p_1 = \frac{x_1}{n_1} = \frac{51}{66}
 \]</span> This is approximately 77.3% of the people who were surveyed. For the males, the proportion who could taste PTC was: <span class="math display">\[
 \hat p_2 = \frac{x_2}{n_2} = \frac{38}{52}
@@ -993,24 +1104,188 @@ z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqr
 </div>
 <div id="confidence-intervals-managing-fox-populations" class="section level2">
 <h2>Confidence Intervals: Managing Fox Populations</h2>
-<!-- {{:Lesson_18:Content/F2F}} -->
-<p>*When conducting hypothesis tests using two proportions, the null hypothesis is always <span class="math inline">\(p_1=p_2\)</span>, indicating that there is no difference between the two proportions. The alternative hypothesis can be left-tailed (<span class="math inline">\(&lt;\)</span>), right-tailed(<span class="math inline">\(&gt;\)</span>), or two-tailed(<span class="math inline">\(\ne\)</span>).</p>
-<p>*For a hypothesis test and confidence interval of two proportions, we use the following symbols: <span class="math display">\[
-\begin{array}{lcl}
-\text{Sample proportion for group 1:} &amp; \hat p_1 = \displaystyle{\frac{x_1}{n_1}} \\
-\text{Sample proportion for group 2:} &amp; \hat p_2 = \displaystyle{\frac{x_2}{n_2}}
-\end{array}
+<p>During the mid 1800’s, European foxes were introduced to the Australian mainland. These predators have been responsible for the reduction or extinction of several species of native wildlife. <!--(Coates08)--></p>
+<center>
+<img src="Images/RoyalBotanicGardensCranbourne-Flikr-flipsockgrrl.png" width=80%>
+</center>
+<p><br/></p>
+<p>The Royal Botanic Gardens Cranbourne is a 914 acre (370 ha) conservation reserve outside Melbourne, Australia. Predation by foxes has be an ongoing problem in the gardens. To reduce the risk to native species, a systematic program of killing foxes was implemented.</p>
+<p>One way to monitor the presence of foxes is to look for fox tracks in specific sandy areas, called sand-pads. Before beginning a systematic effort to reduce the fox population, ecologists observed fox tracks in the sand-pads 576 out of the 950 times the sand-pads were observed. After eliminating some of the foxes, the ecologists observed fox tracks in the sand-pads 268 times out of the 1359 times they checked the sand-pads <!--<cite>Coates08</cite>-->. The ecologists want to know if there is a difference in the proportion of times fox tracks are observed before versus after the intervention to reduce the fox population.</p>
+<p>One way to compare two proportions is to make a confidence interval for the difference in the proportions.</p>
+<p>The equation for the confidence interval for the difference of two proportions may look a little daunting at first, but with some practice, it is not too difficult.</p>
+<p>Before we compute the confidence interval, we first organize our data and calculate some statistics that will be useful later. We divide the data into two groups: before foxes were targeted (Group 1) and after (Group 2). For each group, let <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> represent the number of times fox prints were observed in the sand-pads before and after the ecologists began systematically eliminating the foxes, respectively. Similarly, Let <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span> be the number of times the ecologists checked the sand-pads in the before and after periods, respectively.</p>
+<center>
+<p><strong>Fox Tracks Data</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th> </th>
+<th>Before Intervention</th>
+<th>After Intervention</th>
+<th>Combined Data</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Fox Tracks Observed</strong></td>
+<td><span class="math inline">\(x_1 = 576\)</span></td>
+<td><span class="math inline">\(x_2 = 268\)</span></td>
+<td><span class="math inline">\(x_1 + x_2 = 576 + 268 = 844\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Total Observations</strong></td>
+<td><span class="math inline">\(n_1 = 950\)</span></td>
+<td><span class="math inline">\(n_2 = 1359\)</span></td>
+<td><span class="math inline">\(n_1 + n_2 = 950 + 1359 = 2309\)</span></td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>Similar to what we did in the lesson for <a href="Lesson17.html">Lesson 17: Inference for One Proportion</a>, we compute <span class="math inline">\(\hat p\)</span> for each group.</p>
+<p>For group 1: <span class="math display">\[
+\hat p_1 = \frac{x_1}{n_1} = \frac{576}{950}
 \]</span></p>
-<p>*For a hypothesis test only, we use the following symbols:</p>
+<p>For group 2: <span class="math display">\[
+\hat p_2 = \frac{x_2}{n_2} = \frac{268}{1359}
+\]</span></p>
+<p>An equation of the confidence interval for the difference between two proportions is computed by combining all the information above: <span class="math display">\[
+\left(
+\left( \hat p_1 -\hat p_2 \right)
+- z^*
+\sqrt{
+\frac{\hat p_1 \left( 1 - \hat p_1 \right)}{n_1}
++
+\frac{\hat p_2 \left( 1 - \hat p_2 \right)}{n_2}
+}
+,
+~
+\left( \hat p_1 -\hat p_2 \right)
++ z^*
+\sqrt{
+\frac{\hat p_1 \left( 1 - \hat p_1 \right)}{n_1}
++
+\frac{\hat p_2 \left( 1 - \hat p_2 \right)}{n_2}
+}
+\right)
+\]</span></p>
+<div class="note">
+<p>If you need to review how to find the value of <span class="math inline">\(z^*\)</span> for other confidence levels, see page <a href="Lesson10.html#a-little-more-precision">Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)</a>.</p>
+</div>
+<p>The lower bound for a 95% confidence interval for the difference of the proportions of times fox prints are observed in the sand-pads is:</p>
 <p><span class="math display">\[
-\begin{array}{lcl}
-\text{Overall sample proportion:} &amp; \hat p = \displaystyle{\frac{x_1+x_2}{n_1+n_2}}
+\displaystyle{
+\left( \hat p_1 -\hat p_2 \right)
+- z^*
+\sqrt{
+\frac{\hat p_1 \left( 1 - \hat p_1 \right)}{n_1}
++
+\frac{\hat p_2 \left( 1 - \hat p_2 \right)}{n_2}
+}
+}
+\]</span></p>
+<p><span class="math display">\[
+\displaystyle{
+=
+\left( \frac{576}{950} - \frac{268}{1359} \right)
+- 1.96
+\sqrt{
+\frac{\frac{576}{950} \left( 1 - \frac{576}{950} \right)}{950}
++
+\frac{\frac{268}{1359} \left( 1 - \frac{268}{1359} \right)}{1359}
+}
+}
+\]</span></p>
+<p><span class="math display">\[
+\displaystyle{
+=
+0.372
+}
+\]</span></p>
+<p>and the upper bound is:</p>
+<p><span class="math display">\[
+\displaystyle{
+\left( \hat p_1 -\hat p_2 \right)
++ z^*
+\sqrt{
+\frac{\hat p_1 \left( 1 - \hat p_1 \right)}{n_1}
++
+\frac{\hat p_2 \left( 1 - \hat p_2 \right)}{n_2}
+}
+}
+\]</span></p>
+<p><span class="math display">\[
+\displaystyle{
+=
+\left( \frac{576}{950} - \frac{268}{1359} \right)
++ 1.96
+\sqrt{
+\frac{\frac{576}{950} \left( 1 - \frac{576}{950} \right)}{950}
++
+\frac{\frac{268}{1359} \left( 1 - \frac{268}{1359} \right)}{1359}
+}
+}
+\]</span></p>
+<p><span class="math display">\[
+\displaystyle{
+=
+0.447
+}
+\]</span></p>
+<div class="note">
+<p>Make sure you can compute these confidence intervals before reading on.</p>
+</div>
+<p>So, the 95% confidence interval for the difference in the proportions is:</p>
+<p><span class="math display">\[
+(0.372, 0.447)
+\]</span></p>
+<div class="tip">
+<p>If we switch the way we label group 1 and group 2, then our confidence interval would have the opposite signs: <span class="math inline">\((-0.447, -0.372)\)</span>.</p>
+</div>
+<p>To interpret this confidence interval, we say, “We are 95% confident that the true <em>difference</em> in the proportions of times fox prints will appear in the sand-pads is between 0.372 and 0.447.”</p>
+<p>Notice that zero is not in this confidence interval, so zero is not a plausible value for <span class="math inline">\(p_1 - p_2\)</span>. Based on this result, it is reasonable to conclude that the proportion of times foxes are observed in the sand-pads is not the same before and after the effort to reduce their population. It seems that the work to reduce the number of foxes is having an effect on their presence in the reserve.</p>
+<p>As you may have guessed, the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> can be used to calculate confidence intervals for the difference of two proportions.</p>
+<div id="checking-requirements-for-a-confidence-interval" class="section level3">
+<h3>Checking Requirements for a Confidence Interval</h3>
+<p>The requirements for computing a confidence interval for two proportions are the same as the requirements for doing a hypothesis test.</p>
+<p><span class="math display">\[
+\begin{array}{rrr}
+n_1 \cdot \hat p_1 \ge 10                 &amp;&amp; n_2 \cdot \hat p_2 \ge 10 \\
+n_1 \cdot \left(1-\hat p_1\right) \ge 10  &amp;&amp; n_2 \cdot \left(1-\hat p_2\right) \ge 10
 \end{array}
 \]</span></p>
-<ul>
-<li><p>Whenever zero is contained in the confidence interval of the difference of the true proportions we conclude that there is no significant difference between the two proportions.</p></li>
-<li><p>You will use the Excel spreadsheet <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> to perform hypothesis testing and calculate confidence intervals for problems involving two proportions. <br></p></li>
-</ul>
+<p>In this example, all of the requirements are satisfied:</p>
+<p><span class="math display">\[
+\begin{array}{rr}
+n_1 \cdot \hat p_1  = 950 \cdot 0.606 = 576 \ge 10              &amp; n_2 \cdot \hat p_2  = 1359 \cdot 0.197 = 268 \ge 10  \\
+n_1 \cdot \left(1-\hat p_1\right) = 950 \cdot (1-0.606) = 374 \ge 10    &amp; n_2 \cdot \left(1-\hat p_2\right) = 1359 \cdot (1-0.197) = 1091 \ge 10
+\end{array}
+\]</span></p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="22" style="list-style-type: decimal">
+<li>What is the value of <span class="math inline">\(z^*\)</span> for a 93% confidence interval?</li>
+</ol>
+<a href="javascript:showhide('Q22')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q22" style="display:none;">
+<center>
+<span class="math inline">\(z^* = 1.8119\)</span>
+</center>
+</div>
+<p><br></p>
+<ol start="23" style="list-style-type: decimal">
+<li>Find the 93% confidence interval for the difference in the proprotions of the times fox prints are observed in the sand-pads before and after the effort to reduce the fox population.</li>
+</ol>
+<a href="javascript:showhide('Q23')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q23" style="display:none;">
+<center>
+<span class="math inline">\((0.374, 0.444)\)</span>
+</center>
+</div>
+<p><br></p>
+<p><br></p>
+</div>
 </div>
 <div id="summary" class="section level2">
 <h2>Summary</h2>

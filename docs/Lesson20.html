@@ -11,7 +11,7 @@
 
 
 
-<title>Lesson 20</title>
+<title>Lesson 20: Review for Exam 3</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -70,9 +70,7 @@ h6 {
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -91,8 +89,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -108,7 +112,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -128,6 +131,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -149,19 +189,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -174,7 +280,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Math 221B</a>
+      <a class="navbar-brand" href="index.html">Math 221</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -189,7 +295,10 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -303,15 +412,14 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Lesson 20</h1>
+<h1 class="title toc-ignore">Lesson 20: Review for Exam 3</h1>
 
 </div>
 
 <div id="TOC">
 <ul>
-<li><a href="#lesson-outcomes">Lesson Outcomes</a></li>
-<li><a href="#lesson-summaries">Lesson Summaries</a></li>
-<li><a href="#review-questions">Review Questions</a></li>
+<li><a href="#unit-3-lesson-outcomes">Unit 3 Lesson Outcomes</a></li>
+<li><a href="#unit-3-lesson-summaries">Unit 3 Lesson Summaries</a></li>
 <li><a href="#navigation">Navigation</a></li>
 </ul>
 </div>
@@ -322,13 +430,12 @@ $(document).ready(function () {
     e.style.display = (e.style.display == 'block') ? 'none' : 'block';
  }
 </script>
-<p>The following questions are intended to help you judge your preparation for this exam. Carefully work through the problems.<br /> <strong>These questions are repeated on the preparation quiz for this lesson.</strong></p>
 <p>This is not designed to be a comprehensive review. There may be items on the exam that are not covered in this review. Similarly, there may be items in this review that are not tested on this exam. You are strongly encouraged to review the readings, homework exercises, and other activities from Units 1-3 as you prepare for the exam. In particular, you should go over the <a href="Lesson08.html" target="_blank">Review for Exam 1</a> and the <a href="Lesson15.html" target="_blank">Review for Exam 2</a>.</p>
 <!-- Use the <span style="font-variant:small-caps"> -->
 <!-- [[Index]]</span> to review definitions of important terms. 
 Index needs to be built-->
-<div id="lesson-outcomes" class="section level2">
-<h2>Lesson Outcomes</h2>
+<div id="unit-3-lesson-outcomes" class="section level2">
+<h2>Unit 3 Lesson Outcomes</h2>
 <a href="javascript:showhide('oc')"><span style="font-size:8pt;">Click here to Show/Hide Outcomes for this Lesson</span></a>
 <div id="oc" style="display:none;">
 <p>The expectation on the exam is the following outcomes. You should be able to do:</p>
@@ -373,11 +480,11 @@ Index needs to be built-->
 </div>
 <p><br></p>
 </div>
-<div id="lesson-summaries" class="section level2">
-<h2>Lesson Summaries</h2>
-<span class="Custom">Click on the link at right</span> for a review of the summaries from each lesson. <a href="javascript:showhide('ls')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="ls" style="display:none;">
-<p><strong>Here are the summaries for each lesson in Unit 3. Reviewing these key points from each lesson will help you in your preparation for the exam.</strong></p>
+<div id="unit-3-lesson-summaries" class="section level2">
+<h2>Unit 3 Lesson Summaries</h2>
+<p>Here are the summaries for each lesson in Unit 3. Reviewing these key points from each lesson will help you in your preparation for the exam.</p>
+<a href="javascript:showhide('ls')"><span style="font-size:8pt;">Show/Hide Summaries</span></a>
+<div id="ls">
 <div class="RecapHeading">
 Lesson 16 Recap
 </div>
@@ -450,368 +557,14 @@ H_a: &amp; \text{The (first variable) and the (second variable) are not independ
 </div>
 <p><br></p>
 </div>
-<div id="review-questions" class="section level2">
-<h2>Review Questions</h2>
-<p><strong>Questions 1 through 4: Decide which hypothesis test to use.</strong></p>
-<ul>
-<li><p>Here is a list of hypothesis tests we have studied so far this semester. For each question identify the one hypothesis test that is most appropriate to the given situation. You may use a hypothesis test once, more than once, or not at all.</p>
-<ol style="list-style-type: lower-alpha">
-<li>One sample z-test</li>
-<li>One sample t-test</li>
-<li>Paired-samples t-test</li>
-<li>Independent sample t-test</li>
-<li>ANOVA</li>
-<li>Test of one proportion</li>
-<li>Test of two proportions</li>
-<li>Chi-Squared test of independence</li>
-</ol></li>
-</ul>
-<ol style="list-style-type: decimal">
-<li><p>In an article in the Journal of Small Business Management successful start-up businesses in the United States and Korea were compared. One set of data compared educational level (high school, undergraduate degree, master’s degree, doctoral degree) of people who managed successful start-up companies in the United States and Korea. You want to determine if education level differs between managers of successful start-up companies differs between these two countries. Which hypothesis test would be most appropriate for this analysis?</p></li>
-<li><p>A human resources manager reported data from a recent involuntary Reduction in Force (RIF) at her company. You are an attorney and want to determine if age discrimination was a factor (it is illegal to discriminate against employees because of age). The company reported the number of employees in two groups: 40 years old or younger, and over 40 years old. They also reported the number of employees in each group who were terminated. You want to determine if both age groups were treated equally. Which hypothesis test would be most appropriate for this analysis?</p></li>
-<li><p>A survey was conducted by a group of state lotteries. A random sample of 2406 adults completed the survey. A total of 248 were classified as heavy players. Of these, 152 were male. You want to determine if the proportion of male heavy lottery players is different than the proportion of males in the population, which is 48.5%. Which hypothesis test would be most appropriate for this analysis?</p></li>
-<li><p>A student project compared the effectiveness of two different combination locks. One of the locks turned clockwise first and the other lock turned counterclockwise first. They asked 25 students to participate in the study. Each student was given the combination to each lock and asked to open the locks. The time it took them to open each lock was recorded. They want to determine if one of the locks is easier to open. Which hypothesis test would be most appropriate for this analysis?</p></li>
-</ol>
-<p><strong>Questions 5 through 7: Decide which confidence interval to use.</strong></p>
-<ul>
-<li>Here is a list of confidence intervals we have studied so far this semester. For each question identify the one confidence interval that is most appropriate for the given situation. You may use a confidence interval once, more than once, or not at all.</li>
-</ul>
-<ol style="list-style-type: lower-alpha">
-<li>One sample z-confidence interval</li>
-<li>One sample t-confidence interval</li>
-<li>Paired-samples t-confidence interval</li>
-<li>Independent sample t-confidence interval</li>
-<li>Confidence interval for one proportion</li>
-<li>Confidence interval for two proportions</li>
-</ol>
-<ol start="5" style="list-style-type: decimal">
-<li><p>A bank employs two appraisers. When approving borrowers for mortgages, it is imperative that the appraisers value the same types of properties consistently. To make sure this is the case, the bank evaluates six properties that both appraisers have recently valued. Which confidence interval would be most appropriate for this study?</p></li>
-<li><p>In a Wall Street Journal article on satisfaction with career paths, the percentage of psychology majors reporting they were “satisfied” or “very satisfied” with their career path was reported. The same data was also reported for accounting majors. You decide to construct a 95% confidence interval to see if the observed difference is significant. Which confidence interval would be most appropriate for this study?</p></li>
-<li><p>DoubleStuf Oreo cookies are supposed to have twice the filling of regular Oreo cookies. You and some friends decide you want to know if that is a true assertion by the company who makes them. You take a sample of 55 DoubleStuf Oreo cookies and measure the amount of filling in each one. You need to construct a confidence interval to estimate the true mean filling amount of DoubleStuf Oreos in order to compare it to the filling amount found in regular Oreos. Which confidence interval would be most appropriate for this study?</p></li>
-<li><p>Which one of the following best defines the notion of the significance level of a hypothesis test?</p>
-<ol style="list-style-type: lower-alpha">
-<li>The probability of rejecting <span class="math inline">\(H_0\)</span>, whether it’s true or not</li>
-<li>The probability of observing a sample statistic more extreme than the one actually obtained, assuming the null hypothesis is true</li>
-<li>The probability of the type I error</li>
-<li>The probability of the type II error</li>
-</ol></li>
-<li><p>Which one of the following best defines the notion of the <span class="math inline">\(P\)</span>-value of a hypothesis test?</p>
-<ol style="list-style-type: lower-alpha">
-<li>The probability of rejecting <span class="math inline">\(H_0\)</span>, whether it’s true or not</li>
-<li>The probability of observing a sample statistic more extreme than the one actually obtained, assuming the null hypothesis is true</li>
-<li>The probability of the type I error</li>
-<li>The probability of the type II error</li>
-</ol></li>
-<li><p>Suppose you create a 95% confidence interval for a mean, and get (10, 20). You’ve been told to report this by saying something similar to, “We are 95% confident that the true mean is between 10 and 20.” Exactly what does this mean?</p>
-<ol style="list-style-type: lower-alpha">
-<li>95% of the data are between 10 and 20.</li>
-<li>95% of the sample means are between 10 and 20.</li>
-<li>There is a 95% chance that the true mean is between 10 and 20.</li>
-<li>95% of all 95% confidence intervals actually contain the true mean.</li>
-</ol></li>
-</ol>
-<p><strong>Questions 11 through 13: Use the following information.</strong></p>
-<ul>
-<li>You take a simple random sample of 100 adults from a town in the Western United States to determine the proportion of adults in the town who invest in the stock market. Assume the unknown population proportion or percentage of people in town who invest in the stock market is <span class="math inline">\(p=0.30\)</span> (or 30%).</li>
-</ul>
-<ol start="11" style="list-style-type: decimal">
-<li><p>What is the mean of the distribution of the sample proportions?</p>
-<ol style="list-style-type: lower-alpha">
-<li>30</li>
-<li>70</li>
-<li>0.70</li>
-<li>0.30</li>
-</ol></li>
-<li><p>What is the standard deviation of the distribution of the sample proportions?</p>
-<ol style="list-style-type: lower-alpha">
-<li>0.004</li>
-<li>0.046</li>
-<li>0.458</li>
-<li>4.583</li>
-</ol></li>
-<li><p>What is the probability that your random sample of 100 adults will have a sample proportion less that 0.25?</p>
-<ol style="list-style-type: lower-alpha">
-<li>0.138</li>
-<li>0.124</li>
-<li>0.876</li>
-<li>0.862</li>
-</ol></li>
-</ol>
-<p><strong>Questions 14 through 18: Use the following information.</strong></p>
-<ul>
-<li>Accupril is meant to control hypertension. In clinical trials of Accupril, 2142 subjects were divided into two groups. The 1563 subjects in the experimental group received Accupril. The 579 subjects in the control group received a placebo. Of the 1563 in the experimental group, 61 experienced dizziness as a side effect. Of the 579 subjects in the control group, 15 experienced dizziness as a side effect.</li>
-</ul>
-<ol start="14" style="list-style-type: decimal">
-<li><p>Let <span class="math inline">\(p_1\)</span> be the true proportion of people who experience dizziness while taking Accupril. Let <span class="math inline">\(p_2\)</span> be the true proportion of people who experience dizziness but do not take Accupril. Create a 95% confidence interval for <span class="math inline">\(p_1 - p_2\)</span>.</p>
-<ol style="list-style-type: lower-alpha">
-<li>(0.006, 0.092)</li>
-<li>(-0.06, 0.92)</li>
-<li>(-0.004, 0.029)</li>
-<li>(-0.04, 0.29)</li>
-<li>(-0.003, 0.029)</li>
-</ol></li>
-</ol>
-<ul>
-<li>Perform a hypothesis test to see if the proportion of experimental group subjects who experience dizziness is different than the proportion of control group subjects who do. Let <span class="math inline">\(p_1\)</span> be the true proportion of people who experience dizziness while taking Accupril. Let <span class="math inline">\(p_2\)</span> be the true proportion of people who experience dizziness but do not take Accupril. Use a level of significance of <span class="math inline">\(\alpha = 0.05\)</span>.</li>
-</ul>
-<ol start="15" style="list-style-type: decimal">
-<li><p>Which of the following pairs of hypotheses is the most appropriate for addressing this question?</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(H_0:~p_1=p_2\)</span>  <span class="math inline">\(H_a:~p_1&lt;p_2\)</span></li>
-<li><span class="math inline">\(H_0:~p_1=p_2\)</span>  <span class="math inline">\(H_a:~p_1\ne p_2\)</span></li>
-<li><span class="math inline">\(H_0:~p_1=p_2\)</span>  <span class="math inline">\(H_a:~p_1&gt;p_2\)</span></li>
-<li><span class="math inline">\(H_0:~p_1&lt;p_2\)</span>  <span class="math inline">\(H_a:~p_1=p_2\)</span></li>
-<li><span class="math inline">\(H_0:~p_1 \ne p_2\)</span>  <span class="math inline">\(H_a:~p_1=p_2\)</span></li>
-<li><span class="math inline">\(H_0:~p_1&gt;p_2\)</span>  <span class="math inline">\(H_a:~p_1=p_2\)</span></li>
-</ol></li>
-<li><p>The value of your test statistic is:</p>
-<ol style="list-style-type: lower-alpha">
-<li>-1.361</li>
-<li>0.897</li>
-<li>1.923</li>
-<li>1.458</li>
-</ol></li>
-<li><p>The <span class="math inline">\(P\)</span>-value of your test is:</p>
-<ol style="list-style-type: lower-alpha">
-<li>0.045</li>
-<li>0.014</li>
-<li>0.072</li>
-<li>0.145</li>
-</ol></li>
-<li><p>Is there sufficient evidence to conclude that the true proportion of people who experience dizziness while taking Accupril is different than the true proportion of people who experience dizziness while not taking Accupril?</p>
-<ol style="list-style-type: lower-alpha">
-<li>Yes. I rejected <span class="math inline">\(H_0\)</span>.</li>
-<li>Yes. I failed to reject <span class="math inline">\(H_0\)</span>.</li>
-<li>Yes. I accepted <span class="math inline">\(H_a\)</span>.</li>
-<li>No. I rejected <span class="math inline">\(H_0\)</span>.</li>
-<li>No. I failed to reject <span class="math inline">\(H_0\)</span>.</li>
-<li>No. I failed to accept <span class="math inline">\(H_a\)</span>.</li>
-</ol></li>
-</ol>
-<p><strong>Questions 19 through 22: Use the following information and table.</strong></p>
-<ul>
-<li>A survey was conducted of 1279 randomly selected adults aged 18 and older. They were asked “Are you a morning person or a night person?”</li>
-</ul>
-<p><br> <br></p>
-<ul>
-<li>The hypotheses for this study are:</li>
-</ul>
-<p><span class="math display">\[
-\begin{array}{rl}
-H_0: &amp; \text{Being a morning or evening person is independent of age} \\
-H_a: &amp; \text{Being a morning or evening person is not independent of age} \\
-\end{array}
-\]</span></p>
-<p><br></p>
-<ul>
-<li>The results of the survey are given here:</li>
-</ul>
-<table>
-<caption>Age</caption>
-<thead>
-<tr class="header">
-<th align="left">Preference</th>
-<th align="left">18-29</th>
-<th align="left">30-49</th>
-<th align="left">50-64</th>
-<th align="left">65+</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Morning Person</td>
-<td align="left">97</td>
-<td align="left">177</td>
-<td align="left">210</td>
-<td align="left">210</td>
-</tr>
-<tr class="even">
-<td align="left">Evening Person</td>
-<td align="left">131</td>
-<td align="left">167</td>
-<td align="left">200</td>
-<td align="left">190</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<!-- {| class="basic" -->
-<!-- |+ Age -->
-<!-- |- -->
-<!-- !Preference!!18-29!!30-49!!50-64!!65+ -->
-<!-- |- -->
-<!-- !Morning Person -->
-<!-- | align="center"| 97 || 177 || 210 || 210 -->
-<!-- |- -->
-<!-- !Evening Person -->
-<!-- | align="center"| 131 || 167 || 200 || 190 -->
-<!-- |} -->
-<ul>
-<li>Conduct a test of independence. Use a level of significance of <span class="math inline">\(\alpha=0.05\)</span></li>
-</ul>
-<ol start="19" style="list-style-type: decimal">
-<li><p>Calculate the test statistic for this hypothesis test. Assume the requirements for the test are satisfied.</p>
-<ol style="list-style-type: lower-alpha">
-<li>6.580</li>
-<li>0.658</li>
-<li>9.760</li>
-<li>0.097</li>
-</ol></li>
-<li><p>Calculate the <span class="math inline">\(P\)</span>-value for this hypothesis test. Assume the requirements for the test are satisfied.</p>
-<ol style="list-style-type: lower-alpha">
-<li>8.660</li>
-<li>0.009</li>
-<li>0.866</li>
-<li>0.087</li>
-</ol></li>
-<li><p>Should you reject <span class="math inline">\(H_0\)</span> or not? Explain.</p>
-<ol style="list-style-type: lower-alpha">
-<li>Yes. The <span class="math inline">\(P\)</span>-value is less than 0.05.</li>
-<li>Yes. The <span class="math inline">\(P\)</span>-value is greater than 0.05.</li>
-<li>Yes. Looking at the data we can see that the age is a factor in determining if you are a morning or a night person.</li>
-<li>No. The <span class="math inline">\(P\)</span>-value is less than 0.05.</li>
-<li>No. The <span class="math inline">\(P\)</span>-value is greater than 0.05.</li>
-<li>No. Young people are more likely to be a night person.</li>
-</ol></li>
-<li><p>Do you have sufficient evidence to conclude that age makes a difference in whether a person is a morning or night person? Why or why not?</p>
-<ol style="list-style-type: lower-alpha">
-<li>Yes. The table makes this clear.</li>
-<li>Yes. I rejected <span class="math inline">\(H_0\)</span>.</li>
-<li>Yes. I failed to reject <span class="math inline">\(H_0\)</span>.</li>
-<li>No. The difference in the data in the table is entirely due to chance.</li>
-<li>No. I rejected <span class="math inline">\(H_0\)</span>.</li>
-<li>No. I failed to reject <span class="math inline">\(H_0\)</span>.</li>
-</ol></li>
-</ol>
-<p><strong>Questions 23 and 29: Use the following information to answer each question.</strong></p>
-<ul>
-<li>A recent book noted that only 20% of all investment managers outperform the Dow Jones Industrial Average over a five-year period. A random sample of 200 investment managers that had graduated from one of the top ten business programs in the country were followed over a five-year period. Fifty of these outperformed the Dow Jones Industrial Average. Let <span class="math inline">\(p\)</span> be the true proportion of investment managers who graduated from one of the top ten business programs who outperformed the Dow Jones over a five-year period.</li>
-</ul>
-<ol start="23" style="list-style-type: decimal">
-<li><p>Based on the results of the sample, a 95% confidence interval for <span class="math inline">\(p\)</span> is:</p>
-<ol style="list-style-type: lower-alpha">
-<li>(1.95, 3.15)</li>
-<li>(0.0195, 0 .0315)</li>
-<li>(0.190, 0.310)</li>
-<li>(0.028, 0.031)</li>
-<li>(0.195, 0.315)</li>
-<li>We can assert that <span class="math inline">\(p\)</span> = 0.20 with 100% confidence, because only 20% of investment managers outperform the standard indexes.</li>
-</ol></li>
-<li><p>Suppose you had been in charge of designing the study. What sample size would be needed to construct a margin of error of 2% with 95% confidence? Use the prior estimate of <span class="math inline">\(p^* = 0.2\)</span> for this estimate.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(n=2401\)</span></li>
-<li><span class="math inline">\(n=1537\)</span></li>
-<li><span class="math inline">\(n=16\)</span></li>
-<li><span class="math inline">\(n=1801\)</span></li>
-<li><span class="math inline">\(n&gt;30\)</span></li>
-</ol></li>
-</ol>
-<ul>
-<li>Suppose you wish to see if there is evidence that graduates of one of the top ten business programs performs better than other investment managers. Conduct a hypothesis test. Use a level of significance of <span class="math inline">\(\alpha=0.05\)</span>.</li>
-</ul>
-<ol start="25" style="list-style-type: decimal">
-<li><p>Which of the following pairs of hypotheses is the most appropriate for addressing this question?</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(H_0:~p=0.2\)</span>  <span class="math inline">\(H_a:~p&lt;0.2\)</span></li>
-<li><span class="math inline">\(H_0:~p=0.2\)</span>  <span class="math inline">\(H_a:~p\ne0.2\)</span></li>
-<li><span class="math inline">\(H_0:~p=0.2\)</span>  <span class="math inline">\(H_a:~p&gt;0.2\)</span></li>
-<li><span class="math inline">\(H_0:~p&lt;0.2\)</span>  <span class="math inline">\(H_a:~p=0.2\)</span></li>
-<li><span class="math inline">\(H_0:~p\ne0.2\)</span>  <span class="math inline">\(H_a:~p=0.2\)</span></li>
-<li><span class="math inline">\(H_0:~p&gt;0.2\)</span>  <span class="math inline">\(H_a:~p=0.2\)</span></li>
-</ol></li>
-<li><p>How many measurements must you have in order to assure that <span class="math inline">\(\hat p\)</span> is normally distributed?</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(n\ge30\)</span></li>
-<li><span class="math inline">\(n\ge5\)</span></li>
-<li><span class="math inline">\(np\ge10\)</span> and <span class="math inline">\(n(1-p)\ge10\)</span></li>
-<li><span class="math inline">\(np\ge5\)</span> and <span class="math inline">\(n(1-p)\ge5\)</span></li>
-</ol></li>
-<li><p>The value of your test statistic is:</p>
-<ol style="list-style-type: lower-alpha">
-<li>1.768</li>
-<li>0.039</li>
-<li>1.923</li>
-<li>0.077</li>
-</ol></li>
-<li><p>The <span class="math inline">\(P\)</span>-value of your test is:</p>
-<ol style="list-style-type: lower-alpha">
-<li>1.768</li>
-<li>0.039</li>
-<li>1.923</li>
-<li>0.077</li>
-</ol></li>
-<li><p>Is there sufficient evidence to conclude that graduates from the top ten business programs perform better than other investment managers?</p>
-<ol style="list-style-type: lower-alpha">
-<li>Yes. I rejected <span class="math inline">\(H_0\)</span>.</li>
-<li>Yes. I failed to reject <span class="math inline">\(H_0\)</span>.</li>
-<li>Yes. I accepted <span class="math inline">\(H_a\)</span>.</li>
-<li>No. I rejected <span class="math inline">\(H_0\)</span>.</li>
-<li>No. I failed to reject <span class="math inline">\(H_0\)</span>.</li>
-<li>No. I failed to accept <span class="math inline">\(H_a\)</span>.</li>
-</ol></li>
-</ol>
-<p><strong>Questions 30 and 33: Use the following information to answer each question.</strong></p>
-<ul>
-<li><p>Computer software is commonly used to translate text from one language to another. As part of his Ph.D. thesis, Philipp Koehn developed a phrase-based translation program called Pharaoh. The quality of the translation can vary. A good translation system should match a professional human translation. It is important to be able to quantify how good the translations produced by Pharaoh are. The IBM T. J. Watson Research Center developed methods to measure the quality of a translation from one language to another. One of these is the BiLingual Evaluation Understudy (BLEU). BLEU is a score ranging from 0 to 1 that indicates how well a computer translation matches a professional human translation of the same text. Higher scores indicate a better match. BLEU helps companies who develop translation software “to monitor the effect of daily changes to their systems in order to weed out bad ideas from good ideas.”</p></li>
-<li><p>To compare Pharaoh’s ability to translate with similar computer translation software, Koehn took a random sample of 100 blocks of Spanish text, each of which contained 300 sentences, and used Pharaoh to translate each of these to English. The BLEU score was calculated for each of the 100 blocks. He wants to use this data to see if it differs from the mean BLEU score of another leading translation software which has a population mean score of 0.295. Open the data file <a href="./Data/BLEU-Scores.xlsx">BLEU-Scores.xlsx</a>.</p></li>
-</ul>
-<ol start="30" style="list-style-type: decimal">
-<li><p>Assuming the requirements are satisfied, calculate a 95% confidence interval for the mean of the BLEU test scores. <!--:a. 0.282, 0.292
-b. 0.279, 0.301
-c. 0.294, 0.304
-d. 0.289, 0.297--></p></li>
-<li><p>Calculate the degrees of freedom and the test statistic for a test of <span class="math inline">\(H_0: \mu = 0.295\)</span> against <span class="math inline">\(H_a: \mu \ne 0.295\)</span>. Assume the requirements are satisfied. <!--:a. 99
-b. -2.803--></p></li>
-<li><p>Calculate the p-value for a test of <span class="math inline">\(H_0: \mu = 0.295\)</span> against <span class="math inline">\(H_a: \mu \ne 0.295\)</span>. Assume the requirements are satisfied. <!--a. 0.005..0.007--></p></li>
-<li><p>Based on the results of this test, what would you conclude? Use a level of significance of <span class="math inline">\(\alpha = 0.05\)</span>.</p>
-<ol style="list-style-type: lower-alpha">
-<li>We have sufficient evidence to say that the true mean is equal to 0.295.</li>
-<li>We have insufficient evidence to say that the true mean is equal to 0.295.</li>
-<li>We have insufficient evidence to say that the true mean is different than 0.295.</li>
-<li>We have sufficient evidence to say that the true mean is different than 0.295.</li>
-</ol></li>
-</ol>
-<p><strong>Questions 34 and 38: Use the following information to answer each question.</strong></p>
-<ul>
-<li>A study was done to test the notion that people are taller when they first wake up in the morning than in the evening right before they go to bed. To test this theory, the heights of children in a boarding school in India were measured. Values were recorded (in mm) for each child in the morning and again in the evening. You want to determine if the children are taller in the morning than in the evening. Open the file <a href="./Data/AMPM=Heights.xlsx">AM/PM Heights.xlsx</a>. <i>Define the differences as <u>AM Height</u> minus <u>PM Height</u></i>.</li>
-</ul>
-<ol start="34" style="list-style-type: decimal">
-<li>Give a 95% confidence interval for the true mean difference of heights. <!--
-a. 8.718..8.738
-b. 10.465..10.445--></li>
-</ol>
-<ul>
-<li>You also want to conduct a hypothesis test to determine if there is a decrease in heights from morning until evening. Use a level of significance of <span class="math inline">\(\alpha = 0.05\)</span>.</li>
-</ul>
-<ol start="35" style="list-style-type: decimal">
-<li><p>Give the test statistic for this test. <!--
-a. 22.436..22.456
-b. -22.456..-22.436
---></p></li>
-<li><p>Give the degrees of freedom for this test. <!--
-  `df =`___________
-a. 40--></p></li>
-<li><p>What is the P-value for this test? <!--
-  P-value`~~`___________
-a. 0..0.001--></p></li>
-<li><p>Based on your results of this test, is there enough evidence to suggest that the children are taller in the morning than in the evening?</p>
-<ol style="list-style-type: lower-alpha">
-<li>Yes, because we rejected the null.</li>
-<li>Yes, because we failed to reject the null.</li>
-<li>No, because we rejected the null.</li>
-<li>No, because we failed to reject the null.</li>
-</ol></li>
-</ol>
-<p><br></p>
-</div>
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">

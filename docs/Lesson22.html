@@ -11,7 +11,7 @@
 
 
 
-<title>Lesson 22</title>
+<title>Lesson 22: Simple Linear Regression</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -70,9 +70,7 @@ h6 {
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -91,8 +89,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -108,7 +112,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -128,6 +131,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -149,19 +189,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -174,7 +280,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Math 221B</a>
+      <a class="navbar-brand" href="index.html">Math 221</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -189,7 +295,10 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -303,7 +412,7 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Lesson 22</h1>
+<h1 class="title toc-ignore">Lesson 22: Simple Linear Regression</h1>
 
 </div>
 
@@ -363,7 +472,7 @@ $(document).ready(function () {
 <p>Simple linear regression is a method used to fit a line to data. This provides a powerful tool to model bivariate data (i.e., data involving two variables.) Regression allows us to write a linear equation that models the relationship between the <strong>independent variable</strong> (<span class="math inline">\(X\)</span>) and the <strong>dependent variable</strong> (<span class="math inline">\(Y\)</span>) which we can use to predict the value of <span class="math inline">\(Y\)</span> for any given variable <span class="math inline">\(X\)</span>. For the crocodile data, the independent variable is the head length and we will use this to predict the dependent variable, the body length. Sometimes the independent variable is also called the <strong>explanatory variable</strong>, and the dependent variable is also called the <strong>response variable</strong>.</p>
 <p>We will be using linear equations throughout this lesson. Click on the link at right if you would like to review lines and linear equations.</p>
 <!-- BEGIN REVIEW OF LINES  ***********************************************  -->
-<a href="javascript:showhide('re')"><span style="font-size:8pt;">Click Here for a Revious of Linear Equations</span></a>
+<a href="javascript:showhide('re')"><span style="font-size:8pt;">Click Here for a Review of Linear Equations</span></a>
 <div id="re" style="display:none;">
 <p><strong>Linear Equations</strong></p>
 <p>A <strong>linear equation</strong> is the technical term for any equation that describes a line. Two important characteristics of a line are its slope and its Y-intercept.</p>
@@ -399,7 +508,7 @@ Answer the following questions:
 <!--
 Notice that this is the equation of a straight line. You might have written linear equations in the form $Y=mX+b$ in your algebra classes.  Notice that our equation has the same form.  The slope is given by $b_1$ and the $Y$-intercept is given by $b_0$.
 -->
-<p>This leads to the following representation of the linear equation: <span class="math display">\[\hat Y = b_0 + b_1 X\]</span> We use the symbol <span class="math inline">\(\hat Y\)</span> to indicate a predicted value for <span class="math inline">\(Y\)</span>. The value <span class="math inline">\(b_0\)</span> is the Y-intercept and <span class="math inline">\(b_1\)</span> is the slope. Compare this notation to traditional slope-intercept form.</p>
+<p>This leads to the following representation of the linear equation: <span class="math display">\[\widehat Y = b_0 + b_1 X\]</span> We use the symbol <span class="math inline">\(\widehat Y\)</span> to indicate a predicted value for <span class="math inline">\(Y\)</span>. The value <span class="math inline">\(b_0\)</span> is the Y-intercept and <span class="math inline">\(b_1\)</span> is the slope. Compare this notation to traditional slope-intercept form.</p>
 <p>You may wonder why we would use this form (rather than traditional slope-intercept form) to express the equation. Click on the link at right for a brief explanation.</p>
 <!-- START EXPLANATION OF FORM ***********************************************  -->
 <a href="javascript:showhide('ex')"><span style="font-size:8pt;">Click Here for an Explanation</span></a>
@@ -449,8 +558,8 @@ Answer the following questions:
 This video is an hour and a half long. <strong>YOU DO NOT NEED TO WATCH THE ENTIRE VIDEO</strong>. Please watch only the last fifteen minutes, beginning at 1:19:00
 </div>
 <p><br> <br></p>
-<p><a href="http://stream.byui.edu/VideoPlayer/BYUIplayer.html?StartCue=0&amp;EndCue=5776&amp;VideoName=1817_dvd&amp;VideoType=libraryvideos"><img src="Images/video-icon.png" /></a></p>
-<!-- <img src="Images/video-icon.png"> -->
+<p><a href="http://stream.byui.edu/VideoPlayer/BYUIplayer.html?StartCue=0&amp;EndCue=5776&amp;VideoName=1817_dvd&amp;VideoType=libraryvideos"><img src="Images/Video-icon.png" /></a></p>
+<!-- <img src="Images/Video-icon.png"> -->
 <!-- Need exported video -->
 </div>
 <div id="estuarine-crocodiles" class="section level2">
@@ -461,8 +570,8 @@ This video is an hour and a half long. <strong>YOU DO NOT NEED TO WATCH THE ENTI
 <h2>Regression Equation</h2>
 <p>We can use simple linear regression to develop an equation relating the head length of an estuarine crocodile to its body length. Let <span class="math inline">\(Y\)</span> be the body length (in cm) and <span class="math inline">\(X\)</span> be the head length (in cm).</p>
 <p>If we can assume that there is a linear relationship between the head length and the body length, then we can express this symbolically as: <span class="math display">\[
-\hat Y = b_0 + b_1 X
-\]</span> where <span class="math inline">\(\hat Y\)</span> represents the predicted body length of an estuarine crocodile with a head length of <span class="math inline">\(X\)</span>. The numbers <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> are called the estimated “regression coefficients”. “Coefficient” is a fancy term that simply means a number, especially a number that is multiplied by a variable such as <span class="math inline">\(X\)</span>. We will use software to calculate the regression coefficients.</p>
+\widehat Y = b_0 + b_1 X
+\]</span> where <span class="math inline">\(\widehat Y\)</span> represents the predicted body length of an estuarine crocodile with a head length of <span class="math inline">\(X\)</span>. The numbers <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> are called the estimated “regression coefficients”. “Coefficient” is a fancy term that simply means a number, especially a number that is multiplied by a variable such as <span class="math inline">\(X\)</span>. We will use software to calculate the regression coefficients.</p>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <!-- {{Software_Filter | PageName=RegressionCoeffs }} -->
 <div class="SoftwareHeading">
@@ -486,9 +595,9 @@ Excel Instructions
 <p><img src="Images/EstuarineCrocodile-Regression-Output.PNG"></p>
 <p>The regression coefficients are given in the column labeled “B”. The first row gives the constant term (or the term that is not multiplied by anything.) In other words, the first row gives the value of <span class="math inline">\(b_0\)</span>, in this case, <span class="math inline">\(b_0=-18.274\)</span>. The second row of the table gives the value that is to be multiplied by <span class="math inline">\(X\)</span>; this is the slope of the regression equation. In our model, <span class="math inline">\(X\)</span> represents the head length, in centimeters. The row is labeled as “Head Length (cm)”. The slope in our regression equation is <span class="math inline">\(b_1=7.660\)</span>. Putting all this together, we get the equation:</p>
 <p><span class="math display">\[
-\hat Y = -18.274 + 7.660 X
+\widehat Y = -18.274 + 7.660 X
 \]</span></p>
-<p>We put the “hat” on <span class="math inline">\(Y\)</span> to represent that this is an estimate of the value of <span class="math inline">\(Y\)</span>. The symbol <span class="math inline">\(\hat Y\)</span> is read, “<span class="math inline">\(Y\)</span>-hat”. We can also express this equation in the following way: <span class="math display">\[
+<p>We put the “hat” on <span class="math inline">\(Y\)</span> to represent that this is an estimate of the value of <span class="math inline">\(Y\)</span>. The symbol <span class="math inline">\(\widehat Y\)</span> is read, “<span class="math inline">\(Y\)</span>-hat”. We can also express this equation in the following way: <span class="math display">\[
 \widehat{BodyLength} = -18.274 + 7.660 \cdot HeadLength
 \]</span></p>
 <p>The slope of the regression equation is 7.660. This means that for each one-unit increase in <span class="math inline">\(X\)</span>, we expect a corresponding increase in <span class="math inline">\(Y\)</span> of 7.660 units. For every additional centimeter of head length, we expect that an additional 7.660 cm of body length.</p>
@@ -498,7 +607,7 @@ Excel Instructions
 <h2>Predictions</h2>
 <p>An 87 cm skull from a juvenile sarcosuchus was discovered. We want to estimate the body length of this crocodilian using the regression equation we calculated for the estuarine crocodiles.</p>
 <p>To predict the body length, we can substitute <span class="math inline">\(x=87\)</span> into the regression equation: <span class="math display">\[
-\hat Y = -18.274 + 7.660 X = -18.274 + 7.660 (87) = 648.146
+\widehat Y = -18.274 + 7.660 X = -18.274 + 7.660 (87) = 648.146
 \]</span></p>
 <p>Even though we can do this with a calculator, it is a little tedious and is subject to rounding errors. There is a simpler, easier, and better way.</p>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
@@ -556,7 +665,7 @@ Excel Instructions
 <p><br></p>
 <p>The following plot shows the regression line on the scatterplot.</p>
 <p><img src="Images/EstuarineCrocodile-Scatterplot-RegLine-SPSS.png"> <!--
-The equation of this line is $\hat Y = b_0 + b_1 X$.  This is the equation obtained by following the directions given above.
+The equation of this line is $\widehat Y = b_0 + b_1 X$.  This is the equation obtained by following the directions given above.
 --></p>
 </div>
 <div id="manatees-and-powerboats" class="section level2">
@@ -628,16 +737,16 @@ The equation of this line is $\hat Y = b_0 + b_1 X$.  This is the equation obtai
 <h3>Regression Equation</h3>
 <p>We can use simple linear regression to develop an equation relating the number of powerboats to the number of manatees killed. Consider a model where <span class="math inline">\(Y\)</span> is the number of manatees killed and <span class="math inline">\(X\)</span> is the number of powerboats registered (in thousands).</p>
 <p>If we can assume that as the number of powerboat registrations increase, the increase in the number of manatees killed will be proportional, then we can write our model in the following way: <span class="math display">\[
-\hat Y = b_0 + b_1 X
-\]</span> where <span class="math inline">\(\hat Y\)</span> is the predicted number of manatees killed in a year in which the number of powerboat registrations (in thousands) is given by <span class="math inline">\(X\)</span>.</p>
+\widehat Y = b_0 + b_1 X
+\]</span> where <span class="math inline">\(\widehat Y\)</span> is the predicted number of manatees killed in a year in which the number of powerboat registrations (in thousands) is given by <span class="math inline">\(X\)</span>.</p>
 <p>Notice that this is the equation of a straight line. You might have written linear equations in the form <span class="math inline">\(Y=mX+b\)</span> in your algebra classes. Notice that our equation has the same form. The slope is given by <span class="math inline">\(b_1\)</span> and the <span class="math inline">\(Y\)</span>-intercept is given by <span class="math inline">\(b_0\)</span>.</p>
 </div>
 <div id="interpreting-the-regression-output-1" class="section level3">
 <h3>Interpreting the Regression Output</h3>
 <p>The output from the commands given above will include a table similar to the one shown here:</p>
-<p><img src="Images/Manatees-RegressionOutput.png"></p>
+<p><img src="Images/Manatees-RegressionOutput.PNG"></p>
 <p>The Y-intercept term is not multiplied by anything except 1. This is the value of <span class="math inline">\(b_0\)</span>: <span class="math inline">\(b_0=-42.542\)</span>. The value of the slope is to be multiplied by <span class="math inline">\(X\)</span>; this is the slope of the regression equation. In our model, <span class="math inline">\(X\)</span> represents the number of powerboat registrations in Florida, in thousands. The slope for our regression equation is <span class="math inline">\(b_1=0.129\)</span>. We get the equation: <span class="math display">\[
-\hat Y = -42.542 + 0.129 X
+\widehat Y = -42.542 + 0.129 X
 \]</span></p>
 <p><img src="Images/Manatees-TwoManateeSurfaceToBreathe-RobertKBonde-USFishAndWildlifeService.png"></p>
 <p>We can also write the linear regression equation in the following way: <span class="math display">\[
@@ -689,7 +798,7 @@ Remember…
 </div>
 <div class="Summary">
 <ul>
-<li><p>In statistics, we write the <strong>linear regression equation</strong> as <span class="math inline">\(\hat Y=b_0+b_1X\)</span> where <span class="math inline">\(b_0\)</span> is the <strong>Y-intercept</strong> of the line and <span class="math inline">\(b_1\)</span> is the <strong>slope</strong> of the line. The values of <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> are calculated using software.</p></li>
+<li><p>In statistics, we write the <strong>linear regression equation</strong> as <span class="math inline">\(\widehat Y=b_0+b_1X\)</span> where <span class="math inline">\(b_0\)</span> is the <strong>Y-intercept</strong> of the line and <span class="math inline">\(b_1\)</span> is the <strong>slope</strong> of the line. The values of <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> are calculated using software.</p></li>
 <li><p>Linear regression allows us to predict values of <span class="math inline">\(Y\)</span> for a given <span class="math inline">\(X\)</span>. This is done by first calculating the coefficients <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> and then plugging in the desired value of <span class="math inline">\(X\)</span> and solving for <span class="math inline">\(Y\)</span>.</p></li>
 <li>The <strong>independent (or explanatory) variable (<span class="math inline">\(X\)</span>)</strong> is the variable which is <em>not</em> affected by what happens to the other variable. The <strong>dependent (or response) variable (<span class="math inline">\(Y\)</span>)</strong> is the variable which <em>is</em> affected by what happens to the other variable. For example, in the correlation between number of powerboats and number of manatee deaths, the number of deaths is affected by the number of powerboats in the water, but not the other way around. So, we would assign <span class="math inline">\(X\)</span> to represent the number of powerboats and <span class="math inline">\(Y\)</span> to represent the number of manatee deaths. <br></li>
 </ul>

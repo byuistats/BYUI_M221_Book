@@ -70,9 +70,7 @@ h6 {
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -91,8 +89,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -108,7 +112,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -128,6 +131,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -149,19 +189,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -174,7 +280,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Math 221B</a>
+      <a class="navbar-brand" href="index.html">Math 221</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -189,7 +295,10 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -400,7 +509,7 @@ $(document).ready(function () {
 <div id="introduction-to-z-scores" class="section level5">
 <h5>Introduction to <span class="math inline">\(z\)</span>-scores</h5>
 <p>In Ghana, the mean height of young adult women is normally distributed with mean <span class="math inline">\(159.0\)</span> cm and standard deviation <span class="math inline">\(4.9\)</span> cm. (Monden &amp; Smits, 2009) Serwa, a female BYU-Idaho student from Ghana, is <span class="math inline">\(169.0\)</span> cm tall. Her height is <span class="math inline">\(169.0 - 159.0 = 10\)</span> cm greater than the mean. When compared to the standard deviation, she is about two standard deviations (<span class="math inline">\(\approx 2 \times 4.9\)</span> cm) taller than the mean. <!-- Two standard deviations is only an approximate.  Since $10/4.9 = 2.041$, she is 2.04 standard deviations greater than the mean.--></p>
-<p>The heights of men are also normally distributed. The mean height of young adult men in Brazil is <span class="math inline">\(173.0\)</span> cm (“Orçamento,” 2010), and the standard deviation for the population is <span class="math inline">\(6.3\)</span> cm. (Castilho &amp; Lahr, 2001) A Brazilian BYU-Idaho student, Gustavo, is <span class="math inline">\(182.5\)</span> cm tall. Compared to other Brazilians, he is taller than the mean height of Brazilian men.</p>
+<p>The heights of men are also normally distributed. The mean height of young adult men in Brazil is <span class="math inline">\(173.0\)</span> cm (“Oramento,” 2010), and the standard deviation for the population is <span class="math inline">\(6.3\)</span> cm. (Castilho &amp; Lahr, 2001) A Brazilian BYU-Idaho student, Gustavo, is <span class="math inline">\(182.5\)</span> cm tall. Compared to other Brazilians, he is taller than the mean height of Brazilian men.</p>
 <div class="QuestionsHeading">
 Answer the following question:
 </div>
@@ -411,7 +520,7 @@ Answer the following question:
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
 <ul>
-<li>Gustavoâ’s height is <span class="math inline">\(182.5 - 173.0 = 9.5 \text{ cm  }\)</span> above the mean. The standard deviation of the height of Brazilian men is 6.3 cm, so his height is <span class="math inline">\(\displaystyle{ \frac{9.5}{6.3} =1.508 }\)</span> standard deviations above the mean.</li>
+<li>Gustavo?’s height is <span class="math inline">\(182.5 - 173.0 = 9.5 \text{ cm  }\)</span> above the mean. The standard deviation of the height of Brazilian men is 6.3 cm, so his height is <span class="math inline">\(\displaystyle{ \frac{9.5}{6.3} =1.508 }\)</span> standard deviations above the mean.</li>
 </ul>
 </div>
 <p> </p>
@@ -436,14 +545,14 @@ Answer the following question:
 <p><br></p>
 <p><img src="Images/L03_A06_R04.jpg"></p>
 <p>Approximately 68% of the observations from a bell-shaped distribution will be between the values of <span class="math inline">\(\mu -~\sigma~\)</span>and <span class="math inline">\(\mu +~\sigma~\)</span>. Consider the heights of young adult women in Ghana. We expect that about 68% of Ghanian women have a height between the values of <span class="math display">\[\mu -~\sigma = 159.0 - 4.9 = 154.1~\text{cm}\]</span> and <span class="math display">\[\mu +~\sigma = 159.0 + 4.9 = 163.9~\text{cm}.\]</span></p>
-<p>So, if a female is chosen at random from all the young adult women in Ghana, about 68% of those chosen will have a height between 154.1 and 163.9 cm. Similarly, 95% of the womenâs heights will be between the values of <span class="math display">\[\mu - 2\sigma = 159.0 - 2(4.9) = 149.2~\text{cm}\]</span> and <span class="math display">\[\mu + 2\sigma = 159.0 + 2(4.9) = 168.8~\text{cm}.\]</span></p>
+<p>So, if a female is chosen at random from all the young adult women in Ghana, about 68% of those chosen will have a height between 154.1 and 163.9 cm. Similarly, 95% of the women’s heights will be between the values of <span class="math display">\[\mu - 2\sigma = 159.0 - 2(4.9) = 149.2~\text{cm}\]</span> and <span class="math display">\[\mu + 2\sigma = 159.0 + 2(4.9) = 168.8~\text{cm}.\]</span></p>
 <p>Finally, 99.7% of the women’s heights will be between <span class="math display">\[\mu - 3\sigma = 159.0 - 3(4.9) = 144.3~\text{cm}\]</span> and <span class="math display">\[\mu + 3\sigma = 159.0 + 3(4.9) = 173.7~\text{cm}.\]</span></p>
 </div>
 </div>
 <div id="unusual-events" class="section level4">
 <h4>Unusual Events</h4>
 <p>If a <span class="math inline">\(z\)</span>-score is extreme (either a large positive number or a large negative number), then that suggests that that observed value is very far from the mean. The 68-95-99.7% rule states that 95% of the observed data values will be within two standard deviations of the mean. This means that 5% of the observations will be more than 2 standard deviations away from the mean (either to the left or to the right).</p>
-<p>We define an <strong>unusual observation</strong> to be something that happens less than 5% of the time. For normally distributed data, we determine if an observation is unusual based on its <span class="math inline">\(z\)</span>-score. We call an observation unusual if <span class="math inline">\(z &lt; 2\)</span> or if <span class="math inline">\(z &gt; 2\)</span>. In other words, we will call an event unusual if the absolute value of its <span class="math inline">\(z\)</span>-score is greater than 2.</p>
+<p>We define an <strong>unusual observation</strong> to be something that happens less than 5% of the time. For normally distributed data, we determine if an observation is unusual based on its <span class="math inline">\(z\)</span>-score. We call an observation unusual if <span class="math inline">\(z &lt; -2\)</span> or if <span class="math inline">\(z &gt; 2\)</span>. In other words, we will call an event unusual if the absolute value of its <span class="math inline">\(z\)</span>-score is greater than 2.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
@@ -1596,7 +1705,7 @@ Remember…
 <p>Castilho, L. V., &amp; Lahr, M. M. (2001). Secular trends in growth among urban Brazilian children of European descent. Human Biology, 28, 564.</p>
 <p>Lahman, S.Sean lahman’s baseball archive. Retrieved November, 2010, from <a href="http://www.baseball1.com/" class="uri">http://www.baseball1.com/</a></p>
 <p>Monden, C. W. S., &amp; Smits, J. (2009). Maternal height and child mortality in 42 developing countries. American Journal of Human Biology, 21(3), 305.</p>
-<p>Orçamento e Gestão Ministério do Planejamento. Pesquisa de orçamentos familiars 2008-2009: Antropometria e estado nutricional de crianças, adolescentes e adultos no brasil. Technical report, Instituto Brasileiro de Geografi a e Estatística - IBGE, Rio de Janeiro, Brazil 2010.</p>
+<p>Or?amento e Gest?o Minist?rio do Planejamento. Pesquisa de or?amentos familiars 2008-2009: Antropometria e estado nutricional de crian?as, adolescentes e adultos no brasil. Technical report, Instituto Brasileiro de Geografi a e Estat?stica - IBGE, Rio de Janeiro, Brazil 2010.</p>
 <p><br></p>
 </div>
 <div id="navigation" class="section level2">

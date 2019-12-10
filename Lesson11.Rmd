@@ -1,5 +1,5 @@
 ---
-title: "Lesson 11"
+title: "Lesson 11 Inference for One Mean (Sigma Unknown)"
 output: 
   html_document:
     theme: cerulean
@@ -54,36 +54,69 @@ z = \frac{ \bar x - \mu }{ \sigma / \sqrt{n} }
 $$
 In 1908, William Sealy Gosset published a solution to this problem <!--<cite>Gosset08</cite>-->.  He found a way to appropriately compute the confidence interval for the mean when $\sigma$ is not known.  The basic idea is to use the sample standard deviation, $s$ in the place of the true population standard deviation, $\sigma$.  If $\sigma$ is not known, we cannot base the calculations on the standard normal distribution, and we cannot use the formula above to conduct hypothesis tests.
 
-In a remarkable piece of work, Gosset found the appropriate distribution to use when $\sigma$ is unknown. At the time of this discovery, Gosset worked for the Guinness brewery.  To avoid problems with industrial espionage, Guinness prohibited employees from publishing any research results.  Knowing his work provided a significant contribution to Statistics, Gosset chose convinced his employer to allow him to publish under a pseudonum.  He chose the pseudonym "Student".  Gosset's test statistic was denoted by the letter $t$, this distribution has come to be known as **Student's t-distribution**.
+In a remarkable piece of work, Gosset found the appropriate distribution to use when $\sigma$ is unknown. At the time of this discovery, Gosset worked for the Guinness brewery.  To avoid problems with industrial espionage, Guinness prohibited employees from publishing any research results.  Knowing his work provided a significant contribution to Statistics, Gosset convinced his employer to allow him to publish under a pseudonym.  He chose the pseudonym "Student".  Gosset's test statistic was denoted by the letter $t$, this distribution has come to be known as **Student's t-distribution**.
 
 $$
 t = \frac{ \bar x - \mu }{ s / \sqrt{n} }
 $$
 
-The $t$-distribution is bell-shaped and symmetrical.  The $t$-distribution has a mean of 0, but it has more area in the tails than the standard normal distribution.    The exact shape of the $t$-distribution depends on a parameter called the **degrees of freedom** (abbreviated $df$).  The degrees of freedom is related to the sample size.  As the sample size goes up, the degrees of freedom increase accordingly.  For the procedures discussed in this lesson, the degrees of freedom equal the sample size minus one: $df = n-1$.
+The $t$-distribution is bell-shaped and symmetrical.  The $t$-distribution has a mean of 0, but it has more area in the tails than the standard normal distribution.    The exact shape of the $t$-distribution depends on a parameter called the **degrees of freedom** (abbreviated $df$).  The degrees of freedom is related to the sample size.  As the sample size goes up, the degrees of freedom increase accordingly.  For the procedures discussed in this lesson, the degrees of freedom is one less than the sample size: $df = n-1$.
 
-[Click here](http://byuimath.com/apps/normprobwitht.html){target="_blank"} to explore how the shape of the $t$-distribution changes with the degrees of freedom.  Notice that as the degrees of freedom increases, the shape of the $t$-distribution (black curve) gets closer to the standard normal distribution (red curve).  The red curve is identical in the three images below.
+[Click here](http://byuimath.com/apps/normprobwitht.html){target="_blank"} to explore how the shape of the $t$-distribution changes with the degrees of freedom.  Notice that as the degrees of freedom increases, the shape of the $t$-distribution (dark curve) gets closer to the standard normal distribution (lighter curve).  The lighter gray curve is identical (always normal) in the three images below, while the darker curve changes shape as the degrees of freedom increase.
 
 <center>
 <table style="table-layout: fixed; width: 100%;">
 <thead>
 <tr class="header">
-<th><p>$t$-distribution<br />
+<th style="text-align:center;"><p>$t$-distribution<br />
 with $df = 1$</p></th>
-<th><p>$t$-distribution<br />
+<th style="text-align:center;"><p>$t$-distribution<br />
 with $df = 5$</p></th>
-<th><p>$t$-distribution<br />
+<th style="text-align:center;"><p>$t$-distribution<br />
 with $df = 15$</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="width:33.3%;"><p><img src="./Images/T-dist-df-01.png"></p></td>
-<td style="width:33.3%;"><p><img src="./Images/T-dist-df-05.png"></p></td>
-<td style="width:33.3%;"><p><img src="./Images/T-dist-df-15.png"></p></td>
+<td style="width:33.3%;">
+
+```{r, echo=FALSE, fig.width=4, fig.height=4}
+par(mai=c(.6,.6,.3,.1))
+curve(dnorm(x), xlim=c(-3.2,3.2), col="gray", lwd=3, xlab="", ylab="")
+curve(dt(x, 1), add=TRUE, col="gray44", lwd=4)
+abline(h=0, lty=1, col="gray")
+legend("topright", legend=c("Normal", "t"), col=c("gray","gray44"), lwd=c(2,4), bty="n", cex=.8)
+mtext(side=2, las=2, "density", at=0.43, line=.3)
+```
+
+</td>
+<td style="width:33.3%;">
+
+```{r, echo=FALSE, fig.width=4, fig.height=4}
+par(mai=c(.6,.6,.3,.1))
+curve(dnorm(x), xlim=c(-3.2,3.2), col="gray", lwd=3, xlab="", ylab="")
+curve(dt(x, 5), add=TRUE, col="gray44", lwd=4)
+abline(h=0, lty=1, col="gray")
+legend("topright", legend=c("Normal", "t"), col=c("gray","gray44"), lwd=c(2,4), bty="n", cex=.8)
+mtext(side=2, las=2, "density", at=0.43, line=.3)
+```
+
+</td>
+<td style="width:33.3%;">
+
+```{r, echo=FALSE, fig.width=4, fig.height=4}
+par(mai=c(.6,.6,.3,.1))
+curve(dnorm(x), xlim=c(-3.2,3.2), col="gray", lwd=3, xlab="", ylab="")
+curve(dt(x, 15), add=TRUE, col="gray44", lwd=4)
+abline(h=0, lty=1, col="gray")
+legend("topright", legend=c("Normal", "t"), col=c("gray","gray44"), lwd=c(2,4), bty="n", cex=.8)
+mtext(side=2, las=2, "density", at=0.43, line=0.3)
+```
+
+</td>
 </tr>
 <tr class="even">
-<td><p>(Image credit: Webster West, <a href="http://www.stat.tamu.edu/~west/applets/tdemo1.html"> http://www.stat.tamu.edu/~west/applets/tdemo1.html</a>) </p></td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -232,7 +265,7 @@ $$df = 147$$
 
 **Find the $P$-value and compare it to the level of significance**
 
-The $P$-value is given in the software as "1.2723E-08".  Writing this properly and comparing it to $\alpha$, we have:
+The $P$-value is given in the software as "0.000." (The actual value is 1.2723e-08, a very small number that rounds to 0.000 at three decimal places.)  Writing this properly and comparing it to $\alpha$, we have:
 $$
 P\text{-value} = 1.2723 \times 10^{-8} = 0.000~000~012~723 < 0.05 = \alpha
 $$
@@ -536,7 +569,7 @@ $$(0.282, 0.293)$$
 
 We are 95% confident that the true mean BLEU score for all translations by the Pharaoh program is between 0.2824 and 0.2928.
 
-Answer the following questions using the data set [BLEU-Scores](./Data/DLEU-Scores.xslx), which gives the BLEU scores for $n=100$ translations from Spanish to English by the computer program Pharaoh.
+Answer the following questions using the data set [BLEU-Scores](./Data/BLEU-Scores.xslx), which gives the BLEU scores for $n=100$ translations from Spanish to English by the computer program Pharaoh.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">

@@ -1,0 +1,230 @@
+---
+title: 'Lesson 1: On Campus Course Introduction'
+output: 
+  html_document:
+    theme: cerulean
+    toc: true
+    toc_float: false
+---
+
+<script type="text/javascript">
+ function showhide(id) {
+    var e = document.getElementById(id);
+    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+ }
+</script>
+
+## Lesson 01 Outcomes
+
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="oc" style="display:none;">
+By the end of this lesson, you should be able to:
+
+- Understand and explain the course policies
+- Access course resources (course outline, lesson schedule, preparation activities, reading quizzes, homework assignments, assessments, Zoom, etc.)
+- Communicate with your instructor
+- Obtain access to a spreadsheet program (Microsoft Excel)
+- Discuss ways in which you will apply gospel principles to your work in this class
+</div>
+<br>
+
+## Welcome to the Course!
+
+In this course, you will explore important connections between the academic discipline of Statistics and the world around us. By pondering these ideas, your understanding of statistics will increase, as will your knowledge and testimony of the restored Gospel of Jesus Christ. In addition, that which you learn in this course will increase your ability to serve others as a disciple of Jesus Christ and help build Zion.
+
+This course has been designed to help you slowly build up a knowledge base of ideas and skills. Not all of these ideas and skills will come easily. It takes a lot of work and practice before some things will even start to make sense, so you should not be surprised to find that it may take you a little time to comprehend these ideas. Just be patient. Once you're far enough into the course, the ideas will start to come together, and you will see how much progress you have really made. You will understand what this course is all about, and you will be glad you persisted in your efforts to learn.
+
+As you thoughtfully prepare, teach one another, ponder/prove what you have learned, and as you humbly seek the guidance of the Holy Spirit, the Lord will bless you with a greater knowledge of His mercy and love. You will have the opportunity to increase your testimony of the Gospel of Jesus Christ. You will also learn about Statistics, more deeply and permanently than you would have otherwise.
+
+<br>
+
+## Course Description
+
+This course covers the following topics as they are applied to Statistics: graphical representations of data, measures of center and spread; elementary probability; sampling distributions; correlation and regression; statistical inference involving means, proportions, and contingency tables.
+
+<br>
+
+### Course Learning Outcomes
+
+In this course, we will:
+
+1.	Summarize data numerically and graphically using spreadsheets
+2.	Make decisions regarding situations with inherent randomness
+3.	Apply probability distributions to investigate questions
+4.	Employ confidence intervals in various situations
+5.	Implement tests of diverse hypotheses
+6.	Communicate the results of statistical analyses to relevant audiences
+
+
+<br>
+
+### How the Outcomes will Be Assessed
+
+While you may not be tested on everything you learn in this course, the instructor will be assessing your mastery of the **Course Learning Outcomes**. The general types of assessments used to measure these outcomes may include selected response tests such as multiple-choice, true-false, matching, and fill-in-the-blank questions. You may also be asked to complete essays or other writing assignments. At times, the instructor may assess your performance of a skill, or the instructor may assess products you create using particular skills. In addition, the instructor may engage in personal communication with you to determine how well you understand the course content.
+
+<br>
+
+### Keys to Success
+
+#### Five Principles of the Learning Model
+
+You will experience much deeper learning if you follow the Five Principles of the 
+[BYU-Idaho Learning Model](http://www.byui.edu/LearningModel){target="_blank"}
+
+-  **Exercise Faith**: Exercise faith in the Lord Jesus Christ as a principle of action and power.
+-  **Learn by the Holy Ghost**: Understand that true teaching is done by and with the Holy Ghost.
+-  **Lay Hold on the Word of God**: Lay hold of the word of God.
+-  **Act for Themselves**: Act for yourself and accept responsibility for learning and teaching.
+-  **Love, Serve, and Teach One Another**: Love, serve, and teach other students in your classes.
+
+#### Three Process Steps of the Learning Model
+
+You will learn more in less time if you follow the Three Process Steps of the 
+[BYU-Idaho Learning Model](http://www.byui.edu/LearningModel){target="_blank"}
+
+-  **Prepare**: This involves (a) spiritual preparation, (b) individual preparation, and (c) group preparation.
+-  **Teach One Another**: You should (a) be on time, (b) pray together, and (c) actively engage with other students.
+-  **Ponder/Prove**: You should (a) ponder what you have learned, (b) record your learning, and (c) pursue unanswered questions and discuss what you learn with others.
+
+If you feel confused or have questions about anything in the lesson, take immediate action (Exercise Faith; Act for Themselves) and talk with your classmates, the teaching assistant, or the instructor (Love, Serve, and Teach One Another).
+
+**Teach One Another**
+
+At BYU-Idaho, an "A" student will demonstrate "diligent application of Learning Model principles, including initiative in serving other students" (BYU-Idaho Catalog). In this class, you will have the opportunity to work with other students.
+
+Doctrine and Covenants 84:106 states, "And if any man among you be strong in the Spirit, let him take with him him that is weak, that he may be edified in all meekness, that he may become strong also."  In the spirit of this revelation, you will have the opportunity to help others in the class when you have developed an understanding of a principle.  Likewise, you will be able to receive help from others (peers, tutors, TA, and your instructor) when you are still working to understand concepts.
+
+This course represents a collaborative effort between faculty, TA's, tutors, students and the Lord.  You are encouraged to seek the help from seen and unseen resources as you grapple with the principles of Statistics.
+
+In a spirit of love and service, please reach out to others.  You are not graded on a curve.  If someone else does well, it does not affect you adversely.  Research has shown that students who help other students to understand the material gain a much deeper grasp on the concepts of the course.  Please take opportunities to help your peers succeed.
+
+<br>
+
+## Course Structure
+
+This course consists of 24 lessons. They are presented in a topical order in which concepts and skills learned in the earlier lessons provide the requisite knowledge to succeed in later lessons. If the general order of the lessons doesn’t make sense at first, don’t worry. It will all come together in the end, and you’ll see the reasoning behind why the lessons have been presented in this particular order.
+
+Your main goal as a student will be to complete all of the learning activities within each lesson by their due dates every week. These activities follow a consistent weekly schedule, and it will be up to you to make sure that you keep on pace with all your assignments. These weekly activities may include the following:
+
+- Reading assigned texts or viewing presentations.
+- Taking quizzes.
+- Participating in group discussions and assignments with other class members.
+- Writing papers and developing presentations.
+- Participating in meetings with the instructor, teaching assistants, and other students.
+
+For many of these activities, the due dates will fall on the same time each week. This will make it easier for you to plan out your weekly study schedule. However, there may be a need to make adjustments to the schedule from time to time. If in doubt, refer to the due dates your instructor has posted in I-learn. 
+
+You should create a study schedule that will catch you up and keep you on pace throughout the semester. This is a rigorous course with a lot of subject matter to cover, and it can be extremely difficult to recover if you fall too far behind in your work. So, please make every effort to study on a regular basis and get your work turned in on time.
+
+The lessons in this course have a similar structure and contain similar basic elements.  A typical week consists of two lessons.Each lesson will consist of a reading assignment, a reading/preparation quiz, and a homework quiz.
+
+The structure of this course fully integrates the BYU-Idaho Learning model with a mixture of preparation activities, teach-one-another activities, and ponder-and-prove activities.
+
+
+## Course Materials
+
+This course has been designed with the student in mind.  Every effort has been made to provide a high quality experience at the lowest possible cost.
+
+**Textbook**
+
+To keep costs as low as possible for students and their families, no physical textbook is required for this class.  The readings for this course are provided on this website and will continue to be available to you after the course is completed.  Please report any problems with the textbook (links not working, loading slowly, inability to view images, etc.) to your instructor. A link to the textbook is found in the resources module. It is highly recommended you bookmark the textbook so that you can easily reference each lesson's reading. 
+
+**Computer Equipment**
+
+You will need:
+-  A laptop
+-  Access to Microsoft Excel 2016 or later
+
+## Course Resources
+
+**Peer Support**
+
+Your experience in this course will be enhanced as you work with other students to learn and grow together.
+
+**Help Desk**
+
+The BYU-Idaho Help Desk has been established to help students with technological problems related to approved course software. You can access the Help Desk at any time in three ways:
+-  Walk-in: The Help Desk is located in room 322 of the McKay Library
+-  Call in: 208-496-1411 (toll free)
+-  Email: helpdesk@byui.edu
+Additional information is available at the Help Desk web page: http://www.byui.edu/helpdesk/
+
+When you have technical problems with I-Learn, you should first try contacting the Help Desk before you contact your instructor. They are connected with the IT support staff who can resolve problems with I-Learn. Please take 5 minutes now to look at the Help Desk web page. That way, if a problem does arise later on in the course, you will know where to go for help.
+
+**Tutoring Center**
+
+The BYU-Idaho Study Skills/Tutoring Center is a powerful resource for students who would like a little extra help with a course.  The Tutoring Center is located in the McKay Library in room 272.  This is in the east wing of the second floor.
+
+The Tutoring Center provides many services to help students succeed:
+-  Individual tutors
+-  Walk-in tutoring in the Math Study Center (McKay 266 & 270)
+
+Please take 5 minutes to explore the [http://www.byui.edu/academic-support-centers/tutoring-center Study Skills/Tutoring Center web site].
+
+**TA Support**
+
+In addition to the faculty who teach this course, specially trained teaching assistants (TAs) will help you through the course.  The Guided Practice sessions will be lead by TAs, under the direction of the faculty. The TAs will work with you on specific discovery activities in the Guided Practice sessions.
+
+**Faculty Support**
+
+Your instructor is committed to your success.  If you have any needs or concerns, please contact your instructor for help.  If you feel yourself getting behind or struggling, talk to your teacher right away.  If caught in time, a small problem can be addressed quickly before it grows.
+
+<br>
+
+## Plan to Succeed
+
+<!--**How to Succeed in This Course**-->
+There are three basic things you must do to succeed in this course.
+
+1. Do the work.
+2. Stay on schedule.
+3. Follow the Honor Code.
+
+If you do these three things, you will not only get a passing grade for the course, but you will have an excellent educational experience. Here's why.
+
+#### Do the Work
+
+This is a rigorous course. To get a passing grade, you will have to put forth a good deal of effort to complete all of the assignments. When you see a time estimate next to a learning activity, that is the approximate amount of time it will take IF you are focused on the assignment and IF you are not allowing yourself to be distracted by other things. You will have a very difficult time completing these assignments if you do them at the same time you watch TV, cook food, talk with your roommates or family members, and send text messages to your friends every three minutes. You must set aside sufficient time to do the work throughout the week (you can't do it all in one night!).  And you must find a place to do the work where you will not be distracted by anything (you can't get it done with a cell phone call interrupting you every few minutes!). Then you must commit to focus your attention on the work and do your very best to complete it in the amount of time you have scheduled. If you do this, you will learn more in less time, and you will find the work much more pleasurable.
+
+#### Stay on Schedule
+
+Once you have set up a regular study schedule, keep it. One of the biggest problems that students have with their courses is that they procrastinate doing the work. They put it off until they have so much work to do that they cannot figure out a way to get it all done before the due date arrives. In this course, you cannot do this and still expect to receive a passing grade. There are assignments that must be completed by specific days and times every week. If you put off doing the work until just before an assignment is due, you will find it much more difficult to concentrate on getting the work done. To succeed in this class, you will have to follow your regular study schedule every week to ensure that you do your best work and that it gets done on time.
+
+#### Follow the Honor Code
+
+Although there are several types of group learning activities in every lesson, this course requires a lot of individual study and work. In particular, most assignments involving a study guide and quiz are meant to be learning activities you complete on your own. If you decide to work with others to try find all the quiz answers without having to do all the assigned work, you are not only cheating yourself out of an education, you are cheating your way to a failing grade. There are other assignments throughout the course that will require you to recall information or use skills that you should have developed as you completed the learning activities. If you don't do the work, and you try to cheat your way to higher quiz grades, you will hinder your ability to complete these other assignments. Most likely, you will fail those assignments. So, do yourself and others a favor--do not cheat on any assignments, no matter how tempting it might be. Instead, renew your commitment to follow the BYU-Idaho Honor Code, double your efforts to do the work, and follow your study schedule.
+
+#### Plan for Success
+
+Clearly, if you want to succeed in this course, you need to figure out how you will do the work and how you will stay on schedule. Doing this will help you avoid situations in which you might be tempted to violate the Honor Code and cheat. Such situations can arise quicker in the semester than you might think. So, it is important for you to start making a plan for success right away.  Take time now to write your own plan for success. This plan should include a weekly study schedule and a general list of things you think you will need to do each week to get the work done. Be prepared to discuss this plan with your study group and with the instructor.
+
+-  Write your own Plan for Success in this course. The plan should include a weekly study schedule and a general list of things you think you will need to do each week to get the work done.
+
+<br>
+
+## Conclusion
+
+As with all the classes you take at BYU-Idaho, in the end it is up to you to decide what you want to get out of this class. If you choose to approach the things you study in class with an open mind, if you prepare diligently and work hard to complete all the learning activities, and if you humbly seek the Lord’s help to understand the intellectual and spiritual truths discussed in this course, you will have an outstanding educational experience that will be a blessing to you throughout your life.
+
+<br>
+
+## Summary
+
+<div class="SummaryHeading">Remember...</div>
+<div class="Summary">
+
+- In this class you will use the online textbook that has been written for you by your statistics teachers. All of the assignments and quizzes will be based on the readings, so study it well.
+- Most weeks will cover two lessons
+- By doing the work, staying on schedule, and living the Honor Code you _can_ succeed in this class!
+</div>
+<br>
+
+
+## Navigation
+
+<center>
+| **This Reading**               | **Next Reading**                                                       |
+| :----------------------------: | :--------------------------------------------------------------------: |
+| Lesson 01: <br> Course Introduction | [Lesson 2: <br> The Statistical Process & Design of Studies](Lesson02.html) |
+</center>
+

@@ -70,9 +70,7 @@ h6 {
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -91,8 +89,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -108,7 +112,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -128,6 +131,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -149,19 +189,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -174,7 +280,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Math 221B</a>
+      <a class="navbar-brand" href="index.html">Math 221</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -189,7 +295,10 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -443,7 +552,7 @@ Stained-glass depiction of Daniel’s deliverance from the lions’ den. Found i
 <p><br></p>
 <div id="daniels-experiment" class="section level4">
 <h4>Daniel’s Experiment</h4>
-<p>After taking Israel captive, Babylon’s King Nebuchadnezzar asked his chief officer to bring Israelite children who were well favoured, and skilful in all wisdom, and cunning in knowledge, and understanding science¦to stand in the king’s palaces <a href="https://www.lds.org/scriptures/ot/dan/1.4?lang=eng#3" target="_blank">(Daniel 1:4)</a>. To aid their preparation, Nebuchadnezzar planned to feed them his meat and wine for three years <a href="https://www.lds.org/scriptures/ot/dan/1.5?lang=eng#4" target="_blank">(Daniel 1:5)</a>.</p>
+<p>After taking Israel captive, Babylon’s King Nebuchadnezzar asked his chief officer to bring Israelite children who were well favoured, and skilful in all wisdom, and cunning in knowledge, and understanding science to stand in the king’s palaces <a href="https://www.lds.org/scriptures/ot/dan/1.4?lang=eng#3" target="_blank">(Daniel 1:4)</a>. To aid their preparation, Nebuchadnezzar planned to feed them his meat and wine for three years <a href="https://www.lds.org/scriptures/ot/dan/1.5?lang=eng#4" target="_blank">(Daniel 1:5)</a>.</p>
 <p>Daniel did not want to defile himself by partaking of the king’s meat and wine. He asked permission to eat pulse<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> and drink water instead. His supervisor, Melzar, was afraid to displease the king. He thought that after eating pulse and water, the selected Israelites would look worse than their peers, and he would be punished <a href="https://www.lds.org/scriptures/ot/dan/1.8-10?lang=eng#3" target="_blank">(Daniel 1:8-10)</a>.</p>
 <p>With an understanding of the background of the situation, Daniel proposed an experiment. He said, Prove thy servants, I beseech thee, ten days; and let them give us pulse to eat, and water to drink. Then let our countenances be looked upon before thee, and the countenance of the children that eat of the portion of the king’s meat: and as thou seest, deal with thy servants <a href="https://www.lds.org/scriptures/ot/dan/1.12-13?lang=eng#3" target="_blank">(Daniel 1:12-13.)</a>. In short, Daniel’s implied research question can be stated as: Will those who eat pulse and drink water appear healthier than those who eat the king’s meat and drink his wine? Melzar agreed to the experiment.</p>
 <div class="QuestionsHeading">
@@ -570,7 +679,7 @@ Answer the following question:
 <p><strong>Step 1: Design the study.</strong></p>
 <ol style="list-style-type: decimal">
 <li><p>What year did the Salk polio vaccine trials occur?</p></li>
-<li><p>At that time, parents were afraid to let their children</p></li>
+<li><p>At that time, parents were afraid to let their children…</p></li>
 <li><p>How many children participated in the trial?</p></li>
 <li><p>The children were separated into two groups. What did the video say would practically guarantee that the two groups would be nearly identical?</p></li>
 <li><p>How was Salk’s vaccine administered?</p></li>
@@ -594,7 +703,7 @@ Answer the following question:
 <p><img src="Images/Step5.png" width="100px;"></p>
 <p><strong>Step 5: Take Action.</strong></p>
 <ol start="10" style="list-style-type: decimal">
-<li>Which of the following actions is most likely at the conclusion of the Salk trial?</li>
+<li>What action would you have taken at the conclusion of the Salk trial?</li>
 </ol>
 <p>Elizabeth Toy, a former BYU-Idaho teacher, was one of the children in the Salk trials.</p>
 <p>Jonas Salk’s vaccine trial was a great example of a designed experiment. However, it did not start out that way. Initially, there were some serious flaws in their design. Other researchers sharply criticized these errors. Almost 1.1 million children participated in the initial study. Even though the sample size was large, the flawed study design made the data useless!</p>
@@ -891,7 +1000,7 @@ Remember…
 </div>
 <div id="references" class="section level2">
 <h2>References</h2>
-<p>Bible Dictionary, âPulseâ at <a href="http://lds.org/scriptures/bd/pulse" class="uri" target="_blank">http://lds.org/scriptures/bd/pulse</a>.</p>
+<p>Bible Dictionary, “Pulse” at <a href="http://lds.org/scriptures/bd/pulse" class="uri" target="_blank">http://lds.org/scriptures/bd/pulse</a>.</p>
 <p>Brownlee, K. A. (1955). Statistics of the 1954 polio vaccine trials. Journal of the American Statistical Association, 50(272), pp. 1005-1013.</p>
 <p>Francis, T., et. al. (1955). An evaluation of the 1954 poliomyletis vaccine trials. American Journal of Public Health and the Nation’s Health, 45(5)</p>
 <p>Offit, P. A. (2005). Why are pharmaceutical companies gradually abandoning vaccines? Health Affairs, 24(3), 622-630. <a href="doi:10.1377/hlthaff.24.3.622" class="uri">doi:10.1377/hlthaff.24.3.622</a></p>

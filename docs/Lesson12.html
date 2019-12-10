@@ -70,9 +70,7 @@ h6 {
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -91,8 +89,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -108,7 +112,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -128,6 +131,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -149,19 +189,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -174,7 +280,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Math 221B</a>
+      <a class="navbar-brand" href="index.html">Math 221</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -189,7 +295,10 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -830,7 +939,7 @@ n &amp;= 27
 <p><span class="math display">\[df = 26\]</span></p>
 <p><strong>Mark the test statistic and <span class="math inline">\(P\)</span>-value on a graph of the sampling distribution</strong></p>
 <p>The test statistic and p-value can be found in the Excel output. The following calculations show conceptually how the p-value is calculated:</p>
-<p>The test statistic, <span class="math inline">\(t\)</span>, is labeled on the horizontal axis. The <span class="math inline">\(P\)</span>-value is the area to the left of <span class="math inline">\(t\)</span> under the curve. This area is so small, it is not illustrated on this plot.</p>
+<p>The test statistic, <span class="math inline">\(t\)</span>, is labeled on the horizontal axis. The <span class="math inline">\(P\)</span>-value is the area to the left of <span class="math inline">\(t\)</span> under the curve. This area is so small, it is hiding out on the edges (not actuall visible) on this plot.</p>
 <p><img src="Images/Mahon-Applet.png"></p>
 <p>It is important to note that only the left tail is shaded, even though we cannot see it in this illustration.</p>
 <p><strong>Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance</strong></p>
@@ -1030,7 +1139,7 @@ Answer the following questions:
 </div>
 <div id="additional-worked-examples" class="section level3">
 <h3>Additional Worked Examples</h3>
-<p>Viewing additional examples can help your understanding. Click on the link at right to see two more examples of hypothesis tests.</p>
+<p>Viewing additional examples can help your understanding. Click on the link below to see two more examples of hypothesis tests.</p>
 <a href="javascript:showhide('ae')"><span style="font-size:8pt;">Show/Hide Additional Examples</span></a>
 <div id="ae" style="display:none;">
 
@@ -1052,7 +1161,7 @@ H_0: &amp;~~ \mu_d = 0 \\
 H_a: &amp;~~ \mu_d &gt; 0 
 \end{align}
 \]</span></p>
-<p>Note that the data set has the columns listed with <span class="math inline">\(d = REE_2\)</span> in the first column and <span class="math inline">\(d = REE_1\)</span> in the second column. You will need to switch the order of the columns when pasting them into the Excel Toolbox.</p>
+<p>Note that the data set has the columns listed with <span class="math inline">\(d = REE_1\)</span> in the first column and <span class="math inline">\(d = REE_2\)</span> in the second column. You will need to switch the order of the columns when pasting them into the Excel Toolbox.</p>
 <p>We will use the <span class="math inline">\(\alpha = 0.1\)</span> level of significance.</p>
 <p><img src="Images/Step2.png"></p>
 <p><strong>Describe the data collection procedures</strong></p>
@@ -1203,7 +1312,7 @@ Answer the following questions:
 <p> </p>
 </div>
 <p><br></p>
-<p>Note that we did not say we “accept” the null hypothesis. We do not know that listening to stressful classical music has no effect on a person’s REE. Based on the data available to us, we were not able to reject the requirement that this type of music does not increase the mean REE.   <br></p>
+<p>Note that we did not say we “accept” the null hypothesis. We do not know that listening to stressful classical music has no effect on a person’s REE. Based on the data available to us, we were not able to reject the assertion that this type of music does not increase the mean REE.   <br></p>
 <p><img src="Images/StepsAll.png"></p>
 </div>
 <div id="cost-of-airline-tickets" class="section level4">
@@ -1212,7 +1321,7 @@ Answer the following questions:
 <p><strong>Summarize the relevant background information</strong></p>
 <p>Pressures of supply and demand act directly on the prices for an airline ticket. As the seats available on the plane begin to fill, airlines raise the price. If seats on a flight do not sell well, an airline may discount the tickets or even cancel the flight. Business travelers frequently demand travel booked on short notice. They must pay the current price. Typically, tourists book their flights well in advance, hoping to buy tickets before the price rises. We will consider the cost of a one-way ticket from London’s Heathrow Airport to a variety of destinations in Europe.</p>
 <p>Allie Henrich, a BYU-Idaho student, compared the lowest published ticket prices of one-way flights from Heathrow to various destinations in Europe. Using Travelocity.com, she recorded the lowest published fares for nonstop midweek flights booked either 14 days in advance or 90 days in advance. The prices (in US dollars) are given in the file <a href="./Data/DirectFlightCosts.xlsx">DirectFlightCosts.xlsx</a>. Notice that for some destinations, flights were not available.</p>
-<p>The data are paired, because measuring the costs twice for each city. The 14-day ticket price is paired with the 90-day price for each city.</p>
+<p>The data are paired, because we are measuring the costs twice for each city. The 14-day ticket price is paired with the 90-day price for each city.</p>
 <p>We will conduct a hypothesis test to determine if there is a difference in the cost of the nonstop flights when tickets are purchased 14 days in advance compared to 90 days in advance. We will use the 0.01 level of significance.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
@@ -1412,7 +1521,7 @@ Excel Instructions
 <p><strong>To calculate confidence intervals for the true mean of the difference in Excel, do the following</strong>:</p>
 <ul>
 <li>Open the file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a></li>
-<li>Click on the tab labeled “One-sample t-test”</li>
+<li>Click on the tab labeled “Paired Data t-test”</li>
 <li>Enter the columns of paired data into column A and B</li>
 <li>Set the desired confidence level. <br></li>
 </ul>
@@ -1477,7 +1586,7 @@ Answer the following questions:
 <div id="Q39" style="display:none;">
 <ul>
 <li>The mean was 592.87 trees per hectare and the standard deviation was 45.31 trees per hectare.</li>
-<li>Answers will vary regarding the description of the density. Here is one possible respons.</li>
+<li>Answers will vary regarding the description of the density. Here is one possible response.</li>
 <li>The trees are about half as dense as they were before the pine beetle infestation. About <span class="math inline">\(\frac{592.87}{1028.41} = 0.58 = 58\%\)</span> of the trees remained, so <span class="math inline">\(100\% - 58\% = 42\%\)</span> of the trees were killed by the pine beetles!</li>
 </ul>
 </div>
@@ -1902,11 +2011,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">

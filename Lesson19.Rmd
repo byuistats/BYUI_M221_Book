@@ -1,5 +1,5 @@
 ---
-title: "Lesson 19"
+title: "Lesson 19 Inference for Independence of Categorical Data"
 output: 
   html_document:
     theme: cerulean
@@ -87,7 +87,7 @@ This question has only two possible answers: "yes" and "no." The answer "no" can
 
 To prepare for the hypothesis test, recall that our hyopthesis tests always measure how different two or more things are. For example, in the 2-sample $t$-test, we compare two population means by seeing how different they are. In a test of one proportion, we measure the difference between a sample proportion and a population proportion. Each of these tests requires some information about at least one parameter. That information is given in the null hypothesis of the test, which we've always been able to write with one or more "=" signs, because we've always used numeric parameters.
 
-Unfortunately, we have no parameter we can use measure the independence of the variables "location" and "motivation". Nevertheless, we have to be able to calculate a $P$-value, and the only approach we have so far is to measure differences between things. "Difference" means "subtraction" in Statistics, and if the measurements are categorical, we cannot subtract them. Therefore, as in the other lessons of this unit, we will count occurences of each value of each variable to get some numbers. (The example that follows will show how this is handled.) The numbers we get will be called "counts" or "observed counts".
+Unfortunately, we have no parameter we can use to measure the independence of the variables "location" and "motivation". Nevertheless, we have to be able to calculate a $P$-value, and the only approach we have so far is to measure differences between things. "Difference" means "subtraction" in Statistics, and if the measurements are categorical, we cannot subtract them. Therefore, as in the other lessons of this unit, we will count occurences of each value of each variable to get some numbers. (The example that follows will show how this is handled.) The numbers we get will be called "counts" or "observed counts".
 
 When we have our observed counts in hand, software will calculate the counts we should *expect* to see, *if the null hypothesis is true.* We call these the "expected counts." The software will then subtract the observed counts from the expected counts and combine these differences to create a single number that we can use to get a $P$-value. That single number is called the $\chi^2$ test statistic. (Note that $\chi$ is a Greek letter, and its name is "ki", as in "kite". The symbol $\chi^2$ should be pronounced "ki squared," but many people pronounce it "ki-square.")
 
@@ -279,7 +279,7 @@ Let $\alpha=0.05$.
 The test statistic is: $\chi^2 = 49.743$, with $df=8$.
   
 <!--:*Sketch of the sampling distribution of $\chi^2$: (Draw a right skewed distribution that looks somewhat like an $F$.)-->
-The $P$-value is rounded to .000 in the output. Double-clicking twice on this value gives the actual $P$-value:   $P\textrm{-value} = 4.58 \times 10^{-8}  < 0.05 = \alpha$
+The $P$-value is rounded to .000 in the output. To see the actual $P$-value you would need to use Excel to expand the number of decimal places shown:   $P\textrm{-value} = 4.58 \times 10^{-8}  < 0.05 = \alpha$
 
 Decision: Reject the null hypothesis.
 

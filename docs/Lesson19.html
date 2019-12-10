@@ -11,7 +11,7 @@
 
 
 
-<title>Lesson 19</title>
+<title>Lesson 19 Inference for Independence of Categorical Data</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -70,9 +70,7 @@ h6 {
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -91,8 +89,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -108,7 +112,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -128,6 +131,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -149,19 +189,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -174,7 +280,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Math 221B</a>
+      <a class="navbar-brand" href="index.html">Math 221</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -189,7 +295,10 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -303,7 +412,7 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Lesson 19</h1>
+<h1 class="title toc-ignore">Lesson 19 Inference for Independence of Categorical Data</h1>
 
 </div>
 
@@ -400,7 +509,7 @@ Dr. Bruce Zitkus, an advanced practice registered nurse, conducted a study in wh
 <p>People often wonder whether two things influence each other. For example, people seek chiropractic care for different reasons. We may want to know if those reasons are different for Europeans than for Americans or Australians. This question can be expressed as “Do reasons for seeking chiropractic care depend on the location in which one lives?”</p>
 <p>This question has only two possible answers: “yes” and “no.” The answer “no” can be written as “Motivations for seeking chiropractic care and one’s location are independent.” (The statistical meaning of “independent” is too technical to give here. However, for now, you can think of it as meaning that the two variables are not associated in any way. For example, neither variable depends on the other.) Writing the answer “no” this way allows us to use it as the null hypothesis of a test. We can write the alternative hypothesis by expressing the answer “yes” as “Motivations for seeking chirporactic care and one’s location are not independent.” (Reasons for wording it this way will be given after you’ve been through the entire hypothesis test.)</p>
 <p>To prepare for the hypothesis test, recall that our hyopthesis tests always measure how different two or more things are. For example, in the 2-sample <span class="math inline">\(t\)</span>-test, we compare two population means by seeing how different they are. In a test of one proportion, we measure the difference between a sample proportion and a population proportion. Each of these tests requires some information about at least one parameter. That information is given in the null hypothesis of the test, which we’ve always been able to write with one or more “=” signs, because we’ve always used numeric parameters.</p>
-<p>Unfortunately, we have no parameter we can use measure the independence of the variables “location” and “motivation”. Nevertheless, we have to be able to calculate a <span class="math inline">\(P\)</span>-value, and the only approach we have so far is to measure differences between things. “Difference” means “subtraction” in Statistics, and if the measurements are categorical, we cannot subtract them. Therefore, as in the other lessons of this unit, we will count occurences of each value of each variable to get some numbers. (The example that follows will show how this is handled.) The numbers we get will be called “counts” or “observed counts”.</p>
+<p>Unfortunately, we have no parameter we can use to measure the independence of the variables “location” and “motivation”. Nevertheless, we have to be able to calculate a <span class="math inline">\(P\)</span>-value, and the only approach we have so far is to measure differences between things. “Difference” means “subtraction” in Statistics, and if the measurements are categorical, we cannot subtract them. Therefore, as in the other lessons of this unit, we will count occurences of each value of each variable to get some numbers. (The example that follows will show how this is handled.) The numbers we get will be called “counts” or “observed counts”.</p>
 <p>When we have our observed counts in hand, software will calculate the counts we should <em>expect</em> to see, <em>if the null hypothesis is true.</em> We call these the “expected counts.” The software will then subtract the observed counts from the expected counts and combine these differences to create a single number that we can use to get a <span class="math inline">\(P\)</span>-value. That single number is called the <span class="math inline">\(\chi^2\)</span> test statistic. (Note that <span class="math inline">\(\chi\)</span> is a Greek letter, and its name is “ki”, as in “kite”. The symbol <span class="math inline">\(\chi^2\)</span> should be pronounced “ki squared,” but many people pronounce it “ki-square.”)</p>
 <p>In this course, software will calculate the <span class="math inline">\(\chi^2\)</span> test statistic for you, but you need to understand that the <span class="math inline">\(\chi^2\)</span> test statistic compares the observed counts to the expected counts—that is, to the counts we should expect to get if the null hypothesis is true. The larger the <span class="math inline">\(\chi^2\)</span> test statistic is, the smaller the <span class="math inline">\(P\)</span>-value will be. If the <span class="math inline">\(\chi^2\)</span> test statistic is large enough that the <span class="math inline">\(P\)</span>-value is less than <span class="math inline">\(\alpha\)</span>, we will conclude that the observed counts and expected counts are too different for the null hypothesis to be plausible, and will therefore reject <span class="math inline">\(H_0\)</span>. Otherwise, we will fail to reject <span class="math inline">\(H_0\)</span>, as always.</p>
 <p>For organizational reasons, counts are traditionally arranged in a table called a “contingency table.” One variable is chosen as the “row variable,” so called because its values are the row headers for the table. The other variable is called the “column variable,” because its values are the column headers. Different <span class="math inline">\(\chi^2\)</span> distributions are distinguished by the number of degrees of freedom, which are determined by the number of rows and columns in the table:</p>
@@ -665,7 +774,7 @@ Excel Instructions
 <p>Let <span class="math inline">\(\alpha=0.05\)</span>.</p>
 <p>The test statistic is: <span class="math inline">\(\chi^2 = 49.743\)</span>, with <span class="math inline">\(df=8\)</span>.</p>
 <!--:*Sketch of the sampling distribution of $\chi^2$: (Draw a right skewed distribution that looks somewhat like an $F$.)-->
-<p>The <span class="math inline">\(P\)</span>-value is rounded to .000 in the output. Double-clicking twice on this value gives the actual <span class="math inline">\(P\)</span>-value: <span class="math inline">\(P\textrm{-value} = 4.58 \times 10^{-8} &lt; 0.05 = \alpha\)</span></p>
+<p>The <span class="math inline">\(P\)</span>-value is rounded to .000 in the output. To see the actual <span class="math inline">\(P\)</span>-value you would need to use Excel to expand the number of decimal places shown: <span class="math inline">\(P\textrm{-value} = 4.58 \times 10^{-8} &lt; 0.05 = \alpha\)</span></p>
 <p>Decision: Reject the null hypothesis.</p>
 <p>Conclusion: There is sufficient evidence to suggest that the motivation to visit a chiropractor is not independent of the location.</p>
 <!--The following observation really needs to be supported by an appropriate table of percentages or a clustered bar chart, or something.-->

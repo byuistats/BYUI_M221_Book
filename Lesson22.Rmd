@@ -1,5 +1,5 @@
 ---
-title: "Lesson 22"
+title: "Lesson 22: Simple Linear Regression"
 output: 
   html_document:
     theme: cerulean
@@ -40,7 +40,7 @@ Simple linear regression is a method used to fit a line to data.  This provides 
 We will be using linear equations throughout this lesson.  Click on the link at right if you would like to review lines and linear equations.
 
 <!-- BEGIN REVIEW OF LINES  ***********************************************  -->
-<a href="javascript:showhide('re')"><span style="font-size:8pt;">Click Here for a Revious of Linear Equations</span></a>
+<a href="javascript:showhide('re')"><span style="font-size:8pt;">Click Here for a Review of Linear Equations</span></a>
 <div id="re" style="display:none;">
 
 
@@ -88,8 +88,8 @@ In statistics, we may use different notation than you encountered in your algebr
 Notice that this is the equation of a straight line. You might have written linear equations in the form $Y=mX+b$ in your algebra classes.  Notice that our equation has the same form.  The slope is given by $b_1$ and the $Y$-intercept is given by $b_0$.
 -->
 This leads to the following representation of the linear equation:
-$$\hat Y = b_0 + b_1 X$$
-We use the symbol $\hat Y$ to indicate a predicted value for $Y$. The value $b_0$ is the Y-intercept and $b_1$ is the slope.  Compare this notation to traditional slope-intercept form. 
+$$\widehat Y = b_0 + b_1 X$$
+We use the symbol $\widehat Y$ to indicate a predicted value for $Y$. The value $b_0$ is the Y-intercept and $b_1$ is the slope.  Compare this notation to traditional slope-intercept form. 
 
 You may wonder why we would use this form (rather than traditional slope-intercept form) to express the equation.  Click on the link at right for a brief explanation.
 
@@ -169,9 +169,9 @@ We can use simple linear regression to develop an equation relating the head len
 
 If we can assume that there is a linear relationship between the head length and the body length, then we can express this symbolically as:
 $$
-\hat Y = b_0 + b_1 X
+\widehat Y = b_0 + b_1 X
 $$
-where $\hat Y$ represents the predicted body length of an estuarine crocodile with a head length of $X$. The numbers $b_0$ and $b_1$ are called the estimated "regression coefficients".  "Coefficient" is a fancy term that simply means a number, especially a number that is multiplied by a variable such as $X$.  We will use software to calculate the regression coefficients.
+where $\widehat Y$ represents the predicted body length of an estuarine crocodile with a head length of $X$. The numbers $b_0$ and $b_1$ are called the estimated "regression coefficients".  "Coefficient" is a fancy term that simply means a number, especially a number that is multiplied by a variable such as $X$.  We will use software to calculate the regression coefficients.
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <!-- {{Software_Filter | PageName=RegressionCoeffs }} -->
@@ -200,10 +200,10 @@ The regression coefficients are given in the column labeled "B".  The first row 
 
 
 $$
-\hat Y = -18.274 + 7.660 X
+\widehat Y = -18.274 + 7.660 X
 $$
 
-We put the "hat" on $Y$ to represent that this is an estimate of the value of $Y$.  The symbol $\hat Y$ is read, "$Y$-hat".  We can also express this equation in the following way:
+We put the "hat" on $Y$ to represent that this is an estimate of the value of $Y$.  The symbol $\widehat Y$ is read, "$Y$-hat".  We can also express this equation in the following way:
 $$
 \widehat{BodyLength} = -18.274 + 7.660 \cdot HeadLength
 $$
@@ -218,7 +218,7 @@ An 87 cm skull from a juvenile sarcosuchus was discovered.  We want to estimate 
 
 To predict the body length, we can substitute $x=87$ into the regression equation:
 $$
-\hat Y = -18.274 + 7.660 X = -18.274 + 7.660 (87) = 648.146
+\widehat Y = -18.274 + 7.660 X = -18.274 + 7.660 (87) = 648.146
 $$
 
 Even though we can do this with a calculator, it is a little tedious and is subject to rounding errors.  There is a simpler, easier, and better way.
@@ -280,7 +280,7 @@ The following plot shows the regression line on the scatterplot.
 
 <img src="./Images/EstuarineCrocodile-Scatterplot-RegLine-SPSS.png">
 <!--
-The equation of this line is $\hat Y = b_0 + b_1 X$.  This is the equation obtained by following the directions given above.
+The equation of this line is $\widehat Y = b_0 + b_1 X$.  This is the equation obtained by following the directions given above.
 -->
 
 ## Manatees and Powerboats
@@ -338,9 +338,9 @@ We can use simple linear regression to develop an equation relating the number o
 
 If we can assume that as the number of powerboat registrations increase, the increase in the number of manatees killed will be proportional, then we can write our model in the following way:
 $$
-\hat Y = b_0 + b_1 X
+\widehat Y = b_0 + b_1 X
 $$
-where $\hat Y$ is the predicted number of manatees killed in a year in which the number of powerboat registrations (in thousands) is given by $X$.
+where $\widehat Y$ is the predicted number of manatees killed in a year in which the number of powerboat registrations (in thousands) is given by $X$.
 
 Notice that this is the equation of a straight line. You might have written linear equations in the form $Y=mX+b$ in your algebra classes.  Notice that our equation has the same form.  The slope is given by $b_1$ and the $Y$-intercept is given by $b_0$.
 
@@ -352,7 +352,7 @@ The output from the commands given above will include a table similar to the one
 
 The Y-intercept term is not multiplied by anything except 1.  This is the value of $b_0$: $b_0=-42.542$.  The value of the slope is to be multiplied by $X$; this is the slope of the regression equation.  In our model, $X$ represents the number of powerboat registrations in Florida, in thousands.  The slope for our regression equation is $b_1=0.129$.  We get the equation:
 $$
-\hat Y = -42.542 + 0.129 X
+\widehat Y = -42.542 + 0.129 X
 $$
 
 <img src="./Images/Manatees-TwoManateeSurfaceToBreathe-RobertKBonde-USFishAndWildlifeService.png">
@@ -417,7 +417,7 @@ TextGoesHere
 <div class="SummaryHeading">Remember...</div>
 <div class="Summary">
 
-- In statistics, we write the **linear regression equation** as $\hat Y=b_0+b_1X$ where $b_0$ is the **Y-intercept** of the line and $b_1$ is the **slope** of the line. The values of $b_0$ and $b_1$ are calculated using software.
+- In statistics, we write the **linear regression equation** as $\widehat Y=b_0+b_1X$ where $b_0$ is the **Y-intercept** of the line and $b_1$ is the **slope** of the line. The values of $b_0$ and $b_1$ are calculated using software.
 
 - Linear regression allows us to predict values of $Y$ for a given $X$. This is done by first calculating the coefficients $b_0$ and $b_1$ and then plugging in the desired value of $X$ and solving for $Y$. 
 

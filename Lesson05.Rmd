@@ -93,7 +93,7 @@ We will return to this example later, and we will find the area shaded in blue.
 
 In Ghana, the mean height of young adult women is normally distributed with mean $159.0$ cm and standard deviation $4.9$ cm. (Monden & Smits, 2009) Serwa, a female BYU-Idaho student from Ghana, is $169.0$ cm tall. Her height is $169.0 - 159.0 = 10$ cm greater than the mean. When compared to the standard deviation, she is about two standard deviations ($\approx 2 \times 4.9$ cm) taller than the mean. <!-- Two standard deviations is only an approximate.  Since $10/4.9 = 2.041$, she is 2.04 standard deviations greater than the mean.-->
 
-The heights of men are also normally distributed. The mean height of young adult men in Brazil is $173.0$ cm ("Orçamento," 2010), and the standard deviation for the population is $6.3$ cm. (Castilho & Lahr, 2001) A Brazilian BYU-Idaho student, Gustavo, is $182.5$ cm tall. Compared to other Brazilians, he is taller than the mean height of Brazilian men.
+The heights of men are also normally distributed. The mean height of young adult men in Brazil is $173.0$ cm ("Oramento," 2010), and the standard deviation for the population is $6.3$ cm. (Castilho & Lahr, 2001) A Brazilian BYU-Idaho student, Gustavo, is $182.5$ cm tall. Compared to other Brazilians, he is taller than the mean height of Brazilian men.
 
 <div class="QuestionsHeading">Answer the following question:</div>
 <div class="Questions">
@@ -101,7 +101,7 @@ The heights of men are also normally distributed. The mean height of young adult
 
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
--  Gustavoâ's height is $182.5 - 173.0 = 9.5 \text{ cm  }$    above the mean. The standard deviation of the height of Brazilian men is 6.3 cm, so his height is   $\displaystyle{ \frac{9.5}{6.3} =1.508 }$  standard deviations above the mean.
+-  Gustavo?'s height is $182.5 - 173.0 = 9.5 \text{ cm  }$    above the mean. The standard deviation of the height of Brazilian men is 6.3 cm, so his height is   $\displaystyle{ \frac{9.5}{6.3} =1.508 }$  standard deviations above the mean.
 </div>
 &nbsp;
 </div>
@@ -160,7 +160,7 @@ $$\mu + 3\sigma = 159.0 + 3(4.9) = 173.7~\text{cm}.$$
 
 If a $z$-score is extreme (either a large positive number or a large negative number), then that suggests that that observed value is very far from the mean. The 68-95-99.7% rule states that 95% of the observed data values will be within two standard deviations of the mean. This means that 5% of the observations will be more than 2 standard deviations away from the mean (either to the left or to the right).
 
-We define an **unusual observation** to be something that happens less than 5% of the time. For normally distributed data, we determine if an observation is unusual based on its $z$-score. We call an observation unusual if $z < 2$ or if $z > 2$.  In other words, we will call an event unusual if the absolute value of its $z$-score is greater than 2.
+We define an **unusual observation** to be something that happens less than 5% of the time. For normally distributed data, we determine if an observation is unusual based on its $z$-score. We call an observation unusual if $z < -2$ or if $z > 2$.  In other words, we will call an event unusual if the absolute value of its $z$-score is greater than 2.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
@@ -534,7 +534,7 @@ Lahman, S.Sean lahman's baseball archive. Retrieved November, 2010, from http://
 
 Monden, C. W. S., & Smits, J. (2009). Maternal height and child mortality in 42 developing countries. American Journal of Human Biology, 21(3), 305.
 
-Orçamento e Gestão Ministério do Planejamento. Pesquisa de orçamentos familiars 2008-2009: Antropometria e estado nutricional de crianças, adolescentes e adultos no brasil. Technical report, Instituto Brasileiro de Geografi a e Estatística - IBGE, Rio de Janeiro, Brazil 2010.
+Or?amento e Gest?o Minist?rio do Planejamento. Pesquisa de or?amentos familiars 2008-2009: Antropometria e estado nutricional de crian?as, adolescentes e adultos no brasil. Technical report, Instituto Brasileiro de Geografi a e Estat?stica - IBGE, Rio de Janeiro, Brazil 2010.
 
 <br>
 

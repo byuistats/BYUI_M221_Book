@@ -11,7 +11,7 @@
 
 
 
-<title>Lesson 24</title>
+<title>Lesson 24: Review for Exam 4</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -70,9 +70,7 @@ h6 {
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -91,8 +89,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -108,7 +112,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -128,6 +131,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -149,19 +189,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -189,7 +295,10 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -303,15 +412,14 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Lesson 24</h1>
+<h1 class="title toc-ignore">Lesson 24: Review for Exam 4</h1>
 
 </div>
 
 <div id="TOC">
 <ul>
-<li><a href="#lesson-outcomes">Lesson Outcomes</a></li>
-<li><a href="#lesson-summaries">Lesson Summaries</a></li>
-<li><a href="#review-questions">Review Questions</a></li>
+<li><a href="#unit-4-lesson-outcomes">Unit 4 Lesson Outcomes</a></li>
+<li><a href="#unit-4-lesson-summaries">Unit 4 Lesson Summaries</a></li>
 <li><a href="#navigation">Navigation</a></li>
 </ul>
 </div>
@@ -322,14 +430,9 @@ $(document).ready(function () {
     e.style.display = (e.style.display == 'block') ? 'none' : 'block';
  }
 </script>
-<p>The following questions are intended to help you judge your preparation for the final exam. Carefully work through the problems.</p>
-<p><br /><br />
-<strong>Some of these questions are repeated on the preparation quiz for this lesson.</strong></p>
-<p>This is not designed to be a comprehensive review. There may be items on the exam that are not covered in this review. Similarly, there may be items in this review that are not tested on this exam. You are strongly encouraged to review the readings, homework exercises, and other activities from Units 1-4 as you prepare for the exam. In particular, you should go over the <a href="Lesson08.html" target="_blank">Review for Exam 1</a>, the <a href="Lesson15.html" target="_blank">Review for Exam 2</a>, and the <a href="Lesson20.html" target="_blank">Review for Exam 3</a>.</p>
-<!-- Use the <span style="font-variant:small-caps">[[Index]]</span> to review definitions of important terms. 
-Index Needs to be built-->
-<div id="lesson-outcomes" class="section level2">
-<h2>Lesson Outcomes</h2>
+<p><br /></p>
+<div id="unit-4-lesson-outcomes" class="section level2">
+<h2>Unit 4 Lesson Outcomes</h2>
 <a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 <p>The expectation on the exam is the following outcomes. You should be able to do:</p>
@@ -363,12 +466,11 @@ Index Needs to be built-->
 </div>
 <p><br></p>
 </div>
-<div id="lesson-summaries" class="section level2">
-<h2>Lesson Summaries</h2>
-<p><span class="Custom">Click on the link below</span> for a review of the summaries from each lesson.</p>
+<div id="unit-4-lesson-summaries" class="section level2">
+<h2>Unit 4 Lesson Summaries</h2>
+<p>Here are the summaries for each lesson in unit 4. Reviewing these key points from each lesson will help you in your preparation for the exam.</p>
 <a href="javascript:showhide('su')"><span style="font-size:8pt;">Show/Hide Summaries</span></a>
-<div id="su" style="display:none;">
-<p><strong>Here are the summaries for each lesson in unit 4. Reviewing these key points from each lesson will help you in your preparation for the exam.</strong></p>
+<div id="su">
 <div class="RecapHeading">
 Lesson 21 Recap
 </div>
@@ -413,344 +515,7 @@ H_a: &amp; \beta_1\ne0
 <p><br></p>
 </div>
 <p><br></p>
-<!--
-Future questions:
-
-5. Weight gain during pregnancy of the mother is an important indicator of infant health. A simple random sample of pregnant women on Egypt, Kenya, and Mexico was used to determine if weight gain during pregnancy differed in these three countries. Which hypothesis test would be most appropriate for this analysis?
-
-8. O’Hare International Airport in Chicago has a reputation for having a large proportion of its flights being late. You design a study to see if this reputation is deserved. You find that the average on-time rate for all international airports in the US is 70%. You collect data and determine the on-time rate for O’Hare. You decide to construct a confidence interval to compare O’Hare’s on-time rate to the national average. Which confidence interval would be most appropriate for this study?
--->
-</div>
-<div id="review-questions" class="section level2">
-<h2>Review Questions</h2>
-<ol style="list-style-type: decimal">
-<li><p>Which of the following variables is/are quantitative? (Mark all that apply)</p>
-<ol style="list-style-type: lower-alpha">
-<li>The number of people in a randomly selected classroom on campus</li>
-<li>The 3 most common brands of car found in the US</li>
-<li>The telephone number of a randomly selected business in town</li>
-</ol></li>
-</ol>
 <p><br></p>
-<ol start="2" style="list-style-type: decimal">
-<li><p>Students in an Introductory Statistics class at BYU-Idaho were studying prices of cold cereal at grocery stores in Rexburg. To get a sample of cold cereal prices, they went to Albertson’s and rolled a die to decide which box from the left of the top shelf they would start on. They then recorded every 6th cereal after the first, moving from left to right down the shelves, recording the name, size, and price of each cereal in their sample. Is this study an experiment or an observational study, and why?</p>
-<ol style="list-style-type: lower-alpha">
-<li>An experiment, because the students had control over which sampling method they used</li>
-<li>An experiment, because the students had control over which cereals would be selected for the study</li>
-<li>An observational study, because the students had no control over the price of the individual cereals</li>
-<li>An observational study, because the students had no control over which cereals were selected</li>
-</ol></li>
-</ol>
-<p><br></p>
-<p>For a Math 221 project, one group of students studied the ages of students on the BYU-Idaho campus. They collected data from a random sample of <span class="math inline">\(n = 100\)</span> students. The sample mean was 21.2 and the sample standard deviation was 2.61. An excerpt of their data is given below.</p>
-<p><img src="Images/03_HW_Table.jpg"></p>
-<ol start="3" style="list-style-type: decimal">
-<li><p>The group notices an error in their data. The age of one of the males (ID=3) was entered incorrectly. He is actually 21 years old. When the error is corrected, what will happen to the sample median?</p>
-<ol style="list-style-type: lower-alpha">
-<li>The median will increase.</li>
-<li>The median will decrease.</li>
-<li>The median will stay the same.</li>
-<li>It is not possible to determine this without the full data set.</li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="4" style="list-style-type: decimal">
-<li><p>The time to complete a standardized exam in the BYU-Idaho Testing Center is approximately normal with a mean of 70 minutes and a standard deviation of 10 minutes. Using the 68-95-99.7 rule, approximately what percentage of students will complete the exam in under fifty minutes? Give your answer accurate to one decimal place.</p></li>
-<li><p>The scores on the LSAT are approximately normal with mean of 150.7 and standard deviation of 10.2. (Source: www.lsat.org.) Queenís School of Business in Kingston, Ontario requires a minimum LSAT score of 157 for admission. Find the 35th percentile of the LSAT scores. Give your answer accurate to one decimal place. Use the applet. (Example: 124.7)</p></li>
-<li><p>A team of dermatological researchers were studying skin cancer among 60-70 year old American men. Suppose you were a part of the research team and take a sample of <span class="math inline">\(n=70\)</span> men from this age group and calculate the mean number of skin cancer spots in the sample. Also suppose that it is known that the distribution of the number of cancer spots is right-skewed.</p>
-<p>What would be the shape of the distribution of sample means?</p>
-<p>How would the answer change, if at all, if the sample size for this study was <span class="math inline">\(n=2\)</span> instead?</p></li>
-</ol>
-<p><br></p>
-<p>Tanker trucks are designed to carry huge quantities of gasoline from refineries to filling stations. A factory that manufactures the tank of the trucks claims to manufacture tanks with a capacity of 8550 gallons of gasoline. The actual capacity of the tanks is normally distributed with mean <span class="math inline">\(\mu = 8544 ~\text{gallons}\)</span> and standard deviation <span class="math inline">\(\sigma = 12 ~\text{gallons}\)</span>. Use this information to answer the next two questions.</p>
-<p><br></p>
-<ol start="7" style="list-style-type: decimal">
-<li>A simple random sample of <span class="math inline">\(n=20\)</span> tanks will be selected. Find the z-score corresponding to a sample mean capacity for 20 tanks of 8544. Round your answer to three decimal places. (Example: 0.398)</li>
-</ol>
-<p><br></p>
-<ol start="8" style="list-style-type: decimal">
-<li>A simple random sample of <span class="math inline">\(n=50\)</span> tanks will be selected. What is the probability that the mean capacity for these 50 tanks will be greater than 8540 gallons? Round your answer to three decimal places. (Example: 0.398)</li>
-</ol>
-<p><br></p>
-<ol start="9" style="list-style-type: decimal">
-<li><p>Which one of the following best describes the notion of “the significance level of a hypothesis test?”</p>
-<ol style="list-style-type: lower-alpha">
-<li>The probability of a type I error</li>
-<li>The probability of a type II error</li>
-<li>The probability of rejecting <span class="math inline">\(H_0\)</span>, whether it’s true or not</li>
-<li>The probability of obtaining a test statistic at least as extreme as the one you calculated, assuming the null hypothesis is true</li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="10" style="list-style-type: decimal">
-<li><p>The heights of young adult females in the United States are said to have a population standard deviation of <span class="math inline">\(\sigma = 2.6 ~\text{inches}\)</span>. A sample was taken of <span class="math inline">\(n = 85\)</span> young adult females at BYU-I and the mean computed to be <span class="math inline">\(\bar x = 65.4 ~\text{inches}\)</span>.Which of the following explanations describes the correct way to interpret the 95% confidence interval for this problem? (There may be more than one correct answer)</p>
-<ol style="list-style-type: lower-alpha">
-<li>There is a 95% chance that the true mean height of adult females in the United States is in our confidence interval.</li>
-<li>We are 95% confident that the true mean height of adult females in the United States is somewhere in our confidence interval.</li>
-<li>Approximately 95% of all 95% confidence intervals that could be computed from the population of all adult females in the United States will contain the true mean height.</li>
-<li>95% of all of the heights of female adults in the US are in our confidence interval.</li>
-<li>95% of the heights of female adults in our sample are in our confidence interval.</li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="11" style="list-style-type: decimal">
-<li><p>Marine biologists have been studying the effects of acidification of the oceans on weights of male baluga whales in the Arctic Ocean. One of the studies involves a random sample of 16 baluga whales. The researchers want to create a 95% confidence interval to estimate the true mean weight of male baluga whales. Their data follow a normal distribution. The population standard deviation of weights of male baluga whales is <span class="math inline">\(\sigma = 125 ~\text{kg}\)</span>, and the researchers feel comfortable using this standard deviation for their confidence interval.Are the requirements for the use of a confidence interval met? Explain.</p>
-<ol style="list-style-type: lower-alpha">
-<li>Yes. The distribution of sample means is normal because the data are normal.</li>
-<li>Yes. The distribution of sample means is normal because the sample size is large.</li>
-<li>No. The distribution of sample means is not normal because the sample size is small.</li>
-<li>No. The fact that the data are normal does not imply that the distribution of sample means is normal.</li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="12" style="list-style-type: decimal">
-<li>An investor with a stock portfolio worth several hundred thousand dollars sued his broker and brokerage firm because he felt that lack of diversification in his portfolio led to poor performance for many years in a row. In an effort to avoid close public scrutiny, the firm agreed to settle the conflict by an arbitration panel. The arbitration panel compared a sample of 39 months of the investor’s returns with the average of the Standard &amp; Poor’s 500-stock index for the same period in order to determine whether there was a substantial difference. The S&amp;P has a known population mean return of 0.95. Suppose that you are a member of this arbitration panel. Conduct a hypothesis test to determine if the investor’s portfolio performed significantly worse than the performance of the S&amp;P 500. Use a level of significance of <span class="math inline">\(\alpha=0.05\)</span>. Open the data file Rates of Return. What is the <span class="math inline">\(P\)</span>-value for this test? Give your answer accurate to three decimal places. (Example: 0.034)</li>
-</ol>
-<p><br></p>
-<ol start="13" style="list-style-type: decimal">
-<li><p>A financial economist is studying married couples in which both spouses work. He wants to compare the mean income earned by husbands with the mean income earned by their wives. Should he use independent sampling or dependent sampling, and why?</p>
-<ol style="list-style-type: lower-alpha">
-<li>Independent sampling. The two spouses are separate people with different jobs, so the husband’s income doesn’t depend on his wife’s income.</li>
-<li>Independent sampling. How he selects the husband is independent of how he selects the wife.</li>
-<li>Dependent sampling. The husband’s income depends to some degree on his wife’s income.</li>
-<li>Dependent sampling. He needs to select couples for his sample, so whether a particular wife is included depends on whether her husband is included.</li>
-</ol></li>
-</ol>
-<p><br></p>
-<p>Pressures of supply and demand act directly on the prices of airline tickets. As the seats available on the plane begin to fill, airlines raise the price. If seats on a flight do not sell well, an airline may discount the tickets or even cancel the flight. Allie Henrich, a BYU-Idaho student, wanted to determine if there is a difference in the price of tickets listed 90 days before a flight compared with 14 days before the same flight. For her study she compared the prices of one-way flights from London’s Heathrow Airport to various destinations in Europe. Using Travelocity.com, she recorded the lowest published fares for 90 nonstop midweek flights 90 days in advance and then found the lowest published price for the same destination again 14 days in advance. The prices (in US dollars) are given in the file DirectFlightCosts. Notice that for some destinations, flights were not available. Use this information to answer the next two questions.</p>
-<p><br></p>
-<ol start="14" style="list-style-type: decimal">
-<li>What is the <span class="math inline">\(P\)</span>-value for this test? Round your answer to 3 decimal places. (Example: 0.045)</li>
-</ol>
-<p><br></p>
-<ol start="15" style="list-style-type: decimal">
-<li><p>Based on the results of the test, can you say that there is a difference in the cost of airline tickets purchased 90 days in advance compared with 14 days in advance? Use a level of significance of <span class="math inline">\(\alpha=0.05\)</span>.</p>
-<ol style="list-style-type: lower-alpha">
-<li>Yes, because the <span class="math inline">\(P\)</span>-value was greater than the level of significance.</li>
-<li>Yes, because the <span class="math inline">\(P\)</span>-value was lower than the level of significance.</li>
-<li>No, because the <span class="math inline">\(P\)</span>-value was greater than the level of significance.</li>
-<li>No, because the <span class="math inline">\(P\)</span>-value was lower than the level of significance.</li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="16" style="list-style-type: decimal">
-<li><p>A real estate company wants to evaluate two of their home appraisers for consistency in preparation for their annual state certification. It is important that different appraisers be able to give similar estimates for homes and other properties. The company selects a random sample of 10 homes in different neighborhoods around the city and independently asks each appraiser for an estimate of the home value. After they receive the estimates for each home, the company subtracts the value given by the first appraiser from the value given by the second appraiser. They create a Q-Q plot of the differences and see that the points in the plot roughly form a straight line. Are the requirements for using the desired confidence interval satisfied? Explain.</p>
-<ol style="list-style-type: lower-alpha">
-<li>Yes. The distribution of mean differences is normal because the sample size is large.</li>
-<li>Yes. The distribution of mean differences is normal because the data have been determined to be normal.</li>
-<li>No. The distribution of mean differences is not normal because the sample size is not large enough.</li>
-<li>Not necessarily, because the company needs to check that the values given by each appraiser are normal, not that the differences are normal.</li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="17" style="list-style-type: decimal">
-<li><p>Now suppose the company of the previous item wants to use a hypothesis test to determine whether the estimates given by the two appraisers are different. Which of the following would be the most appropriate pair of hypotheses for such a test?</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(H_0:~\mu_1 = \mu_2\)</span>    <span class="math inline">\(H_a:~\mu_1 \ne \mu_2\)</span></li>
-<li><span class="math inline">\(H_0:~\mu_1 \ne \mu_2\)</span>    <span class="math inline">\(H_a:~\mu_1 = \mu_2\)</span></li>
-<li><span class="math inline">\(H_0:~\mu_d = 0\)</span>    <span class="math inline">\(H_a:~\mu_d \ne 0\)</span></li>
-<li><span class="math inline">\(H_0:~\mu_d \ne 0\)</span>    <span class="math inline">\(H_a:~\mu_d = 0\)</span></li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="18" style="list-style-type: decimal">
-<li><p>Suppose you create a 95% confidence interval for a mean, and get (-2.346, 8.775). You’ve been told to report this by saying, “We are 95% confident that the true mean is between -2.346 and 8.775.” Exactly what does this mean?</p>
-<ol style="list-style-type: lower-alpha">
-<li>There is a 95% chance that the true mean is between -2.346 and 8.775.</li>
-<li>95% of all 95% confidence intervals actually contain the true mean.</li>
-<li>95% of the data are between -2.346 and 8.775.</li>
-<li>95% of the sample means are between -2.346 and 8.775.</li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="19" style="list-style-type: decimal">
-<li>If <span class="math inline">\(p=4/5\)</span>, what is the smallest value of <span class="math inline">\(n\)</span> that satisfies the requirements for a normally distributed <span class="math inline">\(\hat p\)</span>?</li>
-</ol>
-<p><br></p>
-<ol start="20" style="list-style-type: decimal">
-<li><p>Your little brother has a a career batting average of 0.233. You want to determine the probability that he will have a batting average of over 0.250 next season when he will be up to bat 40 times. Are the conditions met so that the sample proportion <span class="math inline">\(\hat p\)</span> will be approximately normal?</p>
-<ol style="list-style-type: lower-alpha">
-<li>Yes. There is a large sample (<span class="math inline">\(n&gt;30\)</span>) so the sample proportion must be normal.</li>
-<li>Yes. <span class="math inline">\(40\times0.250\ge10\)</span> so the conditions are satisfied.</li>
-<li>No. <span class="math inline">\(\hat p\)</span> can only be normal if the sample data are normally distributed.</li>
-<li>No. <span class="math inline">\(40\times0.233&lt;10\)</span> so the conditions are not satisfied.</li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="21" style="list-style-type: decimal">
-<li><p>A geneticist takes a simple random sample of <span class="math inline">\(n = 140\)</span> gamete (sex) cells from the testes of a dog to determine the proportion which contain the chromosomes for development into a male. Assume the (unknown) true proportion of dog gametes that contain the male chromosome is 46%. The geneticist conducts her sample and calculates <span class="math inline">\(\hat p = 0.512\)</span>. Which of the following is the most correct interpretation of this statistic?</p>
-<ol style="list-style-type: lower-alpha">
-<li>There is a 51.2% chance that a randomly selected gamete cell will have the male chromosome.</li>
-<li>51.2% of the eggs fertilized with these gametes will produce female puppies.</li>
-<li>51.2% of all the gametes in the dog’s testes have the male chromosome.</li>
-<li>51.2% of the gametes in the sample have the male chromosome.</li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="22" style="list-style-type: decimal">
-<li>Researchers published a study in which they considered the incidence among the elderly of various mental health conditions such as dementia, bi-polar disorder, obsessive compulsive disorder, delirium, and Alzheimer’s disease. In the U.S., 45% of adults over 65 suffer from one or more of the conditions considered in the study. Calculate the probability that fewer than 320 out of the <span class="math inline">\(n = 750\)</span> adults over 65 in the study suffer from one or more of the conditions under consideration. Give your answer accurate to three decimal places in decimal form. (Example: 0.398)</li>
-</ol>
-<p><br></p>
-<ol start="23" style="list-style-type: decimal">
-<li><p>Suppose you’re testing <span class="math inline">\(H_0:~p = 0.62\)</span> against <span class="math inline">\(H_a:~p \ne 0.62\)</span> and you have calculated the test statistic to be <span class="math inline">\(z = 1.334\)</span>. The area to the right of <span class="math inline">\(z = 1.334\)</span> (under the standard normal density curve) is 0.091. Which one of the following is the <span class="math inline">\(P\)</span>-value of your hypothesis test?</p>
-<ol style="list-style-type: lower-alpha">
-<li>0.046</li>
-<li>0.091</li>
-<li>0.182</li>
-<li>0.909</li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="24" style="list-style-type: decimal">
-<li><p>Suppose you are dog breeder and you want to use a confidence interval to estimate the true mean fertility levels of pure bred cocker spaniels. It is known that the distribution of fertility levels of cocker spaniels is normal. How many measurements must you have in order to be sure the sampling distribution of <span class="math inline">\(\bar x\)</span> is normal?</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(n \ge 30\)</span></li>
-<li><span class="math inline">\(n \ge 10\)</span></li>
-<li><span class="math inline">\(n \ge 5\)</span></li>
-<li><span class="math inline">\(np \ge 10\)</span> and <span class="math inline">\(n(1 - p) \ge 10\)</span></li>
-<li><span class="math inline">\(np \ge 5\)</span> and <span class="math inline">\(n(1 - p) \ge 5\)</span></li>
-<li>Any n will do.</li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="25" style="list-style-type: decimal">
-<li><p>An study is planned to compare the proportion of men who dislike anchovies with the proportion of women who dislike anchovies. The study seeks to determine if the proportions of men and women who dislike anchovies are different. A sample of 41 men was taken and the <span class="math inline">\(\hat p\)</span> estimate for the true proportion of men who dislike anchovies was determined to be 0.67. A sample of 56 women was also taken and the <span class="math inline">\(\hat p\)</span> estimate for the true proportion of women who dislike anchovies was determined to be 0.84. Are the requirements satisfied to perform this hypothesis test? Why?</p>
-<ol style="list-style-type: lower-alpha">
-<li>Yes, because the sample sizes of both groups are greater than 5.</li>
-<li>Yes, because in both cases <span class="math inline">\(n \hat p &gt; 10\)</span></li>
-<li>Yes, because we know that the populations are normally distributed.</li>
-<li>No, because the sample size for the women is too small.</li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="26" style="list-style-type: decimal">
-<li><p>A study was conducted to measure the effectiveness of a diet program that claims to help manage weight. Subjects were randomly selected to participate. Before beginning the program, each participant was given a score based on his or her fitness level. After six months of following the diet, each participant received another score. The study wanted to test whether there was a difference between before and after scores. What is the correct alternative hypothesis for this analysis?</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\mu \ne 0\)</span></li>
-<li><span class="math inline">\(\mu_d \ne 0\)</span></li>
-<li><span class="math inline">\(\mu_1 \ne \mu_2\)</span></li>
-<li><span class="math inline">\(p_1 \ne p_2\)</span></li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="27" style="list-style-type: decimal">
-<li><p>Weight Watchers wanted to predict how much weight a client would lose if they followed a prescribed exercise program in addition to their diet program. Volunteers were randomly divided into two groups, one group dieted but didn’t exercise, and the other group dieted and followed the exercise program. For the exercise group, they used linear regression with percent compliance with the exercise program as the explanatory variable and pounds lost in three months as the response variable. One of the clients was told that his residual was 5.5 pounds. What does this mean?</p>
-<ol style="list-style-type: lower-alpha">
-<li>His predicted weight loss was 5.5 pounds higher than his actual weight loss.</li>
-<li>His actual weight loss was 5.5 pounds higher than his predicted weight loss.</li>
-<li>His actual weight loss was 5.5 pounds higher than it would have been if he didn’t exercise.</li>
-<li>His predicted weight loss was 5.5 pounds higher than it would have been if he didn’t exercise.</li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="28" style="list-style-type: decimal">
-<li><p>For the study in the previous question, the <span class="math inline">\(b_1\)</span> of the regression line was 5 pounds. Interpret this statistic.</p>
-<ol style="list-style-type: lower-alpha">
-<li>The average weight loss of all participants was 5 pounds.</li>
-<li>On average, the exercise participants lost 5 pounds more than non-exercisers.</li>
-<li>As percent compliance goes up by 1 percent, the average weight lost in three months increases by 5 pounds.</li>
-<li>Not enough information is given to answer this question.</li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="29" style="list-style-type: decimal">
-<li><p>When creating a scatter plot, a residuals plot, and a QQ plot, which of the five assumptions about linear regression are being checked? Check all that apply.</p>
-<ol style="list-style-type: lower-alpha">
-<li>The X values are measured without error.</li>
-<li>The residuals are Normally distributed.</li>
-<li>The observations are independent.</li>
-<li>There is a linear relationship between X and Y.</li>
-<li>The variance of the error term is constant for all values of X.</li>
-</ol></li>
-</ol>
-<p><br></p>
-<p>Pressures of supply and demand act directly on the prices of airline tickets. As the seats available on the plane begin to fill, airlines raise the price. If seats on a flight do not sell well, an airline may discount the tickets or even cancel the flight. Allie Henrich, a BYU-Idaho student, WANTED TO PREDICT THE PRICE OF TICKETS 14 DAYS BEFORE A FLIGHT BASED ON THE PRICE OF TICKETS LISTED 90 DAYS BEFORE THE SAME FLIGHT. For her study she compared the prices of one-way flights from London’s Heathrow Airport to various destinations in Europe. Using Travelocity.com, she recorded the lowest published fares for 90 nonstop midweek flights 90 days in advance and then found the lowest published price for the same destination again 14 days in advance. The prices (in US dollars) are given in the file DirectFlightCosts. Notice that for some destinations, flights were not available. Use this information to answer questions 3 through 37.</p>
-<p><br></p>
-<ol start="30" style="list-style-type: decimal">
-<li>Compute the sample correlation coefficient of the 14-Days-before-flight ticket prices compared with the 90-Days-before-flight ticket prices. Give your answer accurate to three decimals.</li>
-</ol>
-<p><br></p>
-<ol start="31" style="list-style-type: decimal">
-<li><p>Create a scatterplot using these two variables. Using this scatterplot and referring to the correlation coefficient above, select the answer that best describes the data illustrated in the scatterplot.</p>
-<ol style="list-style-type: lower-alpha">
-<li>Linear with a fairly strong negative association</li>
-<li>Linear with a fairly strong positive association</li>
-<li>Linear with a strong negative association</li>
-<li>Nonlinear</li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="32" style="list-style-type: decimal">
-<li>Fill in the missing variables in the equation of the linear regression line used to predict the price of tickets 14 days before a flight based on the price of tickets listed 90 days before the same flight.</li>
-</ol>
-<p><br></p>
-<ol start="33" style="list-style-type: decimal">
-<li>Predict the price of tickets listed 14 days before a flight based on the same flight costing $200, 90 days before a flight. Give your answer accurate to 1 decimal place.</li>
-</ol>
-<p><br></p>
-<ol start="34" style="list-style-type: decimal">
-<li>Give a 95% confidence interval for the slope of the regression line obtained when 90-Days-before-flight ticket prices are used to predict 14-Days-before-flight ticket prices. (Round your answers to three decimal places, Example: 23.445)</li>
-</ol>
-<p><br></p>
-<ol start="35" style="list-style-type: decimal">
-<li><p>Choose the correct null and alternative hypotheses for this analysis.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(H_0:~b_0 = 0\)</span>    <span class="math inline">\(H_a:~b_0 \ne 0\)</span></li>
-<li><span class="math inline">\(H_0:~b_1 = 0\)</span>    <span class="math inline">\(H_a:~b_1 \ne 0\)</span></li>
-<li><span class="math inline">\(H_0:~\beta_0 = 0\)</span>    <span class="math inline">\(H_a:~\beta_0 \ne 0\)</span></li>
-<li><span class="math inline">\(H_0:~\beta_1 = 0\)</span>    <span class="math inline">\(H_a:~\beta_1 \ne 0\)</span></li>
-</ol></li>
-</ol>
-<p><br></p>
-<ol start="36" style="list-style-type: decimal">
-<li>Give the value of the test statistic and the <span class="math inline">\(P\)</span>-value. (Round your answers to three decimal places, Example: 0.567)</li>
-</ol>
-<p><br></p>
-<ol start="37" style="list-style-type: decimal">
-<li><p>What decision do you make based on the <span class="math inline">\(P\)</span>-value and the level of significance (<span class="math inline">\(\alpha\)</span>), and, thus, what do you conclude?</p>
-<ol style="list-style-type: lower-alpha">
-<li>Fail to reject the null. There is sufficient evidence to suggest that the slope of the true linear regression line does not equal zero. We conclude that there is not a linear relationship between 14-day ticket prices and 90-day ticket prices.</li>
-<li>Fail to reject the null. There is insufficient evidence to suggest that the slope of the true linear regression line does not equal zero. We conclude that there is not a linear relationship between 14-day ticket prices and 90-day ticket prices.</li>
-<li>Reject the null. There is sufficient evidence to suggest that the slope of the true linear regression line does not equal zero. We conclude that there is a linear relationship between 14-day ticket prices and 90-day ticket prices.</li>
-<li>Reject the null. There is insufficient evidence to suggest that that the the slope of the true linear regression line does not equal zero. We conclude that there is a linear relationship between 14-day ticket prices and 90-day ticket prices.</li>
-</ol></li>
-</ol>
-<p><br></p>
-<ul>
-<li><p>Deciding which procedure to use: Here is a list of procedures we have studied so far this semester. For the next set of questions identify the one procedure that is most appropriate to the given situation. You may use a procedure once, more than once, or not at all.</p>
-<ol style="list-style-type: lower-alpha">
-<li>One mean (sigma known)</li>
-<li>One mean (sigma unknown)</li>
-<li>Mean of the differences (paired samples)</li>
-<li>Difference of the means (independent samples)</li>
-<li>Several means (ANOVA)</li>
-<li>One proportion</li>
-<li>Difference of two proportions</li>
-<li>Chi-Squared test of independence</li>
-<li>Slope of the regression line</li>
-</ol></li>
-</ul>
-<p><br></p>
-<ol start="38" style="list-style-type: decimal">
-<li>In the United States, mothers who live in poverty generally have babies with lower birthweight than those who do not live in poverty. The mean birthweight for babies born in the U.S. to mothers living in poverty is approximately 2800 grams. The CDC carries out a study to test the effectiveness of a new prenatal care program in reducing the number of low birthweight babies born. For the study, 30 mothers, all of whom live in poverty, participate in the program and birthweight data is recorded. Which hypothesis test would be most appropriate for this study?</li>
-</ol>
-<p><br></p>
-<ol start="39" style="list-style-type: decimal">
-<li>Engineers at an oil refinery find out how easily gasoline evaporates by measuring its vapor pressure. As they make gasoline, they need to determine whether its vapor pressure is high enough. The standard deviation of the vapor pressure of the gasoline made by the refinery is always 0.03 (pounds per square inch). Which hypothesis test would be most appropriate for this task?</li>
-</ol>
-<p><br></p>
-<ol start="40" style="list-style-type: decimal">
-<li>An attorney wants to know whether the percentage of Wal-Mart employees in Nevada who are over 45 years old is more than 30%. Which procedure would be most appropriate in this situation?</li>
-</ol>
-<p><br></p>
-<ol start="41" style="list-style-type: decimal">
-<li>A marriage counselor conducted a study of couples, categorizing each of the couples as “communicative” or “non-communicative”. Among other things, the counselor wanted to see whether the percentage of communicative couples whose marriage ended in separation or divorce was the same as the percentage of non-communicative couples whose marriage ended in separation or divorce. Which hypothesis test would be most appropriate for this study?</li>
-</ol>
-<p><br></p>
-<ol start="42" style="list-style-type: decimal">
-<li>A business marketing firm specializes in radio advertising. They hope to show there is a linear relationship between sales and the amount of money a client invests in radio advertising. Which procedure in the list above would be most appropriate for addressing this question?</li>
-</ol>
-<p><br> <br></p>
 </div>
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
