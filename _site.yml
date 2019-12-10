@@ -64,6 +64,8 @@ navbar:
         - text: "Lesson 24: Unit 4 Review"
           href: Lesson24.html
   right:
+    - text: "Toolbox"
+      href: https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx
     - text: Data
       href: Data.html
 output: 
