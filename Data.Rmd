@@ -201,7 +201,9 @@ Or download individual files:
 
 [UsedHummersNYandLA.xls](./Data/UsedHummersNYandLA.xls)                                                
 
-[UsedHummersNYandLA.xlsx](./Data/UsedHummersNYandLA.xlsx)                                              
+[UsedHummersNYandLA.xlsx](./Data/UsedHummersNYandLA.xlsx)   
+
+[Vehicles.xlsx](./Data/Vehicles.xlsx)                                          
 
 [VertebralHeights.xlsx](./Data/VertebralHeights.xlsx)                                                  
 
