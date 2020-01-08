@@ -215,12 +215,11 @@ Excel shows the starting and ending values for each bin. For example, the first 
 
 This histogram does not look exactly like the histogram pictured above, but it is  close. To make it match exactly you can use the "Overflow bin" and "Underflow bin" options; but that is beyond what we will discuss here.
 
-</div>
-<!--This .toc-ignore thing is not working, a bullet for the toc is still being added. I tried using </div> but that screwed up the formatting later on-->
-
 <br>
 
-After summarizing the data numerically and graphically, we are ready to make inferences about the population.
+### Making Inference About the Population
+
+After summarizing the sample data numerically and graphically, we are ready to make inference about the population.
 <br>
 
 <img src="./Images/Step4.png">
@@ -422,7 +421,7 @@ e. A, B, and C can all occur.
 
 For example, to calculate the mean of the sample of tubercolisis patient costs in India first put the data in Excel. Then type **=average(**, highlight the data, and close the parenthesis with **)** before hitting enter:  
 
-<img src="./Images/Lesson_03_mean.png">  
+<div style="padding-left:30px;"><img src="./Images/Lesson_03_mean.png" width=50%></div>
 
 * To calculate a median, simply replace the word "average" in the formula with the word "median". Try it with the tuberculosis patient data, you should get the same value that was calculated by hand above.
 
