@@ -248,7 +248,7 @@ Informally, a distribution can be thought of as being "all the possible outcomes
 
 ### Randomness
 
-A BYU-Idaho student was overhead saying, "I went shopping and bought some *random* items."  Did the person actually take a random sample of the items at the store?  Did they write all the items down and randomly select the items for purchase?  Of course not!
+A BYU-Idaho student was overheard saying, "I went shopping and bought some *random* items."  Did the person actually take a random sample of the items at the store?  Did they write all the items down and randomly select the items for purchase?  Of course not!
 
 What did the student mean? That the items they bought seemed unrelated.  When we consciously or subconsciously choose a sample, it is not random.  
 
