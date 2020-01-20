@@ -429,11 +429,10 @@ $(document).ready(function () {
 <li><a href="#finding-the-probability-of-being-between-two-values">Finding the Probability of Being Between Two Values</a></li>
 <li><a href="#calculating-percentiles-using-a-normal-distribution">Calculating Percentiles using a Normal Distribution</a></li>
 </ul></li>
-<li><a href="#assessing-normality-using-a-q-q-plot">Assessing Normality Using a Q-Q Plot</a><ul>
+<li><a href="#assessing-normality-using-a-histogram">Assessing Normality Using a Histogram</a><ul>
 <li><a href="#baseball-batting-averages-1">Baseball Batting Averages</a></li>
 <li><a href="#body-temperatures">Body Temperatures</a></li>
 <li><a href="#wages-of-byu-idaho-students">Wages of BYU-Idaho Students</a></li>
-<li><a href="#other-examples">Other Examples</a></li>
 </ul></li>
 <li><a href="#summary">Summary</a></li>
 <li><a href="#alumni-spotlight-adam-andersen">Alumni Spotlight: Adam Andersen</a></li>
@@ -459,15 +458,14 @@ $(document).ready(function () {
 <p><br></p>
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Lesson Outcomes</span></a>
 <div id="oc" style="display:none;">
 <p>By the end of this lesson, you should be able to:</p>
 <ul>
 <li>State the properties of a normal density curve.</li>
 <li>Calculate the z-score of an individual observation, given the mean and standard deviation.</li>
 <li>Interpret a z-score.</li>
-<li>Calculate probability as area under a normal density curve.</li>
-<li>Assess normality using a QQ-plot.</li>
+<li>Calculate probability as area under a normal density curve. <!-- -  Assess normality using a QQ-plot. --></li>
 </ul>
 </div>
 <p><br></p>
@@ -607,9 +605,7 @@ Answer the following questions:
 <p><em>Click on an area below the curved line to shade/unshade the region. </em>Click and drag the red lines to adjust the <span class="math inline">\(z\)</span>-scores and obtain the area. <em>Type a <span class="math inline">\(z\)</span>-score into one of the bottom input boxes and hit “Enter” to get an area. </em>Type in an area and hit “Enter” to get a <span class="math inline">\(z\)</span>-score.</p>
 <br>
 <center>
-<div width="90%">
-
-
+<div>
 <!DOCTYPE html>
 <html>
 <head>
@@ -1390,6 +1386,8 @@ setDefaults();
 </html>
 
 </div>
+</center>
+</div>
 <div id="converting-a-z-score-to-a-probability" class="section level3">
 <h3>Converting a <span class="math inline">\(z\)</span>-score to a Probability</h3>
 <p>Using this applet we can calculate proportions and probabilities based on the area under the normal curve. For the following examples, please open the <a href="http://byuimath.com/apps/normprob.html" target="_blank">Normal Probability Applet</a> and practice using it to find areas under the curve.</p>
@@ -1447,12 +1445,12 @@ setDefaults();
 <p><span class="math display">\[1.282 = \frac{x -0.261}{0.034 }\]</span></p>
 <p><br></p>
 <p>Solve for <span class="math inline">\(x\)</span>:</p>
-<table style="width:100%;">
+<table>
 <colgroup>
 <col width="26%" />
 <col width="28%" />
 <col width="3%" />
-<col width="40%" />
+<col width="41%" />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -1547,37 +1545,42 @@ setDefaults();
 <p><br></p>
 </div>
 </div>
-<div id="assessing-normality-using-a-q-q-plot" class="section level2">
-<h2>Assessing Normality Using a Q-Q Plot</h2>
+<div id="assessing-normality-using-a-histogram" class="section level2">
+<h2>Assessing Normality Using a Histogram</h2>
 <div id="baseball-batting-averages-1" class="section level3">
 <h3>Baseball Batting Averages</h3>
 <p>Recall the data on the batting averages of Major League Baseball players. The histogram of the batting averages showed a distinct bell-shaped curve.</p>
 <p><img src="Images/Picture6.jpg"></p>
-<p>To help us visually assess if data are normally distributed, statisticians have developed Q-Q plots. A <strong>Q-Q plot</strong> is a graph that is used to assess if data are normally distributed. If the points in the Q-Q plot are essentially in a straight line, then we conclude that the data are normally distributed.</p>
-<p>In a Q-Q plot, the <span class="math inline">\(z\)</span>-scores for the observed values in the data set are plotted on the horizontal axis. The <span class="math inline">\(z\)</span>-scores of the expected values (assuming the data are normally distributed) are plotted on the vertical axis. If the data follow a normal distribution, then we would expect these points to lie in a straight line. If the data are non-normal, we expect to see a distinct curve in the Q-Q plot.</p>
-<p><img src="Images/L04_QQ_Plot_01.jpg"></p>
-<p>Notice that the points fall in a fairly straight line. These data appear to follow a normal distribution.</p>
-<p>In any Q-Q plot, we expect little wiggles in the points. If the points in the Q-Q plot are essentially in a line, then we conclude that the data are normally distributed.</p>
-<p><strong>Instructions for creating a Q-Q Plot:</strong></p>
+<!-- To help us visually assess if data are normally distributed, statisticians have developed Q-Q plots. A **Q-Q plot** is a graph that is used to assess if data are normally distributed. If the points in the Q-Q plot are essentially in a straight line, then we conclude that the data are normally distributed. -->
+<!-- In a Q-Q plot, the $z$-scores for the observed values in the data set are plotted on the horizontal axis. The $z$-scores of the expected values (assuming the data are normally distributed) are plotted on the vertical axis. If the data follow a normal distribution, then we would expect these points to lie in a straight line. If the data are non-normal, we expect to see a distinct curve in the Q-Q plot. -->
+<!-- <img src="Images/L04_QQ_Plot_01.jpg"> -->
+<!-- Notice that the points fall in a fairly straight line. These data appear to follow a normal distribution. -->
+<!-- In any Q-Q plot, we expect little wiggles in the points. If the points in the Q-Q plot are essentially in a line, then we conclude that the data are normally distributed. -->
 <div class="SoftwareHeading">
 Excel Instructions
 </div>
 <div class="Summary">
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<p><strong>Here is a refresher of how to make a Histogram in Excel</strong></p>
+<p>For more detailed instructions revisit <a href="./docs/Lesson03.html#visualizing-quantitative-data-histograms">lesson 3</a>.</p>
+<ol style="list-style-type: decimal">
+<li>Highlight the data you want to summarize with a histogram</li>
+<li>Go to the Insert ribbon in Excel and select the histogram icon from the “Charts” section of the ribbon. Then select the first option of histograms presented.</li>
+</ol>
+<p>The Excel default histogram for this dataset is pretty good. However, if your dataset is relatively small, skewed, or outliers are present, experimenting with different bin sizes can help you get a better idea of the shape of the distribution.</p>
+<p><img src="Images/Lesson_05_batting_avg_Excel_histogram.png" width=80%></p>
+<p><em>Optional</em>: You can explore the shape of the distribution of data by adjusting the number of bins on the histogram with these steps:</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Be sure the graph is selected, so that you can select the “Format” ribbon. In the upper left corner of the ribbon, select “Horizontal Category Axis” in the drop down box. Then click on “Format Selection”.</p>
 <ul>
-<li><strong>Here is how to make a Q-Q plot in Excel</strong></li>
-<li>Open the data file <a href="./Data/BattingAverages.xlsx">BattingAverages.xlsx</a></li>
-<li>Copy the data you needs from this file (the column labeled BattingAvg)</li>
-<li>Open the file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a></li>
-<li>Click on the tab labeled QQ Plots</li>
-<li>Paste the data into Column A of the QQ plots worksheet</li>
-<li>Sort Column A in order from smallest to largest.</li>
-<li>The graph on the right will be your Q-Q plot.</li>
-</ul>
-<p><img src="./Images/Excel_QQ-Plot_ _L05.jpg"> <br></p>
+<li>On many computers, an quicker method to access the same menu is to right click anywhere on the x-axis and select “Format Axis”.</li>
+</ul></li>
+<li><p>A menu of options will open on the right side of the screen. You can adjust the bin width or number of bins. Experiment with a few different values to see if the histogram changes much in shape.</p></li>
+</ol>
+<p><br></p>
 </div>
 <p><br></p>
-<p>Make sure you can create the Q-Q plot shown above on your own.</p>
+<!-- Make sure you can create the Q-Q plot shown above on your own. -->
 </div>
 <div id="body-temperatures" class="section level3">
 <h3>Body Temperatures</h3>
@@ -1588,15 +1591,15 @@ Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="5" style="list-style-type: decimal">
-<li>Make a *histogram of the body temperature data.</li>
+<li>Make a histogram of the body temperature data.</li>
 </ol>
 <a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q5" style="display:none;">
 <!--
 {{Course_Filter_Two|A=[[File:BodyTemperatures-Histogram.png|link=|400 px]]|B=[[File:Histogram Example.jpg|link=|400px]]}}
 -->
-<p><img src="Images/BodyTemperatures-Histogram.png"></p>
-<p>Note that the mean is 98.23, standard deviation is 0.738, and sample size is n = 148.</p>
+<p>Use Excel’s default histogram:</p>
+<p><img src="Images/Lesson_05_body_temp_Excel_histogram.png" width=80%></p>
 </div>
 <p><br></p>
 <ol start="6" style="list-style-type: decimal">
@@ -1610,59 +1613,67 @@ Answer the following questions:
 </div>
 <p><br></p>
 <ol start="7" style="list-style-type: decimal">
-<li>Create a Q-Q plot of the body temperature data.</li>
+<li>Calculate the following numerical summaries of the data: sample mean, sample standard deviation, and sample size.</li>
 </ol>
 <a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q7" style="display:none;">
 <!--
 {{Course_Filter_Two|A=[[File:BodyTemperatures-QQ.png|link=|400 px]]|B=[[File:SPSS QQ-Plot Body Temp.jpg|link=|400 px]]}}
 -->
-<p><img src="Images/BodyTemperatures-QQ.png"></p>
+<p>The sample mean is 98.23, sample standard deviation is 0.738, and sample size is n = 148.</p>
 </div>
 <p><br></p>
-<p>*Click the link at right for a review of how to create a histogram.</p>
-<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Refresh My Memory</span></a>
-<div id="Q8" style="display:none;">
-<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-<div class="SoftwareHeading">
-Excel Instructions
-</div>
-<div class="Summary">
-<ul>
-<li><p><strong>Instructions for Creating a Histogram in Excel</strong></p></li>
-<li><p>To make a histogram in Excel, you can use the Excel file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>. Copy and paste the desired data values into the first column (on the left side) of the tool. The histogram will be generated automatically.</p></li>
-</ul>
-<p><img src="Images/Lesson_2_Activity_2-2.JPG"></p>
-<p><br></p>
-</div>
-</div>
-<p><br>  </p>
 </div>
 <p><br></p>
-<p>You may notice some jagged jumps in the in Q-Q plot of the body temperature data. This is called granularity. It occurs here because the body temperatures were only reported to the nearest tenth of a degree. If we had more precision in the data, this would not occur.</p>
-<p>The points in the Q-Q plot distinctly follow a line. We conclude the body temperature data are normally distributed.</p>
 </div>
 <div id="wages-of-byu-idaho-students" class="section level3">
 <h3>Wages of BYU-Idaho Students</h3>
-<p>The following Q-Q plot represents the wages of a random sample of BYU-Idaho students. Here is the Q-Q plot for the wages data:</p>
-<p><img src="Images/L04_QQ_Plot_02.jpg"></p>
-<p>Notice the distinct curvature in the data. This suggests that the data are not normal. Here is a histogram of the wage data:</p>
-<p><img src="Images/L04_QQ_Plot_03.jpg"></p>
-<p>In this case, it is easy to spot the right-skewed shape of the histogram. Sometimes, especially when sample sizes are small, the histogram can be misleading. The Q-Q plot usually gives a better measure of whether or not the data are normally distributed.</p>
-<p><br></p>
+<p>The <a href="./Data/SurveyData.xlsx">Survey Data</a> file contains data on hourly wages of BYU-Idaho students. Use that data to answer the following questions.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
 </div>
-<div id="other-examples" class="section level3">
-<h3>Other Examples</h3>
-<p>We will consider additional Q-Q Plots that illustrate data that are not normal.</p>
-<p>Notice the S-shape in the following plot.</p>
-<p><img src="Images/L04_QQ_Plot_04.jpg"></p>
-<p>Here is an example of a plot representing data that are not normal. When the Q-Q plot curves in this manner, it suggests a left-skewed distribution.</p>
-<p><img src="Images/L04_QQ_Plot_05.jpg"></p>
-<p>The following Q-Q plot represents right-skewed data. The data are not normal.</p>
-<p><img src="Images/L04_QQ_Plot_06.jpg"></p>
-<p>When assessing a Q-Q plot, you should be a little forgiving of the points on the two ends. If there are some points that are slight outliers, you do not need to worry very much about them. If there is not a sustained curve either upward or downward or an S-shape in the data, then you can conclude the data are normally distributed.</p>
-<p>The ability to determine if data follow a normal distribution will be important later in the course.</p>
+<div class="Questions">
+<ol start="8" style="list-style-type: decimal">
+<li>Make a histogram of the data contained in the Wage column. <em>Note</em>: there are gaps in the dataset, be sure you highlight all the way down to the last value in that column</li>
+</ol>
+<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q8" style="display:none;">
+<!--
+{{Course_Filter_Two|A=[[File:BodyTemperatures-Histogram.png|link=|400 px]]|B=[[File:Histogram Example.jpg|link=|400px]]}}
+-->
+<p>To recreate the graph below, start by creating the histogram of wage data in Excel. Then format the x-axis to adjust the number of bins to 7. You can further format the axis by changing the category of the axis from “general” to “number” as seen in the image below.</p>
+<p><img src="Images/Lesson_05_wages_Excel_histogram.png" width=90%></p>
+<p>One way to get the Format Axis menu to appear is to right-click anywhere on the x-axis and select “Format Axis”. Alternatively, select the graph and go to the “Format” ribbon. In the upper left corner of the ribbon, select “Horizontal Category Axis” in the drop down box. Then click on “Format Selection” button directly underneath the drop down box.</p>
+</div>
 <p><br></p>
+<ol start="9" style="list-style-type: decimal">
+<li>Based on your histogram, what is the shape of the distribution of these data?</li>
+</ol>
+<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q9" style="display:none;">
+<ul>
+<li>The data appear to be skewed right.</li>
+</ul>
+</div>
+<p><br></p>
+<!-- The following Q-Q plot represents the wages of a random sample of BYU-Idaho students. -->
+<!-- Here is the Q-Q plot for the wages data: -->
+<!-- <img src="Images/L04_QQ_Plot_02.jpg"> -->
+<!-- Notice the distinct curvature in the data. This suggests that the data are not normal. Here is a histogram of the wage data: -->
+<!-- <img src="Images/L04_QQ_Plot_03.jpg"> -->
+<!-- In this case, it is easy to spot the right-skewed shape of the histogram. Sometimes, especially when sample sizes are small, the histogram can be misleading. The Q-Q plot usually gives a better measure of whether or not the data are normally distributed. -->
+<!-- <br> -->
+<!-- ### Other Examples -->
+<!-- We will consider additional Q-Q Plots that illustrate data that are not normal. -->
+<!-- Notice the S-shape in the following plot. -->
+<!-- <img src="Images/L04_QQ_Plot_04.jpg"> -->
+<!-- Here is an example of a plot representing data that are not normal. When the Q-Q plot curves in this manner, it suggests a left-skewed distribution. -->
+<!-- <img src="Images/L04_QQ_Plot_05.jpg"> -->
+<!-- The following Q-Q plot represents right-skewed data. The data are not normal. -->
+<!-- <img src="Images/L04_QQ_Plot_06.jpg"> -->
+<!-- When assessing a Q-Q plot, you should be a little forgiving of the points on the two ends. If there are some points that are slight outliers, you do not need to worry very much about them. If there is not a sustained curve either upward or downward or an S-shape in the data, then you can conclude the data are normally distributed. -->
+<!-- The ability to determine if data follow a normal distribution will be important later in the course. -->
+<!-- <br> -->
 </div>
 </div>
 <div id="summary" class="section level2">
@@ -1676,8 +1687,8 @@ Remember…
 <li><p>A <strong>standard normal distribution</strong> has a mean of 0 and a standard deviation of 1. The <strong>68-95-99.7% rule</strong> states that when data are normally distributed, approximately 68% of the data lie within 1 standard deviation from the mean, approximately 95% of the data lie within 2 standard deviations from the mean, and approximately 99.7% of the data lie within 3 standard deviations from the mean.</p></li>
 <li><p>A <strong>z-score</strong> tells us how many standard deviations away from the mean a given value is. It is calculated as: <span class="math inline">\(\displaystyle{z = \frac{\text{value}-\text{mean}}{\text{standard deviation}} = \frac{x-\mu}{\sigma}}\)</span></p></li>
 <li><p>The <strong>probability applet</strong> allows us to use z-scores to calculate proportions, probabilities, and percentiles.</p></li>
-<li>A <strong>Q-Q plot</strong> is used to assess whether or not a set of data is normally distributed.</li>
 </ul>
+<!-- - A **Q-Q plot** is used to assess whether or not a set of data is normally distributed. -->
 </div>
 <p><br></p>
 </div>
@@ -1711,11 +1722,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">

@@ -137,7 +137,7 @@ $$P(\text{not}~X) = 1 - P(X)$$
 
 - The **probability applet** allows us to use z-scores to calculate proportions, probabilities, and percentiles.
 
-- A **Q-Q plot** is used to assess whether or not a set of data is normally distributed.
+<!-- - A **Q-Q plot** is used to assess whether or not a set of data is normally distributed. -->
 </div>
 <br>
 

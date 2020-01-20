@@ -287,7 +287,7 @@ A group of researchers led by Philip A. Mackowiak, MD, conducted a study to asse
 
 <a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q4" style="display:none;">
-<img src="./Images/BodyTemp-Hist-Excel.png">
+<img src="./Images/BodyTemp-Hist-Excel_v2.png">
 </div>
 <br>
 
@@ -1128,16 +1128,16 @@ $$ \alpha = 0.05 $$
 
 * A histogram showed that the mean age of the online customers may be less than $42$ years. 
 
-<img src="./Images/NYtimes-Hist-Excel.png">
+<img src="./Images/NYtimes-BoxplotExcel.png" width=80%>
 
 
 <img src="./Images/Step4.png">
 
 6. Verify the requirements have been met
 
-* The data represent a simple random sample form the population.  Based on a Q-Q plot, it is reasonable to conclude that the ages are approximately normally distributed.
+* The data represent a simple random sample from the population.  A look at the histogram (not shown) would reveal that the data is not perfectly normal. However, the sample data is approximately normal. In other words, it is close enough to a normal shape to meet the requirement.
 
-<img src="./Images/NYtimes-QQ-Excel.png">
+<!-- <img src="./Images/NYtimes-QQ-Excel.png"> -->
 
 7. Give the test statistic and its value 
 
@@ -1220,6 +1220,8 @@ $$\alpha = 0.05$$
 
 5. Make an appropriate graph to illustrate the data
 
+The histogram shows that the data are left-skewed. That is, many of the sampled students have fairly high GPAs, but a few are very low. 
+
 <img src="./Images/EarlyRisersGPA-Hist-Excel.png">
 
 
@@ -1227,11 +1229,11 @@ $$\alpha = 0.05$$
 
 6. Verify the requirements have been met
 
-* Here is a Q-Q plot of the GPA data.
+<!-- * Here is a Q-Q plot of the GPA data. -->
 
-<img src="./Images/EarlyRisersGPA-QQ-Excel.png">
+<!-- <img src="./Images/EarlyRisersGPA-QQ-Excel.png"> -->
 
-* A simple random sample of $n = 378$ early-rising students at BYU-Idaho was collected. Both the histogram and the Q-Q plot suggest that the data are left-skewed. That is, many of the students have fairly high GPAs, but a few are very low. It is reasonable to conclude that the mean of the GPAs are approximately normally distributed, since the sample size is large, even though the GPA data are left-skewed.
+* A simple random sample of $n = 378$ early-rising students at BYU-Idaho was collected. It is reasonable to conclude that the mean of the GPAs are approximately normally distributed, since the sample size is large, even though the GPA data are left-skewed.
 
 
 7. Give the test statistic and its value 
