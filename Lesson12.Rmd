@@ -347,13 +347,13 @@ The subjects were recruited via advertisements for a research study.  The partic
 
 From a practical perspective, it is impossible to get a simple random sample of people in the general population.  When research trials are conducted, people must volunteer to participate.  This can lead to a selection bias, but it is usually negligible.
 
-The requirement of normality is satisfied for Mahon's data. Though the sample size (n=27) is not quite up to 30, it is still fairly large. Furthermore, the histogram of differences appear to follow a normal distribution, so $\bar d$ will be approximately normal.  
+The requirement of normality is satisfied for Mahon's data. Though the sample size (n=27) is not quite up to 30, it is still fairly large. Furthermore, the histogram of differences indicates very little skew, so $\bar d$ will be approximately normal.  
 
 <center>
 <img src="./Images/Mahon-Differences-QQ_Excel_Toolbox.png">
 </center>
 
-With this Q-Q plot, we could conclude that the data follow a normal distribution.  Even with a small sample size, we can still conduct this test.
+Even with a small sample size, we can still conduct this test.
 
 **Give the test statistic and its value**
 
@@ -686,7 +686,7 @@ $$
 
 **Verify the requirements have been met**
 
-We can consider the sample representative of the population.  The "difference" data appear to follow a normal distribution.  This is illustrated in the following Q-Q plot:
+We can consider the sample representative of the population.  Because our sample size (n=40) of differences is greater than 30, we can be sure the sampling distribution of $\bar d$ will be normal.
 
 <center>
 <img src="./Images/REE-QQ-Excel_Toolbox.png">
@@ -1108,7 +1108,7 @@ Sample Size:           $n = 170$
 <div id="Q42" style="display:none;">
 * a. It is not explicitly stated, but we assume the plots of land were selected at random.
 
-* b. For the pine beetle data, the histogram indicates that the data are not normally distributed.  This can be confirmed with a Q-Q plot.  Since the sample size is large ($n = 170$), we can assume the sample mean is normally distributed.
+* b. For the pine beetle data, the histogram indicates that the data are not normally distributed.  However, since the sample size is large ($n = 170$), we can know the sample mean is normally distributed.
 
 * The requirements for creating the confidence interval seem to be satisfied.
 </div>
@@ -1290,9 +1290,9 @@ Sample Size:           $n = 10$
 
 <a href="javascript:showhide('Q45')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q45" style="display:none;">
-Here is a histogram of the data with 6 bins:
+Here is a boxplot of the data:
 <center>
-<img src="./Images/LHyoscyamine-Histogram-Excel.png">
+<img src="./Images/LHyoscyamine-Boxplot-Excel.png">
 </center>
 </div>
 &nbsp;
@@ -1310,10 +1310,9 @@ Here is a histogram of the data with 6 bins:
 <div id="Q46" style="display:none;">
 * a. We assume the subjects represent a random sample from the population.
 
-* b. A Q-Q plot of the differences indicates that is reasonable to conclude that the data are normally distributed even though the sample size is small:
-<img src="./Images/LHyoscyamine-QQ.png">
+* b. We assume the data are normally distributed even though the sample size is small. With only 10 values, it is hard to see a shape in a histogram of the data, regardless of the number of bins chosen. However, it is clear that the data is not strongly skewed. We will move forward, assuming the requirement of a normal sampling distribution of $\bar d$ is met.
 
-* The requirements for creating the confidence interval seem to be satisfied.
+
 </div>
 <br>
 

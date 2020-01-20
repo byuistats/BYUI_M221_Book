@@ -927,11 +927,11 @@ n &amp;= 27
 </ul>
 <p>The subjects were recruited via advertisements for a research study. The participants volunteered to participate. It is not a simple random sample of all middle-aged women, but there is nothing about the selection of the sample that would invalidate the results.</p>
 <p>From a practical perspective, it is impossible to get a simple random sample of people in the general population. When research trials are conducted, people must volunteer to participate. This can lead to a selection bias, but it is usually negligible.</p>
-<p>The requirement of normality is satisfied for Mahon’s data. Though the sample size (n=27) is not quite up to 30, it is still fairly large. Furthermore, the histogram of differences appear to follow a normal distribution, so <span class="math inline">\(\bar d\)</span> will be approximately normal.</p>
+<p>The requirement of normality is satisfied for Mahon’s data. Though the sample size (n=27) is not quite up to 30, it is still fairly large. Furthermore, the histogram of differences indicates very little skew, so <span class="math inline">\(\bar d\)</span> will be approximately normal.</p>
 <center>
 <img src="Images/Mahon-Differences-QQ_Excel_Toolbox.png">
 </center>
-<p>With this Q-Q plot, we could conclude that the data follow a normal distribution. Even with a small sample size, we can still conduct this test.</p>
+<p>Even with a small sample size, we can still conduct this test.</p>
 <p><strong>Give the test statistic and its value</strong></p>
 <p>The test statistic for a test involving paired data when <span class="math inline">\(\sigma\)</span> is unknown is a <span class="math inline">\(t\)</span>. For this situation, the value is: <span class="math display">\[t= \frac{-6.8 - 0}{3.17/\sqrt{27}} =-11.145\]</span> See that this calculation matches the test statistic given in the Excel output. The degrees of freedom and p-value can also be found in the Excel output.</p>
 <p><strong>State the degrees of freedom</strong></p>
@@ -1223,7 +1223,7 @@ s_d &amp;= 160~\text{kJ}
 <p><br></p>
 <p><img src="Images/Step4.png"></p>
 <p><strong>Verify the requirements have been met</strong></p>
-<p>We can consider the sample representative of the population. The “difference” data appear to follow a normal distribution. This is illustrated in the following Q-Q plot:</p>
+<p>We can consider the sample representative of the population. Because our sample size (n=40) of differences is greater than 30, we can be sure the sampling distribution of <span class="math inline">\(\bar d\)</span> will be normal.</p>
 <center>
 <img src="Images/REE-QQ-Excel_Toolbox.png">
 </center>
@@ -1667,7 +1667,7 @@ Answer the following questions:
 <li>It is not explicitly stated, but we assume the plots of land were selected at random.</li>
 </ol></li>
 <li><ol start="2" style="list-style-type: lower-alpha">
-<li>For the pine beetle data, the histogram indicates that the data are not normally distributed. This can be confirmed with a Q-Q plot. Since the sample size is large (<span class="math inline">\(n = 170\)</span>), we can assume the sample mean is normally distributed.</li>
+<li>For the pine beetle data, the histogram indicates that the data are not normally distributed. However, since the sample size is large (<span class="math inline">\(n = 170\)</span>), we can know the sample mean is normally distributed.</li>
 </ol></li>
 <li>The requirements for creating the confidence interval seem to be satisfied.</li>
 </ul>
@@ -1931,9 +1931,9 @@ Answer the following questions:
 </ol>
 <a href="javascript:showhide('Q45')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q45" style="display:none;">
-Here is a histogram of the data with 6 bins:
+Here is a boxplot of the data:
 <center>
-<img src="Images/LHyoscyamine-Histogram-Excel.png">
+<img src="Images/LHyoscyamine-Boxplot-Excel.png">
 </center>
 </div>
 <p> </p>
@@ -1954,9 +1954,8 @@ Answer the following questions:
 <li>We assume the subjects represent a random sample from the population.</li>
 </ol></li>
 <li><ol start="2" style="list-style-type: lower-alpha">
-<li>A Q-Q plot of the differences indicates that is reasonable to conclude that the data are normally distributed even though the sample size is small: <img src="Images/LHyoscyamine-QQ.png"></li>
+<li>We assume the data are normally distributed even though the sample size is small. With only 10 values, it is hard to see a shape in a histogram of the data, regardless of the number of bins chosen. However, it is clear that the data is not strongly skewed. We will move forward, assuming the requirement of a normal sampling distribution of <span class="math inline">\(\bar d\)</span> is met.</li>
 </ol></li>
-<li>The requirements for creating the confidence interval seem to be satisfied.</li>
 </ul>
 </div>
 <p><br></p>
