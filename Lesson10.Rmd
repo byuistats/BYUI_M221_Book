@@ -787,7 +787,7 @@ We always round up in sample size calculations, so the required sample size is $
 The administration at BYU-Idaho is concerned about the possibility of grade inflation in their courses. Grades in a course are coded on a scale from 0 to 4, as given in the following table:
 
 <center>
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning = FALSE}
 library(pander)
 
 grd <- data.frame("A"  = 4.0,
@@ -802,7 +802,7 @@ grd <- data.frame("A"  = 4.0,
                   "D"  = 1.0,
                   "D-" = 0.7,
                   "F"  = 0.0)
-
+colnames(grd)<-c("A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F")
 pander(grd)
 ```
 </center>
