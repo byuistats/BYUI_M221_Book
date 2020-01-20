@@ -184,7 +184,7 @@ There are two populations, and it is important to illustrate both of them separa
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <div class="SoftwareHeading">Excel Instructions</div>
 <div class="Summary">
-**To create side-by-side histograms in Excel, do the following:**
+**To visualize the distributions of the two sample simultaneously:**
 
 Use the "Two-sample t Test" tab of the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) to create separate histograms, one for each group.  
 
@@ -270,7 +270,7 @@ You will notice that this is not a whole number.  This is called the Satterthwai
 
 **Mark the test statistic and $P$-value on a graph of the sampling distribution** 
 
-The image below represents the area under the curve.  The phrase "for illustrative purposes only" reminds us that this image, which was taken from the applet, shows a normal distribution, not a $t$-distribution.
+The image below represents the area under the curve of a $t$-distribution.
 
 <img src="./Images/Applet-1.455-twotails.png">
 
@@ -432,10 +432,18 @@ The 2006 World Cup was held from June 9, 2006 to July 9, 2006.  The number of pa
 
 <a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q6" style="display:none;">
-* Side-by-side histograms are a great way to summarize the data:
+* Side-by-side boxplots are a great way to summarize the data:
 <center>
-<img src="./Images/WorldCup-Histogram-SPSS.png">
+<img src="./Images/WorldCup-Boxplots-Excel.png">
 </center>
+<br>
+
+**To create the side-by-side boxplots in Excel:** 
+In this case it is easiest to switch the order of the columns. Put HeartAttacks in the column to the *right* of TimePeriod. Then highlight both columns (including the column headers), and create the boxplot with these steps:
+
+* Go to the Insert ribbon
+* Click on the Histogram icon
+* Select the option under the "Box and Whisker" heading
 </div>
 &nbsp;
 </div>
@@ -481,7 +489,7 @@ $$df = 106.429$$
 <div id="Q10" style="display:none;">
 <img src="./Images/WorldCup-Applet.png">
 <center>
-**For Illustrative Purposes Only**
+
 </center>
 </div>
 <br>
@@ -605,14 +613,15 @@ Using Excel, we compute the following:
 
 **Make an appropriate graph to illustrate the data**
 
-<img src="./Images/ReadingPractices-Histogram-Excel.png">
+<img src="./Images/ReadingPractices-Boxplots-Excel.png">
 
+Remember, to make side-by-side boxplots the group label must be in the left column and the data values in the right column. The data for this example is already arranged this way. So, to create the side-by-side boxplots just highlight both columns and then follow the steps for creating a single boxplot: click the Insert ribbon, then click the Histogram icon and choose the image of side-by-side boxplots under the "Box and Whisker" heading.
 
 <img src="./Images/Step4.png">
 
 **Verify the requirements have been met**
 
-The sample size is large, so we can use these methods without much concern about normality.
+The sample size is large enough in both groups respectively, so we can be assured the sampling distribution of the mean for each group is normal.
 
 **Find the confidence interval**
 
@@ -713,7 +722,10 @@ Because hospital-based rehabilitation tends to be more expensive, the researcher
 
 <a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q16" style="display:none;">
-<img src="./Images/COPD-Histogram-Excel.png">
+<img src="./Images/COPD-Boxplot-Excel.png">
+<br>
+<br>
+This boxplot was made by highlighting both columns of data and then following the normal steps for creating a boxplot in Excel. Adding a legend makes the graph easier to understand.
 </div>
 <br>
 
@@ -721,7 +733,7 @@ Because hospital-based rehabilitation tends to be more expensive, the researcher
 
 <a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q17" style="display:none;">
-* The two histograms look similar, although based on the graphs it looks like the mean of the Hospital Group may be slightly higher than the community group.  This is just a visual observation.  We need to conduct a hypothesis test or create a confidence interval to verify it.
+* The two boxplots look similar, although based on the graphs it looks like the mean of the Hospital Group may be slightly higher than the Community Group.  This is just a visual observation.  We need to conduct a hypothesis test or create a confidence interval to verify it.
 </div>
 &nbsp;
 </div>

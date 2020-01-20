@@ -615,7 +615,7 @@ Answer the following questions:
 Excel Instructions
 </div>
 <div class="Summary">
-<p><strong>To create side-by-side histograms in Excel, do the following:</strong></p>
+<p><strong>To visualize the distributions of the two sample simultaneously:</strong></p>
 <p>Use the “Two-sample t Test” tab of the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> to create separate histograms, one for each group.</p>
 <p><img src="Images/ReadingPractices-two-Histograms-Excel.png"></p>
 <span class="Custom">Click the link at right for a helpful tip.</span> <a href="javascript:showhide('tip')"><span style="font-size:8pt;">Show/Hide Tip</span></a>
@@ -669,7 +669,7 @@ t = 1.455
 <p>The degrees of freedom are given as: <span class="math display">\[df = 228.427\]</span></p>
 <p>You will notice that this is not a whole number. This is called the Satterthwaite approximation for the degrees of freedom. Do not worry that this is not an whole number. Just record the value as it is given to you in the software.</p>
 <p><strong>Mark the test statistic and <span class="math inline">\(P\)</span>-value on a graph of the sampling distribution</strong></p>
-<p>The image below represents the area under the curve. The phrase “for illustrative purposes only” reminds us that this image, which was taken from the applet, shows a normal distribution, not a <span class="math inline">\(t\)</span>-distribution.</p>
+<p>The image below represents the area under the curve of a <span class="math inline">\(t\)</span>-distribution.</p>
 <p><img src="Images/Applet-1.455-twotails.png"></p>
 <p><strong>Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance</strong></p>
 <p>From the output, we find that the <span class="math inline">\(P\)</span>-value is 0.147.</p>
@@ -751,7 +751,7 @@ $$
 <p><img src="Images/Step1.png"></p>
 <p><img src="Images/Soccer-City-Stadium-at-capacity.jpg"></p>
 <p><strong>Summarize the relevant background information</strong></p>
-<p>The FIFA Football (Soccer) World Cup is held every four years and is one of the biggest sporting events in the world. In 2006, Germany hosted the World Cup. A study was conducted by Dr. Wilbert-Lampen, et. al. to determine if the stress of viewing a soccer match would increase the risk of a heart attack or another cardiovascular event. <!--<cite>WilbertLampen08</cite>--></p>
+<p>The FIFA Football (Soccer) World Cup is held every four years and is one of the biggest sporting events in the world. In 2006, Germany hosted the World Cup. A study was conducted by Dr. Wilbert-Lampen, et. al. to determine if the stress of viewing a soccer match would increase the risk of a heart attack or another cardiovascular event. <!--<cite>WilbertLampen08</cite>--></p>
 <p>We will use the data on cardiovascular problems during the World Cup to test the hypothesis that the mean number of cardiovascular events is greater during the World Cup than during the control period.</p>
 <p><strong>State the null and alternative hypotheses and the level of significance</strong></p>
 <p>Let Group 1 be days in the Control Period and let Group 2 represent days during the 2006 World Cup. We are testing whether the mean number of cardiovascular events is greater during the World Cup than during the control period. So, the alternative hypothesis will be one-sided.</p>
@@ -825,10 +825,17 @@ Answer the following questions:
 <a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q6" style="display:none;">
 <ul>
-<li>Side-by-side histograms are a great way to summarize the data:
+<li>Side-by-side boxplots are a great way to summarize the data:
 <center>
-<img src="Images/WorldCup-Histogram-SPSS.png">
-</center></li>
+<img src="Images/WorldCup-Boxplots-Excel.png">
+</center>
+<br></li>
+</ul>
+<p><strong>To create the side-by-side boxplots in Excel:</strong> In this case it is easiest to switch the order of the columns. Put HeartAttacks in the column to the <em>right</em> of TimePeriod. Then highlight both columns (including the column headers), and create the boxplot with these steps:</p>
+<ul>
+<li>Go to the Insert ribbon</li>
+<li>Click on the Histogram icon</li>
+<li>Select the option under the “Box and Whisker” heading</li>
 </ul>
 </div>
 <p> </p>
@@ -880,7 +887,6 @@ Answer the following questions:
 <div id="Q10" style="display:none;">
 <img src="Images/WorldCup-Applet.png">
 <center>
-<strong>For Illustrative Purposes Only</strong>
 </center>
 </div>
 <p><br></p>
@@ -970,19 +976,19 @@ Answer the following question:
 </thead>
 <tbody>
 <tr class="odd">
-<td><p>Mean:</p></td>
-<td><p><span class="math inline">\(\bar x_1 = 4.1\)</span></p></td>
-<td><p><span class="math inline">\(\bar x_2 = 3.7\)</span></p></td>
+<td>Mean:</td>
+<td><span class="math inline">\(\bar x_1 = 4.1\)</span></td>
+<td><span class="math inline">\(\bar x_2 = 3.7\)</span></td>
 </tr>
 <tr class="even">
-<td><p>Standard Deviation:</p></td>
-<td><p><span class="math inline">\(s_1 = 2.4\)</span></p></td>
-<td><p><span class="math inline">\(s_2 = 2.5\)</span></p></td>
+<td>Standard Deviation:</td>
+<td><span class="math inline">\(s_1 = 2.4\)</span></td>
+<td><span class="math inline">\(s_2 = 2.5\)</span></td>
 </tr>
 <tr class="odd">
-<td><p>Sample Size:</p></td>
-<td><p><span class="math inline">\(n_1 = 204\)</span></p></td>
-<td><p><span class="math inline">\(n_2 = 117\)</span></p></td>
+<td>Sample Size:</td>
+<td><span class="math inline">\(n_1 = 204\)</span></td>
+<td><span class="math inline">\(n_2 = 117\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -1006,10 +1012,11 @@ Answer the following question:
 <!-- | $n_2 = 117$ -->
 <!-- |} -->
 <p><strong>Make an appropriate graph to illustrate the data</strong></p>
-<p><img src="Images/ReadingPractices-Histogram-Excel.png"></p>
+<p><img src="Images/ReadingPractices-Boxplots-Excel.png"></p>
+<p>Remember, to make side-by-side boxplots the group label must be in the left column and the data values in the right column. The data for this example is already arranged this way. So, to create the side-by-side boxplots just highlight both columns and then follow the steps for creating a single boxplot: click the Insert ribbon, then click the Histogram icon and choose the image of side-by-side boxplots under the “Box and Whisker” heading.</p>
 <p><img src="Images/Step4.png"></p>
 <p><strong>Verify the requirements have been met</strong></p>
-<p>The sample size is large, so we can use these methods without much concern about normality.</p>
+<p>The sample size is large enough in both groups respectively, so we can be assured the sampling distribution of the mean for each group is normal.</p>
 <p><strong>Find the confidence interval</strong></p>
 <p>In this example, we compute the 95% confidence interval for the difference in the mean number of nights the children in the DEV and GEN groups are reading. To obtain a confidence interval for the difference in two means with independent samples, follow these steps:</p>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
@@ -1071,16 +1078,16 @@ Answer the following questions:
 </thead>
 <tbody>
 <tr class="odd">
-<td><p><span class="math inline">\(\bar x = 216.1\)</span></p></td>
-<td><p><span class="math inline">\(\bar x_2 = 283.4\)</span></p></td>
+<td><span class="math inline">\(\bar x = 216.1\)</span></td>
+<td><span class="math inline">\(\bar x_2 = 283.4\)</span></td>
 </tr>
 <tr class="even">
-<td><p><span class="math inline">\(s = 339.9\)</span></p></td>
-<td><p><span class="math inline">\(s = 359.9\)</span></p></td>
+<td><span class="math inline">\(s = 339.9\)</span></td>
+<td><span class="math inline">\(s = 359.9\)</span></td>
 </tr>
 <tr class="odd">
-<td><p><span class="math inline">\(n = 76\)</span></p></td>
-<td><p><span class="math inline">\(n = 85\)</span></p></td>
+<td><span class="math inline">\(n = 76\)</span></td>
+<td><span class="math inline">\(n = 85\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -1104,7 +1111,7 @@ Answer the following questions:
 </ol>
 <a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q16" style="display:none;">
-<p><img src="Images/COPD-Histogram-Excel.png"></p>
+<p><img src="Images/COPD-Boxplot-Excel.png"> <br> <br> This boxplot was made by highlighting both columns of data and then following the normal steps for creating a boxplot in Excel. Adding a legend makes the graph easier to understand.</p>
 </div>
 <p><br></p>
 <ol start="17" style="list-style-type: decimal">
@@ -1113,7 +1120,7 @@ Answer the following questions:
 <a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q17" style="display:none;">
 <ul>
-<li>The two histograms look similar, although based on the graphs it looks like the mean of the Hospital Group may be slightly higher than the community group. This is just a visual observation. We need to conduct a hypothesis test or create a confidence interval to verify it.</li>
+<li>The two boxplots look similar, although based on the graphs it looks like the mean of the Hospital Group may be slightly higher than the Community Group. This is just a visual observation. We need to conduct a hypothesis test or create a confidence interval to verify it.</li>
 </ul>
 </div>
 <p> </p>
@@ -1141,7 +1148,8 @@ Answer the following questions:
 <div id="Q19" style="display:none;">
 <ul>
 <li><p>Remember, we will never assume equal variances in this course.</p></li>
-<li><p>Two different confidence intervals are possible, depending on how you defined the groups. The order in which we subtract the means determines the sign of the results.</p></li>
+<li><p>Two different confidence intervals are possible, depending on how you defined the groups. The order in which we subtract the means determines the sign of the results.</p>
+<ul>
 <li>If we subtract <strong>Community</strong> - <strong>Hospital</strong>, we get:
 <center>
 <span class="math inline">\((-176.2,~41.7)\)</span>
@@ -1150,6 +1158,7 @@ Answer the following questions:
 <center>
 <span class="math inline">\((-41.7,~176.2)\)</span>
 </center></li>
+</ul></li>
 <li>If the problem does not specify the order in which we should subtract, either of these is acceptable.</li>
 </ul>
 </div>
@@ -1242,11 +1251,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
