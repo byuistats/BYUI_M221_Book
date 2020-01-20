@@ -233,7 +233,7 @@ Fortunately, the "Paired Data t-test" tab in the [Math 221 Statistics Toolbox](.
 * Notice in column C the differences are automatically calculated. 
 * A excerpt of how the data looks in the Math221 Statistics Toolbox is shown below:
 
-<img src="./Images/Mahon-Differences_Excel_Toolbox.png">
+<img src="./Images/Mahon-Differences_Excel_Toolbox.PNG">
 </div>
 <br>
 
@@ -315,7 +315,7 @@ The women's weights were recorded at the beginning of the study.  The women were
 
 Here is the Excel output:
 
-<img src="./Images/Mahon_Paired_t-test_Excel_Toolbox.png">
+<img src="./Images/Mahon_Paired_t-test_Excel_Toolbox.PNG">
 
 From the Excel output illustrated above, we can see a histogram of the data and get the following numerical summaries:
 
@@ -346,9 +346,7 @@ The subjects were recruited via advertisements for a research study.  The partic
 
 From a practical perspective, it is impossible to get a simple random sample of people in the general population.  When research trials are conducted, people must volunteer to participate.  This can lead to a selection bias, but it is usually negligible.
 
-The requirement of normality is satisfied for Mahon's data.  The differences appear to follow a normal distribution, so $\bar d$ will be approximately normal.  
-
-The sample size (n=27) is fairly large.  The histogram shows a mound shape. By scrolling to the right in the Excel sheet you can see a Q-Q plot of the differences:
+The requirement of normality is satisfied for Mahon's data. Though the sample size (n=27) is not quite up to 30, it is still fairly large. Furthermore, the histogram of differences appear to follow a normal distribution, so $\bar d$ will be approximately normal.  
 
 <center>
 <img src="./Images/Mahon-Differences-QQ_Excel_Toolbox.png">

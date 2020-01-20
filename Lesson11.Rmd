@@ -225,7 +225,7 @@ The Excel file needed for this analysis is [Math 221 Statistics Toolbox](./Data/
 
 The image below shows the Excel file after these changes have been made.
 
-<center><img src="./Images/BodyTemp-tTest-Excel_Toolbox.png"></center>
+<center><img src="./Images/BodyTemp-tTest-Excel_Toolbox.PNG"></center>
 
 Consider each of the following alternative hypotheses that could be used in a test for a single mean where the null hypothesis is $H_0: \mu = 98.6$.
 
@@ -490,24 +490,34 @@ The histogram is included in the image above.
 
 <img src="./Images/Step4.png">
 
-**Verify the requirements have been met**
+**Make Inference**
 
-The requirements for creating a confidence interval for a mean with $\sigma$ unknown are the same as the requirements for this procedure when $\sigma$ is known:
+#### Find the confidence interval
 
-#### Requirements
+We will use Excel to find the confidence intervals for the mean.  
 
-There are two requirements that need to be checked when computing a confidence interval for a mean with $\sigma$ unknown:
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
 
-1. A simple random sample was drawn from the population
-2. $\bar x$ is normally distributed
+Do the following:
 
-Recall the requirement of normality is satisfied if the data are approximately normally distributed or if the sample size is large.
+- Open the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx)
+- Click on the tab labeled "One-sample t-test"
+- Enter the data, and
+- Set the confidence level.  
 
-The data are bell-shaped and fairly symmetric.  So, the sample mean, $\bar x$, is approximately normally distributed.  
+In this case, we are using a 95% confidence level.  So, you set the confidence level in the Excel file to 0.95 (i.e., 95%).  The confidence interval is given to you in cells N14 and O14.
+<br>
+</div>
+<br>
 
-**Find the confidence interval**
+The 95% confidence interval for the true mean BLEU score is:
+
+$$(0.282, 0.293)$$
 
 <a href="javascript:showhide('hc')"><span style="font-size:8pt;">Show Hand Calculations</span></a>
+<br>
+
 <div id="hc" style="display:none;">
 The formula for the confidence interval where $\sigma$ is known was given in the reading titled 
 [Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)](Lesson10.html) as
@@ -540,27 +550,21 @@ $$
 \left( 0.2824, ~ 0.2928 \right)
 $$ 
 </div>
-
-<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-<div class="SoftwareHeading">Excel Instructions</div>
-<div class="Summary">
-We will use Excel to find the confidence intervals for the mean.  
-
-Do the following:
-
-- Open the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx)
-- Click on the tab labeled "One-sample t-test"
-- Enter the data, and
-- Set the confidence level.  
-
-In this case, we are using a 95% confidence level.  So, you set the confidence level in the Excel file to 0.95 (i.e., 95%).  The confidence interval is given to you in cells N14 and O14.
-<br>
-</div>
 <br>
 
-The 95% confidence interval for the true mean BLEU score is:
+#### Verify Requirements Are Met
 
-$$(0.282, 0.293)$$
+The requirements for creating a confidence interval for a mean with $\sigma$ unknown are the same as the requirements for this procedure when $\sigma$ is known:
+
+There are two requirements that need to be checked:
+
+1. A simple random sample was drawn from the population
+2. $\bar x$ is normally distributed
+
+Recall the requirement of normality is satisfied if the data are approximately normally distributed or if the sample size is large.
+
+The data are bell-shaped and fairly symmetric.  So, the sample mean, $\bar x$, is approximately normally distributed.  
+
 
 
 <img src="./Images/Step5.png">

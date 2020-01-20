@@ -607,13 +607,18 @@ Excel Instructions
 </center>
 <p>Consider each of the following alternative hypotheses that could be used in a test for a single mean where the null hypothesis is <span class="math inline">\(H_0: \mu = 98.6\)</span>.</p>
 <ul>
-<li><span class="math inline">\(H_a: \mu \ne 98.6\)</span></li>
+<li><span class="math inline">\(H_a: \mu \ne 98.6\)</span>
+<ul>
 <li>Choose “Not Equal To” in the drop-down menu in cell N6.</li>
-<li><span class="math inline">\(H_a: \mu &lt; 98.6\)</span></li>
+</ul></li>
+<li><span class="math inline">\(H_a: \mu &lt; 98.6\)</span>
+<ul>
 <li>Choose “Less Than” in the drop-down menu in cell N6.</li>
-<li><span class="math inline">\(H_a: \mu &gt; 98.6\)</span><br />
-</li>
+</ul></li>
+<li><span class="math inline">\(H_a: \mu &gt; 98.6\)</span>
+<ul>
 <li>Choose “Greater Than” in the drop-down menu in cell N6.</li>
+</ul></li>
 </ul>
 <p>You will have opportunities to practice using each of these. <br></p>
 </div>
@@ -670,7 +675,7 @@ Answer the following questions:
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
 <p>When the data are entered into the file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>, the following output is generated:</p>
-<p><img src="Images/BabyBoom-Ttest-Excel_Toolbox.PNG"> <br></p>
+<p><img src="Images/BabyBoom-Ttest-Excel_Toolbox.png"> <br></p>
 <ul>
 <li>The relevant summary statistics are:
 <center></li>
@@ -789,19 +794,27 @@ n =&amp; 100
 <p><strong>Make an appropriate graph to illustrate the data</strong></p>
 <p>The histogram is included in the image above.</p>
 <p><img src="Images/Step4.png"></p>
-<p><strong>Verify the requirements have been met</strong></p>
-<p>The requirements for creating a confidence interval for a mean with <span class="math inline">\(\sigma\)</span> unknown are the same as the requirements for this procedure when <span class="math inline">\(\sigma\)</span> is known:</p>
-<div id="requirements" class="section level4">
-<h4>Requirements</h4>
-<p>There are two requirements that need to be checked when computing a confidence interval for a mean with <span class="math inline">\(\sigma\)</span> unknown:</p>
-<ol style="list-style-type: decimal">
-<li>A simple random sample was drawn from the population</li>
-<li><span class="math inline">\(\bar x\)</span> is normally distributed</li>
-</ol>
-<p>Recall the requirement of normality is satisfied if the data are approximately normally distributed or if the sample size is large.</p>
-<p>The data are bell-shaped and fairly symmetric. So, the sample mean, <span class="math inline">\(\bar x\)</span>, is approximately normally distributed.</p>
-<p><strong>Find the confidence interval</strong></p>
-<a href="javascript:showhide('hc')"><span style="font-size:8pt;">Show Hand Calculations</span></a>
+<p><strong>Make Inference</strong></p>
+<div id="find-the-confidence-interval" class="section level4">
+<h4>Find the confidence interval</h4>
+<p>We will use Excel to find the confidence intervals for the mean.</p>
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p>Do the following:</p>
+<ul>
+<li>Open the file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a></li>
+<li>Click on the tab labeled “One-sample t-test”</li>
+<li>Enter the data, and</li>
+<li>Set the confidence level.</li>
+</ul>
+<p>In this case, we are using a 95% confidence level. So, you set the confidence level in the Excel file to 0.95 (i.e., 95%). The confidence interval is given to you in cells N14 and O14. <br></p>
+</div>
+<p><br></p>
+<p>The 95% confidence interval for the true mean BLEU score is:</p>
+<p><span class="math display">\[(0.282, 0.293)\]</span></p>
+<p><a href="javascript:showhide('hc')"><span style="font-size:8pt;">Show Hand Calculations</span></a> <br></p>
 <div id="hc" style="display:none;">
 <p>The formula for the confidence interval where <span class="math inline">\(\sigma\)</span> is known was given in the reading titled <a href="Lesson10.html">Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)</a> as <span class="math display">\[
 \left( \bar x - z^* \frac{\sigma}{\sqrt{n}}, ~ \bar x + z^* \frac{\sigma}{\sqrt{n}} \right)
@@ -822,24 +835,18 @@ n =&amp; 100
 \left( 0.2824, ~ 0.2928 \right)
 \]</span></p>
 </div>
-<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-<div class="SoftwareHeading">
-Excel Instructions
-</div>
-<div class="Summary">
-<p>We will use Excel to find the confidence intervals for the mean.</p>
-<p>Do the following:</p>
-<ul>
-<li>Open the file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a></li>
-<li>Click on the tab labeled “One-sample t-test”</li>
-<li>Enter the data, and</li>
-<li>Set the confidence level.</li>
-</ul>
-<p>In this case, we are using a 95% confidence level. So, you set the confidence level in the Excel file to 0.95 (i.e., 95%). The confidence interval is given to you in cells N14 and O14. <br></p>
-</div>
 <p><br></p>
-<p>The 95% confidence interval for the true mean BLEU score is:</p>
-<p><span class="math display">\[(0.282, 0.293)\]</span></p>
+</div>
+<div id="verify-requirements-are-met" class="section level4">
+<h4>Verify Requirements Are Met</h4>
+<p>The requirements for creating a confidence interval for a mean with <span class="math inline">\(\sigma\)</span> unknown are the same as the requirements for this procedure when <span class="math inline">\(\sigma\)</span> is known:</p>
+<p>There are two requirements that need to be checked:</p>
+<ol style="list-style-type: decimal">
+<li>A simple random sample was drawn from the population</li>
+<li><span class="math inline">\(\bar x\)</span> is normally distributed</li>
+</ol>
+<p>Recall the requirement of normality is satisfied if the data are approximately normally distributed or if the sample size is large.</p>
+<p>The data are bell-shaped and fairly symmetric. So, the sample mean, <span class="math inline">\(\bar x\)</span>, is approximately normally distributed.</p>
 <p><img src="Images/Step5.png"></p>
 <p><strong>Present your observations in an English sentence, relating the result to the context of the problem</strong></p>
 <p>We are 95% confident that the true mean BLEU score for all translations by the Pharaoh program is between 0.2824 and 0.2928.</p>
@@ -903,7 +910,7 @@ Answer the following questions:
 <div id="Q8" style="display:none;">
 <p>The following output was generated using the Excel file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>:</p>
 <center>
-<img src="Images/EuroWeights-Histogram.PNG">
+<img src="Images/EuroWeights-Histogram.png">
 </center>
 <ul>
 <li>Typically, we round our computations to one more decimal place of precision than was given in the original data. This means we need one more decimal place than is shown in the output above. We can increase the precision by selecting the cell we want to modify and then clicking on the following button in the “Home” menu ribbon in Excel:</li>
@@ -1001,11 +1008,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
