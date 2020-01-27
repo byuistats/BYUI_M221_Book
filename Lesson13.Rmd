@@ -188,7 +188,7 @@ There are two populations, and it is important to illustrate both of them separa
 
 Use the "Two-sample t Test" tab of the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) to create separate histograms, one for each group.  
 
-<img src="./Images/ReadingPractices-two-Histograms-Excel.png">
+<img src="./Images/ReadingPractices-Boxplots-Excel.png">
 
 
 <span class=Custom>Click the link at right for a helpful tip.</span>
@@ -220,7 +220,9 @@ There are two requirements that need to be checked when conducting a hypothesis 
 -  A simple random sample was drawn from each of the populations
 -  $\bar x$ is normally distributed for each group
 
-Remember, the second requirement will be satisfied if the original populations are normally distributed or if the sample sizes are large.
+Remember, the second requirement will be satisfied if the original populations are normally distributed or if the sample sizes are large. In this example, both groups have a large sample size, so the second requirement is met.
+
+We will assume the data from the study is a representative sample from each of the populations.
 
 **Give the test statistic and its value**
 
@@ -615,7 +617,7 @@ Using Excel, we compute the following:
 
 <img src="./Images/ReadingPractices-Boxplots-Excel.png">
 
-Remember, to make side-by-side boxplots the group label must be in the left column and the data values in the right column. The data for this example is already arranged this way. So, to create the side-by-side boxplots just highlight both columns and then follow the steps for creating a single boxplot: click the Insert ribbon, then click the Histogram icon and choose the image of side-by-side boxplots under the "Box and Whisker" heading.
+
 
 <img src="./Images/Step4.png">
 
@@ -722,10 +724,9 @@ Because hospital-based rehabilitation tends to be more expensive, the researcher
 
 <a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q16" style="display:none;">
-<img src="./Images/COPD-Boxplot-Excel.png">
+<img src="./Images/COPD-Boxplot-Excel.PNG">
 <br>
 <br>
-This boxplot was made by highlighting both columns of data and then following the normal steps for creating a boxplot in Excel. Adding a legend makes the graph easier to understand.
 </div>
 <br>
 
