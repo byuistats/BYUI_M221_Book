@@ -929,7 +929,7 @@ n &amp;= 27
 <p>From a practical perspective, it is impossible to get a simple random sample of people in the general population. When research trials are conducted, people must volunteer to participate. This can lead to a selection bias, but it is usually negligible.</p>
 <p>The requirement of normality is satisfied for Mahon’s data. Though the sample size (n=27) is not quite up to 30, it is still fairly large. Furthermore, the histogram of differences indicates very little skew, so <span class="math inline">\(\bar d\)</span> will be approximately normal.</p>
 <center>
-<img src="Images/Mahon-Differences-QQ_Excel_Toolbox.png">
+<img src="Images/Mahon-Differences-Histogram.PNG">
 </center>
 <p>Even with a small sample size, we can still conduct this test.</p>
 <p><strong>Give the test statistic and its value</strong></p>
@@ -1224,9 +1224,6 @@ s_d &amp;= 160~\text{kJ}
 <p><img src="Images/Step4.png"></p>
 <p><strong>Verify the requirements have been met</strong></p>
 <p>We can consider the sample representative of the population. Because our sample size (n=40) of differences is greater than 30, we can be sure the sampling distribution of <span class="math inline">\(\bar d\)</span> will be normal.</p>
-<center>
-<img src="Images/REE-QQ-Excel_Toolbox.png">
-</center>
 <p>The requirements for this test appear to have been satisfied.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
@@ -1927,7 +1924,7 @@ Answer the following questions:
 <p><br></p>
 <p><strong>Make an appropriate graph to illustrate the data</strong></p>
 <ol start="45" style="list-style-type: decimal">
-<li>Create a histogram of the differences in the hours of sleep.</li>
+<li>Create a graph of the differences in the hours of sleep.</li>
 </ol>
 <a href="javascript:showhide('Q45')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q45" style="display:none;">
@@ -1954,7 +1951,7 @@ Answer the following questions:
 <li>We assume the subjects represent a random sample from the population.</li>
 </ol></li>
 <li><ol start="2" style="list-style-type: lower-alpha">
-<li>We assume the data are normally distributed even though the sample size is small. With only 10 values, it is hard to see a shape in a histogram of the data, regardless of the number of bins chosen. However, it is clear that the data is not strongly skewed. We will move forward, assuming the requirement of a normal sampling distribution of <span class="math inline">\(\bar d\)</span> is met.</li>
+<li>Remember, just like the hypothesis test, this confidence interval for a mean of differences is robust. That means it is not very sensitive to the requirements. If they are violated, this interval estimate will probably still give reasonably good results. Because the sample size is small, with only 10 values, it is hard to see a shape in a histogram of the data, regardless of the number of bins chosen. However, it is clear that the data is not strongly skewed. We will move forward, assuming the requirement of a normal sampling distribution of <span class="math inline">\(\bar d\)</span> is not violated.</li>
 </ol></li>
 </ul>
 </div>

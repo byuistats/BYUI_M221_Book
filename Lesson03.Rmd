@@ -195,24 +195,24 @@ You can watch this short video of how to [create a histogram in Excel](https://s
 #### Step 1 
 Start by typing the data into a column of cells in Excel: each data point into its own cell, as shown below. Then highlight the data.
 
-<img src="./Images/create_histogram_step2resized.png" width=90%>  
+<img src="./Images/create_histogram_step2resized.PNG" width=90%>  
 
 #### Step 2 
 Go to the Insert ribbon in Excel and select the histogram icon from the "Charts" section of the ribbon. Then select the first option of histograms presented.
 
-<img src="./Images/create_histogram_step3.png" width=90%>  
+<img src="./Images/create_histogram_step3.PNG" width=90%>  
 
 You will notice that the histogram does not look much like the histogram above yet. The number and size of bins in a histogram can drastically change the apparent shape of the distribution. It is worth experimenting with a different number of bins so the true shape of the distribution of data is revealed. To change the number of bins go on to the next steps.
 
 #### Step 3  
 Be sure the graph is selected, so that you can select the "Format" ribbon. In the upper left corner of the ribbon, select "Horizontal Category Axis" in the drop down box. Then click on "Format Selection"
 
-<img src="./Images/create_histogram_step4.png" width=90%> 
+<img src="./Images/create_histogram_step4.PNG" width=90%> 
 
 #### Step 4  
 A menu of options will open on the right side of the screen. You can adjust the bid width or number of bins. In this case, though we can't make it match, in order to make the histogram look as much as possible like the one shown above, we will choose a bin width of 5000.
 
-<img src="./Images/create_histogram_step5.png" width=90%> 
+<img src="./Images/create_histogram_step5.PNG" width=90%> 
 
 Excel shows the starting and ending values for each bin. For example, the first bin goes from 600 up to 5,600. We see there are two data points contained in that bin, represented by the bin's bar height. The next bin contains only one of our data points, it includes any value greater than 5,600 up through, and including, 10,600. And so on.
 
@@ -431,7 +431,7 @@ e. A, B, and C can all occur.
 * highlight the data, 
 * close the parenthesis with "**)**" before hitting enter:  
 
-<div style="padding-left:35px;"><img src="./Images/Lesson_03_mean.png" width=50%></div>
+<div style="padding-left:35px;"><img src="./Images/Lesson_03_mean.PNG" width=50%></div>
 
 <br>
 
@@ -563,7 +563,7 @@ At this point, you probably do not have much intuition regarding the standard de
 * Highlight the data (the cell range reference will be added to your formula)
 * Close the parenthesis with "**)**" and hit enter
 
-<div style="padding-left:35px;"><img src="./Images/Lesson_03_stdev.png"></div>
+<div style="padding-left:35px;"><img src="./Images/Lesson_03_stdev.PNG"></div>
 
 <br>
 </div>
@@ -1251,7 +1251,7 @@ Enter the patient temperature data for the severe cases of bird flu into Excel. 
 <a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q16" style="display:none;">
 
-<div style="padding-left:35px;"><img src="./Images/Lesson_03_summary_stats_severe_bird_flu.png"></div>
+<div style="padding-left:35px;"><img src="./Images/Lesson_03_summary_stats_severe_bird_flu.PNG"></div>
 
 </div>
 <br>

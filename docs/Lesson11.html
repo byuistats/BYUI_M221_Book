@@ -477,7 +477,7 @@ $(document).ready(function () {
 <p>In practice, we almost never know the population standard deviation, <span class="math inline">\(\sigma\)</span>. So, it is generally not appropriate to use the formula <span class="math display">\[
 z = \frac{ \bar x - \mu }{ \sigma / \sqrt{n} }
 \]</span> In 1908, William Sealy Gosset published a solution to this problem <!--<cite>Gosset08</cite>-->. He found a way to appropriately compute the confidence interval for the mean when <span class="math inline">\(\sigma\)</span> is not known. The basic idea is to use the sample standard deviation, <span class="math inline">\(s\)</span> in the place of the true population standard deviation, <span class="math inline">\(\sigma\)</span>. If <span class="math inline">\(\sigma\)</span> is not known, we cannot base the calculations on the standard normal distribution, and we cannot use the formula above to conduct hypothesis tests.</p>
-<p>In a remarkable piece of work, Gosset found the appropriate distribution to use when <span class="math inline">\(\sigma\)</span> is unknown. At the time of this discovery, Gosset worked for the Guinness brewery. To avoid problems with industrial espionage, Guinness prohibited employees from publishing any research results. Knowing his work provided a significant contribution to Statistics, Gosset convinced his employer to allow him to publish under a pseudonym. He chose the pseudonym “Student”. Gosset’s test statistic was denoted by the letter <span class="math inline">\(t\)</span>, this distribution has come to be known as <strong>Student’s t-distribution</strong>.</p>
+<p>In a remarkable piece of work, Gosset found the appropriate distribution to use when <span class="math inline">\(\sigma\)</span> is unknown. At the time of this discovery, Gosset worked for the Guinness brewery. To avoid problems with industrial espionage, Guinness prohibited employees from publishing any research results. Knowing his work provided a significant contribution to Statistics, Gosset convinced his employer to allow him to publish under a fictitious name. He chose the pseudonym “Student”. Gosset’s test statistic was denoted by the letter <span class="math inline">\(t\)</span>, this distribution has come to be known as <strong>Student’s t-distribution</strong>.</p>
 <p><span class="math display">\[
 t = \frac{ \bar x - \mu }{ s / \sqrt{n} }
 \]</span></p>
@@ -908,21 +908,8 @@ Answer the following questions:
 </ol>
 <a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q8" style="display:none;">
-<p>The following output was generated using the Excel file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>:</p>
+Use Excel to calculate the following summary statistics:
 <center>
-<img src="Images/EuroWeights-Histogram.png">
-</center>
-<ul>
-<li>Typically, we round our computations to one more decimal place of precision than was given in the original data. This means we need one more decimal place than is shown in the output above. We can increase the precision by selecting the cell we want to modify and then clicking on the following button in the “Home” menu ribbon in Excel:</li>
-</ul>
-<center>
-<img src="Images/Excel-IncreaseDecimals.png">
-</center>
-<p><br></p>
-<ul>
-<li>When we do this, we get the following summary statistics:
-<center></li>
-</ul>
 <span class="math display">\[
 \begin{align}
 \bar x =&amp; 7.521 \\ 
@@ -938,9 +925,9 @@ n =&amp; 2000
 </ol>
 <a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q9" style="display:none;">
-<center>
-The graph is included in the image above.
-</center>
+<p><strong>CAUTION:</strong> The Excel Toolbox only works for datasets of 1,000 observations or less. This dataset contains 2,000 observations. If you create your own histogram and boxplot of the data, the graphs should look something like the image below</p>
+<p><img src="Images/Lesson_11_euro_weights.PNG"></p>
+<p>You can see the data is relatively normal, with just a couple of potential outliers that could be investigated further.</p>
 </div>
 <p> </p>
 </div>

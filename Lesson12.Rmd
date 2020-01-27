@@ -350,7 +350,7 @@ From a practical perspective, it is impossible to get a simple random sample of 
 The requirement of normality is satisfied for Mahon's data. Though the sample size (n=27) is not quite up to 30, it is still fairly large. Furthermore, the histogram of differences indicates very little skew, so $\bar d$ will be approximately normal.  
 
 <center>
-<img src="./Images/Mahon-Differences-QQ_Excel_Toolbox.png">
+<img src="./Images/Mahon-Differences-Histogram.PNG">
 </center>
 
 Even with a small sample size, we can still conduct this test.
@@ -687,10 +687,6 @@ $$
 **Verify the requirements have been met**
 
 We can consider the sample representative of the population.  Because our sample size (n=40) of differences is greater than 30, we can be sure the sampling distribution of $\bar d$ will be normal.
-
-<center>
-<img src="./Images/REE-QQ-Excel_Toolbox.png">
-</center>
 
 The requirements for this test appear to have been satisfied.
 
@@ -1286,7 +1282,7 @@ Sample Size:           $n = 10$
 
 **Make an appropriate graph to illustrate the data**
 
-45. Create a histogram of the differences in the hours of sleep.
+45. Create a graph of the differences in the hours of sleep.
 
 <a href="javascript:showhide('Q45')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q45" style="display:none;">
@@ -1310,7 +1306,7 @@ Here is a boxplot of the data:
 <div id="Q46" style="display:none;">
 * a. We assume the subjects represent a random sample from the population.
 
-* b. We assume the data are normally distributed even though the sample size is small. With only 10 values, it is hard to see a shape in a histogram of the data, regardless of the number of bins chosen. However, it is clear that the data is not strongly skewed. We will move forward, assuming the requirement of a normal sampling distribution of $\bar d$ is met.
+* b. Remember, just like the hypothesis test, this confidence interval for a mean of differences is robust. That means it is not very sensitive to the requirements. If they are violated, this interval estimate will probably still give reasonably good results. Because the sample size is small, with only 10 values, it is hard to see a shape in a histogram of the data, regardless of the number of bins chosen. However, it is clear that the data is not strongly skewed. We will move forward, assuming the requirement of a normal sampling distribution of $\bar d$ is not violated.
 
 
 </div>
