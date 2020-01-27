@@ -1119,17 +1119,16 @@ $$ \alpha = 0.05 $$
 
 <img src="./Images/Step3.png">
 
-4. Give the relevant summary statistics
-
-* The mean age of the subjects was $\bar{x} = 35.32$. There were $n = 25$ people included in the sample. 
-
-
 5. Make an appropriate graph to illustrate the data
 
-* A histogram showed that the mean age of the online customers may be less than $42$ years. 
+* A boxplot shows the mean age of the online customers (represented by the x on the graph) and the median both appear to be between 30 and 40, less than $42$ years. 
 
 <img src="./Images/NYtimes-BoxplotExcel.png" width=80%>
 
+
+4. Give the relevant summary statistics
+
+* The mean age of the sampled subjects was $\bar{x} = 35.32$. There were $n = 25$ people included in the sample. 
 
 <img src="./Images/Step4.png">
 
