@@ -574,72 +574,59 @@ This is our standard for determining if the null hypothesis should be rejected. 
 
 ### Type I and Type II Errors
 
-If the null hypothesis is true, for example, if the true body temperature of healthy adults is really 98.6&deg; F, sometimes we will get a very large or very small value of $\bar{x}$.  This will lead to a very extreme $z$-score, strictly due to chance.  In this case, we would reject the null hypothesis, even though it is true!
+If the null hypothesis is true, for example, if the true body temperature of healthy adults really is 98.6&deg; F, sometimes we will get a very large or very small value of $\bar{x}$.  This will lead to a very extreme $z$-score, strictly due to chance.  In this case, we would reject the null hypothesis, even though it is true!
 
 Whenever we reject a true null hypothesis, we say that a **Type I error** was committed.  Assuming the null hypothesis is true, the level of significance ($\alpha$) is the probability of getting a value of the test statistic that is extreme enough that the null hypothesis will be rejected.  In other words, the level of significance ($\alpha$) is the probability of committing a Type I error.
 
 We choose $\alpha$ to be some small number so that the probability of committing a Type I error is low.  The most common value for $\alpha$ is $\alpha=0.05$.  This is equal to $\frac{1}{20}$.  So, when the null hypothesis is true, there is a one-in-twenty chance that it will be rejected at the 0.05 level of significance.  Other common choices for $\alpha$ include $\alpha = 0.1$ and $\alpha=0.01$.
 
-If committing a Type I error is undesirable, why can't we let $\alpha=0$?  This would make it impossible to commit a Type I error.  Actually, this would also make it impossible to reject "any" null hypothesis!  If $\alpha=0$, no matter what test we do, not matter what the data show, we always fail to reject the null hypothesis.  This would be pointless.
+If committing a Type I error is undesirable, why can't we let $\alpha=0$?  This would make it impossible to commit a Type I error.  Actually, this would also make it impossible to reject "any" null hypothesis!  If $\alpha=0$, no matter what test we do, no matter what the data show, we always fail to reject the null hypothesis.  This would be pointless.
 
 
-A Type I error is committed when we reject a true null hypothesis.  Another problem that can arise is to fail to reject a false null hypothesis.
+A Type I error is committed when we reject a true null hypothesis.  Another problem that can arise is to fail to reject a false null hypothesis. This is called a Type II error. The probability of a Type II error is represented by $\beta$.
 
-<center>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th><p>Truth</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>Decision</p></td>
-<td><p>$H_0$ is true</p></td>
-</tr>
-<tr class="even">
-<td><p>Fail to<br />
-reject $H_0$</p></td>
-<td><p>Correct<br />
-Decision</p></td>
-</tr>
-<tr class="odd">
-<td><p>Reject $H_0$</p></td>
-<td><p>Type I<br />
-Error</p></td>
-</tr>
-</tbody>
-</table>
-</center>
 
-<!--
-<center>
-{| class="wikitable"
-! 
-! colspan="2" | Truth
-|-
-! Decision
-! $H_0$ is true
-! $H_0$ is false
-|- align="center"
-! Fail to <br> reject $H_0$
-| Correct <br> Decision
-| Type II <br> Error
-|- align="center"
-! Reject $H_0$
-| Type I <br> Error
-| Correct <br> Decision
-|}
-</center>
--->
+<center><img src="./Images/truth_table.PNG"></center>
+<!-- <center> -->
+<!-- <table border="1"> -->
+<!-- <thead> -->
+<!-- <tr class="header"> -->
+<!-- <th>Decision</th> -->
+<!-- <th colspan="2"><p>    Truth</p></th> -->
+<!-- </tr> -->
+<!-- </thead> -->
+<!-- <tbody> -->
+<!-- <tr class="odd"> -->
+<!-- <td><p></p></td> -->
+<!-- <td><p>$H_0$ is true</p></td> -->
+<!-- <td><p>$H_0$ is false</p></td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td><p>Fail to<br /> -->
+<!-- reject $H_0$</p></td> -->
+<!-- <td><p>Correct<br /> -->
+<!-- Decision</p></td> -->
+<!-- <td><p>Type II <br /> -->
+<!-- Error</p></td> -->
+<!-- </tr> -->
+<!-- <tr class="odd"> -->
+<!-- <td><p>Reject $H_0$</p></td> -->
+<!-- <td><p>Type I<br /> -->
+<!-- Error</p></td> -->
+<!-- <td><p>Correct<br /> -->
+<!-- Decision</p></td> -->
+<!-- </tr> -->
+<!-- </tbody> -->
+<!-- </table> -->
+<!-- </center> -->
+
 
 We do not want to commit Type I errors, so why not choose a very small value for $\alpha$?  If we choose $\alpha$ to be so small that we rarely commit a Type I error, what would happen to the probability of committing a Type II error?  (Think about it.)
 
 If the $\alpha$ value (the probability of committing a Type I error) is very small, the probability of committing a Type II error will be large.  Conversely, if $\alpha$ is allowed to be very large, then the probability of committing a Type II error will be very small.
 A level of significance of $\alpha=0.05$ seems to strike a good balance between the probabilities of committing a Type I versus a Type II error.  However, there may be instances where it will be important to choose a different value for $\alpha$.  The important thing is to choose $\alpha$ before you collect your data. Typical choices of $\alpha$ are $0.05$ (most common), $0.1$, and $0.01$.
 
-Read each of the following scenarios, and answer the questions.
+#### Read each of the following scenarios, and answer the questions.
 
 **Scenario 1**:
 The BYU-Idaho Honor Code specifically prohibits wearing flip-flops on campus.  
