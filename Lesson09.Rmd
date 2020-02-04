@@ -1280,7 +1280,7 @@ $$
 \end{array}
 $$
 
-We started with an requirement that $1=2$ is a true statement.  We applied valid algebraic operations at each step.  In the end, we found that $1=1$, which is certainly no contradiction.  Logically, have we shown that $1=2$?
+We started with a requirement that $1=2$ is a true statement.  We applied valid algebraic operations at each step.  In the end, we found that $1=1$, which is certainly no contradiction.  Logically, have we shown that $1=2$?
 
 <div class="QuestionsHeading">Answer the following question:</div>
 <div class="Questions">
@@ -1289,7 +1289,7 @@ We started with an requirement that $1=2$ is a true statement.  We applied valid
 <a href="javascript:showhide('Q33')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q33" style="display:none;">
 * The problem here is that we assumed that $1=2$, and then we attempted to use that requirement to prove itself.  We cannot use a requirement as evidence of itself.
-* However, if we start with an requirement and then find a contradiction, then we know that our original requirement is not true. Since this did not happen, we say that we did not get enough evidence against the requirement that $1=2$.
+* However, if we start with a requirement and then find a contradiction, then we know that our original requirement is not true. Since this did not happen, we say that we did not get enough evidence against the requirement that $1=2$.
 </div>
 &nbsp;
 </div>
