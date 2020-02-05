@@ -764,7 +764,7 @@ $$
 \begin{array}{1cl}
 n &= \left( \frac{z^*\sigma}{m} \right)^2 \\
 &= \left( \frac{2.576 \cdot 28705}{2000} \right)^2 \\
-&= 1366.7
+&= 1366.9
 \end{array}
 $$
 </center>
