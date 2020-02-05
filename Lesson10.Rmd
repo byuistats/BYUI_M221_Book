@@ -46,7 +46,7 @@ During an election in the United States, many polls are conducted to determine t
 
 Polls always include a **margin of error**.  The margin of error gives an estimate of the variability in the responses.  A common value for the margin of error in political polls is 3%.
 
-When we consider the margin of error, we estimate that the true proportion of people who favor the Republican candidate is 49% &plusmn; 3%, or in other words between 46% and 52%.  It is not obvious wether the Republican candidate is favored by more or less than 50% of the voters. In this case, the political race is too close to know who might win.
+When we consider the margin of error, we estimate that the true proportion of people who favor the Republican candidate is 49% &plusmn; 3%, or in other words between 46% and 52%.  It is not obvious whether the Republican candidate is favored by more or less than 50% of the voters. In this case, the political race is too close to know who might win.
 
 In this reading, we will explore the margin of error and its role in estimating a parameter.
 
