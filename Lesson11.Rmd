@@ -225,7 +225,7 @@ The Excel file needed for this analysis is [Math 221 Statistics Toolbox](./Data/
 
 The image below shows the Excel file after these changes have been made.
 
-<center><img src="./Images/BodyTemp-tTest-Excel_Toolbox.png"></center>
+<center><img src="./Images/BodyTemp-tTest-Excel_Toolbox.PNG"></center>
 
 Consider each of the following alternative hypotheses that could be used in a test for a single mean where the null hypothesis is $H_0: \mu = 98.6$.
 
@@ -327,7 +327,7 @@ Using this data set, test the hypothesis that the mean weight of babies born in 
 When the data are entered into the file 
 [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx), the following output is generated:
 
-<img src="./Images/BabyBoom-Ttest-Excel_Toolbox.png">
+<img src="./Images/BabyBoom-Ttest-Excel_Toolbox.PNG">
 <br>
 
 * The relevant summary statistics are:
@@ -628,7 +628,7 @@ The coins were "borrowed" from a bank in Belgium, one batch at a time. The weigh
 The following output was generated using the Excel file 
 [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx):
 
-<center><img src="./Images/EuroWeights-Histogram.png"></center>
+<center><img src="./Images/EuroWeights-Histogram.PNG"></center>
 
 * Typically, we round our computations to one more decimal place of precision than was given in the original data.  This means we need one more decimal place than is shown in the output above.  We can increase the precision by selecting the cell we want to modify and then clicking on the following button in the "Home" menu ribbon in Excel:
 
