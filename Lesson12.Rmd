@@ -233,7 +233,7 @@ Fortunately, the "Paired Data t-test" tab in the [Math 221 Statistics Toolbox](.
 * Notice in column C the differences are automatically calculated. 
 * A excerpt of how the data looks in the Math221 Statistics Toolbox is shown below:
 
-<img src="./Images/Mahon-Differences_Excel_Toolbox.png">
+<img src="./Images/Mahon-Differences_Excel_Toolbox.PNG">
 </div>
 <br>
 
