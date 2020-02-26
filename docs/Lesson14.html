@@ -295,7 +295,10 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01.html">Lesson 1: Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+    </li>
+    <li>
+      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -555,7 +558,7 @@ What is the solution?  Conduct only one test: an analysis of variance (ANOVA).
 <p>There are two requirements of ANOVA that must be checked:</p>
 <ul>
 <li><p>The data are normally distributed in each group.</p>
-<p>We check this by creating a Q-Q plot for each group (separately). If the points in the Q-Q plot do not show distinct curvature, it is reasonable to conclude that the data are normally distributed.</p></li>
+<p>We can check this by creating a histogram for each group (separately). ANOVA is robust to violations of requirements. In other words, results from ANOVA tests are reasonably good even if there are mild to moderate violations of the requirements. As long as none of the group’s histograms provide strong evidence to the contrary, it is reasonable to conclude that the data are sufficiently normal to proceed with the analysis.</p></li>
 </ul>
 <!-- **[[Lesson 3: Describing_Quantitative_Data:_Shape,_Center_%26_Spread#Variance|variances]]** 
 I don't know how to reference specific header in other lesson-->
@@ -582,18 +585,18 @@ Excel Instructions
 </div>
 <div class="Summary">
 <p>To conduct a test for several means (ANOVA) in Excel, do the following:</p>
-<p>Open the file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> and do the following:</p>
+<p>Open the file <a href="https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> and do the following:</p>
 <ul>
 <li>Click on the tab labeled “ANOVA”</li>
 <li>Paste the data from each group into their own column
 <ul>
 <li>Paste the data from the first group in the appropriate part of Column A</li>
 <li>Paste the data for the second group in the designated part of Column B</li>
-<li>Continue copy and pasting each group in the appropriate columns</li>
+<li>Continue to copy and paste each group in the appropriate columns</li>
 </ul></li>
-<li>The test statistic, <span class="math inline">\(F\)</span>, is given in cell V7</li>
-<li>The degrees of freedom are presented in cells T7 and T8</li>
-<li>The <span class="math inline">\(P\)</span>-value is reported in cell W7</li>
+<li>The test statistic, <span class="math inline">\(F\)</span>, is given in cell T9</li>
+<li>The degrees of freedom are presented in cells R9 and R10</li>
+<li>The <span class="math inline">\(P\)</span>-value is reported in cell U9</li>
 </ul>
 <p>The following points will help you interpret the output.</p>
 <ul>
@@ -602,13 +605,11 @@ Excel Instructions
 </ul>
 <p>To check your requirements, do the following:</p>
 <ul>
-<li>To determine if the data are normally distributed, we will look at a Q-Q plot for each group separately.
+<li>To determine if the data are normally distributed, we will look at a histogram plot for each group separately.
 <ul>
-<li>While still on the ANOVA tab, scroll to the right so that columns Y through AI are visible. You should see a Q-Q plot. In a yellow highlighted drop-down box directly above the plot you can select the sample you would like to see a Q-Q plot for (see the picture below). Make sure that you evaluate each sample’s data. They all must look approximately normal to meet the requirement.</li>
-</ul></li>
+<li>While still on the ANOVA tab, scroll to the right. You should see a histogram. In a large, yellow highlighted box directly above the plot you can type the group number of the sample you would like to see a histogram for (see the picture below). Make sure that you evaluate each sample’s data. They <strong>all</strong> must look <em>approximately normal</em> to meet the requirement.</li>
 </ul>
-<p><img src="Images/ANOVA_QQplot.PNG"></p>
-<ul>
+<p><img src="Images/ANOVA_histogram.PNG"></p></li>
 <li>To determine if the population variances are equal, we will use a very simple check:
 <ul>
 <li>If the largest variance is at least four times as big as the smallest variance, we will conclude that the population variances are not equal. (Remember, the variance is the square of the standard deviation.)</li>
@@ -644,7 +645,7 @@ Excel Instructions
 <div class="Summary">
 <p>Follow these instructions to apply the ANOVA procedure using Excel:</p>
 <p>Data representative of the values reported by Emmons and McCullough are given in the file <a href="./Data/Gratitude.xlsx">Gratitude-Stacked.xlsx</a>. The data is divided up into three columns which represent Grateful, Hassels, and Events.</p>
-<p>The summary statistics can be obtained using the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>. Paste the three columns of data into the appropriate areas of column A, B, and C. The summary statistics will appear in the table to the right labeled “Numerical Summary of the Data”.</p>
+<p>The summary statistics can be obtained using the <a href="https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>. Paste the three columns of data into the appropriate areas of column A, B, and C. The summary statistics will appear in the table to the right labeled “Numerical Summary of the Data”.</p>
 <p><br></p>
 </div>
 <p><br></p>
@@ -666,22 +667,22 @@ Excel Instructions
 </thead>
 <tbody>
 <tr class="odd">
-<td><p><strong>Grateful</strong></p></td>
-<td><p>64</p></td>
-<td><p>5.050</p></td>
-<td><p>0.9443</p></td>
+<td><strong>Grateful</strong></td>
+<td>64</td>
+<td>5.050</td>
+<td>0.9443</td>
 </tr>
 <tr class="even">
-<td><p><strong>Hassles</strong></p></td>
-<td><p>63</p></td>
-<td><p>4.675</p></td>
-<td><p>0.8320</p></td>
+<td><strong>Hassles</strong></td>
+<td>63</td>
+<td>4.675</td>
+<td>0.8320</td>
 </tr>
 <tr class="odd">
-<td><p><strong>Events</strong></p></td>
-<td><p>65</p></td>
-<td><p>4.660</p></td>
-<td><p>0.8483</p></td>
+<td><strong>Events</strong></td>
+<td>65</td>
+<td>4.660</td>
+<td>0.8483</td>
 </tr>
 <tr class="even">
 <td></td>
@@ -710,12 +711,9 @@ Excel Instructions
 </ul>
 <p>Side-by-side box plots are an excellent way to display data from multiple samples.</p>
 <p><img src="Images/Gratitude-Boxplots.png"></p>
-<p>The Math221 Statistics Toolbox Excel file also produces a means plot graph just below the numerical summary. This plot is acceptable, but unfortunately, from this plot you don’t get an idea about the spread of the data like you do with a boxplot.</p>
-<p><img src="Images/ANOVA_MeanPlot.PNG"></p>
-<p><br></p>
 <p><img src="Images/Step4.png"></p>
 <p><strong>Verify the requirements have been met</strong></p>
-<p>The points in the Q-Q plots for each of the three groups (not shown) follow the line closely, suggesting that the data can be assumed to be normally distributed.</p>
+<p>The points in the histograms for each of the three groups (not shown) <strong>follow the line closely</strong>, suggesting that the data can be assumed to be normally distributed.</p>
 <p>The largest variance (0.8917 from the Grateful group) is not four times the smallest (0.6922 from the Hassles group), so we conclude that the variances are equal for the three groups.</p>
 <p>We conclude that the requirements are satisfied and it is appropriate to use ANOVA.</p>
 <p><strong>Give the test statistic and its value</strong></p>
@@ -987,11 +985,11 @@ H_a: &amp; ~ \textrm{At least one of the means differs}
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">

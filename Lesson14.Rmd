@@ -138,7 +138,7 @@ There are two requirements of ANOVA that must be checked:
 
 - The data are normally distributed in each group.
 
-    We check this by creating a Q-Q plot for each group (separately).  If the points in the Q-Q plot do not show distinct curvature, it is reasonable to conclude that the data are normally distributed.
+    We can check this by creating a histogram for each group (separately).  Unless one (or more) of the group's histograms provide strong evidence to the contrary, it is reasonable to conclude that the data are sufficiently normal to proceed with the analysis. We can take this approach because ANOVA is robust to violations of requirements. In other words, results from ANOVA tests are reasonably good even if there are mild to moderate violations of the requirements. 
 
 <!-- **[[Lesson 3: Describing_Quantitative_Data:_Shape,_Center_%26_Spread#Variance|variances]]** 
 I don't know how to reference specific header in other lesson-->
@@ -165,16 +165,16 @@ If done by hand, the calculations for one simple ANOVA problem can easily requir
 
 To conduct a test for several means (ANOVA) in Excel, do the following: 
 
-Open the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) and do the following:
+Open the file [Math 221 Statistics Toolbox](https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx) and do the following:
 
 - Click on the tab labeled "ANOVA"
 - Paste the data from each group into their own column
     + Paste the data from the first group in the appropriate part of Column A
     + Paste the data for the second group in the designated part of Column B
-    + Continue copy and pasting each group in the appropriate columns
-- The test statistic, $F$, is given in cell V7
-- The degrees of freedom are presented in cells T7 and T8
-- The $P$-value is reported in cell W7
+    + Continue to copy and paste each group in the appropriate columns
+- The test statistic, $F$, is given in cell T9
+- The degrees of freedom are presented in cells R9 and R10
+- The $P$-value is reported in cell U9
 
 The following points will help you interpret the output.
 
@@ -184,10 +184,10 @@ The following points will help you interpret the output.
 
 To check your requirements, do the following:
 
-- To determine if the data are normally distributed, we will look at a Q-Q plot for each group separately.
-    + While still on the ANOVA tab, scroll to the right so that columns Y through AI are visible. You should see a Q-Q plot. In a yellow highlighted drop-down box directly above the plot you can select the sample you would like to see a Q-Q plot for (see the picture below). Make sure that you evaluate each sample's data. They all must look approximately normal to meet the requirement.
+- To determine if the data are normally distributed, we will look at a histogram plot for each group separately.
+    + While still on the ANOVA tab, scroll to the right. You should see a histogram. In a large, yellow highlighted box directly above the plot you can type the group number of the sample you would like to see a histogram for (see the picture below). Make sure that you evaluate each sample's data. They **all** must look *approximately normal* to meet the requirement.
   
-  <img src="./Images/ANOVA_QQplot.PNG">
+  <img src="./Images/ANOVA_histogram.PNG">
   
 - To determine if the population variances are equal, we will use a very simple check:
     + If the largest variance is at least four times as big as the smallest variance, we will conclude that the population variances are not equal.  (Remember, the variance is the square of the standard deviation.)
@@ -234,7 +234,7 @@ Follow these instructions to apply the ANOVA procedure using Excel:
 
 Data representative of the values reported by Emmons and McCullough are given in the file [Gratitude-Stacked.xlsx](./Data/Gratitude.xlsx).  The data is divided up into three columns which represent Grateful, Hassels, and Events.  
 
-The summary statistics can be obtained using the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx).  Paste the three columns of data into the appropriate areas of column A, B, and C.  The summary statistics will appear in the table to the right labeled "Numerical Summary of the Data".
+The summary statistics can be obtained using the [Math 221 Statistics Toolbox](https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx).  Paste the three columns of data into the appropriate areas of column A, B, and C.  The summary statistics will appear in the table to the right labeled "Numerical Summary of the Data".
 
 
 <br>
@@ -280,18 +280,13 @@ Side-by-side box plots are an excellent way to display data from multiple sample
 
 <img src="./Images/Gratitude-Boxplots.png">
 
-The Math221 Statistics Toolbox Excel file also produces a means plot graph just below the numerical summary. This plot is acceptable, but unfortunately, from this plot you don't get an idea about the spread of the data like you do with a boxplot.
-
-<img src="./Images/ANOVA_MeanPlot.PNG">
-
-<br>
 
 
 <img src="./Images/Step4.png">
 
 **Verify the requirements have been met**
 
-The points in the Q-Q plots for each of the three groups (not shown) follow the line closely, suggesting that the data can be assumed to be normally distributed. 
+The points in the histograms for each of the three groups (not shown) **follow the line closely**, suggesting that the data can be assumed to be normally distributed. 
 
 The largest variance (0.8917 from the Grateful group) is not four times the smallest (0.6922 from the Hassles group), so we conclude that the variances are equal for the three groups.
 
