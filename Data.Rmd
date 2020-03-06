@@ -7,7 +7,7 @@ output:
     toc_float: false
 ---
 
-This page contains the data files that are used throughout the course in the wiki, preparation assignments, homework, and exams. It is recommended that students download the zip file and store all the data files for the semester on their personal computer for easy access. Alternatively, you may return to this page to download individual data files.
+This page contains the data files that are used throughout the course: in the textbook, quizzes, and homework. Links will usually be found in the text or quizzes when the file is referenced as well.
 
 <br/>
 
@@ -16,7 +16,7 @@ This page contains the data files that are used throughout the course in the wik
 <br/>
 
 <div style="padding-left:15px; color:gray;">
-You may download the zip folder with all the files: [ExcelSpreadsheets.zip](./Data/ExcelSpreadsheets.zip)
+You may download the old version of the toolbox here: [ExcelSpreadsheets.zip](./Data/ExcelSpreadsheets.zip)
 </div>
 
 Or download individual files:
