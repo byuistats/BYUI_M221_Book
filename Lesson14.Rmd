@@ -172,27 +172,29 @@ Open the file [Math 221 Statistics Toolbox](https://byuistats.github.io/BYUI_M22
     + Paste the data from the first group in the appropriate part of Column A
     + Paste the data for the second group in the designated part of Column B
     + Continue to copy and paste each group in the appropriate columns
-- The test statistic, $F$, is given in cell T9
-- The degrees of freedom are presented in cells R9 and R10
-- The $P$-value is reported in cell U9
+
 
 The following points will help you interpret the output.
 
 - The "Numerical Summary of the Data" (Step 3) section of the output gives the sample size, mean and standard deviation for each of the groups in your sample.
 
 - In the ANOVA table, you will find the test statistic ($F$), the $P$-value (Sig.), and the degrees of freedom (df) for the $F$ statistic.  Note that there are two numbers specifying the degrees of freedom.  These are given as the between groups and within groups df, respectively.  Do not worry about the total degrees of freedom.  This number is the sum of the other two.
+    + The test statistic, $F$, is given in cell T9
+    + The degrees of freedom are presented in cells R9 and R10
+    + The $P$-value is reported in cell U9
 
 To check your requirements, do the following:
 
 - To determine if the data are normally distributed, we will look at a histogram plot for each group separately.
-    + While still on the ANOVA tab, scroll to the right. You should see a histogram. In a large, yellow highlighted box directly above the plot you can type the group number of the sample you would like to see a histogram for (see the picture below). Make sure that you evaluate each sample's data. They **all** must look *approximately normal* to meet the requirement.
+    + While still on the ANOVA tab, scroll down. Under the boxplots you should see a histogram. In a large, yellow highlighted box located in the upper-right corner of the plot, you can type the group number of the sample you would like to see a histogram for (see the picture below). Make sure that you evaluate each sample's data. They **all** must look *approximately normal* to meet the requirement.
   
   <img src="./Images/ANOVA_histogram.PNG">
   
 - To determine if the population variances are equal, we will use a very simple check:
-    + If the largest variance is at least four times as big as the smallest variance, we will conclude that the population variances are not equal.  (Remember, the variance is the square of the standard deviation.)
+  + If the largest variance is at least four times as big as the smallest variance, we will conclude that the population variances are not equal.  (Remember, the variance is the square of the standard deviation.)
     + If the largest variance is *not* four times as big as the smallest variance, we will conclude that the population variances are close enough that we can assume the variances are all equal.
     + To help you check this assumption the smallest and largest sample variance are displayed in a table spanning cells Y4 to AA6.
+
 
 <br>
 </div>
@@ -232,7 +234,7 @@ The students were randomly assigned to one of the three treatments.  They wrote 
 
 Follow these instructions to apply the ANOVA procedure using Excel:
 
-Data representative of the values reported by Emmons and McCullough are given in the file [Gratitude-Stacked.xlsx](./Data/Gratitude.xlsx).  The data is divided up into three columns which represent Grateful, Hassels, and Events.  
+Data representative of the values reported by Emmons and McCullough are given in the file [Gratitude.xlsx](./Data/Gratitude.xlsx).  The data is divided up into three columns which represent Grateful, Hassels, and Events.  
 
 The summary statistics can be obtained using the [Math 221 Statistics Toolbox](https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx).  Paste the three columns of data into the appropriate areas of column A, B, and C.  The summary statistics will appear in the table to the right labeled "Numerical Summary of the Data".
 
@@ -271,12 +273,12 @@ The summary statistics are presented in the following table:
 <!-- |} -->
 <!-- </center> -->
 
-Please do not blindly cut-and-paste computer output. It can include a lot of information that we do not use.  Identify the relevant parts and only report those pieces of information.  Present only those portions of the output that are relevant.
+Please do not blindly cut-and-paste computer output. It can include a lot of information that we do not use.  Identify the relevant parts and only report those pieces of information.
 
 
--  **Make an appropriate graph to illustrate the data**
+**Make an appropriate graph to illustrate the data**
 
-Side-by-side box plots are an excellent way to display data from multiple samples.
+This graph is from the Math221 Statistics Toolbox, but a title and proper labels have been added so that the chart can be understood without additional text to explain it.
 
 <img src="./Images/Gratitude-Boxplots.png">
 
@@ -286,7 +288,7 @@ Side-by-side box plots are an excellent way to display data from multiple sample
 
 **Verify the requirements have been met**
 
-The points in the histograms for each of the three groups (not shown) **follow the line closely**, suggesting that the data can be assumed to be normally distributed. 
+A histogram for each of the three sample groups is created (not shown). The data from the Grateful group is slightly skewed right. However, the skew is small enough that we should still be able to get reasonable results. The distributions for the other two groups do not exhibit distinctly non-normal shapes. Therefore, we have not violated the assumption of normally distributed sample data. 
 
 The largest variance (0.8917 from the Grateful group) is not four times the smallest (0.6922 from the Hassles group), so we conclude that the variances are equal for the three groups.
 
@@ -403,7 +405,7 @@ Use the [SoccerShoes.xlsx](./Data/SoccerShoes.xlsx) data to answer the following
 
 <a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
-* Here is a side-by-side boxplot to illustrate the data for the six groups all at once.  (You may also want to make side-by-side histograms.)
+* Here is a side-by-side boxplot from the SPSS software to illustrate the data for all six groups. For a review of how to make side-by-side boxplots in Excel using stacked data (a.k.a. long format) like this, review [Lesson 13 World Cup Heart Attacks](Lesson10.html){target="_blank"} example. As you paste the data into the Math221 Statistics Toolbox you are unstacking it, or in other words, putting it in wide format.
 
 <img src="./Images/Soccershoes-boxplot-SPSS.png">
 </div>
@@ -437,8 +439,8 @@ Use the [SoccerShoes.xlsx](./Data/SoccerShoes.xlsx) data to answer the following
 
 <a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q5" style="display:none;">
-* Q-Q plots of the data for each of the six groups (separately) do not indicate a departure from normality.  
-* The largest standard deviation (7.291) is not double the smallest (5.216).The largest variance (53.159) is not four times the smallest (27.207)
+* Histograms of the data for each of the six groups (separately) may not look very normal; but they do not exhibit strongly skewed data either.   
+* The largest variance (53.159) is not four times the smallest (27.207)
 </div>
 <br>
 
@@ -516,11 +518,11 @@ $$
 - For ANOVA testing we use an **$F$-distribution**, which is right-skewed. The $P$-value of an ANOVA test is always the area to the right of the $F$-statistic.
 
 - We can conduct ANOVA testing when the following three requirements are satisfied:
-1. The data come from a simple random sample.
-2. The data are normally distributed within each group.
-- This is satisfied when Q-Q Plots for the data in each group roughly follow a straight line.
-3. The variance is constant.
-- This is satisfied when the largest variance is not more than four times the smallest variance.
+    1. The data come from a simple random sample.
+    2. The data are normally distributed within each group.
+        - This is considered met unless one or more of the groups has a *strongly* skewed distribution.
+    3. The variance is constant.
+        - This is satisfied when the largest variance is not more than four times the smallest variance.
 <br>
 </div>
 <br>

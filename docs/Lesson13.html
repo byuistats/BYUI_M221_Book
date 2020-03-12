@@ -616,7 +616,7 @@ Excel Instructions
 </div>
 <div class="Summary">
 <p><strong>To visualize the distributions of the two sample simultaneously:</strong></p>
-<p>Use the “Two-sample t Test” tab of the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> to create separate histograms, one for each group.</p>
+<p>Use the “Two-sample t Test” tab of the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> to create separate histograms, one for each group. You can enter a label for Group1 in L7, and a label for Group 2 in L8.</p>
 <p><img src="Images/ReadingPractices-Boxplots-Excel.png"></p>
 <span class="Custom">Click the link at right for a helpful tip.</span> <a href="javascript:showhide('tip')"><span style="font-size:8pt;">Show/Hide Tip</span></a>
 <div id="tip" style="display:none;">
@@ -825,19 +825,23 @@ Answer the following questions:
 </ol>
 <a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q6" style="display:none;">
-<ul>
-<li>Side-by-side boxplots are a great way to summarize the data:
-<center>
-<img src="Images/WorldCup-Boxplots-Excel.png">
-</center>
-<br></li>
-</ul>
-<p><strong>To create the side-by-side boxplots in Excel:</strong> In this case it is easiest to switch the order of the columns. Put HeartAttacks in the column to the <em>right</em> of TimePeriod. Then highlight both columns (including the column headers), and create the boxplot with these steps:</p>
+<p>Side-by-side boxplots are a great way to summarize the data. The data as it is currently formatted does not fit well into the Toolbox. The current formatting of the data can be referred to as <strong>“long format”</strong>. One column contains the values and the other column contains the category or group the value is from. You can re-arrange the data so that it is in <strong>wide format</strong> (each group’s values are in a separate column), but that is not necessary to create side-by-side boxplots in Excel.</p>
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p><strong>To create the side-by-side boxplots in Excel from data in long format:</strong> The column with the number values needs to be in the adjacent column on the right of the group labels. So in this case we need to switch the order of the “HeartAttacks” and “TimePeriod” columns. Put HeartAttacks in the column to the <em>right</em> of TimePeriod. Then highlight both columns (including the column headers), and create the boxplot with these steps:</p>
 <ul>
 <li>Go to the Insert ribbon</li>
 <li>Click on the Histogram icon</li>
 <li>Select the option under the “Box and Whisker” heading</li>
 </ul>
+</div>
+<br>
+<center>
+<img src="Images/WorldCup-Boxplots-Excel.png">
+</center>
+<p><br></p>
 </div>
 <p> </p>
 </div>
@@ -1111,11 +1115,14 @@ Answer the following questions:
 </ol>
 <a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q16" style="display:none;">
-<p><img src="Images/COPD-Boxplot-Excel.PNG"> <br> <br></p>
+<p><br> <img src="Images/COPD-Boxplot-Excel.PNG"> <br></p>
+<ul>
+<li>Notice that a descriptive title has been added to the plot. Adding more descriptive titles and axes labels is always a good idea. Furthermore, some changes to the formatting were made to make the chart more attractive. Feel free to experiment with labelling and formatting the graph when using a graph for your own presentation. <br></li>
+</ul>
 </div>
 <p><br></p>
 <ol start="17" style="list-style-type: decimal">
-<li>What do you <em>observe</em> in the graphs you made in the previous question? Does there appear to be a difference in the mean responses of the two groups?</li>
+<li><strong>What do you observe in the graph you made in the previous question? Does there appear to be a difference in the mean responses of the two groups?</strong></li>
 </ol>
 <a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q17" style="display:none;">
@@ -1186,7 +1193,7 @@ If we had subtracted in the order <strong>Hospital</strong> - <strong>Community<
 </div>
 <p><br></p>
 <ol start="21" style="list-style-type: decimal">
-<li>Does there appear to be a difference in the mean improvement observed between the two groups? What does this suggest?</li>
+<li><strong>Does there appear to be a difference in the mean improvement observed between the two groups? What does this suggest?</strong></li>
 </ol>
 <a href="javascript:showhide('Q21')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q21" style="display:none;">
@@ -1197,7 +1204,7 @@ If we had subtracted in the order <strong>Hospital</strong> - <strong>Community<
 </div>
 <p><br></p>
 <ol start="22" style="list-style-type: decimal">
-<li>Create a 90% confidence interval for the difference in the mean responses of the two groups.</li>
+<li><strong>Create a 90% confidence interval for the difference in the mean responses of the two groups.</strong></li>
 </ol>
 <a href="javascript:showhide('Q22')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q22" style="display:none;">
@@ -1208,7 +1215,7 @@ If we had subtracted in the order <strong>Hospital</strong> - <strong>Community<
 </div>
 <p><br></p>
 <ol start="23" style="list-style-type: decimal">
-<li>Interpret the confidence interval you computed in Question 22.</li>
+<li><strong>Interpret the confidence interval you computed in Question 22.</strong></li>
 </ol>
 <a href="javascript:showhide('Q23')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q23" style="display:none;">
@@ -1218,7 +1225,7 @@ If we had subtracted in the order <strong>Hospital</strong> - <strong>Community<
 </div>
 <p><br></p>
 <ol start="24" style="list-style-type: decimal">
-<li>Why is the 95% confidence interval wider than the 90% confidence interval?</li>
+<li><strong>Why is the 95% confidence interval wider than the 90% confidence interval?</strong></li>
 </ol>
 <a href="javascript:showhide('Q24')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q24" style="display:none;">

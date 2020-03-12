@@ -401,7 +401,7 @@ $$ \displaystyle{\frac{142}{201229} = 0.000~705~7} $$
 <a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 
 <div id="Q6" style="display:none;">
-- The proportion of children in the placebo group that develop polio during the study period  was more than double the proportion of children in the treatment group that developed polio during the study period. That suggests that the treatment is effective in reducing the proportion of children that will develop polio.
+- The proportion of children in the placebo group that develop polio during the study period  was more than double the proportion of children in the treatment group that developed polio during the study period. That is quite a large difference.
 </div>
 <br>
 </div>

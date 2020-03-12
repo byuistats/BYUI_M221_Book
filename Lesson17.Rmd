@@ -50,7 +50,7 @@ output:
 
 <img src="./Images/Medical_Symbol.png">
 
-Frederick Sierles and his colleagues distributed an anonymous survey to students at two American medical schools.  The questionnaire was given during class without any prior announcement to students.  The authors of the study personally supervised the distribution and collection of the surveys.  95% of the students completed the survey, and students from all four years of medical school training were represented.  A total of 428 individuals participated in the survey.  Among this group, 249 people indicated that they had cheated in some way during medical school. The results were published in a journal article in 1980.
+Frederick Sierles and his colleagues distributed an anonymous survey to students at two American medical schools.  The questionnaire was given during class without any prior announcement to students.  The authors of the study personally supervised the distribution and collection of the surveys.  95% of the students completed the survey, and students from all four years of medical school training were represented.  A total of 428 individuals participated in the survey.  Among this group, 249 people indicated that they had cheated in some way during medical school. The results were published in a journal article in 1980.
 
 We want to use the data from this study to generalize to a larger population.  We are not usually interested in the *particular* individuals' responses.  The reason the study was conducted is to provide an estimate of the true population proportion, $p$.  $\hat p$ is called a **point estimate** of $p$.  The sample proportion, $\hat p$ is one point on the number line that estimates the value of the true proportion, $p$.
 
@@ -117,7 +117,7 @@ For this example we will consider the "Honesty at Medical School" data above.
 
 - **Step 1**: Open the Math 221 Statistics Toolbox and click on the "One Proportion" tab. 
 
-- The yellow boxes indicate the input spaces. The first step, getting an estimate of $\hat{p}$, is accomplished by inputting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell E7. (You can ignore column A which asks you to paste in data. We will only be putting in summary data of counts, not individual observations.)  
+- The yellow boxes indicate the input spaces. The first step, getting an estimate of $\hat{p}$, is accomplished by inputting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell C7.   
 
 <img src="./Images/Lesson_17_pic_1.PNG">
 
@@ -129,7 +129,7 @@ You may have noticed that after you input the values of $x$ and $n$ into the yel
 <img src="./Images/Lesson_17_pic_4.PNG">
 
 
-- **Step 2**: Next we must indicate our desired level of confidence in cell J11. By default it is set to 0.95, meaning a 95% confidence level. The 95% confidence interval is given in the cells L14 and L15. For convenience, $\hat{p}$ and the margin of error are also shown in this block of output.
+- **Step 2**: Next we must indicate our desired level of confidence in cell I11. By default it is set to 0.95, meaning a 95% confidence level. The 95% confidence interval is given in the cells K14 and L14. For convenience, $\hat{p}$ and the margin of error are also shown in this block of output.
 
 <img src="./Images/Lesson_17_pic_5.PNG">
 
@@ -298,7 +298,7 @@ In other words, 75.4% of the people surveyed could taste the chemical.
 <img src="./Images/PTC_Pie_Graph_Excel.PNG">
 
 <br>
-<div class="message Tip">**Review:**  For a review of how to make pie graphs and bar charts in Excel, read [Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion](Lesson16.html){target="_blank"}</div>
+<div class="message Tip">**Review:**  For a review of how to make pie graphs and bar charts in Excel, read [Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion](Lesson16.html){target="_blank"}. You can also use the pie graph produced in the Math221 Statistics Toolbox. When doing so, consider altering the labels in the graph to be more descriptive of your particular study.</div>
 <br>
 <br>
 
@@ -382,12 +382,12 @@ For this example we will consider the "PTC" data above.
 
 - **Step 1**: Open the Math 221 Statistics Toolbox and click on the "One Proportion" tab. 
 
-- The yellow boxes indicate the input spaces. The first step, getting an estimate of $\hat{p}$, is accomplished by inputting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell E7. (You can ignore column A which asks you to paste in data. We will only be putting in summary data of counts, not individual observations.)  
+- The yellow boxes indicate the input spaces. The first step, getting an estimate of $\hat{p}$, is accomplished by inputting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell C7.   
 
 <img src="./Images/Lesson_17_pic_6.PNG">
 
 
-- **Step 2**: Now we need to define the hypotheses for our test. To the right of the "Numerical Summary" cells is a block of cells labeled "Hypothesis Test". We must change the yellow cells in this block of the sheet in order to test the correct null and alternative hypothesis. The value in cell M5 contains the value of $p$ in our null hypothesis. Cell L6 is a drop-down list where we can select the type of alternative hypothesis we wish to test, i.e. "Greater Than", "Less Than", or "Not Equal To."
+- **Step 2**: Now we need to define the hypotheses for our test. To the right of the "Numerical Summary" cells is a block of cells labeled "Hypothesis Test". We must change the yellow cells in this block of the sheet in order to test the correct null and alternative hypothesis. The value in cell L5 contains the value of $p$ in our null hypothesis. Cell K6 is a drop-down list where we can select the type of alternative hypothesis we wish to test, i.e. "Greater Than", "Less Than", or "Not Equal To."
 
 The results of the hypothesis test are given in the output boxes:
 

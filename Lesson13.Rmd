@@ -186,7 +186,7 @@ There are two populations, and it is important to illustrate both of them separa
 <div class="Summary">
 **To visualize the distributions of the two sample simultaneously:**
 
-Use the "Two-sample t Test" tab of the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) to create separate histograms, one for each group.  
+Use the "Two-sample t Test" tab of the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) to create separate histograms, one for each group. You can enter a label for Group1 in L7, and a label for Group 2 in L8. 
 
 <img src="./Images/ReadingPractices-Boxplots-Excel.png">
 
@@ -434,18 +434,23 @@ The 2006 World Cup was held from June 9, 2006 to July 9, 2006.  The number of pa
 
 <a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q6" style="display:none;">
-* Side-by-side boxplots are a great way to summarize the data:
+Side-by-side boxplots are a great way to summarize the data. The data as it is currently formatted does not fit well into the Toolbox. The current formatting of the data can be referred to as **"long format"**. One column contains the values and the other column contains the category or group the value is from. You can re-arrange the data so that it is in **wide format** (each group's values are in a separate column), but that is not necessary to create side-by-side boxplots in Excel.
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+**To create the side-by-side boxplots in Excel from data in long format:** 
+The column with the number values needs to be in the adjacent column on the right of the group labels. So in this case we need to switch the order of the "HeartAttacks" and "TimePeriod" columns. Put HeartAttacks in the column to the *right* of TimePeriod. Then highlight both columns (including the column headers), and create the boxplot with these steps:
+
+* Go to the Insert ribbon
+* Click on the Histogram icon
+* Select the option under the "Box and Whisker" heading
+</div>
+<br>
 <center>
 <img src="./Images/WorldCup-Boxplots-Excel.png">
 </center>
 <br>
 
-**To create the side-by-side boxplots in Excel:** 
-In this case it is easiest to switch the order of the columns. Put HeartAttacks in the column to the *right* of TimePeriod. Then highlight both columns (including the column headers), and create the boxplot with these steps:
-
-* Go to the Insert ribbon
-* Click on the Histogram icon
-* Select the option under the "Box and Whisker" heading
 </div>
 &nbsp;
 </div>
@@ -724,13 +729,16 @@ Because hospital-based rehabilitation tends to be more expensive, the researcher
 
 <a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q16" style="display:none;">
+<br>
 <img src="./Images/COPD-Boxplot-Excel.PNG">
 <br>
+
+* Notice that a descriptive title has been added to the plot. Adding more descriptive titles and axes labels is always a good idea. Furthermore, some changes to the formatting were made to make the chart more attractive. Feel free to experiment with labelling and formatting the graph when using a graph for your own presentation.
 <br>
 </div>
 <br>
 
-17. What do you *observe* in the graphs you made in the previous question?  Does there appear to be a difference in the mean responses of the two groups?
+17. **What do you observe in the graph you made in the previous question?  Does there appear to be a difference in the mean responses of the two groups?**
 
 <a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q17" style="display:none;">
@@ -791,7 +799,7 @@ Because hospital-based rehabilitation tends to be more expensive, the researcher
 </div>
 <br>
 
-21. Does there appear to be a difference in the mean improvement observed between the two groups?  What does this suggest?
+21. **Does there appear to be a difference in the mean improvement observed between the two groups?  What does this suggest?**
 
 <a href="javascript:showhide('Q21')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q21" style="display:none;">
@@ -801,7 +809,7 @@ Because hospital-based rehabilitation tends to be more expensive, the researcher
 </div>
 <br>
 
-22. Create a 90% confidence interval for the difference in the mean responses of the two groups.
+22. **Create a 90% confidence interval for the difference in the mean responses of the two groups.**
 
 <a href="javascript:showhide('Q22')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q22" style="display:none;">
@@ -811,7 +819,7 @@ Because hospital-based rehabilitation tends to be more expensive, the researcher
 </div>
 <br>
 
-23. Interpret the confidence interval you computed in Question 22.
+23. **Interpret the confidence interval you computed in Question 22.**
 
 <a href="javascript:showhide('Q23')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q23" style="display:none;">
@@ -819,7 +827,7 @@ Because hospital-based rehabilitation tends to be more expensive, the researcher
 </div>
 <br>
 
-24. Why is the 95% confidence interval wider than the 90% confidence interval?
+24. **Why is the 95% confidence interval wider than the 90% confidence interval?**
 
 <a href="javascript:showhide('Q24')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q24" style="display:none;">

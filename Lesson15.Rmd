@@ -154,11 +154,11 @@ $$
 - For ANOVA testing we use an **$F$-distribution**, which is right-skewed. The $P$-value of an ANOVA test is always the area to the right of the $F$-statistic.
 
 - We can conduct ANOVA testing when the following three requirements are satisfied:
-1. The data come from a simple random sample.
-2. The data are normally distributed within each group.
-  + This is satisfied when Q-Q Plots for the data in each group roughly follow a straight line.
-3. The variance is constant.
-  + This is satisfied when the largest variance is not more than four times the smallest variance.
+    1. The data come from a simple random sample.
+    2. The data are normally distributed within each group.
+        - This is considered met unless one or more of the groups has a *strongly* skewed distribution.
+    3. The variance is constant.
+        - This is satisfied when the largest standard deviation is not more than two times the smallest standard deviation.
 <br>
 </div>
 <br>

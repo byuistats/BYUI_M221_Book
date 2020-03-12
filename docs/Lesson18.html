@@ -536,32 +536,33 @@ $(document).ready(function () {
 \]</span> This is approximately 77.3% of the people who were surveyed. For the males, the proportion who could taste PTC was: <span class="math display">\[
 \hat p_2 = \frac{x_2}{n_2} = \frac{38}{52}
 \]</span> This works out to be about 73.1%.</p>
-<p>When working with data for two proportions, graphically displaying the data can help us compare each proportion. Pie charts and bar charts are essential tools for describing our data.</p>
-<p><strong>Side-by-Side Pie Charts</strong></p>
+<p>When working with data for two proportions, graphically displaying the data can help us compare each proportion. Pie charts and bar charts are essential tools for describing our data. The Math221 Statistics Toolbox automatically creates a side-by-side 100% stacked bar chart when you input the data into the “Two Proportions” tab.</p>
+<p><img src="Images/PTC_Stacked_Bar_Toolbox.PNG"></p>
+Click on the link at right if you would like to learn how to create a side-by-side 100% stacked bar chart on your own in Excel. <a href="javascript:showhide('ins')"><span style="font-size:8pt;">Show/Hide Instructions</span></a>
+<div id="ins" style="display:none;">
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <!-- {{Software_Filter | PageName=SideBySidePieCharts}} -->
 <div class="SoftwareHeading">
 Excel Instructions
 </div>
 <div class="Summary">
-<p><strong>To create side-by-side pie charts in Excel, do the following:</strong></p>
-<p>For this example we will use the <a href="./Data/PTCTasting.xlsx">PTCTasting</a> data set.</p>
+<p><strong>To create 100% Stacked Bar Charts in Excel, do the following:</strong></p>
+<p>For this example we will continue to use the PTCTasting data set.</p>
 <ul>
-<li>First, make sure the data are organized so that one column contains the first variable (gender) and another column contains the second variable (whether or not they can taste PTC).</li>
-<li>A third column contains counts of the number of observations in each group. Highlight the “CanTaste” column and “Count” column just for females, or cells B2, B3, C2, and C3.<br />
-</li>
-<li>Now click on the “Insert” tab and then the “pie chart” button. Please select the most basic 2D pie chart.</li>
-<li>Next you can repeat the process above but highlighting the male data or cells B4, B5, C4, and C5.<br />
-</li>
-<li>To keep the two pie charts straight, you can add a title. If “Chart Title” is already displayed on the graph, simply double-click it to type in a new title. If you need to add a title, click on the “Design” tab under Chart Tools. Next click on “Add Chart Element” and choose “Chart Title” from the list of options. Select “Above Chart” as the location of the title.<br />
-</li>
-<li>You can now type in the titles, “Females Taste PTC?” and “Males Taste PTC?” or something similar.</li>
-<li><p>Now you should be able to visually compare the proportion of females that can taste PTC to the proportion of males that can taste PTC.</p></li>
-<li><p>Your pie charts should look like this:</p></li>
+<li>First, re-arrange the summary of the data so that it looks like the table above, but without a row and column for total.</li>
+<li>Highlight the counts and the row and column headings. Now click on the “Insert” tab and select the 3rd option under the “2D Column” heading.</li>
 </ul>
 <center>
-<p><img src="Images/SidebysidePieCharts_-_Excel.PNG"></p>
+<img src="Images/PTC_Stacked_Bar_Creation.PNG">
 </center>
+<ul>
+<li>Your graph would look like the image below. You can further customize them by adding data labels, titles, etc.</li>
+</ul>
+<center>
+<p><img src="Images/PTC_Stacked_bar.PNG"></p>
+</center>
+<p><br></p>
+</div>
 <p><br></p>
 </div>
 <p><br></p>
@@ -626,7 +627,7 @@ The test statistic is <span class="math inline">\(z=0.526\)</span>. Under the nu
 </center>
 <p><br></p>
 <ul>
-<li><strong>Hypothesis Test</strong>: To conduct a hypothesis test we must define our null and alternative hypotheses. To the right of the “Numerical Summary” cells is a block of cells labeled “Hypothesis Test”. The null hypothesis is always the same and does not need to be updated. For the alternative hypothesis we can change the yellow cell, M6, to select the type of alternative hypothesis we wish to test, i.e. “Greater Than”, “Less Than”, or “Not Equal To.”</li>
+<li><strong>Hypothesis Test</strong>: To conduct a hypothesis test we must define our null and alternative hypotheses. To the right of the “Numerical Summary” cells is a block of cells labeled “Hypothesis Test”. The null hypothesis is always the same and does not need to be updated. For the alternative hypothesis we can change the yellow cell, M6, to select the type of alternative hypothesis we wish to test, i.e. “Greater Than”, “Less Than”, or “Not Equal To.”</li>
 </ul>
 <p>The results of the hypothesis test are given immediately below where we define the hypotheses:</p>
 <center>
@@ -1318,11 +1319,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">

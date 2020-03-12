@@ -839,7 +839,7 @@ Difference
 Excel Instructions
 </div>
 <div class="Summary">
-<p>Fortunately, the “Paired Data t-test” tab in the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> will automatically compute the differences when you paste in the data. <strong>The Toolbox always takes the data in column A - data in column B.</strong> Because we want to take Post - Pre, you will need to swap the order of the column when pasting the data into the Math221 Statistics Toolbox. Follow this process:</p>
+<p>Fortunately, the “Paired Data t-test” tab in the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> will automatically compute the differences when you paste in the data. <strong>The Toolbox always takes the data in column A - data in column B.</strong> Because we want to take Post - Pre, you will need to swap the order of the columns when pasting the data into the Math221 Statistics Toolbox. Follow this process:</p>
 <ul>
 <li>Copy the “Pre” column and paste it into column B, labeled “Data2” of the Toolbox.</li>
 <li>Copy the “Post” column and paste it into column A, labeled “Data1” of the Toolbox.</li>
@@ -931,7 +931,7 @@ n &amp;= 27
 <center>
 <img src="Images/Mahon-Differences-Histogram.PNG">
 </center>
-<p>Even with a small sample size, we can still conduct this test.</p>
+<p>Even with a sample size less than 30, we can still conduct this test.</p>
 <p><strong>Give the test statistic and its value</strong></p>
 <p>The test statistic for a test involving paired data when <span class="math inline">\(\sigma\)</span> is unknown is a <span class="math inline">\(t\)</span>. For this situation, the value is: <span class="math display">\[t= \frac{-6.8 - 0}{3.17/\sqrt{27}} =-11.145\]</span> See that this calculation matches the test statistic given in the Excel output. The degrees of freedom and p-value can also be found in the Excel output.</p>
 <p><strong>State the degrees of freedom</strong></p>
@@ -989,7 +989,7 @@ H_a: &amp;~~ \mu_d &gt; 0 \\
 </div>
 <p> </p>
 </div>
-<p>In order to get the correct <span class="math inline">\(P\)</span>-value, we need to indicate the proper alternative hypothesis in Excel. In cell Q6 be sure the “Greater Than” symbol is selected in the drop-down menu.</p>
+<p><br> In order to get the correct <span class="math inline">\(P\)</span>-value, we need to indicate the proper alternative hypothesis in Excel. In cell N6 be sure the “Greater Than” symbol is selected in the drop-down menu.</p>
 <p><img src="Images/TypeOfTest-GreaterThan-Excel.png"></p>
 <p><br></p>
 <p><img src="Images/Step2.png"></p>
@@ -1257,12 +1257,11 @@ df = 39
 <a href="javascript:showhide('Q22')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q22" style="display:none;">
 <ul>
-<li>The test statistic is plotted on the horizontal axis. The <span class="math inline">\(P\)</span>-value is shaded in green. The same value can be found on the Excel output in cell R10.<br />
-&amp;nbsp
+<li>The test statistic is plotted on the horizontal axis. The <span class="math inline">\(P\)</span>-value is shaded in green. The same value can be found on the Excel output in cell O10.</li>
+</ul>
 <center>
 <img src="Images/REE-Applet.png">
-</center></li>
-</ul>
+</center>
 </div>
 <p><br></p>
 <ol start="23" style="list-style-type: decimal">
@@ -1395,12 +1394,11 @@ If you defined your difference as the 90-day price minus the 14-day price, then 
 </ol>
 <a href="javascript:showhide('Q29')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q29" style="display:none;">
-<ul>
-<li>The histogram is presented with 16 bins.
 <center>
 <img src="Images/DirectFlightCosts-Histogram1-Excel.png">
-</center></li>
-<li>If you defined your difference as the 90-day price minus the 14-day price, then with 16 bins you would have the following histogram:
+</center>
+<ul>
+<li>If you defined your difference as the 90-day price minus the 14-day price, then you would have the following histogram:
 <center>
 <img src="Images/DirectFlightCosts-Histogram2-Excel.png">
 </center></li>

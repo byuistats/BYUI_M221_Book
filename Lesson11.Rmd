@@ -220,8 +220,8 @@ The Excel file needed for this analysis is [Math 221 Statistics Toolbox](./Data/
 
   +  After opening the file, please click on the tab labeled "One-sample t-test".  
   +  Paste the data in the appropriate place in Column A.
-  +  Set the null hypothesis value in cell O5.  For this example, the value should be 98.6.
-  +  Click in cell N6 and use the drop down menu to set the alternative hypothesis to: "Not Equal To"
+  +  Set the null hypothesis value in cell M5.  For this example, the value should be 98.6.
+  +  Click in cell L6 and use the drop down menu to set the alternative hypothesis to: "Not Equal To"
 
 The image below shows the Excel file after these changes have been made.
 
@@ -230,11 +230,11 @@ The image below shows the Excel file after these changes have been made.
 Consider each of the following alternative hypotheses that could be used in a test for a single mean where the null hypothesis is $H_0: \mu = 98.6$.
 
 - $H_a: \mu \ne 98.6$
-  + Choose "Not Equal To" in the drop-down menu in cell N6.
+  + Choose "Not Equal To" in the drop-down menu in cell L6.
 - $H_a: \mu < 98.6$
-  + Choose "Less Than" in the drop-down menu in cell N6.
+  + Choose "Less Than" in the drop-down menu in cell L6.
 - $H_a: \mu > 98.6$  
-  + Choose "Greater Than" in the drop-down menu in cell N6.
+  + Choose "Greater Than" in the drop-down menu in cell L6.
 
 You will have opportunities to practice using each of these.
 <br>
@@ -258,7 +258,7 @@ Any differences are due to rounding.
 
 **State the degrees of freedom**
 
-In Excel, the degrees of freedom ($df$) are given in cell N9.
+In Excel, the degrees of freedom ($df$) are given in cell L9.
 
 $$df = 147$$
 <!-- **Mark the test statistic and $P$-value on a graph of the sampling distribution** --> <!-- CONSOLIDATED and UPDATED -->
@@ -279,7 +279,7 @@ Since the $P$-value was less than $\alpha$, we reject the null hypothesis.
 
 <img src="./Images/Step5.png">
 
-**Present your conclusion in an English sentence, relating the result to the context of the problem**
+**Present your conclusion in an easy to understand sentence, relating the result to the context of the problem**
 
 There is sufficient evidence to suggest that the mean body temperature is not 98.6&deg; Fahrenheit.
 
@@ -327,7 +327,7 @@ Using this data set, test the hypothesis that the mean weight of babies born in 
 When the data are entered into the file 
 [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx), the following output is generated:
 
-<img src="./Images/BabyBoom-Ttest-Excel_Toolbox.png">
+<img src="./Images/BabyBoom-Ttest-Excel_Toolbox.PNG">
 <br>
 
 * The relevant summary statistics are:
@@ -406,7 +406,7 @@ Since the $P$-value is greater than the level of significance, we fail to reject
 
 <img src="./Images/Step5.png">
 
-**Present your conclusion in an English sentence, relating the result to the context of the problem**
+**Present your conclusion in an easy to understand sentence, relating the result to the context of the problem**
 
 There is insufficient evidence to suggest that the mean weight of babies born in Australia is different from 3373 grams.
 
@@ -506,7 +506,7 @@ Do the following:
 - Enter the data, and
 - Set the confidence level.  
 
-In this case, we are using a 95% confidence level.  So, you set the confidence level in the Excel file to 0.95 (i.e., 95%).  The confidence interval is given to you in cells N14 and O14.
+In this case, we are using a 95% confidence level.  So, you set the confidence level in the Excel file to 0.95 (i.e., 95%).  The confidence interval is given to you in cells L14 and M14.
 <br>
 </div>
 <br>
@@ -569,7 +569,7 @@ The data are bell-shaped and fairly symmetric.  So, the sample mean, $\bar x$, i
 
 <img src="./Images/Step5.png">
 
-**Present your observations in an English sentence, relating the result to the context of the problem**
+**Present your observations in an easy to understand sentence, relating the result to the context of the problem**
 
 We are 95% confident that the true mean BLEU score for all translations by the Pharaoh program is between 0.2824 and 0.2928.
 
@@ -645,10 +645,12 @@ $$
 
 9. **Make an appropriate graph to illustrate the data**
 
+<div class="myemphasis"> **CAUTION:** The Excel Toolbox boxplot only works for datasets of **1,000 observations or less**. This dataset contains 2,000 observations. You will need to create your own boxplot. </div>
+
 <a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q9" style="display:none;">
 
-**CAUTION:** The Excel Toolbox only works for datasets of 1,000 observations or less. This dataset contains 2,000 observations. If you create your own histogram and boxplot of the data, the graphs should look something like the image below
+If you create your own histogram and boxplot of the data, the graphs should look something like the image below
 
 <img src="./Images/Lesson_11_euro_weights.PNG">
 
@@ -692,7 +694,7 @@ $$
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
-11. **Present your observations in an English sentence, relating the result to the context of the problem**.
+11. **Present your observations in an easy to understand sentence, relating the result to the context of the problem**.
 
 <a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q11" style="display:none;">

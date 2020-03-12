@@ -226,7 +226,7 @@ We can calculate the difference for each woman in the study:
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <div class="SoftwareHeading">Excel Instructions</div>
 <div class="Summary">
-Fortunately, the "Paired Data t-test" tab in the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) will automatically compute the differences when you paste in the data. **The Toolbox always takes the data in column A - data in column B.** Because we want to take Post - Pre, you will need to swap the order of the column when pasting the data into the Math221 Statistics Toolbox. Follow this process:
+Fortunately, the "Paired Data t-test" tab in the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) will automatically compute the differences when you paste in the data. **The Toolbox always takes the data in column A - data in column B.** Because we want to take Post - Pre, you will need to swap the order of the columns when pasting the data into the Math221 Statistics Toolbox. Follow this process:
 
 * Copy the "Pre" column and paste it into column B, labeled "Data2" of the Toolbox.
 * Copy the "Post" column and paste it into column A, labeled "Data1" of the Toolbox.
@@ -353,7 +353,7 @@ The requirement of normality is satisfied for Mahon's data. Though the sample si
 <img src="./Images/Mahon-Differences-Histogram.PNG">
 </center>
 
-Even with a small sample size, we can still conduct this test.
+Even with a sample size less than 30, we can still conduct this test.
 
 **Give the test statistic and its value**
 
@@ -442,7 +442,8 @@ $$
 </div>
 &nbsp;
 </div>
-In order to get the correct $P$-value, we need to indicate the proper alternative hypothesis in Excel.  In cell Q6 be sure the "Greater Than" symbol is selected in the drop-down menu. 
+<br>
+In order to get the correct $P$-value, we need to indicate the proper alternative hypothesis in Excel.  In cell N6 be sure the "Greater Than" symbol is selected in the drop-down menu. 
 
 <img src="./Images/TypeOfTest-GreaterThan-Excel.png">
 
@@ -718,8 +719,8 @@ $$
 
 <a href="javascript:showhide('Q22')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q22" style="display:none;">
-* The test statistic is plotted on the horizontal axis.  The $P$-value is shaded in green. The same value can be found on the Excel output in cell R10.  
-&nbsp
+* The test statistic is plotted on the horizontal axis.  The $P$-value is shaded in green. The same value can be found on the Excel output in cell O10.  
+
 <center>
 <img src="./Images/REE-Applet.png">
 </center>
@@ -855,12 +856,12 @@ $$
 
 <a href="javascript:showhide('Q29')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q29" style="display:none;">
-* The histogram is presented with 16 bins.
+
 <center>
 <img src="./Images/DirectFlightCosts-Histogram1-Excel.png">
 </center>
 
-* If you defined your difference as the 90-day price minus the 14-day price, then with 16 bins you would have the following histogram:
+* If you defined your difference as the 90-day price minus the 14-day price, then you would have the following histogram:
 <center>
 <img src="./Images/DirectFlightCosts-Histogram2-Excel.png">
 </center>

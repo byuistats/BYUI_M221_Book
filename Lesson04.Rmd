@@ -258,6 +258,10 @@ But there's something different about the patterns followed by random processes 
 
 When something is random, we can be sure that it follows a long-term pattern, its distribution.  We just never know what the outcome of the next experiment will be.
 
+<a href="javascript:showhide('Q18')"><span style="font-size:14pt;">**Optional Reading:** Click Here to Explore How to Calculate the Mean and Standard Deviation of a Discrete Random Variable</span></a>
+<div id="Q18" style="display:none;">
+
+
 ## The Mean and Standard Deviation of a Discrete Random Variable
 The phrase "discrete random variable" has a very specific meaning. A variable is something that varies (of course!), and a variable is random if its values follow a specific distribution, over the long run. The true meaning of the word "discrete" is too technical for this course. Roughly speaking, a random variable is discrete if its values could be listed (in principle), given enough time.
 
@@ -510,7 +514,8 @@ The following story describe how winning a huge Powerball jackpot changed the li
 
 [Print story](http://abcnews.go.com/2020/powerball-winner-cursed/story?id=3012631#.TxRrefkprTp){target="_blank"}
 
-
+</div>
+<br>
 
 </div>
 <br>

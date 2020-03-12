@@ -598,8 +598,8 @@ Excel Instructions
 <li>After opening the file, please click on the tab labeled “One-sample t-test”.<br />
 </li>
 <li>Paste the data in the appropriate place in Column A.</li>
-<li>Set the null hypothesis value in cell O5. For this example, the value should be 98.6.</li>
-<li>Click in cell N6 and use the drop down menu to set the alternative hypothesis to: “Not Equal To”</li>
+<li>Set the null hypothesis value in cell M5. For this example, the value should be 98.6.</li>
+<li>Click in cell L6 and use the drop down menu to set the alternative hypothesis to: “Not Equal To”</li>
 </ul>
 <p>The image below shows the Excel file after these changes have been made.</p>
 <center>
@@ -609,15 +609,15 @@ Excel Instructions
 <ul>
 <li><span class="math inline">\(H_a: \mu \ne 98.6\)</span>
 <ul>
-<li>Choose “Not Equal To” in the drop-down menu in cell N6.</li>
+<li>Choose “Not Equal To” in the drop-down menu in cell L6.</li>
 </ul></li>
 <li><span class="math inline">\(H_a: \mu &lt; 98.6\)</span>
 <ul>
-<li>Choose “Less Than” in the drop-down menu in cell N6.</li>
+<li>Choose “Less Than” in the drop-down menu in cell L6.</li>
 </ul></li>
 <li><span class="math inline">\(H_a: \mu &gt; 98.6\)</span>
 <ul>
-<li>Choose “Greater Than” in the drop-down menu in cell N6.</li>
+<li>Choose “Greater Than” in the drop-down menu in cell L6.</li>
 </ul></li>
 </ul>
 <p>You will have opportunities to practice using each of these. <br></p>
@@ -633,7 +633,7 @@ t &amp;= \frac{ \bar x - \mu }{ s / \sqrt{n} } \\
 \end{align}
 \]</span> Any differences are due to rounding.</p>
 <p><strong>State the degrees of freedom</strong></p>
-<p>In Excel, the degrees of freedom (<span class="math inline">\(df\)</span>) are given in cell N9.</p>
+<p>In Excel, the degrees of freedom (<span class="math inline">\(df\)</span>) are given in cell L9.</p>
 <p><span class="math display">\[df = 147\]</span> <!-- **Mark the test statistic and $P$-value on a graph of the sampling distribution** --> <!-- CONSOLIDATED and UPDATED --></p>
 <p><strong>Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance</strong></p>
 <p>The <span class="math inline">\(P\)</span>-value is given in the software as “0.000.” (The actual value is 1.2723e-08, a very small number that rounds to 0.000 at three decimal places.) Writing this properly and comparing it to <span class="math inline">\(\alpha\)</span>, we have: <span class="math display">\[
@@ -643,7 +643,7 @@ P\text{-value} = 1.2723 \times 10^{-8} = 0.000~000~012~723 &lt; 0.05 = \alpha
 <p>The interpretation of the results will follow the pattern established in the previous hypothesis tests. If the <span class="math inline">\(P\)</span>-value is less than the <span class="math inline">\(\alpha\)</span> level, we reject the null hypothesis. If the <span class="math inline">\(P\)</span>-value is greater than the <span class="math inline">\(\alpha\)</span> level, we fail to reject the null hypothesis. This is true for every hypothesis test.</p>
 <p>Since the <span class="math inline">\(P\)</span>-value was less than <span class="math inline">\(\alpha\)</span>, we reject the null hypothesis.</p>
 <p><img src="Images/Step5.png"></p>
-<p><strong>Present your conclusion in an English sentence, relating the result to the context of the problem</strong></p>
+<p><strong>Present your conclusion in an easy to understand sentence, relating the result to the context of the problem</strong></p>
 <p>There is sufficient evidence to suggest that the mean body temperature is not 98.6° Fahrenheit.</p>
 <p><img src="Images/StepsAll.png"></p>
 </div>
@@ -675,7 +675,7 @@ Answer the following questions:
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
 <p>When the data are entered into the file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>, the following output is generated:</p>
-<p><img src="Images/BabyBoom-Ttest-Excel_Toolbox.png"> <br></p>
+<p><img src="Images/BabyBoom-Ttest-Excel_Toolbox.PNG"> <br></p>
 <ul>
 <li>The relevant summary statistics are:
 <center></li>
@@ -743,7 +743,7 @@ df = 43
 <p><strong>State your decision</strong></p>
 <p>Since the <span class="math inline">\(P\)</span>-value is greater than the level of significance, we fail to reject the null hypothesis.</p>
 <p><img src="Images/Step5.png"></p>
-<p><strong>Present your conclusion in an English sentence, relating the result to the context of the problem</strong></p>
+<p><strong>Present your conclusion in an easy to understand sentence, relating the result to the context of the problem</strong></p>
 <p>There is insufficient evidence to suggest that the mean weight of babies born in Australia is different from 3373 grams.</p>
 <p><br></p>
 </div>
@@ -809,7 +809,7 @@ Excel Instructions
 <li>Enter the data, and</li>
 <li>Set the confidence level.</li>
 </ul>
-<p>In this case, we are using a 95% confidence level. So, you set the confidence level in the Excel file to 0.95 (i.e., 95%). The confidence interval is given to you in cells N14 and O14. <br></p>
+<p>In this case, we are using a 95% confidence level. So, you set the confidence level in the Excel file to 0.95 (i.e., 95%). The confidence interval is given to you in cells L14 and M14. <br></p>
 </div>
 <p><br></p>
 <p>The 95% confidence interval for the true mean BLEU score is:</p>
@@ -848,7 +848,7 @@ n =&amp; 100
 <p>Recall the requirement of normality is satisfied if the data are approximately normally distributed or if the sample size is large.</p>
 <p>The data are bell-shaped and fairly symmetric. So, the sample mean, <span class="math inline">\(\bar x\)</span>, is approximately normally distributed.</p>
 <p><img src="Images/Step5.png"></p>
-<p><strong>Present your observations in an English sentence, relating the result to the context of the problem</strong></p>
+<p><strong>Present your observations in an easy to understand sentence, relating the result to the context of the problem</strong></p>
 <p>We are 95% confident that the true mean BLEU score for all translations by the Pharaoh program is between 0.2824 and 0.2928.</p>
 <p>Answer the following questions using the data set <a href="./Data/BLEU-Scores.xslx">BLEU-Scores</a>, which gives the BLEU scores for <span class="math inline">\(n=100\)</span> translations from Spanish to English by the computer program Pharaoh.</p>
 <div class="QuestionsHeading">
@@ -923,9 +923,12 @@ n =&amp; 2000
 <ol start="9" style="list-style-type: decimal">
 <li><strong>Make an appropriate graph to illustrate the data</strong></li>
 </ol>
+<div class="myemphasis">
+<strong>CAUTION:</strong> The Excel Toolbox boxplot only works for datasets of <strong>1,000 observations or less</strong>. This dataset contains 2,000 observations. You will need to create your own boxplot.
+</div>
 <a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q9" style="display:none;">
-<p><strong>CAUTION:</strong> The Excel Toolbox only works for datasets of 1,000 observations or less. This dataset contains 2,000 observations. If you create your own histogram and boxplot of the data, the graphs should look something like the image below</p>
+<p>If you create your own histogram and boxplot of the data, the graphs should look something like the image below</p>
 <p><img src="Images/Lesson_11_euro_weights.PNG"></p>
 <p>You can see the data is relatively normal, with just a couple of potential outliers that could be investigated further.</p>
 </div>
@@ -965,7 +968,7 @@ Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="11" style="list-style-type: decimal">
-<li><strong>Present your observations in an English sentence, relating the result to the context of the problem</strong>.</li>
+<li><strong>Present your observations in an easy to understand sentence, relating the result to the context of the problem</strong>.</li>
 </ol>
 <a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q11" style="display:none;">

@@ -425,10 +425,6 @@ $(document).ready(function () {
 <li><a href="#rules-of-probability">Rules of Probability</a></li>
 <li><a href="#randomness">Randomness</a></li>
 </ul></li>
-<li><a href="#the-mean-and-standard-deviation-of-a-discrete-random-variable">The Mean and Standard Deviation of a Discrete Random Variable</a><ul>
-<li><a href="#finding-the-mean-of-a-discrete-random-variable">Finding the Mean of a Discrete Random Variable</a></li>
-<li><a href="#finding-the-standard-deviation-of-a-discrete-random-variable">Finding the Standard Deviation of a Discrete Random Variable</a></li>
-</ul></li>
 <li><a href="#summary">Summary</a></li>
 <li><a href="#navigation">Navigation</a></li>
 </ul>
@@ -697,13 +693,11 @@ Answer the following questions:
 <p>What does it mean to be random? When something is random, it is not just haphazard, with no pattern. Any random process follows a very distinct pattern over time—the distribution of its outcomes. For example, if you roll a die thousands of times, about one-sixth of the time you will roll a four. This is a very clear pattern, or part of a pattern. The entire pattern (or, the entire distribution) is that each number on the die is rolled about one-sixth of the time.</p>
 <p>But there’s something different about the patterns followed by random processes than other kinds of patterns. Other kinds of patterns can be very predictable, such as a color pattern of the red, yellow, blue, red, yellow, blue, and so on. If you’re following this pattern and happen to see yellow, you know the next color will be blue. By contrast, you never know what you will get on the next roll of a six-sided die. You <em>do</em> know that in the long run you will roll fours about one-sixth of the time.</p>
 <p>When something is random, we can be sure that it follows a long-term pattern, its distribution. We just never know what the outcome of the next experiment will be.</p>
-</div>
-</div>
-<div id="the-mean-and-standard-deviation-of-a-discrete-random-variable" class="section level2">
-<h2>The Mean and Standard Deviation of a Discrete Random Variable</h2>
+<a href="javascript:showhide('Q18')"><span style="font-size:14pt;"><strong>Optional Reading:</strong> Click Here to Explore How to Calculate the Mean and Standard Deviation of a Discrete Random Variable</span></a>
+<div id="Q18" style="display:none;">
+<h2 id="the-mean-and-standard-deviation-of-a-discrete-random-variable">The Mean and Standard Deviation of a Discrete Random Variable</h2>
 <p>The phrase “discrete random variable” has a very specific meaning. A variable is something that varies (of course!), and a variable is random if its values follow a specific distribution, over the long run. The true meaning of the word “discrete” is too technical for this course. Roughly speaking, a random variable is discrete if its values could be listed (in principle), given enough time.</p>
-<div id="finding-the-mean-of-a-discrete-random-variable" class="section level3">
-<h3>Finding the Mean of a Discrete Random Variable</h3>
+<h3 id="finding-the-mean-of-a-discrete-random-variable">Finding the Mean of a Discrete Random Variable</h3>
 <p>In many applications, it is important to be able to compute the population mean of a discrete random variable. To introduce this idea, we will continue with the hopefully familiar example of rolling a fair six-sided die.</p>
 <p>Imagine you are playing a game that involves rolling the die. As part of the game, you roll the die many, many times and keep track of the numbers you roll.</p>
 <div class="QuestionsHeading">
@@ -1000,12 +994,9 @@ Sum:<span class="math inline">\(\bar x \approx 3.5030\)</span>
 <p>The population mean of a discrete random variable is computed by multiplying each of the values of the random variable by the respective probability that the value will occur. This is exactly what we did in the last table above. You can use a table like this to compute the mean of any discrete random variable. The first column of the table contains the values of the random variable. The second column gives their probabilities. The third column is found by multiplying the values in the previous two columns. The population mean, <span class="math inline">\(\mu\)</span>, is the sum of the numbers in the third column.</p>
 <p>The quantity <span class="math inline">\(\mu = 3.5\)</span> is the true population mean for the values shown on a die. If you roll a die many, many times, the sample mean of the values you roll will be very close to <span class="math inline">\(\mu = 3.5\)</span>. (Another way to say this is that the long-run average of the values shown on a die will tend to be close to <span class="math inline">\(\mu\)</span> = 3.5.) This is the answer to question 17 above. Did you put 3.5, or did you guess the answer would be 3? Many people guess the mean will be 3, but as we have seen, it is actually 3.5.</p>
 <p>Notice that the sample mean was very close to the true mean. This is an example of the Law of Large Numbers. The <strong>Law of Large Numbers</strong> states that if you take a large sample from a population, the sample mean will likely be close to the population mean.</p>
-</div>
-<div id="finding-the-standard-deviation-of-a-discrete-random-variable" class="section level3">
-<h3>Finding the Standard Deviation of a Discrete Random Variable</h3>
+<h3 id="finding-the-standard-deviation-of-a-discrete-random-variable">Finding the Standard Deviation of a Discrete Random Variable</h3>
 <p>We can find the population standard deviation for a discrete random variable by making a table to calculate the mean of the variable. Then we add a column whose values are found by subtracting the mean from each of the observations, squaring it, and multiplying it by the probability for that value. When we add up the values in this column, we get the variance. The standard deviation is the square root of the variance. Our running example of rolling a fair six-sided die will allow us to illustrate this.</p>
-<div id="rolling-a-die" class="section level4">
-<h4>Rolling a die</h4>
+<h4 id="rolling-a-die">Rolling a die</h4>
 <p>Let’s calculate the population standard deviation for the number that results from rolling a fair six-sided die. We can do this by extending the table we made for calculating the mean, as described in the previous paragraph and illustrated in the following table.</p>
 <table>
 <thead>
@@ -1075,9 +1066,7 @@ Sum:<span class="math inline">\(\bar x \approx 3.5030\)</span>
 </table>
 <p>The standard deviation is <span class="math display">\[\sigma=\sqrt{\sigma^2}=\sqrt{(2.9167)}=1.7078\]</span></p>
 <p>So, the mean of the values shown on a die is 3.5 and the standard deviation is 1.7078. The standard deviation is a measure of the variation in the numbers shown on the die. On average, we can expect that the numbers shown on the die are about 1.7 away from 3.5.</p>
-</div>
-<div id="powerball" class="section level4">
-<h4>Powerball</h4>
+<h4 id="powerball">Powerball</h4>
 <p>Powerball is a multi-state lottery game. Fifty-nine White balls numbered 1–59 are placed in a drum and thoroughly mixed; five of the balls are drawn. Then, thirty-five red balls—one of which is labeled the “powerball”—are placed in another drum and thoroughly mixed, and one ball is drawn from this drum. Players win by correctly guessing some or all of the balls that will be selected in weekly drawings. The payout value of the grand prize depends on the number of tickets sold. If more than one ticket matches all the balls, the grand prize payoff is divided evenly among all the grand prize tickets.</p>
 <p>The profit is the amount a player wins minus the cost to play ($2 ). So, if a person wins a prize of $4, their profit is $2. If a person loses, their profit is $ – 2. We will assume that the grand prize is $200,000,000—although in many drawings it will be much less than this.</p>
 <p>The table below illustrates the profit for all possible outcomes in a drawing where the grand prize is $200,000,000. The symbol “O” represents one white ball was correctly guessed, and the symbol <span style="color:red;">P</span> represents that the powerball was correctly guessed.</p>
@@ -1342,9 +1331,7 @@ Sum:<span class="math inline">\(\bar x \approx 3.5030\)</span>
 <p>The standard deviation measures how spread out the profits are. On average, we can expect profits to be about $15,115.36 away from the mean profit of $ – 0.50. The standard deviation is so large in this example because of all the outliers: Every positive profit ($2, $5, $98, and so on) occurs so rarely as to qualify to be an outlier. In addition, the profit $199,999,998 is a very large outlier. Almost everyone who plays has a profit of $ – 2, however, so the vast majority of the data aren’t spread out at all. Recall from Lesson 3 that the standard deviation is not resistant to outliers. Powerball profits are a rather dramatic example of this lack of resistance.</p>
 <p>The population mean is also called the <strong>expected value</strong>. How do we interpret the population mean or expected value of <span class="math inline">\(\mu=\$-0.4981\)</span>? If you played Powerball, buying one ticket every week, forever, then the mean of your winnings would be very close to $ – 0.50. This takes into account that on rare occasions—about once in every 175 million weeks—you would win the jackpot. Most of the time (about 97% of the time,) you would win nothing! In the long run, if you look at your mean profit, your financial situation would be the same whether you were to throw 50 cents away every week or whether you were to play Powerball each week. Of course, this assumes that you live forever and always play. In practice, however, most people do not live forever playing Powerball. Most likely, you will lose much more than you win.</p>
 <p>What about those who have won? Read one of the Powerball winner’s story, in the following (hidden) optional readings.</p>
-</div>
-<div id="optional-lottery-explorations-hidden" class="section level4">
-<h4>Optional Lottery Explorations (Hidden)</h4>
+<h4 id="optional-lottery-explorations-hidden">Optional Lottery Explorations (Hidden)</h4>
 <a href="javascript:showhide('Q18')"><span style="font-size:8pt;">Click Here to Explore this Optional Section</span></a>
 <div id="Q18" style="display:none;">
 <p>The following story describe how winning a huge Powerball jackpot changed the life of Jack Whittaker, for the worse.</p>
@@ -1352,6 +1339,7 @@ Sum:<span class="math inline">\(\bar x \approx 3.5030\)</span>
 </div>
 <p><br></p>
 </div>
+<p><br></p>
 </div>
 </div>
 <div id="summary" class="section level2">

@@ -1294,7 +1294,7 @@ $$
 \end{array}
 $$
 
-We started with an requirement that $1=2$ is a true statement.  We applied valid algebraic operations at each step.  In the end, we found that $1=1$, which is certainly no contradiction.  Logically, have we shown that $1=2$?
+We started with a requirement that $1=2$ is a true statement.  We applied valid algebraic operations at each step.  In the end, we found that $1=1$, which is certainly no contradiction.  Logically, have we shown that $1=2$?
 
 <div class="QuestionsHeading">Answer the following question:</div>
 <div class="Questions">
