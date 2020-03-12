@@ -192,7 +192,7 @@ If the row and column variable are independent, then no matter which row you con
 
 <div class="SoftwareHeading">Excel Instructions</div>
 <div class="Summary">
-- The Chi-Square statistic, degrees of freedom, and $P$-value of the hypotheiss test are all displayed to the right of the where the data is entered in. .  The data for this example will look like:
+- The Chi-Square statistic, degrees of freedom, and $P$-value of the hypotheiss test are all displayed to the right of the where the data is entered in.  The data for this example will look like:
 
 <img src="./Images/Excel-Chi-Square-Results.png">
 
@@ -210,7 +210,7 @@ The following requirements must be met in order to conduct a $\chi^2$ test of in
 1. You must use simple random sampling to obtain a sample from a single population.
 2. Each expected count must be greater than or equal to 5.
 
-A table of expected counts is found starting in cell U4 (scroll to the right of the data entry area and hypothesis test results). If one of the expected counts is less than 5 the cell will be red, otherwise they all remain gray as seen here:
+A table of expected counts is found starting in cell S4 (scroll to the right of the data entry area and hypothesis test results). 
 
 <img src="./Images/Excel-Chi-Req-Expected-Counts.PNG">
 

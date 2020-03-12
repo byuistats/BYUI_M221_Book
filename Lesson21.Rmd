@@ -110,7 +110,7 @@ When the points in a scatterplot follow a straight pattern, we say that there is
 
 **Estuarine Crocodile Data**
 
-Data for estuarine, or saltwater, crocodiles is given in the file [EstuarineCrocodile](./Data/EstuarineCrocodile.xlsx).  We will illustrate the relationship between the head length of the crocodiles and their body lengths by creating a scatterplot.
+Data for estuarine, or saltwater, crocodiles is given in the file [EstuarineCrocodiles(Modified).xlsx](./Data/Estuarine_Crocodile_(Modified).xlsx).  We will illustrate the relationship between the head length of the crocodiles and their body lengths by creating a scatterplot.
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <!-- {{Software_Filter | PageName=Scatterplot }} -->
@@ -321,7 +321,7 @@ Using any cell in an excel page you can calculate the Correlation coefficient.  
 
 <img src="./Images/OldFaithfulCorrelation-Excel.png">
 
-An easier way to do this is to use the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx).  After entering the data in the first two columns in the Linear Regression worksheet, the correlation coefficient is given as "r" in cell F7 of that spreadsheet.
+An easier way to do this is to use the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx).  After entering the data in the first two columns in the Linear Regression worksheet, the correlation coefficient is given as "r" in cell G7 of that spreadsheet.
 <br>
 
 </div>
@@ -564,74 +564,74 @@ Each point in the plot represents both the actual eruption time and the wait tim
 </div>
 <br>
 
-## Covariance
+<!-- ## Covariance -->
 
-The English idiom, "Don't put all your eggs in one basket" counsels you to avoid investing all your time or money in one thing.  It is better to spread your resources across many opportunities to avoid losing everything.  This advice is very appropriate in the financial markets.
+<!-- The English idiom, "Don't put all your eggs in one basket" counsels you to avoid investing all your time or money in one thing.  It is better to spread your resources across many opportunities to avoid losing everything.  This advice is very appropriate in the financial markets. -->
 
-When considering a portfolio of stocks and bonds, it is wise to diversify the investments.  If one company or one sector of the economy declines, a diversified portfolio involving many different stocks and bonds can help minimize losses.  It is important for investors to understand the risk associated with a particular portfolio.  We can use the variability of the investments as a measure of the risk of a portfolio.  
+<!-- When considering a portfolio of stocks and bonds, it is wise to diversify the investments.  If one company or one sector of the economy declines, a diversified portfolio involving many different stocks and bonds can help minimize losses.  It is important for investors to understand the risk associated with a particular portfolio.  We can use the variability of the investments as a measure of the risk of a portfolio.   -->
 
-In a financial market, investments do not act independently; they vary together.  For example, if the value of Apple Computers' stock drops, Microsoft's stock is also likely to decrease in value.  When making investment decisions, it is important to take into account the interrelationships among the investments.  
+<!-- In a financial market, investments do not act independently; they vary together.  For example, if the value of Apple Computers' stock drops, Microsoft's stock is also likely to decrease in value.  When making investment decisions, it is important to take into account the interrelationships among the investments.   -->
 
-The **covariance** is a measure of how two variables (such as stock returns) vary together.  The covariance of two variables, $X$ and $Y$, is calculated by multiplying the following three items together:
-- the correlation coefficient of $X$ and $Y$
-- the standard deviation of $X$, and
-- the standard deviation of $Y$   
+<!-- The **covariance** is a measure of how two variables (such as stock returns) vary together.  The covariance of two variables, $X$ and $Y$, is calculated by multiplying the following three items together: -->
+<!-- - the correlation coefficient of $X$ and $Y$ -->
+<!-- - the standard deviation of $X$, and -->
+<!-- - the standard deviation of $Y$    -->
 
-We compute the covariance for a data set using the formula:
-$$
-s_{xy} = r \cdot s_x \cdot s_y
-$$
+<!-- We compute the covariance for a data set using the formula: -->
+<!-- $$ -->
+<!-- s_{xy} = r \cdot s_x \cdot s_y -->
+<!-- $$ -->
 
-### Example: Math Self Efficacy
+<!-- ### Example: Math Self Efficacy -->
 
-As an example, we will compute the covariance for Goodwin's data.  The correlation coefficient was determined to be $r = 0.728$.  Using the file [MathSelfEfficacy.xlsx](./Data/MathSelfEfficacy.xlsx), we compute the standard deviation of the mean confidence rating ($X$) to be $s_x = 0.939$ and the standard deviation of the test scores ($Y$) to be $s_y = 16.37$.  Applying the equation for the covariance of a collection of data, we get
-$$ 
-s_{xy} = r \cdot s_x \cdot s_y = 0.728 \cdot 0.939 \cdot 16.37 = 11.19
-$$
+<!-- As an example, we will compute the covariance for Goodwin's data.  The correlation coefficient was determined to be $r = 0.728$.  Using the file [MathSelfEfficacy.xlsx](./Data/MathSelfEfficacy.xlsx), we compute the standard deviation of the mean confidence rating ($X$) to be $s_x = 0.939$ and the standard deviation of the test scores ($Y$) to be $s_y = 16.37$.  Applying the equation for the covariance of a collection of data, we get -->
+<!-- $$  -->
+<!-- s_{xy} = r \cdot s_x \cdot s_y = 0.728 \cdot 0.939 \cdot 16.37 = 11.19 -->
+<!-- $$ -->
 
-The covariance of $X$ and $Y$ will be positive if increasing values of $X$ correspond to increasing values of $Y$.  This is exactly what happened in Goodwin's data.  On the other hand, the covariance will be negative if an increase in $X$ tends to correspond with a decrease in $Y$.  
+<!-- The covariance of $X$ and $Y$ will be positive if increasing values of $X$ correspond to increasing values of $Y$.  This is exactly what happened in Goodwin's data.  On the other hand, the covariance will be negative if an increase in $X$ tends to correspond with a decrease in $Y$.   -->
 
-<div class="QuestionsHeading">Answer the following question:</div>
-<div class="Questions">
-17. Is it possible for the covariance of $X$ and $Y$ to be negative when the correlation coefficient is positive?  If so, how could this occur?
+<!-- <div class="QuestionsHeading">Answer the following question:</div> -->
+<!-- <div class="Questions"> -->
+<!-- 17. Is it possible for the covariance of $X$ and $Y$ to be negative when the correlation coefficient is positive?  If so, how could this occur? -->
 
-<a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q17" style="display:none;">
-- It is impossible for the covariance of $X$ and $Y$ to be negative when the correlation coefficient is positive.  The covariance is the correlation coefficient multiplied by the standard deviations.  Since the standard deviation of any variable cannot be negative, the sign of the correlation coefficient will be the same as the sign of the covariance.
-</div>
-&nbsp;
-</div>
-<br>
+<!-- <a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a> -->
+<!-- <div id="Q17" style="display:none;"> -->
+<!-- - It is impossible for the covariance of $X$ and $Y$ to be negative when the correlation coefficient is positive.  The covariance is the correlation coefficient multiplied by the standard deviations.  Since the standard deviation of any variable cannot be negative, the sign of the correlation coefficient will be the same as the sign of the covariance. -->
+<!-- </div> -->
+<!-- &nbsp; -->
+<!-- </div> -->
+<!-- <br> -->
 
-If an investor wants to purchase two stocks, and they want to reduce their risk, they can choose two stocks with a negative covariance.  If the return on one stock decreases, the return on the other stock would tend to increase.  This diversification can help protect the investor when market conditions change.
+<!-- If an investor wants to purchase two stocks, and they want to reduce their risk, they can choose two stocks with a negative covariance.  If the return on one stock decreases, the return on the other stock would tend to increase.  This diversification can help protect the investor when market conditions change. -->
 
-### Example: Microsoft Versus Apple
+<!-- ### Example: Microsoft Versus Apple -->
 
-Suppose you are considering investing in two stocks.  The annual percent change in the price of Microsoft stock has a mean of 33.48% with a standard deviation of 49.31%.  For Apple, the mean is 42.03% and the standard deviation is 80.84%.  The correlation of these variables is 0.395.  Find the covariance of these two stocks.
+<!-- Suppose you are considering investing in two stocks.  The annual percent change in the price of Microsoft stock has a mean of 33.48% with a standard deviation of 49.31%.  For Apple, the mean is 42.03% and the standard deviation is 80.84%.  The correlation of these variables is 0.395.  Find the covariance of these two stocks. -->
 
-$$
-s_{xy} = r \cdot s_x \cdot s_y = 0.395 \cdot 49.31 \cdot 80.84 = 1574.56
-$$
+<!-- $$ -->
+<!-- s_{xy} = r \cdot s_x \cdot s_y = 0.395 \cdot 49.31 \cdot 80.84 = 1574.56 -->
+<!-- $$ -->
 
-This number is difficult to interpret directly, but it gives an estimate of the joint variability in the prices of these stocks.
+<!-- This number is difficult to interpret directly, but it gives an estimate of the joint variability in the prices of these stocks. -->
 
-### Sample Statistic and Population Parameter
+<!-- ### Sample Statistic and Population Parameter -->
 
-The sample correlation coefficient, $r$, is an estimate of the unknown population correlation coefficient, $\rho$.  In a simiilar manner, we will consider the sample covariance and population covariance.
+<!-- The sample correlation coefficient, $r$, is an estimate of the unknown population correlation coefficient, $\rho$.  In a simiilar manner, we will consider the sample covariance and population covariance. -->
 
-The sample covariance of the variables $X$ and $Y$ is denoted by the symbol $s_{xy}$.  Like all sample statistics, it is computed directly from specific data.  If we define the sample standard deviation of $X$ to be $s_x$ and the sample standard deviation of $Y$ to be $s_y$, then we can write the sample covariance of $X$ and $Y$ as:
-$$
-s_{xy} = r \cdot s_x \cdot s_y
-$$
+<!-- The sample covariance of the variables $X$ and $Y$ is denoted by the symbol $s_{xy}$.  Like all sample statistics, it is computed directly from specific data.  If we define the sample standard deviation of $X$ to be $s_x$ and the sample standard deviation of $Y$ to be $s_y$, then we can write the sample covariance of $X$ and $Y$ as: -->
+<!-- $$ -->
+<!-- s_{xy} = r \cdot s_x \cdot s_y -->
+<!-- $$ -->
 
-Using similar notation for the population standard deviation of the random variables $X$ and $Y$, we can write the population covariance as:
-$$
-\sigma_{xy} = \rho \cdot \sigma_x \cdot \sigma_y
-$$
+<!-- Using similar notation for the population standard deviation of the random variables $X$ and $Y$, we can write the population covariance as: -->
+<!-- $$ -->
+<!-- \sigma_{xy} = \rho \cdot \sigma_x \cdot \sigma_y -->
+<!-- $$ -->
 
-The sample statistic $s_{xy}$ is an estimator of the population parameter $\sigma_{xy}$.  We usually do not know the value of $\sigma_{xy}$.  Sometimes, we denote the population covariance as $Cov(X,Y)$ instead of $\sigma_{xy}$.
+<!-- The sample statistic $s_{xy}$ is an estimator of the population parameter $\sigma_{xy}$.  We usually do not know the value of $\sigma_{xy}$.  Sometimes, we denote the population covariance as $Cov(X,Y)$ instead of $\sigma_{xy}$. -->
 
-<br>
+<!-- <br> -->
 
 ## Summary
 
@@ -642,7 +642,7 @@ The sample statistic $s_{xy}$ is an estimator of the population parameter $\sigm
 
 - The **correlation coefficient ($r$)** is a number between $-1$ and $1$ that tells us the direction and strength of the linear association between two variables. A positive $r$ corresponds to a **positive association** while a negative $r$ corresponds to a **negative association**. A value of $r$ closer to $-1$ or $1$ indicates a stronger association than a value of $r$ closer to zero.
 
-- The **covariance** is a measure of how two variables vary together. The formula for the covariance is $s_{xy}=r \cdot s_x \cdot s_y$.
+<!-- - The **covariance** is a measure of how two variables vary together. The formula for the covariance is $s_{xy}=r \cdot s_x \cdot s_y$. -->
 
 <br>
 </div>
