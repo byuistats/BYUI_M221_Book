@@ -269,6 +269,7 @@ Stop and think about this for a minute.  This juvenile sarcosuchus is estimated 
 <div class="Summary">
 **To draw the regression line on a scatterplot in Excel:**
 
+The Math221 Statistics Toolbox has a line automatically drawn on the scatter plot it provides. However, to draw a line on your own in Excel, after creating the scatter plot you would follow these steps:
 - Right-click on one of the data points illustrated in your scatterplot.
 - Choose the menu option "Add Trendline..."
 - Close the dialog box that appears.
