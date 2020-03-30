@@ -186,7 +186,7 @@ There are two populations, and it is important to illustrate both of them separa
 <div class="Summary">
 **To visualize the distributions of the two sample simultaneously:**
 
-Use the "Two-sample t Test" tab of the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) to create separate histograms, one for each group. You can enter a label for Group1 in L7, and a label for Group 2 in L8. 
+Use the "Two-sample t Test" tab of the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) to create separate histograms, one for each group. You can enter a label for Group1 in L7, and a label for Group 2 in L8. 
 
 <img src="./Images/ReadingPractices-Boxplots-Excel.png">
 
@@ -237,7 +237,7 @@ The test statistic for a hypothesis test comparing two means with independent sa
 <div class="Summary">
 **The following instructions will help you conduct a hypothesis test for two means with independent samples in Excel.**
 
-Use the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) to do the following:
+Use the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) to do the following:
 
 - Click on the tab labeled "Two-sample t-test"
 - Paste the data from the first group in the appropriate part of Column A
@@ -639,7 +639,7 @@ In this example, we compute the 95% confidence interval for the difference in th
 <div class="Summary">
 **To compute a 95% confidence interval for two independent samples in Excel:**
 
-- Open the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx)
+- Open the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx)
 - Click on the tab labeled, "Two-sample t-test"
 - Paste the data for the first group in the appropriate place of column A
 - Paste the data for group 2 in column B

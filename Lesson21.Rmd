@@ -119,7 +119,7 @@ Data for estuarine, or saltwater, crocodiles is given in the file [EstuarineCroc
 <div class="Summary">
 **To make a scatterplot in Excel:**
 
-- Open the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) file and select the "Linear Regression" tab.
+- Open the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) file and select the "Linear Regression" tab.
 - Put the variable that you want on the x-axis (head length) in column A, labeled as the "X" column.
 - Put the variable that you want on the y-axis (body length) in column B, labeled as the "Y" column.  This is the value you want to predict.
 - The points in the scatterplot will update with your data.
@@ -321,7 +321,7 @@ Using any cell in an excel page you can calculate the Correlation coefficient.  
 
 <img src="./Images/OldFaithfulCorrelation-Excel.png">
 
-An easier way to do this is to use the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx).  After entering the data in the first two columns in the Linear Regression worksheet, the correlation coefficient is given as "r" in cell G7 of that spreadsheet.
+An easier way to do this is to use the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx).  After entering the data in the first two columns in the Linear Regression worksheet, the correlation coefficient is given as "r" in cell G7 of that spreadsheet.
 <br>
 
 </div>
