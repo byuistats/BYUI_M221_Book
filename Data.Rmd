@@ -11,7 +11,7 @@ This page contains the data files that are used throughout the course in the wik
 
 <br/>
 
-&nbsp; [**Math 221 Statistics Toolbox**](./Data/Math221StatisticsToolbox.xlsx)
+&nbsp; [**Math 221 Statistics Toolbox**](./Data/Math221StatisticsToolbox.xltx)
 
 <br/>
 

@@ -64,6 +64,8 @@ navbar:
         - text: "Lesson 24: Unit 4 Review"
           href: Lesson24.html
   right:
+    - text: Toolbox
+      href: ./Data/Math221StatisticsToolbox.xltx 
     - text: Data
       href: Data.html
 output: 
