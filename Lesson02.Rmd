@@ -226,77 +226,32 @@ In a **designed experiment**, researchers manipulate the conditions that the par
 
 **Jonas Salk's First Polio Vaccine Trial**
 
-The Salk Polio Trials comprised one of the most famous designed experiments in history. Please follow the link to view the following video (6 min 31 sec). Before you do, please review the questions that follow it. Once you have completed the video, please answer the questions. (Note: You do not need to submit answers to the questions, but do consider them carefully. They are designed to help you think about various aspects of the Statistical Process.)
+Beginning around 1916 and through the 1950s, a mysterious plague attacked infants and children. Symptoms included excruciating muscle pain and a stiff neck. This illness, which became known as poliomyelitis or simply “polio,” left children disfigured, paralyzed, and sometimes even dead.
 
-[Jonas Salk Polio Vaccine Trial](http://statistics.byuimath.com/index.php?title=Jonas_Salk_Polio_Vaccine_Trial){target="_blank"}
+While working as a researcher at the University of Pittsburgh School of Medicine, Dr. Jonas E. Salk developed a vaccine that might help prevent the spread of this disease. He conducted what has become one of the most famous designed experiments in history.
 
-Answer the questions about the video in each of the following steps of the Statistical Process.
+This short video below  provides a compelling summary of the famous Jonas Salk vaccine experiment. As you watch, notice each of the 5 steps of a statistical study in this study.
+<br>
+<iframe id="kaltura_player_1579210457" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/9828732/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1579210457&entry_id=0_49lsphky" width="400" height="285" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+As explained in the video, in the first Salk trial almost 1.1 million children participated in the study. Even though the sample size was large, flaws in the study design rendered the results useless. 
+
+Undaunted, Dr. Salk fixed the problems with the design and enrolled hundreds of thousands of additional children for the second phase of his study. In all, over 1.8 million infants and children participated in this experiment, making it the largest drug trial to date.
 
 
 <img src="./Images/Step1.png" width="100px;">
 
 **Step 1: Design the study.**
 
-1. What year did the Salk polio vaccine trials occur?
+The participants in a study are commonly called subjects. Sometimes subjects are called experimental units or simply units. In the Salk trials, the children who participated were the subjects.
 
-2. At that time, parents were afraid to let their children...
+Subjects (the children) were randomly assigned to one of two groups. The first group was given the experimental vaccine, the treatment. The treatment is the new or experimental condition that is imposed on the subjects. The subjects who receive the treatment make up the treatment group.
 
-3. How many children participated in the trial?
+The second group was given a control or placebo.  In this study, the control was an injection that looked just like the vaccine, but contained a harmless saline solution. The control group or placebo group is made up of the subjects assigned to receive the control.
 
-4. The children were separated into two groups. What did the video say would practically guarantee that the two groups would be nearly identical?
+This study was double blind. Neither the children’s parents nor their doctors knew whether a particular child received the treatment or the control. Both parties were blinded to this information.
 
-5. How was Salk's vaccine administered?
-
-
-<img src="./Images/Step2.png" width="100px;">
-
-**Step 2: Collect Data**
-
-6. What was the primary outcome for the researchers in the Salk trial?
-
-7. How did the researchers collect the data?
-
-
-<img src="./Images/Step3.png" width="100px;">
-
-**Step 3: Describe the Data**
-
-8. Complete the quote from the video:  As the Salk trial progressed, it did appear as if the group that got the vaccine had ________ instances of polio.
-
-
-<img src="./Images/Step4.png" width="100px;">
-
-**Step 4: Make Inferences**
-
-9. Complete the quote from the video:  As the researchers tabulated the data, they found that the differences were...
-
-
-<img src="./Images/Step5.png" width="100px;">
-
-**Step 5: Take Action.**
-
-10.  What action would you have taken at the conclusion of the Salk trial?
-
-Elizabeth Toy, a former BYU-Idaho teacher, was one of the children in the Salk trials.
-
-Jonas Salk's vaccine trial was a great example of a designed experiment. However, it did not start out that way. Initially, there were some serious flaws in their design. Other researchers sharply criticized these errors. Almost 1.1 million children participated in the initial study. Even though the sample size was large, the flawed study design made the data useless!
-
-**Jonas Salk's Second Study**
-
-After fixing the design, Jonas Salk enrolled hundreds of thousands of additional children for the second phase of his study. Consider how Jonas Salk applied the Statistical Process in this second study.
-
-
-
-
-<span id="Design the Study"></span>**Step 1: Design the study**
-
-<span id="Placebo"></span>Jonas Salk enrolled hundreds of thousands of children in his second study. The participants in a study are commonly called subjects. Sometimes subjects are called **experimental units** or simply units. In the Salk trials, the children who participated are the **subjects**.
-
-The subjects were randomly assigned to one of two groups. The first group was given the experimental vaccine, the treatment. The treatment is the new or experimental condition that is imposed on the subjects. The subjects who receive the treatment make up the treatment group.
-
-The second group was given a **placebo**. <nowiki>*Placebo*</nowiki> is another name for a control. In this study, the placebo was an injection that looked just like the vaccine, but contained a harmless saline solution. The **placebo group** or *control group* is made up of the subjects assigned to receive the placebo.
-
-This study was **double blind**. Neither the children's parents nor their doctors knew whether a particular child received the treatment or the control. Both parties were *blinded* to this information.
+Because the children were assigned to the groups randomly, the two groups should be similar. If the vaccine is not effective, the number of future cases of polio should be about the same in each group. However, if Salk’s vaccine helped to prevent the spread of polio, then fewer cases should occur in the vaccinated group.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
@@ -401,7 +356,7 @@ $$ \displaystyle{\frac{142}{201229} = 0.000~705~7} $$
 <a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 
 <div id="Q6" style="display:none;">
-- The proportion of children in the placebo group that develop polio during the study period  was more than double the proportion of children in the treatment group that developed polio during the study period. That is quite a large difference.
+- The proportion of children in the placebo group that develop polio during the study period  was more than double the proportion of children in the treatment group that developed polio during the study period. That suggests that the treatment is effective in reducing the proportion of children that will develop polio.
 </div>
 <br>
 </div>
@@ -412,14 +367,22 @@ $$ \displaystyle{\frac{142}{201229} = 0.000~705~7} $$
 
 **Step 4: Make inferences**
 
-When the hypothesis test to compare the proportions was conducted, the probability of observing a difference in these proportions (between those who received the vaccine and those who received the placebo) at least as extreme as the results Salk obtained was computed. The probability was 0.00000000093. Because this probability is so small, it is highly unlikely that these results are due to chance. This probability is called the $P$-value, which will be discussed more later.
+Careful statistical analysis of the records suggested that this difference was so great that it was attributable to the vaccine and not to chance. Assuming that the vaccine had no effect, the probability that the difference in the proportions between the two groups would be at least as extreme as the difference Dr. Salk observed was very low: 0.00000000093. Because this probability is so small, it is highly unlikely that these results are due to chance. This probability is called the P-value, and it will be discussed in Unit 2.
+
+<div class="Emphasis">
+<br><center>
+For now it is only important to *be aware* of the P-value. In Unit 2 students will learn how to compute and interpret this value.
+</center>
+<br>
+</div>
+<br>
 
 
 <img src="./Images/Step5.png" width="100px;">
 
 **Step 5: Take action**
 
-Once it was clear that the vaccine was effective, children who were unvaccinated or had received the placebo were given Salk's vaccine. Since 1954, there has been a marked decrease in the number of polio cases worldwide (Offit, 2005). Public health researchers continue to work to eradicate this disease around the world.
+Once it was clear that the vaccine was effective, children who were unvaccinated or had received the placebo were given Salk's vaccine. Since 1954, there has been a marked decrease in the number of polio cases worldwide (Offit, 2005). Public health researchers are striving to eradicate this disease entirely.
 
 <br>
 
