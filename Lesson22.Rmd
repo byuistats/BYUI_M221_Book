@@ -151,12 +151,8 @@ To answer this question, paleontologist Paul Sereno teamed up with modern crocod
 <div class="message Note">This video is an hour and a half long. **YOU DO NOT NEED TO WATCH THE ENTIRE VIDEO**. Please watch only the last fifteen minutes, beginning at 1:19:00</div>
 <br>
 <br>
+
 <iframe id="kaltura_player_1578605835" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/41351812/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1578605835&entry_id=0_kh1juzmd" width="800" height="450" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
-
-<!-- [![](./Images/video-icon.png)](http://stream.byui.edu/VideoPlayer/BYUIplayer.html?StartCue=0&EndCue=5776&VideoName=1817_dvd&VideoType=libraryvideos) -->
-
-<!-- <img src="./Images/video-icon.png"> -->
-<!-- Need exported video -->
 
 ## Estuarine Crocodiles
 
