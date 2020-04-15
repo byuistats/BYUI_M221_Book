@@ -89,7 +89,7 @@ $$
 Residual = Y - \hat Y = Y - (b_0 + b_1 X)
 $$
 
-- To check all the requirements for bivariate inference you will need to create a **scatterplot** of $X$ and $Y$, a **residual plot**, and a **Q-Q plot of the residuals**. 
+- To check all the requirements for bivariate inference you will need to create a **scatterplot** of $X$ and $Y$, a **residual plot**, and a **histogram of the residuals**. 
 
 - We conduct a hypothesis test on bivariate data to know if there is a linear relationship between the two variables. To determine this, we test the slope ($\beta_1$) on whether or not it equals zero. The appropriate hypotheses for this test are:
 $$

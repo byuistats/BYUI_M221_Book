@@ -82,7 +82,7 @@ We want to make sure that there is no distinct curvature or other nonlinear char
 
 Consider the scatterplot of the estuarine crocodile data [EstuarineCrocodile(Modified).xlsx](./Data/Estuarine_Crocodile_(Modified).xlsx):
 
-<img src="./Images/EstuarineCrocodile-Scatterplot-RegLine-SPSS.png">
+<img src="./Images/EstuarineCrocodile-Scatterplot-RegLine-Excel.PNG">
 
 Notice how the data follow a linear shape.  This data set shows a particularly strong linear relationship.  In many cases, the data will show more spread than is illustrated here.
 
@@ -120,7 +120,7 @@ The residual is calculated for each data point, so you have one residual for eve
 <div class="Summary">
 **To make a residual plot in Excel do the following:**
 
-- Once you have already entered in the explanatory and response variables into the correct columns in the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) spreadsheet, you are given a scatter plot of residuals starting in cell S21, just below the Normal Q-Q plot.  
+- Once the explanatory and response variables are entered into the correct columns in the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) spreadsheet, you are given a scatter plot of residuals starting in cell S4, to the right of the hypothesis testing section.  
 - To create a residual plot on your own, you can highlight columns X and Y, then click on the Insert Ribbon, and then click on "Scatter" (or the icon that looks like a scatter plot).  You want the first choice (Scatter with only markers), so select the first scatter plot choice.
 <br>
 </div>
@@ -128,7 +128,7 @@ The residual is calculated for each data point, so you have one residual for eve
 
 The following image shows the residual plot for the estuarine crocodile data.
 
-<img src="./Images/EstuarineCrocodile-ResidualPlot-SPSS.png">
+<img src="./Images/EstuarineCrocodile-ResidualPlot-Excel.PNG">
 
 This residual plot shows random scatter. There is no obvious pattern in the data.  If linear regression is appropriate, then the residual plot will show no patterns and will consist of random scatter. If there is a pattern in the residuals, it suggests that linear regression is not appropriate.  
 
@@ -136,15 +136,16 @@ There are several patterns that could arise in a residual plot:
 
 - **Curvature**  If the residual plot shows curvature, that suggests that the data are not linearly related.
 - **Megaphone**  A megaphone shape occurs when points tend to be close together on one side of the graph and farther apart on the other side of the graph.  If there is a megaphone shape apparent in the residuals, it suggests that the variance of the error terms is not constant for all values of $X$.  It suggests that there is a difference in the spread of the residuals depending on the value of $X$.
-- **Outliers**  If there are outliers in the residual plot, that suggests that the error terms are not normally distributed.  This should also be apparent in the Q-Q plot of the residuals.
+- **Outliers**  If there are outliers in the residual plot, that suggests that the error terms are not normally distributed.  This should also be apparent in the scatterplot or histogram of the residuals.
 
-### Q-Q Plot of the Residuals
+### Histogram of the Residuals
 
-Once the residuals have been calculated in Excel, we can assess if they are normally distributed using a Q-Q plot.  We simply make a Q-Q plot of the residuals.  If the points in the Q-Q plot are close to the line, then we conclude that the residuals are normally distributed.
+Once the residuals have been calculated in Excel, we can assess if they are normally distributed using a histogram.  If the shape of the histogram of residuals does not show a distinct departure from a normal shape, we conclude the requirement of normal residuals has been met.Don't forget that you may need to try out various histograms with different number of bins to get a feel for the shape of the distribution of residuals.
 
-<img src="./Images/EstuarineCrocodile-QQplot-Residuals-SPSS.png">
+<img src="./Images/EstuarineCrocodile-Hist-Residuals-Excel.PNG">
 
-The Q-Q plot of the residuals for the estuarine crocodile data show a straight line.  We do not have evidence of nonnormality in the residuals.  We conclude that the residuals are normally distributed. Looking at a histogram of the residuals is another tool to help you assess whether the residuals are normally distributed.
+The histogram of the residuals using 7 bins does not show a distinct or extreme departure from a normal shape.  We do not have evidence of nonnormality in the residuals.  We conclude that the residuals are normally distributed. In more advanced classes you will use a tool called a Q-Q plot to assess whether residuals are normally distributed.
+
 
 ### Requirements Summary
 
@@ -175,8 +176,8 @@ The following table describes how to check each of the requirements above.
 <tr class="odd">
 <td><p>2.</p></td>
 <td><p>Normal Error Term</p></td>
-<td><p>Q-Q Plot of the Residuals</p></td>
-<td><p>Points in the Q-Q plot are close to the line</p></td>
+<td><p>Histogram of the Residuals</p></td>
+<td><p>A shape that is approximately normal</p></td>
 </tr>
 <tr class="even">
 <td><p>3.</p></td>
@@ -450,7 +451,7 @@ $$
 Residual = Y - \hat Y = Y - (b_0 + b_1 X)
 $$
 
-- To check all the requirements for bivariate inference you will need to create a **scatterplot** of $X$ and $Y$, a **residual plot**, and a **Q-Q plot of the residuals**. 
+- To check all the requirements for bivariate inference you will need to create a **scatterplot** of $X$ and $Y$, a **residual plot**, and a **histogram of the residuals**. 
 
 - We conduct a hypothesis test on bivariate data to know if there is a linear relationship between the two variables. To determine this, we test the slope ($\beta_1$) on whether or not it equals zero. The appropriate hypotheses for this test are:
 $$
