@@ -154,10 +154,7 @@ To answer this question, paleontologist Paul Sereno teamed up with modern crocod
 <br>
 <br>
 
-[![](./Images/video-icon.png)](http://stream.byui.edu/VideoPlayer/BYUIplayer.html?StartCue=0&EndCue=5776&VideoName=1817_dvd&VideoType=libraryvideos)
-
-<!-- <img src="./Images/video-icon.png"> -->
-<!-- Need exported video -->
+<iframe id="kaltura_player_1578605835" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/41351812/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1578605835&entry_id=0_kh1juzmd" width="800" height="450" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
 
 ## Estuarine Crocodiles
 
