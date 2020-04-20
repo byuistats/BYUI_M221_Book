@@ -105,11 +105,11 @@ Before collecting data, researchers make a hypothesis, or an educated guess abou
 
 #### Daniel's Experiment
 
-After taking Israel captive, Babylon's King Nebuchadnezzar asked his chief officer to bring Israelite children who were well favoured, and skilful in all wisdom, and cunning in knowledge, and understanding science to stand in the king's palaces [(Daniel 1:4)](https://www.lds.org/scriptures/ot/dan/1.4?lang=eng#3){target="_blank"}.  To aid their preparation, Nebuchadnezzar planned to feed them his meat and wine for three years [(Daniel 1:5)](https://www.lds.org/scriptures/ot/dan/1.5?lang=eng#4){target="_blank"}.
+After taking Israel captive, Babylon's King Nebuchadnezzar asked his chief officer to bring Israelite children who were well favoured, and skilful in all wisdom, and cunning in knowledge, and understanding science to stand in the king's palaces [(Daniel 1:4)](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.4?lang=eng#3){target="_blank"}.  To aid their preparation, Nebuchadnezzar planned to feed them his meat and wine for three years [(Daniel 1:5)](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.5?lang=eng#4){target="_blank"}.
 
-Daniel did not want to defile himself by partaking of the king's meat and wine. He asked permission to eat pulse[^1] and drink water instead. His supervisor, Melzar, was afraid to displease the king. He thought that after eating pulse and water, the selected Israelites would look worse than their peers, and he would be punished [(Daniel 1:8-10)](https://www.lds.org/scriptures/ot/dan/1.8-10?lang=eng#3){target="_blank"}.
+Daniel did not want to defile himself by partaking of the king's meat and wine. He asked permission to eat pulse[^1] and drink water instead. His supervisor, Melzar, was afraid to displease the king. He thought that after eating pulse and water, the selected Israelites would look worse than their peers, and he would be punished [(Daniel 1:8-10)](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.8-10?lang=eng#3){target="_blank"}.
 
-With an understanding of the background of the situation, Daniel proposed an experiment. He said, Prove thy servants, I beseech thee, ten days; and let them give us pulse to eat, and water to drink. Then let our countenances be looked upon before thee, and the countenance of the children that eat of the portion of the king's meat: and as thou seest, deal with thy servants [(Daniel 1:12-13.)](https://www.lds.org/scriptures/ot/dan/1.12-13?lang=eng#3){target="_blank"}.  In short, Daniel's implied research question can be stated as: Will those who eat pulse and drink water appear healthier than those who eat the king's meat and drink his wine? Melzar agreed to the experiment.
+With an understanding of the background of the situation, Daniel proposed an experiment. He said, Prove thy servants, I beseech thee, ten days; and let them give us pulse to eat, and water to drink. Then let our countenances be looked upon before thee, and the countenance of the children that eat of the portion of the king's meat: and as thou seest, deal with thy servants [(Daniel 1:12-13.)](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.12-13?lang=eng#3){target="_blank"}.  In short, Daniel's implied research question can be stated as: Will those who eat pulse and drink water appear healthier than those who eat the king's meat and drink his wine? Melzar agreed to the experiment.
 
 <div class="QuestionsHeading">Answer the following question:</div>
 <div class="Questions">
@@ -143,7 +143,7 @@ Daniel's study design required that data be collected at the end of 10 days. Mel
 
 When we describe data, we use any tools appropriate to the situation. This can include creating graphs or calculating statistics to help understand or visualize the data.
 
-For Daniel's experiment, the data are described in [Daniel 1:15](https://www.lds.org/scriptures/ot/dan/1.15?lang=eng#3){target="_blank"}:  And at the end of ten days [the] countenances [of those who ate pulse] appeared fairer and fatter in flesh than all the children which did eat the portion of the king's meat.
+For Daniel's experiment, the data are described in [Daniel 1:15](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.15?lang=eng#3){target="_blank"}:  And at the end of ten days [the] countenances [of those who ate pulse] appeared fairer and fatter in flesh than all the children which did eat the portion of the king's meat.
 
 <br>
 
@@ -153,7 +153,7 @@ For Daniel's experiment, the data are described in [Daniel 1:15](https://www.lds
 
 Inference is the process of using the information contained in a sample from a population to make a general statement (i.e. to infer something) about the entire population. Later in the course we will learn techniques that make this type of analysis possible.
 
-Melzar made an inference. Based on the results of the sample, he determined that (in general) those who eat pulse and drink water will be healthier than those who eat the king's meat and drink his wine [Daniel 1:15-16](https://www.lds.org/scriptures/ot/dan/1.15-16?lang=eng#3){target="_blank"}.
+Melzar made an inference. Based on the results of the sample, he determined that (in general) those who eat pulse and drink water will be healthier than those who eat the king's meat and drink his wine [Daniel 1:15-16](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.15-16?lang=eng#3){target="_blank"}.
 
 <br>
 
@@ -163,11 +163,11 @@ Melzar made an inference. Based on the results of the sample, he determined that
 
 The goal of a statistical analysis is to determine which action to take in a particular situation. Actions can include many things: launching an internet ad campaign (or not), expressing gratitude (or not), getting vaccinated (or not), etc.
 
-Melzar took action as described in [Daniel 1:16](https://www.lds.org/scriptures/ot/dan/1.16?lang=eng#3){target="_blank"}:  Thus Melzar took away the portion of their meat, and the wine that they should drink; and gave [all the Israelite children] pulse.
+Melzar took action as described in [Daniel 1:16](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.16?lang=eng#3){target="_blank"}:  Thus Melzar took away the portion of their meat, and the wine that they should drink; and gave [all the Israelite children] pulse.
 
 Was the experiment a success?  
 
-"Now at the end of the days that the king had said he should bring them in the king communed with them; and among them all was found none like Daniel, Hananiah, Mishael, and Azariah And in all matters of wisdom and understanding, that the king enquired of them, he found them ten times better than all the magicians and astrologers that were in all his realm [Daniel 1:18-20](https://www.lds.org/scriptures/ot/dan/1.18-20?lang=eng#3){target="_blank"}.
+"Now at the end of the days that the king had said he should bring them in the king communed with them; and among them all was found none like Daniel, Hananiah, Mishael, and Azariah And in all matters of wisdom and understanding, that the king enquired of them, he found them ten times better than all the magicians and astrologers that were in all his realm" [Daniel 1:18-20](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.18-20?lang=eng#3){target="_blank"}.
 
 <br>
 
@@ -181,7 +181,7 @@ Daniel's experience can also help you learn the Statistical Process. Look at the
 
 <img src="./Images/StepsAll.png">
 
-| &nbsp;  | Pnuemonic    | Actual Process Step    |
+| &nbsp;  | Pneumonic    | Actual Process Step    |
 |---------|--------------|------------------------|
 | Step 1: | **D**aniel   | **D**esign the study   |
 | Step 2: | **C**an      | **C**ollect data       |
@@ -222,7 +222,7 @@ Most research projects can be classified into one of two basic categories: obser
 
 ### Designed Experiments
 
-In a **designed experiment**, researchers manipulate the conditions that the participants experience. They often do this by randomly assigning subjects to one of two groups, a "treatment" group and a "control" group. The experiment is conducted by applying some kind of treatment to the subjects in the treatment group, and observing the effect of the treatment. Those in the control group do not receive the treatment and are also observed. In this way researchers can determine the effects of the treatment. The following example illustrates the use of these two groups.
+In a **designed experiment**, researchers manipulate the conditions that the participants experience. They often do this by randomly assigning subjects to one of two groups, a "treatment" group and a "control" group. The experiment is conducted by applying some kind of treatment to the subjects in the treatment group and observing the effect of the treatment. Those in the control group do not receive the treatment and are also observed. In this way researchers can determine the effects of the treatment. The following example illustrates the use of these two groups.
 
 **Jonas Salk's First Polio Vaccine Trial**
 
@@ -345,7 +345,7 @@ $H_a$:  The proportion of children in the *treatment group* who develop polio wi
 
 **Step 2: Collect data.**
 
-The researchers followed up with each child to determine if they contracted polio. They recorded the number of children in each group that developed polio during the study period. Not all of Salk's experiments were double-blind. Here is a summary of the results from the regions where a double-blind study was conducted (Francis et al., 1955; Brownlee, 1955 ):
+The researchers followed up with each child to determine if they contracted polio. They recorded the number of children in each group that developed polio during the study period. Not all of Salk's experiments were double-blind. Here is a summary of the results from the regions where a double-blind study was conducted (Francis et al., 1955; Brownlee, 1955):
 
 
 <table>
@@ -531,7 +531,7 @@ After auditors collect a sample and compile the data, they review the evidence. 
 
 Auditors use the information drawn from the sample to form an opinion about the population. Whenever sample data is used to infer a characteristic of a population, it is called making an inference. **Inferential statistics** represents a collection of methods that can be used to make inferences about a population. Based on the documents reviewed, the auditors assess if the company is conducting its business in a proper manner.
 
-When conducting an audit, the implicit assumption is that transactions have been posted properly. This foundational assumption is called the null hypothesis. The **null hypothesis** is a statement about the population that represents the status quo, convential wisdom, or what is generally accepted as true. In the audit we're considering, the null hypothesis is
+When conducting an audit, the implicit assumption is that transactions have been posted properly. This foundational assumption is called the null hypothesis. The **null hypothesis** is a statement about the population that represents the status quo, conventional wisdom, or what is generally accepted as true. In the audit we're considering, the null hypothesis is
 
 $H_0$:  ImmunAvance's financial statements are materially correct.
 
@@ -601,7 +601,7 @@ There is not enough evidence to suggest that ImmunAvance's financial statements 
 
 ## References
 
-Bible Dictionary, “Pulse” at [http://lds.org/scriptures/bd/pulse](http://lds.org/scriptures/bd/pulse){target="_blank"}.
+Bible Dictionary, “Pulse” at [http://churchofjesuschrist.org/scriptures/bd/pulse](http://churchofjesuschrist.org/scriptures/bd/pulse){target="_blank"}.
 
 Brownlee, K. A. (1955). Statistics of the 1954 polio vaccine trials. Journal of the American Statistical Association, 50(272), pp. 1005-1013.
 
@@ -631,4 +631,4 @@ Offit, P. A. (2005). Why are pharmaceutical companies gradually abandoning vacci
 | [Lesson 01: <br> Course Introduction](Lesson01.html) | Lesson 02: <br> The Statistical Process & Design of Studies | [Lesson 03: <br> Describing Quantitative Data: Shape, Center & Spread](Lesson03.html) |
 </center>
 
-[^1]: [lds.org definition of pulse](http://www.lds.org/scriptures/bd/pulse?lang=eng&query=pulse){target="_blank"}
+[^1]: [churchofjesuschrist.org definition of pulse](http://www.churchofjesuschrist.org/scriptures/bd/pulse?lang=eng&query=pulse){target="_blank"}
