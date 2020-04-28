@@ -101,7 +101,7 @@ The heights of men are also normally distributed. The mean height of young adult
 
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
--  Gustavo?'s height is $182.5 - 173.0 = 9.5 \text{ cm  }$    above the mean. The standard deviation of the height of Brazilian men is 6.3 cm, so his height is   $\displaystyle{ \frac{9.5}{6.3} =1.508 }$  standard deviations above the mean.
+-  Gustavo's height is $182.5 - 173.0 = 9.5 \text{ cm  }$    above the mean. The standard deviation of the height of Brazilian men is 6.3 cm, so his height is   $\displaystyle{ \frac{9.5}{6.3} =1.508 }$  standard deviations above the mean.
 </div>
 &nbsp;
 </div>
@@ -141,7 +141,7 @@ This is called the 68-95-99.7% Rule for Bell-shaped Distributions. Some statisti
 
 <img src="./Images/L03_A06_R04.jpg">
 
-Approximately 68% of the observations from a bell-shaped distribution will be between the values of $\mu -~\sigma~$and $\mu +~\sigma~$. Consider the heights of young adult women in Ghana. We expect that about 68% of Ghanian women have a height between the values of
+Approximately 68% of the observations from a bell-shaped distribution will be between the values of $\mu -~\sigma~$and $\mu +~\sigma$. Consider the heights of young adult women in Ghana. We expect that about 68% of Ghanaian women have a height between the values of
 $$\mu -~\sigma = 159.0 - 4.9 = 154.1~\text{cm}$$
 and
 $$\mu +~\sigma = 159.0 + 4.9 = 163.9~\text{cm}.$$
@@ -176,7 +176,7 @@ We define an **unusual observation** to be something that happens less than 5% o
 
 <a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q3" style="display:none;">
--  Relative to other Ghanian women, Serwa is very tall.  Gustavo is tall relative to Brazilian men, but relative to people of his gender and nationality, he is not relatively taller than Serwa.  Serwa has a higher $z$-score.
+-  Relative to other Ghanaian women, Serwa is very tall.  Gustavo is tall relative to Brazilian men, but relative to people of his gender and nationality, he is not relatively taller than Serwa.  Serwa has a higher $z$-score.
 </div>
 <br>
 
@@ -203,7 +203,7 @@ An important part of the practice of statistics is finding areas under a normal 
 
 The Normal Probability Applet is a visualization program offering statistics students insights and computations for the relationship between $z$-scores and areas under the standard normal curve. You can find a link to this applet on I-learn, under the Course Resources module. This app is also compatible to use on your phone, iPad, and other mobile devices.  The app is stored at http://byuimath.com/apps/normprob.html.  If you want a copy you can open from your desktop, just right click the link and save it to your computer.
 
-To use this applet follow these instructions:
+To use this applet, follow these instructions:
 
 *Click on an area below the curved line to shade/unshade the region.
 *Click and drag the red lines to adjust the $z$-scores and obtain the area.
@@ -224,19 +224,19 @@ htmltools::includeHTML("http://byuimath.com/apps/normprob.html")
 
 Using this applet we can calculate proportions and probabilities based on the area under the normal curve. For the following examples, please open the [Normal Probability Applet](http://byuimath.com/apps/normprob.html){target="_blank"} and practice using it to find areas under the curve.
 
-#### Heights of Ghanian Women
+#### Heights of Ghanaian Women
 
-We will use the example of Serwa's height to find the proportion of young Ghanian women who are shorter than Serwa. Recall that for the height of young Ghanian women, the population mean is 159.0 cm and the population standard deviation is 4.9 cm. Serwa's height is 169.0 cm. We found the $z$-score of Serwa's height as:
+We will use the example of Serwa's height to find the proportion of young Ghanaian women who are shorter than Serwa. Recall that for the height of young Ghanaian women, the population mean is 159.0 cm and the population standard deviation is 4.9 cm. Serwa's height is 169.0 cm. We found the $z$-score of Serwa's height as:
 
 $$z = \frac{x -\mu}{\sigma} = \frac{169.0- 159.0}{4.9} = 2.041$$
 
-What proportion of young Ghanian women reach a height that is at or below 169 cm? To answer this question, we need to find the area under a normal density curve (i.e. the probability) that is to the left of $z = 2.041$.
+What proportion of young Ghanaian women reach a height that is at or below 169 cm? To answer this question, we need to find the area under a normal density curve (i.e. the probability) that is to the left of $z = 2.041$.
 
 To find the area under a normal curve corresponding to a $z$-score of $2.041$, do the following:
 
 - Type the $z$-score of $2.041$ into one of the two boxes along the horizontal axis of the graph.
 - Click on the areas under the curve until only the areas left of the $z$-score are shaded blue.
-- The total shaded area under the normal distribution, 0.979\*, is given above the graph. This is the proportion of young Ghanian women who are shorter than Serwa.
+- The total shaded area under the normal distribution, 0.979\*, is given above the graph. This is the proportion of young Ghanaian women who are shorter than Serwa.
 
 <img src="./Images/Serwa_z-score.PNG">
 
@@ -262,9 +262,9 @@ Notice that the area shaded in blue above 0.288 is very close to the area we fou
 
 The applet does not allow us to find the probability of being between two values directly, but we can calculate these probabilities with the applet as follows.
 
-#### Heights of Ghanian Women
+#### Heights of Ghanaian Women
 
-We illustrate the procedure for finding the probability that the height of a randomly selected young Ghanian woman is between two values. For example, "What is the probability that a randomly selected young Ghanian women will be between 155.0 cm and 165.0 cm tall?" Recall that for the height of young Ghanian women, the population mean is $159.0$ cm and the population standard deviation is $4.9$ cm. We want to find the probability that a randomly selected woman's height is between $155.0$ cm and $165.0$ cm. To do this we find the $z$-score for both values:
+We illustrate the procedure for finding the probability that the height of a randomly selected young Ghanaian woman is between two values. For example, "What is the probability that a randomly selected young Ghanaian women will be between 155.0 cm and 165.0 cm tall?" Recall that for the height of young Ghanaian women, the population mean is $159.0$ cm and the population standard deviation is $4.9$ cm. We want to find the probability that a randomly selected woman's height is between $155.0$ cm and $165.0$ cm. To do this we find the $z$-score for both values:
 
 $$z_1 = \frac{x- \mu}{\sigma} = \frac{155.0 - 159.0}{4.9} = -0.82$$
 $$z_2 = \frac{x - \mu}{\sigma} = \frac{165.0 -159.0}{4.9} = 1.22$$
@@ -273,7 +273,7 @@ We now answer the question by finding the area under the normal density curve (i
 
 $$0.8888 - 0.2061 = 0.6827$$
 
-So the probability that the height of a randomly selected young Ghanian woman will be between 155.0 cm and 165.0 cm is $0.6827$. This is the same as the proportion of all young Ghanian women who are between 155.0 and 165.0 cm tall.
+So the probability that the height of a randomly selected young Ghanaian woman will be between 155.0 cm and 165.0 cm is $0.6827$. This is the same as the proportion of all young Ghanaian women who are between 155.0 and 165.0 cm tall.
 
 ### Calculating Percentiles using a Normal Distribution
 
@@ -351,7 +351,7 @@ Recall the data on the batting averages of Major League Baseball players. The hi
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 **Here is a refresher of how to make a Histogram in Excel**
 
-For more detailed instructions revisit [lesson 3](./docs/Lesson03.html#visualizing-quantitative-data-histograms).
+For more detailed instructions revisit [Lesson 3](./docs/Lesson03.html#visualizing-quantitative-data-histograms).
 
 1. Highlight the data you want to summarize with a histogram
 2. Go to the Insert ribbon in Excel and select the histogram icon from the "Charts" section of the ribbon. Then select the first option of histograms presented.
@@ -362,9 +362,9 @@ The Excel default histogram for this dataset is pretty good. However, if your da
 
 *Optional*: You can explore the shape of the distribution of data by adjusting the number of bins on the histogram with these steps:
 
-3. Be sure the graph is selected, so that you can select the "Format" ribbon. In the upper left corner of the ribbon, select "Horizontal Category Axis" in the drop down box. Then click on "Format Selection".
+3. Be sure the graph is selected, so that you can select the "Format" ribbon. In the upper left corner of the ribbon, select "Horizontal Category Axis" in the drop-down box. Then click on "Format Selection".
 
-    * On many computers, an quicker method to access the same menu is to right click anywhere on the x-axis and select "Format Axis".
+    * On many computers, a quicker method to access the same menu is to right click anywhere on the x-axis and select "Format Axis".
     
 4. A menu of options will open on the right side of the screen. You can adjust the bin width or number of bins. Experiment with a few different values to see if the histogram changes much in shape.
 
