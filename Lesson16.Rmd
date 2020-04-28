@@ -119,7 +119,7 @@ A Pareto chart is a bar chart where the bars are presented in descending order.
 - Highlight the "Count" column.
 - Click on the Sort and Filter tab in the right hand corner of the screen.
 - Click on Sort Largest to Smallest (A little window will pop up, select "Expand the Selection" then "Sort".)
-- The bars is your chart should now be resorted to create a Pareto chart.
+- The bars in your chart should now be resorted to create a Pareto chart.
 
 Your Pareto chart will look like this:
 

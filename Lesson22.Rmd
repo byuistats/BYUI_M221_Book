@@ -154,10 +154,7 @@ To answer this question, paleontologist Paul Sereno teamed up with modern crocod
 <br>
 <br>
 
-[![](./Images/video-icon.png)](http://stream.byui.edu/VideoPlayer/BYUIplayer.html?StartCue=0&EndCue=5776&VideoName=1817_dvd&VideoType=libraryvideos)
-
-<!-- <img src="./Images/video-icon.png"> -->
-<!-- Need exported video -->
+<iframe id="kaltura_player_1578605835" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/41351812/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1578605835&entry_id=0_kh1juzmd" width="800" height="450" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
 
 ## Estuarine Crocodiles
 
@@ -270,9 +267,22 @@ Stop and think about this for a minute.  This juvenile sarcosuchus is estimated 
 **To draw the regression line on a scatterplot in Excel:**
 
 The Math221 Statistics Toolbox has a line automatically drawn on the scatter plot it provides. However, to draw a line on your own in Excel, after creating the scatter plot you would follow these steps:
-- Right-click on one of the data points illustrated in your scatterplot.
-- Choose the menu option "Add Trendline..."
-- Close the dialog box that appears.
+
+- Select the scatterplot by clicking anywhere on the plot
+Right-click on one of the data points illustrated in your scatterplot.
+- From the Design ribbon, click the "Add Chart Element" button, and select Trendline from the resulting dropdown menu
+
+<div style="padding-left:10%;">
+<img src="./Images/trend_line_1.png" style="width:320px;height:320px;">
+</div>
+
+- Another menu should display. In that menu select Linear
+- To display the equation of the line, you can select "More Trendline  Options" instead of Linear. In this resulting menu there is a box you can check for Display Equation on Chart.
+
+<div style="padding-left:10%;">
+<img src="./Images/trend_line_2_display_equation.PNG" style="width:150px;height:300px;">
+</div>
+
 <br>
 </div>
 <br>

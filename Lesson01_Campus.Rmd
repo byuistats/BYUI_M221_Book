@@ -1,6 +1,6 @@
 ---
 title: 'Lesson 1: On Campus Course Introduction'
-output: 
+output:
   html_document:
     theme: cerulean
     toc: true
@@ -68,7 +68,7 @@ While you may not be tested on everything you learn in this course, the instruct
 
 #### Five Principles of the Learning Model
 
-You will experience much deeper learning if you follow the Five Principles of the 
+You will experience much deeper learning if you follow the Five Principles of the
 [BYU-Idaho Learning Model](http://www.byui.edu/LearningModel){target="_blank"}
 
 -  **Exercise Faith**: Exercise faith in the Lord Jesus Christ as a principle of action and power.
@@ -79,7 +79,7 @@ You will experience much deeper learning if you follow the Five Principles of th
 
 #### Three Process Steps of the Learning Model
 
-You will learn more in less time if you follow the Three Process Steps of the 
+You will learn more in less time if you follow the Three Process Steps of the
 [BYU-Idaho Learning Model](http://www.byui.edu/LearningModel){target="_blank"}
 
 -  **Prepare**: This involves (a) spiritual preparation, (b) individual preparation, and (c) group preparation.
@@ -112,7 +112,7 @@ Your main goal as a student will be to complete all of the learning activities w
 - Writing papers and developing presentations.
 - Participating in meetings with the instructor, teaching assistants, and other students.
 
-For many of these activities, the due dates will fall on the same time each week. This will make it easier for you to plan out your weekly study schedule. However, there may be a need to make adjustments to the schedule from time to time. If in doubt, refer to the due dates your instructor has posted in I-learn. 
+For many of these activities, the due dates will fall on the same time each week. This will make it easier for you to plan out your weekly study schedule. However, there may be a need to make adjustments to the schedule from time to time. If in doubt, refer to the due dates your instructor has posted in I-learn.
 
 You should create a study schedule that will catch you up and keep you on pace throughout the semester. This is a rigorous course with a lot of subject matter to cover, and it can be extremely difficult to recover if you fall too far behind in your work. So, please make every effort to study on a regular basis and get your work turned in on time.
 
@@ -127,7 +127,7 @@ This course has been designed with the student in mind.  Every effort has been m
 
 **Textbook**
 
-To keep costs as low as possible for students and their families, no physical textbook is required for this class.  The readings for this course are provided on this website and will continue to be available to you after the course is completed.  Please report any problems with the textbook (links not working, loading slowly, inability to view images, etc.) to your instructor. A link to the textbook is found in the Quick Links module. It is highly recommended you bookmark the textbook so that you can easily reference each lesson's reading. 
+To keep costs as low as possible for students and their families, no physical textbook is required for this class.  The readings for this course are provided on this website and will continue to be available to you after the course is completed.  Please report any problems with the textbook (links not working, loading slowly, inability to view images, etc.) to your instructor. A link to the textbook is found in the Quick Links module. It is highly recommended you bookmark the textbook so that you can easily reference each lesson's reading.
 
 **Computer Equipment**
 
@@ -158,8 +158,9 @@ The BYU-Idaho Study Skills/Tutoring Center is a powerful resource for students w
 The Tutoring Center provides many services to help students succeed:
 -  Individual tutors
 -  Walk-in tutoring in the Math Study Center (McKay 266 & 270)
+-  Virtual tutoring
 
-Please take 5 minutes to explore the [http://www.byui.edu/academic-support-centers/tutoring-center Study Skills/Tutoring Center web site].
+Please take 5 minutes to explore the [Study Skills/Tutoring Center web site](https://www.byui.edu/academic-support-centers/math/math-help-for-on-campus-students).
 
 **TA Support**
 
@@ -227,4 +228,3 @@ As with all the classes you take at BYU-Idaho, in the end it is up to you to dec
 | :----------------------------: | :--------------------------------------------------------------------: |
 | Lesson 01: <br> Course Introduction | [Lesson 2: <br> The Statistical Process & Design of Studies](Lesson02.html) |
 </center>
-

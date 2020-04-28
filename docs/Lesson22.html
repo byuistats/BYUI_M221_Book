@@ -561,9 +561,8 @@ Answer the following questions:
 This video is an hour and a half long. <strong>YOU DO NOT NEED TO WATCH THE ENTIRE VIDEO</strong>. Please watch only the last fifteen minutes, beginning at 1:19:00
 </div>
 <p><br> <br></p>
-<p><a href="http://stream.byui.edu/VideoPlayer/BYUIplayer.html?StartCue=0&amp;EndCue=5776&amp;VideoName=1817_dvd&amp;VideoType=libraryvideos"><img src="Images/Video-icon.png" /></a></p>
-<!-- <img src="Images/Video-icon.png"> -->
-<!-- Need exported video -->
+<iframe id="kaltura_player_1578605835" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/41351812/partner_id/1157612?iframeembed=true&amp;playerId=kaltura_player_1578605835&amp;entry_id=0_kh1juzmd" width="800" height="450" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0">
+</iframe>
 </div>
 <div id="estuarine-crocodiles" class="section level2">
 <h2>Estuarine Crocodiles</h2>
@@ -659,7 +658,22 @@ Excel Instructions
 </div>
 <div class="Summary">
 <p><strong>To draw the regression line on a scatterplot in Excel:</strong></p>
-<p>The Math221 Statistics Toolbox has a line automatically drawn on the scatter plot it provides. However, to draw a line on your own in Excel, after creating the scatter plot you would follow these steps: - Right-click on one of the data points illustrated in your scatterplot. - Choose the menu option “Add Trendline…” - Close the dialog box that appears. <br></p>
+<p>The Math221 Statistics Toolbox has a line automatically drawn on the scatter plot it provides. However, to draw a line on your own in Excel, after creating the scatter plot you would follow these steps:</p>
+<ul>
+<li>Select the scatterplot by clicking anywhere on the plot Right-click on one of the data points illustrated in your scatterplot.</li>
+<li>From the Design ribbon, click the “Add Chart Element” button, and select Trendline from the resulting dropdown menu</li>
+</ul>
+<div style="padding-left:10%;">
+<p><img src="Images/trend_line_1.png" style="width:320px;height:320px;"></p>
+</div>
+<ul>
+<li>Another menu should display. In that menu select Linear</li>
+<li>To display the equation of the line, you can select “More Trendline Options” instead of Linear. In this resulting menu there is a box you can check for Display Equation on Chart.</li>
+</ul>
+<div style="padding-left:10%;">
+<p><img src="Images/trend_line_2_display_equation.PNG" style="width:150px;height:300px;"></p>
+</div>
+<p><br></p>
 </div>
 <p><br></p>
 <p>The following plot shows the regression line on the scatterplot.</p>
@@ -695,22 +709,22 @@ The equation of this line is $\widehat Y = b_0 + b_1 X$.  This is the equation o
 </thead>
 <tbody>
 <tr class="odd">
-<td><p><strong>Type</strong></p></td>
-<td><p>Linear Pattern</p></td>
-<td><p>Apparent Random Scatter</p></td>
-<td><p>Nonlinear Pattern</p></td>
+<td><strong>Type</strong></td>
+<td>Linear Pattern</td>
+<td>Apparent Random Scatter</td>
+<td>Nonlinear Pattern</td>
 </tr>
 <tr class="even">
-<td><p><strong>Description</strong></p></td>
-<td><p>“Hot Dog” Shape</p></td>
-<td><p>“Hamburger” Shape</p></td>
-<td><p>“Banana” Shape</p></td>
+<td><strong>Description</strong></td>
+<td>“Hot Dog” Shape</td>
+<td>“Hamburger” Shape</td>
+<td>“Banana” Shape</td>
 </tr>
 <tr class="odd">
-<td><p><strong>Decision</strong></p></td>
-<td><p>Conduct regression analysis to determine if there is a significant linear relationship</p></td>
-<td><p>Linear regression is not appropriate</p></td>
-<td><p>Linear regression is not appropriate</p></td>
+<td><strong>Decision</strong></td>
+<td>Conduct regression analysis to determine if there is a significant linear relationship</td>
+<td>Linear regression is not appropriate</td>
+<td>Linear regression is not appropriate</td>
 </tr>
 </tbody>
 </table>
@@ -743,7 +757,7 @@ The equation of this line is $\widehat Y = b_0 + b_1 X$.  This is the equation o
 <div id="interpreting-the-regression-output-1" class="section level3">
 <h3>Interpreting the Regression Output</h3>
 <p>The output from the commands given above will include a table similar to the one shown here:</p>
-<p><img src="Images/Manatees-RegressionOutput.PNG"></p>
+<p><img src="Images/Manatees-RegressionOutput.png"></p>
 <p>The Y-intercept term is not multiplied by anything except 1. This is the value of <span class="math inline">\(b_0\)</span>: <span class="math inline">\(b_0=-42.542\)</span>. The value of the slope is to be multiplied by <span class="math inline">\(X\)</span>; this is the slope of the regression equation. In our model, <span class="math inline">\(X\)</span> represents the number of powerboat registrations in Florida, in thousands. The slope for our regression equation is <span class="math inline">\(b_1=0.129\)</span>. We get the equation: <span class="math display">\[
 \widehat Y = -42.542 + 0.129 X
 \]</span></p>
@@ -807,11 +821,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
