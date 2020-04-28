@@ -23,9 +23,18 @@ Or download individual files:
 
 <div style="padding-left:15px;">
 
+[Admissions-BYU-Idaho.xlsx](./Data/Admissions-BYU-Idaho.xlsx)
+
+
+[Admissions-UofIdaho.xlsx](./Data/Admissions-UofIdaho.xlsx)
+
+
 [AMPM-Heights.xlsx](./Data/AMPM-Heights.xlsx)                                                          
 
 [Apollo.xlsx](./Data/Apollo.xlsx)                                                                      
+
+[AppointmentWaitTimes.xlsx](./Data/AppointmentWaitTimes.xlsx)
+
 
 [BabyBoom-JSE.xlsx](./Data/BabyBoom-JSE.xlsx)                                                          
 
