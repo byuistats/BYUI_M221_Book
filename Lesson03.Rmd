@@ -94,7 +94,7 @@ We will use the five steps in the Statistical Process throughout the course. Rec
 <br>
 **Step 1: Design the study.** 
 
-Tuberculosis (TB) is the most deadly bacterial disease in the world. In 2009, nine million new cases of tuberculosis were diagnosed, leading to almost 2 million deaths worldwide. Currently, the principal vaccine used to prevent tuberculosis is Bacille Calmette Guerin (BCG). Unfortunately, BCG is only moderately effective at preventing tuberculosis. Historically, India has had a high number of tuberculosis cases. The Indian Government wants to reduce the prevalence of this disease.
+Tuberculosis (TB) is the deadliest bacterial disease in the world. In 2009, nine million new cases of tuberculosis were diagnosed, leading to almost 2 million deaths worldwide. Currently, the principal vaccine used to prevent tuberculosis is Bacille Calmette Guerin (BCG). Unfortunately, BCG is only moderately effective at preventing tuberculosis. Historically, India has had a high number of tuberculosis cases. The Indian Government wants to reduce the prevalence of this disease.
 
 In this activity, you will compare the average costs of treating a person who contracts tuberculosis to the costs of preventing a case of tuberculosis in India.
 
@@ -210,7 +210,7 @@ Be sure the graph is selected, so that you can select the "Format" ribbon. In th
 <img src="./Images/create_histogram_step4.PNG" width=90%> 
 
 #### Step 4  
-A menu of options will open on the right side of the screen. You can adjust the bid width or number of bins. In this case, though we can't make it match, in order to make the histogram look as much as possible like the one shown above, we will choose a bin width of 5000.
+A menu of options will open on the right side of the screen. You can adjust the bin width or number of bins. In this case, though we can't make it match, in order to make the histogram look as much as possible like the one shown above, we will choose a bin width of 5000.
 
 <img src="./Images/create_histogram_step5.PNG" width=90%> 
 
@@ -279,7 +279,7 @@ One benefit of using a histogram is that it allows you to visualize the distribu
 
 We will describe the shape of the distribution of a data set using the following basic categories: symmetric, bell-shaped, skewed right, and skewed left. Additionally, we can label the shape of a distribution as uniform, unimodal, bimodal, or multimodal.
 
-A distribution is symmetric if both the left and right side of the distribution appear to be roughly a mirror image of each other. A special symmetric distribution is a bell-shaped distribution. When data follow a Bell-shaped distribution, the histogram looks like a bell. Bell-shaped distributions play an important role in Statistics and will play a role in most of the future lessons.
+A distribution is symmetric if both the left and right side of the distribution appear to be roughly a mirror image of each other. A special symmetric distribution is a bell-shaped distribution. When data follow a bell-shaped distribution, the histogram looks like a bell. Bell-shaped distributions play an important role in Statistics and will play a role in most of the future lessons.
 
 A distribution is right-skewed if a histogram of the distribution shows a long right tail. This can occur if there are some very large outliers. A distribution is left-skewed if a histogram shows that it has a long tail to the left.
 
@@ -387,7 +387,7 @@ The most frequently occurring value is called the mode. Sometimes there is more 
 
 $${1,~~2, ~~2, ~~2, ~~3, ~~4, ~~4, ~~5, ~~5, ~~5, ~~6}$$ 
 
-the modes are 2 and 5. Both of these values occurs three times, which is more times than any other value.
+the modes are 2 and 5. Both of these values occur three times, which is more times than any other value.
 
 If no number occurs more than once in the data set, we say that there is no mode. For the data set representing the costs to treat tuberculosis in India, none of the values is repeated. So, there is no mode for these data.
 
@@ -421,8 +421,8 @@ e. A, B, and C can all occur.
 &nbsp;&nbsp;
 
 1. Enter the data into Excel. There should only be one data value per cell.    
-2. Next, in the cell where you would like to store the numerical summary type an "=", follwed by the name of the function and then an open parenthesis, "(".  
-3. Then,  highlight the data to which you want to apply the function. The cell referece range will automatically be added to your formula. Then type a closed parenthesis, ")" and hit enter.
+2. Next, in the cell where you would like to store the numerical summary type an "=", followed by the name of the function and then an open parenthesis, "(".  
+3. Then,  highlight the data to which you want to apply the function. The cell reference range will automatically be added to your formula. Then type a closed parenthesis, ")" and hit enter.
 
   For example, to calculate the mean of the sample of tuberculosis patient costs in India:
   
@@ -437,7 +437,7 @@ e. A, B, and C can all occur.
 
   To calculate a median, simply replace the word "average" in the formula with the word "median". Try it with the tuberculosis patient data, you should get the same value that was calculated by hand above.
 
-  Similarly, to calculate a mode, replace the word "average" in the formula with the word "mode" or "mode.sngl". NOTE: If you try this on the tuberculosis patient data, you will get a results of "#N/A". This is Excel's way of saying that a mode does not exist because there are no repeated values in the dataset.
+  Similarly, to calculate a mode, replace the word "average" in the formula with the word "mode" or "mode.sngl". NOTE: If you try this on the tuberculosis patient data, you will get a result of "#N/A". This is Excel's way of saying that a mode does not exist because there are no repeated values in the dataset.
 
 <br>
 </div>
@@ -452,7 +452,7 @@ We only have data on the cost to treat ten randomly selected tuberculosis patien
 
 However, if we draw a random sample, we would expect the mean of the new sample to be somewhat close to the mean for our original sample. The sample mean, $\bar x$, is an estimate of the true mean of the population.
 
-One of the primary purposes of collecting and analyzing data is to estimate the true mean of a population.Usually, we do not know what the true mean is, and we estimate it with the sample mean.
+One of the primary purposes of collecting and analyzing data is to estimate the true mean of a population. Usually, we do not know what the true mean is, and we estimate it with the sample mean.
 
 The sample mean is an example of a statistic. A statistic is a number that describes a sample. The true (usually unknown) population mean is an example of a parameter. A parameter is any number that describes a population.
 
@@ -579,7 +579,7 @@ How is the standard deviation computed?  Where does this "magic" number come fro
 
 It is a little tedious to compute the standard deviation by hand. You will usually compute standard deviation with a computer. However, the process is very instructive and will help you understand conceptually what the statistic represents. As you work through the following steps, please remember the goal is to find a measure of the spread in a data set. We want one number that describes how spread out the data are.
 
-First, observe the number line below, where each x represents the temperature of a patient with a relatively uncomplicated case of bird flue. As mentioned earlier, there is not a huge spread in the temperatures.
+First, observe the number line below, where each x represents the temperature of a patient with a relatively uncomplicated case of bird flu. As mentioned earlier, there is not a huge spread in the temperatures.
 
 <img src="./Images/BirdFlu-DotPlotAnswer.png">
 
@@ -920,7 +920,7 @@ The sum of the squared deviations is 2.20.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
-11. Suppose, that the researchers had collected body temperature data on 500 bird flu patients instead of 5.  What would happen to the sum of the squared deviations, if the distribution of the data is the same for the 500 patients as the 5 patients?
+11. Suppose that the researchers had collected body temperature data on 500 bird flu patients instead of 5.  What would happen to the sum of the squared deviations, if the distribution of the data is the same for the 500 patients as the 5 patients?
 
 <a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q11" style="display:none;">
@@ -1086,7 +1086,7 @@ $\left(x-\bar x\right)^2$</p></th>
 
 <a href="javascript:showhide('Q13')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q13" style="display:none;">
-* The data in column 1 of the table is in degrees Centigrade.  The mean also is in degrees Centigrade.
+* The data in Column 1 of the table is in degrees Centigrade.  The mean also is in degrees Centigrade.
 * To get the numbers in Column 2, we subtracted the mean from each of the values in Column 1.
 * We squared the values in Column 2 to get Column 3. The units for this column are degrees Centigrade squared.  
 * The sum of the numbers in Column 3 will also be in units of degrees Centigrade squared.
@@ -1199,7 +1199,7 @@ $\left(x-\bar x\right)^2$</p></th>
 <div class="Emphasis">
 &nbsp;&nbsp;**Standard Deviation**
 
-&nbsp;&nbsp;The **standard deviation** is one number that describes the spread in a set of data.  If the data points are close together, the standard deviation will be smaller than if they are spread out.
+&nbsp;&nbsp;The **standard deviation** is one number that describes the spread in a set of data.  If the data points are close together the standard deviation will be smaller than if they are spread out.
 
 &nbsp;&nbsp;At this point, it may be difficult to understand the meaning and usefulness of the standard deviation.  For now, it is enough for you to recognize the following points:
 
@@ -1456,7 +1456,7 @@ Percentiles can be used to describe the center and spread of any distribution an
 
 - This Excel function requires two inputs (or arguments), separated by a comma. The first input is the cell range reference. The second input is the desired percentile.
 
-The wrong-site data in the file ranges from row 2 to row 412 in column A. So, to calculate the 25<sup>th</sup> percentile of the wrong site data you should would enter the following formula in a blank cell somewhere in the file:
+The wrong-site data in the file ranges from row 2 to row 412 in column A. So, to calculate the 25<sup>th</sup> percentile of the wrong site data you should enter the following formula in a blank cell somewhere in the file:
 
 <center> =PERCENTILE.INC(A2:A412, 0.25) </center>
 <br>
@@ -1551,7 +1551,7 @@ The first quartile ($Q_1$) or 25<sup>th</sup> percentile (calculated in Excel) o
 
 ### The Five-Number Summary
 
-Another way to summarize data is with the five-number summary.  **The five-number summary** is comprised of the minimum, the first quartile, the second quartile (or median), the third quartile and the maximum.  
+Another way to summarize data is with the five-number summary.  **The five-number summary** is comprised of the minimum, the first quartile, the second quartile (or median), the third quartile, and the maximum.  
 
 Statistical packages can give different results for some computations.  This is because there are several reasonable ways to define certain quantities, such as the quartiles. As such, you may find that some of the values that are given in Excel<!--{{Course_Filter|course=B C|content=SPSS}}--> are different than what other software may give. 
 
@@ -1725,7 +1725,7 @@ Additional formatting can be applied to further improve the appearance of the ch
 
 - A **histogram** allows us to visually interpret data. Histograms can be left-skewed, right-skewed, or symmetrical and bell-shaped.
 
-- The **mean**, **median**, and **mode** are measures of the center of a distribution. The mean is the most common measure of center, and is computed by adding up the observed data and dividing by the number of observations in the data set.
+- The **mean**, **median**, and **mode** are measures of the center of a distribution. The mean is the most common measure of center and is computed by adding up the observed data and dividing by the number of observations in the data set.
 
 - The **standard deviation** is a number that describes how spread out the data are. A larger standard deviation means the data are more spread out than data with a smaller standard deviation.
 
