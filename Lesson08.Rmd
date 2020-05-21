@@ -35,21 +35,21 @@ The expectation on the exam is that you should be able to do the following:
   + Convenience sampling
 
 - Explain the significance of using a random sample.
-- Determine the shape of a distribution using a histogram and/or box plot.
-- Determine the centers of a given histogram and/or box plot. 
+- Determine the shape of a distribution using a histogram and/or boxplot.
+- Determine the centers of a given histogram and/or boxplot. 
 - Identify the mean, median and standard deviation in skewed or normal histograms.
 - Calculate the mean, median and standard deviation from quantitative data.
 - Calculate a percentile from a quantitative data set.
 - Calculate a five-number summary from quantitative data with Excel, or by hand.
-- Create a histogram and a box-plot from quantitative data. 
+- Create a histogram and a boxplot from quantitative data. 
 - State and apply the three axioms of probability.
 - State the properties of a normal density curve.
 - Calculate the z-score of an individual observation, given the mean and standard deviation.
 - Interpret a z-score.
 - Calculate probability as area under a normal density curve.
-- Assess normality using a QQ-plot.
+- Assess normality using a histogram.
 - Explain how a sampling distribution is created.
-- Determine the mean, standard deviation and shape of a distribution of sample means.
+- Determine the mean, standard deviation, and shape of a distribution of sample means.
 - State and apply the Central Limit Theorem and the Law of Large numbers.
 - Calculate probabilities using a distribution of sample means.
 </div>
@@ -97,7 +97,7 @@ The expectation on the exam is that you should be able to do the following:
 
 - A **histogram** allows us to visually interpret data. Histograms can be left-skewed, right-skewed, or symmetrical and bell-shaped.
 
-- The **mean**, **median**, and **mode** are measures of the center of a distribution. The mean is the most common measure of center, and is computed by adding up the observed data and dividing by the number of observations in the data set.
+- The **mean**, **median**, and **mode** are measures of the center of a distribution. The mean is the most common measure of center and is computed by adding up the observed data and dividing by the number of observations in the data set.
 
 - The **standard deviation** is a number that describes how spread out the data are. A larger standard deviation means the data are more spread out than data with a smaller standard deviation.
 
@@ -148,7 +148,7 @@ $$P(\text{not}~X) = 1 - P(X)$$
 
 - The **distribution of sample means** is a distribution of all possible sample means ($\bar x$) for a particular sample size. It has a mean of $\mu$ and a standard deviation of $\sigma/\sqrt{n}$.
 
-- The distribution of sample means is normal when $\bar x$ is normally distributed or when, thanks to the **Central Limit Theorom (CLT)**, our sample size ($n$) is large.
+- The distribution of sample means is normal when $\bar x$ is normally distributed or when, thanks to the **Central Limit Theorem (CLT)**, our sample size ($n$) is large.
 
 - The **Law of Large Numbers** states that as the sample size ($n$) gets larger, the sample mean ($\bar x$) will get closer to the population mean ($\mu$).
 </div>

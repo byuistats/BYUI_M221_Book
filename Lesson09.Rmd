@@ -196,7 +196,7 @@ pander(matrix(data = w, nrow = 6, ncol=8, byrow=TRUE))
 
 <img src="./Images/Step3.png">
 
-To help us understand the the data, we first create a graph summarizing the values.
+To help us understand the data, we first create a graph summarizing the values.
 
 <center>
 **Weights of Passengers and Crew on the Ethan Allen**<br>
@@ -331,7 +331,7 @@ A group of researchers led by Philip A. Mackowiak, MD, conducted a study to asse
 </div>
 <br>
 
-10. Assuming the mean body temperature really is 98.6&deg; F, how likely would it be for a random sample of $n=148$ people in the population to have a mean body temperature that is a extreme as was observed in Question 3?
+10. Assuming the mean body temperature really is 98.6&deg; F, how likely would it be for a random sample of $n=148$ people in the population to have a mean body temperature that is as extreme as was observed in Question 3?
 
 <a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q10" style="display:none;">
@@ -639,7 +639,7 @@ We do not want to commit Type I errors, so why not choose a very small value for
 If the $\alpha$ value (the probability of committing a Type I error) is very small, the probability of committing a Type II error will be large.  Conversely, if $\alpha$ is allowed to be very large, then the probability of committing a Type II error will be very small.
 A level of significance of $\alpha=0.05$ seems to strike a good balance between the probabilities of committing a Type I versus a Type II error.  However, there may be instances where it will be important to choose a different value for $\alpha$.  The important thing is to choose $\alpha$ before you collect your data. Typical choices of $\alpha$ are $0.05$ (most common), $0.1$, and $0.01$.
 
-Read each of the following scenarios, and answer the questions.
+Read each of the following scenarios and answer the questions.
 
 **Scenario 1**:
 The BYU-Idaho Honor Code specifically prohibits wearing flip-flops on campus.  
@@ -826,7 +826,7 @@ $$
 **Verify the requirements have been met**
 
 - We assume that the individuals chosen to participate in the study represent a (simple) random sample from the population.
-- $\bar{x}$ will be normally distributed, because the sample size is large.  (Note: We could have also noticed that the body temperature data appears to be normally distributed, so even with a small sample size, $\bar{x}$ would be normal.)
+- $\bar{x}$ will be normally distributed because the sample size is large.  (Note: We could have also noticed that the body temperature data appears to be normally distributed, so even with a small sample size, $\bar{x}$ would be normal.)
 
 **Give the test statistic and its value**
 
@@ -1309,7 +1309,7 @@ We started with a requirement that $1=2$ is a true statement.  We applied valid 
 </div>
 <br>
 
-In science, we make a hypothesis (or a statement or claim) and then we gather evidence "against" that requirement. If we cannot reject the hypothesis, In the mathematical example above, we started with an requirement and did not find sufficient evidence against that requirement.  In the end, we arrived at no contradiction at all: $1=1$.  This did not mean that our original claim that $1=2$ was true; it only meant that we had not yet disproved it.  We could not reject the original claim.
+In science, we make a hypothesis (or a statement or claim) and then we gather evidence "against" that requirement. If we cannot reject the hypothesis, in the mathematical example above, we started with a requirement and did not find sufficient evidence against that requirement.  In the end, we arrived at no contradiction at all: $1=1$.  This did not mean that our original claim that $1=2$ was true; it only meant that we had not yet disproved it.  We could not reject the original claim.
 
 We have to be careful when conducting hypothesis tests.  When we conduct a test, we assume the null hypothesis is true.  This provides a distribution for the test statistic, and allows us to calculate the $P$-value.  If we find that the $P$-value is large, that means that we did not find a contradiction in our requirement that the null hypothesis is true.  That does not mean that the null hypothesis is true, it only means that we cannot reject it. For this reason, we never say we "accept the null hypothesis."  When the $P$-value is large, we say that we "fail to reject the null hypothesis."
 
