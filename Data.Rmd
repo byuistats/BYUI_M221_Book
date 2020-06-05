@@ -31,8 +31,6 @@ Or download individual files:
 
 [BattingAverages.xlsx](./Data/BattingAverages.xlsx)                                                    
 
-[BirthWeightsTwoVar.xlsx](./Data/BirthWeightsTwoVar.xlsx)                                              
-
 [BLEU-Scores.xlsx](./Data/BLEU-Scores.xlsx)                                                            
 
 [BodyMeasurements.xlsx](./Data/BodyMeasurements.xlsx)                                                  
