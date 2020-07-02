@@ -26,9 +26,17 @@ output:
 
 <a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="oc" style="display:none;">
-By the end of this lesson, you should be able to:
 
-* State and apply the three axioms of probability.
+By the end of this lesson, you should be able to:
+* Identify the spread of a distribution for a bell-shaped histogram.
+* Calculate the standard deviation from quantitative data using Excel.
+* Interpret the standard deviation for symmetric distributions. 
+* Properly apply the Excel functions STDEV.S, PERCENTILE.INC, QUARTILE.INC, MIN, and MAX to quantitative data.
+* Interpret the five-number summary for both skewed and bell-shaped quantitative data.
+* Create a box-plot from quantitative data. 
+* Determine the five-number summary from a box plot. 
+* Explain the relationship between probabilities, percentiles, and percentages.
+
 </div>
 <br>
 
