@@ -413,6 +413,15 @@ As with all the classes you take at BYU-Idaho, in the end it is up to you to dec
 - In this class you will use the online textbook that has been written for you by your statistics teachers. All of the assignments and quizzes will be based on the readings, so study it well.
 - Most weeks will cover two lessons
 - By doing the work, staying on schedule, and living the Honor Code you _can_ succeed in this class!
+
+- The three **rules of probability** are:
+    1. A probability is a number between 0 and 1. 
+$$0 \leq P(X) \leq 1$$
+    2. If you list all the outcomes of a probability experiment (such as rolling a die) the probability that one of these outcomes will occur is 1. In other words, the sum of the probabilities in any probability is 1. 
+$$\sum P(X) = 1$$
+    3. The probability that an outcome will not occur is 1 minus the probability that it will occur. 
+$$P(\text{not}~X) = 1 - P(X)$$
+
 </div>
 <br>
 

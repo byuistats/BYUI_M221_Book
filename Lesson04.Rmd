@@ -1,5 +1,5 @@
 ---
-title: "Lesson 4: Probability; Discrete Random Variables"
+title: "Lesson 4: Describing Quantitative Data: Spread"
 output: 
   html_document:
     theme: cerulean
@@ -14,11 +14,16 @@ output:
  }
 </script>
 
+<!--
+
 <div style="float:right;width=40%;">
 <br/>
 <div style="padding-left:10%;">**Optional Lesson Video**</div>
 <iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-a7rYECFUKhL6yMzvOIwCO" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
+
+-->
+
 <br>
 
 
@@ -28,504 +33,1282 @@ output:
 <div id="oc" style="display:none;">
 
 By the end of this lesson, you should be able to:
-* Identify the spread of a distribution for a bell-shaped histogram.
+* Identify the standard deviation of a distribution visually from a bell-shaped histogram.
 * Calculate the standard deviation from quantitative data using Excel.
 * Interpret the standard deviation for symmetric distributions. 
 * Properly apply the Excel functions STDEV.S, PERCENTILE.INC, QUARTILE.INC, MIN, and MAX to quantitative data.
-* Interpret the five-number summary for both skewed and bell-shaped quantitative data.
-* Create a box-plot from quantitative data. 
-* Determine the five-number summary from a box plot. 
+* Interpret the five-number summary for quantitative data.
+* Create a box-plot from quantitative data using Excel. 
+* Determine the five-number summary visually from a box plot. 
 * Explain the relationship between probabilities, percentiles, and percentages.
 
 </div>
 <br>
 
-## Probability
 
-### Christopher Columbus' First Voyage
 
-<img src="./Images/Columbus_taking_possession_of_the_new_country.jpg">
+## Spread of a Distribution
 
-On August 3, 1492, Columbus set sail from Spain for his intended destination: the Indies (Caso, Adolph 1990). He was on the Santa Maria, which had a crew of approximately 41 men ("Crist'obal col'on" 1991; "Christopher Columbus"). Several other men were aboard the Nina and the Pinta ("Crist'obal col'on" 1991). On October 12, he landed on an island in the Bahamas he called San Salvador.
+In the previous lesson, we introduced two important characteristics of a distribution: the **shape** and the **center**.  In this section, you will discover ways to summarize the **spread** of a distribution of data. The spread of a distribution of data describes how far the observations tend to be from each other.  There are many ways to describe the spread of a distribution, but one of the most popular measurements of spread is called the "standard deviation."
+<br>
 
-The return trip was not without challenges. The Santa Maria ran aground on Christmas Day, 1492, and was abandoned on the island we now call Hispaniola (home to Haiti and the Dominican Republic). Following this incident, Columbus sailed for Spain. Severe storms made the journey difficult. A particularly bad storm on February 14, 1493 made the crew fear for their lives. By morning, the storm was even worse!
+### Standard Deviation and Variance
 
-Recognizing his dependence upon God, Columbus ordered that a pilgrimage should be made to a particular shrine upon their safe arrival in Spain. He decided that they would use random chance to determine who would make the pilgrimage. They took one chick pea for each man on board. A knife was used to mark one of the chick peas with a cross. The chick peas were placed in a hat and shaken up. Each man was to draw a chick pea, and the one who had the cross would make the pilgrimage.
+This activity introduces two measures of spread: the standard deviation and the variance.
 
-The first who put in his hand was [Columbus,] and he drew out the bean with a cross, so the lot fell on him; and he was bound to go on the pilgrimage and fulfil the vow (Caso, Adolph 1990).
+<img src="./Images/StepsAll.png">
 
-<div class="QuestionsHeading">Answer the following questions:</div>
-<div class="Questions">
-1. Remember, there were 41 men aboard his ship. What is the probability that Columbus would draw out the marked chick pea? Express your answer as a fraction, and then convert it to a decimal.
+**Bird Flu Fever **
 
-<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q1" style="display:none;">
-* There is only one marked chick pea in the hat, out of 41 chick peas total. *Out of* is expressed arithmetically by division. The probability is  $\frac{1}{41} = 0.0244$.  (Note: this is about 2%.)
+<img src="./Images/Peuquito.jpg">
 
-</div>
-</br>
+Avian Influenza A H5N1, commonly called the bird flu, is a deadly illness that is currently only passed to humans from infected birds. This illness is particularly dangerous because at some point it is likely to mutate to allow human-to-human transmission. Health officials worldwide are preparing for the possibility of a bird flu pandemic.
 
-2. Based on your answer to the previous question, how likely is it that Columbus would draw out the marked chick pea?
+<img src="./Images/Step1.png">
 
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q2" style="display:none;">
+Dr. K. Y. Yuen led a team of researchers who reported the body temperatures of people admitted to Chinese hospitals with confirmed cases of Avian Influenza. 
+Their research team collected data on the body temperature at the time that people with the bird flu were admitted to the hospital. In the article, they reported on two groups of people, those with relatively uncomplicated cases of the bird flu and those with severe cases.
 
-* There is only about a 2% chance that Columbus will draw out the marked Chick Pea.  This is not very likely.  
-</div>
-&nbsp;
-</div>
-</br>
+<img src="./Images/Step2.png">
 
-**Additional Drawings**<br>
-Columbus' promise to make the pilgrimage did not stop the storm. It was determined that there should be a pilgrimage to another site they held sacred. Again, chick peas representing each member of the crew were placed in a hat and shaken up. The lot fell on a sailor...named Pedro de Villa (Caso, Adolph 1990).
+The table below presents the data representative of the body temperatures for the two groups of bird flu patients:
 
-<div class="QuestionsHeading">Answer the following questions:</div>
-<div class="Questions">
-3. What is the probability that Columbus would not draw out the marked chick pea? Express your answer as a fraction, and then covert it to a decimal?
+```{r Testing tibble for tables, echo=FALSE}
+trib <- tibble::tribble(~'Relatively Uncomplicated Cases', ~'Severe Cases',
+                                     38.1,            39.1,
+                                     38.3,            39.5,
+                                     38.4,            38.9,
+                                     39.5,            39.2,
+                                     39.7,            39.9,
+                                      " ",            39.7,
+                                      " ",            39.0)
+pander::pander(trib)
 
-<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q3" style="display:none;">
-* There are 40 other men on board plus Columbus. So, the probability that Columbus would not draw out the marked chick pea is: $\frac{40}{41} = 0.9756$. (Note: this is almost 98%.)
-</div>
-</br>
+```
 
-4. Based on your answer to the previous question, how likely is it that Columbus would not draw out the marked chick pea?
 
-<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q4" style="display:none;">
-* It is very likely that Columbus would not draw out the marked chick pea.  This result is not surprising.
-</div>
-</br>
+<img src="./Images/Step3.png">
 
-5. In this second drawing, either Columbus would draw out the marked chick pea, or he would not. Add the probability that Columbus would draw out the marked chick pea and the probability that he would not draw out the marked chick pea.  What is the value of this sum?
+Let us focus on the relatively uncomplicated cases. Creating a histogram of such a small dataset does not provide much benefit. With only a handful of values, there is not much shape to the distribution.
 
-<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q5" style="display:none;">
-* The sum of the probabilities is 1:
-
-$$
-\frac{1}{41} + \frac{40}{41} = \frac{41}{41} = 1
-$$
-
-</div>
-&nbsp;
-</div>
-</br>
-
-After the drawing in which Pedro de Villa was chosen to make a pilgrimage, two additional drawings were held. In both cases, Columbus drew out the marked chick pea (Caso, Adolph 1990). In all, Christopher Columbus drew the marked chick pea in three of the four drawings. It can be shown that the probability that this would occur due to chance is very small: 0.0000566.
-
-To put some perspective on this, a high school athlete in the United States is over 26 times more likely to play professional sports than Columbus was to draw the three marked peas! (Fields, Mike 2008) Consider how you might explain the occurrence of this extremely unlikely event. (While no response is required of you right now, this kind of question will be very important later, so take a little time to ponder it.)
+We can, however, use numerical summaries to give an indication of the center of the distribution.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
-6. If a fair, six-sided die* is rolled, what is the probability of rolling a 6?
-
-<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q6" style="display:none;">
-* The probability of rolling a 6 on a die is $\displaystyle{ \frac{1}{6}} = 0.1667$.
-</div>
-</br>
-
-7. If a fair, six-sided die is rolled, what is the probability of not rolling a 6?
+7. What is the median of the body temperatures for the relatively uncomplicated cases?  <!--Draw a vertical line on your number line to represent this point. -->
 
 <a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q7" style="display:none;">
-* The probability of not rolling a 6 on a die is $\displaystyle{\frac{5}{6}} = 0.8333.$
-</div>
-</br>
-
-8. When a die is rolled, what is the sum of the probability of rolling a 6 and the probability of not rolling a six?
-
-<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q8" style="display:none;">
-* The probability of rolling a six is $\displaystyle{\frac{1}{6}}$ and the probability of not rolling a six is $\displaystyle{\frac{5}{6}}$.  These things cannot happen at the same time, so the probability of either rolling a six or not rolling a six is
-$$ \frac{1}{6} + \frac{5}{6} = \frac{6}{6} = 1 $$
-
-*The only possible outcomes in this case are that you either roll a six or that you do not roll a six.  The probability that one of these will happen is 1.  If we list all the possible outcomes, the probability that at least one of them will occur is 1.
-</div>
-</br>
-
-9. In general, if we know the probability that a particular outcome will occur, how could we calculate the probability that it will not occur?
-
-<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q9" style="display:none;">
-* If we know the probability that an event will occur, we can subtract this probability from 1 to find the probability that the event will not occur. This is because the sum of the probabilities that the event will occur and that the event will not occur must be 1.
-
-</div>
-</br>
-
-
-$*$*Note: The word "die" is the singular form of the word "dice." When we refer to a die, we are talking about a fair, six-sided die.*
-</div>
-</br>
-
-### Probability Notation
-
-You may already have a good understanding of the basics of probability. It is worth noting that there is a special notation used to denote probabilities. The probability that an event, $x$, will occur is written $P(x)$. As an example, the probability that you will roll a 6 on a die can be written as
-
-P (Roll a 6 on a die)= $\displaystyle{\frac{1}{6}}$
-
-### Rules of Probability
-
-Probabilities follow patterns, called **probability distributions,** or distributions, for short. There are three rules that a probability distribution must follow. Answer the following questions to explore what these three rules might be.
-
-<div class="QuestionsHeading">Answer the following questions:</div>
-<div class="Questions">
-10. As an answer to a homework problem, a student reported, The probability of finding life on Mars is -0.35. What is wrong with this statement?
-
-<a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q10" style="display:none;">
-* Probabilities cannot be negative.
-</div>
-</br>
-
-11. A student in an introductory statistics class wrote the following statement on an exam: The probability that the event will occur is 1.25 (i.e. 125%). What is wrong with this statement?
-
-<a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q11" style="display:none;">
-* Probabilities cannot be larger than 1 (or 100%).
-</div>
-</br>
-
-12. A student estimated that the probability that he would finish his homework is 0.45 (i.e., 45%), and the probability that he would not finish his homework is 0.35 (i.e., 35%). What is wrong with this student's statement?
-
-<a href="javascript:showhide('Q12')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q12" style="display:none;">
-This can be viewed as one of two problems:  
-</br> 
-
-1. The probabilities for all the events do not add up to 1 (or 100%.)
-
-2. The probability that he does not finish his homework is actually 1 minus the probability that he will finish his homework or 0.55 (i.e., 55%).
-
-</div>
-&nbsp;
-</div>
-</br>
-
-In this course we are interested in experiments where the outcomes are influenced by random effects. So the outcomes of the experiment are uncertain, yet they follow a pattern or distribution and the probability of the experimental outcomes are governed by rules. An event is a set of outcomes of an experiment. Each outcome is an event, but an event can include more than one outcome.
-
-<div class="Emphasis">
-&nbsp;&nbsp;**The three rules of probability are:**
-
-- **Rule 1**: The probability of an event $X$ is a number between 0 and 1. 
-
-$$0 \leq P(X) \leq 1$$
-
-- **Rule 2**: If you list all the outcomes of an experiment (such as rolling a die) the probability that one of these outcomes will occur is 1. In other words, the sum of the probabilities of all the possible outcomes of any experiment is 1.
-
-$$\sum P(X) = 1$$
-
-- **Rule 3**: (Complement Rule) The probability that an event $X$ will not occur is 1 minus the probability that it will occur.
-
-$$P(\text{not}~X) = 1 - P(X)$$
-
-&nbsp;&nbsp;You may have noticed that the Complement Rule is just a combination of the first two rules. 
+* The median body temperature for the relatively uncomplicated cases is 38.4 degrees Centigrade.
 </div>
 <br>
 
-<div class="QuestionsHeading">Answer the following questions:</div>
-<div class="Questions">
-13. Which of the probability rules was violated by the statement in Question 10?
+8. What is the mean of the body temperatures for the relatively uncomplicated cases?  <!--Draw a vertical line on your number line to represent this point. -->
 
-<a href="javascript:showhide('Q13')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q13" style="display:none;">
-* Rule 1
-</div>
-</br>
-
-14. Which of the probability rules was violated by the statement in Question 11?
-
-<a href="javascript:showhide('Q14')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q14" style="display:none;">
-* Rule 1
-</div>
-</br>
-
-15. Which of the probability rules was violated by the statement in Question 12?
-
-<a href="javascript:showhide('Q15')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q15" style="display:none;">
-* Rule 2 or Rule 3
+<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q8" style="display:none;">
+* The mean body temperature for the relatively uncomplicated cases is 38.8 degrees Centigrade.
 </div>
 &nbsp;
 </div>
-</br>
-
-Informally, a distribution can be thought of as being "all the possible outcomes and how often they occur."
-
-### Randomness
-
-A BYU-Idaho student was overhead saying, "I went shopping and bought some *random* items."  Did the person actually take a random sample of the items at the store?  Did they write all the items down and randomly select the items for purchase?  Of course not!
-
-What did the student mean? That the items they bought seemed unrelated.  When we consciously or subconsciously choose a sample, it is not random.  
-
-What does it mean to be random? When something is random, it is not just haphazard, with no pattern.  Any random process follows a very distinct pattern over time---the distribution of its outcomes.  For example, if you roll a die thousands of times, about one-sixth of the time you will roll a four.  This is a very clear pattern, or part of a pattern. The entire pattern (or, the entire distribution) is that each number on the die is rolled about one-sixth of the time. 
-
-But there's something different about the patterns followed by random processes than other kinds of patterns.  Other kinds of patterns can be very predictable, such as a color pattern of the red, yellow, blue, red, yellow, blue, and so on. If you're following this pattern and happen to see yellow, you know the next color will be blue. By contrast, you never know what you will get on the next roll of a six-sided die. You *do* know that in the long run you will roll fours about one-sixth of the time.  
-
-When something is random, we can be sure that it follows a long-term pattern, its distribution.  We just never know what the outcome of the next experiment will be.
-
-<a href="javascript:showhide('Q18')"><span style="font-size:14pt;">**Optional Reading:** Click Here to Explore How to Calculate the Mean and Standard Deviation of a Discrete Random Variable</span></a>
-<div id="Q18" style="display:none;">
+<br>
 
 
-## The Mean and Standard Deviation of a Discrete Random Variable
-The phrase "discrete random variable" has a very specific meaning. A variable is something that varies (of course!), and a variable is random if its values follow a specific distribution, over the long run. The true meaning of the word "discrete" is too technical for this course. Roughly speaking, a random variable is discrete if its values could be listed (in principle), given enough time.
+We will use these data to investigate some measures of the spread in a data set.
 
-### Finding the Mean of a Discrete Random Variable
+There is relatively little difference in the temperatures of the uncomplicated patients. The lowest is $38.1 ^\circ \text{C}$, while the highest temperature is $39.7 ^\circ \text{C}$. 
 
-In many applications, it is important to be able to compute the population mean of a discrete random variable. To introduce this idea, we will continue with the hopefully familiar example of rolling a fair six-sided die.
+The **standard deviation** is a measure of the *spread* in the distribution. If the data tend to be close together, then the standard deviation is relatively small. If the data tend to be more spread out, then the standard deviation is relatively large.
 
-Imagine you are playing a game that involves rolling the die. As part of the game, you roll the die many, many times and keep track of the numbers you roll.
+The standard deviation of the body temperatures is $0.742 ^\circ \text{C}$. This number contains information from all the patients. If the patients' temperatures had been more diverse, the standard deviation would be larger. If the patients' temperatures were more uniform (i.e. closer together), then the standard deviation would have been smaller.  If all the patients somehow had the same temperature, then the standard deviation would be zero.
 
-<div class="QuestionsHeading">Answer the following questions:</div>
-<div class="Questions">
-16. What proportion of the time do you think you would roll a 1?  What about a 2?  What about a 3? a 4? a 5? a 6?
+We are working with a sample. To be explicit, we call $0.742 ^\circ \text{C}$ the *sample* standard deviation. The symbol for the sample standard deviation is $s$.  This is a statistic.  The parameter representing the *population* standard deviation is $\sigma$ (pronounced /SIG-ma/).  In practice, we rarely know the value of the population standard deviation, so we use the sample standard deviation $s$ as an approximation for the unknown population standard deviation $\sigma$.
 
-<a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q16" style="display:none;">
-* Since all the numbers are equally likely, we would expect to roll each of the values 1 through 6 about 
-$\displaystyle{\frac{1}{6} }$ of the time.  So the proportion of time that each digit would occur is 
-$\displaystyle{\frac{1}{6} } = 0.1667$.
+At this point, you probably do not have much intuition regarding the standard deviation. We will use this statistic frequently. By the end of the semester you can expect to become very comfortable with this idea. For now, all you need to know is that if two variables are measured on the same scale, the variable with values that are further apart will have the larger standard deviation.
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+&nbsp;&nbsp;**To calculate the sample standard deviation in Excel, follow these steps:**
+&nbsp;&nbsp;
+
+* In a blank cell, type "**=stdev.s(**"
+* Highlight the data (the cell range reference will be added to your formula)
+* Close the parenthesis with "**)**" and hit enter
+
+<div style="padding-left:35px;"><img src="./Images/Lesson_03_stdev.PNG"></div>
+
+<br>
 </div>
-</br>
+<br>
 
+<div class="message Tip">**Rounding:** As a general rule, when reporting your answers in this class, round to three decimal places unless otherwise specified.</div>
+<br>
+<br>
 
-17. What is the mean of the values that you get if you roll a fair die many, many times?
+#### Calculating the Standard Deviation by Hand
 
-<a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q17" style="display:none;">
-* Many people think the mean is 3. We will visit this later.  Make sure you have written down your response, for future reference.
-</div>
-&nbsp;
-</div>
-</br>
+How is the standard deviation computed?  Where does this "magic" number come from?  How does one number include the information about the spread of all the points?
 
-A man rolled a die 6,000 times and recorded the results. (Yes, some people actually do this sort of thing.)
+It is a little tedious to compute the standard deviation by hand. You will usually compute standard deviation with a computer. However, the process is very instructive and will help you understand conceptually what the statistic represents. As you work through the following steps, please remember the goal is to find a measure of the spread in a data set. We want one number that describes how spread out the data are.
 
-Here are the results.
+First, observe the number line below, where each x represents the temperature of a patient with a relatively uncomplicated case of bird flu. As mentioned earlier, there is not a huge spread in the temperatures.
 
-  Value   Count
-  ------- -------
-  1       1047
-  2       968
-  3       961
-  4       1006
-  5       980
-  6       1038
-  Sum:    6,000
+<img src="./Images/BirdFlu-DotPlotAnswer.png">
 
-How can we find the sample mean of these observed data? We just add the values up and divide by 6,000. The sample mean is.
+On your sketch of the number line, we draw a vertical line at 38.8 degrees, the sample mean.  Now, draw horizontal lines from the mean to each of your $\times$'s.  These horizontal line segments represent the spread of the data about the mean.  Your plot should look something like this:
 
+<img src="./Images/BirdFlu-DotPlotAnswer-Lines.png">
 
-$$\bar x = \frac{1(1047)+2(968)+3(961)+4(1006)+5(980)+6(1038)}{6000}=3.5030$$
+The length of each of the line segments represents how far each observation is from the mean.  If the data are close together, these lines will be fairly short.  If the distribution has a large spread, the line segments will be longer. The standard deviation is a measure of how long these lines are, as a whole. 
 
+The distance between the mean and an observation is referred to as a deviation. In other words, deviations are the lengths of the line segments drawn in the image above.
 
-Sometimes,relative frequencies are given instead of frequencies. There is a straightforward way to calculate the mean when relative frequencies are given. To find out what it is, let's use the rules of arithmetic to break up the previous calculation into six different fractions.
+$$
+\begin{array}{1cl}
+\text{Deviation} & = & \text{Value} - \text{Mean} \\
+\text{Deviation} & = & x - \bar x
+\end{array}
+$$
 
-$$\bar x=\frac{1(1047)}{6000}+\frac{2(968)}{6000}+\frac{3(961)}{6000}+\frac{4(1006)}{6000}+\frac{5(980)}{6000}+\frac{6(1038)}{6000} = 3.5030$$
+If the observed value is greater than the mean, the deviation is positive.  If the value is less than the mean, the deviation is negative. 
 
+The standard deviation is a complicated sort of average of the deviations. Making a table like the one below will help you keep track of your calculations. Please participate fully in this exercise. Writing your answers at each step and developing a table as instructed will greatly enhance the learning experience. By following these steps, you will be able to compute the standard deviation by hand, and more importantly, understand what it is telling you.
 
-$$OR$$
-
-
-$$\bar x = \left(1\times\frac{1047}{6000} \right)+ \left(2\times\frac{968}{6000} \right) + \left(3\times\frac{961}{6000} \right) + \left( 4\times\frac{1006}{6000} \right) + \left( 5\times\frac{980}{6000} \right) + \left( 6\times\frac{1038}{6000} \right) = 3.5030$$
-
-Notice each of the fractions in parentheses is the number of times the value occurred divided by the total number of rolls. In other words, the fractions give the proportion of times that each value occurred, or the relative frequencies. If we divide the fractions, we get
-
-
-$$\bar x= 1\,(0.1745) + 2\,(0.1613) + 3\,(0.1602) + 4\,(0.1677) + 5\,(0.1633) + 6\,(0.1730) =3.5030$$
-
-
-Notice that the sample mean is what you get when you multiply each of the values by the proportion of times they occurred and then add them up. We can revise the table above so it gives the value and the sample proportion. We add a column that gives the product of the value and the proportion of times it occurred. When we add up the values in this column, we get the following mean.
+**Step 01**: The first step in computing the standard deviation by hand is to create a table, like the following. Enter the observed data in the first column.
 
 <center>
 <table>
 <thead>
 <tr class="header">
-<th><p>Column 1</p></th>
-<th><p>Column 2</p></th>
-<th><p>Column 3</p></th>
+<th><p>Observation ($x$)</p>
+</td></p></th>
+<th><p>Deviation from the Mean ($x-\bar x$)
+</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><p>Value</p></td>
-<td><p>Proportion</p></td>
-<td><p>Value $\times$ Proportion</p></td>
 </tr>
 <tr class="even">
-<td><p>$$1$$</p></td>
-<td><p>$\displaystyle{\frac{1047}{6000} = 0.1745}$</p></td>
-<td><p>$$1(0.1745)$$</p></td>
+<td><p>$38.1$</p></td>
+<td><p>$38.1-38.8=-0.7$</p></td>
 </tr>
 <tr class="odd">
-<td><p>$$2$$</p></td>
-<td><p>$\displaystyle{\frac{968}{6000} = 0.1613}$</p></td>
-<td><p>$$2(0.1613)$$</p></td>
-</tr>
-<tr class="even">
-<td><p>$$3$$</p></td>
-<td><p>$\displaystyle{\frac{961}{6000} = 0.1602}$</p></td>
-<td><p>$$3(0.1602)$$</p></td>
-</tr>
-<tr class="odd">
-<td><p>$$4$$</p></td>
-<td><p>$\displaystyle{\frac{1006}{6000} = 0.1677}$</p></td>
-<td><p>$$4(0.1677)$$</p></td>
-</tr>
-<tr class="even">
-<td><p>$$5$$</p></td>
-<td><p>$\displaystyle{\frac{980}{6000} = 0.1633}$</p></td>
-<td><p>$$5(0.1633)$$</p></td>
-</tr>
-<tr class="odd">
-<td><p>$$6$$</p></td>
-<td><p>$\displaystyle{\frac{1038}{6000} = 0.1730}$</p></td>
-<td><p>$$6(0.1730)$$</p></td>
-</tr>
-<tr class="even">
+<td><p>$38.3$</p></td>
 <td></td>
-<td><p>Sum: 1</p></td>
-<td><p>Sum:$\bar x \approx 3.5030$</p></td>
+</tr>
+<tr class="even">
+<td><p>$38.4$</p></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><p>$39.5$</p></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><p>$39.7$</p></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><p>$\bar x = 38.8$</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
 </center>
 
-The sample mean of the values shown on the 6,000 rolls of the die is $\bar x = 3.5030$.
 
-What could we do to calculate the population mean? Remember that the true probability that we would roll any one of these values is $1/6$. If we substitute the true proportion, $1/6$, for the estimated proportion obtained by rolling the die 6,000 times, we get the following table.
+**Step 02**: The second column of the table contains the deviations from the mean. Complete column 2 of the table above. 
+
+<a href="javascript:showhide('Step2')"><span style="font-size:8pt;">Check Results for Step 2</span></a>
+<div id="Step2" style="display:none;">
+
+<table>
+<thead>
+<tr class="header">
+<th><p>Observation ($x$)</p></th>
+<th><p>Deviation from the Mean ($x-\bar x$)
+</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td><p>$38.1$</p></td>
+<td><p>$38.1-38.8=-0.7$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$38.3$</p></td>
+<td><p>$38.3-38.8=-0.5$</p></td>
+</tr>
+<tr class="even">
+<td><p>$38.4$</p></td>
+<td><p>$38.4-38.8=-0.4$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$39.5$</p></td>
+<td><p>$39.5-38.8=0.7$</p></td>
+</tr>
+<tr class="even">
+<td><p>$39.7$</p></td>
+<td><p>$39.7-38.8=0.9$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$\bar x = 38.8$</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+9. How could we use this table to find the "typical" distance from each point to the mean? Think carefully about this, and then write down your answer before continuing.
+
+<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q9" style="display:none;">
+
+* You may have suggested that we compute the mean of these values. This seems like a good idea.  If we compute the mean, it will tell us the average deviation from the mean. 
+<br>
+<br> 
+9b. Compute the mean of Column 2. What do you get?
+
+<a href="javascript:showhide('Q9b')"><span style="font-size:8pt;">Click Here to Continue</span></a>
+<div id="Q9b" style="display:none;">
+
+* You should have found that the mean of the deviations is zero.  This is true for *every* data set. If you add up the deviations from the mean, the positive values will cancel with the negative values. The sum of the deviations from the mean will be zero, so the mean also must equal zero.
+* The good news is that you can use this fact to check if you are on the right track.  If the deviations from the mean do not add up to zero, then you have made a mistake in the calculations. The bad news is that the deviations always add up to 0, making it look like the distance from the data to the mean is 0. Nonsense!
+* The mean of the deviations from the mean cannot be used to find a measure of the spread in a data set, but it does provide a guidepost that shows we are on the right track.  We must find another way to estimate the spread of a data set.
+
+</div>
+</div>
+<br>
+
+10. We need a way to work with the negative deviations from the mean, so they do not cancel with the positive ones.  What could we do?  (Choose one of the four options below.)
+
+<a href="javascript:showhide('Q10a')"><span style="font-size:8pt;">Option #1: Take the absolute value of the deviations</span></a>
+<div id="Q10a" style="display:none;">
+* Option #1:
+
+* This is an excellent suggestion.  This is probably one of the first things statisticians used to estimate the spread in the data.  
+
+* If we take the absolute value of the deviations, then all the values are positive.  By taking the mean of these numbers, we do get a measure of spread.  This quantity is called the mean absolute deviation (MAD).
+
+* There is good news and bad news.  The good news is, you discovered a way to estimate the spread in a data set. (In fact, the MAD is used as one estimate of the volatility of stocks.) The bad news is that the MAD does not have good theoretical properties. A proof of this claim requires calculus, and so will not be discussed here.  For most applications, there is a better choice.  Please select another option.
+</div>
+<br>
+
+<a href="javascript:showhide('Q10b')"><span style="font-size:8pt;">Option #2: Square the deviations from the mean</span></a>
+<div id="Q10b" style="display:none;">
+* Option #2:
+
+* If we square the deviations from the mean, the values that were negative will become positive.  This leads to an estimator of the spread that has excellent theoretical properties.  This is the best of the four options.  You will apply this idea in Step 03.
+</div>
+<br>
+
+<a href="javascript:showhide('Q10c')"><span style="font-size:8pt;">Option #3: Delete all the negative deviations</span></a>
+<div id="Q10c" style="display:none;">
+* Option #3:
+
+* Sorry, you can't make your troubles go away by deleting things you don't like.  Please try again.
+</div>
+<br>
+
+<a href="javascript:showhide('Q10d')"><span style="font-size:8pt;">Option #4: Do something entirely different</span></a>
+<div id="Q10d" style="display:none;">
+* Option #4:
+
+* You probably have an ingenious idea.  Surprisingly enough, there *is* a right answer to the question.  Please choose a different option.
+</div>
+<br>
+<br>
+
+* Please do not go on to Step 03 until you have finished this exploration.
+</div>
+<br>
+
+<center>
+"Piled Higher and Deeper" by Jorge Cham 
+<br>
+<img src="./Images/Phd062307s.png">
+</center>
 
 
-Column 1   Column 2                               Column 3
----------- -------------------------------------- ---------------------------
-Value      Proportion                             Value $\times$ Proportion
-$x$        $P(x)$                                 $x \times P(x)$
-$$1$$      $\displaystyle{\frac{1}{6}= 0.1667}$   $$1(0.1667)$$
-$$2$$      $\displaystyle{\frac{1}{6}= 0.1667}$   $$2(0.1667)$$
-$$3$$      $\displaystyle{\frac{1}{6}= 0.1667}$   $$3(0.1667)$$
-$$4$$      $\displaystyle{\frac{1}{6}= 0.1667}$   $$4(0.1667)$$
-$$5$$      $\displaystyle{\frac{1}{6}= 0.1667}$   $$5(0.1667)$$
-$$6$$      $\displaystyle{\frac{1}{6}= 0.1667}$   $$6(0.1667)$$
-           Sum: 1                                 Sum: $\mu\approx 3.5$
+**Step 03**:  Add a third column to your table. To get the values in this column, square the deviations from the mean that you found in Column 2.
+
+<a href="javascript:showhide('Step3blank')"><span style="font-size:8pt;">Click Here for a Blank Table</span></a>
+<div id="Step3blank" style="display:none;">
+<table>
+<thead>
+<tr class="header">
+<th><p>Observation $x$</p></th>
+<th><p>Deviation<br />
+from the Mean<br />
+$x-\bar x$</p></th>
+<th><p>Squared Deviation<br />
+from the Mean<br />
+$\left(x-\bar x\right)^2$</p></th>
+</tr>
+</thead>
+<tbody> 
+<tr class="even">
+<td><p>$38.1$</p></td>
+<td><p>$38.1-38.8=-0.7$</p></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><p>$38.3$</p></td>
+<td><p>$38.3-38.8=-0.5$</p></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><p>$38.4$</p></td>
+<td><p>$38.4-38.8=-0.4$</p></td> 
+<td></td>
+</tr>
+<tr class="odd">
+<td><p>$39.5$</p></td>
+<td><p>$39.5-38.8=0.7$</p></td> 
+<td></td>
+</tr>
+<tr class="even">
+<td><p>$39.7$</p></td>
+<td><p>$39.7-38.8=0.9$</p></td> 
+<td></td>
+</tr>
+<tr class="odd">
+<td><p>$\bar x = 38.8$</p></td> 
+<td><p>Sum $=0$</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</br>
 
 
-The population mean of a discrete random variable is computed by multiplying each of the values of the random variable by the respective probability that the value will occur. This is exactly what we did in the last table above. You can use a table like this to compute the mean of any discrete random variable. The first column of the table contains the values of the random variable. The second column gives their probabilities. The third column is found by multiplying the values in the previous two columns. The population mean, $\mu$, is the sum of the numbers in the third column.
- 
-The quantity $\mu = 3.5$ is the true population mean for the values shown on a die. If you roll a die many, many times, the sample mean of the values you roll will be very close to $\mu = 3.5$. (Another way to say this is that the long-run average of the values shown on a die will tend to be close to $\mu$ = 3.5.) This is the answer to question 17 above.  Did you put 3.5, or did you guess the answer would be 3?  Many people guess the mean will be 3, but as we have seen, it is actually 3.5.
+<a href="javascript:showhide('Step3filled')"><span style="font-size:8pt;">Check Results for Step 03</span></a>
+<div id="Step3filled" style="display:none;">
+<table>
+<thead>
+<tr class="header">
+<th><p>Observation $x$</p></th>
+<th><p>Deviation<br />
+from the Mean<br />
+$x-\bar x$</p></th>
+<th><p>Squared Deviation<br />
+from the Mean<br />
+$\left(x-\bar x\right)^2$</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td><p>$38.1$</p></td>
+<td><p>$38.1-38.8=-0.7$</p></td>
+<td><p>$(-0.7)^2=0.49$</p></td> 
+</tr>
+<tr class="odd">
+<td><p>$38.3$</p></td>
+<td><p>$38.3-38.8=-0.5$</p></td>
+<td><p>$(-0.5)^2=0.25$</p></td> 
+</tr>
+<tr class="even">
+<td><p>$38.4$</p></td>
+<td><p>$38.4-38.8=-0.4$</p></td>
+<td><p>$(-0.4)^2=0.16$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$9.5$</p></td>
+<td><p>$39.5-38.8=0.7$</p></td>
+<td><p>$(0.7)^2=0.49$</p></td>
+</tr>
+<tr class="even">
+<td><p>$39.7$</p></td>
+<td><p>$39.7-38.8=0.9$</p></td> 
+<td><p>$(0.9)^2=0.81$</p></td> 
+</tr>
+<tr class="odd">
+<td><p>$\bar x = 38.8$</p></td>
+<td><p>Sum $=0$</p></td> 
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
 
-Notice that the sample mean was very close to the true mean. This is an example of the Law of Large Numbers. The **Law of Large Numbers** states that if you take a large sample from a population, the sample mean will likely be close to the population mean.
+**Step 04**:  Now, add up the squared deviations from the mean.
 
-### Finding the Standard Deviation of a Discrete Random Variable
+<a href="javascript:showhide('Step4')"><span style="font-size:8pt;">Check Results for Step 04</span></a>
+<div id="Step4" style="display:none;">
+<table>
+<thead>
+<tr class="header">
+<th><p>Observation $x$</p></th>
+<th><p>Deviation<br />
+from the Mean<br />
+$x-\bar x$</p></th>
+<th><p>Squared Deviation<br />
+from the Mean<br />
+$\left(x-\bar x\right)^2$</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td><p>$38.1$</p></td>
+<td><p>$38.1-38.8=-0.7$</p></td>
+<td><p>$(-0.7)^2=0.49$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$38.3$</p></td>
+<td><p>$38.3-38.8=-0.5$</p></td>
+<td><p>$(-0.5)^2=0.25$</p></td>
+</tr>
+<tr class="even">
+<td><p>$38.4$</p></td>
+<td><p>$38.4-38.8=-0.4$</p></td>
+<td><p>$(-0.4)^2=0.16$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$39.5$</p></td>
+<td><p>$39.5-38.8=0.7$</p></td>
+<td><p>$(0.7)^2=0.49$</p></td>
+</tr>
+<tr class="even">
+<td><p>$39.7$</p></td>
+<td><p>$39.7-38.8=0.9$</p></td>
+<td><p>$(0.9)^2=0.81$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$\bar x = 38.8$</p></td>
+<td><p>Sum $=0$</p></td>
+<td><p>Sum $=2.20$</p></td>
+</tr>
+</tbody>
+</table>
+The sum of the squared deviations is 2.20.
+</div>
+<br>
 
-We can find the population standard deviation for a discrete random variable by making a table to calculate the mean of the variable. Then we add a column whose values are found by subtracting the mean from each of the observations, squaring it, and multiplying it by the probability for that value. When we add up the values in this column, we get the variance. The standard deviation is the square root of the variance. Our running example of rolling a fair six-sided die will allow us to illustrate this.
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+11. Suppose that the researchers had collected body temperature data on 500 bird flu patients instead of 5.  What would happen to the sum of the squared deviations, if the distribution of the data is the same for the 500 patients as the 5 patients?
 
-#### Rolling a die
+<a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q11" style="display:none;">
+* We would expect the sum of the squared deviations to be a lot larger than it is now.  We would be adding squared deviations for 500 observations instead of 5. So, the sum of the squared deviations would be about 100 times larger.  
+* Remember, we are trying to find a measure of the spread of a data set.  Our final measure should not be dependent on the sample size.   We need to do something else.
+</div>
+<br>
 
-Let's calculate the population standard deviation for the number that results from rolling a fair six-sided die. We can do this by extending the table we made for calculating the mean, as described in the previous paragraph and illustrated in the following table.
+12. What could we do to make sure the sample size does not inflate our estimate of the spread of the data?
 
-  Column 1   Column 2                               Column 3                    Column 4
-  ---------- -------------------------------------- --------------------------- -------------------------------------
-  Value      Proportion                             Value $\times$ Proportion   
-  $x$        $P(x)$                                 $x \times P(x)$             $(x-\mu)^2 \times P(x)$
-  $$1$$      $\displaystyle{\frac{1}{6}= 0.1667}$   $$1(0.1667)$$               $(1-3.5)^2\times(0.1667) = 1.0417$
-  $$2$$      $\displaystyle{\frac{1}{6}= 0.1667}$   $$2(0.1667)$$               $(2-3.5)^2\times(0.1667) = 0.3750$
-  $$3$$      $\displaystyle\frac{1}{6}= 0.1667$     $$3(0.1667)$$               $(3-3.5)^2\times(0.1667) = 0.0417$
-  $$4$$      $\displaystyle\frac{1}{6}= 0.1667$     $$4(0.1667)$$               $(4-3.5)^2\times(0.1667) = 0.0417$
-  $$5$$      $\displaystyle\frac{1}{6}= 0.1667$     $$5(0.1667)$$               $(5-3.5)^2\times(0.1667) = 0.3750$
-  $$6$$      $\displaystyle\frac{1}{6}= 0.1667$     $$6(0.1667)$$               $(6-3.5)^2\times(0.1667) = 1.0417$
-             $$1$$                                  Sum: $\mu=3.5$              Sum: Variance = $\sigma^2 = 2.9167$
+<a href="javascript:showhide('Q12a')"><span style="font-size:8pt;">Option #1: Divide by n</span></a>
+<div id="Q12a" style="display:none;">
+* Option #1:
 
-The standard deviation is $$\sigma=\sqrt{\sigma^2}=\sqrt{(2.9167)}=1.7078$$
+* This is an excellent suggestion.  There are good reasons to choose this option.  Unfortunately, dividing by $n$ to estimate the spread of data gives estimates that are too low, on average. There is a surprising, yet simple fix: divide by $n-1$ instead of $n$.  Please examine Option #2.
+</div>
+<br>
 
-So, the mean of the values shown on a die is 3.5 and the standard deviation is 1.7078. The standard deviation is a measure of the variation in the numbers shown on the die. On average, we can expect that the numbers shown on the die are about 1.7 away from 3.5.
+<a href="javascript:showhide('Q12b')"><span style="font-size:8pt;">Option #2: Divide by n-1</span></a>
+<div id="Q12b" style="display:none;">
+* Option #2:
 
-#### Powerball
+* This seems very odd, but it avoids the problem of underestimating the spread in the data, a problem that dividing by $n$ has. Ultimately, dividing by $n-1$ will lead us to the standard deviation you computed using 
+<!--{{Course_Filter|course=B C|content=SPSS}}--> 
+earlier. In Step 05, you will divide the sum of the squared deviations by $n-1$.  Here is how your table should look so far.
 
-Powerball is a multi-state lottery game. Fifty-nine White balls numbered 1&ndash;59 are placed in a drum and thoroughly mixed; five of the balls are drawn. Then, thirty-five red balls&mdash;one of which is labeled the "powerball"&mdash;are placed in another drum and  thoroughly mixed, and one ball is drawn from this drum. Players win by correctly guessing some or all of the balls that will be selected in weekly drawings. The payout value of the grand prize depends on the number of tickets sold. If more than one ticket matches all the balls, the grand prize payoff is divided evenly among all the grand prize tickets.
+<table>
+<thead>
+<tr class="header">
+<th><p>Observation $x$</p></th>
+<th><p>Deviation<br />
+from the Mean<br />
+$x-\bar x$</p></th>
+<th><p>Squared Deviation<br />
+from the Mean<br />
+$\left(x-\bar x\right)^2$</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td><p>$38.1$</p></td>
+<td><p>$38.1-38.8=-0.7$</p></td>
+<td><p>$(-0.7)^2=0.49$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$38.3$</p></td>
+<td><p>$38.3-38.8=-0.5$</p></td>
+<td><p>$(-0.5)^2=0.25$</p></td>
+</tr>
+<tr class="even">
+<td><p>$38.4$</p></td>
+<td><p>$38.4-38.8=-0.4$</p></td>
+<td><p>$(-0.4)^2=0.16$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$39.5$</p></td>
+<td><p>$39.5-38.8=0.7$</p></td>
+<td><p>$(0.7)^2=0.49$</p></td>
+</tr>
+<tr class="even">
+<td><p>$39.7$</p></td>
+<td><p>$39.7-38.8=0.9$</p></td>
+<td><p>$(0.9)^2=0.81$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$\bar x = 38.8$</p></td>
+<td><p>Sum $=0$</p></td>
+<td><p>Sum $=2.20$</p></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><p>$\displaystyle{s^2=\frac{sum}{n-1}=\frac{2.20}{5-1}=0.55}$</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
 
-The profit is the amount a player wins minus the cost to play (\$2 ). So, if a person wins a prize of \$4, their profit is \$2.  If a person loses, their profit is \$ -- 2. We will assume that the grand prize is \$200,000,000&mdash;although in many drawings it will be much less than this.
+<a href="javascript:showhide('Q12c')"><span style="font-size:8pt;">Option #3: Neither of these</span></a>
+<div id="Q12c" style="display:none;">
+* Option #3:
 
-The table below illustrates the profit for all possible outcomes in a drawing where the grand prize is \$200,000,000. The symbol "O" represents one white ball was correctly guessed, and the symbol <span style="color:red;">P</span> represents that the powerball was correctly guessed.
+* You probably have an ingenious idea.  Nevertheless, please choose a different option.
+</div>
+<br>
 
-  Outcome         Payoff           Profit         Probability
-  --------------- ---------------- -------------- ----------------------------------------------------------------
-                  Gross Winnings    $x$             $P(x)$
-  OOOOOP          \$200,000,000     \$199,999,998   $\dfrac{1}{175,223,510}$
-  OOOOO           \$1,000,000       \$999,998       $\dfrac{34}{175,223,510}$
-  OOOO P          \$10,000          \$9,998         $\dfrac{270}{175\text{,}223\text{,}510}$
-  OOOO            \$100             \$98            $\dfrac{9\text{,}180}{175\text{,}223\text{,}510}$
-  OOOP            \$100             \$98            $\dfrac{14\text{,}310}{175\text{,}223\text{,}510}$
-  OOO             \$7               \$5             $\dfrac{486\text{,}540}{175\text{,}223\text{,}510}$
-  OOP             \$7               \$5             $\dfrac{248\text{,}040}{175\text{,}223\text{,}510}$
-  OP              \$4               \$2             $\dfrac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}$
-  P               \$4               \$2             $\dfrac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}$
-  Losing ticket   \$0               -\$2            $\dfrac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}$
+* Please do not go on until you have finished this exercise.
+</div>
+<br>
+
+**Step 05**: Divide the sum of the squared deviations by $n - 1$. Write this value at the bottom of Column 3 of your table.
+
+The number you computed in Step 05 is called the <span id="Sample Variance">**sample variance**</span>. It is a measure of the spread in a data set. It has very nice theoretical properties.  The variance plays an important role in Statistics.  We denote the sample variance by the symbol $s^2$.  
+
+It can be shown that the sample variance is an unbiased estimator of the true population variance (which is denoted $\sigma^2$.) This means that the sample variance can be considered a reasonable estimator of the population variance.  If the sample size is large, this estimator tends to be very good.
+
+<a href="javascript:showhide('Step5')"><span style="font-size:8pt;">Check the Results for Step 05</span></a>
+<div id="Step5" style="display:none;">
+ The sum of the squared deviations is the sum of the values in Column 3.  This sum equals 2.20. We divide the sum of Column 3 ($2.20$) by $n-1=5-1=4$ to get the sample variance, $s^2$:
+
+$$s^2=\frac{sum}{n-1}=\frac{2.20}{5-1}=0.55$$
+
+This is the sample variance.  
+
+<table>
+<thead>
+<tr class="header">
+<th><p>Observation $x$</p></th>
+<th><p>Deviation<br />
+from the Mean<br />
+$x-\bar x$</p></th>
+<th><p>Squared Deviation<br />
+from the Mean<br />
+$\left(x-\bar x\right)^2$</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td><p>$38.1$</p></td>
+<td><p>$38.1-38.8=-0.7$</p></td>
+<td><p>$(-0.7)^2=0.49$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$38.3$</p></td>
+<td><p>$38.3-38.8=-0.5$</p></td>
+<td><p>$(-0.5)^2=0.25$</p></td>
+</tr>
+<tr class="even">
+<td><p>$38.4$</p></td>
+<td><p>$38.4-38.8=-0.4$</p></td>
+<td><p>$(-0.4)^2=0.16$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$39.5$</p></td>
+<td><p>$39.5-38.8=0.7$</p></td>
+<td><p>$(0.7)^2=0.49$</p></td>
+</tr>
+<tr class="even">
+<td><p>$39.7$</p></td>
+<td><p>$39.7-38.8=0.9$</p></td>
+<td><p>$(0.9)^2=0.81$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$\bar x = 38.8$</p></td>
+<td><p>Sum $=0$</p></td>
+<td><p>Sum $=2.20$</p></td>
+</tr>
+<tr class="even">
+<td><p>Variance:</p></td>
+<td><p>$\displaystyle{s^2=\frac{sum}{n-1}=\frac{2.20}{5-1}=0.55}$</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
 
 
-How likely is it that you will win the Powerball jackpot? To put this in perspective, we will make some comparisons. You are more likely to be struck by lightning twice  in your life than to win the Powerball jackpot. You are more likely to be killed in a airplane accident&mdash;while walking on the ground&mdash;than you are to win the Powerball jackpot! It is extremely unlikely that you will guess all the numbers in a particular drawing.  
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+13. The temperature data for the bird flu patients are in degrees Centigrade. What are the units of the variance? 
 
-What is the population mean of the profits for those who play Powerball? To find this, we add one more column to the table above. We multiply the profit values, $x$, by the probability of getting that profit, and then add the numbers in this new column.
+<a href="javascript:showhide('Q13')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q13" style="display:none;">
+* The data in Column 1 of the table is in degrees Centigrade.  The mean also is in degrees Centigrade.
+* To get the numbers in Column 2, we subtracted the mean from each of the values in Column 1.
+* We squared the values in Column 2 to get Column 3. The units for this column are degrees Centigrade squared.  
+* The sum of the numbers in Column 3 will also be in units of degrees Centigrade squared.
+* When we divided that sum by $n-1$, we obtained the sample variance.  The sample variance has units of degrees Centigrade squared. This is not easily interpretable. It would be much easier to think about it if our measure of spread was in the same units as the data.
+</div>
+<br>
 
-  Outcome         Profit                            Probability                                                       
-  --------------- --------------------------------- ----------------------------------------------------------------- -----------------------------------------------------------------------------------------------------
-                  Gross Winnings, $x$               $P(x)$                                                            $x \times P(x)$
-  OOOOOP          \$199,999,998                     $$\frac{1}{175\text{,}223\text{,}510}$$                           $\displaystyle{\$199\text{,}999\text{,}998\times\frac{1}{175\text{,}223\text{,}510}=0.00000000571}$
-  OOOOO           \$999,998                         $$\frac{34}{175\text{,}223\text{,}510}$$                          $\displaystyle{\$999\text{,}998\times\frac{34}{175\text{,}223\text{,}510}=0.000000194}$
-  OOOOP           \$9,998                           $$\frac{270}{175\text{,}223\text{,}510}$$                         $\displaystyle{\$9\text{,}998\times\frac{270}{175\text{,}223\text{,}510}=0.000001541}$
-  OOOO            \$98                              $$\frac{9\text{,}1890}{175223\text{,}510}$$                       $\displaystyle{\$98\times\frac{9\text{,}180}{175\text{,}223\text{,}510}=0.000052390}$
-  OOOP            \$98                              $$\frac{14\text{,}310}{175\text{,}223\text{,}510}$$               $\displaystyle{\$98\times\frac{14\text{,}310}{175\text{,}223\text{,}510}=0.000081660}$
-  OOO             \$5                               $$\frac{486\text{,}540}{175\text{,}223\text{,}510}$$              $\displaystyle{\$5\times\frac{486\text{,}540}{175\text{,}223\text{,}510}=0.002776682}$
-  OOP             \$5                               $$\frac{248\text{,}040}{175\text{,}223\text{,}510}$$              $\displaystyle{\$5\times\frac{248\text{,}040}{175\text{,}223\text{,}510}=0.001415563}$
-  OP              \$2                               $$\frac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}$$     $\displaystyle{\$2\times\frac{1\text{,}581\text{,}255}{175\text{,}223\text{,}510}=0.009024217}$
-  P               \$2                               $$\frac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}$$     $\displaystyle{\$2\times\frac{3\text{,}162\text{,}510}{175\text{,}223\text{,}510}=0.018048434}$
-  Losing ticket   \$-2                              $$\frac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}$$   $\displaystyle{\$-2\times\frac{169\text{,}721\text{,}370}{175\text{,}223\text{,}510}=0.968599305}$
+14. What operation can we do to the variance to get a quantity with units degrees Centigrade?
 
+<a href="javascript:showhide('Q14')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q14" style="display:none;">
+* If we take the square root of the variance, we get a quantity that has units of degrees Centigrade. This quantity is the standard deviation.
+</div>
+&nbsp;
+</div>
+<br>
 
-The fact that the mean is -$0.4981 says that the average profit of each Powerball lottery ticket is actually a loss of 50 cents. In other words, players lose 50 cents on average, every time they play.
+**Step 06**: Take the square root of the sample variance to get the sample standard deviation.
 
-If we add another column and compute the standard deviation of the profits, we get
-
-
-  Outcome         Profit                Probability                            
-  --------------- --------------------- --------------- ---------------------- -----------------------------
-                  Gross Winnings, $x$   $P(x)$          $x \times P(x)$        $(x-\mu)^2 \times P(x)$
-  OOOOOP         $199,999,998           0.00000000571   1.141399               228279866.1
-  OOOOO          $999,998               0.000000194     0.194038               194037.3062
-  OOOOP          $9,998                 0.000001541     0.015406               154.0426305
-  OOOO           $98                    0.000052390     0.005134               0.508283622
-  OOOP           $98                    0.000081660     0.008003               0.79232447
-  OOO            $5                     0.002776682     0.013883               0.083936974
-  OOP            $5                     0.001415563     0.007078               0.042791399
-  OP             $2                     0.009024217     0.018148               0.056316192
-  P              $2                     0.018048434     0.036097               0.112632684
-  Losing ticket  $-2                    0.968599305     (1.937199)             2.184838583
-                  Total                 Sum: 1          Sum: $\mu=\$-0.4981$   Sum: $\sigma^2$=228474061.2
+The sample standard deviation is defined as the square root of the sample variance. 
 
 
-The standard deviation is $$\sigma = \sqrt{\sigma^2}=\sqrt{228\text{,}474\text{,}061.2}=\$15\text{,}115.36$$ 
+$$\text{Sample Standard Deviation} = s = \sqrt{ s^2 } = \sqrt{\strut\text{Sample Variance}}$$
 
-The standard deviation measures how spread out the profits are. On average, we can expect profits to be about \$15,115.36 away from the mean profit of \$ -- 0.50. The standard deviation is so large in this example because of all the outliers: Every positive profit (\$2, \$5, \$98, and so on) occurs so rarely as to qualify to be an outlier. In addition, the profit \$199,999,998 is a very large outlier. Almost everyone who plays has a profit of \$ -- 2, however, so the vast majority of the data aren't spread out at all. Recall from Lesson 3 that the standard deviation is not resistant to outliers. Powerball profits are a rather dramatic example of this lack of resistance.
 
-The population mean is also called the **expected value**.  How do we interpret the population mean or expected value of $\mu=\$-0.4981$?  If you played Powerball, buying one ticket every week, forever, then the mean of your winnings would be very close to \$ -- 0.50. This takes into account that on rare occasions&mdash;about once in every 175 million weeks&mdash;you would win the jackpot. Most of the time (about 97% of the time,) you would win nothing!  In the long run, if you look at your mean profit, your financial situation would be the same whether you were to throw 50 cents away every week or whether you were to play Powerball each week. Of course, this assumes that you live forever and always play. In practice, however, most people do not live forever playing Powerball. Most likely, you will lose much more than you win.
+The standard deviation has the same units as the original observations.  We use the standard deviation heavily in statistics.
 
-What about those who have won? Read one of the Powerball winner's story, in the following (hidden) optional readings.
+The sample standard deviation ($s$) is an estimate of the true population standard deviation ($\sigma$).
 
-#### Optional Lottery Explorations (Hidden)
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+15. What is the sample standard deviation, $s$, of the temperatures of the five patients with relatively uncomplicated cases of the bird flu?
 
-<a href="javascript:showhide('Q18')"><span style="font-size:8pt;">Click Here to Explore this Optional Section</span></a>
-<div id="Q18" style="display:none;">
+<a href="javascript:showhide('Q15')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q15" style="display:none;">
+* The sum of the squared deviations is the sum of the values in Column 3.  This sum equals 2.20. We divide the sum of Column 3 ($2.20$) by $n-1=5-1=4$ to get the sample variance, $s^2$:
 
-The following story describe how winning a huge Powerball jackpot changed the life of Jack Whittaker, for the worse.
+<center>
+$s^2=\frac{sum}{n-1}=\frac{2.20}{5-1}=0.55$
+</center>
 
-[Print story](http://abcnews.go.com/2020/powerball-winner-cursed/story?id=3012631#.TxRrefkprTp){target="_blank"}
+* This is the sample variance.  
+
+<table>
+<thead>
+<tr class="header">
+<th><p>Observation $x$</p></th>
+<th><p>Deviation<br />
+from the Mean<br />
+$x-\bar x$</p></th>
+<th><p>Squared Deviation<br />
+from the Mean<br />
+$\left(x-\bar x\right)^2$</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td><p>$38.1$</p></td>
+<td><p>$38.1-38.8=-0.7$</p></td>
+<td><p>$(-0.7)^2=0.49$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$38.3$</p></td>
+<td><p>$38.3-38.8=-0.5$</p></td>
+<td><p>$(-0.5)^2=0.25$</p></td>
+</tr>
+<tr class="even">
+<td><p>$38.4$</p></td>
+<td><p>$38.4-38.8=-0.4$</p></td>
+<td><p>$(-0.4)^2=0.16$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$39.5$</p></td>
+<td><p>$39.5-38.8=0.7$</p></td>
+<td><p>$(0.7)^2=0.49$</p></td>
+</tr>
+<tr class="even">
+<td><p>$39.7$</p></td>
+<td><p>$39.7-38.8=0.9$</p></td>
+<td><p>$(0.9)^2=0.81$</p></td>
+</tr>
+<tr class="odd">
+<td><p>$\bar x = 38.8$</p></td>
+<td><p>Sum $=0$</p></td>
+<td><p>Sum $=2.20$</p></td>
+</tr>
+<tr class="even">
+<td><p>Variance:</p></td>
+<td><p>$\displaystyle{s^2=\frac{sum}{n-1}=\frac{2.20}{5-1}=0.55}$</p></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><p>Standard Deviation:</p></td>
+<td><p>$\displaystyle{s = \sqrt{s^2}=\sqrt{0.55} \approx 0.742}$</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+- The sample standard deviation is $s = 0.742$ degrees Centigrade.
+
+* Take a few minutes to verify that you can recreate this table on your own.
+</div>
+&nbsp;
+</div>
+<br>
+
+#### Summary
+
+<div class="Emphasis">
+&nbsp;&nbsp;**Standard Deviation**
+
+&nbsp;&nbsp;The **standard deviation** is one number that describes the spread in a set of data.  If the data points are close together the standard deviation will be smaller than if they are spread out.
+
+&nbsp;&nbsp;At this point, it may be difficult to understand the meaning and usefulness of the standard deviation.  For now, it is enough for you to recognize the following points:
+
+  +  The standard deviation is a measure of how spread out the data are.
+  +  If the standard deviation is large, then the data are very spread out.
+  +  If the standard deviation is zero, then all the values are the identical--there is no spread in the data.
+  +  The standard deviation cannot be negative.
+<br>
+</div>
+
+**Variance**
+
+The variance is the square of the standard deviation.  The sample variance is denoted by the symbol $s^2$.  You found the sample standard deviation for  patient temperatures of uncomplicated cases of bird  in the bird  above is $s = 0.74162$.  So, the sample variance for this data set is $s^2 = 0.74162^2 = 0.550$. Be aware, if you had squared the rounded value of $s^2 = 0.742$ in the calculation, you would have gotten an answer of 0.551 instead. This would be considered incorrect!
+<!-- [[NEED TO DISCUSS STATISTIC v. PARAMETER.]] -->
+
+
+<div class="message Tip">**Rounding:** Use **un**rounded values in interim calculations. Rounding too early in the process can lead to wrong answers.</div>
+<br>
+<br>
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+&nbsp;&nbsp;**To calculate the sample variance in Excel:**
+&nbsp;&nbsp;
+
+* In a blank cell, type "**=var.s(**"
+* Highlight the data (the cell range reference will be added to your formula)
+* Close the parenthesis with "**)**" and hit enter
+
+<br>
+</div>
+<br>
+
+
+The standard deviation and variance are two commonly used measures of the spread in a data set.  Why is there more than one measure of the spread?  The standard deviation and the variance each have their own pros and cons.
+
+The variance has excellent theoretical properties.  It is an unbiased estimator of the true population variance.  That means that if many, many samples of $n$ observations were drawn, the variances computed for all the samples would be centered nicely around the true population variance, $\sigma^2$.  Because of these benefits, the variance is regularly used in higher-level statistics applications.  One drawback of the variance is that the units for the variance are the square of the units for the original data.  In the bird flu example, the body temperatures were measured in degrees Centigrade.  So, the variance will have units of degrees Centigrade squared $(^\circ \text{C})^2$.  What does degrees Centigrade squared mean?  How do you interpret this?  It doesn't make any sense.  This is one of the major drawbacks of the sample variance.
+
+Because we take the square root of the variance to get the standard deviation, the standard deviation is in the same units as the original data.  This is a great advantage, and is one of the reasons that the standard deviation is commonly used to describe the spread of data.
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+Enter the patient temperature data for the severe cases of bird flu into Excel. Then use Excel to calculate the numerical summaries you have learned so far. As a reminder, the temperatures of patients with a severe case of bird flu are:
+
+<center> 39.1, 39.5, 38.9, 39.2, 39.9, 39.7, 39 </center>
+
+16. What is the mean, median, standard deviation and variance of the sample? 
+
+<a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q16" style="display:none;">
+
+<div style="padding-left:35px;"><img src="./Images/Lesson_03_summary_stats_severe_bird_flu.PNG"></div>
 
 </div>
 <br>
 
+For the next two questions, consider the histograms below comparing weight (in kilograms) of men (top histogram) to elephant seals (bottom histogram). 
+
+<br>
+
+<div style="padding-left:35px;">
+Weight of Men Compared to Weight of Seals<br>
+<img src="./Images/DiveSealsVsMenWeights-Hist.png" width=80%>
 </div>
+
+17. Based on the histograms, who has a greater sample mean weight, men or elephant seals?
+
+<a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q17" style="display:none;">
+* The mean is a measure of the center of a distribution. The mean weight of the men is less than the mean weight of the seals. We can see this because the bulk of the data in the histogram for the men’s weight is to the left of the seals'. The center of the distribution of elephant seals is about 195 kg. The center of the distribution of men's weight is located below 100 kg on the number line. 
+</div>
+<br>
+
+18. Based on the histograms, do the weights of men or elephant seals have a larger sample standard deviation? 
+
+<a href="javascript:showhide('Q18')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q18" style="display:none;">
+
+* Standard deviation is a measure of spread. You will note that the weights of the seals are more spread out than the weights of the men. Therefore, we conclude that the sample standard deviation of elephant seal weights is larger than the sample standard deviation of men's weights.
+</div>
+&nbsp;
+</div>
+<br>
+
+
+**Review of Parameters and Statistics**
+
+We have now learned some statistics that can be used to estimate population parameters.  For example, we use $\bar x$ to estimate the population mean $\mu$.  The sample statistics $s$ estimates the true population standard deviation $\sigma$.  The following table summarizes what we have done so far:
+
+<center>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th><p>Sample Statistic</p></th>
+<th><p>Population Parameter</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Mean</p></td>
+<td><p>$\bar x$</p></td>
+<td><p>$\mu$</p></td>
+</tr>
+<tr class="even">
+<td><p>Standard Deviation</p></td>
+<td><p>$s$</p></td>
+<td><p>$\sigma$</p></td>
+</tr>
+<tr class="odd">
+<td><p>Variance</p></td>
+<td><p>$s^2$</p></td>
+<td><p>$\sigma^2$</p></td>
+</tr>
+<tr class="even">
+<td><p>$\vdots$</p></td>
+<td><p>$\vdots$</p></td>
+<td><p>$\vdots$</p></td>
+</tr>
+</tbody>
+</table>
+</center>
+
+Unless otherwise specified, we will always use Excel to find the sample variance and sample mean.
+In each case, the sample statistic estimates the population parameter.  The ellipses $\vdots$ in this table hint that we will add rows in the future.
+
+<br>
+
+**Optional Reading: Formulas for $s$ and $s^2$ (Hidden)**
+
+<a href="javascript:showhide('s2')"><span style="font-size:8pt;">Click Here if you love Math</span></a>
+<div id="s2" style="display:none;">
+
+**Formulas**
+
+For those who like formulas, the equation for the sample variance and sample standard deviation are given here.
+
+
+**Sample variance**:
+
+$$\displaystyle{ s^2=\frac{\sum\limits_{i=1}^n (x_i-\bar x)^2}{n-1} }$$
+
+**Sample standard deviation**:
+
+$$\displaystyle{ s=\sqrt{s^2}=\sqrt{\frac{\sum\limits_{i=1}^n (x_i-\bar x)^2}{n-1}} }$$
+
+where $x_i$ is the $i^{th}$ observed data value, and  $i=1, 2, \ldots, n$.
+
+Unless otherwise specified, we will always use Excel<!--{{Course_Filter|course=B C|content=SPSS}}--> to find the sample variance and sample mean.
+
+**Why do we divide by $n-1$?**
+
+When computing the standard deviation or the variance, we are finding a value that describes the spread of data values. It is a measure of how far the data are from the mean.  Since we do not know the true mean ($\mu$,) we use the sample mean ($\bar x$,) to estimate it. Typically, the data will be closer to $\bar x$ than to $\mu$, since $\bar x$ was computed using the data.  To compensate for this, we divide by $n-1$ rather than $n$ when we find the "average" of the squared deviations from the mean.  It turns out, that subtracting 1 from $n$ inflates this average by the precise amount needed to compensate for the use of $\bar x$ as an estimate for $\mu$.  As a result, the sample variance ($s^2$) is a good estimator of the population variance ($\sigma^2$.)
+</div>
+<br>
+
+Neither the standard deviation nor the variance is **resistant** to outliers.  This means that when there are outliers in the data set, the standard deviation and the variance become artificially large.  It is worth noting that the mean is also not resistant.  When there are outliers, the mean will be "pulled" in the direction of the outliers.
+
+The mean and standard deviation are used to describe the center and spread when the distribution of the data is symmetric and bell-shaped.  If data are not symmetric and bell-shaped, we typically use the five-number summary (discussed below) to describe the spread, because this summary is resistant.
+
+## Additional Tools to Describe the Data
+
+Recall the five steps of the Statistical Process (and the mnemonic "Daniel Can Discern More Truth).
+
+<center>
+<table>
+<tbody>
+<tr class="odd">
+<td><p>Step 1:</p></td>
+<td><p>**D**aniel</p></td>
+<td><p>**D**esign the study</p></td>
+</tr>
+<tr class="even">
+<td><p>Step 2:</p></td>
+<td><p>**C**an</p></td>
+<td><p>**C**ollect data</p></td>
+</tr>
+<tr class="odd">
+<td><p>Step 3:</p></td>
+<td><p>**D**iscern</p></td>
+<td><p>**D**escribe the data</p></td>
+</tr>
+<tr class="even">
+<td><p>Step 4:</p></td>
+<td><p>**M**ore</p></td>
+<td><p>**M**ake inferences</p></td>
+</tr>
+<tr class="odd">
+<td><p>Step 5:</p></td>
+<td><p>**T**ruth</p></td>
+<td><p>**T**ake action</p></td>
+</tr>
+</tbody>
+</table>
+
+<img src="./Images/StepsAll.png">
+</center>
+
+**Step 3** of this process is "**Describe the data**." You have already learned about the mean, median, mode, standard deviation, variance and histograms. These can be good ways to describe the data. The following information on percentiles, quartiles, 5-number summaries, and boxplots will help you learn other common ways to describe data, especially if the data are skewed or contain outliers.
+
+
+<img src="./Images/Step3.png">
+
+For symmetric, bell-shaped data, the mean and standard deviation provide a good description of the center and shape of the distribution.  The mean and standard deviation are not sufficient to describe a distribution that is skewed or has outliers. An **outlier** is any observation that is very far from the others.  The mean is pulled in the direction of the outlier.  Also, the standard deviation is inflated by points that are very far from the mean.
+
+Now, you have probably had some experience with percentiles in the past especially when you received a score on a standardized test such as the ACT.  Even though percentiles are commonly used, they are generally misunderstood.  Before examining the wrong site/wrong patient data, let's review percentiles. Even if you think you understand percentiles, please study this section carefully. 
+
+<br>
+
+### Percentiles and Quartiles
+
+Imagine a very long street with houses on one side.  The houses increase in value from left to right.  At the left end of the street is a small cardboard box with a leaky roof.  Next door is a slightly larger cardboard box that does not leak.  The houses eventually get larger and more valuable.  The rightmost house on the street is a huge mansion. 
+
+<div class="QuestionsHeading">Answer the following question:</div>
+<div class="Questions">
+19. There are 100 homes with increasing property values.  How many fences are needed to separate the 100 properties? 
+
+<a href="javascript:showhide('Q19')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q19" style="display:none;">
+* In order to separate the 100 homes, 99 fences are required.
+</div>
+&nbsp;
+</div>
+<br>
+
+The home values are representative of data.  If we have a list of data, sorted in increasing order, and we want to divide it into 100 equal groups, we only need 99 dividers (like fences) to divide up the data.  The first divider is as large or larger than 1% of the data.  The second divider is as large or larger than 2% of the data, and so on.  The last divider, the 99<sup>th</sup>, is the value that is as large or larger than 99% of the data.  These dividers are called percentiles. A **percentile** is a number such that a specified percentage of the data are at or below this number.  For example, the 99<sup>th</sup> percentile is a number such that 99% of the data are at or below this value.  As another example, half (50%) of the data lie at or below the 50<sup>th</sup> percentile.  The word percent means $\div 100$.  This can help you remember that the percentiles divide the data into 100 equal groups. 
+
+**Quartiles** are special percentiles. The word quartile is from the Latin *quartus*, which means "fourth." The quartiles divide the data into four equal groups. The quartiles correspond to specific percentiles.  The first quartile, Q<sub>1</sub>, is the 25<sup>th</sup> percentile. The second quartile, Q<sub>2</sub>, is the same as the 50<sup>th</sup> percentile or the median.  The third quartile, Q<sub>3</sub>, is equivalent to the 75<sup>th</sup> percentile.
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+20. How many quartiles are there?
+
+<a href="javascript:showhide('Q20')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q20" style="display:none;">
+* There are 3 quartiles!  To divide the data into 100 equal groups, we needed 99 percentiles.  To divide the data into 4 equal groups, we need 3 quartiles.
+</div>
+&nbsp;
+</div>
+<br>
+
+**Wrong Site/Wrong Patient Lawsuits**
+
+Percentiles can be used to describe the center and spread of any distribution and are particularly useful when the distribution is skewed or has outliers.  To explore this issue, you will use software to calculate percentiles of data on costs incurred by hospitals due to certain lawsuits. The lawsuits in question were about surgeries performed on the wrong patient, or on the right patient but the wrong part of the patient's body (the wrong site).
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+
+&nbsp;&nbsp;**To calculate percentiles and quartiles in Excel, do the following**
+
+- Open the data file you are using. For this example, open the file [WrongSiteWrongPatient.xlsx](./Data/WrongSiteWrongPatient.xlsx).
+
+- You will use Excel's percentile (inclusive) function: **=percentile.inc()**
+
+- This Excel function requires two inputs (or arguments), separated by a comma. The first input is the cell range reference. The second input is the desired percentile.
+
+The wrong-site data in the file ranges from row 2 to row 412 in column A. So, to calculate the 25<sup>th</sup> percentile of the wrong site data you should enter the following formula in a blank cell somewhere in the file:
+
+<center> =PERCENTILE.INC(A2:A412, 0.25) </center>
+<br>
+
+&nbsp;&nbsp;You may notice that some of the values for percentiles given in Excel are different from those given in other softwares. This is due to the slightly different ways in which percentiles can be calculated. In this course, be sure to use the percentiles that come from Excel's percentile.inc() function. 
+<br>
+</div>
+<br>
+
+
+The first quartile ($Q_1$) or 25<sup>th</sup> percentile (calculated in Excel) of the wrong-site data is: \$29,496. (This result is illustrated in the figure below.)  This means that 25 percent of the time hospitals lost a wrong-site lawsuit, they had to pay \$29,496 or less. The 25<sup>th</sup> percentile can be written symbolically as: P<sub>25</sub> = \$29,496.  Other percentiles can be written the same way.  The 99<sup>th</sup> percentile can be written as P<sub>99</sub>.
+
+<center>**Percentiles (Calculated in Excel)**</center>
+|        &nbsp;   |  &nbsp; |
+| --------------- | ------- |
+| 1st percentile  | 0       |
+| 2nd percentile  | 0       |
+| 3rd percentile  | 0       |
+| ...             | ...     |
+| 24th percentile | 28633.4 |
+| 25th percentile | 29496   |
+| 26th percentile | 31067   |
+
+<br>
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+21. What is the 13<sup>th</sup> percentile of the wrong site data?
+
+<a href="javascript:showhide('Q21')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q21" style="display:none;">
+* $6343.40
+<!--::{{Course_Filter|course=B C|content=?5946.72}}-->
+</div>
+<br>
+
+22. How would you interpret the 13<sup>th</sup> percentile (assuming the 13<sup>th</sup> percentile is $6343.40)?
+* a. 100 of the lawsuits cost more than 13%.
+* b. 13% of the lawsuits cost the hospital over $6343.40.
+* c. In 13% of the wrong-site lawsuits, hospitals had to pay $6343.40 or less.
+* d. For 13% of the wrong-site lawsuits, the hospitals had to pay $6343.40 to the patient.
+
+<a href="javascript:showhide('Q22')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q22" style="display:none;">
+* Correct Answer: C
+</div>
+<br>
+
+23. Find P<sub>90</sub>.
+
+<a href="javascript:showhide('Q23')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q23" style="display:none;">
+* $149,963.00
+<!--::{{Course_Filter|course=B C|content=?149,992.60}}-->
+</div>
+<br>
+
+24. The quartiles divide a sorted list of data into four equal groups. So, each group contains 25% of the data. The first quartile is the value that is greater than or equal to 25% of the data.  What is another name for this number?
+
+<a href="javascript:showhide('Q24')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q24" style="display:none;">
+* The 25th percentile.
+</div>
+<br>
+
+25. What is the value of the third quartile?
+
+<a href="javascript:showhide('Q25')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q25" style="display:none;">
+* $124,280.00
+<!--::{{Course_Filter|course=B C|content=?124,513.00}}-->
+</div>
+<br>
+
+26. Half of the wrong-site lawsuits judgments were less than or equal to what value?
+
+<a href="javascript:showhide('Q26')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q26" style="display:none;">
+* $68,552.00
+</div>
+<br>
+
+27. The median is the middle observation in a sorted list of data. What percentile is always equal to the median?
+
+<a href="javascript:showhide('Q27')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q27" style="display:none;">
+* The 50th percentile
+</div>
+&nbsp;
+</div>
+<br>
+
+### The Five-Number Summary
+
+Another way to summarize data is with the five-number summary.  **The five-number summary** is comprised of the minimum, the first quartile, the second quartile (or median), the third quartile, and the maximum.  
+
+Statistical packages can give different results for some computations.  This is because there are several reasonable ways to define certain quantities, such as the quartiles. As such, you may find that some of the values that are given in Excel<!--{{Course_Filter|course=B C|content=SPSS}}--> are different than what other software may give. 
+
+<!--Please be sure to use the values that you calculate using the software designated for your particular class ({{Course_Filter|course=A|content=Excel}}{{Course_Filter|course=B C|content=SPSS}}-->
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary">
+
+&nbsp;&nbsp;**To find the values for a five-number summary in Excel, do the following**
+
+- Open the data file you are using. For this example, open the file [WrongSiteWrongPatient.xlsx](./Data/WrongSiteWrongPatient.xlsx).
+
+- You can use the function **=percentile.inc()** in Excel to find the 1<sup>st</sup> quartile, median and 3<sup>rd</sup> quartile (otherwise known as the 25<sup>th</sup>, 50<sup>th</sup>, and 75<sup>th</sup> percentiles respectively).
+
+- Type the following into a blank cell of the WrongSiteWrongPatient.xlsx worksheet
+    - to find the minimum wrong-site value: =min(A2:A412)
+    - to find the maximum wrong-site value: =max(A2:A412)
+<br>
+</div>
+<br>
+
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+28. Give the five-number summary for the Wrong Site data.
+
+<a href="javascript:showhide('Q28')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q28" style="display:none;">
+<center>
+$$\displaystyle{\$0,~~\$29,496;~~\$68,552;~~\$124,280;~~\$780,575}$$
+<!--::{{Course_Filter|course=B C|content=$ \displaystyle{\$0,~~\$29,379,~~\$68,552,~~\$124,513,~~\$780,575} $}}-->
+</center>
+</div>
+&nbsp;
+</div>
+<br>
+
+<br>
+<div class="message Caution">Some students mistakenly include the mean in the five-number summary.  The third value in the five-number summary is the median.</div>
+<br>
+<br>
+
+### Boxplots
+
+A **boxplot** is a graphical representation of the five-number summary. Unlike the mean or standard deviation, a boxplot is resistant to outliers. That means that it won't be "pulled" one way or the other by extraordinarily large or small values in the data as will a mean, for instance. We will illustrate the process of making a boxplot using the wrong-site data.
+
+Follow the steps below to learn how a boxplot relates to the five-number summary. Learning what each part of the boxplot represents will enable you to interpret the plot correctly.
+
+**Step 01:** To draw a boxplot, start with a number line.
+
+
+<img src="./Images/Lesson_2_Activity_6_BoxPlot_1.jpg">
+
+
+
+**Step 02:** Draw a vertical line segment above each of the quartiles.
+
+
+<img src="./Images/Lesson_2_Activity_6_BoxPlot_2.jpg">
+
+
+**Step 03:** Connect the tops and bottoms of the line segments, making a box.
+
+
+<img src="./Images/Lesson_2_Activity_6_BoxPlot_3.jpg">
+
+
+**Step 04:** Make a smaller mark above the values corresponding to the minimum and the maximum.
+
+
+<img src="./Images/Lesson_2_Activity_6_BoxPlot_4.jpg">
+
+
+**Step 05:** Draw a line from the left side of the box to the minimum, and draw another line from the right side of the box the maximum. 
+
+
+<img src="./Images/Lesson_2_Activity_6_BoxPlot_5.jpg">
+
+**Step 06:** These last two lines look like whiskers, so this is sometimes called a box-and-whisker plot.
+
+
+<img src="./Images/Lesson_2_Activity_6_BoxPlot_6.jpg">
+
+<br>
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary" style="padding:10px;">
+
+**To create a boxplot in Excel, do the following**
+
+- Open the data file you are using. For this example, open the file [WrongSiteWrongPatient.xlsx](./Data/WrongSiteWrongPatient.xlsx).
+
+- Highlight the data you want to plot (in this case, cells A2 to A412 contain the wrong-site lawsuit data).  
+- Go to the Insert ribbon in Excel and select the histogram icon from the "Charts" section of the ribbon. Then select the only option under the Box and Whisker category. 
+<img src="./Images/Lesson_03_boxplot.png" width=80%>
+
+<br>
+</div>
+<br>
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+29. Create a histogram of the **wrong-patient** lawsuit data, located in column B of  the file [WrongSiteWrongPatient.xlsx](./Data/WrongSiteWrongPatient.xlsx). What is the shape of the wrong-patient data?
+
+a. Skewed left
+b. Symmetric
+c. Skewed right
+d. Multi-modal
+e. Uniform
+
+
+<a href="javascript:showhide('Q29')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q29" style="display:none;">
+To create the histogram, highlight the data. Then go to the Insert ribbon of Excel. Select the histogram icon and then choose the first option under the Histogram category. 
+
+<div style="padding-left:35px;"><img src="./Images/Lesson_03_wrong-patient_histogram.png" width=80%>
+</div>
+
+From the histogram we clearly see most values bunched near the left and gradually fewer values as we move to the right along the numer line, so the correct answer is 'c. Skewed right'. 
+
+</div>
+<br>
+
+30. Create a boxplot of the **wrong-patient** lawsuit data.
+
+<a href="javascript:showhide('Q30')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q30" style="display:none;">
+
+
+<div style="padding-left:35px;"><img src="./Images/Lesson_03_wrong-patient_boxplot.png" width=90%>
+</div>
+
+
+</div>
+&nbsp;
+</div>
+<br>
+
+Side-by-side boxplots are a powerful way to compare data from different samples visually. For example, we may be interested in comparing the results of wrong-site lawsuits and wrong-patient lawsuits. 
+
+<img src="./Images/Lesson_03_boxplot_side-by-side.png" width=80%>
+
+In the plot we can quickly see that a wrong-patient lawsuit resulted in the largest cost to the hospital, more than $1.2 million. However, in general, wrong-patient lawsuits tend to result in a lower cost to the hospital than wrong-site lawsuits. 
+
+<div class="SoftwareHeading">Excel Instructions</div>
+<div class="Summary" style="padding:10px;">
+
+**To create side-by-side boxplots in Excel, do the following**
+
+Open the data file you are using. For this example, open the file [WrongSiteWrongPatient.xlsx](./Data/WrongSiteWrongPatient.xlsx). Since these two datasets are next to each other in the file, the easiest way to create side-by-side boxplots plots is to highlight both columns of data. Then follow the same steps as for a single boxplot.
+
+To make a side-by-side boxplot plot easier to understand you can add a legend. This is most easily done by clicking the green '+' near the upper right corner of the plot that appears when the plot is selected. Then, in the menu that appears, ensure the "legend" box is checked. 
+
+Alternatively, if the green '+' is not visible to you, follow these steps shown in the image below. After selecting the plot go to the Design ribbon and select Add Chart Element. In the menu that appears select Legend, and then choose where you would like the legend to appear on the plot, as shown below.
+
+<div style="padding-left:35px;"><img src="./Images/Lesson_03_boxplot_legend.png" width=85%>
+</div>
+
+Additional formatting can be applied to further improve the appearance of the chart.
+
+<br>
+</div>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br>
 
 ## Summary
@@ -533,16 +1316,10 @@ The following story describe how winning a huge Powerball jackpot changed the li
 <div class="SummaryHeading">Remember...</div>
 <div class="Summary">
 
-- The three **rules of probability** are:
+- The **standard deviation** is a number that describes how spread out the data are. A larger standard deviation means the data are more spread out than data with a smaller standard deviation.
 
-1. A probability is a number between 0 and 1. 
-$$0 \leq P(X) \leq 1$$
+- **Quartiles/percentiles**, **Five-Number Summaries**, and **Boxplots** are tools that help us understand data. The five-number summary of a data set contains the minimum value, the first quartile, the median, the third quartile, and the maximum value. A boxplot is a graphical representation of the five-number summary.
 
-2. If you list all the outcomes of a probability experiment (such as rolling a die) the probability that one of these outcomes will occur is 1. In other words, the sum of the probabilities in any probability is 1. 
-$$\sum P(X) = 1$$
-
-3. The probability that an outcome will not occur is 1 minus the probability that it will occur. 
-$$P(\text{not}~X) = 1 - P(X)$$
 </div>
 <br>
 
@@ -551,7 +1328,7 @@ $$P(\text{not}~X) = 1 - P(X)$$
 
 | **Previous Reading** | **This Reading** | **Next Reading** |
 | :------------------: | :--------------: | :--------------: |
-| [Lesson 3: <br> Describing Quantitative Data: Shape, Center & Spread](Lesson03.html) | Lesson 4: <br> Probability; Discrete Random Variables | [Lesson 5: <br> Normal Distributions](Lesson05.html) |
+| [Lesson 3: <br> Describing Quantitative Data: Shape and Center](Lesson03.html) | Lesson 4: <br> Describing Quantitative Data: Spread | [Lesson 5: <br> Normal Distributions](Lesson05.html) |
 
 <br>
 
