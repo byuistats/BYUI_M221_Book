@@ -45,6 +45,9 @@ Or download individual files:
 
 [CardiacArrestHealth.xlsx](./Data/CardiacArrestHealth.xlsx)                                            
 
+[CarPrices.xlsx](./Data/CarPrices.xlsx)
+
+
 [CategoricalDataAnalysis_Hat.xlsx](./Data/CategoricalDataAnalysis_Hat.xlsx)                            
 
 [CauseOfDeath-Malnourished.xlsx](./Data/CauseOfDeath-Malnourished.xlsx)                                
