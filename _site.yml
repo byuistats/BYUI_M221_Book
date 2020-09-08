@@ -7,15 +7,15 @@ navbar:
       href: index.html
     - text: "Unit 1"
       menu:
-        - text: "Lesson 1: On Campus Course Introduction"
+        - text: "Lesson 1: (On Campus) Course Intro & Probability"
           href: Lesson01_Campus.html
-        - text: "Lesson 1: Online Course Introduction"
+        - text: "Lesson 1: (Online) Course Intro & Probability"
           href: Lesson01.html
         - text: "Lesson 2: The Statistical Process"
           href: Lesson02.html
-        - text: "Lesson 3: Describing Quantitative Data: Shape & Center"
+        - text: "Lesson 3: Describing Quantitative Data (Shape & Center)"
           href: Lesson03.html
-        - text: "Lesson 4: Describing Quantitative Data: Spread"
+        - text: "Lesson 4: Describing Quantitative Data (Spread)"
           href: Lesson04.html
         - text: "Lesson 5: Normal Distributions"
           href: Lesson05.html
