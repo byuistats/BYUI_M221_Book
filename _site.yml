@@ -13,9 +13,9 @@ navbar:
           href: Lesson01.html
         - text: "Lesson 2: The Statistical Process"
           href: Lesson02.html
-        - text: "Lesson 3: Describing Quantitative Data"
+        - text: "Lesson 3: Describing Quantitative Data: Shape & Center"
           href: Lesson03.html
-        - text: "Lesson 4: Rules of Probability"
+        - text: "Lesson 4: Describing Quantitative Data: Spread"
           href: Lesson04.html
         - text: "Lesson 5: Normal Distributions"
           href: Lesson05.html
