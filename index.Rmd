@@ -36,10 +36,10 @@ Use the menus along the top, or the links in the table below to navigate to the 
 <td>[Lesson 2: The Statistical Process & Design of Studies](Lesson02.html)</td>
 </tr>
 <tr>
-<td>[Lesson 3: Describing Quantitative Data: Shape, Center & Spread](Lesson03.html)</td>
+<td>[Lesson 3: Describing Quantitative Data: Shape & Center](Lesson03.html)</td>
 </tr>
 <tr class="alt">
-<td>[Lesson 4: Probability; Discrete Random Variables](Lesson04.html)</td>
+<td>[Lesson 4: Describing Quantitative Data: Spread](Lesson04.html)</td>
 </tr>
 <tr>
 <td>[Lesson 5: Normal Distributions](Lesson05.html)</td>
