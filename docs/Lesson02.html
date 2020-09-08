@@ -451,14 +451,15 @@ $(document).ready(function () {
     e.style.display = (e.style.display == 'block') ? 'none' : 'block';
  }
 </script>
+<!--
+
 <div style="float:right;width=40%;">
 <br/>
-<div style="padding-left:10%;">
-<strong>Optional Lesson Video</strong>
+<div style="padding-left:10%;">**Optional Lesson Video**</div>
+<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
-<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
-</div>
+
+-->
 <p><br></p>
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
@@ -466,9 +467,10 @@ $(document).ready(function () {
 <div id="oc" style="display:none;">
 <p>By the end of this lesson, you should be able to:</p>
 <ul>
-<li>Distinguish between a categorical and a quantitative variable.</li>
+<li>State the five steps of the Statistical Process</li>
 <li>Distinguish between an observational study and an experiment.</li>
 <li>Distinguish between a population and a sample.</li>
+<li>Distinguish between a categorical and a quantitative variable.</li>
 <li>Distinguish and give an example of each of the following sampling schemes:</li>
 <li>Simple random sampling</li>
 <li>Systematic sampling</li>
@@ -720,9 +722,6 @@ Answer the following questions:
 <p> </p>
 </div>
 <p><br></p>
-<p>The null and alternative hypotheses for this study are:</p>
-<p><span class="math inline">\(H_0\)</span>: The proportion of children who develop polio will be the same for the treatment and control groups.</p>
-<p><span class="math inline">\(H_a\)</span>: The proportion of children in the <em>treatment group</em> who develop polio will be <em>lower</em> than the proportion of children in the <em>control group</em> who develop polio.</p>
 <p><img src="Images/Step2.png" width="100px;"></p>
 <p><strong>Step 2: Collect data.</strong></p>
 <p>The researchers followed up with each child to determine if they contracted polio. They recorded the number of children in each group that developed polio during the study period. Not all of Salk’s experiments were double-blind. Here is a summary of the results from the regions where a double-blind study was conducted (Francis et al., 1955; Brownlee, 1955):</p>
@@ -830,14 +829,7 @@ Answer the following questions:
 <p><br></p>
 <p><img src="Images/Step4.png" width="100px;"></p>
 <p><strong>Step 4: Make inferences</strong></p>
-<p>Careful statistical analysis of the records suggested that this difference was so great that it was attributable to the vaccine and not to chance. Assuming that the vaccine had no effect, the probability that the difference in the proportions between the two groups would be at least as extreme as the difference Dr. Salk observed was very low: 0.00000000093. Because this probability is so small, it is highly unlikely that these results are due to chance. This probability is called the P-value, and it will be discussed in Unit 2.</p>
-<div class="Emphasis">
-<br>
-<center>
-For now it is only important to <em>be aware</em> of the P-value. In Unit 2 students will learn how to compute and interpret this value.
-</center>
-<p><br></p>
-</div>
+<p>Careful statistical analysis of the records suggested that this difference was so great that it was attributable to the vaccine and not to chance. Assuming that the vaccine had no effect, the probability that the difference in the proportions between the two groups would be at least as extreme as the difference Dr. Salk observed was very low: 0.00000000093. Because this probability is so small, it is highly unlikely that these results are due to chance.</p>
 <p><br></p>
 <p><img src="Images/Step5.png" width="100px;"></p>
 <p><strong>Step 5: Take action</strong></p>
@@ -865,20 +857,39 @@ Imagine you are assigned to serve as a member of the team that will perform this
 <div id="sampling-methods" class="section level3">
 <h3>Sampling Methods</h3>
 <p><strong>Step 2: Collect data</strong></p>
-<p>There are several procedures that can be used to select a random sample from a population, including: <strong>simple random</strong> sampling (SRS), <strong>systematic</strong> sampling, <strong>cluster</strong> sampling, <strong>stratified</strong> sampling, and <strong>convenience</strong> sampling (or, haphazard sampling). These are examples of <strong>sampling methods</strong>.</p>
-<p>A <strong>simple random sampling (SRS)</strong> is the best method for obtaining a random sample. If there is a list of all items in the population and they are all accessible, a SRS can be collected. For example, suppose there are 2,000 accounts receivable items in the population. Auditors can use a random number generator to choose values between 1 and 2,000 to identify which items are to be audited. Software can be used to create a list of random numbers corresponding to items for the audit. In Excel, the command to obtain a random number between 1 and 2,000 is =<em>RANDBETWEEN(1,2000)</em>. Sometimes it is necessary for auditors to renumber the items (1 to 2000) to help create random sample. A simple random sample can be obtained any time there is a complete list of the items to be sampled and they are all assessible. All the statistical procedures in this course assume that simple random sampling has been used.</p>
-<p>A <strong>systematic sample</strong> is where auditors select every <span class="math inline">\(k^{\text{th}}\)</span> item in the population, beginning at a random starting point. As an example, suppose there are 2,000 accounts receivable items to be audited, and the auditors want to get a sample of 40 items from this population. The auditors would sample every 2000/40 =50<sup>th</sup> item. The auditors will use a random starting point in the first 50 items. So, suppose a random number generator gave 41 as a random number between 1 and 50. The auditors select the 41st item. The next item chosen will be item number 41+50=91. After that, the auditors will choose item number 91+50=141, and so on. Systematic sampling works well when the items are in a random, sequential ordering. If the items are not arranged randomly, a systematic sample can miss important parts of the population.</p>
-<p>A <strong>cluster sample</strong> (sometimes called a <em>block sample</em>) consists of taking all items in one or more randomly selected clusters, or blocks. For example, all the accounts receivable items in a few randomly selected months (the blocks) could be sampled. When the variation from one block to another is relatively low, compared to the variation within the block, cluster sampling is a reasonable way to get a sample. However, in many cases, the number of blocks that must be sampled must be large in order to draw a reasonable audit conclusion. For this reason, a cluster sample is usually not recommended for audits.</p>
-<p>A <strong>stratified sample</strong> is when the items to be sampled are organized in groups of homogeneous (similar) items called strata, then a simple random sample is drawn from each of these strata. Stratified sampling works well when the items are similar within each stratum and tend to differ from one stratum to another. In an audit of accounts receivable items, auditors could define the strata as: (1) accounts under $1,000, (2) accounts between $1,000 and $4,999, (3) accounts between $5,000 and $9,999, and (4) accounts of $10,000 or more. A certain number of items could be randomly selected from each of these strata. Auditors may choose to include in their sample all items from some strata, such as very large accounts ($10,000 or more), when there are few items in those strata.</p>
-<p>A <strong>convenience sample</strong> involves selecting items that are relatively easy to obtain and does not use random selection to choose the sample. Even though the sample is chosen by convenience, it should be done without introducing any systematic bias if possible. As an example of a convenience sample, an auditor could haphazardly select items from a filing cabinet. This is frequently done when a quick and simple sample is needed, but may not yield a sample that represents the population well. When possible, convenience samples <strong>should be avoided.</strong></p>
+<p>There are several procedures that can be used to select a random sample from a population, including: <strong>simple random</strong> sampling (SRS), <strong>stratified</strong> sampling, <strong>systematic</strong> sampling, <strong>cluster</strong> sampling, , and <strong>convenience</strong> sampling (or, haphazard sampling). These are examples of <strong>sampling methods</strong>.</p>
+<div id="random-sampling-methods" class="section level4">
+<h4>Random Sampling Methods</h4>
+<p>A <strong>simple random sample (SRS)</strong> is the best method for obtaining a sample from a population. This method allows each possible sample of a certain size an equal chance at being selected as the chosen sample. A difficulty of this method is that a list of all of the items in the population must be accessible before the sample is taken. Often, we obtain a SRS by allowing a computer to randomly select a certain number of items from the full list of the population. It is akin to the idea of putting all of the names into a hat, shaking them up, and randomly drawing out a few.</p>
+<div style="padding-left:30px;">
+<p>For example, suppose there are 18,000 students in the population of a certain university. School officials can use a computer to randomly choose values between 1 and 18,000 to identify which students are to be selected to complete a survey. In Excel, the command to obtain a random number between 1 and 18,000 is =<em>RANDBETWEEN(1,18000)</em>. A simple random sample can be obtained any time there is a complete list of the items to be sampled and they are all accessible. All the statistical procedures in this course assume that simple random sampling has been used. But in practice, the SRS is often difficult (or impossible) to implement.</p>
+</div>
+<p>A <strong>stratified sample</strong> is when the items to be sampled are organized in groups of homogeneous (similar) items called strata, then a simple random sample is drawn from each of these strata. Stratified sampling works well when the items are similar within each stratum and tend to differ from one stratum to another. We often use stratified sampling in order to obtain a sample in such a way that we can make comparisons between each of the groups (or strata).</p>
+<div style="padding-left:30px;">
+<p>For example, in obtaining a sample of students from a university, school officials could define the strata as: (1) freshman, (2) sophomores, (3) juniors, and (4) seniors. A simple random sample could then be obtained from each of these strata. This would ensure that each class rank of students was represented in the sample. It would also allow the school officials to see how freshman, sophomore, junior, and senior level students compared in their answers to a survey.</p>
+</div>
+<p>A <strong>systematic sample</strong> is where every <span class="math inline">\(k^{\text{th}}\)</span> item in the population is selected to be part of the sample, beginning at a random starting point. Systematic sampling works well when the items are in a random, but sequential ordering. If the items are not arranged randomly, a systematic sample can miss important parts of the population.</p>
+<div style="padding-left:30px;">
+<p>For example, consider a fast food company where every 10th customer is given the opportunity to compete a satisfaction survey in exchange for a small discount coupon towards their next purchase. An airport security line also often implements a procedure where every 100th (or so) person is selected for a more “in depth” security examination. Similarly, factories that use assembly lines will pull say every 500th item from the assembly line to perform a quality control check on the item.</p>
+</div>
+<p>A <strong>cluster sample</strong> (sometimes called a <em>block sample</em>) consists of taking all items in one or more randomly selected clusters, or blocks. When the variation from one block to another is relatively low, compared to the variation within the block, cluster sampling is a reasonable way to get a sample.</p>
+<div style="padding-left:30px;">
+<p>For example, ecologists could draw grids on a map of a forest to create small sampling regions, or sampling clusters. Then, by randomly selecting one or two of these clusters from the map, the ecologists could go to the areas marked on the map and document information on the health of every tree they find in those clusters. This is a practical way to get a sample in this case because the ecologists only have to go to a few areas of the forest, but are still able to obtain a random sample of all of the trees in the forest. It is also worth noting that the ecologists would not be interesting in comparing the health of the trees from the selected clusters to each other like they would in a stratified sample. Instead, they are just looking for a feasible way to obtain a single random sample of all of the trees in the forest, but want to keep their traveling time to a minimum while collecting their sample. In contrast, to obtain a simple random sample of trees from the same forest, the ecologists would first have to go out and number every tree in the entire forest. Then they would need to use a computer to randomly pick which trees to collect data on. Finally, they would then have to go back to the forest and collect data on the selected trees from across the entire forest. Such an approach just isn’t feasible in practice, so we are willing to settle instead for the cluster sample.</p>
+</div>
+<p>A <strong>convenience sample</strong> involves selecting items that are relatively easy to obtain and does not use random selection to choose the sample. This method of sampling can be assumed to always bring bias into the sample.</p>
+<div style="padding-left:30px;">
+<p>As an example of a convenience sample, an auditor could haphazardly select items from a filing cabinet. This is frequently done when a quick and simple sample is needed, but may not yield a sample that represents the population well. When possible, convenience samples <strong>should be avoided.</strong></p>
+</div>
 <p><br></p>
+</div>
 </div>
 <div id="types-of-variables" class="section level3">
 <h3>Types of Variables</h3>
-<p>Auditors meticulously record information on every item audited, thus generating data. There are two basic types of data: quantitative and categorical.</p>
-<p><strong>Quantitative variables</strong> provide numerical information. They represent things that are numeric in nature; things that are measured. For a quantitative variable, it makes sense to apply arithmetic operations to the data (such as adding one to a value, doubling a value, or comparing two values). The net worth of a company or the number of people it employs are both examples of quantitative variables: If one company is worth $1,000,000 and a second company is worth $2,000,000 then the second company really is worth twice the value of the first.</p>
-<p><strong>Categorical variables</strong> yield data that can only be considered as categories. Categorical variables are labels, and it does not make sense to do arithmetic with them. The following are examples of categorical variables: gender, nationality, job title, telephone number, etc. Even though a telephone number is made of digits, it does not make sense to double someone’s phone number, to add one to their number, or to say one phone number is smaller than another. In Unit 3 we will learn more about Categorical variables and proportions.</p>
-<p>The sample accounts receivable record has information on both types of variables.</p>
+<p>Whenever we collect data, we record information about the things we are studying. There are two basic types of data that can be recorded: quantitative measurements and categorical labels. We will call these types of data simply “quantitative” or “categorical” variables. We use the word “variable” to denote the idea that the quantitative measurements or categorical labels can vary from person to person, or item to item, in our study.</p>
+<p><strong>Quantitative variables</strong> provide measurement information on each individual (or item) in our study. They represent things that are numeric in nature; things that are measured. They often include units of measurement along with the quantitative value of the measurement. For example, the heights of children measured in inches (or centimeters), or their weight measured in pounds (or kilograms). For a quantitative variable, it makes sense to apply arithmetic operations to the data (such as adding values together, computing the average of the values, or comparing two values). If one child weighs 30 pounds (13.61 kg) and a second child weights 60 pounds (27.22) then the second child is twice as heavy as the first.</p>
+<p><strong>Categorical variables</strong> allow us to place each individual (or item) into to a specific category. Categorical variables are labels, and it does not make sense to do arithmetic with them. For example the gender of a newborn child, the ethnicity of an individual, a person’s job title, the brand of phone they own, or the area code of a telephone number, etc are all categorical variables. Notice that although a telephone number consists of numbers, it is not a quantitative measurement. It does not make sense to double someone’s phone number, to average phone numbers together, or to say one phone number is half the size of another. But the area code of the phone number gives information about the region where the phone number was first initiated, which is categorical information.</p>
+<p>In Unit 3 of this course we will learn more about categorical variables and proportions. Units 1 and 2 of this course focus on studying quantitative variables.</p>
+<p>Returning to the sample accounts receivable record, we find this data to have information on both types of variables.</p>
 <div class="QuestionsHeading">
 Answer the following question:
 </div>
@@ -926,7 +937,7 @@ The variable "Customer" is categorical. It classifies the customer.
 <p><br></p>
 <p><img src="Images/Step3.png" width="100px;"></p>
 <p><strong>Step 3: Describe the data</strong></p>
-<p>After auditors collect a sample and compile the data, they review the evidence. Auditors may use graphs or compute numbers (such as the mean) to summarize the evidence they found.</p>
+<p>After auditors collect a sample and compile the data, they review the evidence. Auditors may use graphs or compute numbers (such as the average) to summarize the evidence they found.</p>
 <p><img src="Images/Step4.png" width="100px;"></p>
 <p><br></p>
 </div>
@@ -934,28 +945,17 @@ The variable "Customer" is categorical. It classifies the customer.
 <div id="making-inferences-hypothesis-testing" class="section level2">
 <h2>Making Inferences: Hypothesis Testing</h2>
 <p><strong>Step 4: Make inferences</strong></p>
-<p>Auditors use the information drawn from the sample to form an opinion about the population. Whenever sample data is used to infer a characteristic of a population, it is called making an inference. <strong>Inferential statistics</strong> represents a collection of methods that can be used to make inferences about a population. Based on the documents reviewed, the auditors assess if the company is conducting its business in a proper manner.</p>
-<p>When conducting an audit, the implicit assumption is that transactions have been posted properly. This foundational assumption is called the null hypothesis. The <strong>null hypothesis</strong> is a statement about the population that represents the status quo, conventional wisdom, or what is generally accepted as true. In the audit we’re considering, the null hypothesis is</p>
-<p><span class="math inline">\(H_0\)</span>: ImmunAvance’s financial statements are materially correct.</p>
-<p>Auditors sample the company’s records to collect evidence against the null hypothesis. If there is sufficient evidence, we reject the null hypothesis. If the null hypothesis is rejected, it is rejected in favor of another statement about the population: the <strong>alternative hypothesis</strong>. In the case of this audit, the alternative hypothesis is</p>
-<p><span class="math inline">\(H_a\)</span>: ImmunAvance’s financial statements are not materially correct.</p>
-<p>Notice that both the null and alternative hypotheses are statements about the state of <em>all</em> of ImmunAvance’s financial documents, not just the documents included in the sample.</p>
+<p>Auditors use the information drawn from the sample to form an opinion about the population. Whenever sample data is used to infer a characteristic of a population, it is called making an inference. <strong>Inferential statistics</strong> represents a collection of methods that can be used to make inference about a population. Based on the documents reviewed, the auditors assess if the company is conducting its business in a proper manner.</p>
+<p>When conducting an audit, the implicit assumption is that transactions have been posted properly. As auditors sample the company’s records, they are looking to see if everything is consistent with the original assumption that all transactions have been posted properly. It would only be in the case of discovering suspicious activity or evidence of fraudulent reporting that the auditors would change their belief about the company and accuse the company ImmunAvance of falsely reporting on their financial statements.</p>
 <center>
 “Piled Higher and Deeper” by Jorge Cham <br> <img src="Images/Phd121911s.png">
 </center>
-<p>There is a formal procedure for testing the null and alternative hypotheses, called a <strong>hypothesis test</strong>. In a hypothesis test, the null hypothesis is always assumed to be true. If there is sufficient evidence against the null hypothesis, it is rejected. The evidence against the null hypothesis is assessed using a number called the <span class="math inline">\(P\)</span>-value. The <strong>P-value</strong> is the probability of obtaining a result (called a test statistic) at least as extreme as the one you calculated, assuming the null hypothesis is true. We reject the null hypothesis if the <span class="math inline">\(P\)</span>-value is small, say less than 0.05. If we assume the company’s financial statements are materially correct, the <span class="math inline">\(P\)</span>-value is the probability of observing errors with a total value that is as large or larger than that which was observed in the audit.</p>
-<p>For ImmunAvance’s audit, the <span class="math inline">\(P\)</span>-value was determined to be 0.79. Assuming the null hypothesis is true, the probability of observing inconsistencies that are at least as great as those observed in the audit was 0.79. This is a very large value. So, it is not surprising to have observed the total number of the errors in this case. The probability that these differences could occur due to chance is very high. The conclusion is that the null hypothesis should not be rejected.</p>
-<p>If the <span class="math inline">\(P\)</span>-value is low, the null hypothesis is rejected. If this probability is large, the null hypothesis is not rejected.</p>
-<p>Hypothesis tests sometimes lead accidentally to incorrect conclusions because we use data from samples (as opposed to data from entire populations). When random samples are selected, some of the samples will contain disproportionately few or many documents with errors, just by chance.</p>
-<p>Think about drawing marbles from a container in which most of the marbles are white and a few are red. Each marble represents a document, and the red marbles represent documents with errors.</p>
-<p>If you choose a random sample of the marbles in the jar, you might get all the red marbles in your sample, just by chance. This might lead you to conclude that there are many red marbles in the container, which is false. This is like an auditor rejecting the null hypothesis when it is true, because their sample contains more documents with errors than it should—just due to chance.</p>
-<p>Likewise, when drawing marbles from your container, you might select none of the red marbles. This may lead you to conclude that there are no red marbles in the container, or very few, which is false. This is like an auditor failing to reject the null hypothesis when it is false, because their sample contains fewer documents with errors than it should—again, just due to chance.</p>
-<p>Notice that if you draw only one marble, it will be either white or red, and you will be in one of the situations discussed in the previous two paragraphs. On the other hand, if you draw a larger sample, say 40, the chances are you will get a pretty good idea of the proportion of red to white marbles. Certainly better than if you only draw one marble. This emphasizes the roll of sample size in making inference; in general, the larger the sample size the better we understand the population.</p>
-<p>Such errors are no one’s fault; they are an inherent part of hypothesis testing. They make it impossible for us to be certain of the conclusions we draw using the statistical process. The thing to remember is that if we carry out the process correctly, our results are correct often enough to be very useful.</p>
+<p>There is a formal procedure for determining when <em>enough</em> evidence has been found to make accusations of fraud. Later this semester, after we establish some foundational principles of statistics, we will study these statistical methods in depth. Of course, these methods can be used for much more than just determining if a company has reported their financial statements fraudulently. So we will look at many different ways these statistical procedures can be applied to research and industry.</p>
+<p>For ImmunAvance’s audit, based on the samples of financial statements that had been selected, while there were a few errors in the documents, there was not evidence dramatic enough to claim that the company had been fraudulent. So the company passed their audit.</p>
 <p><img src="Images/Step5.png" width="100px;"></p>
 <p><strong>Step 5: Take Action</strong></p>
 <p>The auditors prepare a report in which they give their opinion on the status of the company’s current operations.</p>
-<p>There is not enough evidence to suggest that ImmunAvance’s financial statements are not materially correct. The auditor’s conclusion is that no adjustment is necessary, since the observed discrepancies could be attributed to chance.</p>
+<p>Since there was not enough evidence to suggest that ImmunAvance’s financial statements were fraudulent, the auditor’s conclusion is that no adjustment is necessary. The few observed discrepancies were apparently just the result of random chance errors, not the deliberate falsefying of information.</p>
 <p><br></p>
 </div>
 <div id="summary" class="section level2">
