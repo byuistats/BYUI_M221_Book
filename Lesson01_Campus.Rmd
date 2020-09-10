@@ -146,7 +146,7 @@ The BYU-Idaho Help Desk has been established to help students with technological
 -  Email: helpdesk@byui.edu
 Additional information is available at the Help Desk web page: http://www.byui.edu/helpdesk/
 
-When you have technical problems with I-Learn, you should first try contacting the Help Desk before you contact your instructor. They are connected with the IT support staff who can resolve problems with I-Learn. Please take 5 minutes now to look at the Help Desk web page. That way, if a problem does arise later on in the course, you will know where to go for help.
+When you have technical problems with I-Learn, you should first try contacting the Help Desk before you contact your instructor. They are connected with the IT support staff who can resolve problems with I-Learn. Please take a moment now to look at the [Help Desk web page](http://www.byui.edu/helpdesk/). That way, if a problem does arise later on in the course, you will know where to go for help.
 
 **Tutoring Center**
 
@@ -157,7 +157,7 @@ The Tutoring Center provides many services to help students succeed:
 -  Walk-in tutoring in the Math Study Center (McKay 266 & 270)
 -  Virtual tutoring
 
-Please take 5 minutes to explore the [Study Skills/Tutoring Center web site](https://www.byui.edu/academic-support-centers/math/math-help-for-on-campus-students).
+Please take a moment to explore the [Study Skills/Tutoring Center web site](https://www.byui.edu/academic-support-centers/math/math-help-for-on-campus-students).
 
 **TA Support**
 
@@ -167,21 +167,25 @@ In addition to the faculty who teach this course, specially trained teaching ass
 
 Your instructor is committed to your success.  If you have any needs or concerns, please contact your instructor for help.  If you feel yourself getting behind or struggling, talk to your teacher right away.  If caught in time, a small problem can be addressed quickly before it grows.
 
+With all of that said, let's begin looking at a foundational idea of statistics: probability.
+
 <br>
 
 ## Probability
+
+Probability is a way of numerically quantifying how likely an event is to happen or not happen. The following historical account demonstrates this idea and shows how fractions (like 1/2 or 3/4) or percentages (like 50% or 75%) can be used to represent probabilities.
 
 ### Christopher Columbus' First Voyage
 
 <img src="./Images/Columbus_taking_possession_of_the_new_country.jpg">
 
-On August 3, 1492, Columbus set sail from Spain for his intended destination: the Indies (Caso, Adolph 1990). He was on the Santa Maria, which had a crew of approximately 41 men ("Crist'obal col'on" 1991; "Christopher Columbus"). Several other men were aboard the Nina and the Pinta ("Crist'obal col'on" 1991). On October 12, he landed on an island in the Bahamas he called San Salvador.
+On August 3, 1492, Columbus set sail from Spain for his intended destination: the Indies (Caso, Adolph 1990). He was on the Santa Maria, which had a crew of approximately 41 men ("Cristobal colon" 1991; "Christopher Columbus"). Several other men were aboard the Nina and the Pinta ("Cristobal colon" 1991). On October 12, he landed on an island in the Bahamas he called San Salvador.
 
 The return trip was not without challenges. The Santa Maria ran aground on Christmas Day, 1492, and was abandoned on the island we now call Hispaniola (home to Haiti and the Dominican Republic). Following this incident, Columbus sailed for Spain. Severe storms made the journey difficult. A particularly bad storm on February 14, 1493 made the crew fear for their lives. By morning, the storm was even worse!
 
 Recognizing his dependence upon God, Columbus ordered that a pilgrimage should be made to a particular shrine upon their safe arrival in Spain. He decided that they would use random chance to determine who would make the pilgrimage. They took one chick pea for each man on board. A knife was used to mark one of the chick peas with a cross. The chick peas were placed in a hat and shaken up. Each man was to draw a chick pea, and the one who had the cross would make the pilgrimage.
 
-The first who put in his hand was [Columbus,] and he drew out the bean with a cross, so the lot fell on him; and he was bound to go on the pilgrimage and fulfil the vow (Caso, Adolph 1990).
+"The first who put in his hand was [Columbus,] and he drew out the bean with a cross, so the lot fell on him; and he was bound to go on the pilgrimage and fulfil the vow" (Caso, Adolph 1990).
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
@@ -205,7 +209,7 @@ The first who put in his hand was [Columbus,] and he drew out the bean with a cr
 </div>
 </br>
 
-**Additional Drawings**<br>
+**A Second Drawing**<br>
 Columbus' promise to make the pilgrimage did not stop the storm. It was determined that there should be a pilgrimage to another site they held sacred. Again, chick peas representing each member of the crew were placed in a hat and shaken up. The lot fell on a sailor...named Pedro de Villa (Caso, Adolph 1990).
 
 <div class="QuestionsHeading">Answer the following questions:</div>
@@ -241,9 +245,56 @@ $$
 </div>
 </br>
 
-After the drawing in which Pedro de Villa was chosen to make a pilgrimage, two additional drawings were held. In both cases, Columbus drew out the marked chick pea (Caso, Adolph 1990). In all, Christopher Columbus drew the marked chick pea in three of the four drawings. It can be shown that the probability that this would occur due to chance is very small: 0.0000566.
+**Additional Drawings**<br>
 
-To put some perspective on this, a high school athlete in the United States is over 26 times more likely to play professional sports than Columbus was to draw the three marked peas! (Fields, Mike 2008) Consider how you might explain the occurrence of this extremely unlikely event. (While no response is required of you right now, this kind of question will be very important later, so take a little time to ponder it.)
+After the drawing in which Pedro de Villa was chosen to make a pilgrimage, two additional drawings were held. In both cases, Columbus drew out the marked chick pea (Caso, Adolph 1990). In all, Christopher Columbus drew the marked chick pea in three of the four drawings. It can be shown that the probability that this would occur due to chance is very small: 0.0000566. <a href="javascript:showhide('bonusprobabilitycalc')"><span style="font-size:8pt;">(Show/Hide Solution)</span></a>
+
+<div id="bonusprobabilitycalc" style="display:none;padding-left:50px;padding-right:50px;border:solid 1pt;border-color:orange;color:gray;">
+**Bonus material. Read only if you are interested.**
+
+This calculation is more involved than the calculations you will be required to make in this course this semester. But if you are still interested, read on.
+
+In each individual drawing, there was a 1/41 chance of Columbus getting the marked chick pea. Similarly, there was a 40/41 chance of not getting it. Since there were four drawings total, and the goal is to measure the probability of "three of those drawings" resulting in Columbus getting the marked chick pea, it becomes important to think about all of the orders in which Columbus could have gotten 3 out of 4.
+
+| Possible Outcome | First Drawing | Second Drawing | Third Drawing | Fourth Drawing |
+|------------------|---------------|----------------|----------------|----------------|
+| What actually happened... | Got it. | Didn't get it. | Got it. | Got it. |
+| But he could have... | Got it. | Got it. | Didn't get it. | Got it. |
+| Or he could have... | Got it. | Got it. | Got it. | Didn't get it. |
+| Or he could have... | Didn't get it. | Got it. | Got it. | Got it. |
+
+In each of the above cases, notice that Columbus *would have* gotten the marked chick pea a total of 3 out of 4 times. So, this tells us there are four diffent ways to get the chick pea 3 out of 4 times.
+
+The probability of what actually happened to Columbus *in the order in which it happened* would be computed by multiplying the individual probabilities of each drawing together. 
+
+$$
+  \frac{1}{41} \cdot \frac{40}{41} \cdot \frac{1}{41} \cdot \frac{1}{41} \approx 0.00001415548
+$$
+
+But then, we must also add to this the other "possible" scenarios that would also lead to getting the chick pea 3 out of 4 times, but as shown below, because multiplication is commutative (the order doesn't matter) these "different" situations result in the same probability as the first.
+
+$$
+  \frac{1}{41} \cdot \frac{1}{41} \cdot \frac{40}{41} \cdot \frac{1}{41} \approx 0.00001415548
+$$
+
+$$
+  \frac{1}{41} \cdot \frac{1}{41} \cdot \frac{1}{41} \cdot \frac{40}{41} \approx 0.00001415548
+$$
+
+$$
+  \frac{40}{41} \cdot \frac{1}{41} \cdot \frac{1}{41} \cdot \frac{1}{41} \approx 0.00001415548
+$$
+
+Thus, all that is needed is to multiply the first probability of roughly 0.00001415548 by 4 to get $0.00001415548 \cdot 4 = 0.00005662192$.
+
+**End of Bonus Material.**
+
+</div>
+
+
+To put some perspective on this, a high school athlete in the United States is over 26 times more likely to play professional sports than Columbus was to draw the three marked peas! (Fields, Mike 2008) Consider how you might explain the occurrence of this extremely unlikely event. (While no response is required of you right now, this kind of question will be very important later, so take a little time to ponder it.) In fact, it is worth restating the question, "How might you explain the occurrence of this extremely unlikely event?" 
+
+Now, take a moment to practice what you have read by answering the following questions.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
@@ -251,7 +302,7 @@ To put some perspective on this, a high school athlete in the United States is o
 
 <a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q6" style="display:none;">
-* The probability of rolling a 6 on a die is $\displaystyle{ \frac{1}{6}} = 0.1667$.
+* The probability of rolling a 6 on a die is $\displaystyle{ \frac{1}{6}} = 0.1667$. This is because a six-sided die has 6 sides total and only 1 side that has a "6" on it. Thus, 1/6 represents the chance of getting a "six" divided by the "total number of possibilities on the die" in the denominator (6).
 </div>
 </br>
 
@@ -260,6 +311,7 @@ To put some perspective on this, a high school athlete in the United States is o
 <a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q7" style="display:none;">
 * The probability of not rolling a 6 on a die is $\displaystyle{\frac{5}{6}} = 0.8333.$
+This is because there are five sides on the die that are "not a 6" (the sides representing 1, 2, 3, 4, and 5) and six total sides, so 5 out of 6 sides will yield something other than a "six."
 </div>
 </br>
 
@@ -290,13 +342,15 @@ $*$*Note: The word "die" is the singular form of the word "dice." When we refer 
 
 ### Probability Notation
 
-You may already have a good understanding of the basics of probability. It is worth noting that there is a special notation used to denote probabilities. The probability that an event, $x$, will occur is written $P(x)$. As an example, the probability that you will roll a 6 on a die can be written as
+You may already have a good understanding of the basics of probability. It is worth noting that there is a special notation used to denote probabilities. The probability that an event, $x$, will occur is written $P(x)$ and pronounced as "probability-of-event-x." As an example, the probability that you will roll a 6 on a fair six-sided die can be written as
 
-P (Roll a 6 on a die)= $\displaystyle{\frac{1}{6}}$
+$$
+P\text{(Roll a "six" on a fair six-sided die)}= \frac{1}{6} = \frac{\text{number of sides that show a "six"}}{\text{total number of sides on the die}}
+$$
 
 ### Rules of Probability
 
-Probabilities follow patterns, called **probability distributions,** or distributions, for short. There are three rules that a probability distribution must follow. Answer the following questions to explore what these three rules might be.
+Probabilities follow patterns, called **probability distributions,** or just *distributions*, for short. There are three rules that a probability distribution must follow. Answer the following questions to explore what these three rules might be.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
@@ -304,7 +358,7 @@ Probabilities follow patterns, called **probability distributions,** or distribu
 
 <a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q10" style="display:none;">
-* Probabilities cannot be negative.
+* Probabilities cannot be negative because they represent the "number of ways something specific can happen" (like how many planets that are "just like" Mars and do have life on them) divided by "the total number of possibilities" (in this case, the total number of planets that exist that are "just like" Mars). The fewest planets there could be that are "just like" Mars and have life on them is zero. So the lowest a probability can go is zero. 
 </div>
 </br>
 
@@ -312,7 +366,7 @@ Probabilities follow patterns, called **probability distributions,** or distribu
 
 <a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q11" style="display:none;">
-* Probabilities cannot be larger than 1 (or 100%).
+* Probabilities cannot be larger than 1 (or 100%). This is because probabilities represent frequencies of occurrence, and the most something can happen is "all the time" or 100% of the time.
 </div>
 </br>
 
@@ -332,7 +386,7 @@ This can be viewed as one of two problems:
 </div>
 </br>
 
-In this course we are interested in experiments where the outcomes are influenced by random effects. So the outcomes of the experiment are uncertain, yet they follow a pattern or distribution and the probability of the experimental outcomes are governed by rules. An event is a set of outcomes of an experiment. Each outcome is an event, but an event can include more than one outcome.
+In this course we are interested in experiments where the outcomes of the experiment are uncertain, yet they follow a pattern or *probabilitiy distribution.* As you read in the above questions and answers, these probability distributions follow three rules.
 
 <div class="Emphasis">
 &nbsp;&nbsp;**The three rules of probability are:**
@@ -381,7 +435,7 @@ $$P(\text{not}~X) = 1 - P(X)$$
 </div>
 </br>
 
-Informally, a distribution can be thought of as being "all the possible outcomes and how often they occur."
+Informally, a distribution can be thought of as being "all the possible outcomes of an experiment and how often they occur."
 
 ### Randomness
 
@@ -389,11 +443,11 @@ A BYU-Idaho student was overhead saying, "I went shopping and bought some *rando
 
 What did the student mean? That the items they bought seemed unrelated.  When we consciously or subconsciously choose a sample, it is not random.  
 
-What does it mean to be random? When something is random, it is not just haphazard, with no pattern.  Any random process follows a very distinct pattern over time---the distribution of its outcomes.  For example, if you roll a die thousands of times, about one-sixth of the time you will roll a four.  This is a very clear pattern, or part of a pattern. The entire pattern (or, the entire distribution) is that each number on the die is rolled about one-sixth of the time. 
+So, what does it mean to be random? When something is random, it is not just haphazard, with no pattern.  A random process follows a very distinct pattern over time---the distribution of its outcomes.  For example, if you roll a die thousands of times, about one-sixth of the time you will roll a four.  This is a very clear pattern, or part of a pattern. The entire pattern (or, the entire distribution) is that each number on the die is rolled about one-sixth of the time. 
 
 But there's something different about the patterns followed by random processes than other kinds of patterns.  Other kinds of patterns can be very predictable, such as a color pattern of the red, yellow, blue, red, yellow, blue, and so on. If you're following this pattern and happen to see yellow, you know the next color will be blue. By contrast, you never know what you will get on the next roll of a six-sided die. You *do* know that in the long run you will roll fours about one-sixth of the time.  
 
-When something is random, we can be sure that it follows a long-term pattern, its distribution.  We just never know what the outcome of the next experiment will be.
+When something is random, we can be sure that it follows a long-term pattern. This long-term pattern is called its *probability distribution*. However, what makes "randomness" interesting is that despite knowing the long-term pattern, or how often something will occur over time, we still never know what the outcome of the *next* experiment will be.
 
 
 
@@ -401,7 +455,7 @@ When something is random, we can be sure that it follows a long-term pattern, it
 
 ## Conclusion
 
-As with all the classes you take at BYU-Idaho, in the end it is up to you to decide what you want to get out of this class. If you choose to approach the things you study in class with an open mind, if you prepare diligently and work hard to complete all the learning activities, and if you humbly seek the Lord’s help to understand the intellectual and spiritual truths discussed in this course, you will have an outstanding educational experience that will be a blessing to you throughout your life.
+As with all the classes you take at BYU-Idaho, it is up to you to decide what you want to get out of this class. If you choose to approach the things you study in class with an open mind, if you prepare diligently and work hard to complete all the learning activities, and if you humbly seek the Lord’s help to understand the intellectual and spiritual truths discussed in this course and in other courses, you will have an outstanding educational experience that will be a blessing to you throughout your life. May you enjoy the journey this semester into statistics!
 
 <br>
 
@@ -412,7 +466,7 @@ As with all the classes you take at BYU-Idaho, in the end it is up to you to dec
 
 - In this class you will use the online textbook that has been written for you by your statistics teachers. All of the assignments and quizzes will be based on the readings, so study it well.
 - Most weeks will cover two lessons
-- By doing the work, staying on schedule, and living the Honor Code you _can_ succeed in this class!
+- By doing the work, staying on schedule, and living the Honor Code you *will* succeed in this class!
 
 - The three **rules of probability** are:
     1. A probability is a number between 0 and 1. 
