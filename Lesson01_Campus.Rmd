@@ -1,5 +1,5 @@
 ---
-title: 'Lesson 1: On Campus Course Introduction'
+title: 'Lesson 1: (On Campus) Course Intro & Probability'
 output:
   html_document:
     theme: cerulean
@@ -16,7 +16,7 @@ output:
 
 ## Lesson 1 Outcomes
 
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 By the end of this lesson, you should be able to:
 
@@ -431,5 +431,5 @@ $$P(\text{not}~X) = 1 - P(X)$$
 <center>
 | **This Reading**               | **Next Reading**                                                       |
 | :----------------------------: | :--------------------------------------------------------------------: |
-| Lesson 01: <br> Course Introduction | [Lesson 2: <br> The Statistical Process & Design of Studies](Lesson02.html) |
+| Lesson 1: <br> (On Campus) Course Intro & Probability | [Lesson 2: <br> The Statistical Process & Design of Studies](Lesson02.html) |
 </center>

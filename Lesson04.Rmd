@@ -1,5 +1,5 @@
 ---
-title: "Lesson 4: Describing Quantitative Data: Spread"
+title: "Lesson 4: Describing Quantitative Data (Spread)"
 output: 
   html_document:
     theme: cerulean
@@ -29,18 +29,18 @@ output:
 
 ## Lesson Outcomes
 
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 
 By the end of this lesson, you should be able to:
-* Identify the standard deviation of a distribution visually from a bell-shaped histogram.
+
+* Approximate the standard deviation of a distribution visually from a bell-shaped histogram.
 * Calculate the standard deviation from quantitative data using Excel.
 * Interpret the standard deviation for symmetric distributions. 
 * Properly apply the Excel functions STDEV.S, PERCENTILE.INC, QUARTILE.INC, MIN, and MAX to quantitative data.
 * Interpret the five-number summary for quantitative data.
 * Create a box-plot from quantitative data using Excel. 
-* Determine the five-number summary visually from a box plot. 
-* Explain the relationship between probabilities, percentiles, and percentages.
+* Determine the five-number summary visually from a box plot. * Explain the relationship between probabilities, percentiles, and percentages.
 
 </div>
 <br>
@@ -1328,7 +1328,7 @@ Additional formatting can be applied to further improve the appearance of the ch
 
 | **Previous Reading** | **This Reading** | **Next Reading** |
 | :------------------: | :--------------: | :--------------: |
-| [Lesson 3: <br> Describing Quantitative Data: Shape and Center](Lesson03.html) | Lesson 4: <br> Describing Quantitative Data: Spread | [Lesson 5: <br> Normal Distributions](Lesson05.html) |
+| [Lesson 3: <br> Describing Quantitative Data (Shape and Center)](Lesson03.html) | Lesson 4: <br> Describing Quantitative Data (Spread) | [Lesson 5: <br> Normal Distributions](Lesson05.html) |
 
 <br>
 

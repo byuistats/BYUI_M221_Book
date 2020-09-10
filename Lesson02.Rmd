@@ -28,7 +28,7 @@ output:
 
 ## Lesson Outcomes
 
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 By the end of this lesson, you should be able to:
 
@@ -553,7 +553,6 @@ Since there was not enough evidence to suggest that ImmunAvance's financial stat
 
 - **Quantitative variables** represent things that are numeric in nature, such as the value of a car or the number of students in a classroom. **Categorical variables** represent nonnumerical data that can only be considered as labels, such as colors or brands of shoes.
 
-- The **null hypothesis ($H_0$)** is the foundational assumption about a population and represents the status quo. The **alternative hypothesis ($H_a$)** is a different assumption about a population. Using a **hypothesis test**, we determine whether it is more likely that the null hypothesis or the alternative hypothesis is true.
 </div>
 <br>
 
@@ -587,7 +586,7 @@ Offit, P. A. (2005). Why are pharmaceutical companies gradually abandoning vacci
 <center>
 | **Previous Reading** | **This Reading** | **Next Reading** |
 | :------------------: | :--------------: | :--------------: |
-| [Lesson 01: <br> Course Introduction](Lesson01.html) | Lesson 02: <br> The Statistical Process & Design of Studies | [Lesson 03: <br> Describing Quantitative Data: Shape, Center & Spread](Lesson03.html) |
+| [Lesson 1: <br> Course Intro & Probability](Lesson01.html) | Lesson 2: <br> The Statistical Process & Design of Studies | [Lesson 3: Describing Quantitative Data (Shape & Center)](Lesson03.html) |
 </center>
 
 [^1]: [churchofjesuschrist.org definition of pulse](http://www.churchofjesuschrist.org/scriptures/bd/pulse?lang=eng&query=pulse){target="_blank"}

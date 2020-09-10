@@ -28,7 +28,7 @@ output:
 
 ## Lesson Outcomes
 
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Lesson Outcomes</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 
 By the end of this lesson, you should be able to:
@@ -560,7 +560,7 @@ Or?amento e Gest?o Minist?rio do Planejamento. Pesquisa de or?amentos familiars 
 <center>
 | **Previous Reading** | **This Reading** | **Next Reading** |
 | :------------------: | :--------------: | :--------------: |
-| [Lesson 4: <br> Describing Quantitative Data: Spread](Lesson04.html) | Lesson 05: <br> Normal Distributions | [Lesson 6: <br> Distribution of Sample Means & The Central Limit Theorem](Lesson06.html) |
+| [Lesson 4: Describing Quantitative Data  (Spread)](Lesson04.html) | Lesson 05: <br> Normal Distributions | [Lesson 6: <br> Distribution of Sample Means & The Central Limit Theorem](Lesson06.html) |
 </center>
 
 

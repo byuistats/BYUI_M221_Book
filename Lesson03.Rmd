@@ -1,5 +1,5 @@
 ---
-title: "Lesson 3: Describing Quantitative Data: Shape & Center"
+title: "Lesson 3: Describing Quantitative Data (Shape & Center)"
 output: 
   html_document:
     theme: cerulean
@@ -27,7 +27,7 @@ output:
 
 ## Lesson Outcomes
 
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Lesson Outcomes</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 
 By the end of this lesson, you should be able to:
@@ -35,7 +35,7 @@ By the end of this lesson, you should be able to:
 * Determine the shape of a distribution using a histogram.
 * Interpret the mean, median, and mode for quantitative data.
 * Apply the Excel functions AVERAGE, MEDIAN, and MODE when working with quantitative data in Excel.
-* Determine the mean and median of left-skewed, right-skewed, or bell-shaped distributions visually using a histogram.
+* Determine the location of the mean relative to the median of left-skewed, right-skewed, or bell-shaped distributions visually using a histogram.
 * Interpret a histogram.  
 * Distinguish between a parameter and a statistic.
 
@@ -512,7 +512,7 @@ Even though measures of center are important, we need to consider the shape, cen
 
 - The **mean**, **median**, and **mode** are measures of the center of a distribution. The mean is the most common measure of center and is computed by adding up the observed data and dividing by the number of observations in the data set.
 
-- A **parameter** is a true (but usually unknown) number that describes a population. A **statistic** is an estimate of a parameter obtained from a sample. 
+- A **parameter** is a true (but usually unknown) number that describes a population. A **statistic** is an estimate of a parameter obtained from a sample of the population. 
 
 </div>
 <br>
@@ -524,5 +524,5 @@ Even though measures of center are important, we need to consider the shape, cen
 <center>
 | **Previous Reading** | **This Reading** | **Next Reading** |
 | :------------------: | :--------------: | :--------------: |
-| [Lesson 2: The Statistical Process & Design of Studies](Lesson02.html) | Lesson 03: Describing Quantitative Data: Shape, Center & Spread | [Lesson 4: Probability; Discrete Random Variables](Lesson04.html) |
+| [Lesson 2: The Statistical Process & Design of Studies](Lesson02.html) | Lesson 3: Describing Quantitative Data (Shape & Center) | [Lesson 4: Describing Quantitative Data (Spread)](Lesson04.html) |
 </center>

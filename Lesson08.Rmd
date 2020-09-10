@@ -18,7 +18,9 @@ This is not designed to be a comprehensive review.  There may be items on the ex
 <br>
 
 ## Unit 1 Lesson Outcomes
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Lesson Outcomes</span></a>
+
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
+
 <div id="oc" style="display:none;">
 The expectation on the exam is that you should be able to do the following:
 
@@ -86,7 +88,6 @@ The expectation on the exam is that you should be able to do the following:
 
 - **Quantitative variables** represent things that are numeric in nature, such as the value of a car or the number of students in a classroom. **Categorical variables** represent nonnumerical data that can only be considered as labels, such as colors or brands of shoes.
 
-- The **null hypothesis ($H_0$)** is the foundational assumption about a population and represents the status quo. The **alternative hypothesis ($H_a$)** is a different assumption about a population. Using a **hypothesis test**, we determine whether it is more likely that the null hypothesis or the alternative hypothesis is true.
 </div>
 <br>
 
