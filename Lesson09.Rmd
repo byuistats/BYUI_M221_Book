@@ -220,7 +220,7 @@ $$\displaystyle{ z= \frac{ \bar{x} − \mu}{\sigma/\sqrt{n}} = \frac{177.6−140
 
 We use the applet to determine the probability of observing a value of $z$ that is as large or larger than $9.757$.  This is the same as the probability of observing a value of $\bar{x} =177.6$ or more pounds, given that the true mean really is $\mu = 140$ pounds.
 
-The area to the right of $z=9.757$ is so small, the normal probability applet gives the area as "1.7217e-22."  This is how a computer represents scientific notation.  This number is actually $1.7217\times 10^{-22}$ or in other words, 0.000 000 000 000 000 000 000 172 17. This is the probability that a mean of $\bar{x}=177.6$ pounds was observed just by chance assuming the true mean is $\mu = 140$ lbs.  This is very, very unlikely.  A more plausible explanation is that the mean weight of individuals in the population is greater than 140 pounds.
+The area to the right of $z=9.757$ is so small, the normal probability applet gives the area as "8.6086e-23."  This is how a computer represents scientific notation.  This number is actually $8.6086ex10^{-23}$ or in other words, 0.000 000 000 000 000 000 000 086 086. This is the probability that a mean of $\bar x=177.6$ pounds or greater was observed just by chance assuming the true mean is $\mu = 140$ lbs.  This is very, very unlikely.  A more plausible explanation is that the true mean weight $\mu$ of individuals in the population is greater than 140 pounds.
 
 Based on this analysis and the hypothesis test, the evidence against $H_0$ is strong enough to conclude that if every seat on the Ethan Allen was occupied, that the boat would be carrying a greater load than it was certified to handle.
 
