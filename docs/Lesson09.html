@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -472,7 +460,8 @@ $(document).ready(function () {
 <div id="oc" style="display:none;">
 <p>By the end of this lesson, you should be able to:</p>
 <ul>
-<li>Conduct a Hypothesis Test for a single mean with σ known:</li>
+<li>Conduct a Hypothesis Test for a single mean with σ known:
+<ul>
 <li>State the null and alternative hypothesis.</li>
 <li>Calculate the test-statistic and p-value of the hypothesis test.</li>
 <li>Assess the statistical significance by comparing the p-value to the α-level.</li>
@@ -480,6 +469,7 @@ $(document).ready(function () {
 <li>Show the appropriate connections between the numerical and graphical summaries that support this hypothesis test.</li>
 <li>Draw a correct conclusion for the hypothesis test.</li>
 <li>Interpret a Type I and II error.</li>
+</ul></li>
 </ul>
 </div>
 <p><br></p>
@@ -648,7 +638,7 @@ $(document).ready(function () {
 <p>To find the <span class="math inline">\(P\)</span>-value, we first calculate the number of standard deviations that <span class="math inline">\(\bar{x}\)</span> is away from the assumed value of true mean <span class="math inline">\(\mu=140\)</span> pounds. This is our <span class="math inline">\(z\)</span>-score. Then we use the applet to determine the probability of observing a value of <span class="math inline">\(z\)</span> that is as large or larger than the value we observed.</p>
 <p><span class="math display">\[\displaystyle{ z= \frac{ \bar{x} − \mu}{\sigma/\sqrt{n}} = \frac{177.6−140}{26.7/\sqrt{48}}=9.757 }\]</span></p>
 <p>We use the applet to determine the probability of observing a value of <span class="math inline">\(z\)</span> that is as large or larger than <span class="math inline">\(9.757\)</span>. This is the same as the probability of observing a value of <span class="math inline">\(\bar{x} =177.6\)</span> or more pounds, given that the true mean really is <span class="math inline">\(\mu = 140\)</span> pounds.</p>
-<p>The area to the right of <span class="math inline">\(z=9.757\)</span> is so small, the normal probability applet gives the area as “1.7217e-22.” This is how a computer represents scientific notation. This number is actually <span class="math inline">\(1.7217\times 10^{-22}\)</span> or in other words, 0.000 000 000 000 000 000 000 172 17. This is the probability that a mean of <span class="math inline">\(\bar{x}=177.6\)</span> pounds was observed just by chance assuming the true mean is <span class="math inline">\(\mu = 140\)</span> lbs. This is very, very unlikely. A more plausible explanation is that the mean weight of individuals in the population is greater than 140 pounds.</p>
+<p>The area to the right of <span class="math inline">\(z=9.757\)</span> is so small, the normal probability applet gives the area as “8.6086e-23.” This is how a computer represents scientific notation. This number is actually <span class="math inline">\(8.6086\times 10^{-23}\)</span> or in other words, 0.000 000 000 000 000 000 000 086 086. This is the probability that a mean of <span class="math inline">\(\bar{x}=177.6\)</span> pounds was observed just by chance assuming the true mean is <span class="math inline">\(\mu = 140\)</span> lbs. This is very, very unlikely. A more plausible explanation is that the mean weight of individuals in the population is greater than 140 pounds.</p>
 <p>Based on this analysis and the hypothesis test, the evidence against <span class="math inline">\(H_0\)</span> is strong enough to conclude that if every seat on the Ethan Allen was occupied, that the boat would be carrying a greater load than it was certified to handle.</p>
 <p><img src="Images/Step5.png"></p>
 <p>As a result of this accident, the United States government took several actions. The Coast Guard stability regulations were changed, and the assumed average weight per person was increased to 185 pounds. <!-- [[CITE: http://www.uscg.mil/hq/cg5/cg5212/docs/secg12142010.pdf]]--> As a result, the safety of public vessels has been improved. <!--
@@ -821,7 +811,7 @@ Answer the following questions:
 </ul>
 <p>Notice that each of these is a viable alternative to the requirement that the mean is 98.6 degrees. We would only use <span class="math inline">\(&lt;\)</span> or <span class="math inline">\(&gt;\)</span> if we had a belief in advance that the mean was less than or greater than 98.6. If we do not have a strong reason to believe the mean is either smaller or larger than the stated value–before we collect our data–then, we use <span class="math inline">\(\ne\)</span> in our alternative hypothesis.</p>
 <p>It is important that the null and alternative hypotheses be determined prior to collecting the data. It is not appropriate to use the data from your study to choose the alternative hypothesis that will be used to test the same data! This is an example of using data twice, once to choose the test and again to conduct the test. It is okay to use data from a previous study to determine your null and alternative hypotheses, but it is an improper use of the statistical procedures to use the data to define <em>and</em> conduct a hypothesis test.</p>
-<p>Notice that the null and alternative hypotheses are statements about a population parameter (e.g. <span class="math inline">\(\mu\)</span>.) They will never involve a sample statistic (e.g. <span class="math inline">\(\bar{x}\)</span>.) Population parameters are unknown, and we are trying to make a judgement about whether or not they are equal to a particular value. Sample statistics are calculated from our data, so there is no reason to do any test to assess what their value is.</p>
+<p>Notice that the null and alternative hypotheses are statements about a population parameter (e.g. <span class="math inline">\(\mu\)</span>.) They will never involve a sample statistic (e.g. <span class="math inline">\(\bar{x}\)</span>.) Population parameters are unknown, and we are trying to make a judgement about whether or not they are equal to a particular value. Sample statistics are calculated from our data, so there is no reason to do any test to assess what their value is.</p>
 <!--
 {| class="wikitable"
 |-
@@ -1220,15 +1210,17 @@ Answer the following questions:
 <h3>Requirements</h3>
 <p>Certain requirements are required for us to conduct the hypothesis test for a single mean with <span class="math inline">\(\sigma\)</span> known.</p>
 <p>First of all, we must assume that the data represent a simple random sample from a large population. In practice, this requirement is rarely satisfied. Frequently researchers working with humans rely on convenience samples, where the subjects volunteer to participate in a research project. The researcher may advertise using television, radio, and flyers in a clinic. If there is no relationship between the issue being studied and people’s desire to participate, this method works fairly well.</p>
-<p>A second requirement is that the data are drawn from a population that has a normal distribution with mean <span class="math inline">\(\mu\)</span> given in the null hypothesis (e.g. 98.6° F) and a known standard deviation (e.g. <span class="math inline">\(\sigma=0.675^\circ\)</span> F.)</p>
+<p>A second requirement is that the data are drawn from a population that has a normal distribution with mean <span class="math inline">\(\mu\)</span> given in the null hypothesis (e.g. 98.6° F) and a known standard deviation (e.g. <span class="math inline">\(\sigma=0.675^\circ\)</span> F.)</p>
 <p>It turns out that the procedure actually works quite well–even if the data are not normally distributed–as long as <span class="math inline">\(\bar{x}\)</span> follows a normal distribution. Under what conditions will <span class="math inline">\(\bar{x}\)</span> be normally distributed? (Think about it.)</p>
 <p>In the reading for <a href="Lesson06.html" target="_blank">Distribution of Sample Means &amp; The Central Limit Theorem|Lesson 6</a>, we learned that <span class="math inline">\(\bar{x}\)</span> will follow a normal distribution if the data are drawn from a normal distribution or if the sample size (<span class="math inline">\(n\)</span>) is large.</p>
 <p>Putting this all together, we can summarize the requirements for a test for a single mean with <span class="math inline">\(\sigma\)</span> known as:</p>
 <ul>
 <li>The data represent a simple random sample from a large population.</li>
-<li>The sample mean <span class="math inline">\(\bar{x}\)</span> is normally distributed. This happens if either one of the following is true:</li>
+<li>The sample mean <span class="math inline">\(\bar{x}\)</span> is normally distributed. This happens if either one of the following is true:
+<ul>
 <li>The population is normally distributed.</li>
 <li>The sample size is large.</li>
+</ul></li>
 </ul>
 <p><img src="Images/StepsAll.png"></p>
 </div>
@@ -1708,10 +1700,10 @@ Answer the following question:
 <p>If we are unable to reject the original hypothesis, we do not conclude that it is correct. For example, just because apples have always been observed to fall downward out of apple trees, we do not conclude that the Law of Gravity is correct. However, it has not been disproved either.</p>
 <p>This philosophy is very different from the way one gains a testimony. A testimony is a Gift of the Spirit, and it is given only by revelation.</p>
 <blockquote>
-<p>“Wherefore, beware lest ye are deceived; and that ye may not be deceived seek ye earnestly the best gifts, always remembering for what they are given;</p>
+<p>"Wherefore, beware lest ye are deceived; and that ye may not be deceived seek ye earnestly the best gifts, always remembering for what they are given;</p>
 </blockquote>
 <blockquote>
-<p>For verily I say unto you, they are given for the benefit of those who love me and keep all my commandments, and him that seeketh so to do; that all may be benefited that seek or that ask of me, that ask and not for a sign that they may consume it upon their lusts. And again, verily I say unto you, I would that ye should always remember, and always retain in your minds what those gifts are, that are given unto the church. For all have not every gift given unto them; for there are many gifts, and to every man is given a gift by the Spirit of God. To some is given one, and to some is given another, that all may be profited thereby. To some it is given by the Holy Ghost to know that Jesus Christ is the Son of God, and that he was crucified for the sins of the world. To others it is given to believe on their words, that they also might have eternal life if they continue faithful.&quot;</p>
+<p>For verily I say unto you, they are given for the benefit of those who love me and keep all my commandments, and him that seeketh so to do; that all may be benefited that seek or that ask of me, that ask and not for a sign that they may consume it upon their lusts. And again, verily I say unto you, I would that ye should always remember, and always retain in your minds what those gifts are, that are given unto the church. For all have not every gift given unto them; for there are many gifts, and to every man is given a gift by the Spirit of God. To some is given one, and to some is given another, that all may be profited thereby. To some it is given by the Holy Ghost to know that Jesus Christ is the Son of God, and that he was crucified for the sins of the world. To others it is given to believe on their words, that they also might have eternal life if they continue faithful."</p>
 </blockquote>
 <!--
 <center>
@@ -1745,7 +1737,7 @@ Remember…
 <li><p>The <strong>null hypothesis (<span class="math inline">\(H_0\)</span>)</strong> is the foundational assumption about a population and represents the status quo. It is a statement of equality (<span class="math inline">\(=\)</span>). The <strong>alternative hypothesis (<span class="math inline">\(H_a\)</span>)</strong> is a different assumption about a population and is a statement of inequality (<span class="math inline">\(&lt;\)</span>, <span class="math inline">\(&gt;\)</span>, or <span class="math inline">\(\ne\)</span>). Using a <strong>hypothesis test</strong>, we determine whether it is more likely that the null hypothesis or the alternative hypothesis is true.</p></li>
 <li><p>The <strong><span class="math inline">\(P\)</span>-value</strong> is the probability of getting a test statistic at least as extreme as the one you got, assuming <span class="math inline">\(H_0\)</span> is true. A <span class="math inline">\(P\)</span>-value is calculated by finding the area under the normal distribution curve that is more extreme (farther away from the mean) than the z-score. The alternative hypothesis tells us whether we look at both tails or only one.</p></li>
 <li><p>The <strong>level of significance (<span class="math inline">\(\alpha\)</span>)</strong> is the standard for determining whether or not the null hypothesis should be rejected. Typical values for <span class="math inline">\(\alpha\)</span> are <span class="math inline">\(0.05\)</span>, <span class="math inline">\(0.10\)</span>, and <span class="math inline">\(0.01\)</span>. If the <span class="math inline">\(P\)</span>-value is less than <span class="math inline">\(\alpha\)</span> we reject the null. If the <span class="math inline">\(P\)</span>-value is not less than <span class="math inline">\(\alpha\)</span> we fail to reject the null.</p></li>
-<li>A <strong>Type I error</strong> is committed when we reject a null hypothesis that is, in reality, true. A <strong>Type II error</strong> is committed when we fail to reject a null hypothesis that is, in reality, not true. The value of <span class="math inline">\(\alpha\)</span> is the probability of committing a Type I error.</li>
+<li><p>A <strong>Type I error</strong> is committed when we reject a null hypothesis that is, in reality, true. A <strong>Type II error</strong> is committed when we fail to reject a null hypothesis that is, in reality, not true. The value of <span class="math inline">\(\alpha\)</span> is the probability of committing a Type I error.</p></li>
 </ul>
 </div>
 <p><br></p>
@@ -1755,17 +1747,17 @@ Remember…
 <p>[1] R. A. Fisher. Statistical tests. Nature, 136, 1935.</p>
 <p>[2] H. Kieler, O. Axelsson, Nilsson S., and U. Waldenstr. The length of human pregnancy as calculated by ultrasonographic measurement of the fetal biparietal diameter. Ultrasound in Obstetrics and Gynecology, 6(5):353–357, 1995.</p>
 <p>[3] Timothy Harper. All the news that’s fit to BYTE. Delta Sky Magazine, 106:92–96, May 2007.</p>
-<p>[4] K. Clay et. al. Morningness and eveningness relationship to college GPA. APSS Meeting, 2008.</p>
+<p>[4] K. Clay et. al. Morningness and eveningness relationship to college GPA. APSS Meeting, 2008.</p>
 <p><br></p>
 </div>
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1805,6 +1797,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
