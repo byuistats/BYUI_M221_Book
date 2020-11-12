@@ -263,7 +263,7 @@ Based on his research, Wunderlich stated, "The axillary temperature of 98.6&deg;
 
 ### Data on Body Temperatures
 
-A group of researchers led by Philip A. Mackowiak, MD, conducted a study to assess the true mean body temperatures of healthy adults.<!-- \cite{Mackowiak92}-->  They selected $n=148$ subjects between the ages of 18 and 40 years old, representative of the general population.  Each volunteer was given a physical to assure that they were not ill at the time of the data collection.  Their axillary body temperature was measured and reported in a paper published in the "Journal of the American Medical Association". <!-- \cite{Mackowiak92}--> These data were extracted and are presented in the file [BodyTemp](./Data/BodyTemp.xlsx).  The body temperatures in the file are given in degrees Fahrenheit.
+A group of researchers led by Philip A. Mackowiak, MD, conducted a study to assess the true mean body temperatures of healthy adults.<!-- \cite{Mackowiak92}-->  They selected $n=148$ subjects between the ages of 18 and 40 years old, representative of the general population.  Each volunteer was given a physical to assure that they were not ill at the time of the data collection.  Their axillary body temperature was measured and reported in a paper published in the "Journal of the American Medical Association". <!-- \cite{Mackowiak92}--> These data were extracted and are presented in the file [BodyTemp](./Data/BodyTemp.xlsx).  The body temperatures in the file are given in degrees Fahrenheit. Based on historical data, the standard deviation of body temperatures is assumed to be $\sigma = 0.675$&deg; F.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
