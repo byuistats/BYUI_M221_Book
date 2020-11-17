@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -588,7 +576,7 @@ Excel Instructions
 </div>
 <div class="Summary">
 <p>To conduct a test for several means (ANOVA) in Excel, do the following:</p>
-<p>Open the file <a href="https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> and do the following:</p>
+<p>Open the file <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> and do the following:</p>
 <ul>
 <li>Click on the tab labeled “ANOVA”</li>
 <li>Paste the data from each group into their own column
@@ -601,7 +589,7 @@ Excel Instructions
 <p>The following points will help you interpret the output.</p>
 <ul>
 <li><p>The “Numerical Summary of the Data” (Step 3) section of the output gives the sample size, mean and standard deviation for each of the groups in your sample.</p></li>
-<li>In the ANOVA table, you will find the test statistic (<span class="math inline">\(F\)</span>), the <span class="math inline">\(P\)</span>-value (Sig.), and the degrees of freedom (df) for the <span class="math inline">\(F\)</span> statistic. Note that there are two numbers specifying the degrees of freedom. These are given as the between groups and within groups df, respectively. Do not worry about the total degrees of freedom. This number is the sum of the other two.
+<li><p>In the ANOVA table, you will find the test statistic (<span class="math inline">\(F\)</span>), the <span class="math inline">\(P\)</span>-value (Sig.), and the degrees of freedom (df) for the <span class="math inline">\(F\)</span> statistic. Note that there are two numbers specifying the degrees of freedom. These are given as the between groups and within groups df, respectively. Do not worry about the total degrees of freedom. This number is the sum of the other two.</p>
 <ul>
 <li>The test statistic, <span class="math inline">\(F\)</span>, is given in cell T9</li>
 <li>The degrees of freedom are presented in cells R9 and R10</li>
@@ -610,18 +598,18 @@ Excel Instructions
 </ul>
 <p>To check your requirements, do the following:</p>
 <ul>
-<li>To determine if the data are normally distributed, we will look at a histogram plot for each group separately.
+<li><p>To determine if the data are normally distributed, we will look at a histogram plot for each group separately.</p>
 <ul>
 <li>While still on the ANOVA tab, scroll down. Under the boxplots you should see a histogram. In a large, yellow highlighted box located in the upper-right corner of the plot, you can type the group number of the sample you would like to see a histogram for (see the picture below). Make sure that you evaluate each sample’s data. They <strong>all</strong> must look <em>approximately normal</em> to meet the requirement.</li>
-</ul></li>
 </ul>
-<p><img src="Images/ANOVA_histogram.PNG"></p>
+<p><img src="Images/ANOVA_histogram.PNG"></p></li>
+<li><p>To determine if the population variances are equal, we will use a very simple check:</p>
 <ul>
-<li>To determine if the population variances are equal, we will use a very simple check:</li>
 <li>If the largest variance is at least four times as big as the smallest variance, we will conclude that the population variances are not equal. (Remember, the variance is the square of the standard deviation.)
 <ul>
 <li>If the largest variance is <em>not</em> four times as big as the smallest variance, we will conclude that the population variances are close enough that we can assume the variances are all equal.</li>
 <li>To help you check this assumption the smallest and largest sample variance are displayed in a table spanning cells Y4 to AA6.</li>
+</ul></li>
 </ul></li>
 </ul>
 <p><br></p>
@@ -652,7 +640,7 @@ Excel Instructions
 <div class="Summary">
 <p>Follow these instructions to apply the ANOVA procedure using Excel:</p>
 <p>Data representative of the values reported by Emmons and McCullough are given in the file <a href="./Data/Gratitude.xlsx">Gratitude.xlsx</a>. The data is divided up into three columns which represent Grateful, Hassels, and Events.</p>
-<p>The summary statistics can be obtained using the <a href="https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a>. Paste the three columns of data into the appropriate areas of column A, B, and C. The summary statistics will appear in the table to the right labeled “Numerical Summary of the Data”.</p>
+<p>The summary statistics can be obtained using the <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a>. Paste the three columns of data into the appropriate areas of column A, B, and C. The summary statistics will appear in the table to the right labeled “Numerical Summary of the Data”.</p>
 <p><br></p>
 </div>
 <p><br></p>
@@ -674,22 +662,22 @@ Excel Instructions
 </thead>
 <tbody>
 <tr class="odd">
-<td><p><strong>Grateful</strong></p></td>
-<td><p>64</p></td>
-<td><p>5.050</p></td>
-<td><p>0.9443</p></td>
+<td><strong>Grateful</strong></td>
+<td>64</td>
+<td>5.050</td>
+<td>0.9443</td>
 </tr>
 <tr class="even">
-<td><p><strong>Hassles</strong></p></td>
-<td><p>63</p></td>
-<td><p>4.675</p></td>
-<td><p>0.8320</p></td>
+<td><strong>Hassles</strong></td>
+<td>63</td>
+<td>4.675</td>
+<td>0.8320</td>
 </tr>
 <tr class="odd">
-<td><p><strong>Events</strong></p></td>
-<td><p>65</p></td>
-<td><p>4.660</p></td>
-<td><p>0.8483</p></td>
+<td><strong>Events</strong></td>
+<td>65</td>
+<td>4.660</td>
+<td>0.8483</td>
 </tr>
 <tr class="even">
 <td></td>
@@ -969,7 +957,7 @@ H_a: &amp; ~ \textrm{At least one of the means differs}
 \end{align}
 \]</span></p></li>
 <li><p>For ANOVA testing we use an <strong><span class="math inline">\(F\)</span>-distribution</strong>, which is right-skewed. The <span class="math inline">\(P\)</span>-value of an ANOVA test is always the area to the right of the <span class="math inline">\(F\)</span>-statistic.</p></li>
-<li>We can conduct ANOVA testing when the following three requirements are satisfied:
+<li><p>We can conduct ANOVA testing when the following three requirements are satisfied:</p>
 <ol style="list-style-type: decimal">
 <li>The data come from a simple random sample.</li>
 <li>The data are normally distributed within each group.
@@ -988,11 +976,11 @@ H_a: &amp; ~ \textrm{At least one of the means differs}
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1032,6 +1020,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
