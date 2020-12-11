@@ -158,7 +158,7 @@ $$
     2. The data are normally distributed within each group.
         - This is considered met unless one or more of the groups has a *strongly* skewed distribution.
     3. The variance is constant.
-        - This is satisfied when the largest standard deviation is not more than two times the smallest standard deviation.
+        - This is satisfied when the largest variance is not more than four times the smallest variance.
 <br>
 </div>
 <br>
