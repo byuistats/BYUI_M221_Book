@@ -14,22 +14,28 @@ output:
  }
 </script>
 
+<!--
+
 <div style="float:right;width=40%;">
 <br/>
 <div style="padding-left:10%;">**Optional Lesson Video**</div>
 <iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC9m8e_GQgx8fVfP55cI0L9z" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
+
+-->
+
 <br>
 
 ## Lesson Outcomes
 
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 By the end of this lesson, you should be able to:
 
-* Distinguish between a categorical and a quantitative variable.
+* State the five steps of the Statistical Process
 * Distinguish between an observational study and an experiment.
 * Distinguish between a population and a sample.
+* Distinguish between a categorical and a quantitative variable.
 * Distinguish and give an example of each of the following sampling schemes:
   + Simple random sampling
   + Systematic sampling
@@ -105,11 +111,15 @@ Before collecting data, researchers make a hypothesis, or an educated guess abou
 
 #### Daniel's Experiment
 
-After taking Israel captive, Babylon's King Nebuchadnezzar asked his chief officer to bring Israelite children who were well favoured, and skilful in all wisdom, and cunning in knowledge, and understanding science to stand in the king's palaces [(Daniel 1:4)](https://www.lds.org/scriptures/ot/dan/1.4?lang=eng#3){target="_blank"}.  To aid their preparation, Nebuchadnezzar planned to feed them his meat and wine for three years [(Daniel 1:5)](https://www.lds.org/scriptures/ot/dan/1.5?lang=eng#4){target="_blank"}.
+After taking Israel captive, Babylon's King Nebuchadnezzar asked his chief officer to bring Israelite children who were well favoured, and skilful in all wisdom, and cunning in knowledge, and understanding science to stand in the king's palaces [(Daniel 1:4)](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.4?lang=eng#3){target="_blank"}.  To aid their preparation, Nebuchadnezzar planned to feed them his meat and wine for three years [(Daniel 1:5)](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.5?lang=eng#4){target="_blank"}.
 
-Daniel did not want to defile himself by partaking of the king's meat and wine. He asked permission to eat pulse[^1] and drink water instead. His supervisor, Melzar, was afraid to displease the king. He thought that after eating pulse and water, the selected Israelites would look worse than their peers, and he would be punished [(Daniel 1:8-10)](https://www.lds.org/scriptures/ot/dan/1.8-10?lang=eng#3){target="_blank"}.
+Daniel did not want to defile himself by partaking of the king's meat and wine. He asked permission to eat pulse[^1] and drink water instead. His supervisor, Melzar, was afraid to displease the king. He thought that after eating pulse and water, the selected Israelites would look worse than their peers, and he would be punished [(Daniel 1:8-10)](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.8-10?lang=eng#3){target="_blank"}.
 
+<<<<<<< HEAD
 With an understanding of the background of the situation, Daniel proposed an experiment. He said, "Prove thy servants, I beseech thee, ten days; and let them give us pulse to eat, and water to drink. Then let our countenances be looked upon before thee, and the countenance of the children that eat of the portion of the king's meat: and as thou seest, deal with thy servants" [(Daniel 1:12-13.)](https://www.lds.org/scriptures/ot/dan/1.12-13?lang=eng#3){target="_blank"}.  In short, Daniel's implied research question can be stated as: Will those who eat pulse and drink water appear healthier than those who eat the king's meat and drink his wine? Melzar agreed to the experiment.
+=======
+With an understanding of the background of the situation, Daniel proposed an experiment. He said, Prove thy servants, I beseech thee, ten days; and let them give us pulse to eat, and water to drink. Then let our countenances be looked upon before thee, and the countenance of the children that eat of the portion of the king's meat: and as thou seest, deal with thy servants [(Daniel 1:12-13.)](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.12-13?lang=eng#3){target="_blank"}.  In short, Daniel's implied research question can be stated as: Will those who eat pulse and drink water appear healthier than those who eat the king's meat and drink his wine? Melzar agreed to the experiment.
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 <div class="QuestionsHeading">Answer the following question:</div>
 <div class="Questions">
@@ -143,7 +153,7 @@ Daniel's study design required that data be collected at the end of 10 days. Mel
 
 When we describe data, we use any tools appropriate to the situation. This can include creating graphs or calculating statistics to help understand or visualize the data.
 
-For Daniel's experiment, the data are described in [Daniel 1:15](https://www.lds.org/scriptures/ot/dan/1.15?lang=eng#3){target="_blank"}:  And at the end of ten days [the] countenances [of those who ate pulse] appeared fairer and fatter in flesh than all the children which did eat the portion of the king's meat.
+For Daniel's experiment, the data are described in [Daniel 1:15](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.15?lang=eng#3){target="_blank"}:  And at the end of ten days [the] countenances [of those who ate pulse] appeared fairer and fatter in flesh than all the children which did eat the portion of the king's meat.
 
 <br>
 
@@ -153,7 +163,7 @@ For Daniel's experiment, the data are described in [Daniel 1:15](https://www.lds
 
 Inference is the process of using the information contained in a sample from a population to make a general statement (i.e. to infer something) about the entire population. Later in the course we will learn techniques that make this type of analysis possible.
 
-Melzar made an inference. Based on the results of the sample, he determined that (in general) those who eat pulse and drink water will be healthier than those who eat the king's meat and drink his wine [Daniel 1:15-16](https://www.lds.org/scriptures/ot/dan/1.15-16?lang=eng#3){target="_blank"}.
+Melzar made an inference. Based on the results of the sample, he determined that (in general) those who eat pulse and drink water will be healthier than those who eat the king's meat and drink his wine [Daniel 1:15-16](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.15-16?lang=eng#3){target="_blank"}.
 
 <br>
 
@@ -163,11 +173,11 @@ Melzar made an inference. Based on the results of the sample, he determined that
 
 The goal of a statistical analysis is to determine which action to take in a particular situation. Actions can include many things: launching an internet ad campaign (or not), expressing gratitude (or not), getting vaccinated (or not), etc.
 
-Melzar took action as described in [Daniel 1:16](https://www.lds.org/scriptures/ot/dan/1.16?lang=eng#3){target="_blank"}:  Thus Melzar took away the portion of their meat, and the wine that they should drink; and gave [all the Israelite children] pulse.
+Melzar took action as described in [Daniel 1:16](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.16?lang=eng#3){target="_blank"}:  Thus Melzar took away the portion of their meat, and the wine that they should drink; and gave [all the Israelite children] pulse.
 
 Was the experiment a success?  
 
-"Now at the end of the days that the king had said he should bring them in the king communed with them; and among them all was found none like Daniel, Hananiah, Mishael, and Azariah And in all matters of wisdom and understanding, that the king enquired of them, he found them ten times better than all the magicians and astrologers that were in all his realm [Daniel 1:18-20](https://www.lds.org/scriptures/ot/dan/1.18-20?lang=eng#3){target="_blank"}.
+"Now at the end of the days that the king had said he should bring them in... the king communed with them; and among them all was found none like Daniel, Hananiah, Mishael, and Azariah And in all matters of wisdom and understanding, that the king enquired of them, he found them ten times better than all the magicians and astrologers that were in all his realm" [Daniel 1:18-20](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.18-20?lang=eng#3){target="_blank"}.
 
 <br>
 
@@ -222,7 +232,7 @@ Most research projects can be classified into one of two basic categories: obser
 
 ### Designed Experiments
 
-In a **designed experiment**, researchers manipulate the conditions that the participants experience. They often do this by randomly assigning subjects to one of two groups, a "treatment" group and a "control" group. The experiment is conducted by applying some kind of treatment to the subjects in the treatment group, and observing the effect of the treatment. Those in the control group do not receive the treatment and are also observed. In this way researchers can determine the effects of the treatment. The following example illustrates the use of these two groups.
+In a **designed experiment**, researchers manipulate the conditions that the participants experience. They often do this by randomly assigning subjects to one of two groups, a "treatment" group and a "control" group. The experiment is conducted by applying some kind of treatment to the subjects in the treatment group and observing the effect of the treatment. Those in the control group do not receive the treatment and are also observed. In this way researchers can determine the effects of the treatment. The following example illustrates the use of these two groups.
 
 **Jonas Salk's First Polio Vaccine Trial**
 
@@ -289,18 +299,12 @@ Because the children were assigned to the groups randomly, the two groups should
 </div>
 <br>
 
-The null and alternative hypotheses for this study are:
-
-$H_0$:  The proportion of children who develop polio will be the same for the treatment and control groups.
-
-$H_a$:  The proportion of children in the *treatment group* who develop polio will be *lower* than the proportion of children in the *control group* who develop polio.
-
 
 <img src="./Images/Step2.png" width="100px;">
 
 **Step 2: Collect data.**
 
-The researchers followed up with each child to determine if they contracted polio. They recorded the number of children in each group that developed polio during the study period. Not all of Salk's experiments were double-blind. Here is a summary of the results from the regions where a double-blind study was conducted (Francis et al., 1955; Brownlee, 1955 ):
+The researchers followed up with each child to determine if they contracted polio. They recorded the number of children in each group that developed polio during the study period. Not all of Salk's experiments were double-blind. Here is a summary of the results from the regions where a double-blind study was conducted (Francis et al., 1955; Brownlee, 1955):
 
 
 <table>
@@ -367,6 +371,7 @@ $$ \displaystyle{\frac{142}{201229} = 0.000~705~7} $$
 
 **Step 4: Make inferences**
 
+<<<<<<< HEAD
 Careful statistical analysis of the records suggested that this difference was so great that it was attributable to the vaccine and not to chance. Assuming that the vaccine had no effect, the probability that the difference in the proportions between the two groups would be at least as extreme as the difference Dr. Salk observed was very low: 0.00000000093. Because this probability is so small, it is highly unlikely that these results are due to chance. This probability is called the P-value, and it will be discussed in Unit 2.
 
 <div class="Emphasis">
@@ -375,6 +380,10 @@ For now it is only important to *be aware* of the P-value. In Unit 2 students wi
 </center>
 <br>
 </div>
+=======
+Careful statistical analysis of the records suggested that this difference was so great that it was attributable to the vaccine and not to chance. Assuming that the vaccine had no effect, the probability that the difference in the proportions between the two groups would be at least as extreme as the difference Dr. Salk observed was very low: 0.00000000093. Because this probability is so small, it is highly unlikely that these results are due to chance. 
+
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 <br>
 
 
@@ -416,29 +425,57 @@ Auditors typically cannot consider every item in a population, because there are
 
 **Step 2: Collect data**
 
-There are several procedures that can be used to select a random sample from a population, including: **simple random** sampling (SRS), **systematic** sampling, **cluster** sampling, **stratified** sampling, and **convenience** sampling (or, haphazard sampling). These are examples of **sampling methods**.
+There are several procedures that can be used to select a random sample from a population, including: **simple random** sampling (SRS), **stratified** sampling, **systematic** sampling, **cluster** sampling, , and **convenience** sampling (or, haphazard sampling). These are examples of **sampling methods**. 
 
+#### Random Sampling Methods
+
+A **simple random sample (SRS)** is the best method for obtaining a sample from a population. This method allows each possible sample of a certain size an equal chance at being selected as the chosen sample. A difficulty of this method is that a list of all of the items in the population must be accessible before the sample is taken. Often, we obtain a SRS by allowing a computer to randomly select a certain number of items from the full list of the population. It is akin to the idea of putting all of the names into a hat, shaking them up, and randomly drawing out a few.
+
+<div style="padding-left:30px;">
+For example, suppose there are 18,000 students in the population of a certain university. School officials can use a computer to randomly choose values between 1 and 18,000 to identify which students are to be selected to complete a survey. In Excel, the command to obtain a random number between 1 and 18,000 is =*RANDBETWEEN(1,18000)*. A simple random sample can be obtained any time there is a complete list of the items to be sampled and they are all accessible. All the statistical procedures in this course assume that simple random sampling has been used. But in practice, the SRS is often difficult (or impossible) to implement.
+</div>
+
+A **stratified sample** is when the items to be sampled are organized in groups of homogeneous (similar) items called strata, then a simple random sample is drawn from each of these strata. Stratified sampling works well when the items are similar within each stratum and tend to differ from one stratum to another. We often use stratified sampling in order to obtain a sample in such a way that we can make comparisons between each of the groups (or strata).
+
+<div style="padding-left:30px;">
+For example, in obtaining a sample of students from a university, school officials could define the strata as: (1) freshman, (2) sophomores, (3) juniors, and (4) seniors. A simple random sample could then be obtained from each of these strata. This would ensure that each class rank of students was represented in the sample. It would also allow the school officials to see how freshman, sophomore, junior, and senior level students compared in their answers to a survey.
+</div>
+
+<<<<<<< HEAD
 A **simple random sampling (SRS)** is the best method for obtaining a random sample. If there is a list of all items in the population and they are all accessible, a SRS can be collected. For example, suppose there are 2,000 accounts receivable items in the population. Auditors can use a random number generator to choose values between 1 and 2,000 to identify which items are to be audited. Software can be used to create a list of random numbers corresponding to items for the audit. In Excel, the command to obtain a random number between 1 and 2,000 is =*RANDBETWEEN(1,2000)*. Sometimes it is necessary for auditors to renumber the items (1 to 2000) to help create random sample. A simple random sample can be obtained any time there is a complete list of the items to be sampled and they are all accessible. All the statistical procedures in this course assume that simple random sampling has been used.
+=======
+A **systematic sample** is where every $k^{\text{th}}$ item in the population is selected to be part of the sample, beginning at a random starting point. Systematic sampling works well when the items are in a random, but sequential ordering. If the items are not arranged randomly, a systematic sample can miss important parts of the population.
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
-A **systematic sample** is where auditors select every $k^{\text{th}}$ item in the population, beginning at a random starting point. As an example, suppose there are 2,000 accounts receivable items to be audited, and the auditors want to get a sample of 40 items from this population. The auditors would sample every 2000/40 =50<sup>th</sup> item. The auditors will use a random starting point in the first 50 items. So, suppose a random number generator gave 41 as a random number between 1 and 50. The auditors select the 41st item. The next item chosen will be item number 41+50=91. After that, the auditors will choose item number 91+50=141, and so on. Systematic sampling works well when the items are in a random, sequential ordering. If the items are not arranged randomly, a systematic sample can miss important parts of the population.
+<div style="padding-left:30px;">
+For example, consider a fast food company where every 10th customer is given the opportunity to compete a satisfaction survey in exchange for a small discount coupon towards their next purchase. An airport security line also often implements a procedure where every 100th (or so) person is selected for a more "in depth" security examination. Similarly, factories that use assembly lines will pull say every 500th item from the assembly line to perform a quality control check on the item.
+</div>
 
-A **cluster sample** (sometimes called a *block sample*) consists of taking all items in one or more randomly selected clusters, or blocks. For example, all the accounts receivable items in a few randomly selected months (the blocks) could be sampled. When the variation from one block to another is relatively low, compared to the variation within the block, cluster sampling is a reasonable way to get a sample. However, in many cases, the number of blocks that must be sampled must be large in order to draw a reasonable audit conclusion. For this reason, a cluster sample is usually not recommended for audits.
+A **cluster sample** (sometimes called a *block sample*) consists of taking all items in one or more randomly selected clusters, or blocks. When the variation from one block to another is relatively low, compared to the variation within the block, cluster sampling is a reasonable way to get a sample.
 
-A **stratified sample** is when the items to be sampled are organized in groups of homogeneous (similar) items called strata, then a simple random sample is drawn from each of these strata. Stratified sampling works well when the items are similar within each stratum and tend to differ from one stratum to another. In an audit of accounts receivable items, auditors could define the strata as: (1) accounts under \$1,000, (2) accounts between \$1,000 and \$4,999, (3) accounts between \$5,000 and \$9,999, and (4) accounts of \$10,000 or more. A certain number of items could be randomly selected from each of these strata. Auditors may choose to include in their sample all items from some strata, such as very large accounts (\$10,000 or more), when there are few items in those strata.
+<div style="padding-left:30px;">
+For example, ecologists could draw grids on a map of a forest to create small sampling regions, or sampling clusters. Then, by randomly selecting one or two of these clusters from the map, the ecologists could go to the areas marked on the map and document information on the health of every tree they find in those clusters. This is a practical way to get a sample in this case because the ecologists only have to go to a few areas of the forest, but are still able to obtain a random sample of all of the trees in the forest. It is also worth noting that the ecologists would not be interesting in comparing the health of the trees from the selected clusters to each other like they would in a stratified sample. Instead, they are just looking for a feasible way to obtain a single random sample of all of the trees in the forest, but want to keep their traveling time to a minimum while collecting their sample. In contrast, to obtain a simple random sample of trees from the same forest, the ecologists would first have to go out and number every tree in the entire forest. Then they would need to use a computer to randomly pick which trees to collect data on. Finally, they would then have to go back to the forest and collect data on the selected trees from across the entire forest. Such an approach just isn't feasible in practice, so we are willing to settle instead for the cluster sample.
+</div>
 
-A **convenience sample** involves selecting items that are relatively easy to obtain and does not use random selection to choose the sample. Even though the sample is chosen by convenience, it should be done without introducing any systematic bias if possible. As an example of a convenience sample, an auditor could haphazardly select items from a filing cabinet. This is frequently done when a quick and simple sample is needed, but may not yield a sample that represents the population well. When possible, convenience samples **should be avoided.**
+A **convenience sample** involves selecting items that are relatively easy to obtain and does not use random selection to choose the sample. This method of sampling can be assumed to always bring bias into the sample.  
+
+<div style="padding-left:30px;">
+As an example of a convenience sample, an auditor could haphazardly select items from a filing cabinet. This is frequently done when a quick and simple sample is needed, but may not yield a sample that represents the population well. When possible, convenience samples **should be avoided.** 
+</div>
 
 <br>
 
 ### Types of Variables
 
-Auditors meticulously record information on every item audited, thus generating data. There are two basic types of data: quantitative and categorical. 
+Whenever we collect data, we record information about the things we are studying. There are two basic types of data that can be recorded: quantitative measurements and categorical labels. We will call these types of data simply "quantitative" or "categorical" variables. We use the word "variable" to denote the idea that the quantitative measurements or categorical labels can vary from person to person, or item to item, in our study.
 
-**Quantitative variables** provide numerical information. They represent things that are numeric in nature; things that are measured. For a quantitative variable, it makes sense to apply arithmetic operations to the data (such as adding one to a value, doubling a value, or comparing two values). The net worth of a company or the number of people it employs are both examples of quantitative variables: If one company is worth \$1,000,000 and a second company is worth \$2,000,000 then the second company really is worth twice the value of the first.
+**Quantitative variables** provide measurement information on each individual (or item) in our study. They represent things that are numeric in nature; things that are measured. They often include units of measurement along with the quantitative value of the measurement. For example, the heights of children measured in inches (or centimeters), or their weight measured in pounds (or kilograms). For a quantitative variable, it makes sense to apply arithmetic operations to the data (such as adding values together, computing the  average of the values, or comparing two values). If one child weighs 30 pounds (13.61 kg) and a second child weights 60 pounds (27.22) then the second child is twice as heavy as the first.
 
-**Categorical variables** yield data that can only be considered as categories. Categorical variables are labels, and it does not make sense to do arithmetic with them. The following are examples of categorical variables: gender, nationality, job title, telephone number, etc. Even though a telephone number is made of digits, it does not make sense to double someone's phone number, to add one to their number, or to say one phone number is smaller than another. In Unit 3 we will learn more about Categorical variables and proportions.
+**Categorical variables** allow us to place each individual (or item) into to a specific category. Categorical variables are labels, and it does not make sense to do arithmetic with them. For example the gender of a newborn child, the ethnicity of an individual, a person's job title, the brand of phone they own, or the area code of a telephone number, etc are all categorical variables. Notice that although a telephone number consists of numbers, it is not a quantitative measurement. It does not make sense to double someone's phone number, to average phone numbers together, or to say one phone number is half the size of another. But the area code of the phone number gives information about the region where the phone number was first initiated, which is categorical information. 
 
-The sample accounts receivable record has information on both types of variables.
+In Unit 3 of this course we will learn more about categorical variables and proportions. Units 1 and 2 of this course focus on studying quantitative variables.
+
+Returning to the sample accounts receivable record, we find this data to have information on both types of variables.
 
 <div class="QuestionsHeading">Answer the following question:</div>
 <div class="Questions">
@@ -481,7 +518,7 @@ c. Invoice amount
 
 **Step 3: Describe the data**
 
-After auditors collect a sample and compile the data, they review the evidence. Auditors may use graphs or compute numbers (such as the mean) to summarize the evidence they found.
+After auditors collect a sample and compile the data, they review the evidence. Auditors may use graphs or compute numbers (such as the average) to summarize the evidence they found.
 
 
 <img src="./Images/Step4.png" width="100px;">
@@ -492,6 +529,7 @@ After auditors collect a sample and compile the data, they review the evidence. 
 
 **Step 4: Make inferences**
 
+<<<<<<< HEAD
 Auditors use the information drawn from the sample to form an opinion about the population. Whenever sample data is used to infer a characteristic of a population, it is called making an inference. **Inferential statistics** represents a collection of methods that can be used to make inferences about a population. Based on the documents reviewed, the auditors assess if the company is conducting its business in a proper manner.
 
 When conducting an audit, the implicit assumption is that transactions have been posted properly. This foundational assumption is called the null hypothesis. The **null hypothesis** is a statement about the population that represents the status quo, conventional wisdom, or what is generally accepted as true. In the audit we're considering, the null hypothesis is
@@ -503,7 +541,11 @@ Auditors sample the company's records to collect evidence against the null hypot
 $H_a$:  ImmunAvance's financial statements are not materially correct.
 
 Notice that both the null and alternative hypotheses are statements about the state of *all* of ImmunAvance's financial documents, not just the documents included in the sample.
+=======
+Auditors use the information drawn from the sample to form an opinion about the population. Whenever sample data is used to infer a characteristic of a population, it is called making an inference. **Inferential statistics** represents a collection of methods that can be used to make inference about a population. Based on the documents reviewed, the auditors assess if the company is conducting its business in a proper manner.
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
+When conducting an audit, the implicit assumption is that transactions have been posted properly. As auditors sample the company's records, they are looking to see if everything is consistent with the original assumption that all transactions have been posted properly. It would only be in the case of discovering suspicious activity or evidence of fraudulent reporting that the auditors would change their belief about the company and accuse the company ImmunAvance of falsely reporting on their financial statements.
 
 <center>
 "Piled Higher and Deeper" by Jorge Cham
@@ -511,23 +553,10 @@ Notice that both the null and alternative hypotheses are statements about the st
 <img src="./Images/Phd121911s.png">
 </center>
 
-There is a formal procedure for testing the null and alternative hypotheses, called a **hypothesis test**. In a hypothesis test, the null hypothesis is always assumed to be true. If there is sufficient evidence against the null hypothesis, it is rejected. The evidence against the null hypothesis is assessed using a number called the $P$-value. The **P-value** is the probability of obtaining a result (called a test statistic) at least as extreme as the one you calculated, assuming the null hypothesis is true. We reject the null hypothesis if the $P$-value is small, say less than 0.05. If we assume the company's financial statements are materially correct, the $P$-value is the probability of observing errors with a total value that is as large or larger than that which was observed in the audit.
+There is a formal procedure for determining when *enough* evidence has been found to make accusations of fraud. Later this semester, after we establish some foundational principles of statistics, we will study these statistical methods in depth. Of course, these methods can be used for much more than just determining if a company has reported their financial statements fraudulently. So we will look at many different ways these statistical procedures can be applied to research and industry.
 
-For ImmunAvance's audit, the $P$-value was determined to be 0.79. Assuming the null hypothesis is true, the probability of observing inconsistencies that are at least as great as those observed in the audit was 0.79. This is a very large value. So, it is not surprising to have observed the total number of the errors in this case. The probability that these differences could occur due to chance is very high. The conclusion is that the null hypothesis should not be rejected.
+For ImmunAvance's audit, based on the samples of financial statements that had been selected, while there were a few errors in the documents, there was not evidence dramatic enough to claim that the company had been fraudulent. So the company passed their audit.
 
-If the $P$-value is low, the null hypothesis is rejected. If this probability is large, the null hypothesis is not rejected.
-
-Hypothesis tests sometimes lead accidentally to incorrect conclusions because we use data from samples (as opposed to data from entire populations). When random samples are selected, some of the samples will contain disproportionately few or many documents with errors, just by chance.
-
-Think about drawing marbles from a container in which most of the marbles are white and a few are red. Each marble represents a document, and the red marbles represent documents with errors.
-
-If you choose a random sample of the marbles in the jar, you might get all the red marbles in your sample, just by chance. This might lead you to conclude that there are many red marbles in the container, which is false. This is like an auditor rejecting the null hypothesis when it is true, because their sample contains more documents with errors than it should---just due to chance.
-
-Likewise, when drawing marbles from your container, you might select none of the red marbles. This may lead you to conclude that there are no red marbles in the container, or very few, which is false. This is like an auditor failing to reject the null hypothesis when it is false, because their sample contains fewer documents with errors than it should---again, just due to chance.
-
-Notice that if you draw only one marble, it will be either white or red, and you will be in one of the situations discussed in the previous two paragraphs. On the other hand, if you draw a larger sample, say 40, the chances are you will get a pretty good idea of the proportion of red to white marbles. Certainly better than if you only draw one marble. This emphasizes the roll of sample size in making inference; in general, the larger the sample size the better we understand the population.
-
-Such errors are no one's fault; they are an inherent part of hypothesis testing. They make it impossible for us to be certain of the conclusions we draw using the statistical process. The thing to remember is that if we carry out the process correctly, our results are correct often enough to be very useful.
 
 <img src="./Images/Step5.png" width="100px;">
 
@@ -535,7 +564,7 @@ Such errors are no one's fault; they are an inherent part of hypothesis testing.
 
 The auditors prepare a report in which they give their opinion on the status of the company's current operations.
 
-There is not enough evidence to suggest that ImmunAvance's financial statements are not materially correct. The auditor's conclusion is that no adjustment is necessary, since the observed discrepancies could be attributed to chance.
+Since there was not enough evidence to suggest that ImmunAvance's financial statements were fraudulent, the auditor's conclusion is that no adjustment is necessary. The few observed discrepancies were apparently just the result of random chance errors, not the deliberate falsefying of information.
 
 <br>
 
@@ -557,20 +586,19 @@ There is not enough evidence to suggest that ImmunAvance's financial statements 
 
 - **Quantitative variables** represent things that are numeric in nature, such as the value of a car or the number of students in a classroom. **Categorical variables** represent non-numerical data that can only be considered as labels, such as colors or brands of shoes.
 
-- The **null hypothesis ($H_0$)** is the foundational assumption about a population and represents the status quo. The **alternative hypothesis ($H_a$)** is a different assumption about a population. Using a **hypothesis test**, we determine whether it is more likely that the null hypothesis or the alternative hypothesis is true.
 </div>
 <br>
 
 
 ## References
 
-Bible Dictionary, “Pulse” at [http://lds.org/scriptures/bd/pulse](http://lds.org/scriptures/bd/pulse){target="_blank"}.
+Bible Dictionary, “Pulse” at [http://churchofjesuschrist.org/scriptures/bd/pulse](http://churchofjesuschrist.org/scriptures/bd/pulse){target="_blank"}.
 
 Brownlee, K. A. (1955). Statistics of the 1954 polio vaccine trials. Journal of the American Statistical Association, 50(272), pp. 1005-1013.
 
 Francis, T., et. al. (1955). An evaluation of the 1954 poliomyletis vaccine trials. American Journal of Public Health and the Nation's Health, 45(5)
 
-Offit, P. A. (2005). Why are pharmaceutical companies gradually abandoning vaccines? Health Affairs, 24(3), 622-630. doi:10.1377/hlthaff.24.3.622
+Offit, P. A. (2005). Why are pharmaceutical companies gradually abandoning vaccines? Health Affairs, 24(3), 622-630. [doi:10.1377/hlthaff.24.3.622](https://www.healthaffairs.org/doi/full/10.1377/hlthaff.24.3.622)
 
 <br>
 
@@ -591,7 +619,7 @@ Offit, P. A. (2005). Why are pharmaceutical companies gradually abandoning vacci
 <center>
 | **Previous Reading** | **This Reading** | **Next Reading** |
 | :------------------: | :--------------: | :--------------: |
-| [Lesson 01: <br> Course Introduction](Lesson01.html) | Lesson 02: <br> The Statistical Process & Design of Studies | [Lesson 03: <br> Describing Quantitative Data: Shape, Center & Spread](Lesson03.html) |
+| [Lesson 1: <br> Course Intro & Probability](Lesson01.html) | Lesson 2: <br> The Statistical Process & Design of Studies | [Lesson 3: Describing Quantitative Data (Shape & Center)](Lesson03.html) |
 </center>
 
-[^1]: [lds.org definition of pulse](http://www.lds.org/scriptures/bd/pulse?lang=eng&query=pulse){target="_blank"}
+[^1]: [churchofjesuschrist.org definition of pulse](http://www.churchofjesuschrist.org/scriptures/bd/pulse?lang=eng&query=pulse){target="_blank"}

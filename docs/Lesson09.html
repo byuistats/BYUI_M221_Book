@@ -283,19 +283,19 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
     </li>
     <li>
-      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
+      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
     </li>
     <li>
-      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data (Shape &amp; Center)</a>
     </li>
     <li>
-      <a href="Lesson04.html">Lesson 4: Rules of Probability</a>
+      <a href="Lesson04.html">Lesson 4: Describing Quantitative Data (Spread)</a>
     </li>
     <li>
       <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
@@ -389,7 +389,11 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
+<<<<<<< HEAD
   <a href="https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
+=======
+  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -456,7 +460,7 @@ $(document).ready(function () {
 <p><br></p>
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 <p>By the end of this lesson, you should be able to:</p>
 <ul>
@@ -626,7 +630,7 @@ $(document).ready(function () {
 </center> 
 -->
 <p><img src="Images/Step3.png"></p>
-<p>To help us understand the the data, we first create a graph summarizing the values.</p>
+<p>To help us understand the data, we first create a graph summarizing the values.</p>
 <center>
 <strong>Weights of Passengers and Crew on the Ethan Allen</strong><br> <img src="Images/EthanAllen-PassengerWeights-Histogram.png">
 </center>
@@ -638,7 +642,11 @@ $(document).ready(function () {
 <p>To find the <span class="math inline">\(P\)</span>-value, we first calculate the number of standard deviations that <span class="math inline">\(\bar{x}\)</span> is away from the assumed value of true mean <span class="math inline">\(\mu=140\)</span> pounds. This is our <span class="math inline">\(z\)</span>-score. Then we use the applet to determine the probability of observing a value of <span class="math inline">\(z\)</span> that is as large or larger than the value we observed.</p>
 <p><span class="math display">\[\displaystyle{ z= \frac{ \bar{x} − \mu}{\sigma/\sqrt{n}} = \frac{177.6−140}{26.7/\sqrt{48}}=9.757 }\]</span></p>
 <p>We use the applet to determine the probability of observing a value of <span class="math inline">\(z\)</span> that is as large or larger than <span class="math inline">\(9.757\)</span>. This is the same as the probability of observing a value of <span class="math inline">\(\bar{x} =177.6\)</span> or more pounds, given that the true mean really is <span class="math inline">\(\mu = 140\)</span> pounds.</p>
+<<<<<<< HEAD
 <p>The area to the right of <span class="math inline">\(z=9.757\)</span> is so small, the normal probability applet gives the area as “8.6086e-23.” This is how a computer represents scientific notation. This number is actually <span class="math inline">\(8.6086\times 10^{-23}\)</span> or in other words, 0.000 000 000 000 000 000 000 086 086. This is the probability that a mean of <span class="math inline">\(\bar{x}=177.6\)</span> pounds was observed just by chance assuming the true mean is <span class="math inline">\(\mu = 140\)</span> lbs. This is very, very unlikely. A more plausible explanation is that the mean weight of individuals in the population is greater than 140 pounds.</p>
+=======
+<p>The area to the right of <span class="math inline">\(z=9.757\)</span> is so small, the normal probability applet gives the area as “8.6086e-23.” This is how a computer represents scientific notation. This number is actually <span class="math inline">\(8.6086ex10^{-23}\)</span> or in other words, 0.000 000 000 000 000 000 000 086 086. This is the probability that a mean of <span class="math inline">\(\bar x=177.6\)</span> pounds or greater was observed just by chance assuming the true mean is <span class="math inline">\(\mu = 140\)</span> lbs. This is very, very unlikely. A more plausible explanation is that the true mean weight <span class="math inline">\(\mu\)</span> of individuals in the population is greater than 140 pounds.</p>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 <p>Based on this analysis and the hypothesis test, the evidence against <span class="math inline">\(H_0\)</span> is strong enough to conclude that if every seat on the Ethan Allen was occupied, that the boat would be carrying a greater load than it was certified to handle.</p>
 <p><img src="Images/Step5.png"></p>
 <p>As a result of this accident, the United States government took several actions. The Coast Guard stability regulations were changed, and the assumed average weight per person was increased to 185 pounds. <!-- [[CITE: http://www.uscg.mil/hq/cg5/cg5212/docs/secg12142010.pdf]]--> As a result, the safety of public vessels has been improved. <!--
@@ -677,7 +685,7 @@ Answer the following question:
 </div>
 <div id="data-on-body-temperatures" class="section level3">
 <h3>Data on Body Temperatures</h3>
-<p>A group of researchers led by Philip A. Mackowiak, MD, conducted a study to assess the true mean body temperatures of healthy adults.<!-- \cite{Mackowiak92}--> They selected <span class="math inline">\(n=148\)</span> subjects between the ages of 18 and 40 years old, representative of the general population. Each volunteer was given a physical to assure that they were not ill at the time of the data collection. Their axillary body temperature was measured and reported in a paper published in the “Journal of the American Medical Association”. <!-- \cite{Mackowiak92}--> These data were extracted and are presented in the file <a href="./Data/BodyTemp.xlsx">BodyTemp</a>. The body temperatures in the file are given in degrees Fahrenheit.</p>
+<p>A group of researchers led by Philip A. Mackowiak, MD, conducted a study to assess the true mean body temperatures of healthy adults.<!-- \cite{Mackowiak92}--> They selected <span class="math inline">\(n=148\)</span> subjects between the ages of 18 and 40 years old, representative of the general population. Each volunteer was given a physical to assure that they were not ill at the time of the data collection. Their axillary body temperature was measured and reported in a paper published in the “Journal of the American Medical Association”. <!-- \cite{Mackowiak92}--> These data were extracted and are presented in the file <a href="./Data/BodyTemp.xlsx">BodyTemp</a>. The body temperatures in the file are given in degrees Fahrenheit. Based on historical data, the standard deviation of body temperatures is assumed to be <span class="math inline">\(\sigma = 0.675\)</span>° F.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
@@ -707,7 +715,7 @@ Answer the following questions:
 </ol>
 <a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q4" style="display:none;">
-<p><img src="Images/BodyTemp-Hist-Excel.png"></p>
+<p><img src="Images/BodyTemp-Hist-Excel_v2.png"></p>
 </div>
 <p><br></p>
 <ol start="5" style="list-style-type: decimal">
@@ -761,7 +769,7 @@ Answer the following questions:
 </div>
 <p><br></p>
 <ol start="10" style="list-style-type: decimal">
-<li>Assuming the mean body temperature really is 98.6° F, how likely would it be for a random sample of <span class="math inline">\(n=148\)</span> people in the population to have a mean body temperature that is a extreme as was observed in Question 3?</li>
+<li>Assuming the mean body temperature really is 98.6° F, how likely would it be for a random sample of <span class="math inline">\(n=148\)</span> people in the population to have a mean body temperature that is as extreme as was observed in Question 3?</li>
 </ol>
 <a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q10" style="display:none;">
@@ -1072,8 +1080,12 @@ Some students find it helpful to remember the decision rule using the couplet: <
 <!-- </center> -->
 <p>We do not want to commit Type I errors, so why not choose a very small value for <span class="math inline">\(\alpha\)</span>? If we choose <span class="math inline">\(\alpha\)</span> to be so small that we rarely commit a Type I error, what would happen to the probability of committing a Type II error? (Think about it.)</p>
 <p>If the <span class="math inline">\(\alpha\)</span> value (the probability of committing a Type I error) is very small, the probability of committing a Type II error will be large. Conversely, if <span class="math inline">\(\alpha\)</span> is allowed to be very large, then the probability of committing a Type II error will be very small. A level of significance of <span class="math inline">\(\alpha=0.05\)</span> seems to strike a good balance between the probabilities of committing a Type I versus a Type II error. However, there may be instances where it will be important to choose a different value for <span class="math inline">\(\alpha\)</span>. The important thing is to choose <span class="math inline">\(\alpha\)</span> before you collect your data. Typical choices of <span class="math inline">\(\alpha\)</span> are <span class="math inline">\(0.05\)</span> (most common), <span class="math inline">\(0.1\)</span>, and <span class="math inline">\(0.01\)</span>.</p>
+<<<<<<< HEAD
 <div id="read-each-of-the-following-scenarios-and-answer-the-questions." class="section level4">
 <h4>Read each of the following scenarios, and answer the questions.</h4>
+=======
+<p>Read each of the following scenarios and answer the questions.</p>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 <p><strong>Scenario 1</strong>: The BYU-Idaho Honor Code specifically prohibits wearing flip-flops on campus.<br />
 A student is seen on campus wearing shoes that look somewhat like flip-flops.<br />
 Consider the following null and alternative hypotheses: <span class="math display">\[
@@ -1254,7 +1266,7 @@ n = 148
 <p><strong>Verify the requirements have been met</strong></p>
 <ul>
 <li>We assume that the individuals chosen to participate in the study represent a (simple) random sample from the population.</li>
-<li><span class="math inline">\(\bar{x}\)</span> will be normally distributed, because the sample size is large. (Note: We could have also noticed that the body temperature data appears to be normally distributed, so even with a small sample size, <span class="math inline">\(\bar{x}\)</span> would be normal.)</li>
+<li><span class="math inline">\(\bar{x}\)</span> will be normally distributed because the sample size is large. (Note: We could have also noticed that the body temperature data appears to be normally distributed, so even with a small sample size, <span class="math inline">\(\bar{x}\)</span> would be normal.)</li>
 </ul>
 <p><strong>Give the test statistic and its value</strong></p>
 <p><span class="math display">\[z=-6.669\]</span></p>
@@ -1517,27 +1529,27 @@ H_a:&amp;~~\mu &lt; 42
 34
 -->
 <p><img src="Images/Step3.png"></p>
-<ol start="4" style="list-style-type: decimal">
-<li>Give the relevant summary statistics</li>
-</ol>
-<ul>
-<li>The mean age of the subjects was <span class="math inline">\(\bar{x} = 35.32\)</span>. There were <span class="math inline">\(n = 25\)</span> people included in the sample.</li>
-</ul>
 <ol start="5" style="list-style-type: decimal">
 <li>Make an appropriate graph to illustrate the data</li>
 </ol>
 <ul>
-<li>A histogram showed that the mean age of the online customers may be less than <span class="math inline">\(42\)</span> years.</li>
+<li>A boxplot shows the mean age of the online customers (represented by the x on the graph) and the median both appear to be between 30 and 40, less than <span class="math inline">\(42\)</span> years.</li>
 </ul>
-<p><img src="Images/NYtimes-Hist-Excel.png"></p>
+<p><img src="Images/NYtimes-BoxplotExcel.png" width=80%></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Give the relevant summary statistics</li>
+</ol>
+<ul>
+<li>The mean age of the sampled subjects was <span class="math inline">\(\bar{x} = 35.32\)</span>. There were <span class="math inline">\(n = 25\)</span> people included in the sample.</li>
+</ul>
 <p><img src="Images/Step4.png"></p>
 <ol start="6" style="list-style-type: decimal">
 <li>Verify the requirements have been met</li>
 </ol>
 <ul>
-<li>The data represent a simple random sample form the population. Based on a Q-Q plot, it is reasonable to conclude that the ages are approximately normally distributed.</li>
+<li>The data represent a simple random sample from the population. A look at the histogram (not shown) would reveal that the data is not perfectly normal. However, the sample data is approximately normal. In other words, it is close enough to a normal shape to meet the requirement.</li>
 </ul>
-<p><img src="Images/NYtimes-QQ-Excel.png"></p>
+<!-- <img src="Images/NYtimes-QQ-Excel.png"> -->
 <ol start="7" style="list-style-type: decimal">
 <li>Give the test statistic and its value</li>
 </ol>
@@ -1608,17 +1620,16 @@ H_a:&amp;~~\mu &gt; 3.15
 <ol start="5" style="list-style-type: decimal">
 <li>Make an appropriate graph to illustrate the data</li>
 </ol>
+<p>The histogram shows that the data are left-skewed. That is, many of the sampled students have fairly high GPAs, but a few are very low.</p>
 <p><img src="Images/EarlyRisersGPA-Hist-Excel.png"></p>
 <p><img src="Images/Step4.png"></p>
 <ol start="6" style="list-style-type: decimal">
 <li>Verify the requirements have been met</li>
 </ol>
+<!-- * Here is a Q-Q plot of the GPA data. -->
+<!-- <img src="Images/EarlyRisersGPA-QQ-Excel.png"> -->
 <ul>
-<li>Here is a Q-Q plot of the GPA data.</li>
-</ul>
-<p><img src="Images/EarlyRisersGPA-QQ-Excel.png"></p>
-<ul>
-<li>A simple random sample of <span class="math inline">\(n = 378\)</span> early-rising students at BYU-Idaho was collected. Both the histogram and the Q-Q plot suggest that the data are left-skewed. That is, many of the students have fairly high GPAs, but a few are very low. It is reasonable to conclude that the mean of the GPAs are approximately normally distributed, since the sample size is large, even though the GPA data are left-skewed.</li>
+<li>A simple random sample of <span class="math inline">\(n = 378\)</span> early-rising students at BYU-Idaho was collected. It is reasonable to conclude that the mean of the GPAs are approximately normally distributed, since the sample size is large, even though the GPA data are left-skewed.</li>
 </ul>
 <ol start="7" style="list-style-type: decimal">
 <li>Give the test statistic and its value</li>
@@ -1691,7 +1702,7 @@ Answer the following question:
 <p> </p>
 </div>
 <p><br></p>
-<p>In science, we make a hypothesis (or a statement or claim) and then we gather evidence “against” that requirement. If we cannot reject the hypothesis, In the mathematical example above, we started with an requirement and did not find sufficient evidence against that requirement. In the end, we arrived at no contradiction at all: <span class="math inline">\(1=1\)</span>. This did not mean that our original claim that <span class="math inline">\(1=2\)</span> was true; it only meant that we had not yet disproved it. We could not reject the original claim.</p>
+<p>In science, we make a hypothesis (or a statement or claim) and then we gather evidence “against” that requirement. If we cannot reject the hypothesis, in the mathematical example above, we started with a requirement and did not find sufficient evidence against that requirement. In the end, we arrived at no contradiction at all: <span class="math inline">\(1=1\)</span>. This did not mean that our original claim that <span class="math inline">\(1=2\)</span> was true; it only meant that we had not yet disproved it. We could not reject the original claim.</p>
 <p>We have to be careful when conducting hypothesis tests. When we conduct a test, we assume the null hypothesis is true. This provides a distribution for the test statistic, and allows us to calculate the <span class="math inline">\(P\)</span>-value. If we find that the <span class="math inline">\(P\)</span>-value is large, that means that we did not find a contradiction in our requirement that the null hypothesis is true. That does not mean that the null hypothesis is true, it only means that we cannot reject it. For this reason, we never say we “accept the null hypothesis.” When the <span class="math inline">\(P\)</span>-value is large, we say that we “fail to reject the null hypothesis.”</p>
 </div>
 <div id="testimonies-and-hypothesis-tests" class="section level3">
@@ -1779,7 +1790,7 @@ Remember…
 
 <br />
 <hr />
-<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+<p>Copyright &copy; 2020 Brigham Young University-Idaho. All rights reserved.</p>
 
 
 

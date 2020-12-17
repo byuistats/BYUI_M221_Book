@@ -23,7 +23,7 @@ output:
 
 ## Lesson Outcomes
 
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 
 By the end of this lesson, you should be able to:
@@ -196,7 +196,7 @@ pander(matrix(data = w, nrow = 6, ncol=8, byrow=TRUE))
 
 <img src="./Images/Step3.png">
 
-To help us understand the the data, we first create a graph summarizing the values.
+To help us understand the data, we first create a graph summarizing the values.
 
 <center>
 **Weights of Passengers and Crew on the Ethan Allen**<br>
@@ -220,7 +220,11 @@ $$\displaystyle{ z= \frac{ \bar{x} − \mu}{\sigma/\sqrt{n}} = \frac{177.6−140
 
 We use the applet to determine the probability of observing a value of $z$ that is as large or larger than $9.757$.  This is the same as the probability of observing a value of $\bar{x} =177.6$ or more pounds, given that the true mean really is $\mu = 140$ pounds.
 
+<<<<<<< HEAD
 The area to the right of $z=9.757$ is so small, the normal probability applet gives the area as "8.6086e-23."  This is how a computer represents scientific notation.  This number is actually $8.6086\times 10^{-23}$ or in other words, 0.000 000 000 000 000 000 000 086 086. This is the probability that a mean of $\bar{x}=177.6$ pounds was observed just by chance assuming the true mean is $\mu = 140$ lbs.  This is very, very unlikely.  A more plausible explanation is that the mean weight of individuals in the population is greater than 140 pounds.
+=======
+The area to the right of $z=9.757$ is so small, the normal probability applet gives the area as "8.6086e-23."  This is how a computer represents scientific notation.  This number is actually $8.6086ex10^{-23}$ or in other words, 0.000 000 000 000 000 000 000 086 086. This is the probability that a mean of $\bar x=177.6$ pounds or greater was observed just by chance assuming the true mean is $\mu = 140$ lbs.  This is very, very unlikely.  A more plausible explanation is that the true mean weight $\mu$ of individuals in the population is greater than 140 pounds.
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 Based on this analysis and the hypothesis test, the evidence against $H_0$ is strong enough to conclude that if every seat on the Ethan Allen was occupied, that the boat would be carrying a greater load than it was certified to handle.
 
@@ -263,7 +267,7 @@ Based on his research, Wunderlich stated, "The axillary temperature of 98.6&deg;
 
 ### Data on Body Temperatures
 
-A group of researchers led by Philip A. Mackowiak, MD, conducted a study to assess the true mean body temperatures of healthy adults.<!-- \cite{Mackowiak92}-->  They selected $n=148$ subjects between the ages of 18 and 40 years old, representative of the general population.  Each volunteer was given a physical to assure that they were not ill at the time of the data collection.  Their axillary body temperature was measured and reported in a paper published in the "Journal of the American Medical Association". <!-- \cite{Mackowiak92}--> These data were extracted and are presented in the file [BodyTemp](./Data/BodyTemp.xlsx).  The body temperatures in the file are given in degrees Fahrenheit.
+A group of researchers led by Philip A. Mackowiak, MD, conducted a study to assess the true mean body temperatures of healthy adults.<!-- \cite{Mackowiak92}-->  They selected $n=148$ subjects between the ages of 18 and 40 years old, representative of the general population.  Each volunteer was given a physical to assure that they were not ill at the time of the data collection.  Their axillary body temperature was measured and reported in a paper published in the "Journal of the American Medical Association". <!-- \cite{Mackowiak92}--> These data were extracted and are presented in the file [BodyTemp](./Data/BodyTemp.xlsx).  The body temperatures in the file are given in degrees Fahrenheit. Based on historical data, the standard deviation of body temperatures is assumed to be $\sigma = 0.675$&deg; F.
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
@@ -287,7 +291,7 @@ A group of researchers led by Philip A. Mackowiak, MD, conducted a study to asse
 
 <a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q4" style="display:none;">
-<img src="./Images/BodyTemp-Hist-Excel.png">
+<img src="./Images/BodyTemp-Hist-Excel_v2.png">
 </div>
 <br>
 
@@ -331,7 +335,7 @@ A group of researchers led by Philip A. Mackowiak, MD, conducted a study to asse
 </div>
 <br>
 
-10. Assuming the mean body temperature really is 98.6&deg; F, how likely would it be for a random sample of $n=148$ people in the population to have a mean body temperature that is a extreme as was observed in Question 3?
+10. Assuming the mean body temperature really is 98.6&deg; F, how likely would it be for a random sample of $n=148$ people in the population to have a mean body temperature that is as extreme as was observed in Question 3?
 
 <a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q10" style="display:none;">
@@ -626,7 +630,11 @@ We do not want to commit Type I errors, so why not choose a very small value for
 If the $\alpha$ value (the probability of committing a Type I error) is very small, the probability of committing a Type II error will be large.  Conversely, if $\alpha$ is allowed to be very large, then the probability of committing a Type II error will be very small.
 A level of significance of $\alpha=0.05$ seems to strike a good balance between the probabilities of committing a Type I versus a Type II error.  However, there may be instances where it will be important to choose a different value for $\alpha$.  The important thing is to choose $\alpha$ before you collect your data. Typical choices of $\alpha$ are $0.05$ (most common), $0.1$, and $0.01$.
 
+<<<<<<< HEAD
 #### Read each of the following scenarios, and answer the questions.
+=======
+Read each of the following scenarios and answer the questions.
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 **Scenario 1**:
 The BYU-Idaho Honor Code specifically prohibits wearing flip-flops on campus.  
@@ -813,7 +821,7 @@ $$
 **Verify the requirements have been met**
 
 - We assume that the individuals chosen to participate in the study represent a (simple) random sample from the population.
-- $\bar{x}$ will be normally distributed, because the sample size is large.  (Note: We could have also noticed that the body temperature data appears to be normally distributed, so even with a small sample size, $\bar{x}$ would be normal.)
+- $\bar{x}$ will be normally distributed because the sample size is large.  (Note: We could have also noticed that the body temperature data appears to be normally distributed, so even with a small sample size, $\bar{x}$ would be normal.)
 
 **Give the test statistic and its value**
 
@@ -1106,25 +1114,24 @@ $$ \alpha = 0.05 $$
 
 <img src="./Images/Step3.png">
 
-4. Give the relevant summary statistics
-
-* The mean age of the subjects was $\bar{x} = 35.32$. There were $n = 25$ people included in the sample. 
-
-
 5. Make an appropriate graph to illustrate the data
 
-* A histogram showed that the mean age of the online customers may be less than $42$ years. 
+* A boxplot shows the mean age of the online customers (represented by the x on the graph) and the median both appear to be between 30 and 40, less than $42$ years. 
 
-<img src="./Images/NYtimes-Hist-Excel.png">
+<img src="./Images/NYtimes-BoxplotExcel.png" width=80%>
 
+
+4. Give the relevant summary statistics
+
+* The mean age of the sampled subjects was $\bar{x} = 35.32$. There were $n = 25$ people included in the sample. 
 
 <img src="./Images/Step4.png">
 
 6. Verify the requirements have been met
 
-* The data represent a simple random sample form the population.  Based on a Q-Q plot, it is reasonable to conclude that the ages are approximately normally distributed.
+* The data represent a simple random sample from the population.  A look at the histogram (not shown) would reveal that the data is not perfectly normal. However, the sample data is approximately normal. In other words, it is close enough to a normal shape to meet the requirement.
 
-<img src="./Images/NYtimes-QQ-Excel.png">
+<!-- <img src="./Images/NYtimes-QQ-Excel.png"> -->
 
 7. Give the test statistic and its value 
 
@@ -1207,6 +1214,8 @@ $$\alpha = 0.05$$
 
 5. Make an appropriate graph to illustrate the data
 
+The histogram shows that the data are left-skewed. That is, many of the sampled students have fairly high GPAs, but a few are very low. 
+
 <img src="./Images/EarlyRisersGPA-Hist-Excel.png">
 
 
@@ -1214,11 +1223,11 @@ $$\alpha = 0.05$$
 
 6. Verify the requirements have been met
 
-* Here is a Q-Q plot of the GPA data.
+<!-- * Here is a Q-Q plot of the GPA data. -->
 
-<img src="./Images/EarlyRisersGPA-QQ-Excel.png">
+<!-- <img src="./Images/EarlyRisersGPA-QQ-Excel.png"> -->
 
-* A simple random sample of $n = 378$ early-rising students at BYU-Idaho was collected. Both the histogram and the Q-Q plot suggest that the data are left-skewed. That is, many of the students have fairly high GPAs, but a few are very low. It is reasonable to conclude that the mean of the GPAs are approximately normally distributed, since the sample size is large, even though the GPA data are left-skewed.
+* A simple random sample of $n = 378$ early-rising students at BYU-Idaho was collected. It is reasonable to conclude that the mean of the GPAs are approximately normally distributed, since the sample size is large, even though the GPA data are left-skewed.
 
 
 7. Give the test statistic and its value 
@@ -1295,7 +1304,7 @@ We started with a requirement that $1=2$ is a true statement.  We applied valid 
 </div>
 <br>
 
-In science, we make a hypothesis (or a statement or claim) and then we gather evidence "against" that requirement. If we cannot reject the hypothesis, In the mathematical example above, we started with an requirement and did not find sufficient evidence against that requirement.  In the end, we arrived at no contradiction at all: $1=1$.  This did not mean that our original claim that $1=2$ was true; it only meant that we had not yet disproved it.  We could not reject the original claim.
+In science, we make a hypothesis (or a statement or claim) and then we gather evidence "against" that requirement. If we cannot reject the hypothesis, in the mathematical example above, we started with a requirement and did not find sufficient evidence against that requirement.  In the end, we arrived at no contradiction at all: $1=1$.  This did not mean that our original claim that $1=2$ was true; it only meant that we had not yet disproved it.  We could not reject the original claim.
 
 We have to be careful when conducting hypothesis tests.  When we conduct a test, we assume the null hypothesis is true.  This provides a distribution for the test statistic, and allows us to calculate the $P$-value.  If we find that the $P$-value is large, that means that we did not find a contradiction in our requirement that the null hypothesis is true.  That does not mean that the null hypothesis is true, it only means that we cannot reject it. For this reason, we never say we "accept the null hypothesis."  When the $P$-value is large, we say that we "fail to reject the null hypothesis."
 

@@ -22,18 +22,18 @@ output:
 
 ## Lesson Outcomes
 
-<a href="javascript:showhide('outcome')"><span style="font-size:8pt;">Click here to Show/Hide Outcomes for this Lesson</span></a>
+<a href="javascript:showhide('outcome')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="outcome" style="display:none;">
-By the end of this lesson, you should be able to:
+By the end of this lesson, you should be able to do the following.
 
-**Confidence Intervals for the mean of differences with dependent samples: **
+**Regarding Confidence Intervals for the mean of differences with dependent samples: **
 
 - Calculate and interpret a confidence interval for the mean of differences given a confidence level.
 - Identify a point estimate and margin of error for the confidence interval.
 - Show the appropriate connections between the numerical and graphical summaries that support the   confidence interval.
 - Check the requirements for the confidence interval.
   
-**Hypothesis Testing for the mean of differences with dependent samples:**
+**Regarding Hypothesis Testing for the mean of differences with dependent samples:**
 
   * State the null and alternative hypothesis. 
   * Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.
@@ -226,7 +226,7 @@ We can calculate the difference for each woman in the study:
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <div class="SoftwareHeading">Excel Instructions</div>
 <div class="Summary">
-Fortunately, the "Paired Data t-test" tab in the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) will automatically compute the differences when you paste in the data. **The Toolbox always takes the data in column A - data in column B.** Because we want to take Post - Pre, you will need to swap the order of the column when pasting the data into the Math221 Statistics Toolbox. Follow this process:
+Fortunately, the "Paired Data t-test" tab in the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) will automatically compute the differences when you paste in the data. **The Toolbox always takes the data in column A - data in column B.** Because we want to take Post - Pre, you will need to swap the order of the columns when pasting the data into the Math221 Statistics Toolbox. Follow this process:
 
 * Copy the "Pre" column and paste it into column B, labeled "Data2" of the Toolbox.
 * Copy the "Post" column and paste it into column A, labeled "Data1" of the Toolbox.
@@ -234,6 +234,10 @@ Fortunately, the "Paired Data t-test" tab in the [Math 221 Statistics Toolbox](.
 * A excerpt of how the data looks in the Math221 Statistics Toolbox is shown below:
 
 <img src="./Images/Mahon-Differences_Excel_Toolbox.PNG">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 </div>
 <br>
 
@@ -315,7 +319,7 @@ The women's weights were recorded at the beginning of the study.  The women were
 
 Here is the Excel output:
 
-<img src="./Images/Mahon_Paired_t-test_Excel_Toolbox.png">
+<img src="./Images/Mahon_Paired_t-test_Excel_Toolbox.PNG">
 
 From the Excel output illustrated above, we can see a histogram of the data and get the following numerical summaries:
 
@@ -346,15 +350,13 @@ The subjects were recruited via advertisements for a research study.  The partic
 
 From a practical perspective, it is impossible to get a simple random sample of people in the general population.  When research trials are conducted, people must volunteer to participate.  This can lead to a selection bias, but it is usually negligible.
 
-The requirement of normality is satisfied for Mahon's data.  The differences appear to follow a normal distribution, so $\bar d$ will be approximately normal.  
-
-The sample size (n=27) is fairly large.  The histogram shows a mound shape. By scrolling to the right in the Excel sheet you can see a Q-Q plot of the differences:
+The requirement of normality is satisfied for Mahon's data. Though the sample size (n=27) is not quite up to 30, it is still fairly large. Furthermore, the histogram of differences indicates very little skew, so $\bar d$ will be approximately normal.  
 
 <center>
-<img src="./Images/Mahon-Differences-QQ_Excel_Toolbox.png">
+<img src="./Images/Mahon-Differences-Histogram.PNG">
 </center>
 
-With this Q-Q plot, we could conclude that the data follow a normal distribution.  Even with a small sample size, we can still conduct this test.
+Even with a sample size less than 30, we can still conduct this test.
 
 **Give the test statistic and its value**
 
@@ -443,7 +445,8 @@ $$
 </div>
 &nbsp;
 </div>
-In order to get the correct $P$-value, we need to indicate the proper alternative hypothesis in Excel.  In cell Q6 be sure the "Greater Than" symbol is selected in the drop-down menu. 
+<br>
+In order to get the correct $P$-value, we need to indicate the proper alternative hypothesis in Excel.  In cell N6 be sure the "Greater Than" symbol is selected in the drop-down menu. 
 
 <img src="./Images/TypeOfTest-GreaterThan-Excel.png">
 
@@ -687,11 +690,7 @@ $$
 
 **Verify the requirements have been met**
 
-We can consider the sample representative of the population.  The "difference" data appear to follow a normal distribution.  This is illustrated in the following Q-Q plot:
-
-<center>
-<img src="./Images/REE-QQ-Excel_Toolbox.png">
-</center>
+We can consider the sample representative of the population.  Because our sample size (n=40) of differences is greater than 30, we can be sure the sampling distribution of $\bar d$ will be normal.
 
 The requirements for this test appear to have been satisfied.
 
@@ -723,8 +722,8 @@ $$
 
 <a href="javascript:showhide('Q22')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q22" style="display:none;">
-* The test statistic is plotted on the horizontal axis.  The $P$-value is shaded in green. The same value can be found on the Excel output in cell R10.  
-&nbsp
+* The test statistic is plotted on the horizontal axis.  The $P$-value is shaded in green. The same value can be found on the Excel output in cell O10.  
+
 <center>
 <img src="./Images/REE-Applet.png">
 </center>
@@ -860,12 +859,12 @@ $$
 
 <a href="javascript:showhide('Q29')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q29" style="display:none;">
-* The histogram is presented with 16 bins.
+
 <center>
 <img src="./Images/DirectFlightCosts-Histogram1-Excel.png">
 </center>
 
-* If you defined your difference as the 90-day price minus the 14-day price, then with 16 bins you would have the following histogram:
+* If you defined your difference as the 90-day price minus the 14-day price, then you would have the following histogram:
 <center>
 <img src="./Images/DirectFlightCosts-Histogram2-Excel.png">
 </center>
@@ -968,7 +967,7 @@ We can compute a confidence interval for the true mean of the differences for pa
 <div class="Summary">
 **To calculate confidence intervals for the true mean of the difference in Excel, do the following**:
 
-* Open the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx)
+* Open the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx)
 * Click on the tab labeled "Paired Data t-test"
 * Enter the columns of paired data into column A and B
 * Set the desired confidence level.
@@ -1109,7 +1108,7 @@ Sample Size:           $n = 170$
 <div id="Q42" style="display:none;">
 * a. It is not explicitly stated, but we assume the plots of land were selected at random.
 
-* b. For the pine beetle data, the histogram indicates that the data are not normally distributed.  This can be confirmed with a Q-Q plot.  Since the sample size is large ($n = 170$), we can assume the sample mean is normally distributed.
+* b. For the pine beetle data, the histogram indicates that the data are not normally distributed.  However, since the sample size is large ($n = 170$), we can know the sample mean is normally distributed.
 
 * The requirements for creating the confidence interval seem to be satisfied.
 </div>
@@ -1287,13 +1286,13 @@ Sample Size:           $n = 10$
 
 **Make an appropriate graph to illustrate the data**
 
-45. Create a histogram of the differences in the hours of sleep.
+45. Create a graph of the differences in the hours of sleep.
 
 <a href="javascript:showhide('Q45')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q45" style="display:none;">
-Here is a histogram of the data with 6 bins:
+Here is a boxplot of the data:
 <center>
-<img src="./Images/LHyoscyamine-Histogram-Excel.png">
+<img src="./Images/LHyoscyamine-Boxplot-Excel.png">
 </center>
 </div>
 &nbsp;
@@ -1311,10 +1310,9 @@ Here is a histogram of the data with 6 bins:
 <div id="Q46" style="display:none;">
 * a. We assume the subjects represent a random sample from the population.
 
-* b. A Q-Q plot of the differences indicates that is reasonable to conclude that the data are normally distributed even though the sample size is small:
-<img src="./Images/LHyoscyamine-QQ.png">
+* b. Remember, just like the hypothesis test, this confidence interval for a mean of differences is robust. That means it is not very sensitive to the requirements. If they are violated, this interval estimate will probably still give reasonably good results. Because the sample size is small, with only 10 values, it is hard to see a shape in a histogram of the data, regardless of the number of bins chosen. However, it is clear that the data is not strongly skewed. We will move forward, assuming the requirement of a normal sampling distribution of $\bar d$ is not violated.
 
-* The requirements for creating the confidence interval seem to be satisfied.
+
 </div>
 <br>
 

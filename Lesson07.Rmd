@@ -23,7 +23,7 @@ output:
 
 ## Lesson Outcomes
 
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 
 By the end of this lesson, you should be able to:
@@ -107,7 +107,7 @@ If the sample mean is normally distributed, then we can consider the sample mean
 
 $$z = \frac{\text{value} - \text{mean}}{\text{standard deviation}}=\frac{\bar x-\mu}{\sigma / \sqrt{n} }$$
 
-Notice that we just replaced the "value"" with the normal random variable, the "mean"" with its mean and "standard deviation"" with its standard deviation.
+Notice that we just replaced the "value" with the normal random variable, the "mean" with its mean and "standard deviation" with its standard deviation.
 
 The $z$-score follows a standard normal distribution. That is, it has a mean of 0 and a standard deviation of 1.  After we compute the $z$-score, we can use the applet to find the probability that a randomly selected mean will be above or below a given value of $\bar x$.
 

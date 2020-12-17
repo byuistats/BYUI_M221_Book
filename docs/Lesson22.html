@@ -295,19 +295,19 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
     </li>
     <li>
-      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
+      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
     </li>
     <li>
-      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data (Shape &amp; Center)</a>
     </li>
     <li>
-      <a href="Lesson04.html">Lesson 4: Rules of Probability</a>
+      <a href="Lesson04.html">Lesson 4: Describing Quantitative Data (Spread)</a>
     </li>
     <li>
       <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
@@ -401,7 +401,11 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
+<<<<<<< HEAD
   <a href="https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
+=======
+  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -458,7 +462,7 @@ $(document).ready(function () {
 </div>
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Click here to Show/Hide Outcomes for this Lesson</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 <p>By the end of this lesson, you should be able to:</p>
 <ul>
@@ -558,9 +562,19 @@ Answer the following questions:
 <div class="message Note">
 This video is an hour and a half long. <strong>YOU DO NOT NEED TO WATCH THE ENTIRE VIDEO</strong>. Please watch only the last fifteen minutes, beginning at 1:19:00
 </div>
+<<<<<<< Updated upstream
 <p><br> <br></p>
 <iframe id="kaltura_player_1578605835" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/41351812/partner_id/1157612?iframeembed=true&amp;playerId=kaltura_player_1578605835&amp;entry_id=0_kh1juzmd" width="800" height="450" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0">
 </iframe>
+<<<<<<< HEAD
+=======
+<p><br> <br> <iframe id="kaltura_player_1578605835" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/41351812/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1578605835&entry_id=0_kh1juzmd" width="800" height="450" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe></p>
+<!-- [![](./Images/video-icon.png)](http://stream.byui.edu/VideoPlayer/BYUIplayer.html?StartCue=0&EndCue=5776&VideoName=1817_dvd&VideoType=libraryvideos) -->
+<!-- <img src="Images/Video-icon.png"> -->
+<!-- Need exported video -->
+>>>>>>> Stashed changes
+=======
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 </div>
 <div id="estuarine-crocodiles" class="section level2">
 <h2>Estuarine Crocodiles</h2>
@@ -580,7 +594,7 @@ Excel Instructions
 <div class="Summary">
 <p><strong>To find the estimated regression coefficients (<span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span>) in Excel, do the following:</strong></p>
 <ul>
-<li>Open the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> file.</li>
+<li>Open the <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> file.</li>
 <li>Click on the “Linear Regression” tab.</li>
 <li>Paste your data for the explanatory variable (x) in the first column. For this example, this is the head lengths.</li>
 <li>The data for the response variable (y) is pasted in the second column. This is the variable you want to predict based upon the value of (x). Our response variable is the body length of the crocodiles.</li>
@@ -593,15 +607,24 @@ Excel Instructions
 <h2>Interpreting the Regression Output</h2>
 <p>The output from the commands given above will include a table similar to the one shown here:</p>
 <p><img src="Images/EstuarineCrocodile-Regression-Output.PNG"></p>
+<<<<<<< HEAD
 <p>The regression coefficients are given in the columns labeled “Y-intercept (<span class="math inline">\(b_0\)</span>)” and “Slope (<span class="math inline">\(b_1\)</span>)”. The y-intercept gives the constant term (or the term that is not multiplied by <span class="math inline">\(x\)</span>) which is the value of <span class="math inline">\(b_0\)</span>. In this case, <span class="math inline">\(b_0=-18.274\)</span>. The “Slope” entry of the table gives the value that is to be multiplied by <span class="math inline">\(X\)</span>; this is the slope of the regression equation. In our model, <span class="math inline">\(X\)</span> represents the head length, in centimeters. The slope in our regression equation is <span class="math inline">\(b_1=7.660\)</span>. Putting all this together, we get the equation:</p>
+=======
+<p>In this output we can see the y-intercept, also labeled <span class="math inline">\(b_0\)</span>, as <span class="math inline">\(b_0=-18.274\)</span>. The slope, or <span class="math inline">\(b_1\)</span>, gives the value that is to be multiplied by <span class="math inline">\(X\)</span>. In our model, <span class="math inline">\(X\)</span> represents the head length, in centimeters. The row is labeled as “Head Length (cm)”. The slope in our regression equation is <span class="math inline">\(b_1=7.660\)</span>. Putting all this together, we get the equation:</p>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 <p><span class="math display">\[
 \widehat Y = -18.274 + 7.660 X
 \]</span></p>
 <p>We put the “hat” on <span class="math inline">\(Y\)</span> to represent that this is an estimate of the value of <span class="math inline">\(Y\)</span>. The symbol <span class="math inline">\(\widehat Y\)</span> is read, “<span class="math inline">\(Y\)</span>-hat”. We can also express this equation in the following way: <span class="math display">\[
 \widehat{BodyLength} = -18.274 + 7.660 \cdot HeadLength
 \]</span></p>
+<<<<<<< HEAD
 <p>The slope of the regression equation is 7.660. This means that for each one-unit increase in <span class="math inline">\(X\)</span>, we expect a corresponding increase in <span class="math inline">\(Y\)</span> of 7.660 units. For every additional centimeter of head length, we expect that an additional 7.660 cm of body length.</p>
+<p>The <span class="math inline">\(Y\)</span>-intercept is <span class="math inline">\(-18.274\)</span>. How should we interpret this value? If there was an estuarine crocodile with a head length of <span class="math inline">\(X=0\)</span> cm, our equation predicts that its body length would be approximately negative 20 cm, or (<span class="math inline">\(-20\)</span>) cm. This is silly. If it does not make sense to interpret the <span class="math inline">\(Y\)</span>-intercept, we simply state that it is not interpretable. The <span class="math inline">\(Y\)</span>-intercept is included in the regression equation, even though it may not be interpretable. It must be included to make the predictions more reasonable.</p>
+=======
+<p>The slope of the regression equation is 7.660. This means that for each one-unit increase in <span class="math inline">\(X\)</span>, we expect a corresponding increase in average of <span class="math inline">\(Y\)</span> of 7.660 units. For every additional centimeter of head length, we expect that the mean body length to increase by 7.660 cm.</p>
 <p>The <span class="math inline">\(Y\)</span>-intercept is <span class="math inline">\(-18.274\)</span>. How should we interpret this value? If there was an estuarine crocodile with a head length of <span class="math inline">\(X=0\)</span> cm, our equation predicts that its body length would be approximately negative 20 cm, or (<span class="math inline">\(-20\)</span>) cm. This is silly. If it does not make sense to interpret the <span class="math inline">\(Y\)</span>-intercept, we simply state the it is not interpretable. The <span class="math inline">\(Y\)</span>-intercept is included in the regression equation, even though it may not be interpretable. It must be included to make the predictions more reasonable.</p>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 </div>
 <div id="predictions" class="section level2">
 <h2>Predictions</h2>
@@ -619,8 +642,8 @@ Excel Instructions
 <p><strong>To use Excel to predict the value of <span class="math inline">\(Y\)</span> for any specified value of <span class="math inline">\(X\)</span>, do the following:</strong></p>
 <ul>
 <li>Enter the explanatory (x) and response (y) variables in the first two columns of the Linear Regression spreadsheet.</li>
-<li>Find cell J12, which is labeled as “x” in the “Predicted Value” table to the right of the scatter plot.</li>
-<li>In cell J12, enter the value of x for which you wish to predict y. For this example, enter 87 for x, which is the skull length of the juvenile sarcosuchus.</li>
+<li>Find cell J18, which is labeled as “x” in the “Predicted Value” table to the right of the scatter plot.</li>
+<li>In cell J18, enter the value of x for which you wish to predict y. For this example, enter 87 for x, which is the skull length of the juvenile sarcosuchus.</li>
 <li>The predicted value is given in the cell labeled “predicted.” <br> <img src="Images/LinearRegressionPredictedValue.png"></li>
 <li>Notice that the point representing your predicted value shows up on the scatterplot in orange.</li>
 </ul>
@@ -656,15 +679,26 @@ Excel Instructions
 </div>
 <div class="Summary">
 <p><strong>To draw the regression line on a scatterplot in Excel:</strong></p>
+<p>The Math221 Statistics Toolbox has a line automatically drawn on the scatter plot it provides. However, to draw a line on your own in Excel, after creating the scatter plot you would follow these steps:</p>
 <ul>
-<li>Right-click on one of the data points illustrated in your scatterplot.</li>
-<li>Choose the menu option “Add Trendline…”</li>
-<li>Close the dialog box that appears. <br></li>
+<li>Select the scatterplot by clicking anywhere on the plot Right-click on one of the data points illustrated in your scatterplot.</li>
+<li>From the Design ribbon, click the “Add Chart Element” button, and select Trendline from the resulting dropdown menu</li>
 </ul>
+<div style="padding-left:10%;">
+<p><img src="Images/trend_line_1.png" style="width:320px;height:320px;"></p>
+</div>
+<ul>
+<li>Another menu should display. In that menu select Linear</li>
+<li>To display the equation of the line, you can select “More Trendline Options” instead of Linear. In this resulting menu there is a box you can check for Display Equation on Chart.</li>
+</ul>
+<div style="padding-left:10%;">
+<p><img src="Images/trend_line_2_display_equation.PNG" style="width:150px;height:300px;"></p>
+</div>
+<p><br></p>
 </div>
 <p><br></p>
 <p>The following plot shows the regression line on the scatterplot.</p>
-<p><img src="Images/EstuarineCrocodile-Scatterplot-RegLine-SPSS.png"> <!--
+<p><img src="Images/EstuarineCrocodile-trendline.PNG"> <!--
 The equation of this line is $\widehat Y = b_0 + b_1 X$.  This is the equation obtained by following the directions given above.
 --></p>
 </div>
@@ -696,22 +730,22 @@ The equation of this line is $\widehat Y = b_0 + b_1 X$.  This is the equation o
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Type</strong></td>
-<td>Linear Pattern</td>
-<td>Apparent Random Scatter</td>
-<td>Nonlinear Pattern</td>
+<td><p><strong>Type</strong></p></td>
+<td><p>Linear Pattern</p></td>
+<td><p>Apparent Random Scatter</p></td>
+<td><p>Nonlinear Pattern</p></td>
 </tr>
 <tr class="even">
-<td><strong>Description</strong></td>
-<td>“Hot Dog” Shape</td>
-<td>“Hamburger” Shape</td>
-<td>“Banana” Shape</td>
+<td><p><strong>Description</strong></p></td>
+<td><p>“Hot Dog” Shape</p></td>
+<td><p>“Hamburger” Shape</p></td>
+<td><p>“Banana” Shape</p></td>
 </tr>
 <tr class="odd">
-<td><strong>Decision</strong></td>
-<td>Conduct regression analysis to determine if there is a significant linear relationship</td>
-<td>Linear regression is not appropriate</td>
-<td>Linear regression is not appropriate</td>
+<td><p><strong>Decision</strong></p></td>
+<td><p>Conduct regression analysis to determine if there is a significant linear relationship</p></td>
+<td><p>Linear regression is not appropriate</p></td>
+<td><p>Linear regression is not appropriate</p></td>
 </tr>
 </tbody>
 </table>
@@ -744,7 +778,7 @@ The equation of this line is $\widehat Y = b_0 + b_1 X$.  This is the equation o
 <div id="interpreting-the-regression-output-1" class="section level3">
 <h3>Interpreting the Regression Output</h3>
 <p>The output from the commands given above will include a table similar to the one shown here:</p>
-<p><img src="Images/Manatees-RegressionOutput.png"></p>
+<p><img src="Images/Manatees-RegressionOutput.PNG"></p>
 <p>The Y-intercept term is not multiplied by anything except 1. This is the value of <span class="math inline">\(b_0\)</span>: <span class="math inline">\(b_0=-42.542\)</span>. The value of the slope is to be multiplied by <span class="math inline">\(X\)</span>; this is the slope of the regression equation. In our model, <span class="math inline">\(X\)</span> represents the number of powerboat registrations in Florida, in thousands. The slope for our regression equation is <span class="math inline">\(b_1=0.129\)</span>. We get the equation: <span class="math display">\[
 \widehat Y = -42.542 + 0.129 X
 \]</span></p>
@@ -753,7 +787,7 @@ The equation of this line is $\widehat Y = b_0 + b_1 X$.  This is the equation o
 \widehat{Manatees} = -42.542 + 0.129 \cdot Powerboats
 \]</span></p>
 <p>The slope of the regression equation is 0.129. This means that for each one-unit increase in <span class="math inline">\(X\)</span>, we expect a corresponding increase in <span class="math inline">\(Y\)</span> of 0.129 units. Remember that the number of powerboats registered (<span class="math inline">\(X\)</span>) was given in thousands. So, a one-unit increase in <span class="math inline">\(X\)</span> implies an increase of a thousand powerboats. So, for every thousand additional powerboats registered in Florida, we expect that an additional 0.129 manatees will be killed. In other words, if there are 100 thousand additional powerboat registrations, we would expect to see about <span class="math inline">\(0.129 \cdot 100 = 12.9\)</span> additional manatee deaths.</p>
-<p>The Y-intercept is <span class="math inline">\(-42.542\)</span>. How should we interpret this value? If there were <span class="math inline">\(X=0\)</span> thousand powerboat registrations, we would expect that approximately negative 43 (<span class="math inline">\(-43\)</span>) manatees would be killed by powerboats. This is absurd. If it does not make sense to interpret the <span class="math inline">\(Y\)</span>-intercept, we simply state the it is not interpretable. The <span class="math inline">\(Y\)</span>-intercept is included in the regression equation, even though it may not be interpretable. It must be included to make the predictions more reasonable.</p>
+<p>The Y-intercept is <span class="math inline">\(-42.542\)</span>. How should we interpret this value? If there were <span class="math inline">\(X=0\)</span> thousand powerboat registrations, we would expect that approximately negative 43 (<span class="math inline">\(-43\)</span>) manatees would be killed by powerboats. This is absurd. If it does not make sense to interpret the <span class="math inline">\(Y\)</span>-intercept, we simply state that it is not interpretable. The <span class="math inline">\(Y\)</span>-intercept is included in the regression equation, even though it may not be interpretable. It must be included to make the predictions more reasonable.</p>
 <p>The Y-intercept is not always negative or uninterpretable. In some cases, the Y-intercept is the most important number in the equation.</p>
 </div>
 <div id="predictions-1" class="section level3">
@@ -764,7 +798,7 @@ The equation of this line is $\widehat Y = b_0 + b_1 X$.  This is the equation o
 <div id="drawing-the-regression-line-on-a-scatterplot-1" class="section level3">
 <h3>Drawing the Regression Line on a Scatterplot</h3>
 <p>The following plot shows the regression line on the scatterplot.</p>
-<p><img src="Images/Manatees-Scatter-RegLine-SPSS.png"></p>
+<p><img src="Images/Manatees-Reg-Predict.PNG"></p>
 <p>You will observe that the points are not as tightly clustered around the regression line for the manatee data, compared to the crocodile data. Why do you think this would happen?</p>
 <p><br></p>
 </div>
@@ -808,11 +842,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table>
+<table style="width:76%;">
 <colgroup>
-<col width="38%" />
-<col width="30%" />
-<col width="30%" />
+<col width="29%" />
+<col width="23%" />
+<col width="23%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -834,7 +868,7 @@ Remember…
 
 <br />
 <hr />
-<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+<p>Copyright &copy; 2020 Brigham Young University-Idaho. All rights reserved.</p>
 
 
 

@@ -24,7 +24,7 @@ output:
 <div id="oc" style="display:none;">
 The expectation on the exam is the following outcomes. You should be able to do:
 
-- All of the Outcomes from Lesson 08 (Unit 1), Lesson 15 (Unit 2), and Lesson 20 (Unit 3)
+- All of the Outcomes from [Lesson 08 (Unit 1)](Lesson08.html), [Lesson 15 (Unit 2)](Lesson15.html), and [Lesson 20 (Unit 3)](Lesson20.html)
 - Create a scatterplot of bivariate data.
 - Interpret the overall pattern in a scatter plot to assess linearity and direction.
 - Calculate the correlation coefficient.
@@ -89,7 +89,7 @@ $$
 Residual = Y - \hat Y = Y - (b_0 + b_1 X)
 $$
 
-- To check all the requirements for bivariate inference you will need to create a **scatterplot** of $X$ and $Y$, a **residual plot**, and a **Q-Q plot of the residuals**. 
+- To check all the requirements for bivariate inference you will need to create a **scatterplot** of $X$ and $Y$, a **residual plot**, and a **histogram of the residuals**. 
 
 - We conduct a hypothesis test on bivariate data to know if there is a linear relationship between the two variables. To determine this, we test the slope ($\beta_1$) on whether or not it equals zero. The appropriate hypotheses for this test are:
 $$

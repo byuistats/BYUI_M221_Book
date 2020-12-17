@@ -16,7 +16,7 @@ output:
 
 **Welcome to Math 221**
 
-Use the menus along the top, or the links in the table below to navigate to the desired lesson. Links to the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) and data files used in the book can also be found at the "Data" link on the far right of the header above.
+Use the menus along the top, or the links in the table below to navigate to the desired lesson. Links to the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) and data files used in the book can also be found at the "Data" link on the far right of the header above.
 
 <br/>
 
@@ -27,19 +27,19 @@ Use the menus along the top, or the links in the table below to navigate to the 
 
 <table class="tmain">
 <tr>
-<td>[Lesson 1: On Campus Course Introduction](Lesson01_Campus.html)</td>
+<td>[Lesson 1: (On Campus) Course Intro & Probability](Lesson01_Campus.html)</td>
 </tr>
 <tr>
-<td>[Lesson 1: Online Course Introduction](Lesson01.html)</td>
+<td>[Lesson 1: (Online) Course Intro & Probability](Lesson01.html)</td>
 </tr>
 <tr class="alt">
 <td>[Lesson 2: The Statistical Process & Design of Studies](Lesson02.html)</td>
 </tr>
 <tr>
-<td>[Lesson 3: Describing Quantitative Data: Shape, Center & Spread](Lesson03.html)</td>
+<td>[Lesson 3: Describing Quantitative Data (Shape & Center)](Lesson03.html)</td>
 </tr>
 <tr class="alt">
-<td>[Lesson 4: Probability; Discrete Random Variables](Lesson04.html)</td>
+<td>[Lesson 4: Describing Quantitative Data (Spread)](Lesson04.html)</td>
 </tr>
 <tr>
 <td>[Lesson 5: Normal Distributions](Lesson05.html)</td>

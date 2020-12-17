@@ -22,7 +22,7 @@ output:
 
 ## Lesson Outcomes
 
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Click here to Show/Hide Outcomes for this Lesson</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 By the end of this lesson, you should be able to:
 
@@ -175,7 +175,7 @@ where $\widehat Y$ represents the predicted body length of an estuarine crocodil
 <div class="Summary">
 **To find the estimated regression coefficients ($b_0$ and $b_1$) in Excel, do the following:**
 
-- Open the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) file.
+- Open the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) file.
 - Click on the "Linear Regression" tab.
 - Paste your data for the explanatory variable (x) in the first column.  For this example, this is the head lengths.
 - The data for the response variable (y) is pasted in the second column.  This is the variable you want to predict based upon the value of (x).  Our response variable is the body length of the crocodiles.
@@ -190,7 +190,11 @@ The output from the commands given above will include a table similar to the one
 
 <img src="./Images/EstuarineCrocodile-Regression-Output.PNG">
 
+<<<<<<< HEAD
 The regression coefficients are given in the columns labeled "Y-intercept ($b_0$)" and "Slope ($b_1$)".  The y-intercept gives the constant term (or the term that is not multiplied by $x$) which is the value of $b_0$. In this case, $b_0=-18.274$.  The "Slope" entry of the table gives the value that is to be multiplied by $X$; this is the slope of the regression equation.  In our model, $X$ represents the head length, in centimeters. The slope in our regression equation is $b_1=7.660$.  Putting all this together, we get the equation:
+=======
+In this output we can see the y-intercept, also labeled $b_0$, as $b_0=-18.274$.  The slope, or $b_1$, gives the value that is to be multiplied by $X$.  In our model, $X$ represents the head length, in centimeters.  The row is labeled as "Head Length (cm)".  The slope in our regression equation is $b_1=7.660$.  Putting all this together, we get the equation:
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 
 
@@ -203,9 +207,9 @@ $$
 \widehat{BodyLength} = -18.274 + 7.660 \cdot HeadLength
 $$
 
-The slope of the regression equation is 7.660.  This means that for each one-unit increase in $X$, we expect a corresponding increase in $Y$ of 7.660 units.  For every additional centimeter of head length, we expect that an additional 7.660 cm of body length.
+The slope of the regression equation is 7.660.  This means that for each one-unit increase in $X$, we expect a corresponding increase in average of $Y$ of 7.660 units.  For every additional centimeter of head length, we expect that the mean body length to increase by 7.660 cm.
 
-The $Y$-intercept is $-18.274$.  How should we interpret this value?  If there was an estuarine crocodile with a head length of $X=0$ cm, our equation predicts that its body length would be approximately negative 20 cm, or ($-20$) cm.  This is silly.  If it does not make sense to interpret the $Y$-intercept, we simply state the it is not interpretable.  The $Y$-intercept is included in the regression equation, even though it may not be interpretable.  It must be included to make the predictions more reasonable.
+The $Y$-intercept is $-18.274$.  How should we interpret this value?  If there was an estuarine crocodile with a head length of $X=0$ cm, our equation predicts that its body length would be approximately negative 20 cm, or ($-20$) cm.  This is silly.  If it does not make sense to interpret the $Y$-intercept, we simply state that it is not interpretable.  The $Y$-intercept is included in the regression equation, even though it may not be interpretable.  It must be included to make the predictions more reasonable.
 
 ## Predictions
 
@@ -226,8 +230,8 @@ Even though we can do this with a calculator, it is a little tedious and is subj
 **To use Excel to predict the value of $Y$ for any specified value of $X$, do the following:**
 
 - Enter the explanatory (x) and response (y) variables in the first two columns of the Linear Regression spreadsheet.
-- Find cell J12, which is labeled as "x" in the "Predicted Value" table to the right of the scatter plot. 
-- In cell J12, enter the value of x for which you wish to predict y.  For this example, enter 87 for x, which is the skull length of the juvenile sarcosuchus.
+- Find cell J18, which is labeled as "x" in the "Predicted Value" table to the right of the scatter plot. 
+- In cell J18, enter the value of x for which you wish to predict y.  For this example, enter 87 for x, which is the skull length of the juvenile sarcosuchus.
 - The predicted value is given in the cell labeled "predicted."
 <br>
 <img src="./Images/LinearRegressionPredictedValue.png">
@@ -264,16 +268,30 @@ Stop and think about this for a minute.  This juvenile sarcosuchus is estimated 
 <div class="Summary">
 **To draw the regression line on a scatterplot in Excel:**
 
-- Right-click on one of the data points illustrated in your scatterplot.
-- Choose the menu option "Add Trendline..."
-- Close the dialog box that appears.
+The Math221 Statistics Toolbox has a line automatically drawn on the scatter plot it provides. However, to draw a line on your own in Excel, after creating the scatter plot you would follow these steps:
+
+- Select the scatterplot by clicking anywhere on the plot
+Right-click on one of the data points illustrated in your scatterplot.
+- From the Design ribbon, click the "Add Chart Element" button, and select Trendline from the resulting dropdown menu
+
+<div style="padding-left:10%;">
+<img src="./Images/trend_line_1.png" style="width:320px;height:320px;">
+</div>
+
+- Another menu should display. In that menu select Linear
+- To display the equation of the line, you can select "More Trendline  Options" instead of Linear. In this resulting menu there is a box you can check for Display Equation on Chart.
+
+<div style="padding-left:10%;">
+<img src="./Images/trend_line_2_display_equation.PNG" style="width:150px;height:300px;">
+</div>
+
 <br>
 </div>
 <br>
 
 The following plot shows the regression line on the scatterplot.
 
-<img src="./Images/EstuarineCrocodile-Scatterplot-RegLine-SPSS.png">
+<img src="./Images/EstuarineCrocodile-trendline.PNG">
 <!--
 The equation of this line is $\widehat Y = b_0 + b_1 X$.  This is the equation obtained by following the directions given above.
 -->
@@ -359,7 +377,7 @@ $$
 
 The slope of the regression equation is 0.129.  This means that for each one-unit increase in $X$, we expect a corresponding increase in $Y$ of 0.129 units.  Remember that the number of powerboats registered ($X$) was given in thousands.  So, a one-unit increase in $X$ implies an increase of a thousand powerboats.  So, for every thousand additional powerboats registered in Florida, we expect that an additional 0.129 manatees will be killed.  In other words, if there are 100 thousand additional powerboat registrations, we would expect to see about $0.129 \cdot 100 = 12.9$  additional manatee deaths.
 
-The Y-intercept is $-42.542$.  How should we interpret this value?  If there were $X=0$ thousand powerboat registrations, we would expect that approximately negative 43 ($-43$) manatees would be killed by powerboats.  This is absurd.  If it does not make sense to interpret the $Y$-intercept, we simply state the it is not interpretable.  The $Y$-intercept is included in the regression equation, even though it may not be interpretable.  It must be included to make the predictions more reasonable.
+The Y-intercept is $-42.542$.  How should we interpret this value?  If there were $X=0$ thousand powerboat registrations, we would expect that approximately negative 43 ($-43$) manatees would be killed by powerboats.  This is absurd.  If it does not make sense to interpret the $Y$-intercept, we simply state that it is not interpretable.  The $Y$-intercept is included in the regression equation, even though it may not be interpretable.  It must be included to make the predictions more reasonable.
 
 The Y-intercept is not always negative or uninterpretable.  In some cases, the Y-intercept is the most important number in the equation.
 
@@ -373,7 +391,7 @@ Note that if there are 850 thousand powerboats registered, then the regression e
 
 The following plot shows the regression line on the scatterplot.
 
-<img src="./Images/Manatees-Scatter-RegLine-SPSS.png">
+<img src="./Images/Manatees-Reg-Predict.PNG">
 
 You will observe that the points are not as tightly clustered around the regression line for the manatee data, compared to the crocodile data.  Why do you think this would happen?
 

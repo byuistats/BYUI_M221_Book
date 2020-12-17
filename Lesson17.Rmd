@@ -22,25 +22,26 @@ output:
 
 ## Lesson Outcomes
 
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
+By the end of this lesson you should be able to do the following.
 
-**Confidence Intervals for a single proportion:**
+**Regarding Confidence Intervals for a single proportion:**
 
-  + Calculate and interpret a confidence interval for a single proportion given a confidence level.
-  + Identify a point estimate and margin of error for the confidence interval.
-  + Show the appropriate connections between the numerical and graphical summaries that support the confidence interval. 
-  + Check the requirements for the confidence interval.
-  + Calculate a desired sample size given a level of confidence and margin of error (with or without a prior estimate of the population proportion). 
+* Calculate and interpret a confidence interval for a single proportion given a confidence level.
+* Identify a point estimate and margin of error for the confidence interval.
+* Show the appropriate connections between the numerical and graphical summaries that support the confidence interval. 
+* Check the requirements for the confidence interval.
+* Calculate a desired sample size given a level of confidence and margin of error (with or without a prior estimate of the population proportion). 
 
-**Hypothesis Testing for a single proportion:**
+**Regarding Hypothesis Testing for a single proportion:**
 
-  + State the null and alternative hypothesis. 
-  + Calculate the test-statistic and p-value of the hypothesis test.
-  + Assess the statistical significance by comparing the p-value to the α-level.
-  + Check the requirements for the hypothesis test.
-  + Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
-  + Draw a correct conclusion for the hypothesis test.
+* State the null and alternative hypothesis. 
+* Calculate the test-statistic and p-value of the hypothesis test.
+* Assess the statistical significance by comparing the p-value to the α-level.
+* Check the requirements for the hypothesis test.
+* Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
+* Draw a correct conclusion for the hypothesis test.
 </div>
 <br>
 
@@ -50,7 +51,7 @@ output:
 
 <img src="./Images/Medical_Symbol.png">
 
-Frederick Sierles and his colleagues distributed an anonymous survey to students at two American medical schools.  The questionnaire was given during class without any prior announcement to students.  The authors of the study personally supervised the distribution and collection of the surveys.  95% of the students completed the survey, and students from all four years of medical school training were represented.  A total of 428 individuals participated in the survey.  Among this group, 249 people indicated that they had cheated in some way during medical school. The results were published in a journal article in 1980.
+Frederick Sierles and his colleagues distributed an anonymous survey to students at two American medical schools.  The questionnaire was given during class without any prior announcement to students.  The authors of the study personally supervised the distribution and collection of the surveys.  95% of the students completed the survey, and students from all four years of medical school training were represented.  A total of 428 individuals participated in the survey.  Among this group, 249 people indicated that they had cheated in some way during medical school. The results were published in a journal article in 1980.
 
 We want to use the data from this study to generalize to a larger population.  We are not usually interested in the *particular* individuals' responses.  The reason the study was conducted is to provide an estimate of the true population proportion, $p$.  $\widehat p$ is called a **point estimate** of $p$.  The sample proportion, $\widehat p$ is one point on the number line that estimates the value of the true proportion, $p$.
 
@@ -107,7 +108,7 @@ The confidence intervals are valid whenever $n \widehat p \ge 10$ and $n(1-\wide
 
 Finding confidence intervals for one proportion using only a calculator is tedious. An Excel spreadsheet has been created to help you quickly and accurately perform these calculations. You will use this spreadsheet throughout this and other lessons.
 
-To download this file, click here: [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx)
+To download this file, click here: [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx)
 
 <span class="Custom">Click on the link at right</span> for instructions on using this spreadsheet to calculate confidence intervals.
 <a href="javascript:showhide('ins')"><span style="font-size:8pt;">Show/Hide Instructions</span></a>
@@ -117,7 +118,11 @@ For this example we will consider the "Honesty at Medical School" data above.
 
 - **Step 1**: Open the Math 221 Statistics Toolbox and click on the "One Proportion" tab. 
 
+<<<<<<< HEAD
 - The yellow boxes indicate the input spaces. The first step, getting an estimate of $\widehat{p}$, is accomplished by inputting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell E7. (You can ignore column A which asks you to paste in data. We will only be putting in summary data of counts, not individual observations.)  
+=======
+- The yellow boxes indicate the input spaces. The first step, getting an estimate of $\hat{p}$, is accomplished by inputting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell C7.   
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 <img src="./Images/Lesson_17_pic_1.PNG">
 
@@ -129,7 +134,11 @@ You may have noticed that after you input the values of $x$ and $n$ into the yel
 <img src="./Images/Lesson_17_pic_4.PNG">
 
 
+<<<<<<< HEAD
 - **Step 2**: Next we must indicate our desired level of confidence in cell J11. By default it is set to 0.95, meaning a 95% confidence level. The 95% confidence interval is given in the cells L14 and L15. For convenience, $\widehat{p}$ and the margin of error are also shown in this block of output.
+=======
+- **Step 2**: Next we must indicate our desired level of confidence in cell I11. By default it is set to 0.95, meaning a 95% confidence level. The 95% confidence interval is given in the cells K14 and L14. For convenience, $\hat{p}$ and the margin of error are also shown in this block of output.
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 <img src="./Images/Lesson_17_pic_5.PNG">
 
@@ -298,7 +307,7 @@ In other words, 75.4% of the people surveyed could taste the chemical.
 <img src="./Images/PTC_Pie_Graph_Excel.PNG">
 
 <br>
-<div class="message Tip">**Review:**  For a review of how to make pie graphs and bar charts in Excel, read [Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion](Lesson16.html){target="_blank"}</div>
+<div class="message Tip">**Review:**  For a review of how to make pie graphs and bar charts in Excel, read [Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion](Lesson16.html){target="_blank"}. You can also use the pie graph produced in the Math221 Statistics Toolbox. When doing so, consider altering the labels in the graph to be more descriptive of your particular study.</div>
 <br>
 <br>
 
@@ -372,7 +381,7 @@ There is no reason to revise existing perspectives on the prevalence of the abil
 
 The Math 221 Statistics Toolbox in Excel can also be used to perform hypothesis tests for one proportion.
 
-To download this file, click here: [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx)
+To download this file, click here: [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx)
 
 <span class="Custom">Click on the link at right</span> for instructions on using this spreadsheet to perform hypothesis testing.
 <a href="javascript:showhide('ins2')"><span style="font-size:8pt;">Show/Hide Instructions</span></a>
@@ -382,12 +391,16 @@ For this example we will consider the "PTC" data above.
 
 - **Step 1**: Open the Math 221 Statistics Toolbox and click on the "One Proportion" tab. 
 
+<<<<<<< HEAD
 - The yellow boxes indicate the input spaces. The first step, getting an estimate of $\widehat{p}$, is accomplished by inputting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell E7. (You can ignore column A which asks you to paste in data. We will only be putting in summary data of counts, not individual observations.)  
+=======
+- The yellow boxes indicate the input spaces. The first step, getting an estimate of $\hat{p}$, is accomplished by inputting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell C7.   
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 <img src="./Images/Lesson_17_pic_6.PNG">
 
 
-- **Step 2**: Now we need to define the hypotheses for our test. To the right of the "Numerical Summary" cells is a block of cells labeled "Hypothesis Test". We must change the yellow cells in this block of the sheet in order to test the correct null and alternative hypothesis. The value in cell M5 contains the value of $p$ in our null hypothesis. Cell L6 is a drop-down list where we can select the type of alternative hypothesis we wish to test, i.e. "Greater Than", "Less Than", or "Not Equal To."
+- **Step 2**: Now we need to define the hypotheses for our test. To the right of the "Numerical Summary" cells is a block of cells labeled "Hypothesis Test". We must change the yellow cells in this block of the sheet in order to test the correct null and alternative hypothesis. The value in cell L5 contains the value of $p$ in our null hypothesis. Cell K6 is a drop-down list where we can select the type of alternative hypothesis we wish to test, i.e. "Greater Than", "Less Than", or "Not Equal To."
 
 The results of the hypothesis test are given in the output boxes:
 
@@ -532,7 +545,7 @@ Even though the proportion of indicators that suggested good health was less tha
 
 - The **estimator** of $p$ is $\widehat p$. $\displaystyle{ \widehat p = \frac {x}{n}}$ and is used for both confidence intervals and hypothesis testing.
 
-- You will use the Excel spreadsheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) to perform hypothesis testing and calculate confidence intervals for problems involving one proportion.
+- You will use the Excel spreadsheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) to perform hypothesis testing and calculate confidence intervals for problems involving one proportion.
 
 - The requirements for a confidence interval are $n \widehat p \ge 10$ and $n(1-\widehat p) \ge 10$. The requirements for hypothesis tests involving one proportion are $np\ge10$ and $n(1-p)\ge10$.
 
