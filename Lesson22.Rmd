@@ -205,7 +205,7 @@ $$
 
 The slope of the regression equation is 7.660.  This means that for each one-unit increase in $X$, we expect a corresponding increase in $Y$ of 7.660 units.  For every additional centimeter of head length, we expect that an additional 7.660 cm of body length.
 
-The $Y$-intercept is $-18.274$.  How should we interpret this value?  If there was an estuarine crocodile with a head length of $X=0$ cm, our equation predicts that its body length would be approximately negative 20 cm, or ($-20$) cm.  This is silly.  If it does not make sense to interpret the $Y$-intercept, we simply state the it is not interpretable.  The $Y$-intercept is included in the regression equation, even though it may not be interpretable.  It must be included to make the predictions more reasonable.
+The $Y$-intercept is $-18.274$.  How should we interpret this value?  If there was an estuarine crocodile with a head length of $X=0$ cm, our equation predicts that its body length would be approximately negative 20 cm, or ($-20$) cm.  This is silly.  If it does not make sense to interpret the $Y$-intercept, we simply state that it is not interpretable.  The $Y$-intercept is included in the regression equation, even though it may not be interpretable.  It must be included to make the predictions more reasonable.
 
 ## Predictions
 
@@ -359,7 +359,7 @@ $$
 
 The slope of the regression equation is 0.129.  This means that for each one-unit increase in $X$, we expect a corresponding increase in $Y$ of 0.129 units.  Remember that the number of powerboats registered ($X$) was given in thousands.  So, a one-unit increase in $X$ implies an increase of a thousand powerboats.  So, for every thousand additional powerboats registered in Florida, we expect that an additional 0.129 manatees will be killed.  In other words, if there are 100 thousand additional powerboat registrations, we would expect to see about $0.129 \cdot 100 = 12.9$  additional manatee deaths.
 
-The Y-intercept is $-42.542$.  How should we interpret this value?  If there were $X=0$ thousand powerboat registrations, we would expect that approximately negative 43 ($-43$) manatees would be killed by powerboats.  This is absurd.  If it does not make sense to interpret the $Y$-intercept, we simply state the it is not interpretable.  The $Y$-intercept is included in the regression equation, even though it may not be interpretable.  It must be included to make the predictions more reasonable.
+The Y-intercept is $-42.542$.  How should we interpret this value?  If there were $X=0$ thousand powerboat registrations, we would expect that approximately negative 43 ($-43$) manatees would be killed by powerboats.  This is absurd.  If it does not make sense to interpret the $Y$-intercept, we simply state that it is not interpretable.  The $Y$-intercept is included in the regression equation, even though it may not be interpretable.  It must be included to make the predictions more reasonable.
 
 The Y-intercept is not always negative or uninterpretable.  In some cases, the Y-intercept is the most important number in the equation.
 
