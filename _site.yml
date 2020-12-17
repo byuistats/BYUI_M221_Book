@@ -20,13 +20,13 @@ navbar:
         - text: "Lesson 5: Normal Distributions"
           href: Lesson05.html
         - text: "Lesson 6: The Central Limit Theorem"
-          href: Lesson06.html          
+          href: Lesson06.html
         - text: "Lesson 7: Probability Calculations for a Sample Mean"
           href: Lesson07.html
         - text: "Lesson 8: Unit 1 Review"
           href: Lesson08.html
     - text: "Unit 2"
-      menu: 
+      menu:
         - text: "Lesson 9: Hypothesis Test for One Mean (Sigma Known)"
           href: Lesson09.html
         - text: "Lesson 10: Confidence Interval for One Mean (Sigma Known)"
@@ -54,7 +54,7 @@ navbar:
         - text: "Lesson 20: Unit 3 Review"
           href: Lesson20.html
     - text: "Unit 4"
-      menu: 
+      menu:
         - text: "Lesson 21: Describing Bivariate Data"
           href: Lesson21.html
         - text: "Lesson 22: Simple Linear Regression"
@@ -64,16 +64,11 @@ navbar:
         - text: "Lesson 24: Unit 4 Review"
           href: Lesson24.html
   right:
-<<<<<<< HEAD
     - text: "Toolbox"
-      href: https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx
-=======
-    - text: Toolbox
-      href: ./Data/Math221StatisticsToolbox.xltx 
->>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
+      href: ./Data/Math221StatisticsToolbox.xlsx
     - text: Data
       href: Data.html
-output: 
+output:
   html_document:
     theme: cerulean
     toc: true

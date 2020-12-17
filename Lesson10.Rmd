@@ -1,6 +1,6 @@
 ---
 title: "Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)"
-output: 
+output:
   html_document:
     theme: cerulean
     toc: true
@@ -28,11 +28,11 @@ output:
 By the end of this lesson, you should be able to:
 
 * Calculate and interpret a confidence interval for a population mean given a confidence level.
-* Explain how the margin of error changes with the sample size and the level of confidence. 
+* Explain how the margin of error changes with the sample size and the level of confidence.
 * Identify a point estimate and margin of error for the confidence interval.
-* Show the appropriate connections between the numerical and graphical summaries that support this confidence interval. 
+* Show the appropriate connections between the numerical and graphical summaries that support this confidence interval.
 * Check the requirements of the confidence interval.
-* Calculate a desired sample size given a level of confidence and margin of error. 
+* Calculate a desired sample size given a level of confidence and margin of error.
 </div>
 <br>
 
@@ -44,11 +44,7 @@ During an election in the United States, many polls are conducted to determine t
 
 Polls always include a **margin of error**.  The margin of error gives an estimate of the variability in the responses.  A common value for the margin of error in political polls is 3%.
 
-<<<<<<< HEAD
-When we consider the margin of error, we estimate that the true proportion of people who favor the Republican candidate is 49% &plusmn; 3%, or in other words between 46% and 52%.  It is not obvious whether the Republican candidate is favored by more or less than 50% of the voters. In this case, the political race is too close to know who might win.
-=======
 When we consider the margin of error, we estimate that the true proportion of people who favor the Republican candidate is 49% &plusmn; 3%, or in other words, between 46% and 52%.  It is not obvious whether the Republican candidate is favored by more or less than 50% of the voters. In this case, the political race is too close to know who might win.
->>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 In this reading, we will explore the margin of error and its role in estimating a parameter.
 
@@ -97,7 +93,7 @@ We have learned about several statistics.  Remember, a statistic is any number c
 <!--
 <center>
 {| class="wikitable"
-! 
+!
 ! Sample Statistic
 ! Population Parameter
 |-
@@ -180,7 +176,7 @@ If we collect a random sample from a population and $\bar x$ is normally distrib
 
 We can express this as a probability statement:
 
-$$ 
+$$
 P\left( \mu - 2 \frac{\sigma}{\sqrt{n}} < \bar X < \mu + 2 \frac{\sigma}{\sqrt{n}} \right) \approx 0.95
 $$
 
@@ -194,29 +190,29 @@ Here is the magic:  If $\bar x$ is within 2 standard deviations of $\mu$, then $
 -->
 
 Starting with
-$$\mu - 2 \frac{\sigma}{\sqrt{n}} < \bar X < \mu + 2 \frac{\sigma}{\sqrt{n}}$$ 
+$$\mu - 2 \frac{\sigma}{\sqrt{n}} < \bar X < \mu + 2 \frac{\sigma}{\sqrt{n}}$$
 We subtract $\mu$ from all parts of the inequality:
-$$\mu - 2 \frac{\sigma}{\sqrt{n}} - \mu < \bar X - \mu  < \mu + 2 \frac{\sigma}{\sqrt{n}} - \mu$$ 
+$$\mu - 2 \frac{\sigma}{\sqrt{n}} - \mu < \bar X - \mu  < \mu + 2 \frac{\sigma}{\sqrt{n}} - \mu$$
 Which reduces to
-$$- 2 \frac{\sigma}{\sqrt{n}}  < \bar X - \mu  <  2 \frac{\sigma}{\sqrt{n}}$$ 
+$$- 2 \frac{\sigma}{\sqrt{n}}  < \bar X - \mu  <  2 \frac{\sigma}{\sqrt{n}}$$
 Now, subtract $\bar X$ from all the terms:
-$$- 2 \frac{\sigma}{\sqrt{n}} - \bar X < \bar X - \mu -\bar X <  2 \frac{\sigma}{\sqrt{n}} -\bar X$$ 
+$$- 2 \frac{\sigma}{\sqrt{n}} - \bar X < \bar X - \mu -\bar X <  2 \frac{\sigma}{\sqrt{n}} -\bar X$$
 And this simplifies to
-$$- 2 \frac{\sigma}{\sqrt{n}}-\bar X < -\mu <  2 \frac{\sigma}{\sqrt{n}}-\bar X$$ 
+$$- 2 \frac{\sigma}{\sqrt{n}}-\bar X < -\mu <  2 \frac{\sigma}{\sqrt{n}}-\bar X$$
 Multiplying all the terms by $-1$, we get
-$$2 \frac{\sigma}{\sqrt{n}}+\bar X > \mu >  -2 \frac{\sigma}{\sqrt{n}}+\bar X$$ 
+$$2 \frac{\sigma}{\sqrt{n}}+\bar X > \mu >  -2 \frac{\sigma}{\sqrt{n}}+\bar X$$
 Rewriting this reversing the order of the terms, we get
-$$\bar X - 2 \frac{\sigma}{\sqrt{n}} < \mu <  \bar X + 2 \frac{\sigma}{\sqrt{n}}$$ 
+$$\bar X - 2 \frac{\sigma}{\sqrt{n}} < \mu <  \bar X + 2 \frac{\sigma}{\sqrt{n}}$$
 
 </div>
 <br>
 
 So, the statement
-$$ 
+$$
 P\left( \mu - 2 \frac{\sigma}{\sqrt{n}} < \bar X < \mu + 2 \frac{\sigma}{\sqrt{n}} \right) \approx 0.95
 $$
 is equivalent to the statement
-$$ 
+$$
 P\left( \bar X - 2 \frac{\sigma}{\sqrt{n}} < \mu < \bar X + 2 \frac{\sigma}{\sqrt{n}} \right) \approx 0.95
 $$
 
@@ -230,22 +226,22 @@ This equation gives a confidence interval for $\mu$.
 
 A confidence interval is actually a point estimate $\left( \bar x \right)$ plus or minus the margin of error $\left( 2 \frac{\sigma}{\sqrt{n}} \right)$.  
 
-We use the letter $m$ to denote the margin of error: 
+We use the letter $m$ to denote the margin of error:
 $$m = 2 \frac{\sigma}{\sqrt{n}}$$
 Using this definition for $m$, our confidence interval can be written as
 $$( \bar x - m, ~ \bar x + m )$$
-or 
+or
 $$\bar x \pm m$$
 This pattern will be repeated throughout the course as we create confidence intervals of the form:
-$$ 
-\left( 
+$$
+\left(
 \begin{align}
 point~ ~ ~ &      & margin~  &        & point~ ~ ~ &      & margin~  \\
 estimate   & ~ ~- & of~error & ~ ~,   & estimate   & ~ ~+ & of~error
 \end{align}
-\right) 
+\right)
 $$
-or 
+or
 $$(\text{point estimate}) \pm (\text{margin of error})$$
 </br>
 <a id="z"></a>
@@ -255,11 +251,11 @@ $$(\text{point estimate}) \pm (\text{margin of error})$$
 
 #### What $z$ Corresponds to 95% of the Area?
 
-The 68-95-99.7% Rule for bell-shaped distribution is just a quick approximation.  This is useful for estimation, but more precision is usually required. 
+The 68-95-99.7% Rule for bell-shaped distribution is just a quick approximation.  This is useful for estimation, but more precision is usually required.
 
 <div class="QuestionsHeading">Answer the following question:</div>
 <div class="Questions">
-3. For a standard normal distribution, between what two $z$-scores will 95% of the data fall?  In other words, find the values $-z$ and $z$ such that the area between them is equal to 0.95.  Use the 
+3. For a standard normal distribution, between what two $z$-scores will 95% of the data fall?  In other words, find the values $-z$ and $z$ such that the area between them is equal to 0.95.  Use the
 [Normal Probability Applet](http://statistics.byuimath.com/index.php?title=Normal_Probability_Applet){target="_blank"}.
 
 <a href="javascript:showhide('hint')"><span style="font-size:8pt;">Click here for a hint</span></a>
@@ -294,14 +290,14 @@ Please notice that the number 2 was used as an approximation for the actual valu
 <img src="./Images/Step4.png">
 
 We will compute a 95% confidence interval for the mean of $n=25$ rolls of a fair die.
-A die was rolled 25 times.  The values rolled were: 
+A die was rolled 25 times.  The values rolled were:
 $$
 3 ~ ~ ~ 1 ~ ~ ~ 2 ~ ~ ~ 1 ~ ~ ~ 1 ~ ~ ~ 2 ~ ~ ~ 4 ~ ~ ~ 1 ~ ~ ~ 1 ~ ~ ~ 2 ~ ~ ~ 6 ~ ~ ~ 5 ~ ~ ~ 6 ~ ~ ~ 3 ~ ~ ~ 4 ~ ~ ~ 2 ~ ~ ~ 2 ~ ~ ~ 5 ~ ~ ~ 6 ~ ~ ~ 2 ~ ~ ~ 6 ~ ~ ~ 4 ~ ~ ~ 1 ~ ~ ~ 1 ~ ~ ~ 5
 $$
 The mean of these values is $\bar x = 3.04$.
 It is a fact that for the outcome of a six-sided die, $\sigma=\sqrt{\frac{35}{12}} \approx 1.7078$.
 
-Applying the formula for a 95% confidence interval, 
+Applying the formula for a 95% confidence interval,
 $$
 \left( \bar x - z^* \frac{\sigma}{\sqrt{n}}, ~ \bar x + z^* \frac{\sigma}{\sqrt{n}} \right)
 $$
@@ -520,7 +516,7 @@ Once we have collected data on something, there is no randomness in the system. 
 <br>
 
 Consider the 95% confidence interval for the true mean of 25 rolls of a fair die. We found the 95% confidence interval to be: $(2.37, 3.71)$.  
-When we interpret this confidence interval, we say, "We are 95% *confident* that the true mean is between 2.37 and 3.71." 
+When we interpret this confidence interval, we say, "We are 95% *confident* that the true mean is between 2.37 and 3.71."
 
 The word, "confident" implies that if we repeated this process many, many times, 95% of the confidence intervals we would get would contain the true mean $\mu$.  It does not imply anything about whether or not one specific confidence interval will contain the true mean.
 
@@ -544,7 +540,7 @@ In practice, we never really know $\sigma$.  This procedure is primarily used to
 <img src="./Images/Surgery-Flickr-1517206758_c7412.png">
 
 (Photo credit: Vanderbilt Photo/Neil Brake)
-</center> 
+</center>
 <br>
 
 This reading focuses on an important aspect of designing a study: determining the sample size.
@@ -632,7 +628,7 @@ $$
 <div id="Q12" style="display:none;">
 <center>
 $$
-n = 792 
+n = 792
 $$
 </center>
 </div>
@@ -647,18 +643,18 @@ The process you followed in Questions 8 - 12 is effective, but tedious.  There m
 <a href="javascript:showhide('math2')"><span style="font-size:8pt;">Click here if you love math</span></a>
 <div id="math2" style="display:none;">
 
-$$m = z^* \frac{\sigma}{\sqrt{n}}$$ 
+$$m = z^* \frac{\sigma}{\sqrt{n}}$$
 Multiply both sides of the equation by $\sqrt{n}$:
-$$m \cdot \sqrt{n} = z^* \frac{\sigma}{\sqrt{n}} \cdot \sqrt{n}$$ 
-Which reduces to: 
-$$m \cdot \sqrt{n} = z^* \cdot \sigma$$ 
+$$m \cdot \sqrt{n} = z^* \frac{\sigma}{\sqrt{n}} \cdot \sqrt{n}$$
+Which reduces to:
+$$m \cdot \sqrt{n} = z^* \cdot \sigma$$
 Divide both sides of the equation by $m$.
 Cancelling the $m$'s on the left hand side:
-$$\sqrt{n} = \frac{z^* \cdot \sigma}{m}$$ 
+$$\sqrt{n} = \frac{z^* \cdot \sigma}{m}$$
 Squaring both sides:
-$$\left( \sqrt{n} \right)^2 = \left( \frac{z^* \cdot \sigma}{m} \right)^2$$ 
+$$\left( \sqrt{n} \right)^2 = \left( \frac{z^* \cdot \sigma}{m} \right)^2$$
 Which simplifies to the desired result:
-$$n  = \left( \frac{z^* \cdot \sigma}{m} \right)^2$$ 
+$$n  = \left( \frac{z^* \cdot \sigma}{m} \right)^2$$
 </div>
 
 
@@ -738,7 +734,7 @@ $$
 
 <a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q16" style="display:none;">
-* If we divide the two sample sizes, we get: 
+* If we divide the two sample sizes, we get:
 <center>
 
 $$
@@ -856,7 +852,7 @@ $$
 \begin{array}{1cl}
 n &= \left( \frac{z^*\sigma}{m} \right)^2 \\
 &= \left( \frac{2.3263 \cdot 0.68}{0.2} \right)^2 \\
-&= 62.6 
+&= 62.6
 \end{array}
 $$
 </center>
@@ -934,4 +930,3 @@ $$\displaystyle{\left(\bar x-z^*\frac{\sigma}{\sqrt{n}},~\bar x+z^*\frac{\sigma}
 | :------------------: | :--------------: | :--------------: |
 | [Lesson 9: <br> Inference for One Mean: Sigma Known (Hypothesis Test)](Lesson09.html) | Lesson 10: <br> Inference for One Mean: Sigma Known (Confidence Interval) | [Lesson 11: <br> Inference for One Mean: Sigma Unknown](Lesson11.html) |
 </center>
-

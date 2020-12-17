@@ -1,6 +1,6 @@
 ---
 title: "Lesson 2: The Statistical Process & Design of Studies"
-output: 
+output:
   html_document:
     theme: cerulean
     toc: true
@@ -89,7 +89,7 @@ The following icons can help you remember these steps. Notice that each icon has
 <br>
 
 
-### Step 1: Design the Study 
+### Step 1: Design the Study
 
 <img src="./Images/Step1.png" width="100px;">
 
@@ -115,11 +115,7 @@ After taking Israel captive, Babylon's King Nebuchadnezzar asked his chief offic
 
 Daniel did not want to defile himself by partaking of the king's meat and wine. He asked permission to eat pulse[^1] and drink water instead. His supervisor, Melzar, was afraid to displease the king. He thought that after eating pulse and water, the selected Israelites would look worse than their peers, and he would be punished [(Daniel 1:8-10)](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.8-10?lang=eng#3){target="_blank"}.
 
-<<<<<<< HEAD
-With an understanding of the background of the situation, Daniel proposed an experiment. He said, "Prove thy servants, I beseech thee, ten days; and let them give us pulse to eat, and water to drink. Then let our countenances be looked upon before thee, and the countenance of the children that eat of the portion of the king's meat: and as thou seest, deal with thy servants" [(Daniel 1:12-13.)](https://www.lds.org/scriptures/ot/dan/1.12-13?lang=eng#3){target="_blank"}.  In short, Daniel's implied research question can be stated as: Will those who eat pulse and drink water appear healthier than those who eat the king's meat and drink his wine? Melzar agreed to the experiment.
-=======
 With an understanding of the background of the situation, Daniel proposed an experiment. He said, Prove thy servants, I beseech thee, ten days; and let them give us pulse to eat, and water to drink. Then let our countenances be looked upon before thee, and the countenance of the children that eat of the portion of the king's meat: and as thou seest, deal with thy servants [(Daniel 1:12-13.)](https://www.churchofjesuschrist.org/scriptures/ot/dan/1.12-13?lang=eng#3){target="_blank"}.  In short, Daniel's implied research question can be stated as: Will those who eat pulse and drink water appear healthier than those who eat the king's meat and drink his wine? Melzar agreed to the experiment.
->>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 <div class="QuestionsHeading">Answer the following question:</div>
 <div class="Questions">
@@ -195,8 +191,8 @@ Daniel's experience can also help you learn the Statistical Process. Look at the
 |---------|--------------|------------------------|
 | Step 1: | **D**aniel   | **D**esign the study   |
 | Step 2: | **C**an      | **C**ollect data       |
-| Step 3: | **D**iscern  | **D**escribe the data  | 
-| Step 4: | **M**ore     | **M**ake inferences    | 
+| Step 3: | **D**iscern  | **D**escribe the data  |
+| Step 4: | **M**ore     | **M**ake inferences    |
 | Step 5: | **T**ruth    | **T**ake action        |
 
 </center>
@@ -244,7 +240,7 @@ This short video below  provides a compelling summary of the famous Jonas Salk v
 <br>
 <iframe id="kaltura_player_1579210457" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/9828732/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1579210457&entry_id=0_49lsphky" width="400" height="285" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
 
-As explained in the video, in the first Salk trial almost 1.1 million children participated in the study. Even though the sample size was large, flaws in the study design rendered the results useless. 
+As explained in the video, in the first Salk trial almost 1.1 million children participated in the study. Even though the sample size was large, flaws in the study design rendered the results useless.
 
 Undaunted, Dr. Salk fixed the problems with the design and enrolled hundreds of thousands of additional children for the second phase of his study. In all, over 1.8 million infants and children participated in this experiment, making it the largest drug trial to date.
 
@@ -371,19 +367,8 @@ $$ \displaystyle{\frac{142}{201229} = 0.000~705~7} $$
 
 **Step 4: Make inferences**
 
-<<<<<<< HEAD
-Careful statistical analysis of the records suggested that this difference was so great that it was attributable to the vaccine and not to chance. Assuming that the vaccine had no effect, the probability that the difference in the proportions between the two groups would be at least as extreme as the difference Dr. Salk observed was very low: 0.00000000093. Because this probability is so small, it is highly unlikely that these results are due to chance. This probability is called the P-value, and it will be discussed in Unit 2.
+Careful statistical analysis of the records suggested that this difference was so great that it was attributable to the vaccine and not to chance. Assuming that the vaccine had no effect, the probability that the difference in the proportions between the two groups would be at least as extreme as the difference Dr. Salk observed was very low: 0.00000000093. Because this probability is so small, it is highly unlikely that these results are due to chance.
 
-<div class="Emphasis">
-<br><center>
-For now it is only important to *be aware* of the P-value. In Unit 2 students will learn how to compute and interpret this value.
-</center>
-<br>
-</div>
-=======
-Careful statistical analysis of the records suggested that this difference was so great that it was attributable to the vaccine and not to chance. Assuming that the vaccine had no effect, the probability that the difference in the proportions between the two groups would be at least as extreme as the difference Dr. Salk observed was very low: 0.00000000093. Because this probability is so small, it is highly unlikely that these results are due to chance. 
-
->>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 <br>
 
 
@@ -425,7 +410,7 @@ Auditors typically cannot consider every item in a population, because there are
 
 **Step 2: Collect data**
 
-There are several procedures that can be used to select a random sample from a population, including: **simple random** sampling (SRS), **stratified** sampling, **systematic** sampling, **cluster** sampling, , and **convenience** sampling (or, haphazard sampling). These are examples of **sampling methods**. 
+There are several procedures that can be used to select a random sample from a population, including: **simple random** sampling (SRS), **stratified** sampling, **systematic** sampling, **cluster** sampling, , and **convenience** sampling (or, haphazard sampling). These are examples of **sampling methods**.
 
 #### Random Sampling Methods
 
@@ -441,11 +426,7 @@ A **stratified sample** is when the items to be sampled are organized in groups 
 For example, in obtaining a sample of students from a university, school officials could define the strata as: (1) freshman, (2) sophomores, (3) juniors, and (4) seniors. A simple random sample could then be obtained from each of these strata. This would ensure that each class rank of students was represented in the sample. It would also allow the school officials to see how freshman, sophomore, junior, and senior level students compared in their answers to a survey.
 </div>
 
-<<<<<<< HEAD
-A **simple random sampling (SRS)** is the best method for obtaining a random sample. If there is a list of all items in the population and they are all accessible, a SRS can be collected. For example, suppose there are 2,000 accounts receivable items in the population. Auditors can use a random number generator to choose values between 1 and 2,000 to identify which items are to be audited. Software can be used to create a list of random numbers corresponding to items for the audit. In Excel, the command to obtain a random number between 1 and 2,000 is =*RANDBETWEEN(1,2000)*. Sometimes it is necessary for auditors to renumber the items (1 to 2000) to help create random sample. A simple random sample can be obtained any time there is a complete list of the items to be sampled and they are all accessible. All the statistical procedures in this course assume that simple random sampling has been used.
-=======
 A **systematic sample** is where every $k^{\text{th}}$ item in the population is selected to be part of the sample, beginning at a random starting point. Systematic sampling works well when the items are in a random, but sequential ordering. If the items are not arranged randomly, a systematic sample can miss important parts of the population.
->>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 <div style="padding-left:30px;">
 For example, consider a fast food company where every 10th customer is given the opportunity to compete a satisfaction survey in exchange for a small discount coupon towards their next purchase. An airport security line also often implements a procedure where every 100th (or so) person is selected for a more "in depth" security examination. Similarly, factories that use assembly lines will pull say every 500th item from the assembly line to perform a quality control check on the item.
@@ -460,7 +441,7 @@ For example, ecologists could draw grids on a map of a forest to create small sa
 A **convenience sample** involves selecting items that are relatively easy to obtain and does not use random selection to choose the sample. This method of sampling can be assumed to always bring bias into the sample.  
 
 <div style="padding-left:30px;">
-As an example of a convenience sample, an auditor could haphazardly select items from a filing cabinet. This is frequently done when a quick and simple sample is needed, but may not yield a sample that represents the population well. When possible, convenience samples **should be avoided.** 
+As an example of a convenience sample, an auditor could haphazardly select items from a filing cabinet. This is frequently done when a quick and simple sample is needed, but may not yield a sample that represents the population well. When possible, convenience samples **should be avoided.**
 </div>
 
 <br>
@@ -471,7 +452,7 @@ Whenever we collect data, we record information about the things we are studying
 
 **Quantitative variables** provide measurement information on each individual (or item) in our study. They represent things that are numeric in nature; things that are measured. They often include units of measurement along with the quantitative value of the measurement. For example, the heights of children measured in inches (or centimeters), or their weight measured in pounds (or kilograms). For a quantitative variable, it makes sense to apply arithmetic operations to the data (such as adding values together, computing the  average of the values, or comparing two values). If one child weighs 30 pounds (13.61 kg) and a second child weights 60 pounds (27.22) then the second child is twice as heavy as the first.
 
-**Categorical variables** allow us to place each individual (or item) into to a specific category. Categorical variables are labels, and it does not make sense to do arithmetic with them. For example the gender of a newborn child, the ethnicity of an individual, a person's job title, the brand of phone they own, or the area code of a telephone number, etc are all categorical variables. Notice that although a telephone number consists of numbers, it is not a quantitative measurement. It does not make sense to double someone's phone number, to average phone numbers together, or to say one phone number is half the size of another. But the area code of the phone number gives information about the region where the phone number was first initiated, which is categorical information. 
+**Categorical variables** allow us to place each individual (or item) into to a specific category. Categorical variables are labels, and it does not make sense to do arithmetic with them. For example the gender of a newborn child, the ethnicity of an individual, a person's job title, the brand of phone they own, or the area code of a telephone number, etc are all categorical variables. Notice that although a telephone number consists of numbers, it is not a quantitative measurement. It does not make sense to double someone's phone number, to average phone numbers together, or to say one phone number is half the size of another. But the area code of the phone number gives information about the region where the phone number was first initiated, which is categorical information.
 
 In Unit 3 of this course we will learn more about categorical variables and proportions. Units 1 and 2 of this course focus on studying quantitative variables.
 
@@ -529,21 +510,7 @@ After auditors collect a sample and compile the data, they review the evidence. 
 
 **Step 4: Make inferences**
 
-<<<<<<< HEAD
-Auditors use the information drawn from the sample to form an opinion about the population. Whenever sample data is used to infer a characteristic of a population, it is called making an inference. **Inferential statistics** represents a collection of methods that can be used to make inferences about a population. Based on the documents reviewed, the auditors assess if the company is conducting its business in a proper manner.
-
-When conducting an audit, the implicit assumption is that transactions have been posted properly. This foundational assumption is called the null hypothesis. The **null hypothesis** is a statement about the population that represents the status quo, conventional wisdom, or what is generally accepted as true. In the audit we're considering, the null hypothesis is
-
-$H_0$:  ImmunAvance's financial statements are materially correct.
-
-Auditors sample the company's records to collect evidence against the null hypothesis. If there is sufficient evidence, we reject the null hypothesis. If the null hypothesis is rejected, it is rejected in favor of another statement about the population: the **alternative hypothesis**. In the case of this audit, the alternative hypothesis is
-
-$H_a$:  ImmunAvance's financial statements are not materially correct.
-
-Notice that both the null and alternative hypotheses are statements about the state of *all* of ImmunAvance's financial documents, not just the documents included in the sample.
-=======
 Auditors use the information drawn from the sample to form an opinion about the population. Whenever sample data is used to infer a characteristic of a population, it is called making an inference. **Inferential statistics** represents a collection of methods that can be used to make inference about a population. Based on the documents reviewed, the auditors assess if the company is conducting its business in a proper manner.
->>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 When conducting an audit, the implicit assumption is that transactions have been posted properly. As auditors sample the company's records, they are looking to see if everything is consistent with the original assumption that all transactions have been posted properly. It would only be in the case of discovering suspicious activity or evidence of fraudulent reporting that the auditors would change their belief about the company and accuse the company ImmunAvance of falsely reporting on their financial statements.
 
@@ -582,7 +549,7 @@ Since there was not enough evidence to suggest that ImmunAvance's financial stat
   + A **systematic sample** is every ***k***<sup>th</sup> item in the population, beginning at a random starting point
   + A **cluster sample** is all items in one or more randomly selected clusters, or blocks
   + A **stratified sample** divides data into similar groups and an **SRS** is taken from each group
-  + A **convenience sample** is one easily obtained in a less-than-systematic way and should be avoided whenever possible 
+  + A **convenience sample** is one easily obtained in a less-than-systematic way and should be avoided whenever possible
 
 - **Quantitative variables** represent things that are numeric in nature, such as the value of a car or the number of students in a classroom. **Categorical variables** represent non-numerical data that can only be considered as labels, such as colors or brands of shoes.
 

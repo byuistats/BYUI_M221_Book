@@ -1,6 +1,6 @@
 ---
 title: "Data"
-output: 
+output:
   html_document:
     theme: cerulean
     toc: true
@@ -129,11 +129,7 @@ Or download individual files:
 
 [HubblesConstant-SupernovasUpTo250Mpc.xlsx](./Data/HubblesConstant-SupernovasUpTo250Mpc.xlsx)          
 
-<<<<<<< HEAD
 [IllinoisBirthWeights.xlsx](./Data/IllinoisBirthWeights.xlsx)
-=======
-[IllinoisBirthWeights.xlsx](./Data/IllinoisBirthWeights.xlsx) 
->>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 
 [IllinoisBirthWeightsTwoVar.xlsx](./Data/IllinoisBirthWeightsTwoVar.xlsx)
@@ -237,6 +233,6 @@ Or download individual files:
 
 [ZincForColds.xlsx](./Data/ZincForColds.xlsx)                                                          
 
-[ZungSim.xlsx](./Data/ZungSim.xlsx) 
+[ZungSim.xlsx](./Data/ZungSim.xlsx)
 
 </div>

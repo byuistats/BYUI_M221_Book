@@ -1,6 +1,6 @@
 ---
 title: "Lesson 22: Simple Linear Regression"
-output: 
+output:
   html_document:
     theme: cerulean
     toc: true
@@ -48,7 +48,7 @@ We will be using linear equations throughout this lesson.  Click on the link bel
 
 A **linear equation** is the technical term for any equation that describes a line.  Two important characteristics of a line are its slope and its Y-intercept.  
 
-The **Y-intercept** is the value at which the line crosses the Y-axis.  Stated differently, the Y-intercept is the value of $Y$ that corresponds to $X = 0$.  Given the equation of a line, you can find the Y-intercept by substituting $X = 0$ and solving for $Y$. 
+The **Y-intercept** is the value at which the line crosses the Y-axis.  Stated differently, the Y-intercept is the value of $Y$ that corresponds to $X = 0$.  Given the equation of a line, you can find the Y-intercept by substituting $X = 0$ and solving for $Y$.
 
 The **slope** of a line is a measure of how steep the line is.  It is sometimes described as *rise* over *run*.  If the slope is positive, then the values of $Y$ increase as the values of $X$ increase.  When the slope is expressed as a fraction, the numerator tells how much the points on the line change vertically as you move to the right the distance indicated by the denominator.  If the slope is negative, the values of $Y$ decrease as $X$ increases.  If the slope of a line is $\frac{2}{3}$, then the value of $Y$ will increase by 2 units if $X$ increases by three units.  For a line with slope $-5 \left( = \frac{-5}{1}\right)$, the value of $Y$ will *decrease* by 5 units if $X$ increases by one unit.
 
@@ -89,7 +89,7 @@ Notice that this is the equation of a straight line. You might have written line
 -->
 This leads to the following representation of the linear equation:
 $$\widehat Y = b_0 + b_1 X$$
-We use the symbol $\widehat Y$ to indicate a predicted value for $Y$. The value $b_0$ is the Y-intercept and $b_1$ is the slope.  Compare this notation to traditional slope-intercept form. 
+We use the symbol $\widehat Y$ to indicate a predicted value for $Y$. The value $b_0$ is the Y-intercept and $b_1$ is the slope.  Compare this notation to traditional slope-intercept form.
 
 You may wonder why we would use this form (rather than traditional slope-intercept form) to express the equation.  Click on the link below for a brief explanation.
 
@@ -99,7 +99,7 @@ You may wonder why we would use this form (rather than traditional slope-interce
   In this course we will relate one independent variable to one dependent variable.  In many cases, we will want to predict the value of $Y$, based on the value of $X$.  This is done using simple linear regression.  
   If there are several independent variables that influence the value of the dependent variable, we call it multiple regression.  A multiple regression equation with two independent variables, $X_1$ and $X_2$, could be written as:
 $$Y = b_0 + b_1 X_1 + b_2 X_2$$
-  If there were four independent variables, we would have the regression equation 
+  If there were four independent variables, we would have the regression equation
 $$Y = b_0 + b_1 X_1 + b_2 X_2 + b_3 X_3 + b_4 X_4$$
   Notice that the Y-intercept is the first term in this sum, and we can simply add more terms as needed.  The reason we write the Y-intercept first is that it allows us to easily add more terms to the model without having to rewrite or reorder any of the existing terms.
   In this course, you will not be conducting multiple regression analyses, but it is good for you to be aware that these procedures exist.  Multiple regression is used in many business forecasting models.
@@ -145,7 +145,7 @@ $Y = -3 + \frac{5}{2}X$
 
 A partial skeleton of an enormous extinct crocodilian was found in the Sahara Desert.  With a skull that is about six feet long, this massive creature was a fierce hunter.  Unfortunately, the skeleton is incomplete.  Almost none of the bones for the legs and tail were recovered.  How big was this massive creature?
 
-To answer this question, paleontologist Paul Sereno teamed up with modern crocodile expert Brady Barr.  Their work is demonstrated in the National Geographic video *SuperCroc*.  Using linear regression, these researchers are able to estimate the size of SuperCroc almost 110 million years later simply by knowing the size of its skull. Before continuing, please follow this link to watch a 15 minute clip of this video. 
+To answer this question, paleontologist Paul Sereno teamed up with modern crocodile expert Brady Barr.  Their work is demonstrated in the National Geographic video *SuperCroc*.  Using linear regression, these researchers are able to estimate the size of SuperCroc almost 110 million years later simply by knowing the size of its skull. Before continuing, please follow this link to watch a 15 minute clip of this video.
 
 <br>
 <div class="message Note">This video is an hour and a half long. **YOU DO NOT NEED TO WATCH THE ENTIRE VIDEO**. Please watch only the last fifteen minutes, beginning at 1:19:00</div>
@@ -190,11 +190,7 @@ The output from the commands given above will include a table similar to the one
 
 <img src="./Images/EstuarineCrocodile-Regression-Output.PNG">
 
-<<<<<<< HEAD
 The regression coefficients are given in the columns labeled "Y-intercept ($b_0$)" and "Slope ($b_1$)".  The y-intercept gives the constant term (or the term that is not multiplied by $x$) which is the value of $b_0$. In this case, $b_0=-18.274$.  The "Slope" entry of the table gives the value that is to be multiplied by $X$; this is the slope of the regression equation.  In our model, $X$ represents the head length, in centimeters. The slope in our regression equation is $b_1=7.660$.  Putting all this together, we get the equation:
-=======
-In this output we can see the y-intercept, also labeled $b_0$, as $b_0=-18.274$.  The slope, or $b_1$, gives the value that is to be multiplied by $X$.  In our model, $X$ represents the head length, in centimeters.  The row is labeled as "Head Length (cm)".  The slope in our regression equation is $b_1=7.660$.  Putting all this together, we get the equation:
->>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 
 
@@ -230,7 +226,7 @@ Even though we can do this with a calculator, it is a little tedious and is subj
 **To use Excel to predict the value of $Y$ for any specified value of $X$, do the following:**
 
 - Enter the explanatory (x) and response (y) variables in the first two columns of the Linear Regression spreadsheet.
-- Find cell J18, which is labeled as "x" in the "Predicted Value" table to the right of the scatter plot. 
+- Find cell J18, which is labeled as "x" in the "Predicted Value" table to the right of the scatter plot.
 - In cell J18, enter the value of x for which you wish to predict y.  For this example, enter 87 for x, which is the skull length of the juvenile sarcosuchus.
 - The predicted value is given in the cell labeled "predicted."
 <br>
@@ -300,7 +296,7 @@ The equation of this line is $\widehat Y = b_0 + b_1 X$.  This is the equation o
 
 <img src="./Images/Manatees-ManateeBearingScarsOnBackFromBoatPropeller-RobertKBonde-USFishAndWildlifeService.png">
 
-Manatees are curious, peaceful sea creatures that like to sun themselves just below the ocean's surface.  Some environmentalists have claimed that manatees are being killed by powerboat propellers.  The data set [Manatees.xlsx](./Data/Manatees.xlsx) gives the number of Florida powerboat registrations (in thousands) and the number of manatees killed by powerboats for the years 1977-2006. <!--<cite>Manatees06,Manatees-ManateeData,Manatees-PowerboatData</cite>--> 
+Manatees are curious, peaceful sea creatures that like to sun themselves just below the ocean's surface.  Some environmentalists have claimed that manatees are being killed by powerboat propellers.  The data set [Manatees.xlsx](./Data/Manatees.xlsx) gives the number of Florida powerboat registrations (in thousands) and the number of manatees killed by powerboats for the years 1977-2006. <!--<cite>Manatees06,Manatees-ManateeData,Manatees-PowerboatData</cite>-->
 
 Is there a relationship between the number of powerboats registered in Florida and the number of manatees killed there by powerboats each year?  If the powerboats are killing the manatees, then we would expect to see a relationship between the number of powerboats and the number of manatees killed by powerboats.  As the number of powerboats increases, we would expect to observe a corresponding increase in manatee deaths due to powerboats.
 
@@ -432,7 +428,7 @@ TextGoesHere
 
 - In statistics, we write the **linear regression equation** as $\widehat Y=b_0+b_1X$ where $b_0$ is the **Y-intercept** of the line and $b_1$ is the **slope** of the line. The values of $b_0$ and $b_1$ are calculated using software.
 
-- Linear regression allows us to predict values of $Y$ for a given $X$. This is done by first calculating the coefficients $b_0$ and $b_1$ and then plugging in the desired value of $X$ and solving for $Y$. 
+- Linear regression allows us to predict values of $Y$ for a given $X$. This is done by first calculating the coefficients $b_0$ and $b_1$ and then plugging in the desired value of $X$ and solving for $Y$.
 
 - The **independent (or explanatory) variable ($X$)** is the variable which is *not* affected by what happens to the other variable. The **dependent (or response) variable ($Y$)** is the variable which *is* affected by what happens to the other variable. For example, in the correlation between number of powerboats and number of manatee deaths, the number of deaths is affected by the number of powerboats in the water, but not the other way around. So, we would assign $X$ to represent the number of powerboats and $Y$ to represent the number of manatee deaths.
 <br>

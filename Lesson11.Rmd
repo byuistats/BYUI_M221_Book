@@ -1,6 +1,6 @@
 ---
 title: "Lesson 11 Inference for One Mean (Sigma Unknown)"
-output: 
+output:
   html_document:
     theme: cerulean
     toc: true
@@ -30,16 +30,16 @@ By the end of this lesson, you should be able to do the following with regards t
 
 * Calculate and interpret a confidence interval for a population mean given a confidence level.
 * Identify a point estimate and margin of error for the confidence interval.
-* Show the appropriate connections between the numerical and graphical summaries that support the confidence interval. 
+* Show the appropriate connections between the numerical and graphical summaries that support the confidence interval.
 * Check the requirements the confidence interval.
- 
+
 **Regarding Hypothesis Testing for a single mean with $\sigma$ unknown:**
 
-* State the null and alternative hypothesis. 
+* State the null and alternative hypothesis.
 * Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.
 * Assess the statistical significance by comparing the p-value to the α-level.
 * Check the requirements for the hypothesis test.
-* Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
+* Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test.
 * Draw a correct conclusion for the hypothesis test.
 </div>
 <br>
@@ -197,12 +197,12 @@ $$
 <img src="./Images/BodyTemp-Histogram-LoRes.png">
 
 <img src="./Images/Step4.png">
-  
+
 **Verify the requirements have been met**
 
 - We assume that the individuals chosen to participate in the study represent a (simple) random sample from the population.
 - $\bar x$ will be normally distributed, because the sample size is large.  (Note: We could have also noticed that the body temperature data appears to be normally distributed, so even with a small sample size, $\bar x$ would be normal.)
-        
+
 **Give the test statistic and its value**
 
 We will need to conduct the analysis using software, so we can report this value.
@@ -324,7 +324,7 @@ Using this data set, test the hypothesis that the mean weight of babies born in 
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
 
-When the data are entered into the file 
+When the data are entered into the file
 [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx), the following output is generated:
 
 <img src="./Images/BabyBoom-Ttest-Excel_Toolbox.PNG">
@@ -368,7 +368,7 @@ The data show a left-skewed shape, however the sample size is large.  Using the 
 
 <a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q3" style="display:none;">
-- The test statistic is a $t$.  The value of the test statistic is $-1.219$.  This was taken from the output above.  We have $t = -1.219$. 
+- The test statistic is a $t$.  The value of the test statistic is $-1.219$.  This was taken from the output above.  We have $t = -1.219$.
 </div>
 <br>
 
@@ -448,7 +448,7 @@ The IBM T. J. Watson Research Center developed methods to measure the quality of
 
 **Describe the data collection procedures**
 
-To test Pharaoh's ability to translate, Koehn took a random sample of 100 blocks of Spanish text, each of which contained 300 sentences, and used Pharaoh to translate each of these to English.  The BLEU score was calculated for each of the 100 blocks.  The data were extracted from Figure 2 in a paper Koehn published. <!--<cite>Koehn04</cite>-->  The 100 BLEU scores are given in 
+To test Pharaoh's ability to translate, Koehn took a random sample of 100 blocks of Spanish text, each of which contained 300 sentences, and used Pharaoh to translate each of these to English.  The BLEU score was calculated for each of the 100 blocks.  The data were extracted from Figure 2 in a paper Koehn published. <!--<cite>Koehn04</cite>-->  The 100 BLEU scores are given in
 [BLEU-Scores](./Data/BLEU-Scores.xlsx).
 
 Koehn wants to find an estimate of the true mean BLEU score for text translated by the Pharaoh computer program.  He would like to compute a confidence interval, but he does not know the true population standard deviation, $\sigma$.
@@ -461,10 +461,10 @@ Koehn wants to find an estimate of the true mean BLEU score for text translated 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <div class="SoftwareHeading">Excel Instructions</div>
 <div class="Summary">
-Copying the 
-[BLEU-Scores](./Data/BLEU-Scores.xlsx) 
-data into the 
-[Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) 
+Copying the
+[BLEU-Scores](./Data/BLEU-Scores.xlsx)
+data into the
+[Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx)
 file in Excel, we get the following:
 
 <center><img src="./Images/BLEUscores-Excel_Toolbox.PNG"></center>
@@ -477,7 +477,7 @@ The summary statistics are:
 
 $$
 \begin{align}
-\bar x =& 0.288 \\ 
+\bar x =& 0.288 \\
 s =& 0.026 \\
 n =& 100
 \end{align}
@@ -519,15 +519,15 @@ $$(0.282, 0.293)$$
 <br>
 
 <div id="hc" style="display:none;">
-The formula for the confidence interval where $\sigma$ is known was given in the reading titled 
+The formula for the confidence interval where $\sigma$ is known was given in the reading titled
 [Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)](Lesson10.html) as
 $$
 \left( \bar x - z^* \frac{\sigma}{\sqrt{n}}, ~ \bar x + z^* \frac{\sigma}{\sqrt{n}} \right)
-$$ 
+$$
 It is impossible to know the true standard deviation of the BLEU scores for a new translation program like Pharaoh. Replacing $\sigma$ with $s$ and replacing $z^*$ with $t^*$, we get:
 $$
 \left( \bar x - t^* \frac{s}{\sqrt{n}}, ~ \bar x + t^* \frac{s}{\sqrt{n}} \right)
-$$ 
+$$
 The value of $t^*$ depends on the level of confidence and the sample size.  It must be computed using software or looked up on a table.  If you are asked to compute a confidence interval for a mean where the population standard deviation is unknown, the value of $t^*$ will be given to you.  The other numbers ($\bar x$, $s$, and $n$) can all be obtained directly from your data.
 
 If we want to create a 95% confidence interval for $\mu$, with 99 degrees of freedom, then $t^* = 1.9842$.
@@ -535,7 +535,7 @@ If we want to create a 95% confidence interval for $\mu$, with 99 degrees of fre
 Using the sample statistics:
 $$
 \begin{align}
-\bar x =& 0.2876 \\ 
+\bar x =& 0.2876 \\
 s =& 0.0264 \\
 n =& 100
 \end{align}
@@ -544,11 +544,11 @@ $$
 The 95% confidence interval for $\mu$ is:
 $$
 \left( 0.2876 - 1.9842 \frac{0.0264}{\sqrt{100}}, ~ 0.2876 + 1.9842 \frac{0.0264}{\sqrt{100}} \right)
-$$ 
+$$
 which reduces to:
 $$
 \left( 0.2824, ~ 0.2928 \right)
-$$ 
+$$
 </div>
 <br>
 
@@ -611,14 +611,14 @@ Answer the following questions using the data set [BLEU-Scores](./Data/BLEU-Scor
 
 **Summarize the relevant background information**
 
-A group of statisticians measured the weights of 2000 Belgian one Euro coins in eight batches.  Each batch contains coins that were all minted together. <!--<cite>JSEeuros</cite>--> You can learn more about these data at: 
+A group of statisticians measured the weights of 2000 Belgian one Euro coins in eight batches.  Each batch contains coins that were all minted together. <!--<cite>JSEeuros</cite>--> You can learn more about these data at:
 [http://www.amstat.org/publications/jse/](http://www.amstat.org/publications/jse/datasets/euroweight.txt){target="_blank"}
 
 <img src="./Images/Step2.png">
 
 **Describe the data collection procedures**
 
-The coins were "borrowed" from a bank in Belgium, one batch at a time. The weights (in grams) of the coins are given in the file [EuroWeight.xlsx](./Data/EuroWeight.xlsx). 
+The coins were "borrowed" from a bank in Belgium, one batch at a time. The weights (in grams) of the coins are given in the file [EuroWeight.xlsx](./Data/EuroWeight.xlsx).
 
 <img src="./Images/Step3.png">
 
@@ -629,8 +629,7 @@ The coins were "borrowed" from a bank in Belgium, one batch at a time. The weigh
 <a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q8" style="display:none;">
 
-<<<<<<< HEAD
-The following output was generated using the Excel file 
+The following output was generated using the Excel file
 [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx):
 
 <center><img src="./Images/EuroWeights-Histogram.PNG"></center>
@@ -642,14 +641,11 @@ The following output was generated using the Excel file
 <br>
 
 * When we do this, we get the following summary statistics:
-=======
-Use Excel to calculate the following summary statistics:
->>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 <center>
 
 $$
 \begin{align}
-\bar x =& 7.521 \\ 
+\bar x =& 7.521 \\
 s =& 0.0344 \\
 n =& 2000
 \end{align}
@@ -697,7 +693,7 @@ The data follow a bell-shaped distribution.  There are a few potential outliers,
 <div id="Q10" style="display:none;">
 <center>
 $$
-(7.519, ~ 7.523) 
+(7.519, ~ 7.523)
 $$
 </center>
 </div>
@@ -725,7 +721,7 @@ $$
 - In practice we rarely know the true standard deviation $\sigma$ and will therefore be unable to calculate a z-score. **Student's t-distribution** gives us a new test statistic, $t$, that is calculated using the sample standard deviation ($s$) instead.
 $$\displaystyle{ t = \frac {\bar x - \mu} {s / \sqrt{n}} }$$
 
-- The $t$-distribution is similar to a normal distribution in that it is bell-shaped and symmetrical, but the exact shape of the $t$-distribution depends on the **degrees of freedom ($df$)**. 
+- The $t$-distribution is similar to a normal distribution in that it is bell-shaped and symmetrical, but the exact shape of the $t$-distribution depends on the **degrees of freedom ($df$)**.
 $$df=n-1$$
 
 *You will use Excel to carry out hypothesis testing and create confidence intervals involving $t$-distributions.

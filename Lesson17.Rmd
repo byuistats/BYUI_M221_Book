@@ -1,6 +1,6 @@
 ---
 title: "Lesson 17: Inference for One Proportion"
-output: 
+output:
   html_document:
     theme: cerulean
     toc: true
@@ -30,17 +30,17 @@ By the end of this lesson you should be able to do the following.
 
 * Calculate and interpret a confidence interval for a single proportion given a confidence level.
 * Identify a point estimate and margin of error for the confidence interval.
-* Show the appropriate connections between the numerical and graphical summaries that support the confidence interval. 
+* Show the appropriate connections between the numerical and graphical summaries that support the confidence interval.
 * Check the requirements for the confidence interval.
-* Calculate a desired sample size given a level of confidence and margin of error (with or without a prior estimate of the population proportion). 
+* Calculate a desired sample size given a level of confidence and margin of error (with or without a prior estimate of the population proportion).
 
 **Regarding Hypothesis Testing for a single proportion:**
 
-* State the null and alternative hypothesis. 
+* State the null and alternative hypothesis.
 * Calculate the test-statistic and p-value of the hypothesis test.
 * Assess the statistical significance by comparing the p-value to the α-level.
 * Check the requirements for the hypothesis test.
-* Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
+* Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test.
 * Draw a correct conclusion for the hypothesis test.
 </div>
 <br>
@@ -116,13 +116,9 @@ To download this file, click here: [Math 221 Statistics Toolbox](./Data/Math221S
 
 For this example we will consider the "Honesty at Medical School" data above.
 
-- **Step 1**: Open the Math 221 Statistics Toolbox and click on the "One Proportion" tab. 
+- **Step 1**: Open the Math 221 Statistics Toolbox and click on the "One Proportion" tab.
 
-<<<<<<< HEAD
-- The yellow boxes indicate the input spaces. The first step, getting an estimate of $\widehat{p}$, is accomplished by inputting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell E7. (You can ignore column A which asks you to paste in data. We will only be putting in summary data of counts, not individual observations.)  
-=======
 - The yellow boxes indicate the input spaces. The first step, getting an estimate of $\hat{p}$, is accomplished by inputting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell C7.   
->>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 <img src="./Images/Lesson_17_pic_1.PNG">
 
@@ -134,11 +130,7 @@ You may have noticed that after you input the values of $x$ and $n$ into the yel
 <img src="./Images/Lesson_17_pic_4.PNG">
 
 
-<<<<<<< HEAD
-- **Step 2**: Next we must indicate our desired level of confidence in cell J11. By default it is set to 0.95, meaning a 95% confidence level. The 95% confidence interval is given in the cells L14 and L15. For convenience, $\widehat{p}$ and the margin of error are also shown in this block of output.
-=======
 - **Step 2**: Next we must indicate our desired level of confidence in cell I11. By default it is set to 0.95, meaning a 95% confidence level. The 95% confidence interval is given in the cells K14 and L14. For convenience, $\hat{p}$ and the margin of error are also shown in this block of output.
->>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 <img src="./Images/Lesson_17_pic_5.PNG">
 
@@ -167,8 +159,8 @@ DeWitt C. Baldwin, Jr. and others conducted a larger study to assess how widespr
 <a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
 <center>
-$$ 
-\displaystyle{\widehat p = \frac{114}{2426} = 0.047} 
+$$
+\displaystyle{\widehat p = \frac{114}{2426} = 0.047}
 $$
 </center>
 </div>
@@ -389,13 +381,9 @@ To download this file, click here: [Math 221 Statistics Toolbox](./Data/Math221S
 
 For this example we will consider the "PTC" data above.
 
-- **Step 1**: Open the Math 221 Statistics Toolbox and click on the "One Proportion" tab. 
+- **Step 1**: Open the Math 221 Statistics Toolbox and click on the "One Proportion" tab.
 
-<<<<<<< HEAD
-- The yellow boxes indicate the input spaces. The first step, getting an estimate of $\widehat{p}$, is accomplished by inputting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell E7. (You can ignore column A which asks you to paste in data. We will only be putting in summary data of counts, not individual observations.)  
-=======
 - The yellow boxes indicate the input spaces. The first step, getting an estimate of $\hat{p}$, is accomplished by inputting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell C7.   
->>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 <img src="./Images/Lesson_17_pic_6.PNG">
 
@@ -435,7 +423,7 @@ Among the $n=40$ observed indicators of health, $x=19$ suggested good health. Us
 <div id="Q15" style="display:none;">
 <center>
 $\displaystyle {\widehat p = \frac{x}{n} = \frac{19}{40} = 0.475~\text{or}~47.5\%}$
-</center> 
+</center>
 
 
 <img src="./Images/Water_quality_pie_graph_Excel.PNG">

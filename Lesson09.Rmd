@@ -1,6 +1,6 @@
 ---
 title: "Lesson 9: Inference for One Mean: Sigma Known (Hypothesis Test)"
-output: 
+output:
   html_document:
     theme: cerulean
     toc: true
@@ -29,11 +29,11 @@ output:
 By the end of this lesson, you should be able to:
 
 - Conduct a Hypothesis Test for a single mean with σ known:
-  + State the null and alternative hypothesis. 
+  + State the null and alternative hypothesis.
   + Calculate the test-statistic and p-value of the hypothesis test.
   + Assess the statistical significance by comparing the p-value to the α-level.
   + Check the requirements for the hypothesis test.
-  + Show the appropriate connections between the numerical and graphical summaries that support this hypothesis test. 
+  + Show the appropriate connections between the numerical and graphical summaries that support this hypothesis test.
   + Draw a correct conclusion for the hypothesis test.
   + Interpret a Type I and II error.
 </div>
@@ -71,7 +71,7 @@ When we test hypotheses, we assume the null hypothesis is true.  Because of this
 
 <img src="./Images/Step2.png">
 
-How do we gather evidence against a null hypothesis?  We collect data. 
+How do we gather evidence against a null hypothesis?  We collect data.
 
 The marine accident report gives the weight (in pounds) of each of the passengers and the crew member. These values are reproduced below. <!-- [Cite: "Capsizing of New York State-Certificated Vessel Ethan Allen, Lake George, New York October 2, 2005"] -->
 
@@ -105,7 +105,7 @@ The marine accident report gives the weight (in pounds) of each of the passenger
  190, 		
  129 ,		
  146 ,		
- 135 ,	
+ 135 ,
  176 ,
  204 ,		
  170,
@@ -125,7 +125,7 @@ The marine accident report gives the weight (in pounds) of each of the passenger
  230 ,		
  268 ,		
  170)
- 
+
 
 library(pander)
 pander(matrix(data = w, nrow = 6, ncol=8, byrow=TRUE))
@@ -190,8 +190,8 @@ pander(matrix(data = w, nrow = 6, ncol=8, byrow=TRUE))
 | 268 		
 | 170
 |-
-|} 
-</center> 
+|}
+</center>
 -->
 
 <img src="./Images/Step3.png">
@@ -203,14 +203,14 @@ To help us understand the data, we first create a graph summarizing the values.
 <img src="./Images/EthanAllen-PassengerWeights-Histogram.png">
 </center>
 
-Next, we compute summary statistics. The sample size is $n=48$, and the sample mean is $\bar{x}=177.6$ pounds. According to the CDC, the standard deviation of the weights of individuals in the United States is $\sigma=26.7$ pounds. <!-- CITE: http://www.cdc.gov/growthcharts/2000growthchart-us.pdf, page 154-155.--> 
+Next, we compute summary statistics. The sample size is $n=48$, and the sample mean is $\bar{x}=177.6$ pounds. According to the CDC, the standard deviation of the weights of individuals in the United States is $\sigma=26.7$ pounds. <!-- CITE: http://www.cdc.gov/growthcharts/2000growthchart-us.pdf, page 154-155.-->
 
 Considering the data as a random sample of all possible tour boat passengers, it appears that the true mean weight of tour boat passengers might be greater than 140 pounds.  However, we need to check this with a formal test of our hypotheses.
- 
+
 
 <img src="./Images/Step4.png">
 
-It is not sufficient to gain an intuitive sense for the data.  We will test if there is sufficient evidence to reject the null hypothesis that the true mean weight of tour boat passengers is 140 pounds. 
+It is not sufficient to gain an intuitive sense for the data.  We will test if there is sufficient evidence to reject the null hypothesis that the true mean weight of tour boat passengers is 140 pounds.
 
 Assuming the null hypothesis is true, what is the probability that we would observe a sample mean as extreme or more extreme than the values we observed?  This probability is called the $P$-value.
 
@@ -220,15 +220,11 @@ $$\displaystyle{ z= \frac{ \bar{x} − \mu}{\sigma/\sqrt{n}} = \frac{177.6−140
 
 We use the applet to determine the probability of observing a value of $z$ that is as large or larger than $9.757$.  This is the same as the probability of observing a value of $\bar{x} =177.6$ or more pounds, given that the true mean really is $\mu = 140$ pounds.
 
-<<<<<<< HEAD
-The area to the right of $z=9.757$ is so small, the normal probability applet gives the area as "8.6086e-23."  This is how a computer represents scientific notation.  This number is actually $8.6086\times 10^{-23}$ or in other words, 0.000 000 000 000 000 000 000 086 086. This is the probability that a mean of $\bar{x}=177.6$ pounds was observed just by chance assuming the true mean is $\mu = 140$ lbs.  This is very, very unlikely.  A more plausible explanation is that the mean weight of individuals in the population is greater than 140 pounds.
-=======
 The area to the right of $z=9.757$ is so small, the normal probability applet gives the area as "8.6086e-23."  This is how a computer represents scientific notation.  This number is actually $8.6086ex10^{-23}$ or in other words, 0.000 000 000 000 000 000 000 086 086. This is the probability that a mean of $\bar x=177.6$ pounds or greater was observed just by chance assuming the true mean is $\mu = 140$ lbs.  This is very, very unlikely.  A more plausible explanation is that the true mean weight $\mu$ of individuals in the population is greater than 140 pounds.
->>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 Based on this analysis and the hypothesis test, the evidence against $H_0$ is strong enough to conclude that if every seat on the Ethan Allen was occupied, that the boat would be carrying a greater load than it was certified to handle.
 
- 
+
 <img src="./Images/Step5.png">
 
 As a result of this accident, the United States government took several actions.  The Coast Guard stability regulations were changed, and the assumed average weight per person was increased to 185 pounds. <!-- [[CITE: http://www.uscg.mil/hq/cg5/cg5212/docs/secg12142010.pdf]]--> As a result, the safety of public vessels has been improved.
@@ -275,7 +271,7 @@ A group of researchers led by Philip A. Mackowiak, MD, conducted a study to asse
 
 <a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
-* We can compare his sample results to the assumed population mean of 98.6&deg; F. 
+* We can compare his sample results to the assumed population mean of 98.6&deg; F.
 </div>
 <br>
 
@@ -283,7 +279,7 @@ A group of researchers led by Philip A. Mackowiak, MD, conducted a study to asse
 
 <a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q3" style="display:none;">
-- $\bar{x} = 98.23~^\circ\text{F}$. 
+- $\bar{x} = 98.23~^\circ\text{F}$.
 </div>
 <br>
 
@@ -303,7 +299,7 @@ A group of researchers led by Philip A. Mackowiak, MD, conducted a study to asse
 </div>
 <br>
 
-6. What is the shape of the distribution of all possible sample means? How do we know? 
+6. What is the shape of the distribution of all possible sample means? How do we know?
 
 <a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q6" style="display:none;">
@@ -414,7 +410,7 @@ However, it is important to remember that the standard deviation of $\bar{x}$ is
 $$
 z = \frac{\bar{x} - \mu}{\sigma / \sqrt{n}} = \frac{98.23 - 98.6}{0.675 / \sqrt{148}} = -6.6685
 $$
-Where $z$ is the test statistic, $\bar{x}$ is the sample mean, $\mu$ is the population mean, $\sigma$ is the standard deviation and $n$ is the sample size. 
+Where $z$ is the test statistic, $\bar{x}$ is the sample mean, $\mu$ is the population mean, $\sigma$ is the standard deviation and $n$ is the sample size.
 Based on the results from the formula above, $\bar{x}$ is over 6 standard deviations below the mean!
 
 ### $P$-value
@@ -438,10 +434,10 @@ You should always convert the computer's notation involving "E" to scientific no
 <div class="Emphasis">
 &nbsp;&nbsp;**Scientific Notation:**
 
-- Scientific notation is a method used to write very large or very small numbers without a lot of extra zeros. Computers express scientific notation using the letter "E." For example, to write $7.8\times 10^3$, a computer would output the expression 7.8E3. For example, the number  $7.8\times 10^3$ is $7.8 \times 1000=7800$, since $10^3 = 10 \cdot 10 \cdot 10 = 1000$.  Another way to think of this is to move the decimal place in the number 7.8 three places to the right, which gives you 
+- Scientific notation is a method used to write very large or very small numbers without a lot of extra zeros. Computers express scientific notation using the letter "E." For example, to write $7.8\times 10^3$, a computer would output the expression 7.8E3. For example, the number  $7.8\times 10^3$ is $7.8 \times 1000=7800$, since $10^3 = 10 \cdot 10 \cdot 10 = 1000$.  Another way to think of this is to move the decimal place in the number 7.8 three places to the right, which gives you
 $$ 7~\underset{\rightarrow}{8} \underset{\rightarrow}{0} \underset{\rightarrow}{0}. $$  
 
-- This is an example of how very large numbers can be represented.  To express small numbers (close to zero,) we use negative exponents.  The number $9.12 \times 10^{-5}$ is the same as $9.12 \times (10^5)^{-1} = 9.12 \times (10000)^{-1}$.  This can be written as $9.12 \times 0.00001 = 0.0000912$.  Since the exponent on the 10 is $-5$, you move the decimal place in the number 9.1 five places to the left: 
+- This is an example of how very large numbers can be represented.  To express small numbers (close to zero,) we use negative exponents.  The number $9.12 \times 10^{-5}$ is the same as $9.12 \times (10^5)^{-1} = 9.12 \times (10000)^{-1}$.  This can be written as $9.12 \times 0.00001 = 0.0000912$.  Since the exponent on the 10 is $-5$, you move the decimal place in the number 9.1 five places to the left:
 
 $$0.\underset{\leftarrow}{0}\underset{\leftarrow}{0}\underset{\leftarrow}{0}\underset{\leftarrow}{0}\underset{\leftarrow}{9}~1~2$$
 
@@ -496,7 +492,7 @@ In cases of very large or very small $z$ statistics sometimes the shaded area is
 
 <!-- Old table
 <center>
-{| class="wikitable" 
+{| class="wikitable"
 ! Two-tailed !! Left-tailed !! Right-tailed
 |- align="center"
 | $H_0:~~\mu = 98.6$ || $H_0:~~\mu = 98.6$ || $H_0:~~\mu = 98.6$
@@ -537,8 +533,8 @@ If $\bar{x}$ is close to $\mu$, then the $z$-score will be small.  If the $z$-sc
 
 <!-- Old table
 <center>
-{| class="wikitable" 
-! Large $P$-value !! Small $P$-value 
+{| class="wikitable"
+! Large $P$-value !! Small $P$-value
 |- align="center"
 | [[File:Applet-largeP-LoRes.png">
 |- align="center"
@@ -630,11 +626,7 @@ We do not want to commit Type I errors, so why not choose a very small value for
 If the $\alpha$ value (the probability of committing a Type I error) is very small, the probability of committing a Type II error will be large.  Conversely, if $\alpha$ is allowed to be very large, then the probability of committing a Type II error will be very small.
 A level of significance of $\alpha=0.05$ seems to strike a good balance between the probabilities of committing a Type I versus a Type II error.  However, there may be instances where it will be important to choose a different value for $\alpha$.  The important thing is to choose $\alpha$ before you collect your data. Typical choices of $\alpha$ are $0.05$ (most common), $0.1$, and $0.01$.
 
-<<<<<<< HEAD
-#### Read each of the following scenarios, and answer the questions.
-=======
 Read each of the following scenarios and answer the questions.
->>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 **Scenario 1**:
 The BYU-Idaho Honor Code specifically prohibits wearing flip-flops on campus.  
@@ -654,7 +646,7 @@ You are considering approaching this student to discuss their footwear.
 
 <a href="javascript:showhide('Q12')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q12" style="display:none;">
-* A Type I Error would be committed if you decided that they were not flip flops, when in reality they were flip-flops. 
+* A Type I Error would be committed if you decided that they were not flip flops, when in reality they were flip-flops.
 </div>
 <br>
 
@@ -670,7 +662,7 @@ You are considering approaching this student to discuss their footwear.
 
 <a href="javascript:showhide('Q14')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q14" style="display:none;">
-* Answers may vary. 
+* Answers may vary.
 </div>
 &nbsp;
 </div>
@@ -688,7 +680,7 @@ H_0: & \textrm{The drug does not improve patients' conditions}\\
 H_a: & \textrm{The drug improves patients' conditions}\\
 \end{align}
 $$
-              
+
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
 15. What action by the FDA would lead to a Type I error in this case?
@@ -725,7 +717,7 @@ H_0: & \textrm{The drug does not cause serious side effects}\\
 H_a: & \textrm{The drug causes serious side effects}\\
 \end{align}
 $$
-              
+
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
 18. What action by the FDA would lead to a Type I error in this case?
@@ -817,7 +809,7 @@ $$
 <img src="./Images/BodyTemp-Histogram-LoRes.png">
 
 <img src="./Images/Step4.png">
-  
+
 **Verify the requirements have been met**
 
 - We assume that the individuals chosen to participate in the study represent a (simple) random sample from the population.
@@ -827,7 +819,7 @@ $$
 
 $$z=-6.669$$
 
-**Mark the test statistic and $P$-value on a graph of the sampling distribution (i.e. the standard normal curve)** 
+**Mark the test statistic and $P$-value on a graph of the sampling distribution (i.e. the standard normal curve)**
 
 <img src="./Images/BodyTemp-AppletPvalue.png">
 
@@ -1016,7 +1008,7 @@ Hypothesis tests follow the same basic pattern.
 
 6. Verify the requirements have been met
 
-7. Give the test statistic and its value 
+7. Give the test statistic and its value
 
 8. Mark the test statistic and $P$-value on a graph of the sampling distribution
 
@@ -1116,14 +1108,14 @@ $$ \alpha = 0.05 $$
 
 5. Make an appropriate graph to illustrate the data
 
-* A boxplot shows the mean age of the online customers (represented by the x on the graph) and the median both appear to be between 30 and 40, less than $42$ years. 
+* A boxplot shows the mean age of the online customers (represented by the x on the graph) and the median both appear to be between 30 and 40, less than $42$ years.
 
 <img src="./Images/NYtimes-BoxplotExcel.png" width=80%>
 
 
 4. Give the relevant summary statistics
 
-* The mean age of the sampled subjects was $\bar{x} = 35.32$. There were $n = 25$ people included in the sample. 
+* The mean age of the sampled subjects was $\bar{x} = 35.32$. There were $n = 25$ people included in the sample.
 
 <img src="./Images/Step4.png">
 
@@ -1133,7 +1125,7 @@ $$ \alpha = 0.05 $$
 
 <!-- <img src="./Images/NYtimes-QQ-Excel.png"> -->
 
-7. Give the test statistic and its value 
+7. Give the test statistic and its value
 
 $$\displaystyle{ z = \frac{\bar{x} - \mu}{\sigma/\sqrt{n}} = \frac{35.32-42}{12/\sqrt{25}} = -2.7833 }$$
 
@@ -1166,11 +1158,11 @@ $$P\text{-value} = 0.0027 < 0.05 = \alpha$$
 
 ### Mean GPA of early risers
 
-In Doctrine and Covenants 88:124, the Lord commands, "…cease to sleep longer than is needful; retire to thy bed early, that ye may not be weary; arise early, that your bodies and your minds may be invigorated." Are there academic benefits from obeying this commandment? People who sleep late tend to be stereotyped as slackers. It is not fair to make these claims without any scientific evidence. The purpose of this study is used to address whether early risers earn better grades. 
+In Doctrine and Covenants 88:124, the Lord commands, "…cease to sleep longer than is needful; retire to thy bed early, that ye may not be weary; arise early, that your bodies and your minds may be invigorated." Are there academic benefits from obeying this commandment? People who sleep late tend to be stereotyped as slackers. It is not fair to make these claims without any scientific evidence. The purpose of this study is used to address whether early risers earn better grades.
 
 Researcher K. Clay and others presented a paper at the Associated Professional Sleep Societies meeting [4]. They suggested that the mean GPA of students who are early risers tends to be higher than average. The mean grade point average (GPA) of all students at BYU-Idaho is $\mu = 3.15$. The population standard deviation for the grades of students at BYU-Idaho is $\sigma= 0.68$.
 
-A simple random sample of $n = 378$ early-rising BYU-Idaho students was collected.  The students were asked to report their BYU-Idaho GPA. The GPA of each person who was selected and signed the informed consent statement (to authorize the use of their data) was recorded. 
+A simple random sample of $n = 378$ early-rising BYU-Idaho students was collected.  The students were asked to report their BYU-Idaho GPA. The GPA of each person who was selected and signed the informed consent statement (to authorize the use of their data) was recorded.
 
 
 <img src="./Images/Step1.png">
@@ -1214,7 +1206,7 @@ $$\alpha = 0.05$$
 
 5. Make an appropriate graph to illustrate the data
 
-The histogram shows that the data are left-skewed. That is, many of the sampled students have fairly high GPAs, but a few are very low. 
+The histogram shows that the data are left-skewed. That is, many of the sampled students have fairly high GPAs, but a few are very low.
 
 <img src="./Images/EarlyRisersGPA-Hist-Excel.png">
 
@@ -1230,7 +1222,7 @@ The histogram shows that the data are left-skewed. That is, many of the sampled 
 * A simple random sample of $n = 378$ early-rising students at BYU-Idaho was collected. It is reasonable to conclude that the mean of the GPAs are approximately normally distributed, since the sample size is large, even though the GPA data are left-skewed.
 
 
-7. Give the test statistic and its value 
+7. Give the test statistic and its value
 
 $$\displaystyle{ z = \frac{\bar{x} - \mu}{\sigma/\sqrt{n}} = \frac{3.21-3.15}{0.68/\sqrt{378}} = 1.7155 }$$
 
@@ -1316,7 +1308,7 @@ If we are unable to reject the original hypothesis, we do not conclude that it i
 
 This philosophy is very different from the way one gains a testimony.  A testimony is a Gift of the Spirit, and it is given only by revelation.
 
->"Wherefore, beware lest ye are deceived; and that ye may not be deceived seek ye earnestly the best gifts, always remembering for what they are given; 
+>"Wherefore, beware lest ye are deceived; and that ye may not be deceived seek ye earnestly the best gifts, always remembering for what they are given;
 
 >For verily I say unto you, they are given for the benefit of those who love me and keep all my commandments, and him that seeketh so to do; that all may be benefited that seek or that ask of me, that ask and not for a sign that they may consume it upon their lusts.
 And again, verily I say unto you, I would that ye should always remember, and always retain in your minds what those gifts are, that are given unto the church.
@@ -1329,7 +1321,7 @@ To others it is given to believe on their words, that they also might have etern
 <center>
 {| width=80%
 |-
-|Wherefore, beware lest ye are deceived; and that ye may not be deceived seek ye earnestly the best gifts, always remembering for what they are given; 
+|Wherefore, beware lest ye are deceived; and that ye may not be deceived seek ye earnestly the best gifts, always remembering for what they are given;
 For verily I say unto you, they are given for the benefit of those who love me and keep all my commandments, and him that seeketh so to do; that all may be benefited that seek or that ask of me, that ask and not for a sign that they may consume it upon their lusts.
 And again, verily I say unto you, I would that ye should always remember, and always retain in your minds what those gifts are, that are given unto the church.
 For all have not every gift given unto them; for there are many gifts, and to every man is given a gift by the Spirit of God.
@@ -1387,4 +1379,3 @@ Obstetrics and Gynecology, 6(5):353–357, 1995.
 | :------------------: | :--------------: | :--------------: |
 | [Lesson 8: <br> Review for Exam 1](Lesson08.html) | Lesson 09: <br> Inference for One Mean: Sigma Known (Hypothesis Test) | [Lesson 10: <br> Inference for One Mean: Sigma Known (Confidence Interval)](Lesson10.html) |
 </center>
-
