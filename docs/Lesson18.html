@@ -295,19 +295,19 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
     </li>
     <li>
-      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
+      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
     </li>
     <li>
-      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data (Shape &amp; Center)</a>
     </li>
     <li>
-      <a href="Lesson04.html">Lesson 4: Rules of Probability</a>
+      <a href="Lesson04.html">Lesson 4: Describing Quantitative Data (Spread)</a>
     </li>
     <li>
       <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
@@ -401,7 +401,11 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
+<<<<<<< HEAD
   <a href="https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
+=======
+  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -452,17 +456,17 @@ $(document).ready(function () {
 </div>
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
-<p>By the end of this lesson, you should be able to:</p>
-<p><strong>Confidence Intervals for a comparison of two proportions: </strong></p>
+<p>By the end of this lesson, you should be able to do the following.</p>
+<p><strong>Regarding Confidence Intervals for a comparison of two proportions: </strong></p>
 <ul>
 <li>Calculate and interpret a confidence interval for a comparison of two proportions given a confidence level.</li>
 <li>Identify a point estimate and margin of error for the confidence interval.</li>
 <li>Show the appropriate connections between the numerical and graphical summaries that support the confidence interval.</li>
 <li>Check the requirements for the confidence interval.</li>
 </ul>
-<p><strong>Hypothesis Testing for a comparison of two proportions:</strong></p>
+<p><strong>Regarding Hypothesis Testing for a comparison of two proportions:</strong></p>
 <ul>
 <li>State the null and alternative hypothesis for the chosen test.</li>
 <li>Calculate the test-statistic and p-value of the hypothesis test.</li>
@@ -539,32 +543,31 @@ $(document).ready(function () {
 \]</span> This is approximately 77.3% of the people who were surveyed. For the males, the proportion who could taste PTC was: <span class="math display">\[
 \hat p_2 = \frac{x_2}{n_2} = \frac{38}{52}
 \]</span> This works out to be about 73.1%.</p>
-<p>When working with data for two proportions, graphically displaying the data can help us compare each proportion. Pie charts and bar charts are essential tools for describing our data.</p>
-<p><strong>Side-by-Side Pie Charts</strong></p>
+<p>When working with data for two proportions, graphically displaying the data can help us compare each proportion. Pie charts and bar charts are essential tools for describing our data. The Math221 Statistics Toolbox automatically creates a side-by-side 100% stacked bar chart when you input the data into the “Two Proportions” tab.</p>
+<p><img src="Images/PTC_Stacked_Bar_Toolbox.PNG"></p>
+Click on the link at right if you would like to learn how to create a side-by-side 100% stacked bar chart on your own in Excel. <a href="javascript:showhide('ins')"><span style="font-size:8pt;">Show/Hide Instructions</span></a>
+<div id="ins" style="display:none;">
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <!-- {{Software_Filter | PageName=SideBySidePieCharts}} -->
 <div class="SoftwareHeading">
 Excel Instructions
 </div>
 <div class="Summary">
-<p><strong>To create side-by-side pie charts in Excel, do the following:</strong></p>
-<p>For this example we will use the <a href="./Data/PTCTasting.xlsx">PTCTasting</a> data set.</p>
+<p><strong>To create 100% Stacked Bar Charts in Excel, do the following:</strong></p>
+<p>For this example we will continue to use the PTCTasting data set.</p>
 <ul>
-<li>First, make sure the data are organized so that one column contains the first variable (gender) and another column contains the second variable (whether or not they can taste PTC).</li>
-<li>A third column contains counts of the number of observations in each group. Highlight the “CanTaste” column and “Count” column just for females, or cells B2, B3, C2, and C3.<br />
-</li>
-<li>Now click on the “Insert” tab and then the “pie chart” button. Please select the most basic 2D pie chart.</li>
-<li>Next you can repeat the process above but highlighting the male data or cells B4, B5, C4, and C5.<br />
-</li>
-<li>To keep the two pie charts straight, you can add a title. If “Chart Title” is already displayed on the graph, simply double-click it to type in a new title. If you need to add a title, click on the “Design” tab under Chart Tools. Next click on “Add Chart Element” and choose “Chart Title” from the list of options. Select “Above Chart” as the location of the title.<br />
-</li>
-<li>You can now type in the titles, “Females Taste PTC?” and “Males Taste PTC?” or something similar.</li>
-<li><p>Now you should be able to visually compare the proportion of females that can taste PTC to the proportion of males that can taste PTC.</p></li>
-<li><p>Your pie charts should look like this:</p></li>
+<li>First, re-arrange the summary of the data so that it looks like the table above, but without a row and column for total.</li>
+<li>Highlight the counts and the row and column headings. Now click on the “Insert” tab and select the 3rd option under the “2D Column” heading.</li>
 </ul>
 <center>
-<p><img src="Images/SidebysidePieCharts_-_Excel.PNG"></p>
+<img src="Images/PTC_Stacked_Bar_Creation.png">
 </center>
+<p><br> - Your graph would look like the image below. You can further customize it by adding data labels, titles, changing colors, etc.</p>
+<center>
+<p><img src="Images/PTC_Stacked_bar.PNG"></p>
+</center>
+<p><br></p>
+</div>
 <p><br></p>
 </div>
 <p><br></p>
@@ -610,7 +613,7 @@ The test statistic is <span class="math inline">\(z=0.526\)</span>. Under the nu
 <div id="using-excel-to-perform-these-calculations" class="section level3">
 <h3>Using Excel to perform these calculations</h3>
 <!-- {{Content:Excel/SPSS-Two Proportion HT}} -->
-<p>Just like we did for one proportion, we will use the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> to perform hypothesis tests for two proportions.</p>
+<p>Just like we did for one proportion, we will use the <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> to perform hypothesis tests for two proportions.</p>
 <span class="Custom">Click on the link at right</span> for instructions on using this spreadsheet to perform hypothesis testing. <a href="javascript:showhide('ins')"><span style="font-size:8pt;">Show/Hide Instructions</span></a>
 <div id="ins" style="display:none;">
 <p>For this example we will consider the “PTC” data above.</p>
@@ -621,15 +624,19 @@ The test statistic is <span class="math inline">\(z=0.526\)</span>. Under the nu
 <img src="Images/Lesson_18_pic_1.PNG">
 </center>
 <ul>
-<li><p>The yellow boxes indicate the input spaces. These are the only cells into which you will enter data.(You can ignore columns A and B which allow you to paste in data. We will only be putting in summary data of counts, not individual observations.)</p></li>
-<li><p><strong>Confidence Interval</strong>: Next, we indicate our desired level of confidence for our confidence interval. Down and to the right of where we entered in our counts is a block of cells labeled “Confidence Interval”. There is a yellow cell there, K12, where we can choose a confidence level. By default the cell contains the value 95%. The confidence interval bounds are shown as well as the sample proportion, <span class="math inline">\(\hat{p}\)</span> and the margin of error.</p></li>
+<li><p>The yellow boxes indicate the input spaces. These are the only cells into which you will enter data.</p></li>
+<li><p><strong>Confidence Interval</strong>: Next, we indicate our desired level of confidence for our confidence interval. Down and to the right of where we entered in our counts is a block of cells labeled “Confidence Interval”. There is a yellow cell there, I12, where we can choose a confidence level. By default the cell contains the value 95%. The confidence interval bounds are shown as well as the sample proportion, <span class="math inline">\(\hat{p}\)</span> and the margin of error.</p></li>
 </ul>
 <center>
 <img src="Images/Lesson_18_pic_2.PNG">
 </center>
 <p><br></p>
 <ul>
+<<<<<<< HEAD
 <li><strong>Hypothesis Test</strong>: To conduct a hypothesis test we must define our null and alternative hypotheses. To the right of the “Numerical Summary” cells is a block of cells labeled “Hypothesis Test”. The null hypothesis is always the same and does not need to be updated. For the alternative hypothesis we can change the yellow cell, M6, to select the type of alternative hypothesis we wish to test, i.e. “Greater Than”, “Less Than”, or “Not Equal To.”</li>
+=======
+<li><strong>Hypothesis Test</strong>: To conduct a hypothesis test we must define our null and alternative hypotheses. To the right of the “Numerical Summary” cells is a block of cells labeled “Hypothesis Test”. The null hypothesis is always the same and does not need to be updated. For the alternative hypothesis we can change the yellow cell, K6, to select the type of alternative hypothesis we wish to test, i.e. “Greater Than”, “Less Than”, or “Not Equal To.”</li>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 </ul>
 <p>The results of the hypothesis test are given immediately below where we define the hypotheses:</p>
 <center>
@@ -748,29 +755,23 @@ Answer the following questions:
 <p> </p>
 </div>
 <p><br></p>
-<div id="side-by-side-bar-charts" class="section level4">
-<h4>Side-by-side Bar Charts</h4>
-<p>If the data are considered counts, then a side-by-side bar chart is usually the preferred plot.</p>
-<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-<!-- {{Software_Filter | PageName=SideBySideBarCharts }} -->
-<div class="SoftwareHeading">
-Excel Instructions
-</div>
-<div class="Summary">
-<p><strong>To create side-by-side bar charts in Excel, do the following:</strong></p>
-<ul>
-<li>First, make sure the data are organized so that the first column gives the outcome (died or survived), the next column indicates the day of admittance (weekday or weekend) and the last column shows the counts.</li>
-<li>Then highlight the all three columns but just for the “Weekday” data.<br />
-</li>
-<li>Now click on the “Insert” tab and then the “Chart” button, and select “column”. Please select the most basic 2D column chart.</li>
-<li>Next you can repeat the process above but highlighting the “Weekend” data for all three columns.<br />
-</li>
-<li>To keep the two pie charts straight, you can add a title. If “Chart Title” is already displayed on the graph, simply double-click it to type in a new title. If you need to add a title, click on the “Design” tab under Chart Tools. Next click on “Add Chart Element” and choose “Chart Title” from the list of options. Select “Above Chart” as the location of the title.<br />
-</li>
-<li>You can now type in the Titles, “Aortic Aneurysm Outcomes Weekday Admittance” and “Aortic Aneurysm Outcomes Weekend Admittance” or something similar. <br></li>
-</ul>
-</div>
-<p><br></p>
+<p><img src="./Images/Lesson18_aortic_bar_chart.PNG"> <br></p>
+<!-- #### Side-by-side Bar Charts -->
+<!-- If the data are considered counts, then a side-by-side bar chart is usually the preferred plot. -->
+<!-- <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<p>–&gt; <!-- <!-- {{Software_Filter | PageName=SideBySideBarCharts }} --> –&gt;</p>
+<!-- <div class="SoftwareHeading">Excel Instructions</div> -->
+<!-- <div class="Summary"> -->
+<!-- **To create side-by-side bar charts in Excel, do the following:** -->
+<!-- - First, make sure the data are organized so that the first column gives the outcome (died or survived), the next column indicates the day of admittance (weekday or weekend) and the last column shows the counts. -->
+<!-- - Then highlight the all three columns but just for the "Weekday" data.   -->
+<!-- - Now click on the "Insert" tab and then the "Chart" button, and select "column".  Please select the most basic 2D column chart. -->
+<!-- - Next you can repeat the process above but highlighting the "Weekend" data for all three columns.   -->
+<!-- - To keep the two pie charts straight, you can add a title. If "Chart Title" is already displayed on the graph, simply double-click it to type in a new title. If you need to add a title, click on the "Design" tab under Chart Tools.  Next click on "Add Chart Element" and choose "Chart Title" from the list of options. Select "Above Chart" as the location of the title.    -->
+<!-- - You can now type in the Titles, "Aortic Aneurysm Outcomes Weekday Admittance" and "Aortic Aneurysm Outcomes Weekend Admittance" or something similar. -->
+<!-- <br> -->
+<!-- </div> -->
+<!-- <br> -->
 <p><img src="Images/Step4.png"></p>
 <br>
 <div class="message Tip">
@@ -783,7 +784,6 @@ H_0: &amp;  p_1 = p_2 \\
 H_a: &amp;  p_1 &lt; p_2
 \end{align}
 \]</span> where group 1 represents the patients admitted on a weekday and group 2 represents patients admitted on a weekend. Note that if <span class="math inline">\(p_1 &lt; p_2\)</span>, then the risk of death is greater in group 2 than in group 1. We will use the 0.05 level of significance.</p>
-</div>
 <div id="checking-requirements-for-the-hypothesis-test" class="section level4">
 <h4>Checking Requirements for the Hypothesis Test</h4>
 <br>
@@ -927,11 +927,11 @@ Answer the following questions:
 </div>
 <p><br></p>
 <ol start="8" style="list-style-type: decimal">
-<li>Create a side-by-side pie chart illustrating the data.</li>
+<li>Create a chart illustrating the data.</li>
 </ol>
 <a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q8" style="display:none;">
-<p><img src="Images/Heart-Attack-Side-By-Side-Pies-Excel.png"></p>
+<p><img src="Images/Lesson_18_heart_attack_weekend_graph.PNG"></p>
 </div>
 <p><br></p>
 <ol start="9" style="list-style-type: decimal">
@@ -1246,7 +1246,7 @@ z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqr
 </div>
 <p>To interpret this confidence interval, we say, “We are 95% confident that the true <em>difference</em> in the proportions of times fox prints will appear in the sand-pads is between 0.372 and 0.447.”</p>
 <p>Notice that zero is not in this confidence interval, so zero is not a plausible value for <span class="math inline">\(p_1 - p_2\)</span>. Based on this result, it is reasonable to conclude that the proportion of times foxes are observed in the sand-pads is not the same before and after the effort to reduce their population. It seems that the work to reduce the number of foxes is having an effect on their presence in the reserve.</p>
-<p>As you may have guessed, the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> can be used to calculate confidence intervals for the difference of two proportions.</p>
+<p>As you may have guessed, the <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> can be used to calculate confidence intervals for the difference of two proportions.</p>
 <div id="checking-requirements-for-a-confidence-interval" class="section level3">
 <h3>Checking Requirements for a Confidence Interval</h3>
 <p>The requirements for computing a confidence interval for two proportions are the same as the requirements for doing a hypothesis test.</p>
@@ -1313,7 +1313,7 @@ Remember…
 \]</span></p>
 <ul>
 <li><p>Whenever zero is contained in the confidence interval of the difference of the true proportions we conclude that there is no significant difference between the two proportions.</p></li>
-<li>You will use the Excel spreadsheet <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> to perform hypothesis testing and calculate confidence intervals for problems involving two proportions. <br></li>
+<li>You will use the Excel spreadsheet <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> to perform hypothesis testing and calculate confidence intervals for problems involving two proportions. <br></li>
 </ul>
 </div>
 <p><br></p>
@@ -1347,7 +1347,7 @@ Remember…
 
 <br />
 <hr />
-<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+<p>Copyright &copy; 2020 Brigham Young University-Idaho. All rights reserved.</p>
 
 
 

@@ -11,7 +11,7 @@ This page contains the data files that are used throughout the course: in the te
 
 <br/>
 
-&nbsp; [**Math 221 Statistics Toolbox**](./Data/Math221StatisticsToolbox.xlsx)
+&nbsp; [**Math 221 Statistics Toolbox**](./Data/Math221StatisticsToolbox.xltx)
 
 <br/>
 
@@ -23,9 +23,18 @@ Or download individual files:
 
 <div style="padding-left:15px;">
 
+[Admissions-BYU-Idaho.xlsx](./Data/Admissions-BYU-Idaho.xlsx)
+
+
+[Admissions-UofIdaho.xlsx](./Data/Admissions-UofIdaho.xlsx)
+
+
 [AMPM-Heights.xlsx](./Data/AMPM-Heights.xlsx)                                                          
 
 [Apollo.xlsx](./Data/Apollo.xlsx)                                                                      
+
+[AppointmentWaitTimes.xlsx](./Data/AppointmentWaitTimes.xlsx)
+
 
 [BabyBoom-JSE.xlsx](./Data/BabyBoom-JSE.xlsx)                                                          
 
@@ -120,7 +129,11 @@ Or download individual files:
 
 [HubblesConstant-SupernovasUpTo250Mpc.xlsx](./Data/HubblesConstant-SupernovasUpTo250Mpc.xlsx)          
 
+<<<<<<< HEAD
 [IllinoisBirthWeights.xlsx](./Data/IllinoisBirthWeights.xlsx)
+=======
+[IllinoisBirthWeights.xlsx](./Data/IllinoisBirthWeights.xlsx) 
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 
 [IllinoisBirthWeightsTwoVar.xlsx](./Data/IllinoisBirthWeightsTwoVar.xlsx)

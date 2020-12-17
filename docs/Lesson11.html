@@ -295,19 +295,19 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
     </li>
     <li>
-      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
+      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
     </li>
     <li>
-      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data (Shape &amp; Center)</a>
     </li>
     <li>
-      <a href="Lesson04.html">Lesson 4: Rules of Probability</a>
+      <a href="Lesson04.html">Lesson 4: Describing Quantitative Data (Spread)</a>
     </li>
     <li>
       <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
@@ -401,7 +401,11 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
+<<<<<<< HEAD
   <a href="https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
+=======
+  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -452,17 +456,17 @@ $(document).ready(function () {
 </div>
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
-<a href="javascript:showhide('outcomes')"><span style="font-size:8pt;">Click here to show Outcomes for this Lesson</span></a>
+<a href="javascript:showhide('outcomes')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="outcomes" style="display:none;">
-<p>By the end of this lesson, you should be able to:</p>
-<p><strong>Confidence Intervals for a single mean with <span class="math inline">\(\sigma\)</span> unknown:</strong></p>
+<p>By the end of this lesson, you should be able to do the following with regards to confidence intervals and hypothesis testing.</p>
+<p><strong>Regarding Confidence Intervals for a single mean with <span class="math inline">\(\sigma\)</span> unknown:</strong></p>
 <ul>
 <li>Calculate and interpret a confidence interval for a population mean given a confidence level.</li>
 <li>Identify a point estimate and margin of error for the confidence interval.</li>
 <li>Show the appropriate connections between the numerical and graphical summaries that support the confidence interval.</li>
 <li>Check the requirements the confidence interval.</li>
 </ul>
-<p><strong>Hypothesis Testing for a single mean with <span class="math inline">\(\sigma\)</span> unknown:</strong></p>
+<p><strong>Regarding Hypothesis Testing for a single mean with <span class="math inline">\(\sigma\)</span> unknown:</strong></p>
 <ul>
 <li>State the null and alternative hypothesis.</li>
 <li>Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.</li>
@@ -479,7 +483,11 @@ $(document).ready(function () {
 <p><img src="Images/WilliamSealyGosset-NoCopyright.png"></p>
 <p>In practice, we almost never know the population standard deviation, <span class="math inline">\(\sigma\)</span>. So, it is generally not appropriate to use the formula <span class="math display">\[
 z = \frac{ \bar x - \mu }{ \sigma / \sqrt{n} }
+<<<<<<< HEAD
 \]</span> In 1908, William Sealy Gosset published a solution to this problem <!--<cite>Gosset08</cite>-->. He found a way to appropriately compute the confidence interval for the mean when <span class="math inline">\(\sigma\)</span> is not known. The basic idea is to use the sample standard deviation, <span class="math inline">\(s\)</span> in the place of the true population standard deviation, <span class="math inline">\(\sigma\)</span>. If <span class="math inline">\(\sigma\)</span> is not known, we cannot base the calculations on the standard normal distribution, and we cannot use the formula above to conduct hypothesis tests.</p>
+=======
+\]</span> In 1908, William Sealy Gosset published a solution to this problem<!--<cite>Gosset08</cite>-->. He found a way to appropriately compute the confidence interval for the mean when <span class="math inline">\(\sigma\)</span> is not known. The basic idea is to use the sample standard deviation, <span class="math inline">\(s\)</span>, in the place of the true population standard deviation, <span class="math inline">\(\sigma\)</span>. If <span class="math inline">\(\sigma\)</span> is not known, we cannot base the calculations on the standard normal distribution, and we cannot use the formula above to conduct hypothesis tests.</p>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 <p>In a remarkable piece of work, Gosset found the appropriate distribution to use when <span class="math inline">\(\sigma\)</span> is unknown. At the time of this discovery, Gosset worked for the Guinness brewery. To avoid problems with industrial espionage, Guinness prohibited employees from publishing any research results. Knowing his work provided a significant contribution to Statistics, Gosset convinced his employer to allow him to publish under a fictitious name. He chose the pseudonym “Student”. Gosset’s test statistic was denoted by the letter <span class="math inline">\(t\)</span>, this distribution has come to be known as <strong>Student’s t-distribution</strong>.</p>
 <p><span class="math display">\[
 t = \frac{ \bar x - \mu }{ s / \sqrt{n} }
@@ -596,13 +604,13 @@ Excel Instructions
 </div>
 <div class="Summary">
 <p>Here are the instructions for conducting the one sample t-test in Excel:</p>
-<p>The Excel file needed for this analysis is <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>. We will use this Excel file to conduct the hypothesis tests for a single mean with <span class="math inline">\(\sigma\)</span> unknown.</p>
+<p>The Excel file needed for this analysis is <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a>. We will use this Excel file to conduct the hypothesis tests for a single mean with <span class="math inline">\(\sigma\)</span> unknown.</p>
 <ul>
 <li>After opening the file, please click on the tab labeled “One-sample t-test”.<br />
 </li>
 <li>Paste the data in the appropriate place in Column A.</li>
-<li>Set the null hypothesis value in cell O5. For this example, the value should be 98.6.</li>
-<li>Click in cell N6 and use the drop down menu to set the alternative hypothesis to: “Not Equal To”</li>
+<li>Set the null hypothesis value in cell M5. For this example, the value should be 98.6.</li>
+<li>Click in cell L6 and use the drop-down menu to set the alternative hypothesis to: “Not Equal To”</li>
 </ul>
 <p>The image below shows the Excel file after these changes have been made.</p>
 <center>
@@ -610,6 +618,7 @@ Excel Instructions
 </center>
 <p>Consider each of the following alternative hypotheses that could be used in a test for a single mean where the null hypothesis is <span class="math inline">\(H_0: \mu = 98.6\)</span>.</p>
 <ul>
+<<<<<<< HEAD
 <li><span class="math inline">\(H_a: \mu \ne 98.6\)</span>
 <ul>
 <li>Choose “Not Equal To” in the drop-down menu in cell N6.</li>
@@ -622,6 +631,15 @@ Excel Instructions
 <ul>
 <li>Choose “Greater Than” in the drop-down menu in cell N6.</li>
 </ul></li>
+=======
+<li><span class="math inline">\(H_a: \mu \ne 98.6\)</span></li>
+<li>Choose “Not Equal To” in the drop-down menu in cell L6.</li>
+<li><span class="math inline">\(H_a: \mu &lt; 98.6\)</span></li>
+<li>Choose “Less Than” in the drop-down menu in cell L6.</li>
+<li><span class="math inline">\(H_a: \mu &gt; 98.6\)</span><br />
+</li>
+<li>Choose “Greater Than” in the drop-down menu in cell L6.</li>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 </ul>
 <p>You will have opportunities to practice using each of these. <br></p>
 </div>
@@ -636,7 +654,7 @@ t &amp;= \frac{ \bar x - \mu }{ s / \sqrt{n} } \\
 \end{align}
 \]</span> Any differences are due to rounding.</p>
 <p><strong>State the degrees of freedom</strong></p>
-<p>In Excel, the degrees of freedom (<span class="math inline">\(df\)</span>) are given in cell N9.</p>
+<p>In Excel, the degrees of freedom (<span class="math inline">\(df\)</span>) are given in cell L9.</p>
 <p><span class="math display">\[df = 147\]</span> <!-- **Mark the test statistic and $P$-value on a graph of the sampling distribution** --> <!-- CONSOLIDATED and UPDATED --></p>
 <p><strong>Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance</strong></p>
 <p>The <span class="math inline">\(P\)</span>-value is given in the software as “0.000.” (The actual value is 1.2723e-08, a very small number that rounds to 0.000 at three decimal places.) Writing this properly and comparing it to <span class="math inline">\(\alpha\)</span>, we have: <span class="math display">\[
@@ -646,7 +664,7 @@ P\text{-value} = 1.2723 \times 10^{-8} = 0.000~000~012~723 &lt; 0.05 = \alpha
 <p>The interpretation of the results will follow the pattern established in the previous hypothesis tests. If the <span class="math inline">\(P\)</span>-value is less than the <span class="math inline">\(\alpha\)</span> level, we reject the null hypothesis. If the <span class="math inline">\(P\)</span>-value is greater than the <span class="math inline">\(\alpha\)</span> level, we fail to reject the null hypothesis. This is true for every hypothesis test.</p>
 <p>Since the <span class="math inline">\(P\)</span>-value was less than <span class="math inline">\(\alpha\)</span>, we reject the null hypothesis.</p>
 <p><img src="Images/Step5.png"></p>
-<p><strong>Present your conclusion in an English sentence, relating the result to the context of the problem</strong></p>
+<p><strong>Present your conclusion in an easy to understand sentence, relating the result to the context of the problem</strong></p>
 <p>There is sufficient evidence to suggest that the mean body temperature is not 98.6° Fahrenheit.</p>
 <p><img src="Images/StepsAll.png"></p>
 </div>
@@ -665,7 +683,7 @@ H_a: &amp;~ \mu \ne 3373
 <p><span class="math display">\[ \alpha = 0.05 \]</span></p>
 <p><img src="Images/Step2.png"></p>
 <p><strong>Describe the data collection procedures</strong></p>
-<p>The birth weights of all children born on December 18, 1997 at the Mater Mothers’ Hospital in Brisbane, Australia were recorded <!--<cite>JSEdunn99</cite>-->. The time of birth (on a 24 hour clock), gender, and birth weight of each child are given in the file <a href="./Data/BabyBoom-JSE.xlsx">BabyBoom.xlsx</a>.</p>
+<p>The birth weights of all children born on December 18, 1997 at the Mater Mothers’ Hospital in Brisbane, Australia were recorded<!--<cite>JSEdunn99</cite>-->. The time of birth (on a 24 hour clock), gender, and birth weight of each child are given in the file <a href="./Data/BabyBoom-JSE.xlsx">BabyBoom.xlsx</a>.</p>
 <p>Using this data set, test the hypothesis that the mean weight of babies born in Australia is 3373 grams. Use the <span class="math inline">\(\alpha=0.05\)</span> level of significance for this problem. Make an appropriate graph of the data.</p>
 <p><img src="Images/Step3.png"></p>
 <div class="QuestionsHeading">
@@ -677,7 +695,7 @@ Answer the following questions:
 </ol>
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
-<p>When the data are entered into the file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>, the following output is generated:</p>
+<p>When the data are entered into the file <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a>, the following output is generated:</p>
 <p><img src="Images/BabyBoom-Ttest-Excel_Toolbox.PNG"> <br></p>
 <ul>
 <li>The relevant summary statistics are:
@@ -732,7 +750,7 @@ Answer the following questions:
 df = 43
 \]</span>
 </center></li>
-<li>Notice that this is one less than than sample size. For a test for a single mean, the degrees of freedom are always equal to one less than the sample size.</li>
+<li>Notice that this is one less than the sample size. For a test for a single mean, the degrees of freedom are always equal to one less than the sample size.</li>
 </ul>
 </div>
 <p> </p>
@@ -746,7 +764,7 @@ df = 43
 <p><strong>State your decision</strong></p>
 <p>Since the <span class="math inline">\(P\)</span>-value is greater than the level of significance, we fail to reject the null hypothesis.</p>
 <p><img src="Images/Step5.png"></p>
-<p><strong>Present your conclusion in an English sentence, relating the result to the context of the problem</strong></p>
+<p><strong>Present your conclusion in an easy to understand sentence, relating the result to the context of the problem</strong></p>
 <p>There is insufficient evidence to suggest that the mean weight of babies born in Australia is different from 3373 grams.</p>
 <p><br></p>
 </div>
@@ -767,7 +785,7 @@ df = 43
 <p><strong>Summarize the relevant background information</strong></p>
 <p>Computer software is commonly used to translate text from one language to another. As part of his Ph.D. thesis, Philipp Koehn developed a phrase-based translation program called Pharaoh. <!--<cite>Koehn04Pharaoh</cite>--></p>
 <p>The quality of the translation can vary. A good translation system should match a professional human translation. <!--<cite>Papineni02</cite>--> It is important to be able to quantify how good the translations produced by Pharaoh are.</p>
-<p>The IBM T. J. Watson Research Center developed methods to measure the quality of a translation from one language to another. <!--<cite>Brown90</cite>--> One of these is the the BiLingual Evaluation Understudy (BLEU). <!--<cite>Papineni02</cite>--> BLEU is a score ranging from 0 to 1 that indicates how well a computer translation matches a professional human translation of the same text. Higher scores indicate a better match. BLEU helps companies who develop translation software “to monitor the effect of daily changes to their systems in order to weed out bad ideas from good ideas”. <!--<cite>Papineni02</cite>--></p>
+<p>The IBM T. J. Watson Research Center developed methods to measure the quality of a translation from one language to another. <!--<cite>Brown90</cite>--> One of these is the BiLingual Evaluation Understudy (BLEU). <!--<cite>Papineni02</cite>--> BLEU is a score ranging from 0 to 1 that indicates how well a computer translation matches a professional human translation of the same text. Higher scores indicate a better match. BLEU helps companies who develop translation software “to monitor the effect of daily changes to their systems in order to weed out bad ideas from good ideas”. <!--<cite>Papineni02</cite>--></p>
 <p><img src="Images/Step2.png"></p>
 <p><strong>Describe the data collection procedures</strong></p>
 <p>To test Pharaoh’s ability to translate, Koehn took a random sample of 100 blocks of Spanish text, each of which contained 300 sentences, and used Pharaoh to translate each of these to English. The BLEU score was calculated for each of the 100 blocks. The data were extracted from Figure 2 in a paper Koehn published. <!--<cite>Koehn04</cite>--> The 100 BLEU scores are given in <a href="./Data/BLEU-Scores.xlsx">BLEU-Scores</a>.</p>
@@ -779,7 +797,7 @@ df = 43
 Excel Instructions
 </div>
 <div class="Summary">
-<p>Copying the <a href="./Data/BLEU-Scores.xlsx">BLEU-Scores</a> data into the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> file in Excel, we get the following:</p>
+<p>Copying the <a href="./Data/BLEU-Scores.xlsx">BLEU-Scores</a> data into the <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> file in Excel, we get the following:</p>
 <center>
 <img src="Images/BLEUscores-Excel_Toolbox.PNG">
 </center>
@@ -797,19 +815,27 @@ n =&amp; 100
 <p><strong>Make an appropriate graph to illustrate the data</strong></p>
 <p>The histogram is included in the image above.</p>
 <p><img src="Images/Step4.png"></p>
-<p><strong>Verify the requirements have been met</strong></p>
-<p>The requirements for creating a confidence interval for a mean with <span class="math inline">\(\sigma\)</span> unknown are the same as the requirements for this procedure when <span class="math inline">\(\sigma\)</span> is known:</p>
-<div id="requirements" class="section level4">
-<h4>Requirements</h4>
-<p>There are two requirements that need to be checked when computing a confidence interval for a mean with <span class="math inline">\(\sigma\)</span> unknown:</p>
-<ol style="list-style-type: decimal">
-<li>A simple random sample was drawn from the population</li>
-<li><span class="math inline">\(\bar x\)</span> is normally distributed</li>
-</ol>
-<p>Recall the requirement of normality is satisfied if the data are approximately normally distributed or if the sample size is large.</p>
-<p>The data are bell-shaped and fairly symmetric. So, the sample mean, <span class="math inline">\(\bar x\)</span>, is approximately normally distributed.</p>
-<p><strong>Find the confidence interval</strong></p>
-<a href="javascript:showhide('hc')"><span style="font-size:8pt;">Show Hand Calculations</span></a>
+<p><strong>Make Inference</strong></p>
+<div id="find-the-confidence-interval" class="section level4">
+<h4>Find the confidence interval</h4>
+<p>We will use Excel to find the confidence intervals for the mean.</p>
+<div class="SoftwareHeading">
+Excel Instructions
+</div>
+<div class="Summary">
+<p>Do the following:</p>
+<ul>
+<li>Open the file <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a></li>
+<li>Click on the tab labeled “One-sample t-test”</li>
+<li>Enter the data, and</li>
+<li>Set the confidence level.</li>
+</ul>
+<p>In this case, we are using a 95% confidence level. So, you set the confidence level in the Excel file to 0.95 (i.e., 95%). The confidence interval is given to you in cells L14 and M14. <br></p>
+</div>
+<p><br></p>
+<p>The 95% confidence interval for the true mean BLEU score is:</p>
+<p><span class="math display">\[(0.282, 0.293)\]</span></p>
+<p><a href="javascript:showhide('hc')"><span style="font-size:8pt;">Show Hand Calculations</span></a> <br></p>
 <div id="hc" style="display:none;">
 <p>The formula for the confidence interval where <span class="math inline">\(\sigma\)</span> is known was given in the reading titled <a href="Lesson10.html">Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)</a> as <span class="math display">\[
 \left( \bar x - z^* \frac{\sigma}{\sqrt{n}}, ~ \bar x + z^* \frac{\sigma}{\sqrt{n}} \right)
@@ -830,26 +856,20 @@ n =&amp; 100
 \left( 0.2824, ~ 0.2928 \right)
 \]</span></p>
 </div>
-<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-<div class="SoftwareHeading">
-Excel Instructions
-</div>
-<div class="Summary">
-<p>We will use Excel to find the confidence intervals for the mean.</p>
-<p>Do the following:</p>
-<ul>
-<li>Open the file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a></li>
-<li>Click on the tab labeled “One-sample t-test”</li>
-<li>Enter the data, and</li>
-<li>Set the confidence level.</li>
-</ul>
-<p>In this case, we are using a 95% confidence level. So, you set the confidence level in the Excel file to 0.95 (i.e., 95%). The confidence interval is given to you in cells N14 and O14. <br></p>
-</div>
 <p><br></p>
-<p>The 95% confidence interval for the true mean BLEU score is:</p>
-<p><span class="math display">\[(0.282, 0.293)\]</span></p>
+</div>
+<div id="verify-requirements-are-met" class="section level4">
+<h4>Verify Requirements Are Met</h4>
+<p>The requirements for creating a confidence interval for a mean with <span class="math inline">\(\sigma\)</span> unknown are the same as the requirements for this procedure when <span class="math inline">\(\sigma\)</span> is known:</p>
+<p>There are two requirements that need to be checked:</p>
+<ol style="list-style-type: decimal">
+<li>A simple random sample was drawn from the population</li>
+<li><span class="math inline">\(\bar x\)</span> is normally distributed</li>
+</ol>
+<p>Recall the requirement of normality is satisfied if the data are approximately normally distributed or if the sample size is large.</p>
+<p>The data are bell-shaped and fairly symmetric. So, the sample mean, <span class="math inline">\(\bar x\)</span>, is approximately normally distributed.</p>
 <p><img src="Images/Step5.png"></p>
-<p><strong>Present your observations in an English sentence, relating the result to the context of the problem</strong></p>
+<p><strong>Present your observations in an easy to understand sentence, relating the result to the context of the problem</strong></p>
 <p>We are 95% confident that the true mean BLEU score for all translations by the Pharaoh program is between 0.2824 and 0.2928.</p>
 <p>Answer the following questions using the data set <a href="./Data/BLEU-Scores.xslx">BLEU-Scores</a>, which gives the BLEU scores for <span class="math inline">\(n=100\)</span> translations from Spanish to English by the computer program Pharaoh.</p>
 <div class="QuestionsHeading">
@@ -909,21 +929,8 @@ Answer the following questions:
 </ol>
 <a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q8" style="display:none;">
-<p>The following output was generated using the Excel file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>:</p>
+Use Excel to calculate the following summary statistics:
 <center>
-<img src="Images/EuroWeights-Histogram.PNG">
-</center>
-<ul>
-<li>Typically, we round our computations to one more decimal place of precision than was given in the original data. This means we need one more decimal place than is shown in the output above. We can increase the precision by selecting the cell we want to modify and then clicking on the following button in the “Home” menu ribbon in Excel:</li>
-</ul>
-<center>
-<img src="Images/Excel-IncreaseDecimals.png">
-</center>
-<p><br></p>
-<ul>
-<li>When we do this, we get the following summary statistics:
-<center></li>
-</ul>
 <span class="math display">\[
 \begin{align}
 \bar x =&amp; 7.521 \\ 
@@ -937,11 +944,14 @@ n =&amp; 2000
 <ol start="9" style="list-style-type: decimal">
 <li><strong>Make an appropriate graph to illustrate the data</strong></li>
 </ol>
+<div class="myemphasis">
+<strong>CAUTION:</strong> The Excel Toolbox boxplot only works for datasets of <strong>1,000 observations or less</strong>. This dataset contains 2,000 observations. You will need to create your own boxplot.
+</div>
 <a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q9" style="display:none;">
-<center>
-The graph is included in the image above.
-</center>
+<p>If you create your own histogram and boxplot of the data, the graphs should look something like the image below</p>
+<p><img src="Images/Lesson_11_euro_weights.PNG"></p>
+<p>You can see the data is relatively normal, with just a couple of potential outliers that could be investigated further.</p>
 </div>
 <p> </p>
 </div>
@@ -979,7 +989,7 @@ Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="11" style="list-style-type: decimal">
-<li><strong>Present your observations in an English sentence, relating the result to the context of the problem</strong>.</li>
+<li><strong>Present your observations in an easy to understand sentence, relating the result to the context of the problem</strong>.</li>
 </ol>
 <a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q11" style="display:none;">
@@ -1035,7 +1045,7 @@ Remember…
 
 <br />
 <hr />
-<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+<p>Copyright &copy; 2020 Brigham Young University-Idaho. All rights reserved.</p>
 
 
 

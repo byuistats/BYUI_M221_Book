@@ -11,7 +11,7 @@
 
 
 
-<title>Lesson 3: Describing Quantitative Data: Shape, Center &amp; Spread</title>
+<title>Lesson 3: Describing Quantitative Data (Shape &amp; Center)</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -295,19 +295,19 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
     </li>
     <li>
-      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
+      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
     </li>
     <li>
-      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data (Shape &amp; Center)</a>
     </li>
     <li>
-      <a href="Lesson04.html">Lesson 4: Rules of Probability</a>
+      <a href="Lesson04.html">Lesson 4: Describing Quantitative Data (Spread)</a>
     </li>
     <li>
       <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
@@ -401,7 +401,11 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
+<<<<<<< HEAD
   <a href="https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
+=======
+  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -415,7 +419,7 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Lesson 3: Describing Quantitative Data: Shape, Center &amp; Spread</h1>
+<h1 class="title toc-ignore">Lesson 3: Describing Quantitative Data (Shape &amp; Center)</h1>
 
 </div>
 
@@ -425,20 +429,13 @@ $(document).ready(function () {
 <li><a href="#review-of-the-five-steps-of-the-statistical-process">Review of the Five Steps of the Statistical Process</a></li>
 <li><a href="#shape-of-a-distribution">Shape of a Distribution</a><ul>
 <li><a href="#visualizing-quantitative-data-histograms">Visualizing Quantitative Data: Histograms</a></li>
+<li><a href="#making-inference-about-the-population">Making Inference About the Population</a></li>
 </ul></li>
 <li><a href="#center-of-a-distribution">Center of a Distribution</a><ul>
 <li><a href="#measuring-the-center-of-a-distribution">Measuring the Center of a Distribution</a></li>
 <li><a href="#parameters-and-statistics">Parameters and Statistics</a></li>
 </ul></li>
-<li><a href="#spread-of-a-distribution">Spread of a Distribution</a><ul>
-<li><a href="#standard-deviation-and-variance">Standard Deviation and Variance</a></li>
-</ul></li>
-<li><a href="#tools-to-describe-the-data">Tools to Describe the Data</a><ul>
-<li><a href="#percentiles-and-quartiles">Percentiles and Quartiles</a></li>
-<li><a href="#the-five-number-summary">The Five-Number Summary</a></li>
-<li><a href="#boxplots">Boxplots</a></li>
-</ul></li>
-<li><a href="#summary-1">Summary</a></li>
+<li><a href="#summary">Summary</a></li>
 <li><a href="#navigation">Navigation</a></li>
 </ul>
 </div>
@@ -449,29 +446,29 @@ $(document).ready(function () {
     e.style.display = (e.style.display == 'block') ? 'none' : 'block';
  }
 </script>
+<!--
+
 <div style="float:right;width=40%;">
 <br/>
-<div style="padding-left:10%;">
-<strong>Optional Lesson Video</strong>
+<div style="padding-left:10%;">**Optional Lesson Video**</div>
+<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC_w9Z1CWsBjtdmcQdJwuAay" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
-<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC_w9Z1CWsBjtdmcQdJwuAay" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
-</div>
-<p><br></p>
+<br>
+
+-->
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 <p>By the end of this lesson, you should be able to:</p>
 <ul>
-<li>Determine the shape of a distribution using a histogram and/or box plot.</li>
-<li>Determine the centers of a given histogram and/or box plot.</li>
-<li>Identify the mean, median and standard deviation in skewed or normal histograms.</li>
-<li>Calculate the mean, median and standard deviation from quantitative data.</li>
+<li>Determine the shape of a distribution using a histogram.</li>
+<li>Interpret the mean, median, and mode for quantitative data.</li>
+<li>Apply the Excel functions AVERAGE, MEDIAN, and MODE when working with quantitative data in Excel.</li>
+<li>Determine the location of the mean relative to the median of left-skewed, right-skewed, or bell-shaped distributions visually using a histogram.</li>
+<li>Interpret a histogram.<br />
+</li>
 <li>Distinguish between a parameter and a statistic.</li>
-<li>Calculate a percentile from a quantitative data set.</li>
-<li>Calculate a five-number summary from quantitative data with Excel, or by hand.</li>
-<li>Create a histogram and a box-plot from quantitative data.</li>
 </ul>
 </div>
 <p><br></p>
@@ -578,7 +575,7 @@ Step 5:
 <p><strong>Cost to Treat Tuberculosis in India</strong></p>
 <p><img src="Images/Market_rural-India_-Tamilword22.jpg"></p>
 <p><img src="Images/Step1.png"> <br> <strong>Step 1: Design the study.</strong></p>
-<p>Tuberculosis (TB) is the most deadly bacterial disease in the world. In 2009, nine million new cases of tuberculosis were diagnosed, leading to almost 2 million deaths worldwide. Currently, the principal vaccine used to prevent tuberculosis is Bacille Calmette Guerin (BCG). Unfortunately, BCG is only moderately effective at preventing tuberculosis. Historically, India has had a high number of tuberculosis cases. The Indian Government wants to reduce the prevalence of this disease.</p>
+<p>Tuberculosis (TB) is the deadliest bacterial disease in the world. In 2009, nine million new cases of tuberculosis were diagnosed, leading to almost 2 million deaths worldwide. Currently, the principal vaccine used to prevent tuberculosis is Bacille Calmette Guerin (BCG). Unfortunately, BCG is only moderately effective at preventing tuberculosis. Historically, India has had a high number of tuberculosis cases. The Indian Government wants to reduce the prevalence of this disease.</p>
 <p>In this activity, you will compare the average costs of treating a person who contracts tuberculosis to the costs of preventing a case of tuberculosis in India.</p>
 <p><img src="Images/Step2.png"> <br> <strong>Step 2: Collect data.</strong></p>
 <p>Health Care records of tuberculosis patients in India were surveyed to estimate the cost to treat patients with tuberculosis. The following data are representative of the total costs (in US dollars) incurred by society in the treatment of 10 randomly selected tuberculosis patients in India.</p>
@@ -587,7 +584,7 @@ Step 5:
 </center>
 <p>These costs include health care treatment, time missed from work, and in some cases utility lost due to death.</p>
 <p><img src="Images/Step3.png"> <br> <strong>Step 3: Describe the data.</strong></p>
-<div id="visualizing-quantitative-data-histograms" class="section level3">
+<div id="visualizing-quantitative-data-histograms" class="section level3 tabset tabset-fade">
 <h3>Visualizing Quantitative Data: Histograms</h3>
 <p>The following data are representative of the total costs (in US dollars) incurred by society in the treatment of 10 randomly selected tuberculosis patients in India.</p>
 <center>
@@ -698,7 +695,9 @@ At least 30,000 and less than 35,000
 </tbody>
 </table>
 </center>
-<p>For each of these intervals, we draw a bar on the histogram. The width of the bars is determined by the width of the interval (5000 in this example). The height of the bars is equal to the number of observations that fall in each interval.</p>
+<p>For each of these intervals, we draw a bar on the histogram. The width of the bars is determined by the width of the interval (5000 in this example). The height of the bars is equal to the number of observations that fall in each interval. As we look at the histogram shown below, we see bars ranging from $0 to $35,000. We also see higher bars in the middle between $10,000 to $20,000 show that these values are more commonly occurring than the other values. If we computed the average of the values contained in our histogram, we would compute the number <span class="math display">\[
+  \frac{15,100 + 19,000 + 4,800 + 6,500 + 14,900 + 600 + 23,500 + 11,500 + 12,900 + 32,200}{10} = 14,100
+\]</span> showing that the <em>center</em> of the histogram (or average) is at $14,100.</p>
 <center>
 <strong>This is a histogram created in Excel:</strong> <br> <img src="Images/Lesson_2_Activity_2-1.JPG">
 </center>
@@ -717,41 +716,42 @@ At least 30,000 and less than 35,000
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" 
 {{Software_Filter | PageName=Histogram }}
 -->
-<div class="SoftwareHeading">
-Excel Instructions
-</div>
-<div class="Summary">
-<p><strong>Instructions for Creating a Histogram in Excel:</strong></p>
-<p>To make a histogram in Excel, you can use the Excel file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>. First, enter the 10 data values in the first column (on the left side) of the tool, the histogram will be generated automatically. You can practice creating a histogram in Excel using the data provided on the 10 patients.</p>
-<p>Using 8 intervals, the tuberculosis cost data can be represented by the following histogram.</p>
-<p><img src="Images/Lesson_2_Activity_2-2.JPG"></p>
-<p>This histogram differs slightly from the first example. The width of the intervals is smaller and the starting value for the first interval is different. However, both graphs illustrate the same data.</p>
-</div>
+<p>You can watch this short video of how to <a href="https://screencast-o-matic.com/watch/cYV1YdvU35" target="_blank">create a histogram in Excel</a>, or follow these steps:</p>
 <p><br></p>
-<p>After summarizing the data numerically and graphically, we are ready to make inferences about the population. <br></p>
-<p><img src="Images/Step4.png"> <strong>Step 4: Make inferences.</strong></p>
-<p>The historical total mean cost to society to treat a case of tuberculosis in India is known to be $13,800. To assess if the cost has increased, the null and alternative hypotheses are:</p>
-<p><span class="math inline">\(H_0\)</span>: The mean cost is equal to $13,800.</p>
-<p><span class="math inline">\(H_a\)</span>: The mean cost is greater than $13,800.</p>
-<p>Using the symbol for the population mean, we can rewrite the null and alternative hypotheses more simply as:</p>
-<p><span class="math inline">\(H_0\)</span>: <span class="math inline">\(\mu = \$13,800\)</span> <span class="math inline">\(H_a\)</span>: <span class="math inline">\(\mu &gt; \$13,800\)</span></p>
-<p>Recall, that the <span class="math inline">\(P\)</span>-value is the probability that the data would be as extreme or more extreme than we observed, assuming the null hypothesis is true. A small <span class="math inline">\(P\)</span>-value indicates that there is a lot of evidence against the null hypothesis. If the <span class="math inline">\(P\)</span>-value is low, say, less than 0.05, we reject the null hypothesis.</p>
-<p>It can be shown that the <span class="math inline">\(P\)</span>-value is 0.460. (Later in the course, you will have the tools to do this computation.)</p>
-<div class="QuestionsHeading">
-Answer the following question:
+<div id="step-1" class="section level4">
+<h4>Step 1</h4>
+<p>Start by typing the data into a column of cells in Excel: each data point into its own cell, as shown below. Then highlight the data.</p>
+<p><img src="Images/create_histogram_step2resized.PNG" width=90%></p>
+<hr />
 </div>
-<div class="Questions">
-<ol style="list-style-type: decimal">
-<li>Based on the <span class="math inline">\(P\)</span>-value, would you reject or fail to reject the null hypothesis? Explain how you made this determination.</li>
-</ol>
-<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q1" style="display:none;">
-<ul>
-<li>Fail to reject the null hypothesis. Since the <span class="math inline">\(P\)</span>-value is large, there is not a lot of evidence against the null hypothesis. When the <span class="math inline">\(P\)</span>-value is large, we fail to reject the null hypothesis. There is not enough evidence to suggest that the mean cost is now greater than $13,800.</li>
-</ul>
+<div id="step-2" class="section level4">
+<h4>Step 2</h4>
+<p>Go to the Insert ribbon in Excel and select the histogram icon from the “Charts” section of the ribbon. Then select the first option of histograms presented.</p>
+<p><img src="Images/create_histogram_step3.PNG" width=90%></p>
+<p>You will notice that the histogram does not look much like the histogram above yet. The number and size of bins in a histogram can drastically change the apparent shape of the distribution. It is worth experimenting with a different number of bins so the true shape of the distribution of data is revealed. To change the number of bins go on to the next steps.</p>
+<hr />
 </div>
-<p> </p>
+<div id="step-3" class="section level4">
+<h4>Step 3</h4>
+<p>Be sure the graph is selected, so that you can select the “Format” ribbon. In the upper left corner of the ribbon, select “Horizontal Category Axis” in the drop down box. Then click on “Format Selection”</p>
+<p><img src="Images/create_histogram_step4.PNG" width=90%></p>
+<hr />
 </div>
+<div id="step-4" class="section level4">
+<h4>Step 4</h4>
+<p>A menu of options will open on the right side of the screen. You can adjust the bin width or number of bins. In this case, though we can’t make it match, in order to make the histogram look as much as possible like the one shown above, we will choose a bin width of 5000.</p>
+<p><img src="Images/create_histogram_step5.PNG" width=90%></p>
+<p>Excel shows the starting and ending values for each bin. For example, the first bin goes from 600 up to 5,600. We see there are two data points contained in that bin, represented by the bin’s bar height. The next bin contains only one of our data points, it includes any value greater than 5,600 up through, and including, 10,600. And so on.</p>
+<p>This histogram does not look exactly like the histogram pictured above, but it is close. To make it match exactly you can use the “Overflow bin” and “Underflow bin” options; but that is beyond what we will discuss here.</p>
+<hr />
+<p><br> <br></p>
+</div>
+</div>
+<div id="making-inference-about-the-population" class="section level3">
+<h3>Making Inference About the Population</h3>
+<p>After summarizing the data from our sample of the populations both numerically and graphically, we can use this information to make inference about the full population. <br></p>
+<p><img src="Images/Step4.png"> <br> <strong>Step 4: Make inferences.</strong></p>
+<p>In the past, the total average cost to society to treat a case of tuberculosis in India was known to be $13,800. As shown in our Step 3 calculations, the 10 randomly selected patients showed an average cost that was higher than the historic value at $14,100. This might make us believe that the <em>actual</em> total average cost to society is also $14,100. However, in depth statistical calculations (that you will be taught how to do later this semestr) show that there is a 46% chance that our sample had an average of $14,100 just by random chance. This isn’t too hard to believe since we only had a sample size of 10 people, and $14,100 is only $300 above $13,800, so it turns out to be fairly likely (46% chance) that because of random chance our sample had an average that was a little higher than the actual value from the population. So we will conclude that the total average cost to society is still essentially the same as it has been in the past.</p>
 <p><br></p>
 <p><img src="Images/Step5.png"> <br> <strong>Step 5: Take action.</strong></p>
 <p>After making inferences, you take action. The motivation for conducting a study like this is usually to see if there is inflation in the costs.</p>
@@ -759,26 +759,41 @@ Answer the following question:
 Answer the following question:
 </div>
 <div class="Questions">
-<ol start="2" style="list-style-type: decimal">
-<li>Given that you failed to reject the null hypothesis, do you think the Government of India needs to take any special action to stop the increase in the cost to treat tuberculosis?</li>
+<ol style="list-style-type: decimal">
+<li>Given our conclusion in Step 4 (that the results of our random sample being at an average $14,100 had a 46% probability of just being caused by random chance) do you think the Government of India needs to take any special action to stop the increase in the cost to treat tuberculosis?</li>
 </ol>
 <a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
 <ul>
-<li>Answers may vary. – We fail to reject the null hypothesis. That means that we could not say that the true mean cost is not equal to $13,800. So, there is not enough evidence of inflation. There is no need for the Government of India to take action.</li>
+<li>Answers may vary. – However, we could not say that the true mean cost has really changed from $13,800. So, there is not enough evidence of inflation. There is no need for the Government of India to take action.</li>
 </ul>
 </div>
 <p> </p>
 </div>
 <p><br></p>
 <p>One benefit of using a histogram is that it allows you to visualize the distribution of the data. A histogram illustrates the overall shape of the distribution of the data. The height of the bars show how many observations fall in that range.</p>
+<div class="QuestionsHeading">
+Answer the following question:
+</div>
+<div class="Questions">
+<ol start="2" style="list-style-type: decimal">
+<li>Which bin of the histogram of tuberculosis costs contained the most data points?</li>
+</ol>
+<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q1" style="display:none;">
+<ul>
+<li>The bin going from $10,000 to $15,000 contained 3 observations ($11,500, $12,900, and $14,900), which was the most of any of the bins in the histogram. This can be seen visually in the histogram by looking at the height of each bar and the starting and stopping points of the bar along the x-axis of the graph.</li>
+</ul>
+</div>
+<p> </p>
+</div>
 <p>We will describe the shape of the distribution of a data set using the following basic categories: symmetric, bell-shaped, skewed right, and skewed left. Additionally, we can label the shape of a distribution as uniform, unimodal, bimodal, or multimodal.</p>
-<p>A distribution is symmetric if both the left and right side of the distribution appear to be roughly a mirror image of each other. A special symmetric distribution is a bell-shaped distribution. When data follow a Bell-shaped distribution, the histogram looks like a bell. Bell-shaped distributions play an important role in Statistics and will play a role in most of the future lessons.</p>
-<p>A distribution is right-skewed if a histogram of the distribution shows a long right tail. This can occur if there are some very large outliers. A distribution is left-skewed if a histogram shows that it has a long tail to the left.</p>
-<p><img src="Images/Lesson_2_Activity_2-3.JPG"></p>
-<p>If a distribution has only one peak, it is said to be <strong>unimodal</strong>. The three distributions illustrated above are all unimodal distributions. Some people might argue that there are several peaks in the GPA data, so it should not be considered unimodal. Even though there are jagged bumps in the histogram, it is important to visualize the overall shape in the data. When interpreting a histogram, it can be helpful to blur your eyes and imagine the overall shape after smoothing out the bumps. If the overall trend indicates that there is more than one bump, then we do not consider the distribution to be unimodal.</p>
+<p>A distribution is symmetric if both the left and right side of the distribution appear to be roughly a mirror image of each other. A special symmetric distribution is a bell-shaped distribution. When data follow a bell-shaped distribution, the histogram looks like a bell. Bell-shaped distributions play an important role in Statistics and will play a role in most of the future lessons.</p>
+<p>A distribution is right-skewed if a histogram of the distribution shows a long right tail. This can occur if there are some very large outliers on the right-hand side of the distribution. A distribution is left-skewed if a histogram shows that it has a long tail to the left.</p>
+<p><img src="Images/Lesson_2_Activity_2-3.JPG" width=130%></p>
+<p>If a distribution has only one peak, it is said to be <strong>unimodal</strong>. The three distributions illustrated above are all unimodal distributions. Some people might argue that there are several peaks in the GPA data, so it should not be considered unimodal. Even though there are jagged bumps in the histogram, it is important to visualize the overall shape in the data. When interpreting a histogram, it can be helpful to blur your eyes and imagine the overall shape after smoothing out the bumps. If the overall trend indicates that there is more than one bump, then we do not consider the distribution to be unimodal. We will usually only work with unimodal data sets in this course.</p>
 <p>Some distributions have no distinct peak, others have more than one peak. When there is no distinct peak, and the histogram shows a relatively flat shape, we might say the data follow a <strong>uniform</strong> distribution. If there are two distinct peaks, a distribution is called bimodal. If there are more than two peaks, we refer to the distribution as <strong>multimodal</strong>.</p>
-<p><img src="Images/Modal_distributions.jpg"> <br> <br></p>
+<p><img src="Images/Modal_distributions.jpg" width=50%> <br> <br></p>
 </div>
 </div>
 <div id="center-of-a-distribution" class="section level2">
@@ -793,8 +808,11 @@ Answer the following question:
 <div id="mean" class="section level4">
 <h4>Mean</h4>
 <p>The sample mean or sample arithmetic mean is the most common tool to estimate the center of a distribution. It is referred to simply as the mean. It is computed by adding up the observed data and dividing by the number of observations in the data set.</p>
-<p>In Statistics, important ideas are given a name. Very important ideas are given a symbol. The sample mean has both a name (mean) and a symbol (<span class="math inline">\(\bar x\)</span>).</p>
-<p>You may have heard people refer to the sample mean as the average. The word average refers to any number that is used to estimate the center of a distribution. The mean, median and mode are all examples of averages. To avoid confusion in this course, the word average will not be used to describe the mean.</p>
+<p>In Statistics, important ideas are given a name. Very important ideas are given a symbol. The sample mean has both a name (mean) and a symbol (<span class="math inline">\(\bar x\)</span>, called “x-bar”).</p>
+<p><span class="math display">\[
+  \bar{x} \text{ is used to denote the sample mean}
+\]</span></p>
+<p>You may have heard people refer to the sample mean as the average. Technically, the word average refers to any number that is used to estimate the center of a distribution. The mean, median and mode are all examples of “averages.” To avoid confusion, it is best to use the words mean, median, and mode instead of the word average, so that it is clear which “average” your are referencing.</p>
 <div class="QuestionsHeading">
 Answer the following question:
 </div>
@@ -805,7 +823,7 @@ Answer the following question:
 <a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q3" style="display:none;">
 <ul>
-<li>The mean cost to treat the 10 TB patients in India is: <span class="math inline">\(\bar x = \$14,100\)</span></li>
+<li>The mean cost to treat the 10 TB patients in India is: <span class="math inline">\(\bar x = \$14,100\)</span>. To see how to calculate the mean in Excel, see the “Excel Instructions” below.</li>
 </ul>
 </div>
 <p> </p>
@@ -879,7 +897,7 @@ Answer the following questions:
 <h4>Mode</h4>
 <p>The most frequently occurring value is called the mode. Sometimes there is more than one mode. For example, in the data set</p>
 <p><span class="math display">\[{1,~~2, ~~2, ~~2, ~~3, ~~4, ~~4, ~~5, ~~5, ~~5, ~~6}\]</span></p>
-<p>the modes are 2 and 5. Both of these values occurs three times, which is more times than any other value.</p>
+<p>the modes are 2 and 5. Both of these values occur three times, which is more times than any other value.</p>
 <p>If no number occurs more than once in the data set, we say that there is no mode. For the data set representing the costs to treat tuberculosis in India, none of the values is repeated. So, there is no mode for these data.</p>
 <div class="QuestionsHeading">
 Answer the following question:
@@ -893,24 +911,50 @@ Answer the following question:
 <li><p>There may be exactly one mode.</p></li>
 <li><p>There may be several modes.</p></li>
 <li><p>Only A and B can occur.</p></li>
+<li><p>A, B, and C can all occur.</p></li>
+</ol>
+<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q6" style="display:none;">
+<ol start="5" style="list-style-type: lower-alpha">
 <li>A, B, and C can all occur.</li>
 </ol>
 </div>
+<p> </p>
+</div>
 <p><br></p>
+</div>
+<div id="excel-instructions-for-mean-median-and-mode" class="section level4">
+<h4>Excel Instructions for Mean, Median, and Mode</h4>
 <div class="SoftwareHeading">
 Excel Instructions
 </div>
-<div class="Summary">
-<p>  <strong>To calculate the mean, median, and mode in Excel, do the following</strong></p>
-<p>  If you do not know how to use Excel to find the mean and median, the spreadsheet <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> has been created to make these calculations for you.</p>
+<div class="Summary" style="padding:10px;">
+<p><strong>To calculate most numerical summaries</strong> (such as the mean, median, and mode) in Excel, follow these general steps:</p>
+<ol style="list-style-type: decimal">
+<li><p>Open Excel.</p></li>
+<li>Enter the data into Excel. There should only be one data value per cell.<br />
+</li>
+<li><p>Next, in the cell where you would like to store the numerical summary type an “=”, followed by the name of the function and then an open parenthesis, “(”.</p></li>
+<li><p>Then, highlight the data (by clicking on it) to which you want to apply the function. The cell reference range will automatically be added to your formula. Then type a closed parenthesis, “)” and hit enter.</p></li>
+</ol>
+<p><strong>Caculate a Mean</strong></p>
+<p>For example, to calculate the mean of the sample of tuberculosis patient costs in India:</p>
 <ul>
-<li>Download and open the Excel spreadsheet. Make sure you are on the worksheet labeled “Descriptive Stats”. (This is the red tab at the bottom the far left).</li>
-<li>Copy and paste your data into the blue column found on the left side of the page.</li>
-<li>The mean, median, mode, and other statistics will be located in the “Numerical Descriptive Statistics” table found in the center of the worksheet. A histogram will be shown above this table.</li>
+<li>put the data in Excel,</li>
+<li>in a blank cell type “<strong>=AVERAGE(</strong>”,</li>
+<li>highlight the data,</li>
+<li>close the parenthesis with “<strong>)</strong>” before hitting enter:</li>
 </ul>
-<center>
-<img src="Images/DiveSeals-Mass-Stats.png">
-</center>
+<p>Notice that Excel calles the “mean” the “average.”</p>
+<div style="padding-left:35px;">
+<img src="Images/Lesson_03_mean.PNG" width=50%>
+</div>
+<p><br></p>
+<p><strong>Calculate a Median</strong></p>
+<p>Simply replace the word “AVERAGE” in the formula with the word “MEDIAN”. Try it with the tuberculosis patient data, you should get the same value that was calculated by hand above.</p>
+<p><br/></p>
+<p><strong>Calculate a Mode</strong></p>
+<p>Similarly, to calculate a mode, replace the word “AVERAGE” in the formula with the word “MODE” or “MODE.SNGL”. NOTE: If you try this on the tuberculosis patient data, you will get a result of “#N/A”. This is Excel’s way of saying that a mode does not exist because there are no repeated values in the dataset.</p>
 <p><br></p>
 </div>
 <p><br> <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" --> <!-- {{Software_Filter|PageName=Mean_Median_Mode}} --></p>
@@ -919,15 +963,15 @@ Excel Instructions
 <div id="parameters-and-statistics" class="section level3">
 <h3>Parameters and Statistics</h3>
 <p>We only have data on the cost to treat ten randomly selected tuberculosis patients. This represents a random sample from the population. The sample obtained by the researchers depends on random chance. If the study was repeated and a new sample of ten patients was randomly drawn from all cases of tuberculosis in India, would we observe the same data values? Certainly not!</p>
-<p>However, if we draw a random sample, we would expect the mean of the new sample to be somewhat close to the mean for our original sample. The sample mean, <span class="math inline">\(\bar x\)</span>, is an estimate of the true mean of the population.</p>
-<p>One of the primary purposes of collecting and analyzing data is to estimate the true mean of a population.Usually, we do not know what the true mean is, and we estimate it with the sample mean.</p>
+<p>However, if we took a second random sample from the population, we would expect the mean of the new sample to be somewhat similar to the mean for our original sample. And if we took a third sample of data, we should expect the mean of this sample to be different than the means of the other two samples. In fact, every sample will give us a different sample mean, but all of these sample means will be fairly similar in value.</p>
+<p>One of the primary purposes of collecting and analyzing data is to estimate the true mean of a population. Since collecting data on the entire population is usually not feasible, we usually never know what the true mean is. So we estimate the true population mean with the sample mean from a single sample of data from the population.</p>
 <p>The sample mean is an example of a statistic. A statistic is a number that describes a sample. The true (usually unknown) population mean is an example of a parameter. A parameter is any number that describes a population.</p>
 <p>An easy way to distinguish between a parameter and a statistic is to note the repetition in the first letters:</p>
 <ul>
 <li><strong>P</strong>opulation <strong>P</strong>arameter True (usually unknown) value describing a population</li>
 <li><strong>S</strong>ample <strong>S</strong>tatistic Estimate of the population parameter obtained from a sample</li>
 </ul>
-<p>In the example above, the sample mean <span class="math inline">\(\bar x\)</span> = $14,100 is a statistic. Over the last few years, the total mean cost to treat tuberculosis in India has been $13,800. This is considered a parameter.</p>
+<p>In the example above, the sample mean <span class="math inline">\(\bar x\)</span> = $14,100 is a statistic. Over the last few years, the total mean cost to treat tuberculosis in India has been $13,800. This $13,800 is considered a parameter because it is the “known” value for the full population.</p>
 <p>Different symbols are used to distinguish between the sample mean (a statistic) and the population mean (a parameter). The symbol for the sample mean is <span class="math inline">\(\bar x\)</span>. The symbol for the population mean is <span class="math inline">\(\mu\)</span>.</p>
 <p><strong>Perspective</strong></p>
 <p>The mean cost to treat the ten tuberculosis patients in the sample was <span class="math inline">\(\bar x\)</span> = $14,100. This number gives us some useful information. However, if this was all we were given, we would not be able to distinguish the data above from a situation where the cost for each of the ten patients was exactly $14,100. Notice that if the cost for each patient was $14,100, the mean would be:</p>
@@ -936,6 +980,7 @@ Excel Instructions
 <p><br> <br></p>
 </div>
 </div>
+<<<<<<< HEAD
 <div id="spread-of-a-distribution" class="section level2">
 <h2>Spread of a Distribution</h2>
 <p>You have studied two important characteristics of a distribution: the <strong>shape</strong> and the <strong>center</strong>. In this section, you will discover ways to summarize the <strong>spread</strong> of a distribution of data. The spread of a distribution of data describes how far the observations tend to be from each other. There are many ways to describe the spread of a distribution. <br></p>
@@ -3389,6 +3434,9 @@ Some students mistakenly include the mean in the five-number summary. The third 
 </div>
 </div>
 <div id="summary-1" class="section level2">
+=======
+<div id="summary" class="section level2">
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 <h2>Summary</h2>
 <div class="SummaryHeading">
 Remember…
@@ -3396,10 +3444,8 @@ Remember…
 <div class="Summary">
 <ul>
 <li><p>A <strong>histogram</strong> allows us to visually interpret data. Histograms can be left-skewed, right-skewed, or symmetrical and bell-shaped.</p></li>
-<li><p>The <strong>mean</strong>, <strong>median</strong>, and <strong>mode</strong> are measures of the center of a distribution. The mean is the most common measure of center, and is computed by adding up the observed data and dividing by the number of observations in the data set.</p></li>
-<li><p>The <strong>standard deviation</strong> is a number that describes how spread out the data are. A larger standard deviation means the data are more spread out than data with a smaller standard deviation.</p></li>
-<li><p>A <strong>parameter</strong> is a true (but usually unknown) number that describes a population. A <strong>statistic</strong> is an estimate of a parameter obtained from a sample.</p></li>
-<li><strong>Quartiles/percentiles</strong>, <strong>Five-Number Summaries</strong>, and <strong>Boxplots</strong> are tools that help us understand data. The five-number summary of a data set contains the minimum value, the first quartile, the median, the third quartile, and the maximum value. A boxplot is a graphical representation of the five-number summary.</li>
+<li><p>The <strong>mean</strong>, <strong>median</strong>, and <strong>mode</strong> are measures of the center of a distribution. The mean is the most common measure of center and is computed by adding up the observed data and dividing by the number of observations in the data set.</p></li>
+<li><p>A <strong>parameter</strong> is a true (but usually unknown) number that describes a population. A <strong>statistic</strong> is an estimate of a parameter obtained from a sample of the population.</p></li>
 </ul>
 </div>
 <p><br></p>
@@ -3423,8 +3469,8 @@ Remember…
 <tbody>
 <tr class="odd">
 <td align="center"><a href="Lesson02.html">Lesson 2: The Statistical Process &amp; Design of Studies</a></td>
-<td align="center">Lesson 03: Describing Quantitative Data: Shape, Center &amp; Spread</td>
-<td align="center"><a href="Lesson04.html">Lesson 4: Probability; Discrete Random Variables</a></td>
+<td align="center">Lesson 3: Describing Quantitative Data (Shape &amp; Center)</td>
+<td align="center"><a href="Lesson04.html">Lesson 4: Describing Quantitative Data (Spread)</a></td>
 </tr>
 </tbody>
 </table>
@@ -3433,7 +3479,7 @@ Remember…
 
 <br />
 <hr />
-<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+<p>Copyright &copy; 2020 Brigham Young University-Idaho. All rights reserved.</p>
 
 
 

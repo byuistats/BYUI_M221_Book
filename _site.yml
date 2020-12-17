@@ -7,15 +7,15 @@ navbar:
       href: index.html
     - text: "Unit 1"
       menu:
-        - text: "Lesson 1: On Campus Course Introduction"
+        - text: "Lesson 1: (On Campus) Course Intro & Probability"
           href: Lesson01_Campus.html
-        - text: "Lesson 1: Online Course Introduction"
+        - text: "Lesson 1: (Online) Course Intro & Probability"
           href: Lesson01.html
         - text: "Lesson 2: The Statistical Process"
           href: Lesson02.html
-        - text: "Lesson 3: Describing Quantitative Data"
+        - text: "Lesson 3: Describing Quantitative Data (Shape & Center)"
           href: Lesson03.html
-        - text: "Lesson 4: Rules of Probability"
+        - text: "Lesson 4: Describing Quantitative Data (Spread)"
           href: Lesson04.html
         - text: "Lesson 5: Normal Distributions"
           href: Lesson05.html
@@ -64,8 +64,13 @@ navbar:
         - text: "Lesson 24: Unit 4 Review"
           href: Lesson24.html
   right:
+<<<<<<< HEAD
     - text: "Toolbox"
       href: https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx
+=======
+    - text: Toolbox
+      href: ./Data/Math221StatisticsToolbox.xltx 
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
     - text: Data
       href: Data.html
 output: 

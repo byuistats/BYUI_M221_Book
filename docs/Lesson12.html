@@ -295,19 +295,19 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
     </li>
     <li>
-      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
+      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
     </li>
     <li>
-      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data (Shape &amp; Center)</a>
     </li>
     <li>
-      <a href="Lesson04.html">Lesson 4: Rules of Probability</a>
+      <a href="Lesson04.html">Lesson 4: Describing Quantitative Data (Spread)</a>
     </li>
     <li>
       <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
@@ -401,7 +401,11 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
+<<<<<<< HEAD
   <a href="https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
+=======
+  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -453,17 +457,17 @@ $(document).ready(function () {
 </div>
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
-<a href="javascript:showhide('outcome')"><span style="font-size:8pt;">Click here to Show/Hide Outcomes for this Lesson</span></a>
+<a href="javascript:showhide('outcome')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="outcome" style="display:none;">
-<p>By the end of this lesson, you should be able to:</p>
-<p><strong>Confidence Intervals for the mean of differences with dependent samples: </strong></p>
+<p>By the end of this lesson, you should be able to do the following.</p>
+<p><strong>Regarding Confidence Intervals for the mean of differences with dependent samples: </strong></p>
 <ul>
 <li>Calculate and interpret a confidence interval for the mean of differences given a confidence level.</li>
 <li>Identify a point estimate and margin of error for the confidence interval.</li>
 <li>Show the appropriate connections between the numerical and graphical summaries that support the confidence interval.</li>
 <li>Check the requirements for the confidence interval.</li>
 </ul>
-<p><strong>Hypothesis Testing for the mean of differences with dependent samples:</strong></p>
+<p><strong>Regarding Hypothesis Testing for the mean of differences with dependent samples:</strong></p>
 <ul>
 <li>State the null and alternative hypothesis.</li>
 <li>Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.</li>
@@ -842,7 +846,7 @@ Difference
 Excel Instructions
 </div>
 <div class="Summary">
-<p>Fortunately, the “Paired Data t-test” tab in the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> will automatically compute the differences when you paste in the data. <strong>The Toolbox always takes the data in column A - data in column B.</strong> Because we want to take Post - Pre, you will need to swap the order of the column when pasting the data into the Math221 Statistics Toolbox. Follow this process:</p>
+<p>Fortunately, the “Paired Data t-test” tab in the <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> will automatically compute the differences when you paste in the data. <strong>The Toolbox always takes the data in column A - data in column B.</strong> Because we want to take Post - Pre, you will need to swap the order of the columns when pasting the data into the Math221 Statistics Toolbox. Follow this process:</p>
 <ul>
 <li>Copy the “Pre” column and paste it into column B, labeled “Data2” of the Toolbox.</li>
 <li>Copy the “Post” column and paste it into column A, labeled “Data1” of the Toolbox.</li>
@@ -910,7 +914,7 @@ H_a: &amp;~~ \mu_d &lt; 0
 <p><img src="Images/Step3.png"></p>
 <p><strong>Give the relevant summary statistics</strong></p>
 <p>Here is the Excel output:</p>
-<p><img src="Images/Mahon_Paired_t-test_Excel_Toolbox.png"></p>
+<p><img src="Images/Mahon_Paired_t-test_Excel_Toolbox.PNG"></p>
 <p>From the Excel output illustrated above, we can see a histogram of the data and get the following numerical summaries:</p>
 <p><span class="math display">\[
 \begin{align}
@@ -930,12 +934,11 @@ n &amp;= 27
 </ul>
 <p>The subjects were recruited via advertisements for a research study. The participants volunteered to participate. It is not a simple random sample of all middle-aged women, but there is nothing about the selection of the sample that would invalidate the results.</p>
 <p>From a practical perspective, it is impossible to get a simple random sample of people in the general population. When research trials are conducted, people must volunteer to participate. This can lead to a selection bias, but it is usually negligible.</p>
-<p>The requirement of normality is satisfied for Mahon’s data. The differences appear to follow a normal distribution, so <span class="math inline">\(\bar d\)</span> will be approximately normal.</p>
-<p>The sample size (n=27) is fairly large. The histogram shows a mound shape. By scrolling to the right in the Excel sheet you can see a Q-Q plot of the differences:</p>
+<p>The requirement of normality is satisfied for Mahon’s data. Though the sample size (n=27) is not quite up to 30, it is still fairly large. Furthermore, the histogram of differences indicates very little skew, so <span class="math inline">\(\bar d\)</span> will be approximately normal.</p>
 <center>
-<img src="Images/Mahon-Differences-QQ_Excel_Toolbox.png">
+<img src="Images/Mahon-Differences-Histogram.PNG">
 </center>
-<p>With this Q-Q plot, we could conclude that the data follow a normal distribution. Even with a small sample size, we can still conduct this test.</p>
+<p>Even with a sample size less than 30, we can still conduct this test.</p>
 <p><strong>Give the test statistic and its value</strong></p>
 <p>The test statistic for a test involving paired data when <span class="math inline">\(\sigma\)</span> is unknown is a <span class="math inline">\(t\)</span>. For this situation, the value is: <span class="math display">\[t= \frac{-6.8 - 0}{3.17/\sqrt{27}} =-11.145\]</span> See that this calculation matches the test statistic given in the Excel output. The degrees of freedom and p-value can also be found in the Excel output.</p>
 <p><strong>State the degrees of freedom</strong></p>
@@ -993,7 +996,7 @@ H_a: &amp;~~ \mu_d &gt; 0 \\
 </div>
 <p> </p>
 </div>
-<p>In order to get the correct <span class="math inline">\(P\)</span>-value, we need to indicate the proper alternative hypothesis in Excel. In cell Q6 be sure the “Greater Than” symbol is selected in the drop-down menu.</p>
+<p><br> In order to get the correct <span class="math inline">\(P\)</span>-value, we need to indicate the proper alternative hypothesis in Excel. In cell N6 be sure the “Greater Than” symbol is selected in the drop-down menu.</p>
 <p><img src="Images/TypeOfTest-GreaterThan-Excel.png"></p>
 <p><br></p>
 <p><img src="Images/Step2.png"></p>
@@ -1227,10 +1230,7 @@ s_d &amp;= 160~\text{kJ}
 <p><br></p>
 <p><img src="Images/Step4.png"></p>
 <p><strong>Verify the requirements have been met</strong></p>
-<p>We can consider the sample representative of the population. The “difference” data appear to follow a normal distribution. This is illustrated in the following Q-Q plot:</p>
-<center>
-<img src="Images/REE-QQ-Excel_Toolbox.png">
-</center>
+<p>We can consider the sample representative of the population. Because our sample size (n=40) of differences is greater than 30, we can be sure the sampling distribution of <span class="math inline">\(\bar d\)</span> will be normal.</p>
 <p>The requirements for this test appear to have been satisfied.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
@@ -1264,12 +1264,11 @@ df = 39
 <a href="javascript:showhide('Q22')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q22" style="display:none;">
 <ul>
-<li>The test statistic is plotted on the horizontal axis. The <span class="math inline">\(P\)</span>-value is shaded in green. The same value can be found on the Excel output in cell R10.<br />
-&amp;nbsp
+<li>The test statistic is plotted on the horizontal axis. The <span class="math inline">\(P\)</span>-value is shaded in green. The same value can be found on the Excel output in cell O10.</li>
+</ul>
 <center>
 <img src="Images/REE-Applet.png">
-</center></li>
-</ul>
+</center>
 </div>
 <p><br></p>
 <ol start="23" style="list-style-type: decimal">
@@ -1402,12 +1401,11 @@ If you defined your difference as the 90-day price minus the 14-day price, then 
 </ol>
 <a href="javascript:showhide('Q29')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q29" style="display:none;">
-<ul>
-<li>The histogram is presented with 16 bins.
 <center>
 <img src="Images/DirectFlightCosts-Histogram1-Excel.png">
-</center></li>
-<li>If you defined your difference as the 90-day price minus the 14-day price, then with 16 bins you would have the following histogram:
+</center>
+<ul>
+<li>If you defined your difference as the 90-day price minus the 14-day price, then you would have the following histogram:
 <center>
 <img src="Images/DirectFlightCosts-Histogram2-Excel.png">
 </center></li>
@@ -1523,7 +1521,7 @@ Excel Instructions
 <div class="Summary">
 <p><strong>To calculate confidence intervals for the true mean of the difference in Excel, do the following</strong>:</p>
 <ul>
-<li>Open the file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a></li>
+<li>Open the file <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a></li>
 <li>Click on the tab labeled “Paired Data t-test”</li>
 <li>Enter the columns of paired data into column A and B</li>
 <li>Set the desired confidence level. <br></li>
@@ -1671,7 +1669,7 @@ Answer the following questions:
 <li>It is not explicitly stated, but we assume the plots of land were selected at random.</li>
 </ol></li>
 <li><ol start="2" style="list-style-type: lower-alpha">
-<li>For the pine beetle data, the histogram indicates that the data are not normally distributed. This can be confirmed with a Q-Q plot. Since the sample size is large (<span class="math inline">\(n = 170\)</span>), we can assume the sample mean is normally distributed.</li>
+<li>For the pine beetle data, the histogram indicates that the data are not normally distributed. However, since the sample size is large (<span class="math inline">\(n = 170\)</span>), we can know the sample mean is normally distributed.</li>
 </ol></li>
 <li>The requirements for creating the confidence interval seem to be satisfied.</li>
 </ul>
@@ -1931,13 +1929,13 @@ Answer the following questions:
 <p><br></p>
 <p><strong>Make an appropriate graph to illustrate the data</strong></p>
 <ol start="45" style="list-style-type: decimal">
-<li>Create a histogram of the differences in the hours of sleep.</li>
+<li>Create a graph of the differences in the hours of sleep.</li>
 </ol>
 <a href="javascript:showhide('Q45')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q45" style="display:none;">
-Here is a histogram of the data with 6 bins:
+Here is a boxplot of the data:
 <center>
-<img src="Images/LHyoscyamine-Histogram-Excel.png">
+<img src="Images/LHyoscyamine-Boxplot-Excel.png">
 </center>
 </div>
 <p> </p>
@@ -1958,9 +1956,8 @@ Answer the following questions:
 <li>We assume the subjects represent a random sample from the population.</li>
 </ol></li>
 <li><ol start="2" style="list-style-type: lower-alpha">
-<li>A Q-Q plot of the differences indicates that is reasonable to conclude that the data are normally distributed even though the sample size is small: <img src="Images/LHyoscyamine-QQ.png"></li>
+<li>Remember, just like the hypothesis test, this confidence interval for a mean of differences is robust. That means it is not very sensitive to the requirements. If they are violated, this interval estimate will probably still give reasonably good results. Because the sample size is small, with only 10 values, it is hard to see a shape in a histogram of the data, regardless of the number of bins chosen. However, it is clear that the data is not strongly skewed. We will move forward, assuming the requirement of a normal sampling distribution of <span class="math inline">\(\bar d\)</span> is not violated.</li>
 </ol></li>
-<li>The requirements for creating the confidence interval seem to be satisfied.</li>
 </ul>
 </div>
 <p><br></p>
@@ -2014,11 +2011,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table>
+<table style="width:76%;">
 <colgroup>
-<col width="38%" />
-<col width="30%" />
-<col width="30%" />
+<col width="29%" />
+<col width="23%" />
+<col width="23%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -2040,7 +2037,7 @@ Remember…
 
 <br />
 <hr />
-<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+<p>Copyright &copy; 2020 Brigham Young University-Idaho. All rights reserved.</p>
 
 
 

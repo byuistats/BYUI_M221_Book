@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -295,19 +283,26 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+<<<<<<< HEAD
       <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
     </li>
     <li>
       <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
+=======
+      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
+    </li>
+    <li>
+      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
     </li>
     <li>
-      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data (Shape &amp; Center)</a>
     </li>
     <li>
-      <a href="Lesson04.html">Lesson 4: Rules of Probability</a>
+      <a href="Lesson04.html">Lesson 4: Describing Quantitative Data (Spread)</a>
     </li>
     <li>
       <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
@@ -401,7 +396,11 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
+<<<<<<< HEAD
   <a href="https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
+=======
+  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -451,7 +450,7 @@ $(document).ready(function () {
 </div>
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 <p>By the end of this lesson, you should be able to do the following for a hypothesis test for several means (ANOVA):</p>
 <ul>
@@ -561,7 +560,7 @@ What is the solution?  Conduct only one test: an analysis of variance (ANOVA).
 <p>There are two requirements of ANOVA that must be checked:</p>
 <ul>
 <li><p>The data are normally distributed in each group.</p>
-<p>We check this by creating a Q-Q plot for each group (separately). If the points in the Q-Q plot do not show distinct curvature, it is reasonable to conclude that the data are normally distributed.</p></li>
+<p>We can check this by creating a histogram for each group (separately). Unless one (or more) of the group’s histograms provide strong evidence to the contrary, it is reasonable to conclude that the data are sufficiently normal to proceed with the analysis. We can take this approach because ANOVA is robust to violations of requirements. In other words, results from ANOVA tests are reasonably good even if there are mild to moderate violations of the requirements.</p></li>
 </ul>
 <!-- **[[Lesson 3: Describing_Quantitative_Data:_Shape,_Center_%26_Spread#Variance|variances]]** 
 I don't know how to reference specific header in other lesson-->
@@ -588,36 +587,47 @@ Excel Instructions
 </div>
 <div class="Summary">
 <p>To conduct a test for several means (ANOVA) in Excel, do the following:</p>
-<p>Open the file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> and do the following:</p>
+<p>Open the file <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> and do the following:</p>
 <ul>
 <li>Click on the tab labeled “ANOVA”</li>
 <li>Paste the data from each group into their own column
 <ul>
 <li>Paste the data from the first group in the appropriate part of Column A</li>
 <li>Paste the data for the second group in the designated part of Column B</li>
-<li>Continue copy and pasting each group in the appropriate columns</li>
+<li>Continue to copy and paste each group in the appropriate columns</li>
 </ul></li>
-<li>The test statistic, <span class="math inline">\(F\)</span>, is given in cell V7</li>
-<li>The degrees of freedom are presented in cells T7 and T8</li>
-<li>The <span class="math inline">\(P\)</span>-value is reported in cell W7</li>
 </ul>
 <p>The following points will help you interpret the output.</p>
 <ul>
 <li><p>The “Numerical Summary of the Data” (Step 3) section of the output gives the sample size, mean and standard deviation for each of the groups in your sample.</p></li>
-<li><p>In the ANOVA table, you will find the test statistic (<span class="math inline">\(F\)</span>), the <span class="math inline">\(P\)</span>-value (Sig.), and the degrees of freedom (df) for the <span class="math inline">\(F\)</span> statistic. Note that there are two numbers specifying the degrees of freedom. These are given as the between groups and within groups df, respectively. Do not worry about the total degrees of freedom. This number is the sum of the other two.</p></li>
+<li><p>In the ANOVA table, you will find the test statistic (<span class="math inline">\(F\)</span>), the <span class="math inline">\(P\)</span>-value (Sig.), and the degrees of freedom (df) for the <span class="math inline">\(F\)</span> statistic. Note that there are two numbers specifying the degrees of freedom. These are given as the between groups and within groups df, respectively. Do not worry about the total degrees of freedom. This number is the sum of the other two.</p>
+<ul>
+<li>The test statistic, <span class="math inline">\(F\)</span>, is given in cell T9</li>
+<li>The degrees of freedom are presented in cells R9 and R10</li>
+<li>The <span class="math inline">\(P\)</span>-value is reported in cell U9</li>
+</ul></li>
 </ul>
 <p>To check your requirements, do the following:</p>
 <ul>
-<li>To determine if the data are normally distributed, we will look at a Q-Q plot for each group separately.
+<li><p>To determine if the data are normally distributed, we will look at a histogram plot for each group separately.</p>
 <ul>
+<<<<<<< HEAD
 <li>While still on the ANOVA tab, scroll to the right so that columns Y through AI are visible. You should see a Q-Q plot. In a yellow highlighted drop-down box directly above the plot you can select the sample you would like to see a Q-Q plot for (see the picture below). Make sure that you evaluate each sample’s data. They all must look approximately normal to meet the requirement.</li>
 </ul>
 <p><img src="Images/ANOVA_QQplot.PNG"></p></li>
 <li>To determine if the population variances are equal, we will use a very simple check:
+=======
+<li>While still on the ANOVA tab, scroll down. Under the boxplots you should see a histogram. In a large, yellow highlighted box located in the upper-right corner of the plot, you can type the group number of the sample you would like to see a histogram for (see the picture below). Make sure that you evaluate each sample’s data. They <strong>all</strong> must look <em>approximately normal</em> to meet the requirement.</li>
+</ul>
+<p><img src="Images/ANOVA_histogram.PNG"></p></li>
+<li><p>To determine if the population variances are equal, we will use a very simple check:</p>
 <ul>
-<li>If the largest variance is at least four times as big as the smallest variance, we will conclude that the population variances are not equal. (Remember, the variance is the square of the standard deviation.)</li>
+<li>If the largest variance is at least four times as big as the smallest variance, we will conclude that the population variances are not equal. (Remember, the variance is the square of the standard deviation.)
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
+<ul>
 <li>If the largest variance is <em>not</em> four times as big as the smallest variance, we will conclude that the population variances are close enough that we can assume the variances are all equal.</li>
 <li>To help you check this assumption the smallest and largest sample variance are displayed in a table spanning cells Y4 to AA6.</li>
+</ul></li>
 </ul></li>
 </ul>
 <p><br></p>
@@ -647,8 +657,8 @@ Excel Instructions
 </div>
 <div class="Summary">
 <p>Follow these instructions to apply the ANOVA procedure using Excel:</p>
-<p>Data representative of the values reported by Emmons and McCullough are given in the file <a href="./Data/Gratitude.xlsx">Gratitude-Stacked.xlsx</a>. The data is divided up into three columns which represent Grateful, Hassels, and Events.</p>
-<p>The summary statistics can be obtained using the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>. Paste the three columns of data into the appropriate areas of column A, B, and C. The summary statistics will appear in the table to the right labeled “Numerical Summary of the Data”.</p>
+<p>Data representative of the values reported by Emmons and McCullough are given in the file <a href="./Data/Gratitude.xlsx">Gratitude.xlsx</a>. The data is divided up into three columns which represent Grateful, Hassels, and Events.</p>
+<p>The summary statistics can be obtained using the <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a>. Paste the three columns of data into the appropriate areas of column A, B, and C. The summary statistics will appear in the table to the right labeled “Numerical Summary of the Data”.</p>
 <p><br></p>
 </div>
 <p><br></p>
@@ -708,18 +718,13 @@ Excel Instructions
 <!-- |- -->
 <!-- |} -->
 <!-- </center> -->
-<p>Please do not blindly cut-and-paste computer output. It can include a lot of information that we do not use. Identify the relevant parts and only report those pieces of information. Present only those portions of the output that are relevant.</p>
-<ul>
-<li><strong>Make an appropriate graph to illustrate the data</strong></li>
-</ul>
-<p>Side-by-side box plots are an excellent way to display data from multiple samples.</p>
+<p>Please do not blindly cut-and-paste computer output. It can include a lot of information that we do not use. Identify the relevant parts and only report those pieces of information.</p>
+<p><strong>Make an appropriate graph to illustrate the data</strong></p>
+<p>This graph is from the Math221 Statistics Toolbox, but a title and proper labels have been added so that the chart can be understood without additional text to explain it.</p>
 <p><img src="Images/Gratitude-Boxplots.png"></p>
-<p>The Math221 Statistics Toolbox Excel file also produces a means plot graph just below the numerical summary. This plot is acceptable, but unfortunately, from this plot you don’t get an idea about the spread of the data like you do with a boxplot.</p>
-<p><img src="Images/ANOVA_MeanPlot.PNG"></p>
-<p><br></p>
 <p><img src="Images/Step4.png"></p>
 <p><strong>Verify the requirements have been met</strong></p>
-<p>The points in the Q-Q plots for each of the three groups (not shown) follow the line closely, suggesting that the data can be assumed to be normally distributed.</p>
+<p>A histogram for each of the three sample groups is created (not shown). The data from the Grateful group is slightly skewed right. However, the skew is small enough that we should still be able to get reasonable results. The distributions for the other two groups do not exhibit distinctly non-normal shapes. Therefore, we have not violated the assumption of normally distributed sample data.</p>
 <p>The largest variance (0.8917 from the Grateful group) is not four times the smallest (0.6922 from the Hassles group), so we conclude that the variances are equal for the three groups.</p>
 <p>We conclude that the requirements are satisfied and it is appropriate to use ANOVA.</p>
 <p><strong>Give the test statistic and its value</strong></p>
@@ -842,7 +847,7 @@ Answer the following questions:
 <a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
 <ul>
-<li>Here is a side-by-side boxplot to illustrate the data for the six groups all at once. (You may also want to make side-by-side histograms.)</li>
+<li>Here is a side-by-side boxplot from the SPSS software to illustrate the data for all six groups. For a review of how to make side-by-side boxplots in Excel using stacked data (a.k.a. long format) like this, review <a href="Lesson10.html" target="_blank">Lesson 13 World Cup Heart Attacks</a> example. As you paste the data into the Math221 Statistics Toolbox you are unstacking it, or in other words, putting it in wide format.</li>
 </ul>
 <p><img src="Images/Soccershoes-boxplot-SPSS.png"></p>
 </div>
@@ -881,9 +886,9 @@ Answer the following questions:
 <a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q5" style="display:none;">
 <ul>
-<li>Q-Q plots of the data for each of the six groups (separately) do not indicate a departure from normality.<br />
+<li>Histograms of the data for each of the six groups (separately) may not look very normal; but they do not exhibit strongly skewed data either.<br />
 </li>
-<li>The largest standard deviation (7.291) is not double the smallest (5.216).The largest variance (53.159) is not four times the smallest (27.207)</li>
+<li>The largest variance (53.159) is not four times the smallest (27.207)</li>
 </ul>
 </div>
 <p><br></p>
@@ -970,20 +975,18 @@ H_a: &amp; ~ \textrm{At least one of the means differs}
 \end{align}
 \]</span></p></li>
 <li><p>For ANOVA testing we use an <strong><span class="math inline">\(F\)</span>-distribution</strong>, which is right-skewed. The <span class="math inline">\(P\)</span>-value of an ANOVA test is always the area to the right of the <span class="math inline">\(F\)</span>-statistic.</p></li>
-<li>We can conduct ANOVA testing when the following three requirements are satisfied:</li>
-</ul>
+<li><p>We can conduct ANOVA testing when the following three requirements are satisfied:</p>
 <ol style="list-style-type: decimal">
 <li>The data come from a simple random sample.</li>
-<li>The data are normally distributed within each group.</li>
-</ol>
+<li>The data are normally distributed within each group.
 <ul>
-<li>This is satisfied when Q-Q Plots for the data in each group roughly follow a straight line.</li>
-</ul>
-<ol start="3" style="list-style-type: decimal">
-<li>The variance is constant.</li>
-</ol>
+<li>This is considered met unless one or more of the groups has a <em>strongly</em> skewed distribution.</li>
+</ul></li>
+<li>The variance is constant.
 <ul>
 <li>This is satisfied when the largest variance is not more than four times the smallest variance. <br></li>
+</ul></li>
+</ol></li>
 </ul>
 </div>
 <p><br></p>
@@ -1017,7 +1020,7 @@ H_a: &amp; ~ \textrm{At least one of the means differs}
 
 <br />
 <hr />
-<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+<p>Copyright &copy; 2020 Brigham Young University-Idaho. All rights reserved.</p>
 
 
 
@@ -1035,6 +1038,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

@@ -22,7 +22,7 @@ output:
 
 ## Lesson Outcomes
 
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 By the end of this lesson, you should be able to:
 
@@ -119,7 +119,11 @@ A Pareto chart is a bar chart where the bars are presented in descending order.
 - Highlight the "Count" column.
 - Click on the Sort and Filter tab in the right hand corner of the screen.
 - Click on Sort Largest to Smallest (A little window will pop up, select "Expand the Selection" then "Sort".)
+<<<<<<< HEAD
 - The bars in your chart should now be re-sorted to create a Pareto chart.
+=======
+- The bars in your chart should now be resorted to create a Pareto chart.
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 Your Pareto chart will look like this:
 

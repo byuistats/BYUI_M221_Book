@@ -295,19 +295,26 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+<<<<<<< HEAD
       <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
     </li>
     <li>
       <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
+=======
+      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
+    </li>
+    <li>
+      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
     </li>
     <li>
-      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data (Shape &amp; Center)</a>
     </li>
     <li>
-      <a href="Lesson04.html">Lesson 4: Rules of Probability</a>
+      <a href="Lesson04.html">Lesson 4: Describing Quantitative Data (Spread)</a>
     </li>
     <li>
       <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
@@ -401,7 +408,11 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
+<<<<<<< HEAD
   <a href="https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
+=======
+  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -454,7 +465,7 @@ $(document).ready(function () {
 <p><br></p>
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 <p>By the end of this lesson, you should be able to:</p>
 <ul>
@@ -498,11 +509,11 @@ $(document).ready(function () {
 <li><p><strong>Step 01</strong>: Go to the following link <a href="http://onlinestatbook.com/stat_sim/sampling_dist/index.html" class="uri">http://onlinestatbook.com/stat_sim/sampling_dist/index.html</a>.</p></li>
 <li><p><strong>Step 02</strong>: Click on the [Begin] button. This will bring up a Java Applet that will demonstrate Sampling Distributions. You will see four graphs. The following paragraphs explain each of these graphs. The top graph represents the distribution of the population we are studying. This is labeled the “parent population.” To the left of this graph is the population mean and standard deviation. We typically don’t know the population mean and standard deviation, but for this simulation, we assume they are known!</p></li>
 </ul>
-<p>To the right of the histogram of the parent population is a drop down menu that allows you to choose the type of distribution for your population. We will only look at Normal, Skewed and Uniform.</p>
+<p>To the right of the histogram of the parent population is a drop-down menu that allows you to choose the type of distribution for your population. We will only look at Normal, Skewed, and Uniform.</p>
 <ul>
-<li><p><strong>Step 03</strong>: Before we move to the next step, go to the right of the third graph (labeled “Distribution of Means”) and change N=5 to N=25 in the drop down menu. This means that each sample will contain 25 data items from the population.</p></li>
+<li><p><strong>Step 03</strong>: Before we move to the next step, go to the right of the third graph (labeled “Distribution of Means”) and change N=5 to N=25 in the drop-down menu. This means that each sample will contain 25 data items from the population.</p></li>
 <li><p><strong>Step 04</strong>: The graph labeled Sample Data will display the individual data points from a sample. Press the [Animated] button to the right of this graph, and watch a random sample of data items fall from the population. The [Animated] button simulates the collection of a random sample of size n=25 from the parent population. Notice that it calculates the mean and plots the mean of the 25 values in the Distribution of Means graph. (The mean is shown in blue.)</p></li>
-<li><p><strong>Step 05</strong>: Repeatedly pushing the [Animated] button produces more samples of size 25, calculates the mean of each sample, and then places the mean in the Distribution of Means graph. Play with this a few times to make sure you understand the process.</p></li>
+<li><p><strong>Step 5</strong>: Repeatedly pushing the [Animated] button produces more samples of size 25, calculates the mean of each sample, and then places the mean in the Distribution of Means graph. Play with this a few times to make sure you understand the process.</p></li>
 </ul>
 <p>Notice that to the left of the Distribution of Means graph, the mean and standard deviation of the sample means is given. This is the mean and standard deviation of the Distribution of Means. In other words, it gives the mean of the means and the standard deviation of the means.</p>
 <ul>
@@ -511,9 +522,9 @@ $(document).ready(function () {
 <p>We are interested in the shape, center and spread of the Distribution of Means graph. This graph represents the distribution of sample means.</p>
 <ul>
 <li><p><strong>Step 07</strong>: Press the [Clear Lower 3] button. This will erase your data and reset the applet. Repeat Steps 04-08. Compare the new graph of the sample means (the third plot) with the graph you originally created. Even though they are based on different simulated draws from the population, they should be very similar.</p></li>
-<li><p><strong>Step 08</strong>: Press the [Clear Lower 3] button. Then, use the drop down menu below the [Clear Lower 3] button to change the distribution from a normal distribution to a uniform distribution. In a uniform distribution, all the values are equally likely to occur. In this simulation, the applet generates values between 1 and 32. This uniform distribution models rolling a fair, 32-sided die. Repeat steps 04-08 for the uniform distribution. What do you notice about the shape of the distribution of the sample means?</p></li>
-<li><p><strong>Step 09</strong>: Press the [Clear Lower 3] button. Then, use the drop down menu below the [Clear Lower 3] button to change the distribution from a uniform distribution to a skewed distribution. This represents a right-skewed distribution. Repeat steps 04-08 for the skewed distribution. What do you notice about the shape of the distribution of the sample means?</p></li>
-<li><p><strong>Step 10</strong>: Press the [Clear Lower 3] button. Then, use the drop down menu below the [Clear Lower 3] button to change the distribution from a skewed distribution to a custom distribution. This allows you to draw any distribution you wish using your mouse. Have fun. Choose a crazy distribution. Repeat steps 04-08 for your custom distribution. Take notice of the shape of the sample means.</p></li>
+<li><p><strong>Step 08</strong>: Press the [Clear Lower 3] button. Then, use the drop-down menu below the [Clear Lower 3] button to change the distribution from a normal distribution to a uniform distribution. In a uniform distribution, all the values are equally likely to occur. In this simulation, the applet generates values between 1 and 32. This uniform distribution models rolling a fair, 32-sided die. Repeat steps 04-08 for the uniform distribution. What do you notice about the shape of the distribution of the sample means?</p></li>
+<li><p><strong>Step 09</strong>: Press the [Clear Lower 3] button. Then, use the drop-down menu below the [Clear Lower 3] button to change the distribution from a uniform distribution to a skewed distribution. This represents a right-skewed distribution. Repeat steps 04-08 for the skewed distribution. What do you notice about the shape of the distribution of the sample means?</p></li>
+<li><p><strong>Step 10</strong>: Press the [Clear Lower 3] button. Then, use the drop-down menu below the [Clear Lower 3] button to change the distribution from a skewed distribution to a custom distribution. This allows you to draw any distribution you wish using your mouse. Have fun. Choose a crazy distribution. Repeat steps 04-08 for your custom distribution. Take notice of the shape of the sample means.</p></li>
 <li><p><strong>Step 11</strong>: Repeat step 10 for different distributions. Be sure to try some that are very skewed, some that are high on the ends and low in the middle, or other crazy shapes. It is important that you press the [Clear Lower 3] button every time you change the distribution. Otherwise the graph of the means will contain a mixture of the results from the different distributions.</p></li>
 </ul>
 <p><br></p>
@@ -538,7 +549,7 @@ $(document).ready(function () {
 <li>If the parent population is not normal, then the sampling distribution <span class="math inline">\(\bar x\)</span> will be approximately normally distributed, if the sample size is large enough.
 <ul>
 <li>If the parent population is almost normal (e.g. mound-shaped and nearly symmetrical), then a sample of size n = 5 will probably be sufficient to assure that <span class="math inline">\(\bar x\)</span> will be approximately normally distributed.</li>
-<li>If the parent population is heavily skewed, then it will require a larger sample size to be assured that <span class="math inline">\(\bar x\)</span> will be normally distributed. For most moderately skewed distributions, a sample size of around 30 is traditionally thought to be sufficiently large to assure that <span class="math inline">\(\bar x\)</span> will be approximately normally distributed. This is not a definitive number, but is a rule of thumb.</li>
+<li>If the parent population is heavily skewed, then it will require a larger sample size to be assured that <span class="math inline">\(\bar x\)</span> will be normally distributed. For most moderately skewed distributions, a sample size of around 30 is traditionally thought to be sufficiently large to assure that <span class="math inline">\(\bar x\)</span> will be approximately normally distributed. This is not a definitive number but is a rule of thumb.</li>
 <li>For tremendously skewed distributions (e.g., the distribution of lottery payouts), a much larger sample will be required before the distribution of sample means is approximately normal. This may require billions of observations. Simulation can be used to determine if a particular sample size is sufficient. For this course, if the sample size is at least 30, we will conclude that the sampling distribution of <span class="math inline">\(\bar x\)</span> will be approximately normal.</li>
 </ul></li>
 </ul>
@@ -652,7 +663,7 @@ Remember…
 <div class="Summary">
 <ul>
 <li><p>The <strong>distribution of sample means</strong> is a distribution of all possible sample means (<span class="math inline">\(\bar x\)</span>) for a particular sample size. It has a mean of <span class="math inline">\(\mu\)</span> and a standard deviation of <span class="math inline">\(\sigma/\sqrt{n}\)</span>.</p></li>
-<li><p>The distribution of sample means is normal when <span class="math inline">\(\bar x\)</span> is normally distributed or when, thanks to the <strong>Central Limit Theorom (CLT)</strong>, our sample size (<span class="math inline">\(n\)</span>) is large.</p></li>
+<li><p>The distribution of sample means is normal when <span class="math inline">\(\bar x\)</span> is normally distributed or when, thanks to the <strong>Central Limit Theorem (CLT)</strong>, our sample size (<span class="math inline">\(n\)</span>) is large.</p></li>
 <li>The <strong>Law of Large Numbers</strong> states that as the sample size (<span class="math inline">\(n\)</span>) gets larger, the sample mean (<span class="math inline">\(\bar x\)</span>) will get closer to the population mean (<span class="math inline">\(\mu\)</span>).</li>
 </ul>
 </div>
@@ -687,7 +698,7 @@ Remember…
 
 <br />
 <hr />
-<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+<p>Copyright &copy; 2020 Brigham Young University-Idaho. All rights reserved.</p>
 
 
 

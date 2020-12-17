@@ -18,7 +18,9 @@ This is not designed to be a comprehensive review.  There may be items on the ex
 <br>
 
 ## Unit 1 Lesson Outcomes
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Lesson Outcomes</span></a>
+
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
+
 <div id="oc" style="display:none;">
 The expectation on the exam is that you should be able to do the following:
 
@@ -35,21 +37,21 @@ The expectation on the exam is that you should be able to do the following:
   + Convenience sampling
 
 - Explain the significance of using a random sample.
-- Determine the shape of a distribution using a histogram and/or box plot.
-- Determine the centers of a given histogram and/or box plot. 
+- Determine the shape of a distribution using a histogram and/or boxplot.
+- Determine the centers of a given histogram and/or boxplot. 
 - Identify the mean, median and standard deviation in skewed or normal histograms.
 - Calculate the mean, median and standard deviation from quantitative data.
 - Calculate a percentile from a quantitative data set.
 - Calculate a five-number summary from quantitative data with Excel, or by hand.
-- Create a histogram and a box-plot from quantitative data. 
+- Create a histogram and a boxplot from quantitative data. 
 - State and apply the three axioms of probability.
 - State the properties of a normal density curve.
 - Calculate the z-score of an individual observation, given the mean and standard deviation.
 - Interpret a z-score.
 - Calculate probability as area under a normal density curve.
-- Assess normality using a QQ-plot.
+- Assess normality using a histogram.
 - Explain how a sampling distribution is created.
-- Determine the mean, standard deviation and shape of a distribution of sample means.
+- Determine the mean, standard deviation, and shape of a distribution of sample means.
 - State and apply the Central Limit Theorem and the Law of Large numbers.
 - Calculate probabilities using a distribution of sample means.
 </div>
@@ -86,7 +88,6 @@ The expectation on the exam is that you should be able to do the following:
 
 - **Quantitative variables** represent things that are numeric in nature, such as the value of a car or the number of students in a classroom. **Categorical variables** represent nonnumerical data that can only be considered as labels, such as colors or brands of shoes.
 
-- The **null hypothesis ($H_0$)** is the foundational assumption about a population and represents the status quo. The **alternative hypothesis ($H_a$)** is a different assumption about a population. Using a **hypothesis test**, we determine whether it is more likely that the null hypothesis or the alternative hypothesis is true.
 </div>
 <br>
 
@@ -97,7 +98,7 @@ The expectation on the exam is that you should be able to do the following:
 
 - A **histogram** allows us to visually interpret data. Histograms can be left-skewed, right-skewed, or symmetrical and bell-shaped.
 
-- The **mean**, **median**, and **mode** are measures of the center of a distribution. The mean is the most common measure of center, and is computed by adding up the observed data and dividing by the number of observations in the data set.
+- The **mean**, **median**, and **mode** are measures of the center of a distribution. The mean is the most common measure of center and is computed by adding up the observed data and dividing by the number of observations in the data set.
 
 - The **standard deviation** is a number that describes how spread out the data are. A larger standard deviation means the data are more spread out than data with a smaller standard deviation.
 
@@ -137,7 +138,7 @@ $$P(\text{not}~X) = 1 - P(X)$$
 
 - The **probability applet** allows us to use z-scores to calculate proportions, probabilities, and percentiles.
 
-- A **Q-Q plot** is used to assess whether or not a set of data is normally distributed.
+<!-- - A **Q-Q plot** is used to assess whether or not a set of data is normally distributed. -->
 </div>
 <br>
 
@@ -148,7 +149,7 @@ $$P(\text{not}~X) = 1 - P(X)$$
 
 - The **distribution of sample means** is a distribution of all possible sample means ($\bar x$) for a particular sample size. It has a mean of $\mu$ and a standard deviation of $\sigma/\sqrt{n}$.
 
-- The distribution of sample means is normal when $\bar x$ is normally distributed or when, thanks to the **Central Limit Theorom (CLT)**, our sample size ($n$) is large.
+- The distribution of sample means is normal when $\bar x$ is normally distributed or when, thanks to the **Central Limit Theorem (CLT)**, our sample size ($n$) is large.
 
 - The **Law of Large Numbers** states that as the sample size ($n$) gets larger, the sample mean ($\bar x$) will get closer to the population mean ($\mu$).
 </div>

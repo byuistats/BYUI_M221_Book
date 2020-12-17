@@ -295,19 +295,26 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+<<<<<<< HEAD
       <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
     </li>
     <li>
       <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
+=======
+      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
+    </li>
+    <li>
+      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
     </li>
     <li>
-      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data (Shape &amp; Center)</a>
     </li>
     <li>
-      <a href="Lesson04.html">Lesson 4: Rules of Probability</a>
+      <a href="Lesson04.html">Lesson 4: Describing Quantitative Data (Spread)</a>
     </li>
     <li>
       <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
@@ -401,7 +408,11 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
+<<<<<<< HEAD
   <a href="https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
+=======
+  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -427,7 +438,7 @@ $(document).ready(function () {
 <li><a href="#scatterplot">Scatterplot</a></li>
 <li><a href="#residuals">Residuals</a></li>
 <li><a href="#residual-plot">Residual Plot</a></li>
-<li><a href="#q-q-plot-of-the-residuals">Q-Q Plot of the Residuals</a></li>
+<li><a href="#histogram-of-the-residuals">Histogram of the Residuals</a></li>
 <li><a href="#requirements-summary">Requirements Summary</a></li>
 </ul></li>
 <li><a href="#hypothesis-test-for-regression-coefficients">Hypothesis Test for Regression Coefficients</a><ul>
@@ -460,7 +471,7 @@ $(document).ready(function () {
 <p><br></p>
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 <p>By the end of this lesson, you should be able to:</p>
 <ul>
@@ -512,7 +523,7 @@ Y = \beta_0 + \beta_1 X + \epsilon
 <p>To check requirement 1, we do two things. The first is to make a scatterplot and to visually check to see if there is a linear relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. This has been referred to as a “hot dog” shape in the data.</p>
 <p>We want to make sure that there is no distinct curvature or other nonlinear characteristics. This is simply a visual check of the data.</p>
 <p>Consider the scatterplot of the estuarine crocodile data <a href="./Data/Estuarine_Crocodile_(Modified).xlsx">EstuarineCrocodile(Modified).xlsx</a>:</p>
-<p><img src="Images/EstuarineCrocodile-Scatterplot-RegLine-SPSS.png"></p>
+<p><img src="Images/EstuarineCrocodile-Scatterplot-RegLine-Excel.PNG"></p>
 <p>Notice how the data follow a linear shape. This data set shows a particularly strong linear relationship. In many cases, the data will show more spread than is illustrated here.</p>
 </div>
 <div id="residuals" class="section level3">
@@ -529,7 +540,7 @@ Excel Instructions
 <div class="Summary">
 <p><strong>To find the residuals in Excel, do the following:</strong></p>
 <ul>
-<li>Open <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> and click on the “Linear Regression” tab</li>
+<li>Open <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> and click on the “Linear Regression” tab</li>
 <li>Copy and Paste the dependent (or response) variable into the “Y” column (Column B). The dependent variable (or response variable) is the thing you are trying to predict. Often it is the more difficult/expensive variable to measure.</li>
 <li>Copy and paste the independent (or explanatory) variable into the “X” column (Column A).</li>
 <li>Your residuals will then be calculated in column Y of the Excel Spreadsheet. <br></li>
@@ -548,27 +559,26 @@ Excel Instructions
 <div class="Summary">
 <p><strong>To make a residual plot in Excel do the following:</strong></p>
 <ul>
-<li>Once you have already entered in the explanatory and response variables into the correct columns in the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> spreadsheet, you are given a scatter plot of residuals starting in cell S21, just below the Normal Q-Q plot.<br />
-</li>
+<li><p>Once the explanatory and response variables are entered into the correct columns in the <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> spreadsheet, you are given a scatter plot of residuals starting in cell S4, to the right of the hypothesis testing section.</p></li>
 <li>To create a residual plot on your own, you can highlight columns X and Y, then click on the Insert Ribbon, and then click on “Scatter” (or the icon that looks like a scatter plot). You want the first choice (Scatter with only markers), so select the first scatter plot choice. <br></li>
 </ul>
 </div>
 <p><br></p>
 <p>The following image shows the residual plot for the estuarine crocodile data.</p>
-<p><img src="Images/EstuarineCrocodile-ResidualPlot-SPSS.png"></p>
+<p><img src="Images/EstuarineCrocodile-ResidualPlot-Excel.PNG"></p>
 <p>This residual plot shows random scatter. There is no obvious pattern in the data. If linear regression is appropriate, then the residual plot will show no patterns and will consist of random scatter. If there is a pattern in the residuals, it suggests that linear regression is not appropriate.</p>
 <p>There are several patterns that could arise in a residual plot:</p>
 <ul>
 <li><strong>Curvature</strong> If the residual plot shows curvature, that suggests that the data are not linearly related.</li>
 <li><strong>Megaphone</strong> A megaphone shape occurs when points tend to be close together on one side of the graph and farther apart on the other side of the graph. If there is a megaphone shape apparent in the residuals, it suggests that the variance of the error terms is not constant for all values of <span class="math inline">\(X\)</span>. It suggests that there is a difference in the spread of the residuals depending on the value of <span class="math inline">\(X\)</span>.</li>
-<li><strong>Outliers</strong> If there are outliers in the residual plot, that suggests that the error terms are not normally distributed. This should also be apparent in the Q-Q plot of the residuals.</li>
+<li><strong>Outliers</strong> If there are outliers in the residual plot, that suggests that the error terms are not normally distributed. This should also be apparent in the scatterplot or histogram of the residuals.</li>
 </ul>
 </div>
-<div id="q-q-plot-of-the-residuals" class="section level3">
-<h3>Q-Q Plot of the Residuals</h3>
-<p>Once the residuals have been calculated in Excel, we can assess if they are normally distributed using a Q-Q plot. We simply make a Q-Q plot of the residuals. If the points in the Q-Q plot are close to the line, then we conclude that the residuals are normally distributed.</p>
-<p><img src="Images/EstuarineCrocodile-QQplot-Residuals-SPSS.png"></p>
-<p>The Q-Q plot of the residuals for the estuarine crocodile data show a straight line. We do not have evidence of nonnormality in the residuals. We conclude that the residuals are normally distributed. Looking at a histogram of the residuals is another tool to help you assess whether the residuals are normally distributed.</p>
+<div id="histogram-of-the-residuals" class="section level3">
+<h3>Histogram of the Residuals</h3>
+<p>Once the residuals have been calculated in Excel, we can assess if they are normally distributed using a histogram. If the shape of the histogram of residuals does not show a distinct departure from a normal shape, we conclude the requirement of normal residuals has been met.Don’t forget that you may need to try out various histograms with different number of bins to get a feel for the shape of the distribution of residuals.</p>
+<p><img src="Images/EstuarineCrocodile-Hist-Residuals-Excel.PNG"></p>
+<p>The histogram of the residuals using 7 bins does not show a distinct or extreme departure from a normal shape. We do not have evidence of nonnormality in the residuals. We conclude that the residuals are normally distributed. In more advanced classes you will use a tool called a Q-Q plot to assess whether residuals are normally distributed.</p>
 </div>
 <div id="requirements-summary" class="section level3">
 <h3>Requirements Summary</h3>
@@ -647,12 +657,12 @@ Normal Error Term
 </td>
 <td>
 <p>
-Q-Q Plot of the Residuals
+Histogram of the Residuals
 </p>
 </td>
 <td>
 <p>
-Points in the Q-Q plot are close to the line
+A shape that is approximately normal
 </p>
 </td>
 </tr>
@@ -874,7 +884,7 @@ Excel Instructions
 <div class="Summary">
 <p><strong>To find the residuals in Excel, do the following:</strong></p>
 <ul>
-<li>Open <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> and click on the “Linear Regression” tab</li>
+<li>Open <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> and click on the “Linear Regression” tab</li>
 <li>Copy and Paste the dependent (or response) variable into the “Y” column (Column B). The dependent variable is also known as the response variable. It is the thing you are trying to predict. Often it is the more difficult/expensive variable to measure.</li>
 <li>Copy and paste the independent (or explanatory) variable into the “X” column (Column A).</li>
 <li>You can change the confidence level in cell N12.<br />
@@ -933,7 +943,7 @@ Remember…
 <li><p>A <strong>residual</strong> is the difference between the observed value of <span class="math inline">\(Y\)</span> for a given <span class="math inline">\(X\)</span> and the predicted value of <span class="math inline">\(Y\)</span> on the regression line for the same <span class="math inline">\(X\)</span>. It can be expressed as: <span class="math display">\[
 Residual = Y - \hat Y = Y - (b_0 + b_1 X)
 \]</span></p></li>
-<li><p>To check all the requirements for bivariate inference you will need to create a <strong>scatterplot</strong> of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, a <strong>residual plot</strong>, and a <strong>Q-Q plot of the residuals</strong>.</p></li>
+<li><p>To check all the requirements for bivariate inference you will need to create a <strong>scatterplot</strong> of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, a <strong>residual plot</strong>, and a <strong>histogram of the residuals</strong>.</p></li>
 <li><p>We conduct a hypothesis test on bivariate data to know if there is a linear relationship between the two variables. To determine this, we test the slope (<span class="math inline">\(\beta_1\)</span>) on whether or not it equals zero. The appropriate hypotheses for this test are: <span class="math display">\[
 \begin{array}{1cl}
 H_0: &amp; \beta_1=0 \\
@@ -974,7 +984,7 @@ H_a: &amp; \beta_1\ne0
 
 <br />
 <hr />
-<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+<p>Copyright &copy; 2020 Brigham Young University-Idaho. All rights reserved.</p>
 
 
 

@@ -295,19 +295,19 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
     </li>
     <li>
-      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
+      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
     </li>
     <li>
-      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data</a>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data (Shape &amp; Center)</a>
     </li>
     <li>
-      <a href="Lesson04.html">Lesson 4: Rules of Probability</a>
+      <a href="Lesson04.html">Lesson 4: Describing Quantitative Data (Spread)</a>
     </li>
     <li>
       <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
@@ -401,7 +401,11 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
+<<<<<<< HEAD
   <a href="https://byuistats.github.io/BYUI_M221_Book/Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
+=======
+  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+>>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -427,11 +431,6 @@ $(document).ready(function () {
 <li><a href="#more-on-the-correlation-coefficient">More on the Correlation Coefficient</a></li>
 </ul></li>
 <li><a href="#predicting-old-faithful">Predicting Old Faithful</a></li>
-<li><a href="#covariance">Covariance</a><ul>
-<li><a href="#example-math-self-efficacy">Example: Math Self Efficacy</a></li>
-<li><a href="#example-microsoft-versus-apple">Example: Microsoft Versus Apple</a></li>
-<li><a href="#sample-statistic-and-population-parameter-1">Sample Statistic and Population Parameter</a></li>
-</ul></li>
 <li><a href="#summary">Summary</a></li>
 <li><a href="#navigation">Navigation</a></li>
 </ul>
@@ -453,7 +452,7 @@ $(document).ready(function () {
 </div>
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Click here to Show/Hide Outcomes for this Lesson</span></a>
+<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
 <p>By the end of this lesson, you should be able to:</p>
 <ul>
@@ -522,7 +521,7 @@ $(document).ready(function () {
 <div id="how-to-make-a-scatterplot" class="section level4">
 <h4>How to make a scatterplot</h4>
 <p><strong>Estuarine Crocodile Data</strong></p>
-<p>Data for estuarine, or saltwater, crocodiles is given in the file <a href="./Data/EstuarineCrocodile.xlsx">EstuarineCrocodile</a>. We will illustrate the relationship between the head length of the crocodiles and their body lengths by creating a scatterplot.</p>
+<p>Data for estuarine, or saltwater, crocodiles is given in the file <a href="./Data/Estuarine_Crocodile_(Modified).xlsx">EstuarineCrocodiles(Modified).xlsx</a>. We will illustrate the relationship between the head length of the crocodiles and their body lengths by creating a scatterplot.</p>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <!-- {{Software_Filter | PageName=Scatterplot }} -->
 <div class="SoftwareHeading">
@@ -531,7 +530,7 @@ Excel Instructions
 <div class="Summary">
 <p><strong>To make a scatterplot in Excel:</strong></p>
 <ul>
-<li>Open the <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a> file and select the “Linear Regression” tab.</li>
+<li>Open the <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> file and select the “Linear Regression” tab.</li>
 <li>Put the variable that you want on the x-axis (head length) in column A, labeled as the “X” column.</li>
 <li>Put the variable that you want on the y-axis (body length) in column B, labeled as the “Y” column. This is the value you want to predict.</li>
 <li>The points in the scatterplot will update with your data.</li>
@@ -840,7 +839,7 @@ Excel Instructions
 <p>The correlation coefficient can easily be calculated in Excel.</p>
 <p>Using any cell in an excel page you can calculate the Correlation coefficient. The command is = CORREL (array 1, array2). For array 1 highlight the explanatory variable (x) and for array 2 highlight the response variable (y). Here is a screen shot example of finding the correlation coefficient of the Old Faithful data.</p>
 <p><img src="Images/OldFaithfulCorrelation-Excel.png"></p>
-<p>An easier way to do this is to use the file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>. After entering the data in the first two columns in the Linear Regression worksheet, the correlation coefficient is given as “r” in cell F7 of that spreadsheet. <br></p>
+<p>An easier way to do this is to use the file <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a>. After entering the data in the first two columns in the Linear Regression worksheet, the correlation coefficient is given as “r” in cell G7 of that spreadsheet. <br></p>
 </div>
 <p><br></p>
 </div>
@@ -1169,60 +1168,53 @@ Answer the following questions:
 <p> </p>
 </div>
 <p><br></p>
-</div>
-<div id="covariance" class="section level2">
-<h2>Covariance</h2>
-<p>The English idiom, “Don’t put all your eggs in one basket” counsels you to avoid investing all your time or money in one thing. It is better to spread your resources across many opportunities to avoid losing everything. This advice is very appropriate in the financial markets.</p>
-<p>When considering a portfolio of stocks and bonds, it is wise to diversify the investments. If one company or one sector of the economy declines, a diversified portfolio involving many different stocks and bonds can help minimize losses. It is important for investors to understand the risk associated with a particular portfolio. We can use the variability of the investments as a measure of the risk of a portfolio.</p>
-<p>In a financial market, investments do not act independently; they vary together. For example, if the value of Apple Computers’ stock drops, Microsoft’s stock is also likely to decrease in value. When making investment decisions, it is important to take into account the interrelationships among the investments.</p>
-<p>The <strong>covariance</strong> is a measure of how two variables (such as stock returns) vary together. The covariance of two variables, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, is calculated by multiplying the following three items together: - the correlation coefficient of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> - the standard deviation of <span class="math inline">\(X\)</span>, and - the standard deviation of <span class="math inline">\(Y\)</span></p>
-<p>We compute the covariance for a data set using the formula: <span class="math display">\[
-s_{xy} = r \cdot s_x \cdot s_y
-\]</span></p>
-<div id="example-math-self-efficacy" class="section level3">
-<h3>Example: Math Self Efficacy</h3>
-<p>As an example, we will compute the covariance for Goodwin’s data. The correlation coefficient was determined to be <span class="math inline">\(r = 0.728\)</span>. Using the file <a href="./Data/MathSelfEfficacy.xlsx">MathSelfEfficacy.xlsx</a>, we compute the standard deviation of the mean confidence rating (<span class="math inline">\(X\)</span>) to be <span class="math inline">\(s_x = 0.939\)</span> and the standard deviation of the test scores (<span class="math inline">\(Y\)</span>) to be <span class="math inline">\(s_y = 16.37\)</span>. Applying the equation for the covariance of a collection of data, we get <span class="math display">\[ 
-s_{xy} = r \cdot s_x \cdot s_y = 0.728 \cdot 0.939 \cdot 16.37 = 11.19
-\]</span></p>
-<p>The covariance of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> will be positive if increasing values of <span class="math inline">\(X\)</span> correspond to increasing values of <span class="math inline">\(Y\)</span>. This is exactly what happened in Goodwin’s data. On the other hand, the covariance will be negative if an increase in <span class="math inline">\(X\)</span> tends to correspond with a decrease in <span class="math inline">\(Y\)</span>.</p>
-<div class="QuestionsHeading">
-Answer the following question:
-</div>
-<div class="Questions">
-<ol start="17" style="list-style-type: decimal">
-<li>Is it possible for the covariance of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> to be negative when the correlation coefficient is positive? If so, how could this occur?</li>
-</ol>
-<a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
-<div id="Q17" style="display:none;">
-<ul>
-<li>It is impossible for the covariance of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> to be negative when the correlation coefficient is positive. The covariance is the correlation coefficient multiplied by the standard deviations. Since the standard deviation of any variable cannot be negative, the sign of the correlation coefficient will be the same as the sign of the covariance.</li>
-</ul>
-</div>
-<p> </p>
-</div>
-<p><br></p>
-<p>If an investor wants to purchase two stocks, and they want to reduce their risk, they can choose two stocks with a negative covariance. If the return on one stock decreases, the return on the other stock would tend to increase. This diversification can help protect the investor when market conditions change.</p>
-</div>
-<div id="example-microsoft-versus-apple" class="section level3">
-<h3>Example: Microsoft Versus Apple</h3>
-<p>Suppose you are considering investing in two stocks. The annual percent change in the price of Microsoft stock has a mean of 33.48% with a standard deviation of 49.31%. For Apple, the mean is 42.03% and the standard deviation is 80.84%. The correlation of these variables is 0.395. Find the covariance of these two stocks.</p>
-<p><span class="math display">\[
-s_{xy} = r \cdot s_x \cdot s_y = 0.395 \cdot 49.31 \cdot 80.84 = 1574.56
-\]</span></p>
-<p>This number is difficult to interpret directly, but it gives an estimate of the joint variability in the prices of these stocks.</p>
-</div>
-<div id="sample-statistic-and-population-parameter-1" class="section level3">
-<h3>Sample Statistic and Population Parameter</h3>
-<p>The sample correlation coefficient, <span class="math inline">\(r\)</span>, is an estimate of the unknown population correlation coefficient, <span class="math inline">\(\rho\)</span>. In a simiilar manner, we will consider the sample covariance and population covariance.</p>
-<p>The sample covariance of the variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is denoted by the symbol <span class="math inline">\(s_{xy}\)</span>. Like all sample statistics, it is computed directly from specific data. If we define the sample standard deviation of <span class="math inline">\(X\)</span> to be <span class="math inline">\(s_x\)</span> and the sample standard deviation of <span class="math inline">\(Y\)</span> to be <span class="math inline">\(s_y\)</span>, then we can write the sample covariance of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> as: <span class="math display">\[
-s_{xy} = r \cdot s_x \cdot s_y
-\]</span></p>
-<p>Using similar notation for the population standard deviation of the random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, we can write the population covariance as: <span class="math display">\[
-\sigma_{xy} = \rho \cdot \sigma_x \cdot \sigma_y
-\]</span></p>
-<p>The sample statistic <span class="math inline">\(s_{xy}\)</span> is an estimator of the population parameter <span class="math inline">\(\sigma_{xy}\)</span>. We usually do not know the value of <span class="math inline">\(\sigma_{xy}\)</span>. Sometimes, we denote the population covariance as <span class="math inline">\(Cov(X,Y)\)</span> instead of <span class="math inline">\(\sigma_{xy}\)</span>.</p>
-<p><br></p>
-</div>
+<!-- ## Covariance -->
+<!-- The English idiom, "Don't put all your eggs in one basket" counsels you to avoid investing all your time or money in one thing.  It is better to spread your resources across many opportunities to avoid losing everything.  This advice is very appropriate in the financial markets. -->
+<!-- When considering a portfolio of stocks and bonds, it is wise to diversify the investments.  If one company or one sector of the economy declines, a diversified portfolio involving many different stocks and bonds can help minimize losses.  It is important for investors to understand the risk associated with a particular portfolio.  We can use the variability of the investments as a measure of the risk of a portfolio.   -->
+<!-- In a financial market, investments do not act independently; they vary together.  For example, if the value of Apple Computers' stock drops, Microsoft's stock is also likely to decrease in value.  When making investment decisions, it is important to take into account the interrelationships among the investments.   -->
+<!-- The **covariance** is a measure of how two variables (such as stock returns) vary together.  The covariance of two variables, $X$ and $Y$, is calculated by multiplying the following three items together: -->
+<!-- - the correlation coefficient of $X$ and $Y$ -->
+<!-- - the standard deviation of $X$, and -->
+<!-- - the standard deviation of $Y$    -->
+<!-- We compute the covariance for a data set using the formula: -->
+<!-- $$ -->
+<!-- s_{xy} = r \cdot s_x \cdot s_y -->
+<!-- $$ -->
+<!-- ### Example: Math Self Efficacy -->
+<!-- As an example, we will compute the covariance for Goodwin's data.  The correlation coefficient was determined to be $r = 0.728$.  Using the file [MathSelfEfficacy.xlsx](./Data/MathSelfEfficacy.xlsx), we compute the standard deviation of the mean confidence rating ($X$) to be $s_x = 0.939$ and the standard deviation of the test scores ($Y$) to be $s_y = 16.37$.  Applying the equation for the covariance of a collection of data, we get -->
+<!-- $$  -->
+<!-- s_{xy} = r \cdot s_x \cdot s_y = 0.728 \cdot 0.939 \cdot 16.37 = 11.19 -->
+<!-- $$ -->
+<!-- The covariance of $X$ and $Y$ will be positive if increasing values of $X$ correspond to increasing values of $Y$.  This is exactly what happened in Goodwin's data.  On the other hand, the covariance will be negative if an increase in $X$ tends to correspond with a decrease in $Y$.   -->
+<!-- <div class="QuestionsHeading">Answer the following question:</div> -->
+<!-- <div class="Questions"> -->
+<!-- 17. Is it possible for the covariance of $X$ and $Y$ to be negative when the correlation coefficient is positive?  If so, how could this occur? -->
+<!-- <a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a> -->
+<!-- <div id="Q17" style="display:none;"> -->
+<!-- - It is impossible for the covariance of $X$ and $Y$ to be negative when the correlation coefficient is positive.  The covariance is the correlation coefficient multiplied by the standard deviations.  Since the standard deviation of any variable cannot be negative, the sign of the correlation coefficient will be the same as the sign of the covariance. -->
+<!-- </div> -->
+<!-- &nbsp; -->
+<!-- </div> -->
+<!-- <br> -->
+<!-- If an investor wants to purchase two stocks, and they want to reduce their risk, they can choose two stocks with a negative covariance.  If the return on one stock decreases, the return on the other stock would tend to increase.  This diversification can help protect the investor when market conditions change. -->
+<!-- ### Example: Microsoft Versus Apple -->
+<!-- Suppose you are considering investing in two stocks.  The annual percent change in the price of Microsoft stock has a mean of 33.48% with a standard deviation of 49.31%.  For Apple, the mean is 42.03% and the standard deviation is 80.84%.  The correlation of these variables is 0.395.  Find the covariance of these two stocks. -->
+<!-- $$ -->
+<!-- s_{xy} = r \cdot s_x \cdot s_y = 0.395 \cdot 49.31 \cdot 80.84 = 1574.56 -->
+<!-- $$ -->
+<!-- This number is difficult to interpret directly, but it gives an estimate of the joint variability in the prices of these stocks. -->
+<!-- ### Sample Statistic and Population Parameter -->
+<!-- The sample correlation coefficient, $r$, is an estimate of the unknown population correlation coefficient, $\rho$.  In a simiilar manner, we will consider the sample covariance and population covariance. -->
+<!-- The sample covariance of the variables $X$ and $Y$ is denoted by the symbol $s_{xy}$.  Like all sample statistics, it is computed directly from specific data.  If we define the sample standard deviation of $X$ to be $s_x$ and the sample standard deviation of $Y$ to be $s_y$, then we can write the sample covariance of $X$ and $Y$ as: -->
+<!-- $$ -->
+<!-- s_{xy} = r \cdot s_x \cdot s_y -->
+<!-- $$ -->
+<!-- Using similar notation for the population standard deviation of the random variables $X$ and $Y$, we can write the population covariance as: -->
+<!-- $$ -->
+<!-- \sigma_{xy} = \rho \cdot \sigma_x \cdot \sigma_y -->
+<!-- $$ -->
+<!-- The sample statistic $s_{xy}$ is an estimator of the population parameter $\sigma_{xy}$.  We usually do not know the value of $\sigma_{xy}$.  Sometimes, we denote the population covariance as $Cov(X,Y)$ instead of $\sigma_{xy}$. -->
+<!-- <br> -->
 </div>
 <div id="summary" class="section level2">
 <h2>Summary</h2>
@@ -1233,8 +1225,8 @@ Remember…
 <ul>
 <li><p>Creating <strong>scatterplots</strong> of bivariate data allows us to visualize the data by helping us understand its <strong>shape</strong> (linear or nonlinear), <strong>direction</strong> (positive, negative, or neither), and <strong>strength</strong> (strong, moderate, or weak).</p></li>
 <li><p>The <strong>correlation coefficient (<span class="math inline">\(r\)</span>)</strong> is a number between <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span> that tells us the direction and strength of the linear association between two variables. A positive <span class="math inline">\(r\)</span> corresponds to a <strong>positive association</strong> while a negative <span class="math inline">\(r\)</span> corresponds to a <strong>negative association</strong>. A value of <span class="math inline">\(r\)</span> closer to <span class="math inline">\(-1\)</span> or <span class="math inline">\(1\)</span> indicates a stronger association than a value of <span class="math inline">\(r\)</span> closer to zero.</p></li>
-<li><p>The <strong>covariance</strong> is a measure of how two variables vary together. The formula for the covariance is <span class="math inline">\(s_{xy}=r \cdot s_x \cdot s_y\)</span>.</p></li>
 </ul>
+<!-- - The **covariance** is a measure of how two variables vary together. The formula for the covariance is $s_{xy}=r \cdot s_x \cdot s_y$. -->
 <p><br></p>
 </div>
 <p><br></p>
@@ -1268,7 +1260,7 @@ Remember…
 
 <br />
 <hr />
-<p>Copyright &copy; 2017 Brigham Young University-Idaho. All rights reserved.</p>
+<p>Copyright &copy; 2020 Brigham Young University-Idaho. All rights reserved.</p>
 
 
 
