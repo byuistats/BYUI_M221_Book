@@ -28,7 +28,7 @@ output:
 
 By the end of this lesson, you should be able to:
 
--  Calculate probabilities using a distribution of sample means.
+*  Calculate probabilities using a distribution of sample means.
 </div>
 <br>
 

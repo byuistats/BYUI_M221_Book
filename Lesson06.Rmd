@@ -28,9 +28,9 @@ output:
 
 By the end of this lesson, you should be able to:
 
--  Explain how a sampling distribution is created.
--  Determine the mean, standard deviation and shape of a distribution of sample means.
--  State and apply the Central Limit Theorem and the Law of Large Numbers.
+*  Explain how a sampling distribution is created.
+*  Determine the mean, standard deviation and shape of a distribution of sample means.
+*  State and apply the Central Limit Theorem and the Law of Large Numbers.
 </div>
 <br>
 
