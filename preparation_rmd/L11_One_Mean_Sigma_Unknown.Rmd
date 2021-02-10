@@ -1,0 +1,201 @@
+---
+title: 'Lesson 11: Inference for One Mean; Sigma unknown (Hypothesis Test)'
+author: "Preparation"
+output:
+  pdf_document: default
+  html_document:
+    css: buttondown.css
+  word_document: default
+params:
+  key: no
+  plinks: no
+  keyname: "blank"
+  docname: "blank"
+md_document:
+  variant: markdown_phpextra
+---
+
+```{r,results='asis',echo=FALSE}
+if(params$key==TRUE){
+  if(params$plinks==TRUE) cat("* [Word Document](",paste(params$keyname,"docx",sep="."),")\n")
+  if(params$plinks==TRUE) cat("* [PDF Document](",paste(params$keyname,"pdf",sep="."),")\n")
+  cat("<!--")
+  cat("\n")
+} 
+if(params$key!=TRUE){
+  if(params$plinks==TRUE) cat("* [Word Document](",paste(params$docname,"docx",sep="."),")\n")
+  if(params$plinks==TRUE) cat("* [PDF Document](",paste(params$docname,"pdf",sep="."),")\n")
+  cat("\n")
+}
+```
+
+
+**Directions: Please fill in Part II as you study the Reading Assignment. Once you finish the reading, complete the questions on Part II. You may use your notes, the key, and the help videos. Be sure to take this completed assignment to your group meeting where you can ask and help answer questions on this assignment.**
+
+## Problems
+
+```{r,echo=FALSE}
+library(ggplot2)
+library(ggthemes)
+library(pander)
+panderOptions('keep.line.breaks',TRUE)
+source("../../scripts/ggQQline.R")
+source("../../scripts/normTail.R")
+source("../../scripts/221_Interactive_Functions.R")
+```
+
+**Part I:**  Use the information in the reading assignment to complete these questions.
+
+1.	List at least three characteristics of the Student's t-distribution.
+
+2.	How many degrees of freedom generally does the t-distribution have when it is used for inference for a single mean?
+
+3.	What is the formula for the one-sample t confidence interval (confidence interval for $\mu$ when $\sigma$ is unknown)?
+
+4.	What are at least two differences between the one-sample t confidence interval and the one sample z confidence interval we covered in Lesson 10?
+
+5.	When conducting a hypotheses test for a single mean with sigma unknown, what is formula used to compute the test statistic?
+
+6.	What are the requirements that need to be met to conduct a hypotheses test for a single mean when sigma is unknown?
+
+
+```{r,echo=FALSE}
+#Syntax for variables = varName+ThemeNum_problemNum
+#Example: mean1_q5
+#This chunk corresponds with questions 7 - 12
+
+realtor_age <- c(27, 35, 38, 49, 55, 58, 56, 50, 51, 45, 46, 56, 49, 48, 38)
+trueMean1 = 47
+n1 = NROW(realtor_age)
+confInt1_q7_q8_q10a = 95
+confInt1_q9_10b = 99
+df1 = n1 - 1
+alpha1 = 1- confInt1_q7_q8_q10a/100
+t_score1_q8 = qt((1-confInt1_q7_q8_q10a/100)/2,df1,lower.tail = FALSE)
+t_score1_q9 = qt((1-confInt1_q9_10b/100)/2,df1,lower.tail = FALSE)
+sampleMean1 = mean(realtor_age)
+sd1 = sd(realtor_age)
+test1 = "either"
+
+confidenceInterval_08 = confInterval(sampleMean1, t_score1_q8, sd1, n1)
+
+confidenceInterval_09 = confInterval(sampleMean1, t_score1_q9, sd1, n1)
+
+prob_12_info = t.test(realtor_age,mu = trueMean1, alternative = "two.sided", conf.level = confInt1_q7_q8_q10a/100)
+t_12 = prob_12_info$statistic
+p_12 = prob_12_info$p.value
+
+```
+
+7.	Go to Part II.  Using your calculator or Excel, compute the sample mean and sample standard deviation for the `r length(realtor_age)` pieces of data you see in Part II.  Write your numbers here and take them to your group preparation meeting.
+
+**Part II :**  
+
+A study by the National Association of Realtors reported in 2004 that second-home sales accounted for more than a third of residential real estate transactions.  According to the report, the average age of a person buying a second home as an investment rental property was `r trueMean1` years.  A real estate agent wants to estimate the average age of those buying investment properties in his area.  He randomly selects `r n1` of his clients who purchased an investment property. Their ages are 
+
+```{r, echo = FALSE, results='asis'}
+cat(cat(realtor_age,sep=","),".",sep="")
+```
+
+
+8.	What are the requirements for creating a `r confInt1_q7_q8_q10a`% confidence t-interval?
+   
+9.	With the data above, calculate the margin of error and create a `r confInt1_q7_q8_q10a`% confidence interval to estimate the mean age of all clients who buy an investment property.  Input the numbers you computed in #7 of part I into the confidence interval formula.  Show your work below.  The t-score for a `r confInt1_q7_q8_q10a`% confidence interval from the t-distribution with `r df1` degrees of freedom is `r round(t_score1_q8,4)`.   Round your upper and lower bound to one decimal place, but do not do this rounding until you have done all your computations.
+   
+10.	Now create a `r confInt1_q9_10b`% confidence interval to estimate the mean age of all the clients who built an investment property.  Follow the same rounding rules as above. The t-score for a `r confInt1_q9_10b`% confidence interval from the t-distribution with `r df1` degrees of freedom is `r round(t_score1_q9,4)`.
+   
+11.	Now using your class software compute:
+   
+    a.	The `r confInt1_q7_q8_q10a`% confidence interval using the data above.
+   
+    b.	The `r confInt1_q9_10b`% confidence interval using the data above.
+   
+   
+12.	How does the margin of error of the `r confInt1_q7_q8_q10a`% confidence interval compare to the `r confInt1_q9_10b`% interval?  
+
+13.	Rather than estimating the age of his clients that buy investment properties, the realtor agent would like to test the claim that the age of his clients is `r typeTest(test1,alt=FALSE)` than the national average of age `r trueMean1`. Use the `r alpha1` as your level of significance. Follow the following sequence of steps.  Fill in your answers at each step and show all your work.  
+
+    a.	State the Null and Alternative Hypothesis
+   
+    b.	Compute the test statistic.  First compute it using the formula and showing your work below.  Then check this test statistic by inputting the data into the software.
+   
+    c.	State the Degrees of Freedom:
+   
+    d.	Sketch the t-distribution and shade the area which represents the P-value.
+   
+    e.	Use your Software to compute the P-value. 
+   
+    f.	State your decision. Do you reject the null hypothesis or fail to reject at the `r alpha1` level of significance?
+   
+    g.	Present your conclusion in an English sentence, relating the result to the context of the problem.
+
+
+```{r, include=FALSE}
+if(params$key==TRUE){
+#solutions
+
+    Solution_01 = data.frame(Part="-",Solution="- Symmetrical \\\n- Mean of 0 \\\n- Exact shape depends on the degrees of freedom \\\n- Bell Shaped \\\n- More area in the tails than the standard normal distribution")
+    
+    Solution_02 = data.frame(Part="-",Solution="$df = n-1 \\text{(that is sample size} - 1$)")
+    
+    Solution_03 = data.frame(Part="-",Solution= "$$\\bar{x}-t^* \\times \\frac{s}{\\sqrt{n}}, \\bar{x} + t^* \\times \\frac{s}{\\sqrt{n}}$$")
+    
+    Solution_04 = data.frame(Part="-",Solution= "- Sigma is not known \\\n- We compute a  t-score from the Student t-distribution rather than a z-score from the normal distribution.  (We cannot use the Normal Applet to compute t-scores.) \\\n- We must now consider degrees of freedom for the t-distribution where the normal distribution did not have degrees of freedom.")
+    
+    Solution_05 = data.frame(Part="-",Solution="$$t=\\frac{\\bar{x}-\\mu}{s/\\sqrt{n}}$$")
+    
+    Solution_06 = data.frame(Part="-",Solution="- A simple random sample was drawn from a population. \\\n- $\\bar{x}$ is normally distributed.")
+
+    Solution_07 = data.frame(Part="-",Solution=paste0("The mean is ", round(mean(realtor_age),3), ". The standard devation is ", round(sd(realtor_age),3)))
+
+    Solution_08 = data.frame(Part="-", Solution="It is a random sample from a population. The $\\bar{x}$'s are normally distributed")
+    
+    Solution_09 = data.frame(Part="-", Solution=paste("(",confidenceInterval_08,")",sep = ""))
+    
+    Solution_10 = data.frame(Part="-", Solution=paste("(",confidenceInterval_09,")",sep = ""))
+    
+    Solution_11 = data.frame(Part=LETTERS[1:2], Solution=c(paste("(",confidenceInterval_08,")",sep = ""),
+                                                           paste("(",confidenceInterval_09,")",sep = "")))
+    
+    Solution_12 = data.frame(Part="-", Solution=paste("The margin of error for the confidence interval is smaller for a ",confInt1_q7_q8_q10a,"% confidence level than a ",confInt1_q9_10b,"% confidence level.",sep=""))
+
+    Solution_13 = data.frame(Part=LETTERS[1:7], Solution=c(paste("$H_o: \\mu = ",trueMean1,"$ \\\n","$H_a: \\mu ",symbolTest(test1)," ",trueMean1,"$",sep = ""),
+                                                         paste("t = ",round(t_12,3)),
+                                                         paste("df = ",df1,sep = ""),
+                                                         "![Solution](../../images/L11_Prep_PartII_Q6.png)",
+                                                         paste("P-value = ",round(p_12,3),sep = ""),
+                                                         failOrNot(p_12,alpha1),
+                                                         paste("We have ",sufficientOrNot(failOrNot(p_12,alpha1))," evidence to conclude that the mean age of this realtor's customers who are buying second homes, is different than the national average.",sep = "")))
+    
+} # end params == TRUE.  We use this so it doesn't have to run for non answer key path.
+```    
+    
+    
+
+```{r,echo=FALSE,results='asis'}
+if(params$key==TRUE) cat("-->")
+  if(params$key==TRUE) cat("\n\n## Solutions\n\n---")
+      if(params$key==TRUE) cat("\n\n")
+```
+
+
+
+```{r,echo=FALSE,results='asis'}
+if(params$key==TRUE){
+
+    all_solutions = sort(ls(pattern="Solution"))
+    key_list = NULL
+    for (i in 1:length(all_solutions)){
+      temp = get(all_solutions[i])
+      temp$Solution = as.character(temp$Solution)
+      key_list = rbind(key_list,data.frame(Problem=i,temp))
+    }
+    
+      pander(key_list,split.cell = 80, split.table = Inf,justify = c( 'center', 'left',"left"))
+} # end params == TRUE.  We use this so it doesn't have to run for non answer key path.
+
+```
+
+
+
+

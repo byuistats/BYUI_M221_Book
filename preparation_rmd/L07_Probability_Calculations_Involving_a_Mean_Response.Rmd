@@ -1,0 +1,233 @@
+---
+title: 'Lesson 7: Probability Calculations Involving a Mean Response'
+author: "Preparation"
+output:
+  html_document:
+    css: buttondown.css
+params:
+  key: no
+  plinks: no
+  keyname: "blank"
+  docname: "blank"
+md_document:
+  variant: markdown_phpextra
+---
+
+```{r,results='asis',echo=FALSE}
+if(params$key==TRUE){
+  if(params$plinks==TRUE) cat("* [Word Document](",paste(params$keyname,"docx",sep="."),")\n")
+  if(params$plinks==TRUE) cat("* [PDF Document](",paste(params$keyname,"pdf",sep="."),")\n")
+  cat("<!--")
+  cat("\n")
+} 
+if(params$key!=TRUE){
+  if(params$plinks==TRUE) cat("* [Word Document](",paste(params$docname,"docx",sep="."),")\n")
+  if(params$plinks==TRUE) cat("* [PDF Document](",paste(params$docname,"pdf",sep="."),")\n")
+  cat("\n")
+}
+```
+
+
+```{r,include=FALSE}
+library(pander)
+source("../../scripts/221_Interactive_Functions.R")
+panderOptions('keep.line.breaks',TRUE)
+
+```
+
+**Directions: Please fill in Part I as you study the Reading Assignment. Once you finish the reading, complete the questions on Part II. You may use your notes, the key, and the help videos. Be sure to take this completed assignment to your group meeting where you can ask and help answer questions on this assignment.**
+
+## Problems
+
+**Part I:**  Use the information in the reading assignment to complete these questions.
+
+1. One of two conditions must be satisfied in order for the distribution of sample means to be normally distributed.  What are the two conditions?
+
+2. What is the z-score formula for a sample mean that is normally distributed?
+
+```{r, include=FALSE}
+mean1 = 10
+sd1 = 5
+x1_d = 12
+x1_c = 18.5
+lower1 = FALSE
+n1= 1
+range1_a = c(5,15)
+range1_e = c(8,12)
+percentile1 = .4
+
+p1_a = pnorm(zScore(range1_a[2],mean1,sd1,n1),lower.tail = TRUE) - pnorm(zScore(range1_a[1],mean1,sd1,n1),lower.tail = TRUE)
+
+x1_b = qnorm(.4) * sd1 + mean1
+
+z1_c = zScore(x1_c,mean1,sd1, n1)
+
+z1_d = zScore(x1_d,mean1,sd1,n1)
+p1_d = pnorm(z1_d,lower.tail = FALSE)
+
+z1_e8 = zScore(range1_e[1],mean1,sd1,n1)
+p1_e8 = pnorm(z1_e8,lower.tail = TRUE)
+z1_e12 = zScore(range1_e[2],mean1,sd1,n1)
+p1_e12 = pnorm(z1_e12,lower.tail = FALSE)
+p1_eTotal = p1_e8 + p1_e12
+```
+
+3. Suppose a normally distributed population has a mean $\mu=$ `r mean1` and a population standard deviation $\sigma=$ `r sd1`.
+
+    a. What is the probability a randomly selected individual observation is between `r paste(range1_a,collapse= " and ")`?
+
+    b. What is the $`r 100*percentile1`^{th}$ percentile for this population?
+
+    c. What is the z-score for an observation of `r x1_c`?
+
+    d. What is the probability that an individual observation is `r abovebelow(lower1,TRUE)` `r x1_d`? 
+
+    e. What is the probability that an individual observation is less than `r range1_e[1]` or greater than `r range1_e[2]`?
+
+**Part II:**  
+
+```{r, echo=FALSE}
+mean2 = 45
+sd2 = 10
+x2_6 = 40
+x2_9 = 50
+lower2_6 = TRUE
+lower2_9 = FALSE
+n2_4 = 4
+n2_5 = 40
+n2_8 = 25
+range2_7 = c(35,55)
+range2_8 = c(41,49)
+
+z2_6 = zScore(x2_6,mean2,sd2,n2_4)
+p2_6 = pnorm(z2_6,lower.tail = lower2_6)
+
+p2_7_greater = pnorm(zScore(range2_7[2],mean2,sd2,n2_4))
+p2_7_lower = pnorm(zScore(range2_7[1],mean2,sd2,n2_4))
+p2_7_between = p2_7_greater - p2_7_lower
+
+p2_8_greater = pnorm(zScore(range2_8[2],mean2,sd2,n2_8))
+p2_8_lower = pnorm(zScore(range2_8[1],mean2,sd2,n2_8))
+p2_8_between = p2_8_greater - p2_8_lower
+
+p2_9 = pnorm(zScore(x2_9,mean2,sd2,n2_8),lower.tail = lower2_9)
+```
+
+Suppose Pear Computing sold an average of $\mu=`r mean2`$ pFones per minute in 2011 (yes, that means they sold 23,652,000 pFones in 2011) with a standard deviation of $\sigma=`r sd2`$, and they looked at their pFone sales data and determined that they are normally distributed.
+
+4. Samples of size $n=`r n2_4`$ are taken from the normally distributed 2011 sales data. What is the shape of the distribution of $\bar{x}$ ?
+
+5. Samples of size $n=`r n2_5`$ are taken from the normally distributed 2011 sales data. What is the shape of the distribution of $\bar{x}$ ?
+
+6. A sample of size $n=`r n2_4`$ is taken from the normally distributed 2011 sales data. What is the probability that the observed  $\bar{x}$ `r out="<"; if(lower2_6==F) out=">";out` `r x2_6` ?
+
+7. A sample of size $n=`r n2_4`$ is taken from the normally distributed 2011 sales data. What is the probability that the observed  $\bar{x}$ is greater than `r range2_7[1]` and less than `r range2_7[2]`?
+
+8. A sample of size $n=`r n2_8`$ is taken from the normally distributed 2011 sales data. What is the probability that  $\bar{x}$  is greater than `r range2_8[1]` and less than `r range2_8[2]`?
+
+9. A sample of size $n=25$ is taken from the normally distributed 2011 sales data. What is the probability that the observed  $\bar{x}$  is `r abovebelow(lower2_9,TRUE)` `r x2_9`?
+
+```{r, echo=FALSE}
+mean3 = 40
+sd3 = 12
+x3_13 = 35
+lower3_13 = TRUE
+x3_14 = 36.5
+lower3_14 = FALSE
+range3 = c(37.5,42.5)
+n3_10 = 4 
+n3_11 = 40
+n3_14 = 36
+
+p3_14 = pnorm(zScore(x3_14,mean3,sd3,n3_14),lower.tail = lower3_14)
+
+p3_15_lower = pnorm(zScore(range3[1],mean3,sd3,n3_14))
+p3_15_greater = pnorm(zScore(range3[2],mean3,sd3,n3_14),lower.tail = FALSE)
+p3_15_between = 1 - p3_15_lower - p3_15_greater
+```
+
+Pear Computing sold an average of $\mu=`r mean3`$ pFones per minute in 2010 with a standard deviation of  $\sigma=`r sd3`$, and they looked at their pFone sales data and determined that the distribution is <em>right skewed.</em>
+
+10. Samples of size $n=`r n3_10`$ are taken from the right skewed 2010 pFone sales data. What is the shape of the distribution of $\bar{x}$?
+
+
+11. Samples of size $n=`r n3_11`$ are taken from the right skewed 2010 pFone sales data. What is the shape of the distribution of  $\bar{x}$?
+
+
+12. Is there a theorem that justifies your answer to question 11? What is the name of the theorem?
+
+
+13. A sample of size $n=`r n3_10`$ is taken from the right skewed 2010 pFone sales data and you want to know the probability that the observed  $\bar{x}$ `r out="<"; if(lower3_13==F) out=">";out` `r x3_13`. Can you compute this probability using the normal probability applet with the information you have? Why?
+
+
+14. A sample of size $n=`r n3_14`$ is taken from the right skewed 2010 pFone sales data. What is the probability that the observed $\bar{x}$  is `r abovebelow(lower3_14,TRUE)` `r x3_14`?
+
+
+15. A sample of size $n=`r n3_14`$ is taken from the right skewed 2010 pFone sales data. What is the probability that the observed  $\bar{x}$ is between `r paste(range3,collapse= " and ")`?
+
+```{r,echo=FALSE,results='asis'}
+if(params$key==TRUE) cat("-->")
+  if(params$key==TRUE) cat("\n\n## Solutions\n\n---")
+      if(params$key==TRUE) cat("\n\n")
+```
+
+
+
+```{r,include=FALSE}
+if(params$key==TRUE){
+
+  Solution01 = data.frame(Part=c(1:2),Solution=c("The parent population is normally distributed, so the sample mean is automatically normally distributed.",
+                                                 "The sample size is large, and the Central Limit Theorem implies that the sample mean is normally distributed."))
+  
+ Solution02 = data.frame(Part="-",Solution = "z = (value - mean)/standard deviation. $Z = \\frac{\\bar{x}-\\mu}{\\sigma/\\sqrt{n}}$")
+        
+  Solution03 = data.frame(Part=LETTERS[1:5], Solution=c(paste("About ",round(p1_a * 100,0), "% ", " using the 68, 95, 99.7 rule or ", round(p1_a,4)," 'exact'",sep = ""),
+                                                        paste(percentile1*100,"$^{th}$", "percentile = ",round(x1_b,4), sep = ""),
+                                                        paste("$Z = ", round(z1_c,4),"$", sep = ""),
+                                                        paste("$Z = ",round(z1_d,4),"$ so probability = ", round(p1_d,4), sep = ""),
+                                                        paste("$z(\\bar{x}<",range1_e[1],")= ",round(z1_e8,3),"\\text{ probability} = ",round(p1_e8,4),"$ \\\n $z(\\bar{x}>",range1_e[2],")=",round(z1_e12,3),"\\text{ probability} = ",round(p1_e12,4),"$ \\\n $",round(p1_e8,4),"+",round(p1_e12,4),"=",round(p1_eTotal,4),"$",sep = "")))
+  
+  Solution04 = data.frame(Part="-",Solution="Normal")
+
+  Solution05 = data.frame(Part="-",Solution="Normal")
+  
+  Solution06 = data.frame(Part="-",Solution=paste("About ",round(p2_6 * 100,0), "% ", " using the 68, 95, 99.7 rule or ", round(p2_6,4)," 'exact'",sep = ""))
+        
+  Solution07 = data.frame(Part="-",Solution=paste("About ",round(p2_7_between * 100,0), "% ", " using the 68, 95, 99.7 rule or ", round(p2_7_between,4)," 'exact'",sep = ""))
+        
+  Solution08 = data.frame(Part="-",Solution=paste("About ",round(p2_8_between * 100,0), "% ", " using the 68, 95, 99.7 rule or ", round(p2_8_between,4)," 'exact'",sep = ""))
+        
+  Solution09 = data.frame(Part="-",Solution=paste("$\\text{Probability}(\\bar{x}>",x2_9,")= ",round(p2_9,5),"$",sep = ""))
+
+  Solution10 = data.frame(Part = "-",Solution="Right Skewed")
+  
+  Solution11 = data.frame(Part = "-",Solution="Approximately Normal")
+  
+  Solution12 = data.frame(Part = "-",Solution="Central Limit Theorem")
+  
+  Solution13 = data.frame(Part = "-",Solution="No, the distribution is not normal, and the normal probability applet is only for normal distribution.")
+        
+  Solution14 = data.frame(Part = "-",Solution=paste("$\\text{Probability} = ", round(p3_14,4),"$", sep = ""))
+ 
+  Solution15 = data.frame(Part = "-",Solution=paste("$\\text{ probability}(\\bar{x}<",range3[1],") = ",round(p3_15_lower,4),"$ \\\n $\\text{ probability}(\\bar{x}>",range3[2],") = ",round(p3_15_greater,4),"$ \\\n $1-",round(p3_15_lower,4),"-",round(p3_15_greater,4),"=",round(p3_15_between,4),"$",sep = ""))
+  
+} # end params == TRUE.  We use this so it doesn't have to run for non answer key path.
+```
+
+
+
+```{r,echo=FALSE,results='asis'}
+if(params$key==TRUE){
+
+    all_solutions = sort(ls(pattern="Solution"))
+    key_list = NULL
+    for (i in 1:length(all_solutions)){
+      temp = get(all_solutions[i])
+      temp$Solution = as.character(temp$Solution)
+      key_list = rbind(key_list,data.frame(Problem=i,temp))
+    }
+
+      pander(key_list,split.cell = 80, split.table = Inf,justify = c( 'center', 'left',"left"))
+
+} # end params == TRUE.  We use this so it doesn't have to run for non answer key path.
+```
