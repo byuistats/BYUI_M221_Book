@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<dropbox>
+  <category name="final_project">
+    <folder name="Research Question Upload" folder_type="2" out_of="5" grade_item="grc-rqu" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-rqu">
+      <date_due>2016-10-02T00:00:00</date_due>
+    </folder>
+    <folder name="Design Study (Part I) Upload" folder_type="2" out_of="5" grade_item="grc-ds1u" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-ds1u">
+      <date_due>2016-10-16T00:00:00</date_due>
+    </folder>
+    <folder name="Design Study (Part II) Upload" folder_type="2" out_of="5" grade_item="grc-ds2u" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-ds2u">
+      <date_due>2016-10-30T00:00:00</date_due>
+    </folder>
+    <folder name="Collect Data Upload" folder_type="2" out_of="5" grade_item="grc-cdu" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-cdu">
+      <date_due>2016-11-27T00:00:00</date_due>
+    </folder>
+    <folder name="Make Inferences (Part I) Upload" folder_type="2" out_of="10" grade_item="grc-mi1u" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-mi1u">
+      <date_due>2016-12-04T00:00:00</date_due>
+    </folder>
+    <folder name="Make Inferences (Part II) Upload" folder_type="2" out_of="40" grade_item="grc-mi2u" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-mi2u">
+      <date_due>2016-12-11T00:00:00</date_due>
+    </folder>
+    <folder name="Team Evaluation Upload" folder_type="2" out_of="10" grade_item="grc-drop_teval" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_teval">
+      <date_due>2016-12-11T00:00:00</date_due>
+    </folder>
+    <folder name="Design Study Presentation Upload" folder_type="2" out_of="10" grade_item="grc-DesignUp" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-DesignUp"/>
+    <folder name="Quantitative Mean Upload" folder_type="2" out_of="15" grade_item="grc-NormalMeanUp" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-NormalMeanUp"/>
+    <folder name="Proportions Presentation Upload" folder_type="2" out_of="5" grade_item="grc-ProportionsUp" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-ProportionsUp"/>
+    <folder name="ChiSquare Presentation Upload" folder_type="2" out_of="10" grade_item="grc-ChiSquareUp" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-ChiSquareUp"/>
+    <folder name="Regression Presentation Upload" folder_type="2" out_of="20" grade_item="grc-RegressionUp" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-RegressionUp"/>
+  </category>
+  <category name="Homework Uploads">
+    <folder name="Lesson 01: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_01" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_01">
+      <date_due>2017-04-20T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 02: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_02" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_02">
+      <date_due>2017-04-23T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 03: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_03" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_03">
+      <date_due>2017-04-27T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 04: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_04" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_04">
+      <date_due>2017-04-30T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 05: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_05" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_05">
+      <date_due>2017-05-04T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 06: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_06" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_06">
+      <date_due>2017-05-07T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 07: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_07" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_07">
+      <date_due>2017-05-11T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 09: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_09" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_09">
+      <date_due>2017-05-18T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 10: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_10" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_10">
+      <date_due>2017-05-21T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 11: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_11" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_11">
+      <date_due>2017-05-25T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 12: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_12" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_12">
+      <date_due>2017-05-28T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 13: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_13" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_13">
+      <date_due>2017-06-04T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 14: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_14" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_14">
+      <date_due>2017-06-08T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 16: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_16" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_16">
+      <date_due>2017-06-15T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 17: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_17" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_17">
+      <date_due>2017-06-18T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 18: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_18" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_18">
+      <date_due>2017-06-22T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 19: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_19" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_19">
+      <date_due>2017-06-25T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 21: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_21" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_21">
+      <date_due>2017-07-02T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 22: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_22" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_22">
+      <date_due>2017-07-06T05:55:00</date_due>
+    </folder>
+    <folder name="Lesson 23: Homework Upload" folder_type="2" out_of="10" grade_item="grc-drop_hw_23" folder_is_retricted="false" files_per_submission="0" submissions="2" resource_code="drc-drop_hw_23">
+      <date_due>2017-07-09T05:55:00</date_due>
+    </folder>
+  </category>
+</dropbox>
+ 

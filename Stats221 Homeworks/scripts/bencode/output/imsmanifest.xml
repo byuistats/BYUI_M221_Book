@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0" xmlns:scorm_1p2="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns="http://www.imsglobal.org/xsd/imscp_v1p1">
+  <organizations default="d2l_orgs">
+    <organization identifier="d2l_org">
+      <item identifier="resources" identifierref="RC-resources" d2l_2p0:resource_code="crc-resources" description="">
+        <title>Resources</title>
+        <item identifier="course_resources" identifierref="RC-course_resources" d2l_2p0:resource_code="crc-course_resources" description="">
+          <title>Course Resources</title>
+          <item identifier="instructor_setup" identifierref="RC-instructor_setup" d2l_2p0:resource_code="crc-instructor_setup" description="" isvisible="false">
+            <title>Instructor Setup Instructions</title>
+          </item>
+          <item identifier="Instructor_Profile" identifierref="RC-Instructor_Profile" d2l_2p0:resource_code="crc-Instructor_Profile" description="" isvisible="false">
+            <title>Instructor Profile</title>
+          </item>
+          <item identifier="TA_Information_Sheet" identifierref="RC-TA_Information_Sheet" d2l_2p0:resource_code="crc-TA_Information_Sheet" description="" isvisible="false">
+            <title>TA Information</title>
+          </item>
+          <item identifier="Syllabus" identifierref="RC-Syllabus" d2l_2p0:resource_code="crc-Syllabus" description="">
+            <title>Syllabus</title>
+          </item>
+          <item identifier="Schedule" identifierref="RC-Schedule" d2l_2p0:resource_code="crc-Schedule" description="">
+            <title>Schedule</title>
+          </item>
+          <item identifier="Online_Textbook" identifierref="RC-Online_Textbook" d2l_2p0:resource_code="crc-Online_Textbook" description="">
+            <title>Online Textbook</title>
+          </item>
+          <item identifier="PDF_Version_of_the_Online_Textbook" identifierref="RC-PDF_Version_of_the_Online_Textbook" d2l_2p0:resource_code="crc-PDF_Version_of_the_Online_Textbook" description="">
+            <title>PDF Version of the Online Textbook</title>
+          </item>
+          <item identifier="software_setup" identifierref="RC-software_setup" d2l_2p0:resource_code="crc-software_setup" description="">
+            <title>Software Setup</title>
+          </item>
+          <item identifier="normprob" identifierref="RC-normprob" d2l_2p0:resource_code="crc-normprob" description="">
+            <title>Normal Probability Applet</title>
+          </item>
+          <item identifier="Statistics_Methods_Table_and_Flow_Chart" identifierref="RC-Statistics_Methods_Table_and_Flow_Chart" d2l_2p0:resource_code="crc-Statistics_Methods_Table_and_Flow_Chart" description="">
+            <title>Statistics Methods Table and Flow Chart</title>
+          </item>
+          <item identifier="lesson_powerpoints" identifierref="RC-lesson_powerpoints" d2l_2p0:resource_code="crc-lesson_powerpoints" description="">
+            <title>Lesson PowerPoints</title>
+          </item>
+        </item>
+        <item identifier="univ_resources" identifierref="RC-univ_resources" d2l_2p0:resource_code="crc-univ_resources" description="">
+          <title>University Resources</title>
+          <item identifier="math_lab" identifierref="RC-math_lab" d2l_2p0:resource_code="crc-math_lab" description="">
+            <title>Math Tutoring Lab</title>
+          </item>
+          <item identifier="help_desk" identifierref="RC-help_desk" d2l_2p0:resource_code="crc-help_desk" description="">
+            <title>BYU-Idaho Help Desk</title>
+          </item>
+          <item identifier="library" identifierref="RC-library" d2l_2p0:resource_code="crc-library" description="">
+            <title>Library Research Guide</title>
+          </item>
+          <item identifier="acad_support" identifierref="RC-acad_support" d2l_2p0:resource_code="crc-acad_support" description="">
+            <title>Academic Support</title>
+          </item>
+          <item identifier="univ_policies" identifierref="RC-univ_policies" d2l_2p0:resource_code="crc-univ_policies" description="">
+            <title>University Policies</title>
+          </item>
+          <item identifier="writing_center" identifierref="RC-writing_center" d2l_2p0:resource_code="crc-writing_center" description="">
+            <title>Writing Center Minilab</title>
+          </item>
+        </item>
+      </item>
+      <item identifier="unit_1" identifierref="RC-unit_1" d2l_2p0:resource_code="crc-unit_1" description="">
+        <title>Unit 1</title>
+        <item identifier="lesson_01" identifierref="RC-lesson_01" d2l_2p0:resource_code="crc-lesson_01" description="&lt;h2&gt;Course Introduction&lt;/h2&gt;">
+          <title>Lesson 01</title>
+          <item identifier="quiz_cl_01" identifierref="RC-quiz_cl_01" d2l_2p0:resource_code="crc-quiz_cl_01" description="">
+            <title>Lesson 01: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_01" identifierref="RC-file_hw_01" d2l_2p0:resource_code="crc-file_hw_01" description="">
+            <title>Lesson 01: Homework</title>
+          </item>
+          <item identifier="drop_hw_01" identifierref="RC-drop_hw_01" d2l_2p0:resource_code="crc-drop_hw_01" description="" isvisible="false" date_due="2017-04-20T05:55:00">
+            <title>Lesson 01: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-04-20T05:55:00">
+            <title>Lesson 01: Homework Quiz</title>
+          </item>
+          <item identifier="file_01_software_setup" identifierref="RC-file_01_software_setup" d2l_2p0:resource_code="crc-file_01_software_setup" description="Complete the steps in this sheet as soon as you can, to make sure you have the needed software for this course. We'll start using software in Lesson 03.">
+            <title>Software Setup</title>
+          </item>
+          <item identifier="quiz_cs_01" identifierref="RC-quiz_cs_01" d2l_2p0:resource_code="crc-quiz_cs_01" description="">
+            <title>Course Survey: Start of Semester</title>
+          </item>
+          <item identifier="quiz_ks_01" identifierref="RC-quiz_ks_01" d2l_2p0:resource_code="crc-quiz_ks_01" description="">
+            <title>Knowlege Survey: Start of Semester</title>
+          </item>
+        </item>
+        <item identifier="lesson_02" identifierref="RC-lesson_02" d2l_2p0:resource_code="crc-lesson_02" description="&lt;h2&gt;The Statistical Process &amp; Design of Studies&lt;/h2&gt;">
+          <title>Lesson 02</title>
+          <item identifier="file_in_02" identifierref="RC-file_in_02" d2l_2p0:resource_code="crc-file_in_02" description="">
+            <title>Lesson 02: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_02" identifierref="RC-file_gr_02" d2l_2p0:resource_code="crc-file_gr_02" description="">
+            <title>Lesson 02: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_02" identifierref="RC-quiz_gr_02" d2l_2p0:resource_code="crc-quiz_gr_02" description="" date_due="2017-04-20T17:15:00">
+            <title>Lesson 02: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_02" identifierref="RC-quiz_cl_02" d2l_2p0:resource_code="crc-quiz_cl_02" description="" date_due="2017-04-21T16:15:00">
+            <title>Lesson 02: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_02" identifierref="RC-file_hw_02" d2l_2p0:resource_code="crc-file_hw_02" description="">
+            <title>Lesson 02: Homework</title>
+          </item>
+          <item identifier="drop_hw_02" identifierref="RC-drop_hw_02" d2l_2p0:resource_code="crc-drop_hw_02" description="" date_due="2017-04-23T05:55:00">
+            <title>Lesson 02: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-04-23T05:55:00">
+            <title>Lesson 02: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_03" identifierref="RC-lesson_03" d2l_2p0:resource_code="crc-lesson_03" description="&lt;h2&gt;Describing Quantitative Data: Shape, Center &amp; Spread&lt;/h2&gt;">
+          <title>Lesson 03</title>
+          <item identifier="file_in_03" identifierref="RC-file_in_03" d2l_2p0:resource_code="crc-file_in_03" description="">
+            <title>Lesson 03: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_03" identifierref="RC-file_gr_03" d2l_2p0:resource_code="crc-file_gr_03" description="">
+            <title>Lesson 03: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_03" identifierref="RC-quiz_gr_03" d2l_2p0:resource_code="crc-quiz_gr_03" description="" date_due="2017-04-24T17:15:00">
+            <title>Lesson 03: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_03" identifierref="RC-quiz_cl_03" d2l_2p0:resource_code="crc-quiz_cl_03" description="" date_due="2017-04-25T16:15:00">
+            <title>Lesson 03: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_03" identifierref="RC-file_hw_03" d2l_2p0:resource_code="crc-file_hw_03" description="">
+            <title>Lesson 03: Homework</title>
+          </item>
+          <item identifier="drop_hw_03" identifierref="RC-drop_hw_03" d2l_2p0:resource_code="crc-drop_hw_03" description="" date_due="2017-04-27T05:55:00">
+            <title>Lesson 03: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-04-27T05:55:00">
+            <title>Lesson 03: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_04" identifierref="RC-lesson_04" d2l_2p0:resource_code="crc-lesson_04" description="&lt;h2&gt;Probability; Discrete Random Variables&lt;/h2&gt;">
+          <title>Lesson 04</title>
+          <item identifier="file_in_04" identifierref="RC-file_in_04" d2l_2p0:resource_code="crc-file_in_04" description="">
+            <title>Lesson 04: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_04" identifierref="RC-file_gr_04" d2l_2p0:resource_code="crc-file_gr_04" description="">
+            <title>Lesson 04: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_04" identifierref="RC-quiz_gr_04" d2l_2p0:resource_code="crc-quiz_gr_04" description="" date_due="2017-04-27T17:15:00">
+            <title>Lesson 04: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_04" identifierref="RC-quiz_cl_04" d2l_2p0:resource_code="crc-quiz_cl_04" description="" date_due="2017-04-28T16:15:00">
+            <title>Lesson 04: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_04" identifierref="RC-file_hw_04" d2l_2p0:resource_code="crc-file_hw_04" description="">
+            <title>Lesson 04: Homework</title>
+          </item>
+          <item identifier="drop_hw_04" identifierref="RC-drop_hw_04" d2l_2p0:resource_code="crc-drop_hw_04" description="" date_due="2017-04-30T05:55:00">
+            <title>Lesson 04: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-04-30T05:55:00">
+            <title>Lesson 04: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_05" identifierref="RC-lesson_05" d2l_2p0:resource_code="crc-lesson_05" description="&lt;h2&gt;Normal Distributions&lt;/h2&gt;">
+          <title>Lesson 05</title>
+          <item identifier="file_in_05" identifierref="RC-file_in_05" d2l_2p0:resource_code="crc-file_in_05" description="">
+            <title>Lesson 05: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_05" identifierref="RC-file_gr_05" d2l_2p0:resource_code="crc-file_gr_05" description="">
+            <title>Lesson 05: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_05" identifierref="RC-quiz_gr_05" d2l_2p0:resource_code="crc-quiz_gr_05" description="" date_due="2017-05-01T17:15:00">
+            <title>Lesson 05: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_05" identifierref="RC-quiz_cl_05" d2l_2p0:resource_code="crc-quiz_cl_05" description="" date_due="2017-05-02T16:15:00">
+            <title>Lesson 05: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_05" identifierref="RC-file_hw_05" d2l_2p0:resource_code="crc-file_hw_05" description="">
+            <title>Lesson 05: Homework</title>
+          </item>
+          <item identifier="drop_hw_05" identifierref="RC-drop_hw_05" d2l_2p0:resource_code="crc-drop_hw_05" description="" date_due="2017-05-04T05:55:00">
+            <title>Lesson 05: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-05-04T05:55:00">
+            <title>Lesson 05: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_06" identifierref="RC-lesson_06" d2l_2p0:resource_code="crc-lesson_06" description="&lt;h2&gt;Sampling Distribution of the Sample Mean; Central Limit Theorem&lt;/h2&gt;">
+          <title>Lesson 06</title>
+          <item identifier="file_in_06" identifierref="RC-file_in_06" d2l_2p0:resource_code="crc-file_in_06" description="">
+            <title>Lesson 06: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_06" identifierref="RC-file_gr_06" d2l_2p0:resource_code="crc-file_gr_06" description="">
+            <title>Lesson 06: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_06" identifierref="RC-quiz_gr_06" d2l_2p0:resource_code="crc-quiz_gr_06" description="" date_due="2017-05-04T17:15:00">
+            <title>Lesson 06: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_06" identifierref="RC-quiz_cl_06" d2l_2p0:resource_code="crc-quiz_cl_06" description="" date_due="2017-05-05T16:15:00">
+            <title>Lesson 06: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_06" identifierref="RC-file_hw_06" d2l_2p0:resource_code="crc-file_hw_06" description="">
+            <title>Lesson 06: Homework</title>
+          </item>
+          <item identifier="drop_hw_06" identifierref="RC-drop_hw_06" d2l_2p0:resource_code="crc-drop_hw_06" description="" date_due="2017-05-07T05:55:00">
+            <title>Lesson 06: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-05-07T05:55:00">
+            <title>Lesson 06: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_07" identifierref="RC-lesson_07" d2l_2p0:resource_code="crc-lesson_07" description="&lt;h2&gt;Probability Calculations involving a Mean Response&lt;/h2&gt;">
+          <title>Lesson 07</title>
+          <item identifier="file_in_07" identifierref="RC-file_in_07" d2l_2p0:resource_code="crc-file_in_07" description="">
+            <title>Lesson 07: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_07" identifierref="RC-file_gr_07" d2l_2p0:resource_code="crc-file_gr_07" description="">
+            <title>Lesson 07: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_07" identifierref="RC-quiz_gr_07" d2l_2p0:resource_code="crc-quiz_gr_07" description="" date_due="2017-05-08T17:15:00">
+            <title>Lesson 07: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_07" identifierref="RC-quiz_cl_07" d2l_2p0:resource_code="crc-quiz_cl_07" description="" date_due="2017-05-09T16:15:00">
+            <title>Lesson 07: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_07" identifierref="RC-file_hw_07" d2l_2p0:resource_code="crc-file_hw_07" description="">
+            <title>Lesson 07: Homework</title>
+          </item>
+          <item identifier="drop_hw_07" identifierref="RC-drop_hw_07" d2l_2p0:resource_code="crc-drop_hw_07" description="" date_due="2017-05-11T05:55:00">
+            <title>Lesson 07: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-05-11T05:55:00">
+            <title>Lesson 07: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_08" identifierref="RC-lesson_08" d2l_2p0:resource_code="crc-lesson_08" description="&lt;h2&gt;Review for and Take the Unit I Exam&lt;/h2&gt;">
+          <title>Lesson 08</title>
+          <item identifier="file_in_08" identifierref="RC-file_in_08" d2l_2p0:resource_code="crc-file_in_08" description="">
+            <title>Lesson 08: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_08" identifierref="RC-file_gr_08" d2l_2p0:resource_code="crc-file_gr_08" description="">
+            <title>Lesson 08: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_08" identifierref="RC-quiz_gr_08" d2l_2p0:resource_code="crc-quiz_gr_08" description="" date_due="2017-05-11T17:15:00">
+            <title>Lesson 08: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_08" identifierref="RC-quiz_cl_08" d2l_2p0:resource_code="crc-quiz_cl_08" description="" date_due="2017-05-12T16:15:00">
+            <title>Lesson 08: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_08" identifierref="RC-file_hw_08" d2l_2p0:resource_code="crc-file_hw_08" description="">
+            <title>Lesson 08: Homework and Exam Information</title>
+          </item>
+          <item identifier="quiz_ex_01" identifierref="RC-quiz_ex_01" d2l_2p0:resource_code="crc-quiz_ex_01" description="" date_due="2017-05-14T04:00:00" date_start="2017-05-11T14:00:00">
+            <title>The Unit I Exam</title>
+          </item>
+        </item>
+      </item>
+      <item identifier="unit_2" identifierref="RC-unit_2" d2l_2p0:resource_code="crc-unit_2" description="">
+        <title>Unit II</title>
+        <item identifier="lesson_09" identifierref="RC-lesson_09" d2l_2p0:resource_code="crc-lesson_09" description="&lt;h2&gt;Inference for One Mean: Sigma Known (Hypothesis Test)&lt;/h2&gt;">
+          <title>Lesson 09</title>
+          <item identifier="file_in_09" identifierref="RC-file_in_09" d2l_2p0:resource_code="crc-file_in_09" description="">
+            <title>Lesson 09: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_09" identifierref="RC-file_gr_09" d2l_2p0:resource_code="crc-file_gr_09" description="">
+            <title>Lesson 09: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_09" identifierref="RC-quiz_gr_09" d2l_2p0:resource_code="crc-quiz_gr_09" description="" date_due="2017-05-15T17:15:00">
+            <title>Lesson 09: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_09" identifierref="RC-quiz_cl_09" d2l_2p0:resource_code="crc-quiz_cl_09" description="" date_due="2017-05-16T16:15:00">
+            <title>Lesson 09: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_09" identifierref="RC-file_hw_09" d2l_2p0:resource_code="crc-file_hw_09" description="">
+            <title>Lesson 09: Homework</title>
+          </item>
+          <item identifier="drop_hw_09" identifierref="RC-drop_hw_09" d2l_2p0:resource_code="crc-drop_hw_09" description="" date_due="2017-05-18T05:55:00">
+            <title>Lesson 09: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-05-18T05:55:00">
+            <title>Lesson 09: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_10" identifierref="RC-lesson_10" d2l_2p0:resource_code="crc-lesson_10" description="&lt;h2&gt;Inference for One Mean: Sigma Known (Confidence Interval)&lt;/h2&gt;">
+          <title>Lesson 10</title>
+          <item identifier="file_in_10" identifierref="RC-file_in_10" d2l_2p0:resource_code="crc-file_in_10" description="">
+            <title>Lesson 10: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_10" identifierref="RC-file_gr_10" d2l_2p0:resource_code="crc-file_gr_10" description="">
+            <title>Lesson 10: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_10" identifierref="RC-quiz_gr_10" d2l_2p0:resource_code="crc-quiz_gr_10" description="" date_due="2017-05-18T17:15:00">
+            <title>Lesson 10: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_10" identifierref="RC-quiz_cl_10" d2l_2p0:resource_code="crc-quiz_cl_10" description="" date_due="2017-05-19T16:15:00">
+            <title>Lesson 10: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_10" identifierref="RC-file_hw_10" d2l_2p0:resource_code="crc-file_hw_10" description="">
+            <title>Lesson 10: Homework</title>
+          </item>
+          <item identifier="drop_hw_10" identifierref="RC-drop_hw_10" d2l_2p0:resource_code="crc-drop_hw_10" description="" date_due="2017-05-21T05:55:00">
+            <title>Lesson 10: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-05-21T05:55:00">
+            <title>Lesson 10: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_11" identifierref="RC-lesson_11" d2l_2p0:resource_code="crc-lesson_11" description="&lt;h2&gt;Inference for One Mean: Sigma Unknown&lt;/h2&gt;">
+          <title>Lesson 11</title>
+          <item identifier="file_in_11" identifierref="RC-file_in_11" d2l_2p0:resource_code="crc-file_in_11" description="">
+            <title>Lesson 11: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_11" identifierref="RC-file_gr_11" d2l_2p0:resource_code="crc-file_gr_11" description="">
+            <title>Lesson 11: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_11" identifierref="RC-quiz_gr_11" d2l_2p0:resource_code="crc-quiz_gr_11" description="" date_due="2017-05-22T17:15:00">
+            <title>Lesson 11: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_11" identifierref="RC-quiz_cl_11" d2l_2p0:resource_code="crc-quiz_cl_11" description="" date_due="2017-05-23T16:15:00">
+            <title>Lesson 11: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_11" identifierref="RC-file_hw_11" d2l_2p0:resource_code="crc-file_hw_11" description="">
+            <title>Lesson 11: Homework</title>
+          </item>
+          <item identifier="drop_hw_11" identifierref="RC-drop_hw_11" d2l_2p0:resource_code="crc-drop_hw_11" description="" date_due="2017-05-25T05:55:00">
+            <title>Lesson 11: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-05-25T05:55:00">
+            <title>Lesson 11: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_12" identifierref="RC-lesson_12" d2l_2p0:resource_code="crc-lesson_12" description="&lt;h2&gt;Inference for Two Means:Paired Data&lt;/h2&gt;">
+          <title>Lesson 12</title>
+          <item identifier="file_in_12" identifierref="RC-file_in_12" d2l_2p0:resource_code="crc-file_in_12" description="">
+            <title>Lesson 12: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_12" identifierref="RC-file_gr_12" d2l_2p0:resource_code="crc-file_gr_12" description="">
+            <title>Lesson 12: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_12" identifierref="RC-quiz_gr_12" d2l_2p0:resource_code="crc-quiz_gr_12" description="" date_due="2017-05-25T17:15:00">
+            <title>Lesson 12: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_12" identifierref="RC-quiz_cl_12" d2l_2p0:resource_code="crc-quiz_cl_12" description="" date_due="2017-05-26T16:15:00">
+            <title>Lesson 12: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_12" identifierref="RC-file_hw_12" d2l_2p0:resource_code="crc-file_hw_12" description="">
+            <title>Lesson 12: Homework</title>
+          </item>
+          <item identifier="drop_hw_12" identifierref="RC-drop_hw_12" d2l_2p0:resource_code="crc-drop_hw_12" description="" date_due="2017-05-28T05:55:00">
+            <title>Lesson 12: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-05-28T05:55:00">
+            <title>Lesson 12: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_13" identifierref="RC-lesson_13" d2l_2p0:resource_code="crc-lesson_13" description="&lt;h2&gt;Inference for Two Means: Independent Samples&lt;/h2&gt;">
+          <title>Lesson 13</title>
+          <item identifier="file_in_13" identifierref="RC-file_in_13" d2l_2p0:resource_code="crc-file_in_13" description="">
+            <title>Lesson 13: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_13" identifierref="RC-file_gr_13" d2l_2p0:resource_code="crc-file_gr_13" description="">
+            <title>Lesson 13: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_13" identifierref="RC-quiz_gr_13" d2l_2p0:resource_code="crc-quiz_gr_13" description="" date_due="2017-06-01T17:15:00">
+            <title>Lesson 13: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_13" identifierref="RC-quiz_cl_13" d2l_2p0:resource_code="crc-quiz_cl_13" description="" date_due="2017-06-02T16:15:00">
+            <title>Lesson 13: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_13" identifierref="RC-file_hw_13" d2l_2p0:resource_code="crc-file_hw_13" description="">
+            <title>Lesson 13: Homework</title>
+          </item>
+          <item identifier="drop_hw_13" identifierref="RC-drop_hw_13" d2l_2p0:resource_code="crc-drop_hw_13" description="" date_due="2017-06-04T05:55:00">
+            <title>Lesson 13: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-06-04T05:55:00">
+            <title>Lesson 13: Homework Quiz</title>
+          </item>
+          <item identifier="mid_sem_survey" identifierref="RC-mid_sem_survey" d2l_2p0:resource_code="crc-mid_sem_survey" description="">
+            <title>Mid-Semester Course Survey</title>
+          </item>
+        </item>
+        <item identifier="lesson_14" identifierref="RC-lesson_14" d2l_2p0:resource_code="crc-lesson_14" description="&lt;h2&gt;Inference for Several Means: ANOVA&lt;/h2&gt;">
+          <title>Lesson 14</title>
+          <item identifier="file_in_14" identifierref="RC-file_in_14" d2l_2p0:resource_code="crc-file_in_14" description="">
+            <title>Lesson 14: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_14" identifierref="RC-file_gr_14" d2l_2p0:resource_code="crc-file_gr_14" description="">
+            <title>Lesson 14: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_14" identifierref="RC-quiz_gr_14" d2l_2p0:resource_code="crc-quiz_gr_14" description="" date_due="2017-06-05T17:15:00">
+            <title>Lesson 14: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_14" identifierref="RC-quiz_cl_14" d2l_2p0:resource_code="crc-quiz_cl_14" description="" date_due="2017-06-06T16:15:00">
+            <title>Lesson 14: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_14" identifierref="RC-file_hw_14" d2l_2p0:resource_code="crc-file_hw_14" description="">
+            <title>Lesson 14: Homework</title>
+          </item>
+          <item identifier="drop_hw_14" identifierref="RC-drop_hw_14" d2l_2p0:resource_code="crc-drop_hw_14" description="" date_due="2017-06-08T05:55:00">
+            <title>Lesson 14: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-06-08T05:55:00">
+            <title>Lesson 14: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_15" identifierref="RC-lesson_15" d2l_2p0:resource_code="crc-lesson_15" description="&lt;h2&gt;Review for and Take the Unit II Exam&lt;/h2&gt;">
+          <title>Lesson 15</title>
+          <item identifier="file_in_15" identifierref="RC-file_in_15" d2l_2p0:resource_code="crc-file_in_15" description="">
+            <title>Lesson 15: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_15" identifierref="RC-file_gr_15" d2l_2p0:resource_code="crc-file_gr_15" description="">
+            <title>Lesson 15: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_15" identifierref="RC-quiz_gr_15" d2l_2p0:resource_code="crc-quiz_gr_15" description="" date_due="2017-06-08T17:15:00">
+            <title>Lesson 15: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_15" identifierref="RC-quiz_cl_15" d2l_2p0:resource_code="crc-quiz_cl_15" description="" date_due="2017-06-09T16:15:00">
+            <title>Lesson 15: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_15" identifierref="RC-file_hw_15" d2l_2p0:resource_code="crc-file_hw_15" description="">
+            <title>Lesson 15: Homework and Exam Information</title>
+          </item>
+          <item identifier="quiz_ex_02" identifierref="RC-quiz_ex_02" d2l_2p0:resource_code="crc-quiz_ex_02" description="" date_due="2017-06-11T04:00:00" date_start="2017-06-08T14:00:00">
+            <title>The Unit II Exam</title>
+          </item>
+        </item>
+      </item>
+      <item identifier="unit_3" identifierref="RC-unit_3" d2l_2p0:resource_code="crc-unit_3" description="&lt;h2&gt;Describing Categorical Data: Proportions; Sampling Distribtuion of a Sample Proportion&lt;/h2&gt;">
+        <title>Unit III</title>
+        <item identifier="lesson_16" identifierref="RC-lesson_16" d2l_2p0:resource_code="crc-lesson_16" description="">
+          <title>Lesson 16</title>
+          <item identifier="file_in_16" identifierref="RC-file_in_16" d2l_2p0:resource_code="crc-file_in_16" description="">
+            <title>Lesson 16: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_16" identifierref="RC-file_gr_16" d2l_2p0:resource_code="crc-file_gr_16" description="">
+            <title>Lesson 16: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_16" identifierref="RC-quiz_gr_16" d2l_2p0:resource_code="crc-quiz_gr_16" description="" date_due="2017-06-12T17:15:00">
+            <title>Lesson 16: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_16" identifierref="RC-quiz_cl_16" d2l_2p0:resource_code="crc-quiz_cl_16" description="" date_due="2017-06-13T16:15:00">
+            <title>Lesson 16: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_16" identifierref="RC-file_hw_16" d2l_2p0:resource_code="crc-file_hw_16" description="">
+            <title>Lesson 16: Homework</title>
+          </item>
+          <item identifier="drop_hw_16" identifierref="RC-drop_hw_16" d2l_2p0:resource_code="crc-drop_hw_16" description="" date_due="2017-06-15T05:55:00">
+            <title>Lesson 16: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-06-15T05:55:00">
+            <title>Lesson 16: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_17" identifierref="RC-lesson_17" d2l_2p0:resource_code="crc-lesson_17" description="&lt;h2&gt;Inference for One Proportion&lt;/h2&gt;">
+          <title>Lesson 17</title>
+          <item identifier="file_in_17" identifierref="RC-file_in_17" d2l_2p0:resource_code="crc-file_in_17" description="">
+            <title>Lesson 17: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_17" identifierref="RC-file_gr_17" d2l_2p0:resource_code="crc-file_gr_17" description="">
+            <title>Lesson 17: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_17" identifierref="RC-quiz_gr_17" d2l_2p0:resource_code="crc-quiz_gr_17" description="" date_due="2017-06-15T17:15:00">
+            <title>Lesson 17: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_17" identifierref="RC-quiz_cl_17" d2l_2p0:resource_code="crc-quiz_cl_17" description="" date_due="2017-06-16T16:15:00">
+            <title>Lesson 17: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_17" identifierref="RC-file_hw_17" d2l_2p0:resource_code="crc-file_hw_17" description="">
+            <title>Lesson 17: Homework</title>
+          </item>
+          <item identifier="drop_hw_17" identifierref="RC-drop_hw_17" d2l_2p0:resource_code="crc-drop_hw_17" description="" date_due="2017-06-18T05:55:00">
+            <title>Lesson 17: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-06-18T05:55:00">
+            <title>Lesson 17: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_18" identifierref="RC-lesson_18" d2l_2p0:resource_code="crc-lesson_18" description="&lt;h2&gt;Inference for Two Proportions&lt;/h2&gt;">
+          <title>Lesson 18</title>
+          <item identifier="file_in_18" identifierref="RC-file_in_18" d2l_2p0:resource_code="crc-file_in_18" description="">
+            <title>Lesson 18: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_18" identifierref="RC-file_gr_18" d2l_2p0:resource_code="crc-file_gr_18" description="">
+            <title>Lesson 18: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_18" identifierref="RC-quiz_gr_18" d2l_2p0:resource_code="crc-quiz_gr_18" description="" date_due="2017-06-19T17:15:00">
+            <title>Lesson 18: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_18" identifierref="RC-quiz_cl_18" d2l_2p0:resource_code="crc-quiz_cl_18" description="" date_due="2017-06-20T16:15:00">
+            <title>Lesson 18: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_18" identifierref="RC-file_hw_18" d2l_2p0:resource_code="crc-file_hw_18" description="">
+            <title>Lesson 18: Homework</title>
+          </item>
+          <item identifier="drop_hw_18" identifierref="RC-drop_hw_18" d2l_2p0:resource_code="crc-drop_hw_18" description="" date_due="2017-06-22T05:55:00">
+            <title>Lesson 18: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-06-22T05:55:00">
+            <title>Lesson 18: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_19" identifierref="RC-lesson_19" d2l_2p0:resource_code="crc-lesson_19" description="&lt;h2&gt;Inference for Several Proportions, Goodness-of-Fit, and Independence&lt;/h2&gt;">
+          <title>Lesson 19</title>
+          <item identifier="file_in_19" identifierref="RC-file_in_19" d2l_2p0:resource_code="crc-file_in_19" description="">
+            <title>Lesson 19: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_19" identifierref="RC-file_gr_19" d2l_2p0:resource_code="crc-file_gr_19" description="">
+            <title>Lesson 19: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_19" identifierref="RC-quiz_gr_19" d2l_2p0:resource_code="crc-quiz_gr_19" description="" date_due="2017-06-22T17:15:00">
+            <title>Lesson 19: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_19" identifierref="RC-quiz_cl_19" d2l_2p0:resource_code="crc-quiz_cl_19" description="" date_due="2017-06-23T16:15:00">
+            <title>Lesson 19: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_19" identifierref="RC-file_hw_19" d2l_2p0:resource_code="crc-file_hw_19" description="">
+            <title>Lesson 19: Homework</title>
+          </item>
+          <item identifier="drop_hw_19" identifierref="RC-drop_hw_19" d2l_2p0:resource_code="crc-drop_hw_19" description="" date_due="2017-06-25T05:55:00">
+            <title>Lesson 19: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-06-25T05:55:00">
+            <title>Lesson 19: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_20" identifierref="RC-lesson_20" d2l_2p0:resource_code="crc-lesson_20" description="&lt;h2&gt;Review for and Take the Unit III Exam&lt;/h2&gt;">
+          <title>Lesson 20</title>
+          <item identifier="file_in_20" identifierref="RC-file_in_20" d2l_2p0:resource_code="crc-file_in_20" description="">
+            <title>Lesson 20: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_20" identifierref="RC-file_gr_20" d2l_2p0:resource_code="crc-file_gr_20" description="">
+            <title>Lesson 20: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_20" identifierref="RC-quiz_gr_20" d2l_2p0:resource_code="crc-quiz_gr_20" description="" date_due="2016-11-17T17:15:00">
+            <title>Lesson 20: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_20" identifierref="RC-quiz_cl_20" d2l_2p0:resource_code="crc-quiz_cl_20" description="" date_due="2016-11-18T16:15:00">
+            <title>Lesson 20: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_20" identifierref="RC-file_hw_20" d2l_2p0:resource_code="crc-file_hw_20" description="">
+            <title>Lesson 20: Homework and Exam Information</title>
+          </item>
+          <item identifier="quiz_ex_03" identifierref="RC-quiz_ex_03" d2l_2p0:resource_code="crc-quiz_ex_03" description="" date_due="2017-06-29T04:00:00" date_start="2017-06-26T14:00:00">
+            <title>The Unit III Exam</title>
+          </item>
+        </item>
+      </item>
+      <item identifier="unit_4" identifierref="RC-unit_4" d2l_2p0:resource_code="crc-unit_4" description="">
+        <title>Unit IV</title>
+        <item identifier="lesson_21" identifierref="RC-lesson_21" d2l_2p0:resource_code="crc-lesson_21" description="&lt;h2&gt;Describing Bivariate Data: Scatterplots, Correlation, and Covariance&lt;/h2&gt;">
+          <title>Lesson 21</title>
+          <item identifier="file_in_21" identifierref="RC-file_in_21" d2l_2p0:resource_code="crc-file_in_21" description="">
+            <title>Lesson 21: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_21" identifierref="RC-file_gr_21" d2l_2p0:resource_code="crc-file_gr_21" description="">
+            <title>Lesson 21: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_21" identifierref="RC-quiz_gr_21" d2l_2p0:resource_code="crc-quiz_gr_21" description="" date_due="2017-06-29T17:15:00">
+            <title>Lesson 21: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_21" identifierref="RC-quiz_cl_21" d2l_2p0:resource_code="crc-quiz_cl_21" description="" date_due="2017-06-30T16:15:00">
+            <title>Lesson 21: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_21" identifierref="RC-file_hw_21" d2l_2p0:resource_code="crc-file_hw_21" description="">
+            <title>Lesson 21: Homework</title>
+          </item>
+          <item identifier="drop_hw_21" identifierref="RC-drop_hw_21" d2l_2p0:resource_code="crc-drop_hw_21" description="" date_due="2017-07-02T05:55:00">
+            <title>Lesson 21: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-07-02T05:55:00">
+            <title>Lesson 21: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_22" identifierref="RC-lesson_22" d2l_2p0:resource_code="crc-lesson_22" description="&lt;h2&gt;Simple Linear Regression&lt;/h2&gt;">
+          <title>Lesson 22</title>
+          <item identifier="file_in_22" identifierref="RC-file_in_22" d2l_2p0:resource_code="crc-file_in_22" description="">
+            <title>Lesson 22: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_22" identifierref="RC-file_gr_22" d2l_2p0:resource_code="crc-file_gr_22" description="">
+            <title>Lesson 22: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_22" identifierref="RC-quiz_gr_22" d2l_2p0:resource_code="crc-quiz_gr_22" description="" date_due="2017-07-03T17:15:00">
+            <title>Lesson 22: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_22" identifierref="RC-quiz_cl_22" d2l_2p0:resource_code="crc-quiz_cl_22" description="" date_due="2017-07-04T16:15:00">
+            <title>Lesson 22: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_22" identifierref="RC-file_hw_22" d2l_2p0:resource_code="crc-file_hw_22" description="">
+            <title>Lesson 22: Homework</title>
+          </item>
+          <item identifier="drop_hw_22" identifierref="RC-drop_hw_22" d2l_2p0:resource_code="crc-drop_hw_22" description="" date_due="2017-07-06T05:55:00">
+            <title>Lesson 22: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-07-06T05:55:00">
+            <title>Lesson 22: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_23" identifierref="RC-lesson_23" d2l_2p0:resource_code="crc-lesson_23" description="&lt;h2&gt;Inference for Bivariate Data&lt;/h2&gt;">
+          <title>Lesson 23</title>
+          <item identifier="file_in_23" identifierref="RC-file_in_23" d2l_2p0:resource_code="crc-file_in_23" description="">
+            <title>Lesson 23: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_23" identifierref="RC-file_gr_23" d2l_2p0:resource_code="crc-file_gr_23" description="">
+            <title>Lesson 23: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_23" identifierref="RC-quiz_gr_23" d2l_2p0:resource_code="crc-quiz_gr_23" description="" date_due="2017-07-06T17:15:00">
+            <title>Lesson 23: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_23" identifierref="RC-quiz_cl_23" d2l_2p0:resource_code="crc-quiz_cl_23" description="" date_due="2017-07-07T16:15:00">
+            <title>Lesson 23: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_23" identifierref="RC-file_hw_23" d2l_2p0:resource_code="crc-file_hw_23" description="">
+            <title>Lesson 23: Homework</title>
+          </item>
+          <item identifier="drop_hw_23" identifierref="RC-drop_hw_23" d2l_2p0:resource_code="crc-drop_hw_23" description="" date_due="2017-07-09T05:55:00">
+            <title>Lesson 23: Homework Upload</title>
+          </item>
+          <item identifier="quiz_hw_01" identifierref="RC-quiz_hw_01" d2l_2p0:resource_code="crc-quiz_hw_01" description="" date_due="2017-07-09T05:55:00">
+            <title>Lesson 23: Homework Quiz</title>
+          </item>
+        </item>
+        <item identifier="lesson_24" identifierref="RC-lesson_24" d2l_2p0:resource_code="crc-lesson_24" description="&lt;h2&gt;Project Presentations; Review for and Take the Unit IV Exam&lt;/h2&gt;">
+          <title>Lesson 24</title>
+          <item identifier="file_in_24" identifierref="RC-file_in_24" d2l_2p0:resource_code="crc-file_in_24" description="">
+            <title>Lesson 24: Individual Preparation</title>
+          </item>
+          <item identifier="file_gr_24" identifierref="RC-file_gr_24" d2l_2p0:resource_code="crc-file_gr_24" description="">
+            <title>Lesson 24: Group Meeting</title>
+          </item>
+          <item identifier="quiz_gr_24" identifierref="RC-quiz_gr_24" d2l_2p0:resource_code="crc-quiz_gr_24" description="" date_due="2017-07-10T17:15:00">
+            <title>Lesson 24: Group Meeting Quiz</title>
+          </item>
+          <item identifier="quiz_cl_24" identifierref="RC-quiz_cl_24" d2l_2p0:resource_code="crc-quiz_cl_24" description="" date_due="2017-07-11T16:15:00">
+            <title>Lesson 24: Class Meeting Quiz</title>
+          </item>
+          <item identifier="file_hw_24" identifierref="RC-file_hw_24" d2l_2p0:resource_code="crc-file_hw_24" description="">
+            <title>Lesson 24: Homework and Exam Information</title>
+          </item>
+          <item identifier="quiz_ex_04" identifierref="RC-quiz_ex_04" d2l_2p0:resource_code="crc-quiz_ex_04" description="" date_due="2017-07-19T04:00:00" date_start="2017-07-16T14:00:00">
+            <title>The Unit IV Exam</title>
+          </item>
+          <item identifier="quiz_cs_02" identifierref="RC-quiz_cs_02" d2l_2p0:resource_code="crc-quiz_cs_02" description="">
+            <title>Course Survey: End of Semester</title>
+          </item>
+          <item identifier="quiz_ks_02" identifierref="RC-quiz_ks_02" d2l_2p0:resource_code="crc-quiz_ks_02" description="">
+            <title>Knowledge Survey: End of Semester</title>
+          </item>
+        </item>
+      </item>
+      <item identifier="final_project" identifierref="RC-final_project" d2l_2p0:resource_code="crc-final_project" description="">
+        <title>Final Project</title>
+        <item identifier="final_project_overview" identifierref="RC-final_project_overview" d2l_2p0:resource_code="crc-final_project_overview" description="">
+          <title>Final Project Overview</title>
+        </item>
+        <item identifier="rq" identifierref="RC-rq" d2l_2p0:resource_code="crc-rq" description="">
+          <title>Research Question</title>
+        </item>
+        <item identifier="rqu" identifierref="RC-rqu" d2l_2p0:resource_code="crc-rqu" description="" date_due="2016-10-02T00:00:00">
+          <title>Research Question Upload</title>
+        </item>
+        <item identifier="ds1" identifierref="RC-ds1" d2l_2p0:resource_code="crc-ds1" description="">
+          <title>Design Study (Part I)</title>
+        </item>
+        <item identifier="ds1u" identifierref="RC-ds1u" d2l_2p0:resource_code="crc-ds1u" description="" date_due="2016-10-16T00:00:00">
+          <title>Design Study (Part I) Upload</title>
+        </item>
+        <item identifier="ds2" identifierref="RC-ds2" d2l_2p0:resource_code="crc-ds2" description="">
+          <title>Design Study (Part II)</title>
+        </item>
+        <item identifier="ds2u" identifierref="RC-ds2u" d2l_2p0:resource_code="crc-ds2u" description="" date_due="2016-10-30T00:00:00">
+          <title>Design Study (Part II) Upload</title>
+        </item>
+        <item identifier="cd" identifierref="RC-cd" d2l_2p0:resource_code="crc-cd" description="">
+          <title>Collect Data</title>
+        </item>
+        <item identifier="cdu" identifierref="RC-cdu" d2l_2p0:resource_code="crc-cdu" description="" date_due="2016-11-27T00:00:00">
+          <title>Collect Data Upload</title>
+        </item>
+        <item identifier="mi1" identifierref="RC-mi1" d2l_2p0:resource_code="crc-mi1" description="">
+          <title>Make Inferences (Part I)</title>
+        </item>
+        <item identifier="mi1u" identifierref="RC-mi1u" d2l_2p0:resource_code="crc-mi1u" description="" date_due="2016-12-04T00:00:00">
+          <title>Make Inferences (Part I) Upload</title>
+        </item>
+        <item identifier="mi2" identifierref="RC-mi2" d2l_2p0:resource_code="crc-mi2" description="">
+          <title>Make Inferences (Part II)</title>
+        </item>
+        <item identifier="mi2u" identifierref="RC-mi2u" d2l_2p0:resource_code="crc-mi2u" description="" date_due="2016-12-11T00:00:00">
+          <title>Make Inferences (Part II) Upload</title>
+        </item>
+        <item identifier="file_teval" identifierref="RC-file_teval" d2l_2p0:resource_code="crc-file_teval" description="">
+          <title>Team Evaluation</title>
+        </item>
+        <item identifier="drop_teval" identifierref="RC-drop_teval" d2l_2p0:resource_code="crc-drop_teval" description="" date_due="2016-12-11T00:00:00">
+          <title>Team Evaluation Upload</title>
+        </item>
+        <item identifier="file_example_projects" identifierref="RC-file_example_projects" d2l_2p0:resource_code="crc-file_example_projects" description="">
+          <title>Final Project Examples</title>
+        </item>
+      </item>
+      <item identifier="prep_pres" identifierref="RC-prep_pres" d2l_2p0:resource_code="crc-prep_pres" description="">
+        <title>Preparation Presentations</title>
+        <item identifier="dspp" identifierref="RC-dspp" d2l_2p0:resource_code="crc-dspp" description="" isvisible="false">
+          <title>Design Study Presentation</title>
+        </item>
+        <item identifier="DesignUp" identifierref="RC-DesignUp" d2l_2p0:resource_code="crc-DesignUp" description="" isvisible="false">
+          <title>Design Study Presentation Upload</title>
+        </item>
+        <item identifier="qmpp" identifierref="RC-qmpp" d2l_2p0:resource_code="crc-qmpp" description="" isvisible="false">
+          <title>Quantitative Mean</title>
+        </item>
+        <item identifier="NormalMeanUp" identifierref="RC-NormalMeanUp" d2l_2p0:resource_code="crc-NormalMeanUp" description="" isvisible="false">
+          <title>Quantitative Mean Upload</title>
+        </item>
+        <item identifier="ppp" identifierref="RC-ppp" d2l_2p0:resource_code="crc-ppp" description="" isvisible="false">
+          <title>Proportions Presentation</title>
+        </item>
+        <item identifier="ProportionsUp" identifierref="RC-ProportionsUp" d2l_2p0:resource_code="crc-ProportionsUp" description="" isvisible="false">
+          <title>Proportions Presentation Upload</title>
+        </item>
+        <item identifier="cspp" identifierref="RC-cspp" d2l_2p0:resource_code="crc-cspp" description="" isvisible="false">
+          <title>ChiSquare Presentation</title>
+        </item>
+        <item identifier="ChiSquareUp" identifierref="RC-ChiSquareUp" d2l_2p0:resource_code="crc-ChiSquareUp" description="" isvisible="false">
+          <title>ChiSquare Presentation Upload</title>
+        </item>
+        <item identifier="rpp" identifierref="RC-rpp" d2l_2p0:resource_code="crc-rpp" description="" isvisible="false">
+          <title>Regression Presentation</title>
+        </item>
+        <item identifier="RegressionUp" identifierref="RC-RegressionUp" d2l_2p0:resource_code="crc-RegressionUp" description="" isvisible="false">
+          <title>Regression Presentation Upload</title>
+        </item>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RC-resources" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-course_resources" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-instructor_setup" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Instructor_Setup_Instructions.html" title=""/>
+    <resource identifier="RC-Instructor_Profile" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Instructor_Profile.html" title=""/>
+    <resource identifier="RC-TA_Information_Sheet" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/TA_Information.html" title=""/>
+    <resource identifier="RC-Syllabus" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Syllabus.html" title=""/>
+    <resource identifier="RC-Schedule" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="http://statistics.byuimath.com/index.php?title=Schedule:Current_Semester" title=""/>
+    <resource identifier="RC-Online_Textbook" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="http://statistics.byuimath.com/index.php?title=Main_Page" title=""/>
+    <resource identifier="RC-PDF_Version_of_the_Online_Textbook" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://docs.google.com/file/d/0B-KMfp98NdycQkhOYnNmTGRaVmc/edit?pli=1" title=""/>
+    <resource identifier="RC-software_setup" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Software_Setup.html" title=""/>
+    <resource identifier="RC-normprob" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="http://byuimath.com/apps/normprob.html" title=""/>
+    <resource identifier="RC-Statistics_Methods_Table_and_Flow_Chart" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Statistics_Methods_Table_and_Flow_Chart.html" title=""/>
+    <resource identifier="RC-lesson_powerpoints" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_PowerPoints.html" title=""/>
+    <resource identifier="RC-univ_resources" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-math_lab" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="http://www.byui.edu/academic-support-centers/math" title=""/>
+    <resource identifier="RC-help_desk" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://www.byui.edu/information-technology" title=""/>
+    <resource identifier="RC-library" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="http://libguides.byui.edu/" title=""/>
+    <resource identifier="RC-acad_support" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://www.byui.edu/academic-support-centers" title=""/>
+    <resource identifier="RC-univ_policies" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://content.byui.edu/integ/gen/d24f576f-d34b-47be-a466-d00bd4792fb6/0/universitypolicies.html" title=""/>
+    <resource identifier="RC-writing_center" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="http://www.byui.edu/academic-support-centers/writing" title=""/>
+    <resource identifier="RC-unit_1" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-lesson_01" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-quiz_cl_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_01" title=""/>
+    <resource identifier="RC-file_hw_01" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_01_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_01" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-file_01_software_setup" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Software_Setup.html" title=""/>
+    <resource identifier="RC-quiz_cs_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cs_01" title=""/>
+    <resource identifier="RC-quiz_ks_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_ks_01" title=""/>
+    <resource identifier="RC-lesson_02" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_02" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_02_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_02" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_02_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_02" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_02" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_02" title=""/>
+    <resource identifier="RC-file_hw_02" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_02_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_02" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_02" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_03" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_03" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_03_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_03" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_03_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_03" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_03" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_03" title=""/>
+    <resource identifier="RC-file_hw_03" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_03_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_03" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_03" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_04" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_04" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_04_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_04" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_04_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_04" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_04" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_04" title=""/>
+    <resource identifier="RC-file_hw_04" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_04_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_04" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_04" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_05" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_05" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_05_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_05" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_05_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_05" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_05" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_05" title=""/>
+    <resource identifier="RC-file_hw_05" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_05_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_05" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_05" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_06" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_06" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_06_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_06" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_06_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_06" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_06" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_06" title=""/>
+    <resource identifier="RC-file_hw_06" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_06_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_06" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_06" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_07" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_07" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_07_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_07" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_07_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_07" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_07" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_07" title=""/>
+    <resource identifier="RC-file_hw_07" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_07_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_07" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_07" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_08" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_08" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_08_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_08" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_08_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_08" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_08" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_08" title=""/>
+    <resource identifier="RC-file_hw_08" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_08_Homework_and_Exam_Information.html" title=""/>
+    <resource identifier="RC-quiz_ex_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-unit_2" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-lesson_09" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_09" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_09_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_09" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_09_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_09" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_09" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_09" title=""/>
+    <resource identifier="RC-file_hw_09" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_09_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_09" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_09" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_10" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_10" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_10_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_10" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_10_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_10" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_10" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_10" title=""/>
+    <resource identifier="RC-file_hw_10" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_10_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_10" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_10" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_11" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_11" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_11_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_11" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_11_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_11" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_11" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_11" title=""/>
+    <resource identifier="RC-file_hw_11" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_11_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_11" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_11" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_12" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_12" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_12_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_12" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_12_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_12" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_12" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_12" title=""/>
+    <resource identifier="RC-file_hw_12" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_12_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_12" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_12" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_13" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_13" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_13_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_13" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_13_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_13" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_13" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_13" title=""/>
+    <resource identifier="RC-file_hw_13" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_13_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_13" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_13" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-mid_sem_survey" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=survey&amp;rcode=src-mid_sem_survey" title=""/>
+    <resource identifier="RC-lesson_14" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_14" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_14_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_14" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_14_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_14" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_14" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_14" title=""/>
+    <resource identifier="RC-file_hw_14" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_14_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_14" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_14" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_15" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_15" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_15_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_15" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_15_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_15" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_15" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_15" title=""/>
+    <resource identifier="RC-file_hw_15" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_15_Homework_and_Exam_Information.html" title=""/>
+    <resource identifier="RC-quiz_ex_02" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-unit_3" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-lesson_16" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_16" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_16_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_16" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_16_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_16" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_16" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_16" title=""/>
+    <resource identifier="RC-file_hw_16" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_16_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_16" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_16" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_17" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_17" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_17_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_17" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_17_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_17" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_17" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_17" title=""/>
+    <resource identifier="RC-file_hw_17" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_17_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_17" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_17" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_18" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_18" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_18_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_18" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_18_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_18" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_18" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_18" title=""/>
+    <resource identifier="RC-file_hw_18" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_18_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_18" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_18" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_19" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_19" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_19_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_19" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_19_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_19" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_19" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_19" title=""/>
+    <resource identifier="RC-file_hw_19" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_19_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_19" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_19" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_20" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_20" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_20_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_20" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_20_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_20" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_20" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_20" title=""/>
+    <resource identifier="RC-file_hw_20" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_20_Homework_and_Exam_Information.html" title=""/>
+    <resource identifier="RC-quiz_ex_03" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-unit_4" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-lesson_21" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_21" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_21_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_21" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_21_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_21" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_21" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_21" title=""/>
+    <resource identifier="RC-file_hw_21" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_21_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_21" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_21" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_22" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_22" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_22_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_22" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_22_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_22" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_22" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_22" title=""/>
+    <resource identifier="RC-file_hw_22" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_22_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_22" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_22" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_23" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_23" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_23_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_23" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_23_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_23" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_23" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_23" title=""/>
+    <resource identifier="RC-file_hw_23" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_23_Homework.html" title=""/>
+    <resource identifier="RC-drop_hw_23" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_hw_23" title=""/>
+    <resource identifier="RC-quiz_hw_01" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-lesson_24" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-file_in_24" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_24_Individual_Preparation.html" title=""/>
+    <resource identifier="RC-file_gr_24" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_24_Group_Meeting.html" title=""/>
+    <resource identifier="RC-quiz_gr_24" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cl_24" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cl_24" title=""/>
+    <resource identifier="RC-file_hw_24" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Lesson_24_Homework_and_Exam_Information.html" title=""/>
+    <resource identifier="RC-quiz_ex_04" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_blank" href="https://byui.brightspace.com/d2l/le/lti/210930/toolLaunch/4112/770158705" title=""/>
+    <resource identifier="RC-quiz_cs_02" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_cs_02" title=""/>
+    <resource identifier="RC-quiz_ks_02" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=quiz&amp;rcode=qrc-quiz_ks_02" title=""/>
+    <resource identifier="RC-final_project" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-final_project_overview" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Final_Project_Overview.html" title=""/>
+    <resource identifier="RC-rq" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/research_question.html" title=""/>
+    <resource identifier="RC-rqu" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-rqu" title=""/>
+    <resource identifier="RC-ds1" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/design_study_1.html" title=""/>
+    <resource identifier="RC-ds1u" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-ds1u" title=""/>
+    <resource identifier="RC-ds2" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/design_study_2.html" title=""/>
+    <resource identifier="RC-ds2u" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-ds2u" title=""/>
+    <resource identifier="RC-cd" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/collect_data.html" title=""/>
+    <resource identifier="RC-cdu" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-cdu" title=""/>
+    <resource identifier="RC-mi1" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/make_inferences_1.html" title=""/>
+    <resource identifier="RC-mi1u" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-mi1u" title=""/>
+    <resource identifier="RC-mi2" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/make_inferences_2.html" title=""/>
+    <resource identifier="RC-mi2u" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-mi2u" title=""/>
+    <resource identifier="RC-file_teval" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Team_Evaluation.html" title=""/>
+    <resource identifier="RC-drop_teval" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-drop_teval" title=""/>
+    <resource identifier="RC-file_example_projects" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/Final_Project_Examples.html" title=""/>
+    <resource identifier="RC-prep_pres" type="webcontent" d2l_2p0:material_type="webcontent" d2l_2p0:link_target="" href="" title=""/>
+    <resource identifier="RC-dspp" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/design_study_pp.html" title=""/>
+    <resource identifier="RC-DesignUp" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-DesignUp" title=""/>
+    <resource identifier="RC-qmpp" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/quantitative_mean_pp.html" title=""/>
+    <resource identifier="RC-NormalMeanUp" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-NormalMeanUp" title=""/>
+    <resource identifier="RC-ppp" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/proportions_pp.html" title=""/>
+    <resource identifier="RC-ProportionsUp" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-ProportionsUp" title=""/>
+    <resource identifier="RC-cspp" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/chisquare_pp.html" title=""/>
+    <resource identifier="RC-ChiSquareUp" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-ChiSquareUp" title=""/>
+    <resource identifier="RC-rpp" type="webcontent" d2l_2p0:material_type="content" d2l_2p0:link_target="_self" href="Course_Files/regression_pp.html" title=""/>
+    <resource identifier="RC-RegressionUp" type="webcontent" d2l_2p0:material_type="contentlink" d2l_2p0:link_target="_self" href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou={orgUnitId}&amp;type=dropbox&amp;rcode=drc-RegressionUp" title=""/>
+    <resource identifier="res_syllabus" type="webcontent" d2l_2p0:material_type="d2lsyllabus" d2l_2p0:link_target="" href="syllabus_d2l.xml" title=""/>
+    <resource identifier="res_question_library" type="webcontent" d2l_2p0:material_type="d2lquestionlibrary" d2l_2p0:link_target="" href="questiondb.xml" title="Question Library"/>
+    <resource identifier="res_quiz-quiz_cl_01" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_01.xml" title="Lesson 01: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cs_01" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cs_01.xml" title="Course Survey: Start of Semester"/>
+    <resource identifier="res_quiz-quiz_ks_01" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_ks_01.xml" title="Knowlege Survey: Start of Semester"/>
+    <resource identifier="res_quiz-quiz_cl_02" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_02.xml" title="Lesson 02: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_03" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_03.xml" title="Lesson 03: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_04" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_04.xml" title="Lesson 04: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_05" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_05.xml" title="Lesson 05: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_06" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_06.xml" title="Lesson 06: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_07" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_07.xml" title="Lesson 07: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_08" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_08.xml" title="Lesson 08: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_09" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_09.xml" title="Lesson 09: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_10" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_10.xml" title="Lesson 10: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_11" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_11.xml" title="Lesson 11: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_12" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_12.xml" title="Lesson 12: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_13" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_13.xml" title="Lesson 13: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_14" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_14.xml" title="Lesson 14: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_15" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_15.xml" title="Lesson 15: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_16" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_16.xml" title="Lesson 16: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_17" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_17.xml" title="Lesson 17: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_18" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_18.xml" title="Lesson 18: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_19" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_19.xml" title="Lesson 19: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_20" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_20.xml" title="Lesson 20: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_21" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_21.xml" title="Lesson 21: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_22" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_22.xml" title="Lesson 22: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_23" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_23.xml" title="Lesson 23: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cl_24" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cl_24.xml" title="Lesson 24: Class Meeting Quiz"/>
+    <resource identifier="res_quiz-quiz_cs_02" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_cs_02.xml" title="Course Survey: End of Semester"/>
+    <resource identifier="res_quiz-quiz_ks_02" type="webcontent" d2l_2p0:material_type="d2lquiz" d2l_2p0:link_target="" href="quiz-quiz_ks_02.xml" title="Knowledge Survey: End of Semester"/>
+    <resource identifier="res_survey-mid_sem_survey" type="webcontent" d2l_2p0:material_type="d2lsurvey" d2l_2p0:link_target="" href="survey-mid_sem_survey.xml" title="Mid-Semester Course Survey"/>
+    <resource identifier="res_grades" type="webcontent" d2l_2p0:material_type="d2lgrades" d2l_2p0:link_target="" href="grades_d2l.xml" title=""/>
+    <resource identifier="res_dropbox" type="webcontent" d2l_2p0:material_type="d2ldropbox" d2l_2p0:link_target="" href="dropbox_d2l.xml" title=""/>
+  </resources>
+</manifest>
+ 

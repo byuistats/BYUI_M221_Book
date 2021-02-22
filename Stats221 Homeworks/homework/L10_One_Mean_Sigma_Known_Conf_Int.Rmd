@@ -1,0 +1,225 @@
+---
+title: 'Lesson 10: Inference for One Mean - Sigma Known (Confidence Interval)'
+author: "Homework"
+output:
+  html_document:
+    css: buttondown.css
+    toc: no
+  word_document:
+    toc: no
+params:
+  key: no
+  plinks: no
+  keyname: "blank"
+  docname: "blank"
+md_document:
+  variant: markdown_phpextra
+---
+
+```{r,results='asis',echo=FALSE}
+if(params$key==TRUE){
+  if(params$plinks==TRUE) cat("* [Word Document](",paste(params$keyname,"docx",sep="."),")\n")
+  if(params$plinks==TRUE) cat("* [PDF Document](",paste(params$keyname,"pdf",sep="."),")\n")
+  cat("<!--")
+  cat("\n")
+} 
+if(params$key!=TRUE){
+  if(params$plinks==TRUE) cat("* [Word Document](",paste(params$docname,"docx",sep="."),")\n")
+  if(params$plinks==TRUE) cat("* [PDF Document](",paste(params$docname,"pdf",sep="."),")\n")
+  cat("\n")
+}
+```
+
+**Instructions:  You are encouraged to collaborate with other students on the homework, but it is important that you do your own work.  Before working with someone else on the assignment, you should attempt each problem on your own.**
+
+```{r,echo=FALSE}
+library(ggplot2)
+library(ggthemes)
+library(pander)
+panderOptions('keep.line.breaks',TRUE)
+source("../scripts/ggQQline.R")
+source("../scripts/normTail.R")
+source("../scripts/221_Interactive_Functions.R")
+
+options(scipen = 999)
+```
+
+1.  Which of the following confidence levels will yield the narrowest confidence intervals for the same analysis?
+    a.  90%
+    b.  95%
+    c.  99%
+    
+```{r,include=FALSE}
+n1 = 51
+confInt1 = 95
+lowerBound_q2 = 225500
+upperBound_q2 = 341800
+```
+
+
+2.   A random sample of n = `r n1` homes listed for sale in Madison County was collected. The `r confInt1`% confidence interval for the true mean listing price was computed to be ($`r formatC(lowerBound_q2,big.mark=",",format="f",digits=0)`, $`r formatC(upperBound_q2,big.mark=",",format="f",digits=0)`). Write a correct explanation of this result that would make sense to someone who has never had Statistics.
+
+3.  Use the information in Question 2 to answer this question. What is the probability that the true mean listing price of homes in Madison County is between $`r formatC(lowerBound_q2,big.mark=",",format="f",digits=0)` and $`r formatC(upperBound_q2,big.mark=",",format="f",digits=0)`?
+
+4.  List the three requirements that should be met when computing a confidence interval for a mean with $\sigma$ known.
+
+```{r,echo=FALSE}
+n2 = 1175
+sampleMean2 = 9.2
+sd2 = 6.7
+confInt2_q6_q7 = 90
+confInt2_q8_q11 = 95
+confInt2_q9 = 99
+error2 = .25
+
+z2 = zStar(confInt2_q6_q7)
+error2_q6 = marginError(z2,sd2,n2)
+
+ConfidenceInterval_07 = confInterval(sampleMean2,z2,sd2,n2)
+ConfidenceInterval_07_String = confIntervalString(sampleMean2,z2,sd2,n2)
+
+z2_08 = zStar(confInt2_q8_q11)
+ConfidenceInterval_08 = confInterval(sampleMean2,z2_08,sd2,n2)
+ConfidenceInterval_08_String = confIntervalString(sampleMean2,z2_08,sd2,n2)
+
+z2_09 = zStar(confInt2_q9)
+ConfidenceInterval_09 = confInterval(sampleMean2,z2_09,sd2,n2)
+ConfidenceInterval_09_String = confIntervalString(sampleMean2,z2_09,sd2,n2)
+
+z2_11 = zStar(confInt2_q8_q11)
+n_11 = sampleSize(z2_11,sd2,error2)
+```
+
+
+A school social worker wishes to estimate the mean amount of time each week that high school students spend with friends.  She obtains a random sample of `r n2` high school students and finds that the mean weekly time spent with friends is `r sampleMean2` hours.  The population standard deviation amount of time spent with friends is `r sd2` hours. Use this information to answer questions 5 through 11.
+
+5.  What is the point estimate for the population mean?
+
+6.  Find the margin of error for the `r confInt2_q6_q7`% confidence interval for the true mean hours students spend with friends.
+
+7.  Find and interpret the `r confInt2_q6_q7`% confidence interval for the true mean hours students spend with friends.
+
+8.  Find and interpret the `r confInt2_q8_q11`% confidence interval for the true mean hours students spend with friends.
+
+9.  Find and interpret the `r confInt2_q9`% confidence interval for the true mean hours students spend with friends.
+
+10.	What do you notice about the relationship between the level of confidence (90%, 95%, or 99%) and the width of the confidence interval?
+
+11.	Suppose that a new study is being planned. What sample size would be required to obtain a `r confInt2_q8_q11`% confidence interval with a margin of error of `r error2` hours?
+
+```{r,echo=FALSE}
+n3 = 600
+sampleMean3 = .16
+sd3 = 0.08
+confInt3 = 95
+n3_q15 = 1200
+trueMean3 = .159 
+error3 = .002
+
+z3 = zStar(confInt3)
+error3_13 = marginError(z3,sd3,n3)
+
+ConfidenceInterval3_14 = confInterval(sampleMean3, z3, sd3, n3)
+ConfidenceInterval3_14_String = confIntervalString(sampleMean3, z3, sd3, n3)
+
+ConfidenceInterval3_15 = confInterval(sampleMean3, z3, sd3, n3_q15)
+ConfidenceInterval3_15_String = confIntervalString(sampleMean3, z3, sd3, n3_q15)
+
+n3_18 = sampleSize(z3,sd3,error3)
+```
+
+You are a researcher for the National Highway Traffic Safety Administration (NHTSA) and wish to estimate the average blood alcohol concentration (BAC) for drivers involved in fatal accidents who are found to have positive BAC values.  You randomly select records from `r n3` such drivers and determine the sample mean BAC to be `r sampleMean3` $\frac{g}{dL}$.  Assume that the known standard deviation is `r sd3` $\frac{g}{dL}$. Use this information to answer questions 12 through 18.
+
+12.	  What is the point estimate for the population mean?
+
+13. Find the margin of error for the `r confInt3`% confidence interval of the mean BAC.
+
+14.	  Compute and interpret the `r confInt3`% confidence interval of the mean BAC.
+
+15.	  Assume you decide to randomly sample `r formatC(n3_q15,big.mark=",",format="f",digits=0)` records instead, and by some strange twist of fate, you get the same sample mean   = `r sampleMean3` $\frac{g}{dL}$.  What is the `r confInt3`% confidence interval of the mean BAC now?  What is the interpretation?
+
+16.	  What do you notice about the relationship between the sample size and the width of the confidence interval based on questions 10 and 11?
+
+17.	  The assertion in the NHTSA is that the true population mean BAC is $\mu = `r trueMean3` \frac{g}{dL}$.  Based on your confidence intervals, would you agree with that assertion?
+
+18.	  Suppose that a new study is being planned. What sample size would be required to obtain a `r confInt3`% confidence interval with a margin of error of `r error3` $\frac{g}{dL}$?
+
+19.	  We typically want to get the best estimate possible. Why don't we simply compute a 100% confidence interval for the mean?
+
+20.	  Which of the following explanations describe(s) the correct way of interpreting a 95% confidence interval? (Choose all that apply)
+
+    I. There is a 95% probability (or chance) that the true mean is between the lower and upper bounds.
+    II. We are 95% confident that the true mean is between the lower and upper bounds.
+    III. Approximately 95% of all 95% confidence intervals would contain the true mean.
+    IV. None of these interpretations are correct.
+
+```{r, include=FALSE}
+if(params$key==TRUE){
+
+    Solution01 = data.frame(Part="-",Solution="90%")
+
+    Solution02 = data.frame(Part="-",Solution=paste("We are ",confInt1,"% confident that the actual mean price is between $",lowerBound_q2," and $",upperBound_q2,". Also, if we were to do the same process (sampling and estimation) over and over, the confidence interval would contain the true mean listing price approximately ",confInt1,"% of the time."))
+    
+    Solution03 = data.frame(Part="-",Solution=paste("The probability is either 0 or 1. This is because the true mean is a fixed value that does not change. The sample mean varies depending on the random sample that was collected and therefore so does the confidence interval. A probability expresses the proportion of the times that an event happens if a  random process is repeated over and over again. The population mean does not change so you cannot have a probability associated with it; it may be between $",lowerBound_q2," and $",upperBound_q2," or it may not, but it will either be in that interval 100% of the time or 0% of the time. We cannot say with certainty, so we say that the probability is either 0 or 1."))
+    
+    Solution04 = data.frame(Part="-",Solution="
+- A simple random sample was drawn from the population \\\n- $\\bar{x}$ is normally distributed \\\n- $\\sigma$ is assumed to be known")
+    
+    Solution05 = data.frame(Part="-",Solution=sampleMean2)
+    
+    Solution06 = data.frame(Part="-",Solution=round(error2_q6,3))
+    
+    Solution07 = data.frame(Part="-",Solution=paste("(",ConfidenceInterval_07,")", " We are ",confInt2_q6_q7,"% confident that the true mean number of hours is between ", ConfidenceInterval_07_String,sep = ""))
+    
+    Solution08 = data.frame(Part="-",Solution=paste("(",ConfidenceInterval_08,")", " We are ",confInt2_q8_q11,"% confident that the true mean number of hours is between ", ConfidenceInterval_08_String,sep = ""))
+    
+    Solution09 = data.frame(Part="-",Solution=paste("(",ConfidenceInterval_09,")", " We are ",confInt2_q9,"% confident that the true mean number of hours is between ", ConfidenceInterval_09_String,sep = ""))
+    
+    Solution10 = data.frame(Part="-",Solution="As the level of confidence increases, the interval width also increases.")
+    
+    Solution11 = data.frame(Part="-",Solution=paste("n = ",n_11,sep = ""))
+    
+    Solution12 = data.frame(Part="-",Solution=sampleMean3)
+    
+    Solution13 = data.frame(Part="-",Solution=round(error3_13,3))
+    
+    Solution14 = data.frame(Part="-",Solution=paste("(",ConfidenceInterval3_14,")", " We are ",confInt3,"% confident that the true mean BAC is between ", ConfidenceInterval3_14_String,sep = ""))
+    
+    Solution15 = data.frame(Part="-",Solution=paste("(",ConfidenceInterval3_15,")", " We are ",confInt3,"% confident that the true mean BAC is between ", ConfidenceInterval3_15_String,sep = ""))
+    
+    Solution16 = data.frame(Part="-",Solution="As the sample size increases, the interval width decreases.")
+    
+    Solution17 = data.frame(Part="-",Solution=paste("Although we cannot be certain that $\\mu$ = ", trueMean3, " g/dL without examining the entire population, the value does lie within all of our intervals. So, although we cannot be certain it is exactly equal to ",trueMean3, ", we can see that it is within
+the range of possible values and it is possible that it is ", trueMean3, sep=""))
+    
+    Solution18 = data.frame(Part="-",Solution=paste("n = ",n3_18,sep = ""))
+    
+    Solution19 = data.frame(Part="-",Solution="If we wanted 100% confidence, we would get information from the entire population
+and we would not need to create a confidence interval. Since we typically don't have the time or the money to do that, we settle on a sample and estimate the mean using a confidence interval typically between 90-99% confidence.")
+    
+    Solution20 = data.frame(Part="-",Solution="
+II. We are 95% confident that the true mean is between the lower and upper bounds.\\\n III. Approximately 95% of all 95% confidence intervals would contain the true mean.")
+    
+} # end params == TRUE.  We use this so it doesn't have to run for non answer key path.
+
+```
+
+```{r,echo=FALSE,results='asis'}
+if(params$key==TRUE) cat("-->")
+  if(params$key==TRUE) cat("\n\n## Solutions\n\n---")
+      if(params$key==TRUE) cat("\n\n")
+```
+
+```{r,echo=FALSE,results='asis'}
+  if(params$key==TRUE){
+    all_solutions = sort(ls(pattern="Solution"))
+    key_list = NULL
+    for (i in 1:length(all_solutions)){
+      temp = get(all_solutions[i])
+      temp$Solution = as.character(temp$Solution)
+      key_list = rbind(key_list,data.frame(Problem=i,temp))
+    }
+    
+      pander(key_list,split.cell = 80, split.table = Inf,justify = c( 'center', 'left',"left"))
+    }
+```

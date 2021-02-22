@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0">
+  <assessment title="Lesson 23: Class Meeting Quiz" ident="res_quiz-quiz_cl_23" d2l_2p0:resource_code="qrc-quiz_cl_23">
+    <rubric>
+      <flow_mat>
+        <material>
+          <mattext d2l_2p0:isdisplayed="no" texttype="text/html"/>
+        </material>
+      </flow_mat>
+    </rubric>
+    <assessmentcontrol hintswitch="no" solutionswitch="yes" feedbackswitch="no"/>
+    <presentation_material>
+      <flow_mat>
+        <material label="page header">
+          <mattext d2l_2p0:isdisplayed="no" texttype="text/html"/>
+        </material>
+        <material label="page footer">
+          <mattext d2l_2p0:isdisplayed="no" texttype="text/html"/>
+        </material>
+      </flow_mat>
+    </presentation_material>
+    <assess_procextension>
+      <d2l_2p0:intro_message d2l_2p0:isdisplayed="yes" texttype="text/html">&lt;p&gt;&lt;img alt='Course Banner' src='./Web_Files/Images/smallBanner.jpg' width='100%' /&gt;&lt;/p&gt;&lt;p&gt;&lt;span style='font-size: 14pt;'&gt;This quiz should be completed during class.&lt;/p&gt;</d2l_2p0:intro_message>
+      <category>Participation</category>
+      <grade_item d2l_2p0:is_autoexport="yes" resource_code="grc-quiz_cl_23"/>
+      <d2l_2p0:disable_right_click>no</d2l_2p0:disable_right_click>
+      <d2l_2p0:disable_pager_access>no</d2l_2p0:disable_pager_access>
+      <is_active>yes</is_active>
+      <d2l_2p0:date_start/>
+      <d2l_2p0:date_end/>
+      <d2l_2p0:has_schedule_event>yes</d2l_2p0:has_schedule_event>
+      <d2l_2p0:is_attempt_Rldb>no</d2l_2p0:is_attempt_Rldb>
+      <d2l_2p0:is_subview_Rldb>no</d2l_2p0:is_subview_Rldb>
+      <d2l_2p0:time_limit>5</d2l_2p0:time_limit>
+      <d2l_2p0:show_clock>no</d2l_2p0:show_clock>
+      <d2l_2p0:enforce_time_limit/>
+      <d2l_2p0:grace_period>5</d2l_2p0:grace_period>
+      <d2l_2p0:late_limit>0</d2l_2p0:late_limit>
+      <d2l_2p0:attempts_allowed>2</d2l_2p0:attempts_allowed>
+      <d2l_2p0:attempt_restrictions/>
+      <d2l_2p0:mark_calculation_type>5</d2l_2p0:mark_calculation_type>
+      <d2l_2p0:is_forward_only>no</d2l_2p0:is_forward_only>
+    </assess_procextension>
+    <assessfeedback>
+      <rubric>
+        <flow_mat>
+          <material>
+            <mattext texttype="yes">&lt;p&gt;Your quiz has been submitted successfully.&lt;/p&gt;</mattext>
+          </material>
+        </flow_mat>
+      </rubric>
+      <d2l_2p0:duration>0</d2l_2p0:duration>
+      <d2l_2p0:response_display_type_id>2</d2l_2p0:response_display_type_id>
+      <d2l_2p0:show_correct_answers>yes</d2l_2p0:show_correct_answers>
+      <d2l_2p0:submission_restrictip>no</d2l_2p0:submission_restrictip>
+      <d2l_2p0:show_class_average>no</d2l_2p0:show_class_average>
+      <d2l_2p0:show_score_distribution>no</d2l_2p0:show_score_distribution>
+    </assessfeedback>
+    <section ident="CONTAINER_SECTION">
+      <section title="Attendance_Participation" d2l_2p0:page="1">
+        <sectionproc_extension>
+          <d2l_2p0:display_section_name>no</d2l_2p0:display_section_name>
+          <d2l_2p0:display_section_line>no</d2l_2p0:display_section_line>
+          <d2l_2p0:type_display_section>0</d2l_2p0:type_display_section>
+        </sectionproc_extension>
+        <itemref linkrefid="QUES_1426334_1578649" d2l_2p0:page="1">
+          <d2l_2p0:file href="questiondb.xml"/>
+          <d2l_2p0:points>4.000000000</d2l_2p0:points>
+          <d2l_2p0:difficulty>1</d2l_2p0:difficulty>
+          <d2l_2p0:isbonus>no</d2l_2p0:isbonus>
+          <d2l_2p0:ismandatory>no</d2l_2p0:ismandatory>
+        </itemref>
+      </section>
+    </section>
+  </assessment>
+</questestinterop>
+ 
