@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -290,7 +278,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 1
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -326,7 +314,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 2
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -356,7 +344,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 3
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -380,7 +368,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 4
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -603,7 +591,7 @@ Answer the following questions:
 <p><em>Click on an area below the curved line to shade/unshade the region. </em>Click and drag the red lines to adjust the <span class="math inline">\(z\)</span>-scores and obtain the area. <em>Type a <span class="math inline">\(z\)</span>-score into one of the bottom input boxes and hit “Enter” to get an area. </em>Type in an area and hit “Enter” to get a <span class="math inline">\(z\)</span>-score.</p>
 <br>
 <center>
-<div width="90%">
+<div>
 <!DOCTYPE html>
 <html>
 <head>
@@ -669,13 +657,13 @@ function cdfnorm (zScore)
 //http://read.pudn.com/downloads27/sourcecode/windows/control/85297/cSVM/src/ppnd16.f__.htm
 //We are not using this much precision, so we could probably shrink the code to something much faster....
 var cdfnorminv = function(areaToLeft) {
- var
-  d1 = 0.0,
-  d2 = 1.0,
+ var 
+  d1 = 0.0,  
+  d2 = 1.0, 
   d3 = 0.5,
-  d4 = 0.425,
+  d4 = 0.425, 
   d5 = 5.0,
-  d6 = 0.180625,
+  d6 = 0.180625, 
   d7 = 1.6;
 
  var arrayOfDouble1 = [ 3.387132872796367, 133.14166789178438, 1971.5909503065513, 13731.693765509461, 45921.95393154987, 67265.770927008707, 33430.575583588128, 2509.0809287301227];
@@ -697,7 +685,7 @@ var cdfnorminv = function(areaToLeft) {
   d10 = d8 * (((((((arrayOfDouble1[7] * d9 + arrayOfDouble1[6]) * d9 + arrayOfDouble1[5]) * d9 + arrayOfDouble1[4]) * d9 + arrayOfDouble1[3]) * d9 + arrayOfDouble1[2]) * d9 + arrayOfDouble1[1]) * d9 + arrayOfDouble1[0]) / (((((((arrayOfDouble2[7] * d9 + arrayOfDouble2[6]) * d9 + arrayOfDouble2[5]) * d9 + arrayOfDouble2[4]) * d9 + arrayOfDouble2[3]) * d9 + arrayOfDouble2[2]) * d9 + arrayOfDouble2[1]) * d9 + d2);
   return d10;
  }
-
+ 
  if (d8 < d1){
   d9 = areaToLeft;
  }
@@ -735,14 +723,14 @@ var cdfnorminv = function(areaToLeft) {
 </script>
 
 </head>
-<body id='b'
+<body id='b' 
    onmouseup="bodyMouseUp(event)"
 >
 <div id='d' >
-<canvas id='c'
-   onmousemove="canvasMouseMove(event)"
+<canvas id='c' 
+   onmousemove="canvasMouseMove(event)" 
    onmousedown="canvasMouseDown(event)"
-   onmouseup="canvasMouseUp(event)"
+   onmouseup="canvasMouseUp(event)" 
 ></canvas>
 <input type="text" id="input3" size="12" onchange="changedA()" onclick="this.select()"/>
 <div id="div1"> <span id="div1left">z-score</span> <input type="text" id="input1" size="4" onchange="changedZ1()" onclick="this.select()"/> <span id="div1right">z-score</span></div>
@@ -777,7 +765,7 @@ function setDefaults() {
  var params = parseURLParams(document.URL);
 
  var z=1; //The default starting value.
- var shadeL=1;
+ var shadeL=1; 
  var shadeM=0;
  var shadeR=1;
  var area="";
@@ -805,7 +793,7 @@ function setDefaults() {
 
 //  console.log (i, params[i]*1)
  }
-
+ 
  shadeLeft(shadeL);
  shadeMiddle(shadeM);
  shadeRight(shadeR);
@@ -813,14 +801,14 @@ function setDefaults() {
  setWidth(width);
  setHeight(height);
 
-//Set the width and height of the div and the canvas.
+//Set the width and height of the div and the canvas.  
  c.width = width+paddingLeft+paddingRight;
  c.height = height+paddingTop+paddingBot;
  d.width = width+paddingLeft+paddingRight;
  d.height = height+paddingTop+paddingBot;
 
 //Create the arrays used for Plotting
- setPlottingArrays();
+ setPlottingArrays();  
 //Add the banner on the top with the title and area.
  drawTopBanner();
  updateInputFieldsFromZ(z);
@@ -845,9 +833,9 @@ function makeStatic(bool){
   input2.disabled=true;
   input3.disabled=true;
   document.getElementById('b').onmouseup=null;
-  c.onmousemove=null;
+  c.onmousemove=null; 
   c.onmousedown=null;
-  c.onmouseup=null;
+  c.onmouseup=null; 
  }
 }
 
@@ -868,15 +856,15 @@ function setHeight(h){
  height=docHeight-paddingTop-paddingBot;
  c.height = docHeight;
  d.height = docHeight;
-
- inputOffSet = pYFromY(-20);
+ 
+ inputOffSet = pYFromY(-20); 
  div1.style.top=inputOffSet+"px";
  div2.style.top=inputOffSet+"px";
 }
 
 
-
-var
+ 
+var 
  showTitle = 1,
  paddingTop = 100,
  paddingBot = 50,
@@ -886,8 +874,8 @@ var
  docWidth=width+paddingLeft+paddingRight;
  height = 450,
  docHeight=width+paddingTop+paddingBot;
- d = document.getElementById('d'),
- c = document.getElementById('c'),
+ d = document.getElementById('d'), 
+ c = document.getElementById('c'), 
  ctx = c.getContext('2d'),
  xLeft= -1,
  xRight= 1,
@@ -902,7 +890,7 @@ var
  beyondRange=0;
 
 var
- xScale= width/8,
+ xScale= width/8, 
  xCenter= width/2,
  xMouseShift=.07*width/800;
 
@@ -920,8 +908,8 @@ function shadeRight(bool){
 }
 
 
-
-//These functions allow me to convert between the standard cartesian coordinates and the pixel coordinates.
+ 
+//These functions allow me to convert between the standard cartesian coordinates and the pixel coordinates.  
 //pX and pY are pixel coordinates, whereas x and y are Cartesian.
 //These could be removed to make things faster.
 function pXFromX(x) { return x*xScale+xCenter+paddingLeft };
@@ -957,15 +945,15 @@ function zFromArea (areaZ){
 };
 
 //This positions the div relatively, which is needed to set the position of the input boxes.
-//You have to put everything in a relatively placed div so that you can use the
-//attribute "position:absolute" to place the input boxes.
+//You have to put everything in a relatively placed div so that you can use the 
+//attribute "position:absolute" to place the input boxes.  
  d.style.position="relative";
  var input1 = document.getElementById('input1');
  var input2 = document.getElementById('input2');
  var input3 = document.getElementById('input3');
 
 //We need to make sure that the input boxes are positioned relative to the top left corner of the division. The position attribute "absolute" makes sure this occures.
- var inputOffSet = pYFromY(-20);
+ var inputOffSet = pYFromY(-20); 
  div1.style.position="absolute";
  div2.style.position="absolute";
 
@@ -996,8 +984,8 @@ function setPlottingArrays(){
   xValues= [];
   pxValues= [];
   pyValues= [];
-
- for (var i = 0; i < width; i++){
+ 
+ for (var i = 0; i < width; i++){ 
   px=i+paddingLeft;
   xValues.push( xFrompX(px) );
   yValues.push( yFromx(xFrompX(px) ) );
@@ -1149,7 +1137,7 @@ var updateInputFields = function(l,r,a){
  else if(a*1<.001){ input3.value = (a*1).toExponential(4);}
  else if ((a*1).toFixed(4)==1){
   if(useRightTail==0 || useLeftTail==0){input3.value=('>0.9999');}
-  else {input3.value=1;};
+  else {input3.value=1;}; 
  }
  else {input3.value=(a*1).toFixed(4);};
 
@@ -1178,7 +1166,7 @@ var updateInputFields = function(l,r,a){
 var showZScoreLabel = function(l,r)
 {
  if(r<1){
-
+  
  }
  else {
  }
@@ -1200,30 +1188,30 @@ var updateInputFieldsFromZ = function(z){
   if(z*1<0){ useMiddle = 1; midColor=myFill;whichBox=input1;}
   else{ useMiddle =0; midColor=myBlank;whichBox=input2;}
  }
-
+ 
  if(z*1<0){whichBox=input1;}
  else{whichBox=input2;}
  r=Math.abs(z);
  l=-r;
  area=areaFromZ(z);
  if(isNaN(r)){
-  updateInputFields(xLeft,xRight,input3.value);
+  updateInputFields(xLeft,xRight,input3.value); 
  }
  else{
   updateInputFields(l,r,area);
  }
 }
 
-var changedZ1 = function(){
- whichBox = input1;
+var changedZ1 = function(){ 
+ whichBox = input1; 
  if(input1.value.length == 0){ input1.value = -1*input2.value;}
- updateInputFieldsFromZ(input1.value);
+ updateInputFieldsFromZ(input1.value);  
  selectInputBox(whichBox);
 }
-var changedZ2 = function(){
- whichBox = input2;
+var changedZ2 = function(){ 
+ whichBox = input2; 
  if(input2.value.length == 0){ input2.value = -1*input1.value;}
- updateInputFieldsFromZ(input2.value);
+ updateInputFieldsFromZ(input2.value); 
  selectInputBox(whichBox);
 }
 var changedA = function(){ updateInputFieldsFromArea(input3.value); input3.select();}
@@ -1269,11 +1257,11 @@ var updateInputFieldsFromArea = function(az){
 }
 
 
-//The remaining functions deal with mouse events.
+//The remaining functions deal with mouse events. 
 //When you press down the mouse: If it's over the red bars, signal that you're moving them. Move them as you move the mouse until you get a mouse up.
 //When you let the mouse go up, unsignal.  That's basically it.
 //I think I can tackle this with 3 signals.  onmousedown, onmousemove, onmouseup.
-//I may add a tool tip later.
+//I may add a tool tip later. 
 
 var movingRedBars = false;
 
@@ -1301,10 +1289,10 @@ var canvasMouseMove=function (e)
 
  if(x-.07<xLeft+.035 && x-.07>xLeft-.035 && y>-20 && y< maxY+10) {
   document.body.style.cursor='col-resize';
- }
+ } 
  else if(x-.07<xRight+.035 && x-.07>xRight-.035 && y>-20 && y< maxY+10) {
   document.body.style.cursor='col-resize';
- }
+ } 
  else if (x-.07<4+.035 && x-.07>-4-.035 && y>-20 && y< maxY+10) {
   document.body.style.cursor='pointer';
  }
@@ -1325,11 +1313,11 @@ var canvasMouseDown=function (e)
  else if(x-.07<xLeft+.035 && x-.07>xLeft-.035) {
   movingRedBars=true;
   document.onselectstart = function(){ return false; }
- }
+ } 
  else if(x-.07<xRight+.035 && x-.07>xRight-.035) {
   movingRedBars=true;
   document.onselectstart = function(){ return false; }
- }
+ } 
  else if (x-.07<xLeft+.035 && x-.07>-4-.035) {
   if(useLeftTail==1){useLeftTail=0;leftColor=myBlank;}
   else if(useLeftTail==0){useLeftTail=1;leftColor=myFill;}
@@ -1764,6 +1752,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

@@ -177,7 +177,9 @@ Or download individual files:
 
 [PineBeetle.xlsx](./Data/PineBeetle.xlsx)                                                              
 
-[ProteinRequirement-Campbell.xlsx](./Data/ProteinRequirement-Campbell.xlsx)                            
+[ProteinRequirement-Campbell.xlsx](./Data/ProteinRequirement-Campbell.xlsx)              
+
+[Prozac.xlsx](./Data/Prozac.xlsx)
 
 [PTCtasting.xlsx](./Data/PTCtasting.xlsx)                                                              
 

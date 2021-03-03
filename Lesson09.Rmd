@@ -1351,7 +1351,7 @@ When a testimony is given, the truth is planted in the heart.  The testimony fro
 
 - The **$P$-value** is the probability of getting a test statistic at least as extreme as the one you got, assuming $H_0$ is true. A $P$-value is calculated by finding the area under the normal distribution curve that is more extreme (farther away from the mean) than the z-score. The alternative hypothesis tells us whether we look at both tails or only one.
 
-- The **level of significance ($\alpha$)** is the standard for determining whether or not the null hypothesis should be rejected. Typical values for $\alpha$ are $0.05$, $0.10$, and $0.01$. If the $P$-value is less than $\alpha$ we reject the null. If the $P$-value is not less than $\alpha$ we fail to reject the null.
+- The **level of significance ($\alpha$)** controls the probability of committing a Type I Error. It is the standard for determining whether or not the null hypothesis should be rejected. Typical values for $\alpha$ are $0.05$, $0.10$, and $0.01$. If the $P$-value is less than $\alpha$ we reject the null. If the $P$-value is not less than $\alpha$ we fail to reject the null.
 
 - A **Type I error** is committed when we reject a null hypothesis that is, in reality, true. A **Type II error** is committed when we fail to reject a null hypothesis that is, in reality, not true. The value of $\alpha$ is the probability of committing a Type I error.
 </div>
