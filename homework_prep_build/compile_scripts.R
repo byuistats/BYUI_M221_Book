@@ -4,10 +4,12 @@
 # 
 # # Installing pandoc
 # install.pandoc()
+library(reshape2)
 library(rmarkdown)
 library(tidyverse)
 library(tinytex)
 library(mosaic)
+
 
 #### functions for converstion #####
 names_table <- data.frame(
@@ -216,7 +218,7 @@ convert_M221(hw_files[20])
 # requires that your working directory setwd("homework_prep_build").
 R.utils::copyDirectory('current_files', '../hp', overwrite = TRUE) 
 
- 
+# rmarkdown::render_site("../") 
 
 # for bug on 10/7/2016 with not reporting numbers for problem 10.
 # convert_M221(prep_files[11])
