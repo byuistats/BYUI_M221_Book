@@ -1,0 +1,326 @@
+@import url('superstyle.css');
+
+/********************************************
+   DEFAULT BACKGROUND COLORS
+*********************************************/
+
+html {
+	background: -webkit-radial-gradient(ellipse, #7c4b5c 0%, #3D1A26 100%);
+	background: radial-gradient(ellipse, #7c4b5c 0%, #3D1A26 100%);
+	background-attachment: fixed;
+}
+
+/* Article */
+
+main > article, #main > #article {
+	padding: 20px;
+	color: #3c3c3c;
+	background-color: #f0f0f0;
+}
+
+/********************************************
+   MAIN HEADING FORMATTING
+*********************************************/
+
+main h1, main h2, main h3,
+main h4, main h5, main h6,
+#main h1, #main h2, #main h3,
+#main h4, #main h5, #main h6{
+	font-family: Rockwell;
+	font-weight: normal;
+}
+
+/* Heading 1 */
+
+main h1, #main h1 {
+	font-size: 32px;
+	color: #693d66;
+}
+
+main h1 + p, #main h1 + p {
+	padding-top: 20px;
+}
+
+/* Heading 2 */
+
+main h2, #main h2 {
+	font-size: 29px;
+	margin: 15px 0 10px;
+	color: #295575;
+}
+
+/* Heading 3 */
+
+main h3, #main h3 {
+	font-size: 26px;
+	margin: 12px 0 4px;
+	color: #445b47;
+}
+
+/* Heading 4 */
+
+main h4, #main h4 {
+	font-size: 23px;
+	margin: 10px 0 4px;
+	color: #295575;
+}
+
+/* Heading 5 */
+
+main h5, #main h5 {
+	font-size: 20px;
+	margin: 3px 0px 0px;
+	color: #445b47;
+}
+
+/********************************************
+SPLASH PAGE HEADING TEXT COLOR MODIFICATIONS
+*********************************************/
+
+/* Article colors */
+
+main.splash > article, #main.splash > #article {
+	color: #dedede;
+	background-color: #39232b;
+}
+
+/* Headings */
+
+main.splash h1, #main.splash h1 {
+	color: #cbab6f;
+}
+
+main.splash h2, #main.splash h2 {
+	color: #6db3b9;
+}
+
+main.splash h3, #main.splash h3 {
+	color: #a5bf86;
+}
+
+main.splash h4, #main.splash h4 {
+	color: #6db3b9;
+}
+
+main.splash h5, #main.splash h5 {
+	color: #a5bf86;
+}
+
+/********************************************
+    EXTRA COLOR OPTIONS - LINKS, TABLES, DATA, CODE
+*********************************************/
+
+/* Main Links */
+
+main a, #main a {
+	color: #00704b;
+	text-decoration: none;
+	border-bottom: 2px solid #00704b;
+}
+
+main a:hover, #main a:hover {
+	color: #8a5696;
+    border-bottom: 2px solid #8a5696;
+}
+
+main a:visited, #main a:visited {
+	color: #8a5696;
+    border-bottom: 2px solid #8a5696;
+}
+
+/* Main Page Footer */
+
+main footer, #main #footer {
+	text-align: center;
+	padding: 6px;
+	color: #d0d0d0;
+	background-color: #5c2f3e;
+	font-size: 13px;
+}
+
+/* Main Horizontal Rule */
+
+main hr, #main hr {
+	width: 100%;
+	height: 0px;
+	margin: 10px 0;
+	color: rgb(90, 90, 90);
+	background-color: rgb(90, 90, 90);
+	border-color: rgb(90, 90, 90);
+}
+
+/* Splash Links */
+
+main.splash a, #main.splash a {
+    color: #a5bf86;
+	border-bottom: 2px solid #a5bf86;
+}
+
+main.splash a:hover, #main.splash a:hover {
+	color: #c886e0;
+    border-bottom: 2px solid #c886e0;
+}
+
+main.splash a:visited, #main.splash a:visited {
+	color: #c886e0;
+    border-bottom: 2px solid #c886e0;
+}
+
+/* Splash Page Footer */
+
+main.splash footer, #main.splash #footer {
+	color: #c1c1c1;
+	background-color: #2e1a21;
+}
+
+/* Splash Horizontal Rule */
+
+main.splash hr, #main.splash hr {
+	color: #aaaaaa;
+	background-color: #aaaaaa;
+	border-color: #aaaaaa;
+}
+
+/* Tables */
+
+main table, #main table {
+	width: 100%;
+	font-size: 14px;
+	border-collapse: collapse;
+}
+
+main table th, #main table th {
+	padding: 8px;
+	color: white;
+	font-weight: normal;
+	background-color: rgb(100, 100, 100);
+	text-align: right;
+}
+
+main table tr:first-child th,
+#main table tr:first-child th {
+	padding: 6px;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	background-color: rgb(70, 70, 70);
+}
+
+main table td, #main table td {
+	padding: 8px;
+	color: #333;
+}
+
+main table tr:nth-child(odd) td,
+#main table tr:nth-child(odd) td {
+	background-color: rgb(210, 210, 210);
+}
+
+main table tr:nth-child(even) td,
+#main table tr:nth-child(even) td {
+	background-color: rgb(220, 220, 220);
+}
+
+/* Layout Tools */
+
+blockquote {
+	margin: 10px 20px;
+	border: 1px solid rgba(90, 90, 90. 0.8);
+	border-radius: 5px;
+	padding: 6px;
+	font-size: 12px;
+}
+
+/* List Container */
+dl {
+	margin: 10px 20px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+/* List Headings */
+dl dt {
+	padding: 8px;
+	font-size: 18px;
+	color: rgb(230, 230, 230);
+	background: rgb(100, 100, 100);
+	border-bottom: 2px solid rgb(40, 140, 180);
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* List Heading Arrows */
+dl dt:after {
+	content: "\276f";
+	color: rgb(230, 230, 230);
+	float: right;
+	font-size: 22px;
+	padding: 0;
+	margin: 0;
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+/* List Content */
+dl dd {
+	background: rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	height: 0;
+	padding: 0px;
+}
+
+/* Open List Content */
+dl dt.open + dd {
+	height: auto;
+	padding: 8px;
+}
+
+/* Rotate Arrow */
+dl dt.open:after {
+	margin-top: -2px;
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+}
+
+/* Coding Tools */
+
+div.code, pre {
+	border: 3px solid rgb(200, 200, 200);
+	padding: 4px 8px;
+	background: rgb(70, 70, 70);
+	margin: 10px 40px;
+	line-height: 130%;
+	text-wrap: suppress;
+	color: #fff;
+	font-size: 13px;
+	font-family: "Consolas", "Courier New", "Courier";
+}
+
+code {
+	font-size: 13px;
+	margin: 0;
+	font-family: "Consolas", "Courier New", "Courier";
+}
+
+/*Overview Page */
+
+#overview {
+    float: right; 
+    margin: auto;
+    width: 30%;
+    background-color: #808080;
+    padding-top: 7px;
+    color: #e3e3e3;
+    vertical-align: middle;
+    
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+#overview>p{
+    text-align: center;
+}

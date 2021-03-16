@@ -1,0 +1,1817 @@
+<?xml version="1.0"?>
+<grades>
+  <configuration>
+    <auto_update_final_grade>1</auto_update_final_grade>
+    <grading_system>1</grading_system>
+    <include_empty_grades_in_final>false</include_empty_grades_in_final>
+    <show_user_name>0</show_user_name>
+    <show_user_email>0</show_user_email>
+  </configuration>
+  <categories>
+    <category identifier="gb-E">
+      <name>Exams</name>
+      <short_name>E</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <is_active>true</is_active>
+      <scoring>
+        <weight>50</weight>
+        <can_exceed_weight>false</can_exceed_weight>
+        <is_auto_pointed>false</is_auto_pointed>
+        <high_non_bonus_drop>0</high_non_bonus_drop>
+        <low_non_bonus_drop>0</low_non_bonus_drop>
+      </scoring>
+    </category>
+    <category identifier="gb-HW">
+      <name>Homework</name>
+      <short_name>HW</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <is_active>true</is_active>
+      <scoring>
+        <weight>15</weight>
+        <can_exceed_weight>false</can_exceed_weight>
+        <is_auto_pointed>false</is_auto_pointed>
+        <high_non_bonus_drop>0</high_non_bonus_drop>
+        <low_non_bonus_drop>0</low_non_bonus_drop>
+      </scoring>
+    </category>
+    <category identifier="gb-PR">
+      <name>Preparation</name>
+      <short_name>PR</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <is_active>true</is_active>
+      <scoring>
+        <weight>10</weight>
+        <can_exceed_weight>false</can_exceed_weight>
+        <is_auto_pointed>false</is_auto_pointed>
+        <high_non_bonus_drop>0</high_non_bonus_drop>
+        <low_non_bonus_drop>0</low_non_bonus_drop>
+      </scoring>
+    </category>
+    <category identifier="gb-FP">
+      <name>Final Project</name>
+      <short_name>FP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <is_active>true</is_active>
+      <scoring>
+        <weight>10</weight>
+        <can_exceed_weight>false</can_exceed_weight>
+        <is_auto_pointed>false</is_auto_pointed>
+        <high_non_bonus_drop>0</high_non_bonus_drop>
+        <low_non_bonus_drop>0</low_non_bonus_drop>
+      </scoring>
+    </category>
+    <category identifier="gb-PP">
+      <name>Preparation Projects</name>
+      <short_name>PrepProject</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <is_active>true</is_active>
+      <scoring>
+        <weight>10</weight>
+        <can_exceed_weight>false</can_exceed_weight>
+        <is_auto_pointed>false</is_auto_pointed>
+        <high_non_bonus_drop>0</high_non_bonus_drop>
+        <low_non_bonus_drop>0</low_non_bonus_drop>
+      </scoring>
+    </category>
+    <category identifier="gb-CP">
+      <name>Participation</name>
+      <short_name>ClassPar</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <is_active>true</is_active>
+      <scoring>
+        <weight>5</weight>
+        <can_exceed_weight>false</can_exceed_weight>
+        <is_auto_pointed>false</is_auto_pointed>
+        <high_non_bonus_drop>0</high_non_bonus_drop>
+        <low_non_bonus_drop>0</low_non_bonus_drop>
+      </scoring>
+    </category>
+  </categories>
+  <items>
+    <item resource_code="grc-quiz_cl_01">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 01: Class Meeting Quiz</name>
+      <short_name>L01CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 01: Homework Upload</name>
+      <short_name>L01HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 01: Homework Quiz</name>
+      <short_name>L01HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cs_01">
+      <category_id>gb-HW</category_id>
+      <name>Course Survey: Start of Semester</name>
+      <short_name>CS1</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_ks_01">
+      <category_id>gb-HW</category_id>
+      <name>Knowlege Survey: Start of Semester</name>
+      <short_name>KS1</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_02">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 02: Group Meeting Quiz</name>
+      <short_name>L02GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_02">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 02: Class Meeting Quiz</name>
+      <short_name>L02CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_02">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 02: Homework Upload</name>
+      <short_name>L02HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 02: Homework Quiz</name>
+      <short_name>L02HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_03">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 03: Group Meeting Quiz</name>
+      <short_name>L03GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_03">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 03: Class Meeting Quiz</name>
+      <short_name>L03CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_03">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 03: Homework Upload</name>
+      <short_name>L03HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 03: Homework Quiz</name>
+      <short_name>L03HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_04">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 04: Group Meeting Quiz</name>
+      <short_name>L04GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_04">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 04: Class Meeting Quiz</name>
+      <short_name>L04CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_04">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 04: Homework Upload</name>
+      <short_name>L04HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 04: Homework Quiz</name>
+      <short_name>L04HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_05">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 05: Group Meeting Quiz</name>
+      <short_name>L05GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_05">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 05: Class Meeting Quiz</name>
+      <short_name>L05CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_05">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 05: Homework Upload</name>
+      <short_name>L05HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 05: Homework Quiz</name>
+      <short_name>L05HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_06">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 06: Group Meeting Quiz</name>
+      <short_name>L06GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_06">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 06: Class Meeting Quiz</name>
+      <short_name>L06CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_06">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 06: Homework Upload</name>
+      <short_name>L06HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 06: Homework Quiz</name>
+      <short_name>L06HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_07">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 07: Group Meeting Quiz</name>
+      <short_name>L07GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_07">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 07: Class Meeting Quiz</name>
+      <short_name>L07CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_07">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 07: Homework Upload</name>
+      <short_name>L07HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 07: Homework Quiz</name>
+      <short_name>L07HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_08">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 08: Group Meeting Quiz</name>
+      <short_name>L08GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_08">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 08: Class Meeting Quiz</name>
+      <short_name>L08CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_ex_01">
+      <category_id>gb-E</category_id>
+      <name>The Unit I Exam</name>
+      <short_name>E1</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>100</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_09">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 09: Group Meeting Quiz</name>
+      <short_name>L09GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_09">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 09: Class Meeting Quiz</name>
+      <short_name>L09CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_09">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 09: Homework Upload</name>
+      <short_name>L09HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 09: Homework Quiz</name>
+      <short_name>L09HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_10">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 10: Group Meeting Quiz</name>
+      <short_name>L10GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_10">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 10: Class Meeting Quiz</name>
+      <short_name>L10CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_10">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 10: Homework Upload</name>
+      <short_name>L10HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 10: Homework Quiz</name>
+      <short_name>L10HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_11">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 11: Group Meeting Quiz</name>
+      <short_name>L11GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_11">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 11: Class Meeting Quiz</name>
+      <short_name>L11CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_11">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 11: Homework Upload</name>
+      <short_name>L11HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 11: Homework Quiz</name>
+      <short_name>L11HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_12">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 12: Group Meeting Quiz</name>
+      <short_name>L12GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_12">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 12: Class Meeting Quiz</name>
+      <short_name>L12CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_12">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 12: Homework Upload</name>
+      <short_name>L12HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 12: Homework Quiz</name>
+      <short_name>L12HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_13">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 13: Group Meeting Quiz</name>
+      <short_name>L13GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_13">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 13: Class Meeting Quiz</name>
+      <short_name>L13CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_13">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 13: Homework Upload</name>
+      <short_name>L13HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 13: Homework Quiz</name>
+      <short_name>L13HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_14">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 14: Group Meeting Quiz</name>
+      <short_name>L14GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_14">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 14: Class Meeting Quiz</name>
+      <short_name>L14CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_14">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 14: Homework Upload</name>
+      <short_name>L14HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 14: Homework Quiz</name>
+      <short_name>L14HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_15">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 15: Group Meeting Quiz</name>
+      <short_name>L15GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_15">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 15: Class Meeting Quiz</name>
+      <short_name>L15CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_ex_02">
+      <category_id>gb-E</category_id>
+      <name>The Unit II Exam</name>
+      <short_name>E2</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>100</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_16">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 16: Group Meeting Quiz</name>
+      <short_name>L16GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_16">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 16: Class Meeting Quiz</name>
+      <short_name>L16CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_16">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 16: Homework Upload</name>
+      <short_name>L16HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 16: Homework Quiz</name>
+      <short_name>L16HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_17">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 17: Group Meeting Quiz</name>
+      <short_name>L17GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_17">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 17: Class Meeting Quiz</name>
+      <short_name>L17CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_17">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 17: Homework Upload</name>
+      <short_name>L17HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 17: Homework Quiz</name>
+      <short_name>L17HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_18">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 18: Group Meeting Quiz</name>
+      <short_name>L18GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_18">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 18: Class Meeting Quiz</name>
+      <short_name>L18CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_18">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 18: Homework Upload</name>
+      <short_name>L18HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 18: Homework Quiz</name>
+      <short_name>L18HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_19">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 19: Group Meeting Quiz</name>
+      <short_name>L19GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_19">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 19: Class Meeting Quiz</name>
+      <short_name>L19CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_19">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 19: Homework Upload</name>
+      <short_name>L19HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 19: Homework Quiz</name>
+      <short_name>L19HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_20">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 20: Group Meeting Quiz</name>
+      <short_name>L20GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_20">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 20: Class Meeting Quiz</name>
+      <short_name>L20CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_ex_03">
+      <category_id>gb-E</category_id>
+      <name>The Unit III Exam</name>
+      <short_name>E3</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>100</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_21">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 21: Group Meeting Quiz</name>
+      <short_name>L21GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_21">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 21: Class Meeting Quiz</name>
+      <short_name>L21CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_21">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 21: Homework Upload</name>
+      <short_name>L21HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 21: Homework Quiz</name>
+      <short_name>L21HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_22">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 22: Group Meeting Quiz</name>
+      <short_name>L22GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_22">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 22: Class Meeting Quiz</name>
+      <short_name>L22CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_22">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 22: Homework Upload</name>
+      <short_name>L22HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 22: Homework Quiz</name>
+      <short_name>L22HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_23">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 23: Group Meeting Quiz</name>
+      <short_name>L23GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_23">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 23: Class Meeting Quiz</name>
+      <short_name>L23CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_hw_23">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 23: Homework Upload</name>
+      <short_name>L23HU</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_hw_01">
+      <category_id>gb-HW</category_id>
+      <name>Lesson 23: Homework Quiz</name>
+      <short_name>L23HQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_gr_24">
+      <category_id>gb-PR</category_id>
+      <name>Lesson 24: Group Meeting Quiz</name>
+      <short_name>L24GQ</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cl_24">
+      <category_id>gb-CP</category_id>
+      <name>Lesson 24: Class Meeting Quiz</name>
+      <short_name>L24CP</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>4</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_ex_04">
+      <category_id>gb-E</category_id>
+      <name>The Unit IV Exam</name>
+      <short_name>E4</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>125</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_cs_02">
+      <category_id>gb-HW</category_id>
+      <name>Course Survey: End of Semester</name>
+      <short_name>CS2</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-quiz_ks_02">
+      <category_id>gb-HW</category_id>
+      <name>Knowledge Survey: End of Semester</name>
+      <short_name>KS2</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-rqu">
+      <category_id>gb-FP</category_id>
+      <name>Research Question Upload</name>
+      <short_name>rq</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>5</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-ds1u">
+      <category_id>gb-FP</category_id>
+      <name>Design Study (Part I) Upload</name>
+      <short_name>ds1u</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>5</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-ds2u">
+      <category_id>gb-FP</category_id>
+      <name>Design Study (Part II) Upload</name>
+      <short_name>ds2u</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>5</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-cdu">
+      <category_id>gb-FP</category_id>
+      <name>Collect Data Upload</name>
+      <short_name>cdu</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>5</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-mi1u">
+      <category_id>gb-FP</category_id>
+      <name>Make Inferences (Part I) Upload</name>
+      <short_name>mi1u</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-mi2u">
+      <category_id>gb-FP</category_id>
+      <name>Make Inferences (Part II) Upload</name>
+      <short_name>mi2u</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>40</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-drop_teval">
+      <category_id>gb-FP</category_id>
+      <name>Team Evaluation Upload</name>
+      <short_name>TEVAL</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-DesignUp">
+      <category_id>gb-PP</category_id>
+      <name>Design Study Presentation Upload</name>
+      <short_name>DesignUp</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-NormalMeanUp">
+      <category_id>gb-PP</category_id>
+      <name>Quantitative Mean Upload</name>
+      <short_name>NormalMeanUp</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>15</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-ProportionsUp">
+      <category_id>gb-PP</category_id>
+      <name>Proportions Presentation Upload</name>
+      <short_name>ProportionsUp</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>5</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-ChiSquareUp">
+      <category_id>gb-PP</category_id>
+      <name>ChiSquare Presentation Upload</name>
+      <short_name>ChiSquareUp</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>10</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+    <item resource_code="grc-RegressionUp">
+      <category_id>gb-PP</category_id>
+      <name>Regression Presentation Upload</name>
+      <short_name>RegressionUp</short_name>
+      <show_average>false</show_average>
+      <show_distribution>false</show_distribution>
+      <description text_type="text/html" is_displayed="false"/>
+      <type_id>1</type_id>
+      <is_active>true</is_active>
+      <scoring>
+        <can_exceed_weight>false</can_exceed_weight>
+        <out_of>20</out_of>
+        <is_bonus>false</is_bonus>
+        <exclude_from_final_grade_calc>false</exclude_from_final_grade_calc>
+      </scoring>
+    </item>
+  </items>
+</grades>
+ 

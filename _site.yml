@@ -1,5 +1,6 @@
 name: "Math 221-Introductory Statistics"
 output_dir: 'docs'
+exclude: ['homework_prep_build']
 navbar:
   title: "Math 221"
   left:

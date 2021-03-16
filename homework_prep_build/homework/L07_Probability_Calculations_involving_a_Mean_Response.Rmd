@@ -1,0 +1,210 @@
+---
+title: 'Lesson 7: Probability Calculations Involving a Mean Response'
+author: "Homework"
+output:
+  pdf_document:
+    toc: no
+  html_document:
+    css: buttondown.css
+    toc: no
+  word_document:
+    toc: no
+params:
+  key: no
+  plinks: no
+  keyname: "blank"
+  docname: "blank"
+md_document:
+  variant: markdown_phpextra
+---
+
+```{r,results='asis',echo=FALSE}
+if(params$key==TRUE){
+  if(params$plinks==TRUE) cat("* [Word Document](",paste(params$keyname,"docx",sep="."),")\n")
+  if(params$plinks==TRUE) cat("* [PDF Document](",paste(params$keyname,"pdf",sep="."),")\n")
+  cat("<!--")
+  cat("\n")
+} 
+if(params$key!=TRUE){
+  if(params$plinks==TRUE) cat("* [Word Document](",paste(params$docname,"docx",sep="."),")\n")
+  if(params$plinks==TRUE) cat("* [PDF Document](",paste(params$docname,"pdf",sep="."),")\n")
+  cat("\n")
+}
+```
+
+**Instructions:  You are encouraged to collaborate with other students on the homework, but it is important that you do your own work.  Before working with someone else on the assignment, you should attempt each problem on your own.**  
+
+
+
+## Problems
+```{r,include=FALSE}
+
+library(pander)
+source("../scripts/221_Interactive_Functions.R")
+panderOptions('keep.line.breaks',TRUE)
+
+```
+
+
+1.	What is meant by the term "distribution of sample means"?  Review Lesson 6 for the definition.  Write a few sentences to explain this concept in your own words.
+
+
+```{r, echo=FALSE}
+mean1 = 529
+sd1 = 113
+x1 = 550
+lower = FALSE
+n1= 30
+z1_2 = zScore(x1,mean1,sd1,1)
+p1_3 = pnorm(z1_2,lower.tail = FALSE)
+sdDist1 = sd1/sqrt(n1)
+
+z1_7 = zScore(x1,mean1,sd1,n1)
+p1_8 = pnorm(z1_7,lower.tail = FALSE)
+```
+
+The Graduate Management Admission Test (GMAT) is used as an admission criterion in many masters of business administration (MBA) programs. The scores on the GMAT are normally distributed with a mean of `r mean1` and a standard deviation of `r sd1`.  The minimum GMAT score required for admission to the MAcc program in the School of Accountancy and Information Systems at BYU is `r x1`.  Use this information to answer questions 2 through 8.
+
+2.	Find the z-score corresponding to a GMAT score of `r x1`. 
+
+3.	What is the probability that a randomly selected student will score `r abovebelow(lower)` `r x1` on the GMAT?
+
+Consider a simple random sample (SRS) of n = `r n1` students taking the GMAT.
+
+4.	What is the mean of the distribution of sample means scores for all such samples? 
+
+5.	What is the standard deviation of the distribution of sample means scores for all such samples? 
+
+6.	What is the shape of the distribution of sample means scores for all such samples?
+
+7.	Find the z-score corresponding to a sample mean GMAT score for n=`r n1` students of `r x1`.
+
+8.	What is the probability that the sample mean GMAT score for a simple random sample of `r n1` students will be `r abovebelow(lower)` `r x1`? 
+
+```{r, echo=FALSE}
+mean2 = 3.5
+sd2 = 0.7
+x2 = 3.3
+lower2 = TRUE
+n2= 81
+sdDist2 = sd2/sqrt(n2)
+p2 = pnorm(zScore(x2,mean2,sd2,n2),lower.tail = TRUE)
+```
+
+Suppose the mean GPA of BYU-Idaho students is `r mean2` and the standard deviation is `r sd2`.  It is well known that this distribution is left-skewed.  Use this information to answer questions 9 and 10.
+
+9.	If you take a random sample of `r n2` BYU-Idaho students, what is the distribution of sample means of these GPA's?  Give the shape, the mean, and the standard deviation.
+
+10.	What is the probability that the mean GPA for `r n2` randomly selected BYU-Idaho students will be `r abovebelow(lower2,TRUE)` `r x2`?  
+
+```{r, echo=FALSE}
+mean3 = 85
+sd3 = 21.25
+x3 = 95
+lower3 = FALSE
+n3= 10
+
+p3_11 = pnorm(zScore(x3,mean3,sd3,1),lower.tail = FALSE)
+p3_12 = pnorm(zScore(x3,mean3,sd3,n3),lower.tail = FALSE)
+```
+
+The most famous geyser in the world, Old Faithful in Yellowstone National Park, has a mean time between eruptions of `r mean3` minutes.  The interval of time between eruptions is normally distributed with a standard deviation of `r sd3` minutes.  Use this information to answer questions 11 and 12. 
+
+11.	What is the probability that a randomly selected time interval between eruptions is `r abovebelow(lower3,TRUE)` `r x3` minutes?
+
+12.	Suppose a simple random sample (SRS) of `r n3` time intervals between eruptions was measured.  What is the probability that a random sample of `r n3` time intervals between eruptions has a mean longer than `r x3` minutes?
+
+```{r, echo=FALSE}
+mean4 = 129
+sd4 = 0.8
+x4 = 128
+lower4 = TRUE
+n4= 8
+
+z4_13 = zScore(x4,mean4,sd4,1)
+p4_14 = pnorm(z4_13,lower.tail = TRUE)
+z4_15 = zScore(x4,mean4,sd4,n4)
+p4_16 = pnorm(z4_15,lower.tail = TRUE)
+```
+
+The label on a one gallon jug of milk states that the volume of milk is `r x4` fluid ounces (fl.oz.)  Federal law mandates that the jug must contain no less than the stated volume.  The actual amount of milk in the jugs is normally distributed with mean $\mu =$ `r mean4` fl. Oz. and standard deviation $\sigma =$ `r sd4` fl. Oz..  Use this information to answer questions 13 through 16.  
+
+13.	Find the z-score corresponding to a jug containing `r x4` fl. Oz. of milk.
+
+14.	What is the probability that a randomly selected jug will contain `r abovebelow(lower4,TRUE)` `r x4` fl. Oz. of milk?  
+
+15.	Each shift, `r tolower(numberText(n4))` jugs of milk are randomly selected for thorough testing.  The products are tested for filling volume, temperature, contamination, fat content, packaging defects, label placement, etc.  Find the z-score corresponding to a sample mean volume for `r tolower(numberText(n4))` jugs of `r x4` fl. Oz.
+
+16.	What is the probability that the sample mean volume for `r tolower(numberText(n4))` jugs is `r abovebelow(lower4)` `r x4` fl. Oz.?  (Give your answer accurate to 4 decimal places.)  
+
+17.	Compare the z-score and probability from questions 13 and 14 to the z-score and probability from questions 15 and 16.  What happens to the probability when a z-score is further away from the center of a normal distribution?  Why is this happening?
+
+
+```{r,include=FALSE}
+if(params$key==TRUE){
+
+options(scipen=5)
+
+    Solution01 =  data.frame(Part="-",Solution="There are many possible sample means that could be obtained from a population. For example, if you draw a simple random sample of size 100 you will get a sample mean for that sample. However, if you drew a different random sample of size 100, you would get a different sample mean. Many different samples of size 100 could be drawn from a population and each of these samples will have its own sample mean. All of these possible sample means make up the sampling distribution.")
+    
+    Solution02 = data.frame(Part="-",Solution=paste("z=",round(z1_2,3),sep=""))
+    
+    Solution03 = data.frame(Part="-",Solution=round(p1_3,3))
+    
+    Solution04 = data.frame(Part="-",Solution=paste("Mean = ",mean1,sep=""))
+    
+    Solution05 = data.frame(Part="-",Solution=paste("Standard Deviation = ",round(sdDist1,3),sep=""))
+    
+    Solution06 = data.frame(Part="-",Solution="Normal")
+    
+    Solution07 = data.frame(Part="-",Solution=paste("z = ",round(z1_7,3),sep=""))
+    
+    Solution08 = data.frame(Part="-",Solution=round(p1_8,3))
+    
+    Solution09 = data.frame(Part="-",Solution=paste("Normal, with mean of ", mean2, " and standard deviation of ", round(sdDist2,3),sep=""))
+    
+    Solution10 = data.frame(Part="-",Solution=round(p2,3))
+    
+    Solution11 = data.frame(Part="-",Solution=round(p3_11,3))
+
+    Solution12 = data.frame(Part="-",Solution=round(p3_12,3))
+
+    Solution13 = data.frame(Part="-",Solution=paste("z = ",round(z4_13,3),sep=""))
+    
+    Solution14 = data.frame(Part="-",Solution=round(p4_14,3))
+
+    Solution15= data.frame(Part="-", Solution=paste("z = ",round(z4_15,3),sep=""))
+    
+    Solution16 = data.frame(Part="-",Solution=round(p4_16,4)) #round to 4 digits
+    
+    Solution17 = data.frame(Part="-",Solution="Probability shrinks as the z-score moves further away from the mean. This is happening because we are shading in the applet only to the left of the z-score since the problems ask for the probability of an event being 'less than'. Therefore, as our z-score gets further away from the center, the smaller the probability will be on the left tail.")
+} # end params == TRUE.  We use this so it doesn't have to run for non answer key path.
+
+```
+
+```{r,echo=FALSE,results='asis'}
+if(params$key==TRUE) cat("-->")  # This is the add to drop out the questions
+  if(params$key==TRUE) cat("\n\n## Solutions\n\n---")
+      if(params$key==TRUE) cat("\n\n")
+```
+
+
+
+
+```{r,echo=FALSE,results='asis'}
+if(params$key==TRUE){
+library(pander)
+    all_solutions = sort(ls(pattern="Solution"))
+    key_list = NULL
+    for (i in 1:length(all_solutions)){
+      temp = get(all_solutions[i])
+      temp$Solution = as.character(temp$Solution)
+      key_list = rbind(key_list,data.frame(Problem=i,temp))
+    }
+    
+      pander(key_list,split.cell = 80, split.table = Inf,justify = c( 'center', 'left',"left"))
+} # end params == TRUE.  We use this so it doesn't have to run for non answer key path.
+
+```
+
+

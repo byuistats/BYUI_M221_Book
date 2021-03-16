@@ -1,0 +1,190 @@
+@import url('fonts.css');
+
+/*EQUELLA LINK https://content.byui.edu/items/8e326609-9951-442a-a2ee-b201f78bcf42/1/*/
+
+/*CSS FILE LINK https://content.byui.edu/file/8e326609-9951-442a-a2ee-b201f78bcf42/1/superstyle.css*/
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+@media print {
+	main *, #main * {
+		font-family: sans-serif !important;
+	}
+}
+
+html {
+	height: 100%;
+	background: black;
+}
+
+header img, #header img {
+	width: 100%;
+    display: block;
+}
+
+
+/* Fixes for BrightSpace */
+
+body > p {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+iframe {
+    display: block;
+    height: auto;
+}
+
+/* End of fixes */
+
+/********************************************
+   MAIN DEFAULT FORMATTING
+*********************************************/
+
+main, #main {
+	width: 100%;
+	max-width: 950px;
+	margin: 0 auto;
+	font-size: 16px !important;
+	font-family: CenturyGothic, "Helvetica Neue", Arial, Helvetica;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 1);
+}
+
+main.hoverBanner, #main.hoverBanner {
+	box-shadow: none;
+}
+
+main.hoverBanner header, #main.hoverBanner #header {
+	padding: 20px 0;
+}
+
+main.hoverBanner > article, #main.hoverBanner > #article {
+	box-shadow: 0 0 12px rgba(0, 0, 0, 1);
+}
+
+main > article:after, #main > #article:after {
+	content: " ";
+	clear: both;
+	height: 0px;
+	display: block;
+	opacity: 0;
+}
+
+main > article, #main > #article {
+	padding: 20px;
+}
+
+/* PARAGRAPHS / LISTS */
+
+main p, #main p {
+    margin-bottom: 10px;
+	line-height: 22px;
+}
+
+main ol, main ul,
+#main ol, #main ul {
+	margin-left: 30px;
+	margin-bottom: 10px;
+    list-style-position: inside; 
+}
+
+main ul li, #main ul li {
+	list-style-type: square;
+	text-indent: -1.05em;
+    padding-left: 1.05em;
+    list-style-position: inside; 
+    
+    position: relative;
+    left: 1em;
+    padding-right: 1em; 
+}
+
+main ul li ul li, #main ul li ul li{
+	list-style-type: circle;
+}
+
+main li, #main li {
+	padding-bottom: 6px;
+}
+
+ul li:nth-child(n+1):nth-child(-n+9) { 
+	text-indent: -1.05em;
+    padding-left: 1.05em;
+    
+    position: relative;
+    left: 1em;
+    padding-right: 1em; 
+	}
+
+ol li:nth-child(n+1):nth-child(-n+9) { 
+	text-indent: -1.05em;
+    padding-left: 1.05em;
+    
+    position: relative;
+    left: 1em;
+    padding-right: 1em; 
+	}
+
+ol li:nth-child(n+10):nth-child(-n+100) { 
+	text-indent: -1.65em;
+    padding-left: 1.65em;
+    
+    position: relative;
+    left: 1em;
+    padding-right: 1em; 
+	}
+	
+main ol li ol li, #main ol li ol li{
+	list-style-type: lower-alpha;
+}
+
+/* IMAGES / FLOATING */
+
+main .left, #main .left {
+	float: left;
+	display: block;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+main .right, #main .right {
+	float: right;
+	display: block;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+main .noFloat:before, #main .noFloat:before {
+	content: " ";
+	display: block;
+	clear: both;
+	opacity: 0;
+	height: 0;
+}
+
+/* SIZING */
+
+main .full, #main .full {
+	width: 100%;
+}
+
+main .half, #main .half {
+	max-width: 50%;
+}
+
+main .quarter, #main .quarter {
+	max-width: 25%;
+}
+
+/*Hanging indent*/
+
+.hangingIndent {
+    padding-left: 22px;
+    text-indent: -22px;
+}
