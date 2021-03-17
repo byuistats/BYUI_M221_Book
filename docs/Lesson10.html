@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -290,7 +278,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 1
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -326,7 +314,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 2
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -356,7 +344,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 3
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -380,7 +368,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 4
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -606,7 +594,7 @@ Variance
 </center>
 -->
 <p>The statistics above are called <strong>point estimators</strong> because they are just one number (one point on a number line) that is used to estimate a parameter. Parameters are generally unknown values. Think about the mean. If <span class="math inline">\(\mu\)</span> is unknown, how do we know if <span class="math inline">\(\bar x\)</span> is close to it?</p>
-<p>The short answer is that we will never know <em>for sure</em> if <span class="math inline">\(\bar x\)</span> is close to <span class="math inline">\(\mu\)</span>. This does not mean that we are helpless. The laws of probability and the normal distribution provide a way for us to create a range of plausible values for a parameter (e.g. <span class="math inline">\(\mu\)</span>) based on a statistic (e.g. <span class="math inline">\(\bar x\)</span>).</p>
+<p>The short answer is that we will never know <em>for sure</em> if <span class="math inline">\(\bar x\)</span> is close to <span class="math inline">\(\mu\)</span>. This does not mean that we are helpless. The laws of probability and the normal distribution provide a way for us to create a range of plausible values for a parameter (e.g. <span class="math inline">\(\mu\)</span>) based on a statistic (e.g. <span class="math inline">\(\bar x\)</span>).</p>
 </div>
 <div id="interval-estimators" class="section level3">
 <h3>Interval Estimators</h3>
@@ -709,10 +697,12 @@ Answer the following question:
 <a href="javascript:showhide('hint')"><span style="font-size:8pt;">Click here for a hint</span></a>
 <div id="hint" style="display:none;">
 <ul>
-<li>To find the value of <span class="math inline">\(z^*\)</span>, given a specific confidence level, do the following:</li>
+<li>To find the value of <span class="math inline">\(z^*\)</span>, given a specific confidence level, do the following:
+<ul>
 <li>*Open the applet at <a href="http://statistics.byuimath.com/index.php?title=Normal_Probability_Applet" target="_blank">Normal Probability Applet</a></li>
 <li>Shade the area between the two red lines (the middle portion of the graph) only and enter the decimal value for the desired percentage (e.g. 0.95 for 95%) in the <em>Area</em> box.</li>
 <li>The value of <span class="math inline">\(z^*\)</span> will be displayed below. Two numbers will be given along the horizontal axis. The only difference in these numbers is their sign: one is positive and one is negative. The positive value is the desired <span class="math inline">\(z^*\)</span>.</li>
+</ul></li>
 </ul>
 </div>
 <p><br></p>
@@ -1212,7 +1202,7 @@ n &amp;= \left( \frac{z^*\sigma}{m} \right)^2 \\
 <h3>Example: Grade Inflation</h3>
 <p>The administration at BYU-Idaho is concerned about the possibility of grade inflation in their courses. Grades in a course are coded on a scale from 0 to 4, as given in the following table:</p>
 <center>
-<table style="width:85%;">
+<table style="width:89%;">
 <colgroup>
 <col width="5%" />
 <col width="8%" />
@@ -1225,7 +1215,7 @@ n &amp;= \left( \frac{z^*\sigma}{m} \right)^2 \\
 <col width="8%" />
 <col width="5%" />
 <col width="8%" />
-<col width="4%" />
+<col width="8%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1374,7 +1364,7 @@ Remember…
 <ul>
 <li><p>The <strong>margin of error</strong> gives an estimate of the variability of responses. It is calculated as <span class="math inline">\(\displaystyle{m=z^*\frac{\sigma}{\sqrt{n}}}\)</span> where <span class="math inline">\(z^*\)</span> represents a calculated z-score corresponding to a particular confidence level.</p></li>
 <li><p>A <strong>confidence interval</strong> is an interval estimator used to give a range of plausible values for a parameter. The width of a confidence interval depends on the chosen confidence level (and its corresponding value of <span class="math inline">\(z^*\)</span>) as well as the sample size (<span class="math inline">\(n\)</span>). This is the equation for calculating confidence intervals: <span class="math display">\[\displaystyle{\left(\bar x-z^*\frac{\sigma}{\sqrt{n}},~\bar x+z^*\frac{\sigma}{\sqrt{n}}\right)}\]</span></p></li>
-<li>The <strong>sample size formula</strong> allows us to estimate the number of observations required to obtain a specific margin of error. <span class="math inline">\(\displaystyle{n=\left(\frac{z^*\sigma}{m}\right)^2}\)</span></li>
+<li><p>The <strong>sample size formula</strong> allows us to estimate the number of observations required to obtain a specific margin of error. <span class="math inline">\(\displaystyle{n=\left(\frac{z^*\sigma}{m}\right)^2}\)</span></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -1382,11 +1372,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1426,6 +1416,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

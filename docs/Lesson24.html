@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -290,7 +278,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 1
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -326,7 +314,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 2
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -356,7 +344,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 3
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -380,7 +368,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 4
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -481,7 +469,7 @@ Lesson 21 Recap
 <ul>
 <li><p>Creating <strong>scatterplots</strong> of bivariate data allows us to visualize the data by helping us understand its <strong>shape</strong> (linear or nonlinear), <strong>direction</strong> (positive, negative, or neither), and <strong>strength</strong> (strong, moderate, or weak).</p></li>
 <li><p>The <strong>correlation coefficient (<span class="math inline">\(r\)</span>)</strong> is a number between <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span> that tells us the direction and strength of the linear association between two variables. A positive <span class="math inline">\(r\)</span> corresponds to a <strong>positive association</strong> while a negative <span class="math inline">\(r\)</span> corresponds to a <strong>negative association</strong>. A value of <span class="math inline">\(r\)</span> closer to <span class="math inline">\(-1\)</span> or <span class="math inline">\(1\)</span> indicates a stronger association than a value of <span class="math inline">\(r\)</span> closer to zero.</p></li>
-<li>The <strong>covariance</strong> is a measure of how two variables vary together. The formula for the covariance is <span class="math inline">\(s_{xy}=r \cdot s_x \cdot s_y\)</span>. <br></li>
+<li><p>The <strong>covariance</strong> is a measure of how two variables vary together. The formula for the covariance is <span class="math inline">\(s_{xy}=r \cdot s_x \cdot s_y\)</span>. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -492,7 +480,7 @@ Lesson 22 Recap
 <ul>
 <li><p>In statistics, we write the <strong>linear regression equation</strong> as <span class="math inline">\(\hat Y=b_0+b_1X\)</span> where <span class="math inline">\(b_0\)</span> is the <strong>Y-intercept</strong> of the line and <span class="math inline">\(b_1\)</span> is the <strong>slope</strong> of the line. The values of <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> are calculated using software.</p></li>
 <li><p>Linear regression allows us to predict values of <span class="math inline">\(Y\)</span> for a given <span class="math inline">\(X\)</span>. This is done by first calculating the coefficients <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> and then plugging in the desired value of <span class="math inline">\(X\)</span> and solving for <span class="math inline">\(Y\)</span>.</p></li>
-<li>The <strong>independent (or explanatory) variable (<span class="math inline">\(X\)</span>)</strong> is the variable which is <em>not</em> affected by what happens to the other variable. The <strong>dependent (or response) variable (<span class="math inline">\(Y\)</span>)</strong> is the variable which <em>is</em> affected by what happens to the other variable. For example, in the correlation between number of powerboats and number of manatee deaths, the number of deaths is affected by the number of powerboats in the water, but not the other way around. So, we would assign <span class="math inline">\(X\)</span> to represent the number of powerboats and <span class="math inline">\(Y\)</span> to represent the number of manatee deaths. <br></li>
+<li><p>The <strong>independent (or explanatory) variable (<span class="math inline">\(X\)</span>)</strong> is the variable which is <em>not</em> affected by what happens to the other variable. The <strong>dependent (or response) variable (<span class="math inline">\(Y\)</span>)</strong> is the variable which <em>is</em> affected by what happens to the other variable. For example, in the correlation between number of powerboats and number of manatee deaths, the number of deaths is affected by the number of powerboats in the water, but not the other way around. So, we would assign <span class="math inline">\(X\)</span> to represent the number of powerboats and <span class="math inline">\(Y\)</span> to represent the number of manatee deaths. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -512,7 +500,7 @@ H_0: &amp; \beta_1=0 \\
 H_a: &amp; \beta_1\ne0
 \end{array}
 \]</span></p></li>
-<li>For bivariate inference we use software to calculate the sample coefficients, residuals, test statistic, <span class="math inline">\(P\)</span>-value, and confidence intervals of the true linear regression coefficients. <br></li>
+<li><p>For bivariate inference we use software to calculate the sample coefficients, residuals, test statistic, <span class="math inline">\(P\)</span>-value, and confidence intervals of the true linear regression coefficients. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -560,6 +548,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

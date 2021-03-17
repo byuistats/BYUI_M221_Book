@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -290,7 +278,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 1
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -326,7 +314,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 2
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -356,7 +344,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 3
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -380,7 +368,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 4
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -628,7 +616,7 @@ The test statistic is <span class="math inline">\(z=0.526\)</span>. Under the nu
 </center>
 <p><br></p>
 <ul>
-<li><strong>Hypothesis Test</strong>: To conduct a hypothesis test we must define our null and alternative hypotheses. To the right of the “Numerical Summary” cells is a block of cells labeled “Hypothesis Test”. The null hypothesis is always the same and does not need to be updated. For the alternative hypothesis we can change the yellow cell, K6, to select the type of alternative hypothesis we wish to test, i.e. “Greater Than”, “Less Than”, or “Not Equal To.”</li>
+<li><strong>Hypothesis Test</strong>: To conduct a hypothesis test we must define our null and alternative hypotheses. To the right of the “Numerical Summary” cells is a block of cells labeled “Hypothesis Test”. The null hypothesis is always the same and does not need to be updated. For the alternative hypothesis we can change the yellow cell, K6, to select the type of alternative hypothesis we wish to test, i.e. “Greater Than”, “Less Than”, or “Not Equal To.”</li>
 </ul>
 <p>The results of the hypothesis test are given immediately below where we define the hypotheses:</p>
 <center>
@@ -821,7 +809,7 @@ z &amp;=&amp; \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \righ
 <ul>
 <li><p><span class="math inline">\(p_1 \ne p_2\)</span>, shade both tails.</p></li>
 <li><p><span class="math inline">\(p_1 &lt; p_2\)</span>, shade the left tail.</p></li>
-<li><span class="math inline">\(p_1 &gt; p_2\)</span>, shade the right tail. <br></li>
+<li><p><span class="math inline">\(p_1 &gt; p_2\)</span>, shade the right tail. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -1305,7 +1293,7 @@ Remember…
 \]</span></p>
 <ul>
 <li><p>Whenever zero is contained in the confidence interval of the difference of the true proportions we conclude that there is no significant difference between the two proportions.</p></li>
-<li>You will use the Excel spreadsheet <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> to perform hypothesis testing and calculate confidence intervals for problems involving two proportions. <br></li>
+<li><p>You will use the Excel spreadsheet <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> to perform hypothesis testing and calculate confidence intervals for problems involving two proportions. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -1357,6 +1345,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

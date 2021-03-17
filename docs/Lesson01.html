@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -290,7 +278,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 1
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -326,7 +314,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 2
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -356,7 +344,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 3
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -380,7 +368,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 4
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -603,7 +591,7 @@ Take a few minutes now to familiarize yourself with the <a href="http://byu-idah
 <p><strong>Peer Support</strong></p>
 <p>Your experience in this course will be enhanced as you work with other students to learn and grow together.</p>
 <p><strong>Help Desk</strong></p>
-<p>The BYU-Idaho Help Desk has been established to help students with technological problems related to approved course software. You can access the Help Desk at any time in three ways: - Walk-in: The Help Desk is located in room 322 of the McKay Library - Call in: 208-496-1411 (toll free) - Email: <a href="mailto:helpdesk@byui.edu">helpdesk@byui.edu</a> Additional information is available at the Help Desk web page: <a href="http://www.byui.edu/helpdesk/" class="uri">http://www.byui.edu/helpdesk/</a></p>
+<p>The BYU-Idaho Help Desk has been established to help students with technological problems related to approved course software. You can access the Help Desk at any time in three ways: - Walk-in: The Help Desk is located in room 322 of the McKay Library - Call in: 208-496-1411 (toll free) - Email: <a href="mailto:helpdesk@byui.edu" class="email">helpdesk@byui.edu</a> Additional information is available at the Help Desk web page: <a href="http://www.byui.edu/helpdesk/" class="uri">http://www.byui.edu/helpdesk/</a></p>
 <p>When you have technical problems with I-Learn, you should first try contacting the Help Desk before you contact your instructor. They are connected with the IT support staff who can resolve problems with I-Learn. Please take 5 minutes now to look at the Help Desk web page. That way, if a problem does arise later on in the course, you will know where to go for help.</p>
 <p><strong>Tutoring Center</strong></p>
 <p>The BYU-Idaho Study Skills/Tutoring Center is a powerful resource for students who would like a little extra help with a course. The Tutoring Center is located in the McKay Library in room 272. This is in the east wing of the second floor.</p>
@@ -661,7 +649,7 @@ Remember…
 <ul>
 <li><p>Each lesson follows the same schedule: <strong>Individual and Group Preparation</strong>, <strong>Class Meeting</strong>, and <strong>Homework Assignment and Quiz</strong>. Understanding this layout will help you successfully manage the workload of this class.</p></li>
 <li><p>In this class you will use the online textbook that has been written for you by your statistics teachers. All of the assignments and quizzes will be based on the readings, so study it well.</p></li>
-<li>By doing the work, staying on schedule, and living the Honor Code you <em>can</em> succeed in this class!</li>
+<li><p>By doing the work, staying on schedule, and living the Honor Code you <em>can</em> succeed in this class!</p></li>
 </ul>
 </div>
 <p><br></p>
@@ -672,7 +660,7 @@ Remember…
 <table>
 <colgroup>
 <col width="30%" />
-<col width="69%" />
+<col width="70%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -710,6 +698,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

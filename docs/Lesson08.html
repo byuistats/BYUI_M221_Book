@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -290,7 +278,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 1
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -326,7 +314,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 2
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -356,7 +344,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 3
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -380,7 +368,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 4
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -441,34 +429,36 @@ $(document).ready(function () {
 <div id="oc" style="display:none;">
 <p>The expectation on the exam is that you should be able to do the following:</p>
 <ul>
-<li>Distinguish between a categorical and a quantitative variable.</li>
-<li>Distinguish between an observational study and an experiment.</li>
-<li>Distinguish between a population and a sample.</li>
-<li>Distinguish between a parameter and a statistic.</li>
-<li><p>Distinguish and give an example of each of the following sampling schemes:</p></li>
+<li><p>Distinguish between a categorical and a quantitative variable.</p></li>
+<li><p>Distinguish between an observational study and an experiment.</p></li>
+<li><p>Distinguish between a population and a sample.</p></li>
+<li><p>Distinguish between a parameter and a statistic.</p></li>
+<li><p>Distinguish and give an example of each of the following sampling schemes:</p>
+<ul>
 <li>Simple random sampling</li>
 <li>Systematic sampling</li>
 <li>Cluster sampling</li>
 <li>Stratified sampling</li>
-<li><p>Convenience sampling</p></li>
-<li>Explain the significance of using a random sample.</li>
-<li>Determine the shape of a distribution using a histogram and/or boxplot.</li>
-<li>Determine the centers of a given histogram and/or boxplot.</li>
-<li>Identify the mean, median and standard deviation in skewed or normal histograms.</li>
-<li>Calculate the mean, median and standard deviation from quantitative data.</li>
-<li>Calculate a percentile from a quantitative data set.</li>
-<li>Calculate a five-number summary from quantitative data with Excel, or by hand.</li>
-<li>Create a histogram and a boxplot from quantitative data.</li>
-<li>State and apply the three axioms of probability.</li>
-<li>State the properties of a normal density curve.</li>
-<li>Calculate the z-score of an individual observation, given the mean and standard deviation.</li>
-<li>Interpret a z-score.</li>
-<li>Calculate probability as area under a normal density curve.</li>
-<li>Assess normality using a histogram.</li>
-<li>Explain how a sampling distribution is created.</li>
-<li>Determine the mean, standard deviation, and shape of a distribution of sample means.</li>
-<li>State and apply the Central Limit Theorem and the Law of Large numbers.</li>
-<li>Calculate probabilities using a distribution of sample means.</li>
+<li>Convenience sampling</li>
+</ul></li>
+<li><p>Explain the significance of using a random sample.</p></li>
+<li><p>Determine the shape of a distribution using a histogram and/or boxplot.</p></li>
+<li><p>Determine the centers of a given histogram and/or boxplot.</p></li>
+<li><p>Identify the mean, median and standard deviation in skewed or normal histograms.</p></li>
+<li><p>Calculate the mean, median and standard deviation from quantitative data.</p></li>
+<li><p>Calculate a percentile from a quantitative data set.</p></li>
+<li><p>Calculate a five-number summary from quantitative data with Excel, or by hand.</p></li>
+<li><p>Create a histogram and a boxplot from quantitative data.</p></li>
+<li><p>State and apply the three axioms of probability.</p></li>
+<li><p>State the properties of a normal density curve.</p></li>
+<li><p>Calculate the z-score of an individual observation, given the mean and standard deviation.</p></li>
+<li><p>Interpret a z-score.</p></li>
+<li><p>Calculate probability as area under a normal density curve.</p></li>
+<li><p>Assess normality using a histogram.</p></li>
+<li><p>Explain how a sampling distribution is created.</p></li>
+<li><p>Determine the mean, standard deviation, and shape of a distribution of sample means.</p></li>
+<li><p>State and apply the Central Limit Theorem and the Law of Large numbers.</p></li>
+<li><p>Calculate probabilities using a distribution of sample means.</p></li>
 </ul>
 </div>
 <p><br></p>
@@ -485,7 +475,7 @@ Lesson 01 Recap
 <ul>
 <li><p>Each lesson follows the same schedule: <strong>Individual and Group Preparation</strong>, <strong>Class Meeting</strong>, and <strong>Homework Assignment and Quiz</strong>. Understanding this layout will help you successfully manage the workload of this class.</p></li>
 <li><p>In this class you will use the online textbook that has been written for you by your statistics teachers. All of the assignments and quizzes will be based on the readings, so study it well.</p></li>
-<li>By doing the work, staying on schedule, and living the Honor Code you <em>can</em> succeed in this class!</li>
+<li><p>By doing the work, staying on schedule, and living the Honor Code you <em>can</em> succeed in this class!</p></li>
 </ul>
 </div>
 <p><br></p>
@@ -496,12 +486,14 @@ Lesson 02 Recap
 <ul>
 <li><p>The <strong>Statistical Process</strong> has five steps: <strong>D</strong>esign the study, <strong>C</strong>ollect the data, <strong>D</strong>escribe the data, <strong>M</strong>ake inferences, <strong>T</strong>ake action.</p></li>
 <li><p>In a <strong>designed experiment</strong>, researchers control the conditions of the study. In an <strong>observational study</strong>, researchers don’t control the conditions but only observe what happens.</p></li>
-<li>There are many sampling methods used to obtain a <strong>sample</strong> from a <strong>population</strong>:</li>
+<li><p>There are many sampling methods used to obtain a <strong>sample</strong> from a <strong>population</strong>:</p>
+<ul>
 <li>A <strong>simple random sample (SRS)</strong> is a random selection taken from a population</li>
 <li>A <strong>systematic sample</strong> is every <strong><em>k</em></strong><sup>th</sup> item in the population, beginning at a random starting point</li>
 <li>A <strong>cluster sample</strong> is all items in one or more randomly selected clusters, or blocks</li>
 <li>A <strong>stratified sample</strong> divides data into similar groups and an <strong>SRS</strong> is taken from each group</li>
-<li><p>A <strong>convenience sample</strong> is one easily obtained in a less-than-systematic way and should be avoided whenever possible</p></li>
+<li>A <strong>convenience sample</strong> is one easily obtained in a less-than-systematic way and should be avoided whenever possible</li>
+</ul></li>
 <li><p><strong>Quantitative variables</strong> represent things that are numeric in nature, such as the value of a car or the number of students in a classroom. <strong>Categorical variables</strong> represent nonnumerical data that can only be considered as labels, such as colors or brands of shoes.</p></li>
 </ul>
 </div>
@@ -515,7 +507,7 @@ Lesson 03 Recap
 <li><p>The <strong>mean</strong>, <strong>median</strong>, and <strong>mode</strong> are measures of the center of a distribution. The mean is the most common measure of center and is computed by adding up the observed data and dividing by the number of observations in the data set.</p></li>
 <li><p>The <strong>standard deviation</strong> is a number that describes how spread out the data are. A larger standard deviation means the data are more spread out than data with a smaller standard deviation.</p></li>
 <li><p>A <strong>parameter</strong> is a true (but usually unknown) number that describes a population. A <strong>statistic</strong> is an estimate of a parameter obtained from a sample.</p></li>
-<li><strong>Quartiles/percentiles</strong>, <strong>Five-Number Summaries</strong>, and <strong>Boxplots</strong> are tools that help us understand data. The five-number summary of a data set contains the minimum value, the first quartile, the median, the third quartile, and the maximum value. A boxplot is a graphical representation of the five-number summary.</li>
+<li><p><strong>Quartiles/percentiles</strong>, <strong>Five-Number Summaries</strong>, and <strong>Boxplots</strong> are tools that help us understand data. The five-number summary of a data set contains the minimum value, the first quartile, the median, the third quartile, and the maximum value. A boxplot is a graphical representation of the five-number summary.</p></li>
 </ul>
 </div>
 <p><br></p>
@@ -529,7 +521,7 @@ Lesson 04 Recap
 <ol style="list-style-type: decimal">
 <li><p>A probability is a number between 0 and 1. <span class="math display">\[0 \leq P(X) \leq 1\]</span></p></li>
 <li><p>If you list all the outcomes of a probability experiment (such as rolling a die) the probability that one of these outcomes will occur is 1. In other words, the sum of the probabilities in any probability is 1. <span class="math display">\[\sum P(X) = 1\]</span></p></li>
-<li>The probability that an outcome will not occur is 1 minus the probability that it will occur. <span class="math display">\[P(\text{not}~X) = 1 - P(X)\]</span></li>
+<li><p>The probability that an outcome will not occur is 1 minus the probability that it will occur. <span class="math display">\[P(\text{not}~X) = 1 - P(X)\]</span></p></li>
 </ol>
 </div>
 <p><br></p>
@@ -553,7 +545,7 @@ Lesson 06 Recap
 <ul>
 <li><p>The <strong>distribution of sample means</strong> is a distribution of all possible sample means (<span class="math inline">\(\bar x\)</span>) for a particular sample size. It has a mean of <span class="math inline">\(\mu\)</span> and a standard deviation of <span class="math inline">\(\sigma/\sqrt{n}\)</span>.</p></li>
 <li><p>The distribution of sample means is normal when <span class="math inline">\(\bar x\)</span> is normally distributed or when, thanks to the <strong>Central Limit Theorem (CLT)</strong>, our sample size (<span class="math inline">\(n\)</span>) is large.</p></li>
-<li>The <strong>Law of Large Numbers</strong> states that as the sample size (<span class="math inline">\(n\)</span>) gets larger, the sample mean (<span class="math inline">\(\bar x\)</span>) will get closer to the population mean (<span class="math inline">\(\mu\)</span>).</li>
+<li><p>The <strong>Law of Large Numbers</strong> states that as the sample size (<span class="math inline">\(n\)</span>) gets larger, the sample mean (<span class="math inline">\(\bar x\)</span>) will get closer to the population mean (<span class="math inline">\(\mu\)</span>).</p></li>
 </ul>
 </div>
 <p><br></p>
@@ -563,7 +555,7 @@ Lesson 07 Recap
 <div class="Summary">
 <ul>
 <li><p>When the distribution of sample means is normally distributed, we can use <strong>z-scores</strong> and the <strong>probability applet</strong> to calculate proportions and probabilities. A z-score is calculated as: <span class="math inline">\(\displaystyle{z = \frac{\text{value}-\text{mean}}{\text{standard deviation}} = \frac{\bar x-\mu}{\sigma/\sqrt{n}}}\)</span></p></li>
-<li>The <strong><span class="math inline">\(P\)</span>-value</strong> is the probability of getting a test statistic at least as extreme as the one you got, assuming <span class="math inline">\(H_0\)</span> is true. A <span class="math inline">\(P\)</span>-value is calculated by finding the area under the normal distribution curve that is more extreme (farther away from the mean) than the z-score.</li>
+<li><p>The <strong><span class="math inline">\(P\)</span>-value</strong> is the probability of getting a test statistic at least as extreme as the one you got, assuming <span class="math inline">\(H_0\)</span> is true. A <span class="math inline">\(P\)</span>-value is calculated by finding the area under the normal distribution curve that is more extreme (farther away from the mean) than the z-score.</p></li>
 </ul>
 </div>
 <p><br></p>
@@ -573,11 +565,11 @@ Lesson 07 Recap
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -617,6 +609,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
