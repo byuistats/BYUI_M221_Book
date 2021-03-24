@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -290,7 +278,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 1
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -326,7 +314,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 2
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -356,7 +344,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 3
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -380,7 +368,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 4
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -482,45 +470,41 @@ $(document).ready(function () {
 <p>Dr. K. Y. Yuen led a team of researchers who reported the body temperatures of people admitted to Chinese hospitals with confirmed cases of Avian Influenza. Their research team collected data on the body temperature at the time that people with the bird flu were admitted to the hospital. In the article, they reported on two groups of people, those with relatively uncomplicated cases of the bird flu and those with severe cases.</p>
 <p><img src="Images/Step2.png"></p>
 <p>The table below presents the data representative of the body temperatures for the two groups of bird flu patients:</p>
-<table style="width:65%;">
-<colgroup>
-<col width="45%" />
-<col width="19%" />
-</colgroup>
+<table>
 <thead>
 <tr class="header">
-<th align="center">Relatively Uncomplicated Cases</th>
-<th align="center">Severe Cases</th>
+<th>Relatively Uncomplicated Cases</th>
+<th>Severe Cases</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center">38.1</td>
-<td align="center">39.1</td>
+<td>38.1</td>
+<td>39.1</td>
 </tr>
 <tr class="even">
-<td align="center">38.3</td>
-<td align="center">39.5</td>
+<td>38.3</td>
+<td>39.5</td>
 </tr>
 <tr class="odd">
-<td align="center">38.4</td>
-<td align="center">38.9</td>
+<td>38.4</td>
+<td>38.9</td>
 </tr>
 <tr class="even">
-<td align="center">39.5</td>
-<td align="center">39.2</td>
+<td>39.5</td>
+<td>39.2</td>
 </tr>
 <tr class="odd">
-<td align="center">39.7</td>
-<td align="center">39.9</td>
+<td>39.7</td>
+<td>39.9</td>
 </tr>
 <tr class="even">
-<td align="center"></td>
-<td align="center">39.7</td>
+<td></td>
+<td>39.7</td>
 </tr>
 <tr class="odd">
-<td align="center"></td>
-<td align="center">39</td>
+<td></td>
+<td>39.0</td>
 </tr>
 </tbody>
 </table>
@@ -802,7 +786,7 @@ Answer the following questions:
 <li><p>Option #1:</p></li>
 <li><p>This is an excellent suggestion. This is probably one of the first things statisticians used to estimate the spread in the data.</p></li>
 <li><p>If we take the absolute value of the deviations, then all the values are positive. By taking the mean of these numbers, we do get a measure of spread. This quantity is called the mean absolute deviation (MAD).</p></li>
-<li>There is good news and bad news. The good news is, you discovered a way to estimate the spread in a data set. (In fact, the MAD is used as one estimate of the volatility of stocks.) The bad news is that the MAD does not have good theoretical properties. A proof of this claim requires calculus, and so will not be discussed here. For most applications, there is a better choice. Please select another option.</li>
+<li><p>There is good news and bad news. The good news is, you discovered a way to estimate the spread in a data set. (In fact, the MAD is used as one estimate of the volatility of stocks.) The bad news is that the MAD does not have good theoretical properties. A proof of this claim requires calculus, and so will not be discussed here. For most applications, there is a better choice. Please select another option.</p></li>
 </ul>
 </div>
 <p><br></p>
@@ -810,7 +794,7 @@ Answer the following questions:
 <div id="Q10b" style="display:none;">
 <ul>
 <li><p>Option #2:</p></li>
-<li>If we square the deviations from the mean, the values that were negative will become positive. This leads to an estimator of the spread that has excellent theoretical properties. This is the best of the four options. You will apply this idea in Step 03.</li>
+<li><p>If we square the deviations from the mean, the values that were negative will become positive. This leads to an estimator of the spread that has excellent theoretical properties. This is the best of the four options. You will apply this idea in Step 03.</p></li>
 </ul>
 </div>
 <p><br></p>
@@ -818,7 +802,7 @@ Answer the following questions:
 <div id="Q10c" style="display:none;">
 <ul>
 <li><p>Option #3:</p></li>
-<li>Sorry, you can’t make your troubles go away by deleting things you don’t like. Please try again.</li>
+<li><p>Sorry, you can’t make your troubles go away by deleting things you don’t like. Please try again.</p></li>
 </ul>
 </div>
 <p><br></p>
@@ -826,7 +810,7 @@ Answer the following questions:
 <div id="Q10d" style="display:none;">
 <ul>
 <li><p>Option #4:</p></li>
-<li>You probably have an ingenious idea. Surprisingly enough, there <em>is</em> a right answer to the question. Please choose a different option.</li>
+<li><p>You probably have an ingenious idea. Surprisingly enough, there <em>is</em> a right answer to the question. Please choose a different option.</p></li>
 </ul>
 </div>
 <p><br> <br></p>
@@ -1230,7 +1214,7 @@ Answer the following questions:
 <div id="Q12a" style="display:none;">
 <ul>
 <li><p>Option #1:</p></li>
-<li>This is an excellent suggestion. There are good reasons to choose this option. Unfortunately, dividing by <span class="math inline">\(n\)</span> to estimate the spread of data gives estimates that are too low, on average. There is a surprising, yet simple fix: divide by <span class="math inline">\(n-1\)</span> instead of <span class="math inline">\(n\)</span>. Please examine Option #2.</li>
+<li><p>This is an excellent suggestion. There are good reasons to choose this option. Unfortunately, dividing by <span class="math inline">\(n\)</span> to estimate the spread of data gives estimates that are too low, on average. There is a surprising, yet simple fix: divide by <span class="math inline">\(n-1\)</span> instead of <span class="math inline">\(n\)</span>. Please examine Option #2.</p></li>
 </ul>
 </div>
 <p><br></p>
@@ -1382,7 +1366,7 @@ Sum <span class="math inline">\(=2.20\)</span>
 <div id="Q12c" style="display:none;">
 <ul>
 <li><p>Option #3:</p></li>
-<li>You probably have an ingenious idea. Nevertheless, please choose a different option.</li>
+<li><p>You probably have an ingenious idea. Nevertheless, please choose a different option.</p></li>
 </ul>
 </div>
 <p><br></p>
@@ -1749,7 +1733,7 @@ Standard Deviation:
 </table>
 <ul>
 <li><p>The sample standard deviation is <span class="math inline">\(s = 0.742\)</span> degrees Centigrade.</p></li>
-<li>Take a few minutes to verify that you can recreate this table on your own.</li>
+<li><p>Take a few minutes to verify that you can recreate this table on your own.</p></li>
 </ul>
 </div>
 <p> </p>
@@ -1952,7 +1936,7 @@ Variance
 </div>
 <div id="additional-tools-to-describe-the-data" class="section level2">
 <h2>Additional Tools to Describe the Data</h2>
-<p>Recall the five steps of the Statistical Process (and the mnemonic “Daniel Can Discern More Truth).</p>
+<p>Recall the five steps of the Statistical Process (and the mnemonic "Daniel Can Discern More Truth).</p>
 <center>
 <table>
 <tbody>
@@ -2254,7 +2238,7 @@ Excel Instructions
 <ul>
 <li><p>Open the data file you are using. For this example, open the file <a href="./Data/WrongSiteWrongPatient.xlsx">WrongSiteWrongPatient.xlsx</a>.</p></li>
 <li><p>You can use the function <strong>=percentile.inc()</strong> in Excel to find the 1<sup>st</sup> quartile, median and 3<sup>rd</sup> quartile (otherwise known as the 25<sup>th</sup>, 50<sup>th</sup>, and 75<sup>th</sup> percentiles respectively).</p></li>
-<li>Type the following into a blank cell of the WrongSiteWrongPatient.xlsx worksheet
+<li><p>Type the following into a blank cell of the WrongSiteWrongPatient.xlsx worksheet</p>
 <ul>
 <li>to find the minimum wrong-site value: =min(A2:A412)</li>
 <li>to find the maximum wrong-site value: =max(A2:A412) <br></li>
@@ -2308,8 +2292,8 @@ Excel Instructions
 <p><strong>To create a boxplot in Excel, do the following</strong></p>
 <ul>
 <li><p>Open the data file you are using. For this example, open the file <a href="./Data/WrongSiteWrongPatient.xlsx">WrongSiteWrongPatient.xlsx</a>.</p></li>
-<li>Highlight the data you want to plot (in this case, cells A2 to A412 contain the wrong-site lawsuit data).<br />
-</li>
+<li><p>Highlight the data you want to plot (in this case, cells A2 to A412 contain the wrong-site lawsuit data).<br />
+</p></li>
 <li><p>Go to the Insert ribbon in Excel and select the histogram icon from the “Charts” section of the ribbon. Then select the only option under the Box and Whisker category. <img src="Images/Lesson_03_boxplot.png" width=80%></p></li>
 </ul>
 <p><br></p>
@@ -2335,7 +2319,7 @@ Answer the following questions:
 <div style="padding-left:35px;">
 <p><img src="Images/Lesson_03_wrong-patient_histogram.png" width=80%></p>
 </div>
-<p>From the histogram we clearly see most values bunched near the left and gradually fewer values as we move to the right along the numer line, so the correct answer is ‘c. Skewed right’.</p>
+<p>From the histogram we clearly see most values bunched near the left and gradually fewer values as we move to the right along the numer line, so the correct answer is ‘c. Skewed right’.</p>
 </div>
 <p><br></p>
 <ol start="30" style="list-style-type: decimal">
@@ -2386,11 +2370,11 @@ Remember…
 </div>
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -2431,6 +2415,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

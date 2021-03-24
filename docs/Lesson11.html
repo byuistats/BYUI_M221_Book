@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -290,7 +278,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 1
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -326,7 +314,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 2
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -356,7 +344,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 3
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -380,7 +368,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 4
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -610,13 +598,18 @@ Excel Instructions
 </center>
 <p>Consider each of the following alternative hypotheses that could be used in a test for a single mean where the null hypothesis is <span class="math inline">\(H_0: \mu = 98.6\)</span>.</p>
 <ul>
-<li><span class="math inline">\(H_a: \mu \ne 98.6\)</span></li>
+<li><span class="math inline">\(H_a: \mu \ne 98.6\)</span>
+<ul>
 <li>Choose “Not Equal To” in the drop-down menu in cell L6.</li>
-<li><span class="math inline">\(H_a: \mu &lt; 98.6\)</span></li>
+</ul></li>
+<li><span class="math inline">\(H_a: \mu &lt; 98.6\)</span>
+<ul>
 <li>Choose “Less Than” in the drop-down menu in cell L6.</li>
-<li><span class="math inline">\(H_a: \mu &gt; 98.6\)</span><br />
-</li>
+</ul></li>
+<li><span class="math inline">\(H_a: \mu &gt; 98.6\)</span>
+<ul>
 <li>Choose “Greater Than” in the drop-down menu in cell L6.</li>
+</ul></li>
 </ul>
 <p>You will have opportunities to practice using each of these. <br></p>
 </div>
@@ -906,8 +899,21 @@ Answer the following questions:
 </ol>
 <a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q8" style="display:none;">
-Use Excel to calculate the following summary statistics:
+<p>The following output was generated using the Excel file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>:</p>
 <center>
+<img src="Images/EuroWeights-Histogram.PNG">
+</center>
+<ul>
+<li>Typically, we round our computations to one more decimal place of precision than was given in the original data. This means we need one more decimal place than is shown in the output above. We can increase the precision by selecting the cell we want to modify and then clicking on the following button in the “Home” menu ribbon in Excel:</li>
+</ul>
+<center>
+<img src="Images/Excel-IncreaseDecimals.png">
+</center>
+<p><br></p>
+<ul>
+<li>When we do this, we get the following summary statistics:
+<center></li>
+</ul>
 <span class="math display">\[
 \begin{align}
 \bar x =&amp; 7.521 \\
@@ -1040,6 +1046,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

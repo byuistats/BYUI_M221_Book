@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -290,7 +278,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 1
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -326,7 +314,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 2
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -356,7 +344,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 3
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -380,7 +368,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 4
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -486,8 +474,8 @@ $(document).ready(function () {
 <h3>Honesty at Medical School</h3>
 <p><img src="Images/Medical_Symbol.png"></p>
 <p>Frederick Sierles and his colleagues distributed an anonymous survey to students at two American medical schools. The questionnaire was given during class without any prior announcement to students. The authors of the study personally supervised the distribution and collection of the surveys. 95% of the students completed the survey, and students from all four years of medical school training were represented. A total of 428 individuals participated in the survey. Among this group, 249 people indicated that they had cheated in some way during medical school. The results were published in a journal article in 1980.</p>
-<p>We want to use the data from this study to generalize to a larger population. We are not usually interested in the <em>particular</em> individuals’ responses. The reason the study was conducted is to provide an estimate of the true population proportion, <span class="math inline">\(p\)</span>. <span class="math inline">\(\hat p\)</span> is called a <strong>point estimate</strong> of <span class="math inline">\(p\)</span>. The sample proportion, <span class="math inline">\(\hat p\)</span> is one point on the number line that estimates the value of the true proportion, <span class="math inline">\(p\)</span>.</p>
-<p>A point estimate like <span class="math inline">\(\hat p\)</span> is helpful, but it does not give us direct information on <em>how close</em> it is to the true parameter, <span class="math inline">\(p\)</span>. We use a confidence interval to find a range of plausible values for the parameter.</p>
+<p>We want to use the data from this study to generalize to a larger population. We are not usually interested in the <em>particular</em> individuals’ responses. The reason the study was conducted is to provide an estimate of the true population proportion, <span class="math inline">\(p\)</span>. <span class="math inline">\(\widehat p\)</span> is called a <strong>point estimate</strong> of <span class="math inline">\(p\)</span>. The sample proportion, <span class="math inline">\(\widehat p\)</span> is one point on the number line that estimates the value of the true proportion, <span class="math inline">\(p\)</span>.</p>
+<p>A point estimate like <span class="math inline">\(\widehat p\)</span> is helpful, but it does not give us direct information on <em>how close</em> it is to the true parameter, <span class="math inline">\(p\)</span>. We use a confidence interval to find a range of plausible values for the parameter.</p>
 </div>
 <div id="confidence-intervals" class="section level3">
 <h3>Confidence Intervals</h3>
@@ -545,7 +533,7 @@ $(document).ready(function () {
 </div>
 <div id="another-study-on-honesty-at-medical-school" class="section level3">
 <h3>Another Study on Honesty at Medical School</h3>
-<p>DeWitt C. Baldwin, Jr. and others conducted a larger study to assess how widespread cheating is in medical schools. Elected class officers at 40 schools were invited to distribute a survey to their second-year classmates. Surveys were completed by students from 31 of the 40 schools. Among all students attending the 31 schools, 62% participated in the survey, yielding a total of <span class="math inline">\(n=2426\)</span> surveys. Out of this group, <span class="math inline">\(x=114\)</span> admitted to cheating in medical school. These results were published in <em>Academic Medicine</em> in 1996.</p>
+<p>DeWitt C. Baldwin, Jr. and others conducted a larger study to assess how widespread cheating is in medical schools. Elected class officers at 40 schools were invited to distribute a survey to their second-year classmates. Surveys were completed by students from 31 of the 40 schools. Among all students attending the 31 schools, 62% participated in the survey, yielding a total of <span class="math inline">\(n=2426\)</span> surveys. Out of this group, <span class="math inline">\(x=114\)</span> admitted to cheating in medical school. These results were published in <em>Academic Medicine</em> in 1996.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
@@ -734,7 +722,7 @@ Answer the following question:
 <div id="Q14" style="display:none;">
 <ul>
 <li><p>Similarities: There is one population. Both test are based on the <span class="math inline">\(z\)</span> statistic. Both tests require the use of the normal probability applet.</p></li>
-<li>Differences: The test for means involves quantitative data, the test for a proportion involves categorical data. The formulas for the <span class="math inline">\(z\)</span>-score differ.</li>
+<li><p>Differences: The test for means involves quantitative data, the test for a proportion involves categorical data. The formulas for the <span class="math inline">\(z\)</span>-score differ.</p></li>
 </ul>
 </div>
 <p> </p>
@@ -755,7 +743,7 @@ Answer the following question:
 </ul>
 <p><img src="Images/Lesson_17_pic_6.PNG"></p>
 <ul>
-<li><strong>Step 2</strong>: Now we need to define the hypotheses for our test. To the right of the “Numerical Summary” cells is a block of cells labeled “Hypothesis Test”. We must change the yellow cells in this block of the sheet in order to test the correct null and alternative hypothesis. The value in cell L5 contains the value of <span class="math inline">\(p\)</span> in our null hypothesis. Cell K6 is a drop-down list where we can select the type of alternative hypothesis we wish to test, i.e. “Greater Than”, “Less Than”, or “Not Equal To.”</li>
+<li><strong>Step 2</strong>: Now we need to define the hypotheses for our test. To the right of the “Numerical Summary” cells is a block of cells labeled “Hypothesis Test”. We must change the yellow cells in this block of the sheet in order to test the correct null and alternative hypothesis. The value in cell L5 contains the value of <span class="math inline">\(p\)</span> in our null hypothesis. Cell K6 is a drop-down list where we can select the type of alternative hypothesis we wish to test, i.e. “Greater Than”, “Less Than”, or “Not Equal To.”</li>
 </ul>
 <p>The results of the hypothesis test are given in the output boxes:</p>
 <p><img src="Images/Lesson_17_pic_3.PNG"></p>
@@ -894,10 +882,10 @@ Remember…
 </div>
 <div class="Summary">
 <ul>
-<li><p>The <strong>estimator</strong> of <span class="math inline">\(p\)</span> is <span class="math inline">\(\hat p\)</span>. <span class="math inline">\(\displaystyle{ \hat p = \frac {x}{n}}\)</span> and is used for both confidence intervals and hypothesis testing.</p></li>
+<li><p>The <strong>estimator</strong> of <span class="math inline">\(p\)</span> is <span class="math inline">\(\widehat p\)</span>. <span class="math inline">\(\displaystyle{ \widehat p = \frac {x}{n}}\)</span> and is used for both confidence intervals and hypothesis testing.</p></li>
 <li><p>You will use the Excel spreadsheet <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> to perform hypothesis testing and calculate confidence intervals for problems involving one proportion.</p></li>
-<li><p>The requirements for a confidence interval are <span class="math inline">\(n \hat p \ge 10\)</span> and <span class="math inline">\(n(1-\hat p) \ge 10\)</span>. The requirements for hypothesis tests involving one proportion are <span class="math inline">\(np\ge10\)</span> and <span class="math inline">\(n(1-p)\ge10\)</span>.</p></li>
-<li>We can determine the sample size we need to obtain a desired margin of error using the formula <span class="math inline">\(\displaystyle{ n=\left(\frac{z^*}{m}\right)^2 p^*(1-p^*)}\)</span> where <span class="math inline">\(p^*\)</span> is a <strong>prior estimate</strong> of <span class="math inline">\(p\)</span>. If no prior estimate is available, the formula <span class="math inline">\(\displaystyle{ \left(\frac{z^*}{2m}\right)^2}\)</span> is used. <br></li>
+<li><p>The requirements for a confidence interval are <span class="math inline">\(n \widehat p \ge 10\)</span> and <span class="math inline">\(n(1-\widehat p) \ge 10\)</span>. The requirements for hypothesis tests involving one proportion are <span class="math inline">\(np\ge10\)</span> and <span class="math inline">\(n(1-p)\ge10\)</span>.</p></li>
+<li><p>We can determine the sample size we need to obtain a desired margin of error using the formula <span class="math inline">\(\displaystyle{ n=\left(\frac{z^*}{m}\right)^2 p^*(1-p^*)}\)</span> where <span class="math inline">\(p^*\)</span> is a <strong>prior estimate</strong> of <span class="math inline">\(p\)</span>. If no prior estimate is available, the formula <span class="math inline">\(\displaystyle{ \left(\frac{z^*}{2m}\right)^2}\)</span> is used. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -905,11 +893,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -949,6 +937,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

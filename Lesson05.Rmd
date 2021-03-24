@@ -206,7 +206,7 @@ An important part of the practice of statistics is finding areas under a normal 
 
 ### Introduction to the Normal Probability Applet
 
-The Normal Probability Applet is a visualization program offering statistics students insights and computations for the relationship between $z$-scores and areas under the standard normal curve. You can find a link to this applet on I-learn, under the Course Resources module. This app is also compatible to use on your phone, iPad, and other mobile devices.  The app is stored at http://byuimath.com/apps/normprob.html.  If you want a copy you can open from your desktop, just right click the link and save it to your computer.
+The Normal Probability Applet is a visualization program offering statistics students insights and computations for the relationship between $z$-scores and areas under the standard normal curve. You can find a link to this applet on I-learn, under the Course Resources module. This app is also compatible to use on your phone, iPad, and other mobile devices.  The app is stored at https://byuimath.com/apps/normprob.html.  If you want a copy you can open from your desktop, just right click the link and save it to your computer.
 
 To use this applet, follow these instructions:
 
@@ -221,13 +221,13 @@ To use this applet, follow these instructions:
 
 
 ```{r, echo=FALSE}
-htmltools::includeHTML("http://byuimath.com/apps/normprob.html")
+htmltools::includeHTML("https://byuimath.com/apps/normprob.html")
 ```
 </div>
 </center>
 ### Converting a $z$-score to a Probability
 
-Using this applet we can calculate proportions and probabilities based on the area under the normal curve. For the following examples, please open the [Normal Probability Applet](http://byuimath.com/apps/normprob.html){target="_blank"} and practice using it to find areas under the curve.
+Using this applet we can calculate proportions and probabilities based on the area under the normal curve. For the following examples, please open the [Normal Probability Applet](https://byuimath.com/apps/normprob.html){target="_blank"} and practice using it to find areas under the curve.
 
 #### Heights of Ghanaian Women
 
@@ -286,7 +286,7 @@ A percentile is a number such that a specified percentage of the data are at or 
 <!-- Lesson_3#Percentiles_and_Quartiles| need to figure out how to link content between pages -->
 [Lesson 3](Lesson03){target="_blank"}.) We can find the values of percentiles for a normal distribution by using the applet to calculate the $z$-score corresponding to a specified area and then plugging that $z$-score into our $z$-score equation and solving for $x$. The following instructions show how to find the 90<sup>th</sup> percentile of the distribution of batting averages.
 
-First, we need to find the $z$-score that corresponds to the 90<sup>th</sup> percentile using the [Normal Probability Applet](http://byuimath.com/apps/normprob.html){target="_blank"}.
+First, we need to find the $z$-score that corresponds to the 90<sup>th</sup> percentile using the [Normal Probability Applet](https://byuimath.com/apps/normprob.html){target="_blank"}.
 
 - Click on the areas under the curve until only the areas *left* of the positive $z$-score are shaded blue.
 - Type the desired area (or percentile) in the box at the top of the graph. (Type in a number between 0 and 1. A 90<sup>th</sup> percentile would be entered as "0.900".)

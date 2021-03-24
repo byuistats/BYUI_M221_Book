@@ -73,18 +73,15 @@ Their research team collected data on the body temperature at the time that peop
 
 The table below presents the data representative of the body temperatures for the two groups of bird flu patients:
 
-```{r Testing tibble for tables, echo=FALSE}
-trib <- tibble::tribble(~'Relatively Uncomplicated Cases', ~'Severe Cases',
-                                     38.1,            39.1,
-                                     38.3,            39.5,
-                                     38.4,            38.9,
-                                     39.5,            39.2,
-                                     39.7,            39.9,
-                                      " ",            39.7,
-                                      " ",            39.0)
-pander::pander(trib)
-
-```
+| Relatively Uncomplicated Cases | Severe Cases |
+|--------------------------------|--------------|
+| 38.1 | 39.1 |
+| 38.3 | 39.5 |
+| 38.4 | 38.9 |
+| 39.5 | 39.2 |
+| 39.7 | 39.9 |
+|      | 39.7 |
+|      | 39.0 |
 
 
 <img src="./Images/Step3.png">

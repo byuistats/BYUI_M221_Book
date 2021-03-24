@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -290,7 +278,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 1
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -326,7 +314,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 2
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -356,7 +344,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 3
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -380,7 +368,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 4
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -549,7 +537,7 @@ Excel Instructions
 <p><strong>To make a residual plot in Excel do the following:</strong></p>
 <ul>
 <li><p>Once the explanatory and response variables are entered into the correct columns in the <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> spreadsheet, you are given a scatter plot of residuals starting in cell S4, to the right of the hypothesis testing section.</p></li>
-<li>To create a residual plot on your own, you can highlight columns X and Y, then click on the Insert Ribbon, and then click on “Scatter” (or the icon that looks like a scatter plot). You want the first choice (Scatter with only markers), so select the first scatter plot choice. <br></li>
+<li><p>To create a residual plot on your own, you can highlight columns X and Y, then click on the Insert Ribbon, and then click on “Scatter” (or the icon that looks like a scatter plot). You want the first choice (Scatter with only markers), so select the first scatter plot choice. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -794,7 +782,7 @@ df=26
 Note that in the output for Excel, the $P$-value is given in scientific notation.  Also note that there are two values under $P$-value.  One is for the slope and the other is for the y-intercept.  In this class we will always be looking at the slope, which is the bottom or the "Predictors".  So, our $P$-value for this test is written as:
 
 $$
-P\textrm{-value} = 0.0000000000000000000000107211
+P\textrm{-value} = 0.0000000000000000000000107211   
 $$
 <center>or as</center>
 $$
@@ -812,7 +800,7 @@ Assuming $\alpha=0.05$, then $P\textrm{-value} = 1.07211E^-23 < 0.05 = \alpha$.
 <div id="manatees" class="section level3">
 <h3>Manatees</h3>
 <p>Here is an excerpt from the output for the <a href="./Data/Manatees.xlsx">Manatees.xlsx</a> data set: <!--<cite>Manatees06</cite>--></p>
-<p><img src="Images/Manatees-RegressionOutput.png"></p>
+<p><img src="Images/Manatees-RegressionOutput.PNG"></p>
 <p>The null and alternative hypotheses for this test are: <span class="math display">\[
 \begin{array}{ll}
 H_0: &amp; \beta_1  =  0\\
@@ -826,7 +814,7 @@ n=35 \\
 \end{array}
 \]</span></p>
 <p>The test statistic follows a <span class="math inline">\(t\)</span>-distribution.</p>
-<p><img src="Images/Manatees-RegressionOutput-HypTest.png"></p>
+<p><img src="Images/Manatees-RegressionOutput-HypTest.PNG"></p>
 <p>Remember, we are conducting a test for the slope, so the information we need is given in the block of output labeled “Hypothesis Test of the Regression Slope”. We find the value of <span class="math inline">\(t\)</span> is given as 15.491. <span class="math display">\[
 t=15.491
 \]</span></p>
@@ -844,7 +832,7 @@ df=33
 Note that in the output for Excel, the $P$-value is given in scientific notation.  Also note that there are two values under $P$-value.  One is for the slope and the other is for the y-intercept.  In this class we will always be looking at the slope, which is the bottom or the "Predictors".  So, our $P$-value for this test is written as:
 
 $$
-P\textrm{-value} = 0.000000000000000000105954
+P\textrm{-value} = 0.000000000000000000105954   
 $$
 <center>or as</center>
 $$
@@ -939,7 +927,7 @@ H_0: &amp; \beta_1=0 \\
 H_a: &amp; \beta_1\ne0
 \end{array}
 \]</span></p></li>
-<li>For bivariate inference we use software to calculate the sample coefficients, residuals, test statistic, <span class="math inline">\(P\)</span>-value, and confidence intervals of the true linear regression coefficients. <br></li>
+<li><p>For bivariate inference we use software to calculate the sample coefficients, residuals, test statistic, <span class="math inline">\(P\)</span>-value, and confidence intervals of the true linear regression coefficients. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -991,6 +979,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

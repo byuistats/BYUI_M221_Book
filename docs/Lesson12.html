@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -290,7 +278,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 1
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -326,7 +314,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 2
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -356,7 +344,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 3
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -380,7 +368,7 @@ $(document).ready(function () {
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     Unit 4
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -1193,9 +1181,9 @@ Difference = Stressful - Silence
 <div id="Q17" style="display:none;">
 <ul>
 <li><p>50 kJ/d</p></li>
-<li>Here is an illustration of an excerpt of the data in Excel:
+<li><p>Here is an illustration of an excerpt of the data in Excel:</p>
 <center>
-<img src="Images/REE-Data-Excel.png">
+<p><img src="Images/REE-Data-Excel.png"></p>
 </center></li>
 </ul>
 </div>
@@ -1999,7 +1987,7 @@ Remember…
 <li><p>The key characteristic of <strong>dependent samples</strong> (or <strong>matched pairs</strong>) is that knowing which subjects will be in group 1 determines which subjects will be in group 2.</p></li>
 <li><p>We use slightly different variables when conducting inference using dependent samples:</p>
 <p>Group 1 values: <span class="math inline">\(x_1\)</span>  Group 2 values: <span class="math inline">\(x_2\)</span>  Differences: <span class="math inline">\(d\)</span>  Population mean: <span class="math inline">\(\mu_d\)</span>  Sample mean: <span class="math inline">\(\bar d\)</span>  Sample standard deviation: <span class="math inline">\(s_d\)</span></p></li>
-<li>When conducting hypothesis tests using dependent samples, the null hypothesis is always <span class="math inline">\(\mu_d=0\)</span>, indicating that there is no change between the first population and the second population. The alternative hypothesis can be left-tailed (<span class="math inline">\(&lt;\)</span>), right-tailed(<span class="math inline">\(&gt;\)</span>), or two-tailed(<span class="math inline">\(\ne\)</span>). <br></li>
+<li><p>When conducting hypothesis tests using dependent samples, the null hypothesis is always <span class="math inline">\(\mu_d=0\)</span>, indicating that there is no change between the first population and the second population. The alternative hypothesis can be left-tailed (<span class="math inline">\(&lt;\)</span>), right-tailed(<span class="math inline">\(&gt;\)</span>), or two-tailed(<span class="math inline">\(\ne\)</span>). <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -2007,11 +1995,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -2051,6 +2039,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

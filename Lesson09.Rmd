@@ -218,6 +218,7 @@ To find the $P$-value, we first calculate the number of standard deviations that
 
 $$\displaystyle{ z= \frac{ \bar{x} − \mu}{\sigma/\sqrt{n}} = \frac{177.6−140}{26.7/\sqrt{48}}=9.757 }$$
 
+
 We use the applet to determine the probability of observing a value of $z$ that is as large or larger than $9.757$.  This is the same as the probability of observing a value of $\bar{x} =177.6$ or more pounds, given that the true mean really is $\mu = 140$ pounds.
 
 The area to the right of $z=9.757$ is so small, the normal probability applet gives the area as "8.6086e-23."  This is how a computer represents scientific notation.  This number is actually $8.6086ex10^{-23}$ or in other words, 0.000 000 000 000 000 000 000 086 086. This is the probability that a mean of $\bar x=177.6$ pounds or greater was observed just by chance assuming the true mean is $\mu = 140$ lbs.  This is very, very unlikely.  A more plausible explanation is that the true mean weight $\mu$ of individuals in the population is greater than 140 pounds.
