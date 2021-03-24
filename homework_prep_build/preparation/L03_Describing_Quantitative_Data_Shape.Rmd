@@ -53,8 +53,6 @@ Mean -
 
 Median -
 
-Mode -
-
 **Part II:**  
 
 ```{r,include=FALSE}
@@ -103,7 +101,6 @@ sampleE <- problem_6_CompE$n
 
 ```
 
-
 2. The following data set are data on stock performance of specific companies. Find the mean, median and mode for each of the companies A-E.  Click on the link to access this data set. ([MysteryInvestmentOpportunities](http://statistics.byuimath.com/index.php?title=Data))
 
 3. Make a histogram of the stock performance data for each of the companies. Paste your graphs here.
@@ -131,7 +128,6 @@ Variance = var(Observation)
 SD = sd(Observation)
 ```
 
-
 ```{r, include = FALSE}
 MysteryMelt = melt(Mystery, na.rm = TRUE)
 MysteryPlotReady = subset(MysteryMelt, variable != "Year")
@@ -141,23 +137,22 @@ Hist_L3_Prob7A <- ggplot(MysteryPlotReady, aes(x = value)) + geom_histogram(binw
 ggsave(Hist_L3_Prob7A,filename="../images/Hist_L3_Q07.png",width=4,height=4)
 ```
 
-
 ```{r,include=FALSE}
+
 if(params$key==TRUE){
 #solutions
 
-  Solution01 = data.frame(Part=c("Mean","Median","Mode"),
+  Solution01 = data.frame(Part=c("Mean","Median"),
                           Solution=c("It is the adding up the observed data and dividing by the number of observations in the data set.",
-                                       "The median is the middle value in a sorted data set",
-                                       "The most frequently occurring value"))
+                                       "The median is the middle value in a sorted data set"))
   
   Solution02 = data.frame(Part=c("Company A","Company B","Company C","Company D","Company E"),
                           Solution=c(
-                            paste("Mean:", meanA, "Median:" , medianA, "Mode", modeA, sep = " "),
-                            paste("Mean:", meanB, "Median:" , medianB,  "Mode", modeB, sep = " "),
-                            paste("Mean:", meanC, "Median:" , medianC,  "Mode", modeC, sep = " "),
-                            paste("Mean:", meanD, "Median:" , medianD,  "Mode", modeD, sep = " "),
-                            paste("Mean:", meanE, "Median:",  medianE, "Mode", modeE, sep = " ")))
+                            paste("Mean:", meanA, "Median:" , medianA, sep = " "),
+                            paste("Mean:", meanB, "Median:" , medianB, sep = " "),
+                            paste("Mean:", meanC, "Median:" , medianC, sep = " "),
+                            paste("Mean:", meanD, "Median:" , medianD, sep = " "),
+                            paste("Mean:", meanE, "Median:",  medianE,  sep = " ")))
   
   Solution03 = data.frame(Part="-",Solution="![HistA](../images/Hist_L3_Q07.png)")
   
@@ -175,7 +170,7 @@ if(params$key==TRUE){
 if(params$key==TRUE){
   cat("-->")
    cat("\n\n## Solutions\n\n")
-      cat("\n\n **Please note that the steps show rounded numbers, but that the final answers to the problems are calculated without rounding.**")
+      cat("\n\n **Please note that the steps show rounded numbers, but that the final answers to the problems are calculated without rounding.  (Questions 1-5) **")
 }
 ```
 

@@ -132,8 +132,7 @@ Variance = var(Observation)
 SD = sd(Observation)
 ```
 
-
-7.	Create a table to compute the standard deviation "by hand" using the data Severe Bird Flu Data, available on the wiki page, [(Lesson 03 Describing Quantitative Data; Shape, Center and Spread)](http://statistics.byuimath.com/index.php?title=Lesson_3:_Describing_Quantitative_Data:_Shape,_Center_%26_Spread). 
+7.	Create a table to compute the standard deviation "by hand" using the data Severe Bird Flu Data, available on this github page, [(Lesson 03 Describing Quantitative Data; Shape, Center and Spread)](https://byuistats.github.io/BYUI_M221_Book/Data). 
 
 ```{r, include = FALSE}
 MysteryMelt = melt(Mystery, na.rm = TRUE)
@@ -143,7 +142,6 @@ Hist_L3_Prob7A <- ggplot(MysteryPlotReady, aes(x = value)) + geom_histogram(binw
 
 ggsave(Hist_L3_Prob7A,filename="../images/Hist_L3_Q07.png",width=4,height=4)
 ```
-
 
 ```{r,include=FALSE}
 if(params$key==TRUE){
@@ -168,11 +166,11 @@ if(params$key==TRUE){
   
   Solution06 = data.frame(Part = "-",Solution = "Answers may vary, students should choose a company and justify why. They will probably choose B or C, because they have the highest means.")
   
-  #Solution10 = data.frame(Part = "-",Solution = )
+  Solution07 = data.frame(Part = "-",Solution = "0.377")  
+  
   
 } # end params == TRUE.  We use this so it doesn't have to run for non answer key path. 
 ```
-
 
 ```{r,echo=FALSE,results='asis'}
 if(params$key==TRUE){
@@ -181,8 +179,6 @@ if(params$key==TRUE){
       cat("\n\n **Please note that the steps show rounded numbers, but that the final answers to the problems are calculated without rounding.**")
 }
 ```
-
-
 
 ```{r,echo=FALSE,results='asis'}
 if(params$key==TRUE){
