@@ -1,5 +1,5 @@
 ---
-title: "Lesson 7: Probability Calculations involving a Mean Response"
+title: "Lesson 7: Calculating Probabilities involving the Sample Mean"
 output: 
   html_document:
     theme: cerulean

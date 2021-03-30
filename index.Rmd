@@ -27,7 +27,7 @@ Use the menus along the top, or the links in the table below to navigate to the 
 
 <table class="tmain">
 <tr>
-<td><p>[Lesson 1: (On Campus) Course Intro & Probability](Lesson01_Campus.html) <a href="javascript:showhide('lesson01_Campus_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 1: (On Campus) Course Intro & Probability](Lesson01_Campus.html) <a href="javascript:showhide('lesson01_Campus_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson01_Campus_Outcomes" style="display:none;">
 By the end of this lesson, you should be able to:
 
@@ -40,7 +40,7 @@ By the end of this lesson, you should be able to:
 </p></td>
 </tr>
 <tr>
-<td><p>[Lesson 1: (Online) Course Intro & Probability](Lesson01.html) <a href="javascript:showhide('lesson01_Online_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 1: (Online) Course Intro & Probability](Lesson01.html) <a href="javascript:showhide('lesson01_Online_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson01_Online_Outcomes" style="display:none;">
 By the end of this lesson, you should be able to:
 
@@ -54,7 +54,7 @@ By the end of this lesson, you should be able to:
 </p></td>
 </tr>
 <tr class="alt">
-<td><p>[Lesson 2: The Statistical Process & Design of Studies](Lesson02.html) <a href="javascript:showhide('lesson02_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 2: The Statistical Process & Design of Studies](Lesson02.html) <a href="javascript:showhide('lesson02_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson02_Outcomes" style="display:none;">
 By the end of this lesson, you should be able to:
 
@@ -73,7 +73,7 @@ By the end of this lesson, you should be able to:
 </p></td>
 </tr>
 <tr>
-<td><p>[Lesson 3: Describing Quantitative Data (Shape & Center)](Lesson03.html) <a href="javascript:showhide('lesson03_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 3: Describing Quantitative Data (Shape & Center)](Lesson03.html) <a href="javascript:showhide('lesson03_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson03_Outcomes" style="display:none;">
 
 By the end of this lesson, you should be able to:
@@ -88,7 +88,7 @@ By the end of this lesson, you should be able to:
 </p></td>
 </tr>
 <tr class="alt">
-<td><p>[Lesson 4: Describing Quantitative Data (Spread)](Lesson04.html) <a href="javascript:showhide('lesson04_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 4: Describing Quantitative Data (Spread)](Lesson04.html) <a href="javascript:showhide('lesson04_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson04_Outcomes" style="display:none;">
 
 By the end of this lesson, you should be able to:
@@ -105,7 +105,7 @@ By the end of this lesson, you should be able to:
 </p></td>
 </tr>
 <tr>
-<td><p>[Lesson 5: Normal Distributions](Lesson05.html) <a href="javascript:showhide('lesson05_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 5: Normal Distributions](Lesson05.html) <a href="javascript:showhide('lesson05_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson05_Outcomes" style="display:none;">
 
 By the end of this lesson, you should be able to:
@@ -120,7 +120,7 @@ By the end of this lesson, you should be able to:
 </p></td>
 </tr>
 <tr class="alt">
-<td><p>[Lesson 6: Distribution of Sample Means & The Central Limit Theorem](Lesson06.html) <a href="javascript:showhide('lesson06_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 6: Distribution of Sample Means & The Central Limit Theorem](Lesson06.html) <a href="javascript:showhide('lesson06_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson06_Outcomes" style="display:none;">
 
 By the end of this lesson, you should be able to:
@@ -133,7 +133,7 @@ By the end of this lesson, you should be able to:
 </p></td>
 </tr>
 <tr>
-<td><p>[Lesson 7: Probability Calculations involving a Mean Response](Lesson07.html) <a href="javascript:showhide('lesson07_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 7: Calculating Probabilities involving the Sample Mean](Lesson07.html) <a href="javascript:showhide('lesson07_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson07_Outcomes" style="display:none;">
 
 By the end of this lesson, you should be able to:
@@ -144,7 +144,7 @@ By the end of this lesson, you should be able to:
 </p></td>
 </tr>
 <tr class="alt">
-<td><p>[Lesson 8: Review for Exam 1](Lesson08.html) <a href="javascript:showhide('lesson08_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 8: Review for Exam 1](Lesson08.html) <a href="javascript:showhide('lesson08_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson08_Outcomes" style="display:none;">
 
 Unit 1 Review. The expectation on the Unit 1 Exam is that you should be able to do the following:
@@ -196,7 +196,7 @@ Unit 1 Review. The expectation on the Unit 1 Exam is that you should be able to 
 
 <table class="tmain">
 <tr>
-<td><p>[Lesson 9: Inference for One Mean: Sigma Known (Hypothesis Test)](Lesson09.html) <a href="javascript:showhide('lesson09_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 9: Inference for One Mean: Sigma Known (Hypothesis Test)](Lesson09.html) <a href="javascript:showhide('lesson09_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson09_Outcomes" style="display:none;">
 
 By the end of this lesson, you should be able to:
@@ -214,7 +214,7 @@ By the end of this lesson, you should be able to:
 </p></td>
 </tr>
 <tr class="alt">
-<td><p>[Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)](Lesson10.html) <a href="javascript:showhide('lesson10_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)](Lesson10.html) <a href="javascript:showhide('lesson10_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson10_Outcomes" style="display:none;">
 
 By the end of this lesson, you should be able to:
@@ -229,7 +229,7 @@ By the end of this lesson, you should be able to:
 </p></td>
 </tr>
 <tr>
-<td><p>[Lesson 11: Inference for One Mean: Sigma Unknown](Lesson11.html) <a href="javascript:showhide('lesson11_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 11: Inference for One Mean: Sigma Unknown](Lesson11.html) <a href="javascript:showhide('lesson11_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson11_Outcomes" style="display:none;">
 
 By the end of this lesson, you should be able to do the following with regards to confidence intervals and hypothesis testing.
@@ -254,7 +254,7 @@ By the end of this lesson, you should be able to do the following with regards t
 </p></td>
 </tr>
 <tr class="alt">
-<td><p>[Lesson 12: Inference for Two Means: Paired Data](Lesson12.html) <a href="javascript:showhide('lesson12_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 12: Inference for Two Means: Paired Data](Lesson12.html) <a href="javascript:showhide('lesson12_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson12_Outcomes" style="display:none;">
 
 By the end of this lesson, you should be able to do the following.
@@ -279,21 +279,21 @@ By the end of this lesson, you should be able to do the following.
 </p></td>
 </tr>
 <tr>
-<td><p>[Lesson 13: Inference for Two Means: Independent Samples](Lesson13.html) <a href="javascript:showhide('lesson13_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 13: Inference for Two Means: Independent Samples](Lesson13.html) <a href="javascript:showhide('lesson13_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson13_Outcomes" style="display:none;">
 
 </div>
 </p></td>
 </tr>
 <tr class="alt">
-<td><p>[Lesson 14: Inference for Several Means (ANOVA)](Lesson14.html) <a href="javascript:showhide('lesson14_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 14: Inference for Several Means (ANOVA)](Lesson14.html) <a href="javascript:showhide('lesson14_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson14_Outcomes" style="display:none;">
 
 </div>
 </p></td>
 </tr>
 <tr>
-<td><p>[Lesson 15: Review for Exam 2](Lesson15.html) <a href="javascript:showhide('lesson15_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 15: Review for Exam 2](Lesson15.html) <a href="javascript:showhide('lesson15_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson15_Outcomes" style="display:none;">
 
 </div>
@@ -314,35 +314,35 @@ By the end of this lesson, you should be able to do the following.
 
 <table class="tmain">
 <tr>
-<td><p>[Lesson 16: Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion](Lesson16.html) <a href="javascript:showhide('lesson16_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 16: Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion](Lesson16.html) <a href="javascript:showhide('lesson16_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson16_Outcomes" style="display:none;">
 
 </div>
 </p></td>
 </tr>
 <tr class="alt">
-<td><p>[Lesson 17: Inference for One Proportion](Lesson17.html) <a href="javascript:showhide('lesson17_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 17: Inference for One Proportion](Lesson17.html) <a href="javascript:showhide('lesson17_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson17_Outcomes" style="display:none;">
 
 </div>
 </p></td>
 </tr>
 <tr>
-<td><p>[Lesson 18: Inference for Two Proportions](Lesson18.html) <a href="javascript:showhide('lesson18_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 18: Inference for Two Proportions](Lesson18.html) <a href="javascript:showhide('lesson18_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson18_Outcomes" style="display:none;">
 
 </div>
 </p></td>
 </tr>
 <tr class="alt">
-<td><p>[Lesson 19: Inference for Independence of Categorical Data](Lesson19.html) <a href="javascript:showhide('lesson19_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 19: Inference for Independence of Categorical Data](Lesson19.html) <a href="javascript:showhide('lesson19_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson19_Outcomes" style="display:none;">
 
 </div>
 </p></td>
 </tr>
 <tr>
-<td><p>[Lesson 20: Review for Exam 3](Lesson20.html) <a href="javascript:showhide('lesson20_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 20: Review for Exam 3](Lesson20.html) <a href="javascript:showhide('lesson20_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson20_Outcomes" style="display:none;">
 
 </div>
@@ -363,28 +363,28 @@ By the end of this lesson, you should be able to do the following.
 
 <table class="tmain">
 <tr>
-<td><p>[Lesson 21: Describing Bivariate Data: Scatterplots, Correlation, & Covariance](Lesson21.html) <a href="javascript:showhide('lesson21_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 21: Describing Bivariate Data: Scatterplots, Correlation, & Covariance](Lesson21.html) <a href="javascript:showhide('lesson21_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson21_Outcomes" style="display:none;">
 
 </div>
 </p></td>
 </tr>
 <tr class="alt">
-<td><p>[Lesson 22: Simple Linear Regression](Lesson22.html) <a href="javascript:showhide('lesson22_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 22: Simple Linear Regression](Lesson22.html) <a href="javascript:showhide('lesson22_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson22_Outcomes" style="display:none;">
 
 </div>
 </p></td>
 </tr>
 <tr>
-<td><p>[Lesson 23: Inference for Bivariate Data](Lesson23.html) <a href="javascript:showhide('lesson23_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 23: Inference for Bivariate Data](Lesson23.html) <a href="javascript:showhide('lesson23_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson23_Outcomes" style="display:none;">
 
 </div>
 </p></td>
 </tr>
 <tr class="alt">
-<td><p>[Lesson 24: Review for Exam 4](Lesson24.html) <a href="javascript:showhide('lesson24_Outcomes')"><span style="font-size:8pt;float:right;">Open</span></a>
+<td><p>[Lesson 24: Review for Exam 4](Lesson24.html) <a href="javascript:showhide('lesson24_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
 <div id="lesson24_Outcomes" style="display:none;">
 
 </div>

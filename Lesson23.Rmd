@@ -278,9 +278,9 @@ This is a tremendously large value for t.  This indicates that there is a lot of
 
 <img src="./Images/SPSS_Estuarine_Croc_Regression_output_df.PNG"> -->
 
-Remember, the $t$ distribution has one number describing its degrees of freedom. The degrees of freedom for this test is not shown on the Excel sheet, but is easy to calculate by hand. Because we used the dataset to estimate two population parameters (a slope and a y-intercept) we have used two degrees of freedom. There are 28 observations in our dataset.  The degrees of freedom equals $28-26 = 2$ for the estuarine crocodile data.
+Remember, the $t$ distribution has one number describing its degrees of freedom. The degrees of freedom for this test is not shown on the Excel sheet, but is easy to calculate by hand. Because we used the dataset to estimate two population parameters (a slope and a y-intercept) we have used two degrees of freedom. There are 28 observations in our dataset.  The degrees of freedom equals $28-2 = 26$ for the estuarine crocodile data.
 $$
-df=26
+df= 28-2 = 26
 $$
 
 With a test statistic of $t=35.588$, we get a very small $P$-value, shown in cell Q9.  

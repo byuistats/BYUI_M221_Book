@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -471,7 +459,7 @@ $(document).ready(function () {
 </div>
 <div id="review-of-the-five-steps-of-the-statistical-process" class="section level2">
 <h2>Review of the Five Steps of the Statistical Process</h2>
-<p>We will use the five steps in the Statistical Process throughout the course. Recall the five steps (and the mnemonic “Daniel Can Discern More Truth) before you begin this lesson.</p>
+<p>We will use the five steps in the Statistical Process throughout the course. Recall the five steps (and the mnemonic "Daniel Can Discern More Truth) before you begin this lesson.</p>
 <table>
 <thead>
 <tr class="header">
@@ -830,11 +818,13 @@ Answer the following question:
 <h4>Median</h4>
 <p>The median is the middle value in a sorted data set. Half of the observations in the data set are below the median and half are above the median. To find the median, you:</p>
 <ul>
-<li>Sort the values from smallest to largest</li>
+<li>Sort the values from smallest to largest
+<ul>
 <li>Do one of the following:
 <ul>
 <li>If there are an odd number of values, the median is the middle value in the sorted list.</li>
 <li>If there are an even number of values, the median is the mean of the two middle values in the sorted list.</li>
+</ul></li>
 </ul></li>
 </ul>
 <div class="QuestionsHeading">
@@ -926,8 +916,8 @@ Excel Instructions
 <p><strong>To calculate most numerical summaries</strong> (such as the mean, median, and mode) in Excel, follow these general steps:</p>
 <ol style="list-style-type: decimal">
 <li><p>Open Excel.</p></li>
-<li>Enter the data into Excel. There should only be one data value per cell.<br />
-</li>
+<li><p>Enter the data into Excel. There should only be one data value per cell.<br />
+</p></li>
 <li><p>Next, in the cell where you would like to store the numerical summary type an “=”, followed by the name of the function and then an open parenthesis, “(”.</p></li>
 <li><p>Then, highlight the data (by clicking on it) to which you want to apply the function. The cell reference range will automatically be added to your formula. Then type a closed parenthesis, “)” and hit enter.</p></li>
 </ol>
@@ -991,11 +981,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1035,6 +1025,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

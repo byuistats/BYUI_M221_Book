@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -549,7 +537,7 @@ Excel Instructions
 <p><strong>To make a residual plot in Excel do the following:</strong></p>
 <ul>
 <li><p>Once the explanatory and response variables are entered into the correct columns in the <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> spreadsheet, you are given a scatter plot of residuals starting in cell S4, to the right of the hypothesis testing section.</p></li>
-<li>To create a residual plot on your own, you can highlight columns X and Y, then click on the Insert Ribbon, and then click on “Scatter” (or the icon that looks like a scatter plot). You want the first choice (Scatter with only markers), so select the first scatter plot choice. <br></li>
+<li><p>To create a residual plot on your own, you can highlight columns X and Y, then click on the Insert Ribbon, and then click on “Scatter” (or the icon that looks like a scatter plot). You want the first choice (Scatter with only markers), so select the first scatter plot choice. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -782,8 +770,8 @@ t=35.588
 <!-- The degrees of freedom are given in the ANOVA table in the "Residual" row under the "df" column:
 
 <img src="Images/SPSS_Estuarine_Croc_Regression_output_df.PNG"> -->
-<p>Remember, the <span class="math inline">\(t\)</span> distribution has one number describing its degrees of freedom. The degrees of freedom for this test is not shown on the Excel sheet, but is easy to calculate by hand. Because we used the dataset to estimate two population parameters (a slope and a y-intercept) we have used two degrees of freedom. There are 28 observations in our dataset. The degrees of freedom equals <span class="math inline">\(28-26 = 2\)</span> for the estuarine crocodile data. <span class="math display">\[
-df=26
+<p>Remember, the <span class="math inline">\(t\)</span> distribution has one number describing its degrees of freedom. The degrees of freedom for this test is not shown on the Excel sheet, but is easy to calculate by hand. Because we used the dataset to estimate two population parameters (a slope and a y-intercept) we have used two degrees of freedom. There are 28 observations in our dataset. The degrees of freedom equals <span class="math inline">\(28-2 = 26\)</span> for the estuarine crocodile data. <span class="math display">\[
+df= 28-2 = 26
 \]</span></p>
 <p>With a test statistic of <span class="math inline">\(t=35.588\)</span>, we get a very small <span class="math inline">\(P\)</span>-value, shown in cell Q9.</p>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
@@ -939,7 +927,7 @@ H_0: &amp; \beta_1=0 \\
 H_a: &amp; \beta_1\ne0
 \end{array}
 \]</span></p></li>
-<li>For bivariate inference we use software to calculate the sample coefficients, residuals, test statistic, <span class="math inline">\(P\)</span>-value, and confidence intervals of the true linear regression coefficients. <br></li>
+<li><p>For bivariate inference we use software to calculate the sample coefficients, residuals, test statistic, <span class="math inline">\(P\)</span>-value, and confidence intervals of the true linear regression coefficients. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -947,11 +935,11 @@ H_a: &amp; \beta_1\ne0
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -991,6 +979,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

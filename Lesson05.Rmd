@@ -206,7 +206,7 @@ An important part of the practice of statistics is finding areas under a normal 
 
 ### Introduction to the Normal Probability Applet
 
-The Normal Probability Applet is a visualization program offering statistics students insights and computations for the relationship between $z$-scores and areas under the standard normal curve. You can find a link to this applet on I-learn, under the Course Resources module. This app is also compatible to use on your phone, iPad, and other mobile devices.  The app is stored at http://byuimath.com/apps/normprob.html.  If you want a copy you can open from your desktop, just right click the link and save it to your computer.
+The Normal Probability Applet is a visualization program offering statistics students insights and computations for the relationship between $z$-scores and areas under the standard normal curve. You can find a link to this applet on I-learn, under the Course Resources module. This app is also compatible to use on your phone, iPad, and other mobile devices.  The app is stored at https://byuimath.com/apps/normprob.html.  If you want a copy you can open from your desktop, just right click the link and save it to your computer.
 
 To use this applet, follow these instructions:
 
@@ -221,13 +221,13 @@ To use this applet, follow these instructions:
 
 
 ```{r, echo=FALSE}
-htmltools::includeHTML("http://byuimath.com/apps/normprob.html")
+htmltools::includeHTML("https://byuimath.com/apps/normprob.html")
 ```
 </div>
 </center>
 ### Converting a $z$-score to a Probability
 
-Using this applet we can calculate proportions and probabilities based on the area under the normal curve. For the following examples, please open the [Normal Probability Applet](http://byuimath.com/apps/normprob.html){target="_blank"} and practice using it to find areas under the curve.
+Using this applet we can calculate proportions and probabilities based on the area under the normal curve. For the following examples, please open the [Normal Probability Applet](https://byuimath.com/apps/normprob.html){target="_blank"} and practice using it to find areas under the curve.
 
 #### Heights of Ghanaian Women
 
@@ -265,9 +265,22 @@ Notice that the area shaded in blue above 0.288 is very close to the area we fou
 
 ### Finding the Probability of Being Between Two Values
 
-The applet does not allow us to find the probability of being between two values directly, but we can calculate these probabilities with the applet as follows.
+The normal probability applet allows us to find the probability of being between two values as long as they are on opposite sides of the mean and equally distanced from the mean. By calculating two z-scores, one for each value, and then shading the area between them on the applet, we can find the probability.
 
 #### Heights of Ghanaian Women
+
+We illustrate the procedure for finding the probability that the height of a randomly selected young Ghanaian woman is between two values. For example, "What is the probability that a randomly selected young Ghanaian women will be between 155.0 cm and 163.0 cm tall?" Recall that for the height of young Ghanaian women, the population mean is $\mu=159.0$ cm and the population standard deviation is $\sigma=4.9$ cm. We want to find the probability that a randomly selected woman's height is between $155.0$ cm and $163.0$ cm. To do this we find the $z$-score for both values:
+
+$$z_1 = \frac{x- \mu}{\sigma} = \frac{155.0 - 159.0}{4.9} = -0.82$$
+$$z_2 = \frac{x - \mu}{\sigma} = \frac{163.0 -159.0}{4.9} = 0.82$$
+
+Notice that both z-scores give the same value, just one is positive and one is negative. Had the two values given different z-scores, we would have to take a more complicated approach to finding the area between them. (See the link below if you are interested, but this is bonus knowledge, and is not required for the course.)
+
+<div style="float:right;">
+<a href="javascript:showhide('asymetric')"><span style="font-size:8pt;">Show/Hide Asymetric Probability Calculations</span></a>
+<div id="asymetric" style="display:none;">
+
+The applet does not allow us to find the probability of being between two asymetric values directly, but we can calculate these probabilities with the applet as follows.
 
 We illustrate the procedure for finding the probability that the height of a randomly selected young Ghanaian woman is between two values. For example, "What is the probability that a randomly selected young Ghanaian women will be between 155.0 cm and 165.0 cm tall?" Recall that for the height of young Ghanaian women, the population mean is $159.0$ cm and the population standard deviation is $4.9$ cm. We want to find the probability that a randomly selected woman's height is between $155.0$ cm and $165.0$ cm. To do this we find the $z$-score for both values:
 
@@ -280,13 +293,28 @@ $$0.8888 - 0.2061 = 0.6827$$
 
 So the probability that the height of a randomly selected young Ghanaian woman will be between 155.0 cm and 165.0 cm is $0.6827$. This is the same as the proportion of all young Ghanaian women who are between 155.0 and 165.0 cm tall.
 
+</div>
+</div>
+<div style="clear:both;"></div>
+
+<br/>
+
+We now answer the question by finding the area under the normal density curve (i.e. the probability) between the z-scores of $z=-0.82$ and $z=0.82$. To find the area between $z = -0.82$ and $z = 0.82$, we simply type in our z-scores (or just one of them is all you need) and shade the middle area:
+
+<a href="https://byuimath.com/apps/normprob.html?z=0.82&left=0&right=0&mid=1" target="_blank"><img src="./Images/betweenProbNormalApp.png" width=500px></a>
+
+
+So the probability that the height of a randomly selected young Ghanaian woman will be between 155.0 cm and 163.0 cm is 0.5878. We found this answer from the "Area" box in the Normal Probability Applet as shown above. Another way to word this is to say that the proportion of all young Ghanaian women who are between 155.0 and 163.0 cm tall is $0.5878$, or that 58.78\% of Ghanaian women are between 1550. and 163.0 cm tall.
+
+
+
 ### Calculating Percentiles using a Normal Distribution
 
 A percentile is a number such that a specified percentage of the data are at or below this number. For example, the 25<sup>th</sup> percentile is the number in a data set that is greater than or equal to 25% of all the values in the data set. (For a more complete definition of percentiles, see 
 <!-- Lesson_3#Percentiles_and_Quartiles| need to figure out how to link content between pages -->
 [Lesson 3](Lesson03){target="_blank"}.) We can find the values of percentiles for a normal distribution by using the applet to calculate the $z$-score corresponding to a specified area and then plugging that $z$-score into our $z$-score equation and solving for $x$. The following instructions show how to find the 90<sup>th</sup> percentile of the distribution of batting averages.
 
-First, we need to find the $z$-score that corresponds to the 90<sup>th</sup> percentile using the [Normal Probability Applet](http://byuimath.com/apps/normprob.html){target="_blank"}.
+First, we need to find the $z$-score that corresponds to the 90<sup>th</sup> percentile using the [Normal Probability Applet](https://byuimath.com/apps/normprob.html?area=0.9&left=1&right=0&mid=1){target="_blank"}.
 
 - Click on the areas under the curve until only the areas *left* of the positive $z$-score are shaded blue.
 - Type the desired area (or percentile) in the box at the top of the graph. (Type in a number between 0 and 1. A 90<sup>th</sup> percentile would be entered as "0.900".)
@@ -501,11 +529,15 @@ One way to get the Format Axis menu to appear is to right-click anywhere on the 
 
 - A **normal density curve** is symmetric and bell-shaped. The curve lies above the horizontal axis and the total area under the curve is equal to 1. 
 
-- A **standard normal distribution** has a mean of 0 and a standard deviation of 1. The **68-95-99.7% rule** states that when data are normally distributed, approximately 68% of the data lie within 1 standard deviation from the mean, approximately 95% of the data lie within 2 standard deviations from the mean, and approximately 99.7% of the data lie within 3 standard deviations from the mean. 
+- A **standard normal distribution** has a mean of 0 and a standard deviation of 1. The **68-95-99.7% rule** states that when data are normally distributed, approximately 68% of the data lie within $z=1$ standard deviation ($\sigma$) from the mean, approximately 95% of the data lie within $z=2$ standard deviations from the mean, and approximately 99.7% of the data lie within $z=3$ standard deviations from the mean. 
 
 - A **z-score** tells us how many standard deviations away from the mean a given value is. It is calculated as: $\displaystyle{z = \frac{\text{value}-\text{mean}}{\text{standard deviation}} = \frac{x-\mu}{\sigma}}$
 
-- The **probability applet** allows us to use z-scores to calculate proportions, probabilities, and percentiles.
+- The [**Normal Probability Applet**](https://byuimath.com/apps/normprob.html) allows us to use z-scores to calculate proportions, probabilities, and percentiles of being "above," "below," or "between" certain values.
+
+- Percentiles can be calculated using the [**Normal Probability Applet**](https://byuimath.com/apps/normprob.html) by (1) shading the left tail only, (2) entering the desired percentile in the "Area" box, and (3) using the z-score from where the blue shaded region ends solve for $x$ in the equation $z=\frac{x-\mu}{\sigma}$.
+
+<br/>
 
 <!-- - A **Q-Q plot** is used to assess whether or not a set of data is normally distributed. -->
 </div>
