@@ -39,14 +39,17 @@ By the end of this lesson, you should be able to:
 <img src="./Images/StepsAll.png">
 <br>
 
-## Distribution of Sample Means
+## Introduction
 
-This lesson introduces two important results of statistical theory:
+This lesson introduces three important concepts of statistical theory:
 
-1. The Law of Large Numbers
+1. The Sampling Distribution of the Sample Mean
 2. The Central Limit Theorem
+3. The Law of Large Numbers
 
 In practice, a single sample of data is obtained from a population of interest in order to *make inference* about the entire population. However, even though only one sample is obtained, there are many, many random samples that are *possible* to obtain from a population. Understanding what *could happen* from a theoretical perspective is important in knowing how to use the single sample of data appropriately when making inference about a population. Let's look at an example.
+
+## Case Study: DDT's Negative Impact on Pregnant Women
 
 
 <img src="./Images/Cropduster_spraying_pesticides.jpg">
@@ -97,7 +100,7 @@ In this study, there was a lot of evidence that the mean DDE contamination in th
 
 <br>
 
-### Introduction to Sampling Distributions
+## Introduction to Sampling Distributions
 
 Now let's take a look behind the scenes to explore how statistical theory is used to create what is called a *sampling distribution of the sample mean.* This distribution becomes the key in making inference about a full population based on just the limited information in a single sample of data. To come to understand just what the phrase "sampling distribution of a sample mean" is describing, there are three items worth remembering.
 
@@ -111,7 +114,7 @@ Now let's take a look behind the scenes to explore how statistical theory is use
 
 Now, with those reminders in place, you will need to **work through the following tutorial** to come to understand the idea of a "sampling distribution of a sample mean." 
 
-#### A Tutorial on Sampling Distributions
+### A Tutorial on Sampling Distributions
 
 - **Step 1**:  Open [this applet](http://onlinestatbook.com/stat_sim/sampling_dist/index.html) and click on "Begin"    
 <a href="http://onlinestatbook.com/stat_sim/sampling_dist/index.html"><img src="./Images/samplingDistTutorial_Step1.png" width=400px;></a>
@@ -288,6 +291,12 @@ $$
 
 ## The Law of Large Numbers
 
+<div class="myemphasis">
+
+**The Law of Large Numbers** states that the spread of the sampling distribution of the sample mean will *get smaller* as the sample size $n$ gets larger. In other words, $\bar{x}$ will become closer to $\mu$ as the sample size $n$ becomes larger.
+
+</div>
+
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
 4. We just learned that the standard deviation of sample means is $\displaystyle{ \sigma \over \sqrt{n} }$. What happens to the standard deviation of sample means when the sample size is increased? 
@@ -318,7 +327,7 @@ Take a moment to study the difference between the Central Limit Theorem and the 
 
 ## Review of Key Concepts
 
-In order to "do statistics" we need to compute probabilities. This requires we know the distribution of the population of interest. The most important distributions in this course are the normal distributions, which were introduced in Lesson 05. In this lesson, we are interested in another very important distribution: the distribution of all the sample means, $\bar{x}$. In order to do statistics with $\bar{x}$ we need the distribution of $\bar{x}$ to be normal. There are two situations when the distribution of $\bar{x}$ is guaranteed to be normal (or as near as makes no difference). They are: 
+In order to "do statistics" we need to compute probabilities. This requires we know the distribution of the population of interest. The most important distributions in this course are the normal distributions, which were introduced in [Lesson 5](Lesson05.html). In this lesson, we are interested in another very important distribution: the distribution of all the sample means, $\bar{x}$. In order to do statistics with $\bar{x}$ we need the sampling distribution of $\bar{x}$ to be normal. There are two situations when the distribution of $\bar{x}$ is guaranteed to be normal (or at least very close to normal). They are: 
 
 - If the parent population is normal, the distribution of the sample means $\bar{x}$ will be normal, for every sample size $n$.
 - Even if the parent population is not normal, the Central Limit Theorem guarantees that the distribution of the sample mean $\bar{x}$ will be approximately normal if the sample size $n$ is large enough. **For this course, if** $n \geq 30$, **we will say the distribution of the sample means will be approximately normal** (even if the parent population is not normal).
@@ -327,6 +336,9 @@ The mean and standard deviation of $\bar{x}$ are:
 
 - The mean $\mu_{\bar{x}}$ of the sample means is the population mean $\mu$.
 - The standard deviation $\sigma_{\bar{x}}$ of the sample means is the population standard deviation $\sigma$ divided by the square root of $n$, $\sigma / \sqrt{n}$
+
+
+
 
 <br>
 

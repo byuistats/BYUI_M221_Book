@@ -304,7 +304,7 @@ $(document).ready(function () {
       <a href="Lesson06.html">Lesson 6: The Central Limit Theorem</a>
     </li>
     <li>
-      <a href="Lesson07.html">Lesson 7: Probability Calculations for a Sample Mean</a>
+      <a href="Lesson07.html">Lesson 7: Calculating Probabilities involving the Sample Mean</a>
     </li>
     <li>
       <a href="Lesson08.html">Lesson 8: Unit 1 Review</a>
@@ -410,8 +410,10 @@ $(document).ready(function () {
 <div id="TOC">
 <ul>
 <li><a href="#lesson-outcomes">Lesson Outcomes</a></li>
-<li><a href="#distribution-of-sample-means">Distribution of Sample Means</a><ul>
-<li><a href="#introduction-to-sampling-distributions">Introduction to Sampling Distributions</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#case-study-ddts-negative-impact-on-pregnant-women">Case Study: DDT’s Negative Impact on Pregnant Women</a></li>
+<li><a href="#introduction-to-sampling-distributions">Introduction to Sampling Distributions</a><ul>
+<li><a href="#a-tutorial-on-sampling-distributions">A Tutorial on Sampling Distributions</a></li>
 <li><a href="#what-is-the-distribution-of-sample-means">What is the Distribution of Sample Means?</a></li>
 </ul></li>
 <li><a href="#the-central-limit-theorem">The Central Limit Theorem</a><ul>
@@ -454,14 +456,18 @@ $(document).ready(function () {
 <p><br></p>
 <p><img src="Images/StepsAll.png"> <br></p>
 </div>
-<div id="distribution-of-sample-means" class="section level2">
-<h2>Distribution of Sample Means</h2>
-<p>This lesson introduces two important results of statistical theory:</p>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>This lesson introduces three important concepts of statistical theory:</p>
 <ol style="list-style-type: decimal">
-<li>The Law of Large Numbers</li>
+<li>The Sampling Distribution of the Sample Mean</li>
 <li>The Central Limit Theorem</li>
+<li>The Law of Large Numbers</li>
 </ol>
 <p>In practice, a single sample of data is obtained from a population of interest in order to <em>make inference</em> about the entire population. However, even though only one sample is obtained, there are many, many random samples that are <em>possible</em> to obtain from a population. Understanding what <em>could happen</em> from a theoretical perspective is important in knowing how to use the single sample of data appropriately when making inference about a population. Let’s look at an example.</p>
+</div>
+<div id="case-study-ddts-negative-impact-on-pregnant-women" class="section level2">
+<h2>Case Study: DDT’s Negative Impact on Pregnant Women</h2>
 <p><img src="Images/Cropduster_spraying_pesticides.jpg"></p>
 <p><img src="Images/Step1.png"></p>
 <p><strong>Step 1: Design the Study</strong></p>
@@ -484,8 +490,9 @@ $(document).ready(function () {
 <p><strong>Step 5: Take Action</strong></p>
 <p>In this study, there was a lot of evidence that the mean DDE contamination in the pregnant women was greater than 10 mg/kg. The probability of the DDE contamination in the women’s bodies exceeding 10 mg/kg (if there were no contamination) is approximately 0.02. This probability is low enough that there is reason for concern. Statistically speaking, there is sufficient evidence to suggest that the levels of DDE contamination are too high among South African women.</p>
 <p><br></p>
-<div id="introduction-to-sampling-distributions" class="section level3">
-<h3>Introduction to Sampling Distributions</h3>
+</div>
+<div id="introduction-to-sampling-distributions" class="section level2">
+<h2>Introduction to Sampling Distributions</h2>
 <p>Now let’s take a look behind the scenes to explore how statistical theory is used to create what is called a <em>sampling distribution of the sample mean.</em> This distribution becomes the key in making inference about a full population based on just the limited information in a single sample of data. To come to understand just what the phrase “sampling distribution of a sample mean” is describing, there are three items worth remembering.</p>
 <ul>
 <li>First, recall that a <em>distribution</em> is a graph (like a histogram) showing how data is spread out. In <a href="Lesson03.html">Lesson 3</a> we considered three main types of distributions of data:</li>
@@ -496,8 +503,8 @@ $(document).ready(function () {
 <li><p>Third, recall that the true mean of the full population is denoted by the symbol <span class="math inline">\(\mu\)</span> and that the standard deviation of the population is denoted by <span class="math inline">\(\sigma\)</span>.</p></li>
 </ul>
 <p>Now, with those reminders in place, you will need to <strong>work through the following tutorial</strong> to come to understand the idea of a “sampling distribution of a sample mean.”</p>
-<div id="a-tutorial-on-sampling-distributions" class="section level4">
-<h4>A Tutorial on Sampling Distributions</h4>
+<div id="a-tutorial-on-sampling-distributions" class="section level3">
+<h3>A Tutorial on Sampling Distributions</h3>
 <ul>
 <li><p><strong>Step 1</strong>: Open <a href="http://onlinestatbook.com/stat_sim/sampling_dist/index.html">this applet</a> and click on “Begin”<br />
 <a href="http://onlinestatbook.com/stat_sim/sampling_dist/index.html"><img src="Images/samplingDistTutorial_Step1.png" width=400px;></a></p></li>
@@ -570,7 +577,6 @@ Internet browser window large enough to see all controls. (Good)
 </ul>
 <p><img src="Images/samplingDistTutorial_Step10.png"></p>
 <p><br></p>
-</div>
 </div>
 <div id="what-is-the-distribution-of-sample-means" class="section level3">
 <h3>What is the Distribution of Sample Means?</h3>
@@ -656,6 +662,9 @@ Answer the following questions:
 </div>
 <div id="the-law-of-large-numbers" class="section level2">
 <h2>The Law of Large Numbers</h2>
+<div class="myemphasis">
+<p><strong>The Law of Large Numbers</strong> states that the spread of the sampling distribution of the sample mean will <em>get smaller</em> as the sample size <span class="math inline">\(n\)</span> gets larger. In other words, <span class="math inline">\(\bar{x}\)</span> will become closer to <span class="math inline">\(\mu\)</span> as the sample size <span class="math inline">\(n\)</span> becomes larger.</p>
+</div>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
@@ -689,7 +698,7 @@ Answer the following questions:
 </div>
 <div id="review-of-key-concepts" class="section level2">
 <h2>Review of Key Concepts</h2>
-<p>In order to “do statistics” we need to compute probabilities. This requires we know the distribution of the population of interest. The most important distributions in this course are the normal distributions, which were introduced in Lesson 05. In this lesson, we are interested in another very important distribution: the distribution of all the sample means, <span class="math inline">\(\bar{x}\)</span>. In order to do statistics with <span class="math inline">\(\bar{x}\)</span> we need the distribution of <span class="math inline">\(\bar{x}\)</span> to be normal. There are two situations when the distribution of <span class="math inline">\(\bar{x}\)</span> is guaranteed to be normal (or as near as makes no difference). They are:</p>
+<p>In order to “do statistics” we need to compute probabilities. This requires we know the distribution of the population of interest. The most important distributions in this course are the normal distributions, which were introduced in <a href="Lesson05.html">Lesson 5</a>. In this lesson, we are interested in another very important distribution: the distribution of all the sample means, <span class="math inline">\(\bar{x}\)</span>. In order to do statistics with <span class="math inline">\(\bar{x}\)</span> we need the sampling distribution of <span class="math inline">\(\bar{x}\)</span> to be normal. There are two situations when the distribution of <span class="math inline">\(\bar{x}\)</span> is guaranteed to be normal (or at least very close to normal). They are:</p>
 <ul>
 <li>If the parent population is normal, the distribution of the sample means <span class="math inline">\(\bar{x}\)</span> will be normal, for every sample size <span class="math inline">\(n\)</span>.</li>
 <li>Even if the parent population is not normal, the Central Limit Theorem guarantees that the distribution of the sample mean <span class="math inline">\(\bar{x}\)</span> will be approximately normal if the sample size <span class="math inline">\(n\)</span> is large enough. <strong>For this course, if</strong> <span class="math inline">\(n \geq 30\)</span>, <strong>we will say the distribution of the sample means will be approximately normal</strong> (even if the parent population is not normal).</li>
