@@ -21,8 +21,8 @@ navbar:
         - text: "Lesson 5: Normal Distributions"
           href: Lesson05.html
         - text: "Lesson 6: The Central Limit Theorem"
-          href: Lesson06.html
-        - text: "Lesson 7: Probability Calculations for a Sample Mean"
+          href: Lesson06.html          
+        - text: "Lesson 7: Calculating Probabilities involving the Sample Mean"
           href: Lesson07.html
         - text: "Lesson 8: Unit 1 Review"
           href: Lesson08.html

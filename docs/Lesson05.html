@@ -1404,9 +1404,16 @@ setDefaults();
 </div>
 <div id="finding-the-probability-of-being-between-two-values" class="section level3">
 <h3>Finding the Probability of Being Between Two Values</h3>
-<p>The applet does not allow us to find the probability of being between two values directly, but we can calculate these probabilities with the applet as follows.</p>
+<p>The normal probability applet allows us to find the probability of being between two values as long as they are on opposite sides of the mean and equally distanced from the mean. By calculating two z-scores, one for each value, and then shading the area between them on the applet, we can find the probability.</p>
 <div id="heights-of-ghanaian-women-1" class="section level4">
 <h4>Heights of Ghanaian Women</h4>
+<p>We illustrate the procedure for finding the probability that the height of a randomly selected young Ghanaian woman is between two values. For example, “What is the probability that a randomly selected young Ghanaian women will be between 155.0 cm and 163.0 cm tall?” Recall that for the height of young Ghanaian women, the population mean is <span class="math inline">\(\mu=159.0\)</span> cm and the population standard deviation is <span class="math inline">\(\sigma=4.9\)</span> cm. We want to find the probability that a randomly selected woman’s height is between <span class="math inline">\(155.0\)</span> cm and <span class="math inline">\(163.0\)</span> cm. To do this we find the <span class="math inline">\(z\)</span>-score for both values:</p>
+<p><span class="math display">\[z_1 = \frac{x- \mu}{\sigma} = \frac{155.0 - 159.0}{4.9} = -0.82\]</span> <span class="math display">\[z_2 = \frac{x - \mu}{\sigma} = \frac{163.0 -159.0}{4.9} = 0.82\]</span></p>
+<p>Notice that both z-scores give the same value, just one is positive and one is negative. Had the two values given different z-scores, we would have to take a more complicated approach to finding the area between them. (See the link below if you are interested, but this is bonus knowledge, and is not required for the course.)</p>
+<div style="float:right;">
+<a href="javascript:showhide('asymetric')"><span style="font-size:8pt;">Show/Hide Asymetric Probability Calculations</span></a>
+<div id="asymetric" style="display:none;">
+<p>The applet does not allow us to find the probability of being between two asymetric values directly, but we can calculate these probabilities with the applet as follows.</p>
 <p>We illustrate the procedure for finding the probability that the height of a randomly selected young Ghanaian woman is between two values. For example, “What is the probability that a randomly selected young Ghanaian women will be between 155.0 cm and 165.0 cm tall?” Recall that for the height of young Ghanaian women, the population mean is <span class="math inline">\(159.0\)</span> cm and the population standard deviation is <span class="math inline">\(4.9\)</span> cm. We want to find the probability that a randomly selected woman’s height is between <span class="math inline">\(155.0\)</span> cm and <span class="math inline">\(165.0\)</span> cm. To do this we find the <span class="math inline">\(z\)</span>-score for both values:</p>
 <p><span class="math display">\[z_1 = \frac{x- \mu}{\sigma} = \frac{155.0 - 159.0}{4.9} = -0.82\]</span> <span class="math display">\[z_2 = \frac{x - \mu}{\sigma} = \frac{165.0 -159.0}{4.9} = 1.22\]</span></p>
 <p>We now answer the question by finding the area under the normal density curve (i.e. the probability) to the left of <span class="math inline">\(z = 1.22\)</span> which is <span class="math inline">\(0.8888\)</span> and also the area under the normal density curve to the left of <span class="math inline">\(z = -0.82\)</span> which is <span class="math inline">\(0.2061\)</span>. To find the area between <span class="math inline">\(z = 1.22\)</span> and <span class="math inline">\(z = -0.82\)</span>, we subtract the smaller area from the larger.</p>
@@ -1414,10 +1421,19 @@ setDefaults();
 <p>So the probability that the height of a randomly selected young Ghanaian woman will be between 155.0 cm and 165.0 cm is <span class="math inline">\(0.6827\)</span>. This is the same as the proportion of all young Ghanaian women who are between 155.0 and 165.0 cm tall.</p>
 </div>
 </div>
+<div style="clear:both;">
+
+</div>
+<p><br/></p>
+<p>We now answer the question by finding the area under the normal density curve (i.e. the probability) between the z-scores of <span class="math inline">\(z=-0.82\)</span> and <span class="math inline">\(z=0.82\)</span>. To find the area between <span class="math inline">\(z = -0.82\)</span> and <span class="math inline">\(z = 0.82\)</span>, we simply type in our z-scores (or just one of them is all you need) and shade the middle area:</p>
+<p><a href="https://byuimath.com/apps/normprob.html?z=0.82&left=0&right=0&mid=1" target="_blank"><img src="Images/betweenProbNormalApp.png" width=500px></a></p>
+<p>So the probability that the height of a randomly selected young Ghanaian woman will be between 155.0 cm and 163.0 cm is 0.5878. We found this answer from the “Area” box in the Normal Probability Applet as shown above. Another way to word this is to say that the proportion of all young Ghanaian women who are between 155.0 and 163.0 cm tall is <span class="math inline">\(0.5878\)</span>, or that 58.78% of Ghanaian women are between 1550. and 163.0 cm tall.</p>
+</div>
+</div>
 <div id="calculating-percentiles-using-a-normal-distribution" class="section level3">
 <h3>Calculating Percentiles using a Normal Distribution</h3>
 <p>A percentile is a number such that a specified percentage of the data are at or below this number. For example, the 25<sup>th</sup> percentile is the number in a data set that is greater than or equal to 25% of all the values in the data set. (For a more complete definition of percentiles, see <!-- Lesson_3#Percentiles_and_Quartiles| need to figure out how to link content between pages --> <a href="Lesson03" target="_blank">Lesson 3</a>.) We can find the values of percentiles for a normal distribution by using the applet to calculate the <span class="math inline">\(z\)</span>-score corresponding to a specified area and then plugging that <span class="math inline">\(z\)</span>-score into our <span class="math inline">\(z\)</span>-score equation and solving for <span class="math inline">\(x\)</span>. The following instructions show how to find the 90<sup>th</sup> percentile of the distribution of batting averages.</p>
-<p>First, we need to find the <span class="math inline">\(z\)</span>-score that corresponds to the 90<sup>th</sup> percentile using the <a href="https://byuimath.com/apps/normprob.html" target="_blank">Normal Probability Applet</a>.</p>
+<p>First, we need to find the <span class="math inline">\(z\)</span>-score that corresponds to the 90<sup>th</sup> percentile using the <a href="https://byuimath.com/apps/normprob.html?area=0.9&amp;left=1&amp;right=0&amp;mid=1" target="_blank">Normal Probability Applet</a>.</p>
 <ul>
 <li>Click on the areas under the curve until only the areas <em>left</em> of the positive <span class="math inline">\(z\)</span>-score are shaded blue.</li>
 <li>Type the desired area (or percentile) in the box at the top of the graph. (Type in a number between 0 and 1. A 90<sup>th</sup> percentile would be entered as “0.900”.)</li>
@@ -1670,10 +1686,12 @@ Remember…
 <div class="Summary">
 <ul>
 <li><p>A <strong>normal density curve</strong> is symmetric and bell-shaped. The curve lies above the horizontal axis and the total area under the curve is equal to 1.</p></li>
-<li><p>A <strong>standard normal distribution</strong> has a mean of 0 and a standard deviation of 1. The <strong>68-95-99.7% rule</strong> states that when data are normally distributed, approximately 68% of the data lie within 1 standard deviation from the mean, approximately 95% of the data lie within 2 standard deviations from the mean, and approximately 99.7% of the data lie within 3 standard deviations from the mean.</p></li>
+<li><p>A <strong>standard normal distribution</strong> has a mean of 0 and a standard deviation of 1. The <strong>68-95-99.7% rule</strong> states that when data are normally distributed, approximately 68% of the data lie within <span class="math inline">\(z=1\)</span> standard deviation (<span class="math inline">\(\sigma\)</span>) from the mean, approximately 95% of the data lie within <span class="math inline">\(z=2\)</span> standard deviations from the mean, and approximately 99.7% of the data lie within <span class="math inline">\(z=3\)</span> standard deviations from the mean.</p></li>
 <li><p>A <strong>z-score</strong> tells us how many standard deviations away from the mean a given value is. It is calculated as: <span class="math inline">\(\displaystyle{z = \frac{\text{value}-\text{mean}}{\text{standard deviation}} = \frac{x-\mu}{\sigma}}\)</span></p></li>
-<li><p>The <strong>probability applet</strong> allows us to use z-scores to calculate proportions, probabilities, and percentiles.</p></li>
+<li><p>The <a href="https://byuimath.com/apps/normprob.html"><strong>Normal Probability Applet</strong></a> allows us to use z-scores to calculate proportions, probabilities, and percentiles of being “above,” “below,” or “between” certain values.</p></li>
+<li><p>Percentiles can be calculated using the <a href="https://byuimath.com/apps/normprob.html"><strong>Normal Probability Applet</strong></a> by (1) shading the left tail only, (2) entering the desired percentile in the “Area” box, and (3) using the z-score from where the blue shaded region ends solve for <span class="math inline">\(x\)</span> in the equation <span class="math inline">\(z=\frac{x-\mu}{\sigma}\)</span>.</p></li>
 </ul>
+<p><br/></p>
 <!-- - A **Q-Q plot** is used to assess whether or not a set of data is normally distributed. -->
 </div>
 <p><br></p>

@@ -1,5 +1,5 @@
 ---
-title: "Lesson 7: Probability Calculations involving a Mean Response"
+title: "Lesson 7: Calculating Probabilities involving the Sample Mean"
 output: 
   html_document:
     theme: cerulean
@@ -28,7 +28,7 @@ output:
 
 By the end of this lesson, you should be able to:
 
--  Calculate probabilities using a distribution of sample means.
+*  Calculate probabilities using a distribution of sample means.
 </div>
 <br>
 
