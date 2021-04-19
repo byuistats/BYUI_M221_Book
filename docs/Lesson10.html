@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -401,7 +389,7 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+  <a href="./Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -583,7 +571,7 @@ Variance
 <!--
 <center>
 {| class="wikitable"
-! 
+!
 ! Sample Statistic
 ! Population Parameter
 |-
@@ -606,7 +594,7 @@ Variance
 </center>
 -->
 <p>The statistics above are called <strong>point estimators</strong> because they are just one number (one point on a number line) that is used to estimate a parameter. Parameters are generally unknown values. Think about the mean. If <span class="math inline">\(\mu\)</span> is unknown, how do we know if <span class="math inline">\(\bar x\)</span> is close to it?</p>
-<p>The short answer is that we will never know <em>for sure</em> if <span class="math inline">\(\bar x\)</span> is close to <span class="math inline">\(\mu\)</span>. This does not mean that we are helpless. The laws of probability and the normal distribution provide a way for us to create a range of plausible values for a parameter (e.g. <span class="math inline">\(\mu\)</span>) based on a statistic (e.g. <span class="math inline">\(\bar x\)</span>).</p>
+<p>The short answer is that we will never know <em>for sure</em> if <span class="math inline">\(\bar x\)</span> is close to <span class="math inline">\(\mu\)</span>. This does not mean that we are helpless. The laws of probability and the normal distribution provide a way for us to create a range of plausible values for a parameter (e.g. <span class="math inline">\(\mu\)</span>) based on a statistic (e.g. <span class="math inline">\(\bar x\)</span>).</p>
 </div>
 <div id="interval-estimators" class="section level3">
 <h3>Interval Estimators</h3>
@@ -660,7 +648,7 @@ Answer the following questions:
 <p>Remember, the standard deviation of <span class="math inline">\(\bar x\)</span> is <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span>. For the variable <span class="math inline">\(\bar x\)</span>, two standard deviations would be equal to <span class="math inline">\(2 \frac{\sigma}{\sqrt{n}}\)</span>.</p>
 <p>If we collect a random sample from a population and <span class="math inline">\(\bar x\)</span> is normally distributed, then about 95% of the time the sample mean <span class="math inline">\(\bar x\)</span> will be less than <span class="math inline">\(2 \frac{\sigma}{\sqrt{n}}\)</span> units away from the population mean <span class="math inline">\(\mu\)</span>. Notice that this is true, whether or not we know <span class="math inline">\(\mu\)</span>.</p>
 <p>We can express this as a probability statement:</p>
-<p><span class="math display">\[ 
+<p><span class="math display">\[
 P\left( \mu - 2 \frac{\sigma}{\sqrt{n}} &lt; \bar X &lt; \mu + 2 \frac{\sigma}{\sqrt{n}} \right) \approx 0.95
 \]</span></p>
 <p>Here is the magic: If <span class="math inline">\(\bar x\)</span> is within 2 standard deviations of <span class="math inline">\(\mu\)</span>, then <span class="math inline">\(\mu\)</span> is within 2 standard deviations of <span class="math inline">\(\bar x\)</span>. It may seem silly to state it, but this is very important.</p>
@@ -673,9 +661,9 @@ P\left( \mu - 2 \frac{\sigma}{\sqrt{n}} &lt; \bar X &lt; \mu + 2 \frac{\sigma}{\
 <p>Starting with <span class="math display">\[\mu - 2 \frac{\sigma}{\sqrt{n}} &lt; \bar X &lt; \mu + 2 \frac{\sigma}{\sqrt{n}}\]</span> We subtract <span class="math inline">\(\mu\)</span> from all parts of the inequality: <span class="math display">\[\mu - 2 \frac{\sigma}{\sqrt{n}} - \mu &lt; \bar X - \mu  &lt; \mu + 2 \frac{\sigma}{\sqrt{n}} - \mu\]</span> Which reduces to <span class="math display">\[- 2 \frac{\sigma}{\sqrt{n}}  &lt; \bar X - \mu  &lt;  2 \frac{\sigma}{\sqrt{n}}\]</span> Now, subtract <span class="math inline">\(\bar X\)</span> from all the terms: <span class="math display">\[- 2 \frac{\sigma}{\sqrt{n}} - \bar X &lt; \bar X - \mu -\bar X &lt;  2 \frac{\sigma}{\sqrt{n}} -\bar X\]</span> And this simplifies to <span class="math display">\[- 2 \frac{\sigma}{\sqrt{n}}-\bar X &lt; -\mu &lt;  2 \frac{\sigma}{\sqrt{n}}-\bar X\]</span> Multiplying all the terms by <span class="math inline">\(-1\)</span>, we get <span class="math display">\[2 \frac{\sigma}{\sqrt{n}}+\bar X &gt; \mu &gt;  -2 \frac{\sigma}{\sqrt{n}}+\bar X\]</span> Rewriting this reversing the order of the terms, we get <span class="math display">\[\bar X - 2 \frac{\sigma}{\sqrt{n}} &lt; \mu &lt;  \bar X + 2 \frac{\sigma}{\sqrt{n}}\]</span></p>
 </div>
 <p><br></p>
-<p>So, the statement <span class="math display">\[ 
+<p>So, the statement <span class="math display">\[
 P\left( \mu - 2 \frac{\sigma}{\sqrt{n}} &lt; \bar X &lt; \mu + 2 \frac{\sigma}{\sqrt{n}} \right) \approx 0.95
-\]</span> is equivalent to the statement <span class="math display">\[ 
+\]</span> is equivalent to the statement <span class="math display">\[
 P\left( \bar X - 2 \frac{\sigma}{\sqrt{n}} &lt; \mu &lt; \bar X + 2 \frac{\sigma}{\sqrt{n}} \right) \approx 0.95
 \]</span></p>
 <p><br></p>
@@ -686,13 +674,13 @@ P\left( \bar X - 2 \frac{\sigma}{\sqrt{n}} &lt; \mu &lt; \bar X + 2 \frac{\sigma
 <h2>Putting It All Together: Confidence Intervals for <span class="math inline">\(\mu\)</span> when <span class="math inline">\(\sigma\)</span> is Known</h2>
 <p>Notice that if we know <span class="math inline">\(\sigma\)</span>, then with approximately 95% confidence, <span class="math inline">\(\mu\)</span> will be between the following two values: <span class="math display">\[\left( \bar X - 2 \frac{\sigma}{\sqrt{n}}, ~ \bar X + 2 \frac{\sigma}{\sqrt{n}} \right)\]</span> This equation gives a confidence interval for <span class="math inline">\(\mu\)</span>.</p>
 <p>A confidence interval is actually a point estimate <span class="math inline">\(\left( \bar x \right)\)</span> plus or minus the margin of error <span class="math inline">\(\left( 2 \frac{\sigma}{\sqrt{n}} \right)\)</span>.</p>
-<p>We use the letter <span class="math inline">\(m\)</span> to denote the margin of error: <span class="math display">\[m = 2 \frac{\sigma}{\sqrt{n}}\]</span> Using this definition for <span class="math inline">\(m\)</span>, our confidence interval can be written as <span class="math display">\[( \bar x - m, ~ \bar x + m )\]</span> or <span class="math display">\[\bar x \pm m\]</span> This pattern will be repeated throughout the course as we create confidence intervals of the form: <span class="math display">\[ 
-\left( 
+<p>We use the letter <span class="math inline">\(m\)</span> to denote the margin of error: <span class="math display">\[m = 2 \frac{\sigma}{\sqrt{n}}\]</span> Using this definition for <span class="math inline">\(m\)</span>, our confidence interval can be written as <span class="math display">\[( \bar x - m, ~ \bar x + m )\]</span> or <span class="math display">\[\bar x \pm m\]</span> This pattern will be repeated throughout the course as we create confidence intervals of the form: <span class="math display">\[
+\left(
 \begin{align}
 point~ ~ ~ &amp;      &amp; margin~  &amp;        &amp; point~ ~ ~ &amp;      &amp; margin~  \\
 estimate   &amp; ~ ~- &amp; of~error &amp; ~ ~,   &amp; estimate   &amp; ~ ~+ &amp; of~error
 \end{align}
-\right) 
+\right)
 \]</span> or <span class="math display">\[(\text{point estimate}) \pm (\text{margin of error})\]</span> </br> <a id="z"></a></p>
 <div id="a-little-more-precision" class="section level3">
 <h3>A Little More Precision</h3>
@@ -709,10 +697,12 @@ Answer the following question:
 <a href="javascript:showhide('hint')"><span style="font-size:8pt;">Click here for a hint</span></a>
 <div id="hint" style="display:none;">
 <ul>
-<li>To find the value of <span class="math inline">\(z^*\)</span>, given a specific confidence level, do the following:</li>
+<li>To find the value of <span class="math inline">\(z^*\)</span>, given a specific confidence level, do the following:
+<ul>
 <li>*Open the applet at <a href="http://statistics.byuimath.com/index.php?title=Normal_Probability_Applet" target="_blank">Normal Probability Applet</a></li>
 <li>Shade the area between the two red lines (the middle portion of the graph) only and enter the decimal value for the desired percentage (e.g. 0.95 for 95%) in the <em>Area</em> box.</li>
 <li>The value of <span class="math inline">\(z^*\)</span> will be displayed below. Two numbers will be given along the horizontal axis. The only difference in these numbers is their sign: one is positive and one is negative. The positive value is the desired <span class="math inline">\(z^*\)</span>.</li>
+</ul></li>
 </ul>
 </div>
 <p><br></p>
@@ -1062,7 +1052,7 @@ m &amp;= z^* \frac{\sigma}{\sqrt{n}} \\
 <div id="Q12" style="display:none;">
 <center>
 <span class="math display">\[
-n = 792 
+n = 792
 \]</span>
 </center>
 </div>
@@ -1188,7 +1178,7 @@ n &amp;= \left( \frac{z^*\sigma}{m} \right)^2 \\
 \begin{array}{1cl}
 n &amp;= \left( \frac{z^*\sigma}{m} \right)^2 \\
 &amp;= \left( \frac{2.576 \cdot 28705}{2000} \right)^2 \\
-&amp;= 1366.7
+&amp;= 1366.9
 \end{array}
 \]</span>
 </center>
@@ -1212,7 +1202,7 @@ n &amp;= \left( \frac{z^*\sigma}{m} \right)^2 \\
 <h3>Example: Grade Inflation</h3>
 <p>The administration at BYU-Idaho is concerned about the possibility of grade inflation in their courses. Grades in a course are coded on a scale from 0 to 4, as given in the following table:</p>
 <center>
-<table style="width:85%;">
+<table style="width:89%;">
 <colgroup>
 <col width="5%" />
 <col width="8%" />
@@ -1225,7 +1215,7 @@ n &amp;= \left( \frac{z^*\sigma}{m} \right)^2 \\
 <col width="8%" />
 <col width="5%" />
 <col width="8%" />
-<col width="4%" />
+<col width="8%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1311,7 +1301,7 @@ n &amp;= \left( \frac{z^*\sigma}{m} \right)^2 \\
 \begin{array}{1cl}
 n &amp;= \left( \frac{z^*\sigma}{m} \right)^2 \\
 &amp;= \left( \frac{2.3263 \cdot 0.68}{0.2} \right)^2 \\
-&amp;= 62.6 
+&amp;= 62.6
 \end{array}
 \]</span>
 </center>
@@ -1374,7 +1364,7 @@ Remember…
 <ul>
 <li><p>The <strong>margin of error</strong> gives an estimate of the variability of responses. It is calculated as <span class="math inline">\(\displaystyle{m=z^*\frac{\sigma}{\sqrt{n}}}\)</span> where <span class="math inline">\(z^*\)</span> represents a calculated z-score corresponding to a particular confidence level.</p></li>
 <li><p>A <strong>confidence interval</strong> is an interval estimator used to give a range of plausible values for a parameter. The width of a confidence interval depends on the chosen confidence level (and its corresponding value of <span class="math inline">\(z^*\)</span>) as well as the sample size (<span class="math inline">\(n\)</span>). This is the equation for calculating confidence intervals: <span class="math display">\[\displaystyle{\left(\bar x-z^*\frac{\sigma}{\sqrt{n}},~\bar x+z^*\frac{\sigma}{\sqrt{n}}\right)}\]</span></p></li>
-<li>The <strong>sample size formula</strong> allows us to estimate the number of observations required to obtain a specific margin of error. <span class="math inline">\(\displaystyle{n=\left(\frac{z^*\sigma}{m}\right)^2}\)</span></li>
+<li><p>The <strong>sample size formula</strong> allows us to estimate the number of observations required to obtain a specific margin of error. <span class="math inline">\(\displaystyle{n=\left(\frac{z^*\sigma}{m}\right)^2}\)</span></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -1382,11 +1372,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1426,6 +1416,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

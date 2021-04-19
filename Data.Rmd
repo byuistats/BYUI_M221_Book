@@ -1,13 +1,13 @@
 ---
 title: "Data"
-output: 
+output:
   html_document:
     theme: cerulean
     toc: true
     toc_float: false
 ---
 
-This page contains the data files that are used throughout the course in the wiki, preparation assignments, homework, and exams. It is recommended that students download the zip file and store all the data files for the semester on their personal computer for easy access. Alternatively, you may return to this page to download individual data files.
+This page contains the data files that are used throughout the course: in the textbook, quizzes, and homework. Links will usually be found in the text or quizzes when the file is referenced as well.
 
 <br/>
 
@@ -16,7 +16,7 @@ This page contains the data files that are used throughout the course in the wik
 <br/>
 
 <div style="padding-left:15px; color:gray;">
-You may download the zip folder with all the files: [ExcelSpreadsheets.zip](./Data/ExcelSpreadsheets.zip)
+You may download the old version of the toolbox here: [ExcelSpreadsheets.zip](./Data/ExcelSpreadsheets.zip)
 </div>
 
 Or download individual files:
@@ -81,6 +81,8 @@ Or download individual files:
 
 [CuckooEggs.xlsx](./Data/CuckooEggs.xlsx)                                                              
 
+[Dart_Expert_Dow_6month.xlsx](./Data/Dart_Expert_Dow_6month.xlsx)
+
 [DASL-Cheese.xlsx](./Data/DASL-Cheese.xlsx)                                                            
 
 [DASL-Fiber.xlsx](./Data/DASL-Fiber.xlsx)                                                              
@@ -109,7 +111,9 @@ Or download individual files:
 
 [Estuarine_Crocodile_(Modified).xlsx](./Data/Estuarine_Crocodile_(Modified).xlsx)                      
 
-[EuroWeight.xlsx](./Data/EuroWeight.xlsx)                                                              
+[EuroWeight.xlsx](./Data/EuroWeight.xlsx)                 
+
+[Exam 1 and Exam 2 Scores.xlsx](./Data/Exam 1 and Exam 2 Scores.xlsx)
 
 [ExercisedBoneDensity.xlsx](./Data/ExercisedBoneDensity.xlsx)                                          
 
@@ -129,7 +133,7 @@ Or download individual files:
 
 [HubblesConstant-SupernovasUpTo250Mpc.xlsx](./Data/HubblesConstant-SupernovasUpTo250Mpc.xlsx)          
 
-[IllinoisBirthWeights.xlsx](./Data/IllinoisBirthWeights.xlsx) 
+[IllinoisBirthWeights.xlsx](./Data/IllinoisBirthWeights.xlsx)
 
 
 [IllinoisBirthWeightsTwoVar.xlsx](./Data/IllinoisBirthWeightsTwoVar.xlsx)
@@ -177,7 +181,9 @@ Or download individual files:
 
 [PineBeetle.xlsx](./Data/PineBeetle.xlsx)                                                              
 
-[ProteinRequirement-Campbell.xlsx](./Data/ProteinRequirement-Campbell.xlsx)                            
+[ProteinRequirement-Campbell.xlsx](./Data/ProteinRequirement-Campbell.xlsx)              
+
+[Prozac.xlsx](./Data/Prozac.xlsx)
 
 [PTCtasting.xlsx](./Data/PTCtasting.xlsx)                                                              
 
@@ -209,13 +215,19 @@ Or download individual files:
 
 [ToyotaPrius2005.xlsx](./Data/ToyotaPrius2005.xlsx)                                                    
 
-[TwinsDiabetes.xlsx](./Data/TwinsDiabetes.xlsx)                                                        
+[TwinsDiabetes.xlsx](./Data/TwinsDiabetes.xlsx)
+
+
+[TwinWeights.xlsx](./Data/TwinWeights.xlsx)
+
 
 [UraniumPlantData-Lead.xlsx](./Data/UraniumPlantData-Lead.xlsx)                                        
 
 [UsedHummersNYandLA.xls](./Data/UsedHummersNYandLA.xls)                                                
 
-[UsedHummersNYandLA.xlsx](./Data/UsedHummersNYandLA.xlsx)                                              
+[UsedHummersNYandLA.xlsx](./Data/UsedHummersNYandLA.xlsx)   
+
+[Vehicles.xlsx](./Data/Vehicles.xlsx)                                          
 
 [VertebralHeights.xlsx](./Data/VertebralHeights.xlsx)                                                  
 
@@ -227,6 +239,6 @@ Or download individual files:
 
 [ZincForColds.xlsx](./Data/ZincForColds.xlsx)                                                          
 
-[ZungSim.xlsx](./Data/ZungSim.xlsx) 
+[ZungSim.xlsx](./Data/ZungSim.xlsx)
 
 </div>

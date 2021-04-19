@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -401,7 +389,7 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+  <a href="./Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -755,7 +743,7 @@ $$
 <p><img src="Images/Step1.png"></p>
 <p><img src="Images/Soccer-City-Stadium-at-capacity.jpg"></p>
 <p><strong>Summarize the relevant background information</strong></p>
-<p>The FIFA Football (Soccer) World Cup is held every four years and is one of the biggest sporting events in the world. In 2006, Germany hosted the World Cup. A study was conducted by Dr. Wilbert-Lampen, et. al. to determine if the stress of viewing a soccer match would increase the risk of a heart attack or another cardiovascular event. <!--<cite>WilbertLampen08</cite>--></p>
+<p>The FIFA Football (Soccer) World Cup is held every four years and is one of the biggest sporting events in the world. In 2006, Germany hosted the World Cup. A study was conducted by Dr. Wilbert-Lampen, et. al. to determine if the stress of viewing a soccer match would increase the risk of a heart attack or another cardiovascular event. <!--<cite>WilbertLampen08</cite>--></p>
 <p>We will use the data on cardiovascular problems during the World Cup to test the hypothesis that the mean number of cardiovascular events is greater during the World Cup than during the control period.</p>
 <p><strong>State the null and alternative hypotheses and the level of significance</strong></p>
 <p>Let Group 1 be days in the Control Period and let Group 2 represent days during the 2006 World Cup. We are testing whether the mean number of cardiovascular events is greater during the World Cup than during the control period. So, the alternative hypothesis will be one-sided.</p>
@@ -984,19 +972,19 @@ Answer the following question:
 </thead>
 <tbody>
 <tr class="odd">
-<td><p>Mean:</p></td>
-<td><p><span class="math inline">\(\bar x_1 = 4.1\)</span></p></td>
-<td><p><span class="math inline">\(\bar x_2 = 3.7\)</span></p></td>
+<td>Mean:</td>
+<td><span class="math inline">\(\bar x_1 = 4.1\)</span></td>
+<td><span class="math inline">\(\bar x_2 = 3.7\)</span></td>
 </tr>
 <tr class="even">
-<td><p>Standard Deviation:</p></td>
-<td><p><span class="math inline">\(s_1 = 2.4\)</span></p></td>
-<td><p><span class="math inline">\(s_2 = 2.5\)</span></p></td>
+<td>Standard Deviation:</td>
+<td><span class="math inline">\(s_1 = 2.4\)</span></td>
+<td><span class="math inline">\(s_2 = 2.5\)</span></td>
 </tr>
 <tr class="odd">
-<td><p>Sample Size:</p></td>
-<td><p><span class="math inline">\(n_1 = 204\)</span></p></td>
-<td><p><span class="math inline">\(n_2 = 117\)</span></p></td>
+<td>Sample Size:</td>
+<td><span class="math inline">\(n_1 = 204\)</span></td>
+<td><span class="math inline">\(n_2 = 117\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -1085,16 +1073,16 @@ Answer the following questions:
 </thead>
 <tbody>
 <tr class="odd">
-<td><p><span class="math inline">\(\bar x = 216.1\)</span></p></td>
-<td><p><span class="math inline">\(\bar x_2 = 283.4\)</span></p></td>
+<td><span class="math inline">\(\bar x = 216.1\)</span></td>
+<td><span class="math inline">\(\bar x_2 = 283.4\)</span></td>
 </tr>
 <tr class="even">
-<td><p><span class="math inline">\(s = 339.9\)</span></p></td>
-<td><p><span class="math inline">\(s = 359.9\)</span></p></td>
+<td><span class="math inline">\(s = 339.9\)</span></td>
+<td><span class="math inline">\(s = 359.9\)</span></td>
 </tr>
 <tr class="odd">
-<td><p><span class="math inline">\(n = 76\)</span></p></td>
-<td><p><span class="math inline">\(n = 85\)</span></p></td>
+<td><span class="math inline">\(n = 76\)</span></td>
+<td><span class="math inline">\(n = 85\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -1158,7 +1146,8 @@ Answer the following questions:
 <div id="Q19" style="display:none;">
 <ul>
 <li><p>Remember, we will never assume equal variances in this course.</p></li>
-<li><p>Two different confidence intervals are possible, depending on how you defined the groups. The order in which we subtract the means determines the sign of the results.</p></li>
+<li><p>Two different confidence intervals are possible, depending on how you defined the groups. The order in which we subtract the means determines the sign of the results.</p>
+<ul>
 <li>If we subtract <strong>Community</strong> - <strong>Hospital</strong>, we get:
 <center>
 <span class="math inline">\((-176.2,~41.7)\)</span>
@@ -1167,7 +1156,8 @@ Answer the following questions:
 <center>
 <span class="math inline">\((-41.7,~176.2)\)</span>
 </center></li>
-<li>If the problem does not specify the order in which we should subtract, either of these is acceptable.</li>
+</ul></li>
+<li><p>If the problem does not specify the order in which we should subtract, either of these is acceptable.</p></li>
 </ul>
 </div>
 <p> </p>
@@ -1200,7 +1190,7 @@ If we had subtracted in the order <strong>Hospital</strong> - <strong>Community<
 <div id="Q21" style="display:none;">
 <ul>
 <li><p>Zero is contained in the confidence interval, so zero is a plausible value for the difference in the means. In other words, we cannot conclude that there is a difference in the mean improvement of the two groups.</p></li>
-<li>These results suggest that health care administrators should encourage community rehabilitation options for COPD whenever possible. It is generally less expensive than the hospital experience and does not lead to significantly different patient improvement.</li>
+<li><p>These results suggest that health care administrators should encourage community rehabilitation options for COPD whenever possible. It is generally less expensive than the hospital experience and does not lead to significantly different patient improvement.</p></li>
 </ul>
 </div>
 <p><br></p>
@@ -1211,7 +1201,7 @@ If we had subtracted in the order <strong>Hospital</strong> - <strong>Community<
 <div id="Q22" style="display:none;">
 <ul>
 <li><p>If we subtract: <span class="math inline">\(Community - Hospital\)</span>, we get: <span class="math inline">\((-158.5,~24.0)\)</span></p></li>
-<li>If we subtract: <span class="math inline">\(Hospital - Community\)</span>, we get: <span class="math inline">\((-24.0,~158.5)\)</span></li>
+<li><p>If we subtract: <span class="math inline">\(Hospital - Community\)</span>, we get: <span class="math inline">\((-24.0,~158.5)\)</span></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -1251,7 +1241,7 @@ Remember…
 <li><p>When conducting inference using independent samples we use <span class="math inline">\(\bar x_1\)</span>, <span class="math inline">\(s_1\)</span>, and <span class="math inline">\(n_1\)</span> for the mean, standard deviation, and sample size, respectively, of group 1. We use the symbols <span class="math inline">\(\bar x_2\)</span>, <span class="math inline">\(s_2\)</span>, and <span class="math inline">\(n_2\)</span> for group 2.</p></li>
 <li><p>When working with independent samples it is important to graphically illustrate each sample separately. Combining the groups to create a single graph is not appropriate.</p></li>
 <li><p>When conducting hypothesis tests using independent samples, the null hypothesis is always <span class="math inline">\(\mu_1=\mu_2\)</span>, indicating that there is no difference between the two populations. The alternative hypothesis can be left-tailed (<span class="math inline">\(&lt;\)</span>), right-tailed(<span class="math inline">\(&gt;\)</span>), or two-tailed(<span class="math inline">\(\ne\)</span>).</p></li>
-<li>Whenever zero is contained in the confidence interval of the difference of the true means we conclude that there is no significant difference between the two populations. <br></li>
+<li><p>Whenever zero is contained in the confidence interval of the difference of the true means we conclude that there is no significant difference between the two populations. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -1259,11 +1249,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1303,6 +1293,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

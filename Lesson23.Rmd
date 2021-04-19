@@ -46,7 +46,7 @@ By the end of this lesson, you should be able to:
 
 <img src="./Images/Line_on_coordinate_plane.jpg">
 
-When we compute an estimated regression equation, we assume that there is some true equation that describes the relationship between $X$ and the mean value of $Y$.  This equation is unknown to us. In particular, we don't know what the coefficients are in this equation. In the estimated regression equation, we used $b_0$ and $b_1$ to represent the $Y$-intercept and slope, respectively.  These two coefficients are estimates of the unknown regression coefficients in the true equation.  We will use the Greek letter $\beta$ (pronounced "beta") to denote these true unknown coefficients.
+When we compute an estimated regression equation, we assume that there is some true equation that describes the relationship between the $X$-variable and the mean value of $Y$.  This equation is unknown to us. In particular, we don't know what the coefficients are in this equation. In the estimated regression equation, we used $b_0$ and $b_1$ to represent the $Y$-intercept and slope, respectively.  These two coefficients are estimates of the unknown regression coefficients in the true equation.  We will use the Greek letter $\beta$ (pronounced "beta") to denote these true unknown coefficients.
 
 The true regression line is written as:
 $$
@@ -283,7 +283,7 @@ $$
 df= 28-2 = 26
 $$
 
-With a test statistic of $t=35.588$, we get a very small $P$-value, shown in cell Q9.  
+With a test statistic of $t=35.588$, we get a very small $P$-value, "0.000" as shown in cell Q9.  
 
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <!-- {{Software_Filter | PageName=EstuarineCrocodilePvalue }} -->

@@ -1,6 +1,6 @@
 ---
 title: "Lesson 16: Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion"
-output: 
+output:
   html_document:
     theme: cerulean
     toc: true
@@ -27,7 +27,7 @@ output:
 By the end of this lesson, you should be able to:
 
 - Calculate and interpret a sample proportion.
-- Summarize categorical data with a bar or pie chart. 
+- Summarize categorical data with a bar or pie chart.
 - Determine the mean, standard deviation and shape of a distribution of sample proportions.
 - Calculate probabilities using a distribution of sample proportions.
 </div>
@@ -390,7 +390,7 @@ This calculation was done in the same way we have done normal calculations in th
 
 - The sampling distribution of $\widehat p$ has a mean of $\mu_{\widehat{p}} = p$ and a standard deviation of $\sigma_{\widehat{p}} = \displaystyle{\sqrt{\frac{p\cdot(1-p)}{n}}}$
 
-- If $np \ge 10$ and $n(1-p) \ge 10$, you can conduct **probability calculations** using the Normal Probability Applet. 
+- If $np \ge 10$ and $n(1-p) \ge 10$, you can conduct **probability calculations** using the Normal Probability Applet.
 $$
 \displaystyle {z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}}
 = \frac{\widehat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}}

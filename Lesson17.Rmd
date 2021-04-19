@@ -1,6 +1,6 @@
 ---
 title: "Lesson 17: Inference for One Proportion"
-output: 
+output:
   html_document:
     theme: cerulean
     toc: true
@@ -30,17 +30,17 @@ By the end of this lesson you should be able to do the following.
 
 * Calculate and interpret a confidence interval for a single proportion given a confidence level.
 * Identify a point estimate and margin of error for the confidence interval.
-* Show the appropriate connections between the numerical and graphical summaries that support the confidence interval. 
+* Show the appropriate connections between the numerical and graphical summaries that support the confidence interval.
 * Check the requirements for the confidence interval.
-* Calculate a desired sample size given a level of confidence and margin of error (with or without a prior estimate of the population proportion). 
+* Calculate a desired sample size given a level of confidence and margin of error (with or without a prior estimate of the population proportion).
 
 **Regarding Hypothesis Testing for a single proportion:**
 
-* State the null and alternative hypothesis. 
+* State the null and alternative hypothesis.
 * Calculate the test-statistic and p-value of the hypothesis test.
 * Assess the statistical significance by comparing the p-value to the α-level.
 * Check the requirements for the hypothesis test.
-* Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
+* Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test.
 * Draw a correct conclusion for the hypothesis test.
 </div>
 <br>
@@ -53,26 +53,26 @@ By the end of this lesson you should be able to do the following.
 
 Frederick Sierles and his colleagues distributed an anonymous survey to students at two American medical schools.  The questionnaire was given during class without any prior announcement to students.  The authors of the study personally supervised the distribution and collection of the surveys.  95% of the students completed the survey, and students from all four years of medical school training were represented.  A total of 428 individuals participated in the survey.  Among this group, 249 people indicated that they had cheated in some way during medical school. The results were published in a journal article in 1980.
 
-We want to use the data from this study to generalize to a larger population.  We are not usually interested in the *particular* individuals' responses.  The reason the study was conducted is to provide an estimate of the true population proportion, $p$.  $\hat p$ is called a **point estimate** of $p$.  The sample proportion, $\hat p$ is one point on the number line that estimates the value of the true proportion, $p$.
+We want to use the data from this study to generalize to a larger population.  We are not usually interested in the *particular* individuals' responses.  The reason the study was conducted is to provide an estimate of the true population proportion, $p$.  $\widehat p$ is called a **point estimate** of $p$.  The sample proportion, $\widehat p$ is one point on the number line that estimates the value of the true proportion, $p$.
 
-A point estimate like $\hat p$ is helpful, but it does not give us direct information on *how close* it is to the true parameter, $p$.  We use a confidence interval to find a range of plausible values for the parameter.
+A point estimate like $\widehat p$ is helpful, but it does not give us direct information on *how close* it is to the true parameter, $p$.  We use a confidence interval to find a range of plausible values for the parameter.
 
 ### Confidence Intervals
 
 <!-- {{:Lesson_17:Content/F2F}} -->
 To find a confidence interval for one population proportion, $p$, we follow the same pattern as was done in the estimates for $\mu$ in the lesson titled [Inference for One Mean: Sigma Known (Confidence Interval)](Lesson10.html){target="_blank"}.  We start with the point estimate of $p$ and we add and subtract a certain number of standard deviations from this value.
 
-The point estimate for $p$ is $\hat p$.  You might want to review the mean and standard deviation of the random variable $\hat p$ in the lesson on [Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion](Lesson16.html){target="_blank"}. Traditionally, people have used these equations to create confidence intervals for the population proportion.
+The point estimate for $p$ is $\widehat p$.  You might want to review the mean and standard deviation of the random variable $\widehat p$ in the lesson on [Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion](Lesson16.html){target="_blank"}. Traditionally, people have used these equations to create confidence intervals for the population proportion.
 
 The formula for the confidence interval for one proportion is:
 $$
 \left(
-\displaystyle {\hat p - z^* \sqrt{\frac{\hat p (1-\hat p)}{n}},
-\hat p + z^* \sqrt{\frac{\hat p (1-\hat p)}{n}}}
+\displaystyle {\widehat p - z^* \sqrt{\frac{\widehat p (1-\widehat p)}{n}},
+\widehat p + z^* \sqrt{\frac{\widehat p (1-\widehat p)}{n}}}
 \right)
 $$
 
-$$\text{where}\displaystyle{ \hat p = \frac{x}{n} }$$.
+$$\text{where }\displaystyle{ \widehat p = \frac{x}{n} }$$.
 
 You can use the normal probability applet to compute $z^*$.  Please see the lesson on [Inference for One Mean: Sigma Known (Confidence Interval)](Lesson10.html){target="_blank"} if you need to review this procedure.
 
@@ -82,14 +82,14 @@ Remember that for a 95% confidence interval, $z^* = 1.96$.
 So, the lower bound for the 95% confidence interval for the true proportion $p$ is:
 $$
 \displaystyle {
-\hat p - z^* \sqrt{\frac{\hat p (1-\hat p)}{n}}
+\widehat p - z^* \sqrt{\frac{\widehat p (1-\widehat p)}{n}}
 = \frac{249}{428} - 1.96 \sqrt{\frac{\frac{249}{428} \left(1-\frac{249}{428}\right)}{428}}
 = 0.535 }
 $$
 The upper bound for the 95% confidence interval for the true proportion $p$ is:
 $$
 \displaystyle {
-\hat p + z^* \sqrt{\frac{\hat p (1-\hat p)}{n}}
+\widehat p + z^* \sqrt{\frac{\widehat p (1-\widehat p)}{n}}
 = \frac{249}{428} + 1.96 \sqrt{\frac{\frac{249}{428} \left(1-\frac{249}{428}\right)}{428}}
 = 0.629 }
 $$
@@ -100,7 +100,7 @@ To interpret this interval, we say that we are 95% confident that the true propo
 #### Requirement
 
 Like other procedures, there are requirements that must be checked in order for this confidence interval to be valid.
-The confidence intervals are valid whenever $n \hat p \ge 10$ and $n(1-\hat p) \ge 10$. Notice that for the data on cheating in medical school, we have $428 * 0.582 = 249$ and $428 * (1-0.582) = 179$ which are both greater than 10, so this requirement is satisfied.
+The confidence intervals are valid whenever $n \widehat p \ge 10$ and $n(1-\widehat p) \ge 10$. Notice that for the data on cheating in medical school, we have $428 * 0.582 = 249$ and $428 * (1-0.582) = 179$ which are both greater than 10, so this requirement is satisfied.
 
 ### Using Excel to perform these calculations
 
@@ -116,7 +116,7 @@ To download this file, click here: [Math 221 Statistics Toolbox](./Data/Math221S
 
 For this example we will consider the "Honesty at Medical School" data above.
 
-- **Step 1**: Open the Math 221 Statistics Toolbox and click on the "One Proportion" tab. 
+- **Step 1**: Open the Math 221 Statistics Toolbox and click on the "One Proportion" tab.
 
 - The yellow boxes indicate the input spaces. The first step, getting an estimate of $\hat{p}$, is accomplished by inputting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell C7.   
 
@@ -154,13 +154,13 @@ DeWitt C. Baldwin, Jr. and others conducted a larger study to assess how widespr
 </div>
 <br>
 
-2. What is the value of $\hat p$ in this study?
+2. What is the value of $\widehat p$ in this study?
 
 <a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
 <center>
-$$ 
-\displaystyle{\hat p = \frac{114}{2426} = 0.047} 
+$$
+\displaystyle{\widehat p = \frac{114}{2426} = 0.047}
 $$
 </center>
 </div>
@@ -172,7 +172,7 @@ $$
 <div id="Q3" style="display:none;">
 <center>
 $$
-\displaystyle{\hat p - z^* \sqrt{\frac{\hat p (1-\hat p)}{n}}
+\displaystyle{\widehat p - z^* \sqrt{\frac{\widehat p (1-\widehat p)}{n}}
 = \frac{114}{2426} - 1.96 \sqrt{\frac{\frac{114}{2426} \left(1-\frac{114}{2426}\right)}{2426}}
 = 0.039}
 $$
@@ -186,7 +186,7 @@ $$
 <div id="Q4" style="display:none;">
 * The upper bound for the 95% confidence interval for the true proportion of students who cheat in medical school is:
 $$
-\hat p + z^* \sqrt{\frac{\hat p (1-\hat p)}{n}}
+\widehat p + z^* \sqrt{\frac{\widehat p (1-\widehat p)}{n}}
 = \frac{114}{2426} + 1.96 \sqrt{\frac{\frac{114}{2426} \left(1-\frac{114}{2426}\right)}{2426}}
 = 0.055
 $$
@@ -239,16 +239,16 @@ If you can reduce the margin of error by increasing the sample size, then you ca
 
 The formula for the margin of error is:
 $$
-m = z^* \sqrt{\frac{\hat{p} (1- \hat{p})}{n}}
+m = z^* \sqrt{\frac{\widehat{p} (1- \widehat{p})}{n}}
 $$
 If we solve this equation for $n$, we get:
 $$
-n = \left( \frac{z^*}{m} \right)^2 \hat{p} (1-\hat{p})
+n = \left( \frac{z^*}{m} \right)^2 \widehat{p} (1-\widehat{p})
 $$
-Note that this equation requires us to know the value of $\hat{p}$.  Unless we do a study, we do not know the value of $\hat{p}$.
+Note that this equation requires us to know the value of $\widehat{p}$.  Unless we do a study, we do not know the value of $\widehat{p}$.
 Sometimes we have a prior estimate of the true proportion of successes, denoted $p^*$.
 
-**If we have a prior estimate for $\hat{p}$,** (namely $p^*$,) we can plug this value into the equation above to compute the sample size required to obtain our desired margin of error:
+**If we have a prior estimate for $\widehat{p}$,** (namely $p^*$,) we can plug this value into the equation above to compute the sample size required to obtain our desired margin of error:
 $$
 n = \left( \frac{z^*}{m} \right)^2 p^* (1-p^*)
 $$
@@ -291,7 +291,7 @@ It is believed that 70% of all people are able to taste PTC. Data were collecte
 
 Out of the 118 people who participated in the research, 89 indicated that they can taste PTC.  The proportion of people in the sample who could taste PTC is
 $$
-\hat p = \frac{89}{118} = 0.754
+\widehat p = \frac{89}{118} = 0.754
 $$
 
 In other words, 75.4% of the people surveyed could taste the chemical.
@@ -313,8 +313,8 @@ If the following conditions are satisfied:
 - $np \ge 10$
 - $n(1-p) \ge 10$
 
-then the sample size is large enough that the Central Limit Theorem suggests the sample proportion, $\hat p$, is approximately normal.
-Also, the true mean of $\hat p$ is $p$, and the standard deviation is $\sqrt{\frac{p \cdot (1-p)}{n}}$.
+then the sample size is large enough that the Central Limit Theorem suggests the sample proportion, $\widehat p$, is approximately normal.
+Also, the true mean of $\widehat p$ is $p$, and the standard deviation is $\sqrt{\frac{p \cdot (1-p)}{n}}$.
 
 Notice that the requirements are satisfied for the PTC data:
 $$
@@ -335,9 +335,9 @@ H_a: & p \ne 0.70
 $$
 We will use the $\alpha=0.05$ level of significance in this test.
 
-If the requirements are satisfied, then $\hat p$ is approximately normal with mean $p$ and standard deviation $\sqrt{\frac{p \cdot (1-p)}{n}}$.  The test can be based on the standard normal ($z$) distribution.  The test statistic is:
+If the requirements are satisfied, then $\widehat p$ is approximately normal with mean $p$ and standard deviation $\sqrt{\frac{p \cdot (1-p)}{n}}$.  The test can be based on the standard normal ($z$) distribution.  The test statistic is:
 $$
-z = \frac{\textrm{value}-\textrm{mean}}{\textrm{standard deviation}} = \frac{\hat p - p}{\sqrt{\frac{p(1-p)}{n}}} = \frac{\frac{89}{118} - 0.70}{\sqrt{\frac{0.70(1-0.70)}{118}}} = 1.286
+z = \frac{\textrm{value}-\textrm{mean}}{\textrm{standard deviation}} = \frac{\widehat p - p}{\sqrt{\frac{p(1-p)}{n}}} = \frac{\frac{89}{118} - 0.70}{\sqrt{\frac{0.70(1-0.70)}{118}}} = 1.286
 $$
 
 Remember, we assume that the null hypothesis is true, so we use the value given in the null hypothesis for $p$.
@@ -381,7 +381,7 @@ To download this file, click here: [Math 221 Statistics Toolbox](./Data/Math221S
 
 For this example we will consider the "PTC" data above.
 
-- **Step 1**: Open the Math 221 Statistics Toolbox and click on the "One Proportion" tab. 
+- **Step 1**: Open the Math 221 Statistics Toolbox and click on the "One Proportion" tab.
 
 - The yellow boxes indicate the input spaces. The first step, getting an estimate of $\hat{p}$, is accomplished by inputting the value of $x$ and the value of $n$ from the data above. Look at the group of cells labeled "Numerical Summary" and input $x$ into cell D7. Type $n$ in cell C7.   
 
@@ -422,8 +422,8 @@ Among the $n=40$ observed indicators of health, $x=19$ suggested good health. Us
 <a href="javascript:showhide('Q15')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q15" style="display:none;">
 <center>
-$\displaystyle {\hat p = \frac{x}{n} = \frac{19}{40} = 0.475~\text{or}~47.5\%}$
-</center> 
+$\displaystyle {\widehat p = \frac{x}{n} = \frac{19}{40} = 0.475~\text{or}~47.5\%}$
+</center>
 
 
 <img src="./Images/Water_quality_pie_graph_Excel.PNG">
@@ -479,7 +479,7 @@ $H_a: p < 0.6$
 <center>
 $$
 \displaystyle{
-z = \frac{\hat p - p}{\sqrt{\frac{p(1-p)}{n}}}
+z = \frac{\widehat p - p}{\sqrt{\frac{p(1-p)}{n}}}
 = \frac{()-0.60}{\sqrt{\frac{0.60(1-0.60)}{40}}}
 = -1.614}
 $$
@@ -489,7 +489,7 @@ $$
 <div id="Q18" style="display:none;">
 * The missing value is: <br />
 <center>
-$\displaystyle{\hat p = \frac{19}{40}=0.475}$
+$\displaystyle{\widehat p = \frac{19}{40}=0.475}$
 </center>
 </div>
 <br>
@@ -531,11 +531,11 @@ Even though the proportion of indicators that suggested good health was less tha
 <div class="SummaryHeading">Remember...</div>
 <div class="Summary">
 
-- The **estimator** of $p$ is $\hat p$. $\displaystyle{ \hat p = \frac {x}{n}}$ and is used for both confidence intervals and hypothesis testing.
+- The **estimator** of $p$ is $\widehat p$. $\displaystyle{ \widehat p = \frac {x}{n}}$ and is used for both confidence intervals and hypothesis testing.
 
 - You will use the Excel spreadsheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) to perform hypothesis testing and calculate confidence intervals for problems involving one proportion.
 
-- The requirements for a confidence interval are $n \hat p \ge 10$ and $n(1-\hat p) \ge 10$. The requirements for hypothesis tests involving one proportion are $np\ge10$ and $n(1-p)\ge10$.
+- The requirements for a confidence interval are $n \widehat p \ge 10$ and $n(1-\widehat p) \ge 10$. The requirements for hypothesis tests involving one proportion are $np\ge10$ and $n(1-p)\ge10$.
 
 - We can determine the sample size we need to obtain a desired margin of error using the formula $\displaystyle{ n=\left(\frac{z^*}{m}\right)^2 p^*(1-p^*)}$ where $p^*$ is a **prior estimate** of $p$. If no prior estimate is available, the formula $\displaystyle{ \left(\frac{z^*}{2m}\right)^2}$ is used.
 <br>

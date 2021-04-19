@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -295,19 +283,19 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="Lesson01_Campus.html">Lesson 1: On Campus Course Introduction</a>
+      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
     </li>
     <li>
-      <a href="Lesson01.html">Lesson 1: Online Course Introduction</a>
+      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
     </li>
     <li>
-      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data: Shape &amp; Center</a>
+      <a href="Lesson03.html">Lesson 3: Describing Quantitative Data (Shape &amp; Center)</a>
     </li>
     <li>
-      <a href="Lesson04.html">Lesson 4: Describing Quantitative Data: Spread</a>
+      <a href="Lesson04.html">Lesson 4: Describing Quantitative Data (Spread)</a>
     </li>
     <li>
       <a href="Lesson05.html">Lesson 5: Normal Distributions</a>
@@ -401,7 +389,7 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+  <a href="./Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -420,12 +408,12 @@ $(document).ready(function () {
 </div>
 
 
-<p>This page contains the data files that are used throughout the course in the wiki, preparation assignments, homework, and exams. It is recommended that students download the zip file and store all the data files for the semester on their personal computer for easy access. Alternatively, you may return to this page to download individual data files.</p>
+<p>This page contains the data files that are used throughout the course: in the textbook, quizzes, and homework. Links will usually be found in the text or quizzes when the file is referenced as well.</p>
 <p><br/></p>
 <p>  <a href="./Data/Math221StatisticsToolbox.xltx"><strong>Math 221 Statistics Toolbox</strong></a></p>
 <p><br/></p>
 <div style="padding-left:15px; color:gray;">
-<p>You may download the zip folder with all the files: <a href="./Data/ExcelSpreadsheets.zip">ExcelSpreadsheets.zip</a></p>
+<p>You may download the old version of the toolbox here: <a href="./Data/ExcelSpreadsheets.zip">ExcelSpreadsheets.zip</a></p>
 </div>
 <p>Or download individual files:</p>
 <div style="padding-left:15px;">
@@ -456,6 +444,7 @@ $(document).ready(function () {
 <p><a href="./Data/COPD-Rehab.xlsx">COPD-Rehab.xlsx</a></p>
 <p><a href="./Data/CrossroadsPurchases.xlsx">CrossroadsPurchases.xlsx</a></p>
 <p><a href="./Data/CuckooEggs.xlsx">CuckooEggs.xlsx</a></p>
+<p><a href="./Data/Dart_Expert_Dow_6month.xlsx">Dart_Expert_Dow_6month.xlsx</a></p>
 <p><a href="./Data/DASL-Cheese.xlsx">DASL-Cheese.xlsx</a></p>
 <p><a href="./Data/DASL-Fiber.xlsx">DASL-Fiber.xlsx</a></p>
 <p><a href="./Data/DASL-HeliumFootball.xlsx">DASL-HeliumFootball.xlsx</a></p>
@@ -471,6 +460,7 @@ $(document).ready(function () {
 <p><a href="./Data/DivingElephantSeals.xlsx">DivingElephantSeals.xlsx</a></p>
 <p><a href="./Data/Estuarine_Crocodile_(Modified).xlsx">Estuarine_Crocodile_(Modified).xlsx</a></p>
 <p><a href="./Data/EuroWeight.xlsx">EuroWeight.xlsx</a></p>
+<p><a href="./Data/Exam%201%20and%20Exam%202%20Scores.xlsx">Exam 1 and Exam 2 Scores.xlsx</a></p>
 <p><a href="./Data/ExercisedBoneDensity.xlsx">ExercisedBoneDensity.xlsx</a></p>
 <p><a href="./Data/FactoryAssemblyTimes-sim.xlsx">FactoryAssemblyTimes-sim.xlsx</a></p>
 <p><a href="./Data/ForcedExpiratoryVolume.xlsx">ForcedExpiratoryVolume.xlsx</a></p>
@@ -504,6 +494,7 @@ $(document).ready(function () {
 <p><a href="./Data/PatientSatisfaction-DoctorVsNurse-Stacked.xlsx">PatientSatisfaction-DoctorVsNurse-Stacked.xlsx</a></p>
 <p><a href="./Data/PineBeetle.xlsx">PineBeetle.xlsx</a></p>
 <p><a href="./Data/ProteinRequirement-Campbell.xlsx">ProteinRequirement-Campbell.xlsx</a></p>
+<p><a href="./Data/Prozac.xlsx">Prozac.xlsx</a></p>
 <p><a href="./Data/PTCtasting.xlsx">PTCtasting.xlsx</a></p>
 <p><a href="./Data/QuantitativeDescriptiveStatistics.xlsx">QuantitativeDescriptiveStatistics.xlsx</a></p>
 <p><a href="./Data/QuantitativeInferenceProcedures.xlsx">QuantitativeInferenceProcedures.xlsx</a></p>
@@ -520,9 +511,11 @@ $(document).ready(function () {
 <p><a href="./Data/SurveyData.xlsx">SurveyData.xlsx</a></p>
 <p><a href="./Data/ToyotaPrius2005.xlsx">ToyotaPrius2005.xlsx</a></p>
 <p><a href="./Data/TwinsDiabetes.xlsx">TwinsDiabetes.xlsx</a></p>
+<p><a href="./Data/TwinWeights.xlsx">TwinWeights.xlsx</a></p>
 <p><a href="./Data/UraniumPlantData-Lead.xlsx">UraniumPlantData-Lead.xlsx</a></p>
 <p><a href="./Data/UsedHummersNYandLA.xls">UsedHummersNYandLA.xls</a></p>
 <p><a href="./Data/UsedHummersNYandLA.xlsx">UsedHummersNYandLA.xlsx</a></p>
+<p><a href="./Data/Vehicles.xlsx">Vehicles.xlsx</a></p>
 <p><a href="./Data/VertebralHeights.xlsx">VertebralHeights.xlsx</a></p>
 <p><a href="./Data/womenpoet.xls">womenpoet.xls</a></p>
 <p><a href="./Data/WorldCupHeartAttacks.xlsx">WorldCupHeartAttacks.xlsx</a></p>
@@ -551,6 +544,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

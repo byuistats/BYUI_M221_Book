@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -401,7 +389,7 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+  <a href="./Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -462,7 +450,7 @@ $(document).ready(function () {
 </div>
 <div id="how-confident-are-you" class="section level2">
 <h2>How Confident are You?</h2>
-<p>Think about a time when you walked into a exam, having prepared carefully, <em>knowing</em> that you would do well. On the other hand, have you ever entered an exam feeling unprepared? How have your exam scores compared to your confidence?</p>
+<p>Think about a time when you walked into an exam, having prepared carefully, <em>knowing</em> that you would do well. On the other hand, have you ever entered an exam feeling unprepared? How have your exam scores compared to your confidence?</p>
 <p><img src="Images/Testtaking-exam.jpg"></p>
 <p>Shane Goodwin and other researchers examined this question. They studied factors that affect a student’s confidence on a multiple-choice mathematics exam<!--<cite>Goodwin09</cite>-->. A group of n = 139 students in an Intermediate Algebra course (MATH 101) at BYU-Idaho participated in the study. In addition to marking their test question responses, they evaluated their confidence for each answer on a scale of 1 to 6. The confidence rating scale is summarized in the following table:</p>
 <p><strong>Confidence Rating</strong></p>
@@ -537,7 +525,7 @@ Excel Instructions
 <p><br></p>
 <p>Notice that there is a strong positive linear relationship between the head lengths and the body lengths of the crocodiles. That fact will be important in the next lesson.</p>
 <p>We want to be able to describe the relationship between the variables. The first thing we look for is the <strong>shape</strong> or <strong>form</strong> observed in the scatterplot. Is it <strong>linear</strong> or <strong>nonlinear</strong>?</p>
-<p>In many cases, the points a scatterplot do not follow a straight line. If the data form a curved shape, e.g. a banana shape, we say that there is a <em>nonlinear relationship</em> in the data. The methods presented in this course do not directly apply to nonlinear data. As a professional, you may encounter nonlinear data. Math 325 Intermediate Statistical Methods includes ways to handle nonlinear relationships. If you cannot take additional statistics courses, you should consult a statistician if you want to analyze the relationships observed in nonlinear bivariate data.</p>
+<p>In many cases, the points on a scatterplot do not follow a straight line. If the data form a curved shape, e.g. a banana shape, we say that there is a <em>nonlinear relationship</em> in the data. The methods presented in this course do not directly apply to nonlinear data. As a professional, you may encounter nonlinear data. Math 325 Intermediate Statistical Methods includes ways to handle nonlinear relationships. If you cannot take additional statistics courses, you should consult a statistician if you want to analyze the relationships observed in nonlinear bivariate data.</p>
 <p>In addition to the shape or the form of the data observed in the scatterplot, we need to be able to describe the <strong>direction</strong> and <strong>strength</strong> of a linear relationship in data. We use the correlation coefficient to quantify the direction and strength of the relationship. These ideas are discussed below.</p>
 </div>
 <div id="describing-direction-scatterplots-and-the-correlation-coefficient" class="section level4">
@@ -1077,7 +1065,7 @@ Answer the following questions:
 </div>
 <div id="properties-of-the-correlation-coefficient" class="section level4">
 <h4>Properties of the Correlation Coefficient</h4>
-<p>We will summarize the properties of the correlation coefficient, <span class="math inline">\(r\)</span>: - <span class="math inline">\(r\)</span> is a number between <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span> - positive values of <span class="math inline">\(r\)</span> imply a positive linear relationship between the two variables - negative values of <span class="math inline">\(r\)</span> imply a negative linear relationship between the two variables - values of <span class="math inline">\(r\)</span> close to zero suggest there is a weak correlation between the two variables - if <span class="math inline">\(r\)</span> is close to <span class="math inline">\(1\)</span>, it is evidence of a strong positive linear relationship between the two variables - if <span class="math inline">\(r\)</span> is close to <span class="math inline">\(-1\)</span>, there is evident of a strong negative linear relationship between the two variables - if <span class="math inline">\(r\)</span> equals <span class="math inline">\(1\)</span> or <span class="math inline">\(-1\)</span>, then there is a perfect linear relationship between the two variables (the points are all in a line) - the correlation of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is the same as the correlation between <span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span> (i.e.there is no distinction between explanatory and response variables.) - the correlation coefficient measures the strength of the linear relationship between two variables; it does not give the strength of a nonlinear relationship, no matter how strong - the correlation coefficient is affected by outliers</p>
+<p>We will summarize the properties of the correlation coefficient, <span class="math inline">\(r\)</span>: - <span class="math inline">\(r\)</span> is a number between <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span> - positive values of <span class="math inline">\(r\)</span> imply a positive linear relationship between the two variables - negative values of <span class="math inline">\(r\)</span> imply a negative linear relationship between the two variables - values of <span class="math inline">\(r\)</span> close to zero suggest there is a weak correlation between the two variables - if <span class="math inline">\(r\)</span> is close to <span class="math inline">\(1\)</span>, it is evidence of a strong positive linear relationship between the two variables - if <span class="math inline">\(r\)</span> is close to <span class="math inline">\(-1\)</span>, there is evidence of a strong negative linear relationship between the two variables - if <span class="math inline">\(r\)</span> equals <span class="math inline">\(1\)</span> or <span class="math inline">\(-1\)</span>, then there is a perfect linear relationship between the two variables (the points are all in a line) - the correlation of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is the same as the correlation between <span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span> (i.e.there is no distinction between explanatory and response variables.) - the correlation coefficient measures the strength of the linear relationship between two variables; it does not give the strength of a nonlinear relationship, no matter how strong - the correlation coefficient is affected by outliers</p>
 </div>
 <div id="sample-statistic-and-population-parameter" class="section level4">
 <h4>Sample Statistic and Population Parameter</h4>
@@ -1230,11 +1218,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1274,6 +1262,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

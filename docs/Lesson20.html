@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -401,7 +389,7 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+  <a href="./Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -497,10 +485,10 @@ Lesson 16 Recap
 <li><p><strong>Bar charts</strong> present the same information as pie charts and are used when our data represent counts. A <strong>Pareto chart</strong> is a bar chart where the height of the bars is presented in descending order.</p></li>
 <li><p><span class="math inline">\(\hat p\)</span> is a point estimator for true proportion <span class="math inline">\(p\)</span>. <span class="math inline">\(\displaystyle{\hat p = \frac{x}{n}}\)</span></p></li>
 <li><p>The sampling distribution of <span class="math inline">\(\hat p\)</span> has a mean of <span class="math inline">\(p\)</span> and a standard deviation of <span class="math inline">\(\displaystyle{\sqrt{\frac{p\cdot(1-p)}{n}}}\)</span></p></li>
-<li>If <span class="math inline">\(np \ge 10\)</span> and <span class="math inline">\(n(1-p) \ge 10\)</span>, you can conduct <strong>probability calculations</strong> using the Normal Probability Applet. <span class="math display">\[
+<li><p>If <span class="math inline">\(np \ge 10\)</span> and <span class="math inline">\(n(1-p) \ge 10\)</span>, you can conduct <strong>probability calculations</strong> using the Normal Probability Applet. <span class="math display">\[
 \displaystyle {z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}}
 = \frac{\hat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}}
-\]</span> <br></li>
+\]</span> <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -512,7 +500,7 @@ Lesson 17 Recap
 <li><p>The <strong>estimator</strong> of <span class="math inline">\(p\)</span> is <span class="math inline">\(\hat p\)</span>. <span class="math inline">\(\displaystyle{ \hat p = \frac {x}{n}}\)</span> and is used for both confidence intervals and hypothesis testing.</p></li>
 <li><p>You will use the Excel spreadsheet <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a>, to perform hypothesis testing and calculate confidence intervals for problems involving one proportion.</p></li>
 <li><p>The requirements for a confidence interval are <span class="math inline">\(n \hat p \ge 10\)</span> and <span class="math inline">\(n(1-\hat p) \ge 10\)</span>. The requirements for hypothesis tests involving one proportion are <span class="math inline">\(np\ge10\)</span> and <span class="math inline">\(n(1-p)\ge10\)</span>.</p></li>
-<li>We can determine the sample size we need to obtain a desired margin of error using the formula <span class="math inline">\(\displaystyle{ n=\left(\frac{z^*}{m}\right)^2 p^*(1-p^*)}\)</span> where <span class="math inline">\(p^*\)</span> is a <strong>prior estimate</strong> of <span class="math inline">\(p\)</span>. If no prior estimate is available, the formula <span class="math inline">\(\displaystyle{ \left(\frac{z^*}{2m}\right)^2}\)</span> is used. <br></li>
+<li><p>We can determine the sample size we need to obtain a desired margin of error using the formula <span class="math inline">\(\displaystyle{ n=\left(\frac{z^*}{m}\right)^2 p^*(1-p^*)}\)</span> where <span class="math inline">\(p^*\)</span> is a <strong>prior estimate</strong> of <span class="math inline">\(p\)</span>. If no prior estimate is available, the formula <span class="math inline">\(\displaystyle{ \left(\frac{z^*}{2m}\right)^2}\)</span> is used. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -537,7 +525,7 @@ Lesson 18 Recap
 \]</span></p>
 <ul>
 <li><p>Whenever zero is contained in the confidence interval of the difference of the true proportions we conclude that there is no significant difference between the two proportions.</p></li>
-<li>You will use the Excel spreadsheet <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> to perform hypothesis testing and calculate confidence intervals for problems involving two proportions. <br></li>
+<li><p>You will use the Excel spreadsheet <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> to perform hypothesis testing and calculate confidence intervals for problems involving two proportions. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -553,7 +541,7 @@ H_a: &amp; \text{The (first variable) and the (second variable) are not independ
 \end{array}
 \]</span></p></li>
 <li><p>The <strong>degrees of freedom (<span class="math inline">\(df\)</span>)</strong> for a <span class="math inline">\(\chi^2\)</span> test of independence are calculated using the formula <span class="math inline">\(df=(\text{number of rows}-1)(\text{number of columns}-1)\)</span></p></li>
-<li>In our hypothesis testing for <span class="math inline">\(\chi^2\)</span> we never conclude that two variables are <em>dependent</em>. Instead, we say that two variables are <em>not independent</em>. <br></li>
+<li><p>In our hypothesis testing for <span class="math inline">\(\chi^2\)</span> we never conclude that two variables are <em>dependent</em>. Instead, we say that two variables are <em>not independent</em>. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -563,11 +551,11 @@ H_a: &amp; \text{The (first variable) and the (second variable) are not independ
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -580,7 +568,7 @@ H_a: &amp; \text{The (first variable) and the (second variable) are not independ
 <tr class="odd">
 <td align="center"><a href="Lesson19.html">Lesson 19: <br> Inference for Independence of Categorical Data</a></td>
 <td align="center">Lesson 20: <br> Review for Exam 3</td>
-<td align="center"><a href="Lesson21.html">Lesson 21: <br> Describing Bivariate Data: Scatterplots, Correlation, &amp; Covariance)</a></td>
+<td align="center"><a href="Lesson21.html">Lesson 21: <br> Describing Bivariate Data: Scatterplots, Correlation, &amp; Covariance</a></td>
 </tr>
 </tbody>
 </table>
@@ -607,6 +595,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

@@ -1,0 +1,203 @@
+---
+title: "Lesson 6: Sampling Distributions of the Sample Mean; Central Limit Theorem"
+author: "Homework"
+output:
+  html_document:
+    css: buttondown.css
+    toc: no
+  pdf_document:
+    toc: no
+  word_document:
+    toc: no
+params:
+  key: no
+  plinks: no
+  keyname: "blank"
+  docname: "blank"
+md_document:
+  variant: markdown_phpextra
+---
+
+```{r,results='asis',echo=FALSE}
+if(params$key==TRUE){
+  if(params$plinks==TRUE) cat("* [Word Document](",paste(params$keyname,"docx",sep="."),")\n")
+  if(params$plinks==TRUE) cat("* [PDF Document](",paste(params$keyname,"pdf",sep="."),")\n")
+  cat("<!--")
+  cat("\n")
+} 
+if(params$key!=TRUE){
+  if(params$plinks==TRUE) cat("* [Word Document](",paste(params$docname,"docx",sep="."),")\n")
+  if(params$plinks==TRUE) cat("* [PDF Document](",paste(params$docname,"pdf",sep="."),")\n")
+  cat("\n")
+}
+```
+
+```{r,include=FALSE}
+library(ggplot2)
+library(ggthemes)
+library(pander)
+library(mosaic)
+panderOptions('keep.line.breaks',TRUE)
+source("../scripts/ggQQline.R")
+source("../scripts/normTail.R")
+source("../scripts/221_Interactive_Functions.R")
+```
+
+**Instructions:  You are encouraged to collaborate with other students on the homework, but it is important that you do your own work.  Before working with someone else on the assignment, you should attempt each problem on your own.**
+
+1. What is the difference between the Central Limit Theorem and the Law of Large Numbers?
+
+    a. The Central Limit Theorem describes what happens to the shape of the distribution of sample means, when the sample size is large.  The Law of Large Numbers describes what happens to the spread of the distribution of sample means, when the sample size is large.
+
+    b. The Central Limit Theorem describes what happens to the spread of the distribution of sample means, when the sample size is large.  The Law of Large Numbers describes what happens to the shape of the distribution of sample means, when the sample size is large.
+
+    c. The Central Limit Theorem describes what happens to the center of the distribution of sample means, when the sample size is large.  The Law of Large Numbers describes what happens to the spread of the distribution of sample means, when the sample size is large.
+
+    d. The Central Limit Theorem describes what happens to the center of the distribution of sample means, when the sample size is large.  The Law of Large Numbers describes what happens to the shape of the distribution of sample means, when the sample size is large.
+
+
+2. Which of the following gives the best explanation of the Law of Large Numbers?
+
+    a. If the parent population (from which the data are drawn) is normally distributed, then the sample mean $\bar{x}$ will follow a normal distribution.
+
+    b. For bell-shaped data, approximately 68% of the data will be within one standard deviation of the mean, about 95% of the data will be within two standard deviations of the mean, and approximately 99.7% of the data will be within three standard deviations of the mean.
+
+    c. If the sample size is large, the sample mean $\bar{x}$ will be close to the population mean $\mu$.
+
+    d. If the sample size is large, the shape of the distribution of sample means $\bar{x}$ will be approximately normal.
+
+```{r,include=FALSE}
+mean1 = 30
+sd1 = 4
+n1 = 4 
+sampleMeanSD1 = sd1/sqrt(n1)
+```
+
+
+Suppose the mean internet usage time of all BYU-Idaho students is `r mean1` hours a week and the standard deviation is `r sd1`. This distribution is right-skewed.  Suppose a random sample of `r n1` students were surveyed concerning their internet usage.  Use this information to answer questions 3-5.
+
+3. What was the shape of the distribution of sample means?
+
+    a.Skewed right
+
+    b.Normal
+
+    c.Skewed left
+
+4. What was the mean of the distribution of sample means?   ___________ hours
+
+5. What was the standard deviation of the distribution of sample means?  ___________ hours
+
+```{r,include=FALSE}
+mean2 = 30
+sd2 = 4
+n2 = 100
+sampleMeanSD2 = sd2/sqrt(n2)
+```
+
+
+Suppose the mean internet usage time of all BYU-Idaho students is `r mean2` hours a week and the standard deviation is `r sd2`. This distribution is right-skewed.  Suppose a random sample of `r n2` students were surveyed concerning their internet usage and assume that the sample was sufficiently large.  Use this information to answer questions 6-8.
+
+6. What was the shape of the distribution of sample means?
+
+    a. Skewed right
+    
+    b. Normal
+    
+    c. Skewed left
+
+7. What was the mean of the distribution of sample means?  ___________ hours
+
+8. What was the standard deviation of the distribution of sample means? (Round your answer to 1 decimal place.)   ___________ hours
+
+```{r, include=FALSE}
+mean3 = 266
+sd3 = 16
+n3 = 30 
+sampleMeanSD3 = sd3/sqrt(n3)
+```
+
+
+The length of human pregnancies from conception to birth is normally distributed with mean 266 Days and a standard deviation of 16 days.  Suppose a random sample of 30 pregnancies was measured.  Use this information to answer questions 9-13.
+
+9. What was the shape of the distribution of sample means?
+
+    a. Skewed right
+    
+    b. Normal
+    
+    c. Skewed left
+
+10. What was the mean of the distribution of sample means? ___________ days
+
+11.	What was the standard deviation of the distribution of sample means? (Round your answer to 3 decimal places.) ___________ days
+
+12.	Is the mean of the distribution of means greater than, equal to, or less than the parent population mean length of human pregnancy?
+
+13.	Is the standard deviation of the distribution of means greater than, equal to, or less than the parent population standard deviation of length of human pregnancy?
+
+14. In a short paragraph, describe in your own words what the central limit theorem is. Give an example.
+
+15. In a short paragraph, describe in your own words what the law of large numbers is. Give an example.
+
+```{r,include=FALSE}
+if(params$key==TRUE){
+#solutions
+  
+    Solution01 =  data.frame(Part="-",Solution="a: The Central Limit Theorem describes what happens to the shape of the distribution of sample means, when the sample size is large. The Law of Large Numbers describes what happens to the spread of the distribution of sample means, when the sample size is large.")
+    
+    Solution02 = data.frame(Part="-",Solution="c. If the sample size is large, the sample mean $\\bar{x}$ will be close to the population mean $\\mu$.")
+    
+    Solution03 = data.frame(Part="-",Solution="a. Skewed Right")
+    
+    Solution04 = data.frame(Part="-",Solution=paste(mean1," hours",sep = ""))
+    
+    Solution05 = data.frame(Part="-",Solution=paste(round(sampleMeanSD1,1)," hours"))
+    
+    Solution06 = data.frame(Part="-",Solution="b. Normal")
+    
+    Solution07 = data.frame(Part="-",Solution=paste(mean2," hours",sep = ""))
+    
+    Solution08 = data.frame(Part="-",Solution=paste(round(sampleMeanSD2,1)," hours"))
+    
+    Solution09 = data.frame(Part="-",Solution="b. Normal")
+    
+    Solution10 = data.frame(Part="-",Solution=paste(mean3," days"))
+    
+    Solution11 = data.frame(Part="-",Solution=paste(round(sampleMeanSD3,3)," days"))
+    
+    Solution12 = data.frame(Part="-",Solution="Equal to")
+    
+    Solution13 = data.frame(Part="-",Solution="less than")
+    
+    Solution14 = data.frame(Part="-",Solution="The CLT tells us that the distribution of all possible sample means will have a normal distribution if the sample size we choose is large (typically 30 will be large enough, but not always).")
+    
+    Solution15 = data.frame(Part="-",Solution="The LLN tells us that if we have a simple random sample, the sample mean will be close to $\\mu$ if the sample size is large. This is why we want to collect as much data as we can. The more data we collect, the closer $\\bar{x}$ will be to $\\mu$ (if you have a simple random sample).")
+    
+} # end params == TRUE.  We use this so it doesn't have to run for non answer key path.
+```
+
+```{r,echo=FALSE,results='asis'}
+if(params$key==TRUE){
+  cat("-->")
+   cat("\n\n## Solutions\n\n---")
+      cat("\n\n **Please note that the steps show rounded numbers, but that the final answers to the problems are calculated without rounding.**")
+}
+```
+
+```{r,echo=FALSE,results='asis'}
+if(params$key==TRUE){
+
+    all_solutions = sort(ls(pattern="Solution"))
+    key_list = NULL
+    for (i in 1:length(all_solutions)){
+      temp = get(all_solutions[i])
+      temp$Solution = as.character(temp$Solution)
+      key_list = rbind(key_list,data.frame(Problem=i,temp))
+    }
+    
+      pander(key_list,split.cell = 80, split.table = Inf,justify = c( 'center', 'left',"left"))
+} # end params == TRUE.  We use this so it doesn't have to run for non answer key path.
+
+```
+

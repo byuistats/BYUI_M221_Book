@@ -1,5 +1,6 @@
 name: "Math 221-Introductory Statistics"
 output_dir: 'docs'
+exclude: ['homework_prep_build']
 navbar:
   title: "Math 221"
   left:
@@ -26,7 +27,7 @@ navbar:
         - text: "Lesson 8: Unit 1 Review"
           href: Lesson08.html
     - text: "Unit 2"
-      menu: 
+      menu:
         - text: "Lesson 9: Hypothesis Test for One Mean (Sigma Known)"
           href: Lesson09.html
         - text: "Lesson 10: Confidence Interval for One Mean (Sigma Known)"
@@ -54,7 +55,7 @@ navbar:
         - text: "Lesson 20: Unit 3 Review"
           href: Lesson20.html
     - text: "Unit 4"
-      menu: 
+      menu:
         - text: "Lesson 21: Describing Bivariate Data"
           href: Lesson21.html
         - text: "Lesson 22: Simple Linear Regression"
@@ -64,11 +65,11 @@ navbar:
         - text: "Lesson 24: Unit 4 Review"
           href: Lesson24.html
   right:
-    - text: Toolbox
-      href: ./Data/Math221StatisticsToolbox.xltx 
+    - text: "Toolbox"
+      href: ./Data/Math221StatisticsToolbox.xlsx
     - text: Data
       href: Data.html
-output: 
+output:
   html_document:
     theme: cerulean
     toc: true

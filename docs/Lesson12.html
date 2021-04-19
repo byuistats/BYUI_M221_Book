@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -401,7 +389,7 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+  <a href="./Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -626,19 +614,19 @@ Post
 </table>
 <!--
 {| class="basic"
-! Subject !! Pre !! Post 
+! Subject !! Pre !! Post
 |-
-|1 || 62.5 || 56.1 
+|1 || 62.5 || 56.1
 |-
-|2 || 88.8 || 80.2 
+|2 || 88.8 || 80.2
 |-
-|3 || 74.7 || 70.8 
+|3 || 74.7 || 70.8
 |-
-|$\vdots$ || $\vdots$ || $\vdots$ 
+|$\vdots$ || $\vdots$ || $\vdots$
 |-
-|26 || 76.3 || 73.8 
+|26 || 76.3 || 73.8
 |-
-|27 || 82.1 || 77.9 
+|27 || 82.1 || 77.9
 |-
 |}
 -->
@@ -867,7 +855,7 @@ Answer the following questions:
 <div id="Q3" style="display:none;">
 <center>
 <span class="math display">\[
--6.80 \text{ kg} 
+-6.80 \text{ kg}
 \]</span>
 </center>
 </div>
@@ -916,7 +904,7 @@ H_a: &amp;~~ \mu_d &lt; 0
 \begin{align}
 \bar d &amp;= -6.80 \\
 s_d &amp;= 3.17 \\
-n &amp;= 27 
+n &amp;= 27
 \end{align}
 \]</span></p>
 <p>The mean and standard deviation are rounded to one decimal place more than the original data.</p>
@@ -1025,7 +1013,7 @@ Answer the following questions:
 <center>
 <span class="math display">\[
 \begin{align}
-\bar d &amp;= 11.38 \\ 
+\bar d &amp;= 11.38 \\
 s_d &amp;= 13.83 \\
 n &amp;= 52
 \end{align}
@@ -1081,7 +1069,7 @@ Answer the following questions:
 <div id="Q11" style="display:none;">
 <center>
 <span class="math display">\[
-df = 51 
+df = 51
 \]</span>
 </center>
 </div>
@@ -1160,7 +1148,7 @@ Answer the following questions:
 <p>Since we are testing for an increase in the mean REE, we let <span class="math inline">\(d = REE_2 - REE_1\)</span>. Our alternative hypothesis will be that <span class="math inline">\(\mu_d &gt; 0\)</span>. The null and alternative hypotheses are: <span class="math display">\[
 \begin{align}
 H_0: &amp;~~ \mu_d = 0 \\
-H_a: &amp;~~ \mu_d &gt; 0 
+H_a: &amp;~~ \mu_d &gt; 0
 \end{align}
 \]</span></p>
 <p>Note that the data set has the columns listed with <span class="math inline">\(d = REE_1\)</span> in the first column and <span class="math inline">\(d = REE_2\)</span> in the second column. You will need to switch the order of the columns when pasting them into the Excel Toolbox.</p>
@@ -1193,9 +1181,9 @@ Difference = Stressful - Silence
 <div id="Q17" style="display:none;">
 <ul>
 <li><p>50 kJ/d</p></li>
-<li>Here is an illustration of an excerpt of the data in Excel:
+<li><p>Here is an illustration of an excerpt of the data in Excel:</p>
 <center>
-<img src="Images/REE-Data-Excel.png">
+<p><img src="Images/REE-Data-Excel.png"></p>
 </center></li>
 </ul>
 </div>
@@ -1250,7 +1238,7 @@ Answer the following questions:
 <div id="Q21" style="display:none;">
 <center>
 <span class="math display">\[
-df = 39 
+df = 39
 \]</span>
 </center>
 </div>
@@ -1335,7 +1323,7 @@ Answer the following questions:
 \begin{array}{1cl}
 H_0:\mu_d = 0 \\
 H_a:\mu_d \ne 0 \\
-\alpha = 0.01 
+\alpha = 0.01
 \end{array}
 \]</span>
 </center>
@@ -1447,7 +1435,7 @@ Answer the following questions:
 <div id="Q32" style="display:none;">
 <center>
 <span class="math display">\[
-df = 86 
+df = 86
 \]</span>
 </center>
 </div>
@@ -1472,7 +1460,7 @@ df = 86
 <div id="Q34" style="display:none;">
 <center>
 <span class="math display">\[
-P\textrm{-value}= 0.096 &gt; 0.01 = \alpha 
+P\textrm{-value}= 0.096 &gt; 0.01 = \alpha
 \]</span>
 </center>
 <p>The <span class="math inline">\(P\)</span>-value will be 0.096, no matter what order you subtracted the values.</p>
@@ -1999,7 +1987,7 @@ Remember…
 <li><p>The key characteristic of <strong>dependent samples</strong> (or <strong>matched pairs</strong>) is that knowing which subjects will be in group 1 determines which subjects will be in group 2.</p></li>
 <li><p>We use slightly different variables when conducting inference using dependent samples:</p>
 <p>Group 1 values: <span class="math inline">\(x_1\)</span>  Group 2 values: <span class="math inline">\(x_2\)</span>  Differences: <span class="math inline">\(d\)</span>  Population mean: <span class="math inline">\(\mu_d\)</span>  Sample mean: <span class="math inline">\(\bar d\)</span>  Sample standard deviation: <span class="math inline">\(s_d\)</span></p></li>
-<li>When conducting hypothesis tests using dependent samples, the null hypothesis is always <span class="math inline">\(\mu_d=0\)</span>, indicating that there is no change between the first population and the second population. The alternative hypothesis can be left-tailed (<span class="math inline">\(&lt;\)</span>), right-tailed(<span class="math inline">\(&gt;\)</span>), or two-tailed(<span class="math inline">\(\ne\)</span>). <br></li>
+<li><p>When conducting hypothesis tests using dependent samples, the null hypothesis is always <span class="math inline">\(\mu_d=0\)</span>, indicating that there is no change between the first population and the second population. The alternative hypothesis can be left-tailed (<span class="math inline">\(&lt;\)</span>), right-tailed(<span class="math inline">\(&gt;\)</span>), or two-tailed(<span class="math inline">\(\ne\)</span>). <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -2007,11 +1995,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -2051,6 +2039,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

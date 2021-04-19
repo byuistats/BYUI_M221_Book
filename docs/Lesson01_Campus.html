@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -401,7 +389,7 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+  <a href="./Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -552,14 +540,14 @@ $(document).ready(function () {
 <p><strong>Peer Support</strong></p>
 <p>Your experience in this course will be enhanced as you work with other students to learn and grow together.</p>
 <p><strong>Help Desk</strong></p>
-<p>The BYU-Idaho Help Desk has been established to help students with technological problems related to approved course software. You can access the Help Desk at any time in three ways: - Walk-in: The Help Desk is located in room 322 of the McKay Library - Call in: 208-496-1411 (toll free) - Email: <a href="mailto:helpdesk@byui.edu">helpdesk@byui.edu</a> Additional information is available at the Help Desk web page: <a href="http://www.byui.edu/helpdesk/" class="uri">http://www.byui.edu/helpdesk/</a></p>
+<p>The BYU-Idaho Help Desk has been established to help students with technological problems related to approved course software. You can access the Help Desk at any time in three ways: - Walk-in: The Help Desk is located in room 322 of the McKay Library - Call in: 208-496-1411 (toll free) - Email: <a href="mailto:helpdesk@byui.edu" class="email">helpdesk@byui.edu</a> Additional information is available at the Help Desk web page: <a href="http://www.byui.edu/helpdesk/" class="uri">http://www.byui.edu/helpdesk/</a></p>
 <p>When you have technical problems with I-Learn, you should first try contacting the Help Desk before you contact your instructor. They are connected with the IT support staff who can resolve problems with I-Learn. Please take a moment now to look at the <a href="http://www.byui.edu/helpdesk/">Help Desk web page</a>. That way, if a problem does arise later on in the course, you will know where to go for help.</p>
 <p><strong>Tutoring Center</strong></p>
 <p>The BYU-Idaho Study Skills/Tutoring Center is a powerful resource for students who would like a little extra help with a course. The Tutoring Center is located in the McKay Library in room 272. This is in the east wing of the second floor.</p>
 <p>The Tutoring Center provides many services to help students succeed: - Individual tutors - Walk-in tutoring in the Math Study Center (McKay 266 &amp; 270) - Virtual tutoring</p>
-<p>Please take a moment to explore the <a href="https://www.byui.edu/academic-support-centers/math/math-help-for-on-campus-students">Study Skills/Tutoring Center web site</a>.</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD Please take 5 minutes to explore the <a href="https://www.byui.edu/academic-support-centers/math/math-help-for-on-campus-students">Study Skills/Tutoring Center web site</a>. ======= Please take a moment to explore the <a href="https://www.byui.edu/academic-support-centers/math/math-help-for-on-campus-students">Study Skills/Tutoring Center web site</a>.</p>
 <p><strong>TA Support</strong></p>
-<p>In addition to the faculty who teach this course, specially trained teaching assistants (TAs) will help you through the course. The Guided Practice sessions will be led by TAs, under the direction of the faculty. The TAs will work with you on specific discovery activities in the Guided Practice sessions.</p>
+<p>In addition to the faculty who teach this course, specially trained teaching assistants (TAs) will help you through the course. The Guided Practice sessions will be led by TAs, under the direction of the faculty. The TAs will work with you on specific discovery activities in the Guided Practice sessions. &gt;&gt;&gt;&gt;&gt;&gt;&gt; 347aa3c247591875e775ffc5b4a6942cf601c62e</p>
 <p><strong>Faculty Support</strong></p>
 <p>Your instructor is committed to your success. If you have any needs or concerns, please contact your instructor for help. If you feel yourself getting behind or struggling, talk to your teacher right away. If caught in time, a small problem can be addressed quickly before it grows.</p>
 <p>With all of that said, let’s begin looking at a foundational idea of statistics: probability.</p>
@@ -885,10 +873,10 @@ Remember…
 </div>
 <div class="Summary">
 <ul>
-<li>In this class you will use the online textbook that has been written for you by your statistics teachers. All of the assignments and quizzes will be based on the readings, so study it well.</li>
-<li>Most weeks will cover two lessons</li>
+<li><p>In this class you will use the online textbook that has been written for you by your statistics teachers. All of the assignments and quizzes will be based on the readings, so study it well.</p></li>
+<li><p>Most weeks will cover two lessons</p></li>
 <li><p>By doing the work, staying on schedule, and living the Honor Code you <em>will</em> succeed in this class!</p></li>
-<li>The three <strong>rules of probability</strong> are:
+<li><p>The three <strong>rules of probability</strong> are:</p>
 <ol style="list-style-type: decimal">
 <li>A probability is a number between 0 and 1. <span class="math display">\[0 \leq P(X) \leq 1\]</span></li>
 <li>If you list all the outcomes of a probability experiment (such as rolling a die) the probability that one of these outcomes will occur is 1. In other words, the sum of the probabilities in any probability is 1. <span class="math display">\[\sum P(X) = 1\]</span></li>
@@ -904,7 +892,7 @@ Remember…
 <table>
 <colgroup>
 <col width="30%" />
-<col width="69%" />
+<col width="70%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -942,6 +930,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

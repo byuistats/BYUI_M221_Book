@@ -1,6 +1,6 @@
 ---
 title: "Lesson 12: Inference for Two Means: Paired Data"
-output: 
+output:
   html_document:
     theme: cerulean
     toc: true
@@ -32,14 +32,14 @@ By the end of this lesson, you should be able to do the following.
 - Identify a point estimate and margin of error for the confidence interval.
 - Show the appropriate connections between the numerical and graphical summaries that support the   confidence interval.
 - Check the requirements for the confidence interval.
-  
+
 **Regarding Hypothesis Testing for the mean of differences with dependent samples:**
 
-  * State the null and alternative hypothesis. 
+  * State the null and alternative hypothesis.
   * Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.
   * Assess the statistical significance by comparing the p-value to the α-level.
   * Check the requirements for the hypothesis test.
-  * Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
+  * Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test.
   * Draw a correct conclusion for the hypothesis test.
 </div>
 <br>
@@ -118,19 +118,19 @@ Annie Mahon and other researchers in Wayne Campbell's nutrition lab studied the 
 
 <!--
 {| class="basic"
-! Subject !! Pre !! Post 
+! Subject !! Pre !! Post
 |-
-|1 || 62.5 || 56.1 
+|1 || 62.5 || 56.1
 |-
-|2 || 88.8 || 80.2 
+|2 || 88.8 || 80.2
 |-
-|3 || 74.7 || 70.8 
+|3 || 74.7 || 70.8
 |-
-|$\vdots$ || $\vdots$ || $\vdots$ 
+|$\vdots$ || $\vdots$ || $\vdots$
 |-
-|26 || 76.3 || 73.8 
+|26 || 76.3 || 73.8
 |-
-|27 || 82.1 || 77.9 
+|27 || 82.1 || 77.9
 |-
 |}
 -->
@@ -144,7 +144,7 @@ Notice the structure of the data.  The weight of each subject was measured befor
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
 
-* The goal of the study is to determine how much the women's weight change as as result of the study.  The researchers must measure the women's weights at the beginning of the study, so they can subtract the initial (pre-study) weight of each woman from her final (post-study) weight. 
+* The goal of the study is to determine how much the women's weight change as as result of the study.  The researchers must measure the women's weights at the beginning of the study, so they can subtract the initial (pre-study) weight of each woman from her final (post-study) weight.
 </div>
 &nbsp;
 </div>
@@ -230,11 +230,10 @@ Fortunately, the "Paired Data t-test" tab in the [Math 221 Statistics Toolbox](.
 
 * Copy the "Pre" column and paste it into column B, labeled "Data2" of the Toolbox.
 * Copy the "Post" column and paste it into column A, labeled "Data1" of the Toolbox.
-* Notice in column C the differences are automatically calculated. 
+* Notice in column C the differences are automatically calculated.
 * A excerpt of how the data looks in the Math221 Statistics Toolbox is shown below:
 
 <img src="./Images/Mahon-Differences_Excel_Toolbox.PNG">
-
 </div>
 <br>
 
@@ -245,13 +244,13 @@ Fortunately, the "Paired Data t-test" tab in the [Math 221 Statistics Toolbox](.
 
 <br>
 
-3. What is the mean of the values in the *Difference* column? (Look in cell J7) 
+3. What is the mean of the values in the *Difference* column? (Look in cell J7)
 
 <a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q3" style="display:none;">
 <center>
 $$
--6.80 \text{ kg} 
+-6.80 \text{ kg}
 $$
 </center>
 </div>
@@ -324,11 +323,11 @@ $$
 \begin{align}
 \bar d &= -6.80 \\
 s_d &= 3.17 \\
-n &= 27 
+n &= 27
 \end{align}
 $$
 
-The mean and standard deviation are rounded to one decimal place more than the original data. 
+The mean and standard deviation are rounded to one decimal place more than the original data.
 
 
 
@@ -365,7 +364,7 @@ See that this calculation matches the test statistic given in the Excel output. 
 
 $$df = 26$$
 
-**Mark the test statistic and $P$-value on a graph of the sampling distribution** 
+**Mark the test statistic and $P$-value on a graph of the sampling distribution**
 
 The test statistic and p-value can be found in the Excel output. The following calculations show conceptually how the p-value is calculated:
 
@@ -436,14 +435,14 @@ H_a: &~~ \mu_d > 0 \\
 \end{align}
 $$
 </center>
-* The level of significance was not specified in the problem.  You can choose any value you wish.  The most common choices are 0.05, 0.01 and 0.1.  We will illustrate this example with $\alpha = 0.05$. 
+* The level of significance was not specified in the problem.  You can choose any value you wish.  The most common choices are 0.05, 0.01 and 0.1.  We will illustrate this example with $\alpha = 0.05$.
 
 
 </div>
 &nbsp;
 </div>
 <br>
-In order to get the correct $P$-value, we need to indicate the proper alternative hypothesis in Excel.  In cell N6 be sure the "Greater Than" symbol is selected in the drop-down menu. 
+In order to get the correct $P$-value, we need to indicate the proper alternative hypothesis in Excel.  In cell N6 be sure the "Greater Than" symbol is selected in the drop-down menu.
 
 <img src="./Images/TypeOfTest-GreaterThan-Excel.png">
 
@@ -476,7 +475,7 @@ In order to get the correct $P$-value, we need to indicate the proper alternativ
 <center>
 $$
 \begin{align}
-\bar d &= 11.38 \\ 
+\bar d &= 11.38 \\
 s_d &= 13.83 \\
 n &= 52
 \end{align}
@@ -527,13 +526,13 @@ $$t = 5.935$$
 <div id="Q11" style="display:none;">
 <center>
 $$
-df = 51 
+df = 51
 $$
 </center>
 </div>
 <br>
 
-12. **Mark the test statistic and $P$-value on a graph of the sampling distribution** 
+12. **Mark the test statistic and $P$-value on a graph of the sampling distribution**
 
 <a href="javascript:showhide('Q12')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q12" style="display:none;">
@@ -610,7 +609,7 @@ Since we are testing for an increase in the mean REE, we let $d = REE_2 - REE_1$
 $$
 \begin{align}
 H_0: &~~ \mu_d = 0 \\
-H_a: &~~ \mu_d > 0 
+H_a: &~~ \mu_d > 0
 \end{align}
 $$
 
@@ -654,7 +653,7 @@ $$
 <center>
 <img src="./Images/REE-Data-Excel.png">
 </center>
-</div> 
+</div>
 <br>
 
 **Give the relevant summary statistics**
@@ -709,13 +708,13 @@ $$t=0.793$$
 <div id="Q21" style="display:none;">
 <center>
 $$
-df = 39 
+df = 39
 $$
 </center>
 </div>
 
 
-22. **Mark the test statistic and $P$-value on a graph of the sampling distribution** 
+22. **Mark the test statistic and $P$-value on a graph of the sampling distribution**
 
 <a href="javascript:showhide('Q22')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q22" style="display:none;">
@@ -743,7 +742,7 @@ $P\textrm{-value}=0.2163 > 0.1 = \alpha$
 
 <a href="javascript:showhide('Q24')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q24" style="display:none;">
-* Since the $P$-value is greater than the level of significance, we fail to reject the null hypothesis. 
+* Since the $P$-value is greater than the level of significance, we fail to reject the null hypothesis.
 </div>
 &nbsp;
 </div>
@@ -796,7 +795,7 @@ $$
 \begin{array}{1cl}
 H_0:\mu_d = 0 \\
 H_a:\mu_d \ne 0 \\
-\alpha = 0.01 
+\alpha = 0.01
 \end{array}
 $$
 </center>
@@ -902,13 +901,13 @@ $$t=1.685$$
 <div id="Q32" style="display:none;">
 <center>
 $$
-df = 86 
+df = 86
 $$
 </center>
 </div>
 <br>
 
-33. **Mark the test statistic and $P$-value on a graph of the sampling distribution** 
+33. **Mark the test statistic and $P$-value on a graph of the sampling distribution**
 
 <a href="javascript:showhide('Q33')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q33" style="display:none;">
@@ -925,7 +924,7 @@ $$
 <div id="Q34" style="display:none;">
 <center>
 $$
-P\textrm{-value}= 0.096 > 0.01 = \alpha 
+P\textrm{-value}= 0.096 > 0.01 = \alpha
 $$
 </center>
  The $P$-value will be 0.096, no matter what order you subtracted the values.
@@ -1023,7 +1022,7 @@ In a study conducted in the Arapaho National Forest in Colorado, researchers fro
 <div class="Questions">
 **Give the relevant summary statistics**
 
-38. Find the mean and standard deviation of the number of trees per hectare *before* the pine beetle outbreak.  How would you describe the density of the trees in this forest?  Express this in terms that make sense to you. 
+38. Find the mean and standard deviation of the number of trees per hectare *before* the pine beetle outbreak.  How would you describe the density of the trees in this forest?  Express this in terms that make sense to you.
 
 <a href="javascript:showhide('Q38')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q38" style="display:none;">

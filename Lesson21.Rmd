@@ -35,7 +35,7 @@ By the end of this lesson, you should be able to:
 
 ## How Confident are You?
 
-Think about a time when you walked into a exam, having prepared carefully, *knowing* that you would do well.  On the other hand, have you ever entered an exam feeling unprepared?  How have your exam scores compared to your confidence?
+Think about a time when you walked into an exam, having prepared carefully, *knowing* that you would do well.  On the other hand, have you ever entered an exam feeling unprepared?  How have your exam scores compared to your confidence?
 
 <img src="./Images/Testtaking-exam.jpg">
 
@@ -135,7 +135,7 @@ Notice that there is a strong positive linear relationship between the head leng
 
 We want to be able to describe the relationship between the variables.  The first thing we look for is the **shape** or **form** observed in the scatterplot.  Is it **linear** or **nonlinear**?
 
-In many cases, the points a scatterplot do not follow a straight line.  If the data form a curved shape, e.g. a banana shape, we say that there is a *nonlinear relationship* in the data.  The methods presented in this course do not directly apply to nonlinear data.  As a professional, you may encounter nonlinear data.  Math 325 Intermediate Statistical Methods includes ways to handle nonlinear relationships.  If you cannot take additional statistics courses, you should consult a statistician if you want to analyze the relationships observed in nonlinear bivariate data.
+In many cases, the points on a scatterplot do not follow a straight line.  If the data form a curved shape, e.g. a banana shape, we say that there is a *nonlinear relationship* in the data.  The methods presented in this course do not directly apply to nonlinear data.  As a professional, you may encounter nonlinear data.  Math 325 Intermediate Statistical Methods includes ways to handle nonlinear relationships.  If you cannot take additional statistics courses, you should consult a statistician if you want to analyze the relationships observed in nonlinear bivariate data.
 
 In addition to the shape or the form of the data observed in the scatterplot, we need to be able to describe the **direction** and **strength** of a linear relationship in data.  We use the correlation coefficient to quantify the direction and strength of the relationship.  These ideas are discussed below.
 
@@ -480,7 +480,7 @@ We will summarize the properties of the correlation coefficient, $r$:
 - negative values of $r$ imply a negative linear relationship between the two variables
 - values of $r$ close to zero suggest there is a weak correlation between the two variables
 - if $r$ is close to $1$, it is evidence of a strong positive linear relationship between the two variables
-- if $r$ is close to $-1$, there is evident of a strong negative linear relationship between the two variables
+- if $r$ is close to $-1$, there is evidence of a strong negative linear relationship between the two variables
 - if $r$ equals $1$ or $-1$, then there is a perfect linear relationship between the two variables (the points are all in a line)
 - the correlation of $X$ and $Y$ is the same as the correlation between $Y$ and $X$ (i.e.there is no distinction between explanatory and response variables.)
 - the correlation coefficient measures the strength of the linear relationship between two variables; it does not give the strength of a nonlinear relationship, no matter how strong

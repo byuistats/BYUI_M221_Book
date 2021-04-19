@@ -155,5 +155,5 @@ $$
 <center>
 | **Previous Reading** | **This Reading** | **Next Reading** |
 | :------------------: | :--------------: | :--------------: |
-| [Lesson 19: <br> Inference for Independence of Categorical Data](Lesson19.html) | Lesson 20: <br> Review for Exam 3 | [Lesson 21: <br> Describing Bivariate Data: Scatterplots, Correlation, & Covariance)](Lesson21.html) |
+| [Lesson 19: <br> Inference for Independence of Categorical Data](Lesson19.html) | Lesson 20: <br> Review for Exam 3 | [Lesson 21: <br> Describing Bivariate Data: Scatterplots, Correlation, & Covariance](Lesson21.html) |
 </center>

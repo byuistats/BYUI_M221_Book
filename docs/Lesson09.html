@@ -389,7 +389,7 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+  <a href="./Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -622,8 +622,8 @@ $(document).ready(function () {
 | 268       
 | 170
 |-
-|} 
-</center> 
+|}
+</center>
 -->
 <p><img src="Images/Step3.png"></p>
 <p>To help us understand the data, we first create a graph summarizing the values.</p>
@@ -940,7 +940,7 @@ Right-tailed
 </center>
 <!-- Old table
 <center>
-{| class="wikitable" 
+{| class="wikitable"
 ! Two-tailed !! Left-tailed !! Right-tailed
 |- align="center"
 | $H_0:~~\mu = 98.6$ || $H_0:~~\mu = 98.6$ || $H_0:~~\mu = 98.6$
@@ -998,8 +998,8 @@ Reject <span class="math inline">\(H_0\)</span>
 </center>
 <!-- Old table
 <center>
-{| class="wikitable" 
-! Large $P$-value !! Small $P$-value 
+{| class="wikitable"
+! Large $P$-value !! Small $P$-value
 |- align="center"
 | [[File:Applet-largeP-LoRes.png">
 |- align="center"
@@ -1030,84 +1030,46 @@ Some students find it helpful to remember the decision rule using the couplet: <
 </div>
 <div id="type-i-and-type-ii-errors" class="section level3">
 <h3>Type I and Type II Errors</h3>
-<p>If the null hypothesis is true, for example, if the true body temperature of healthy adults is really 98.6° F, sometimes we will get a very large or very small value of <span class="math inline">\(\bar{x}\)</span>. This will lead to a very extreme <span class="math inline">\(z\)</span>-score, strictly due to chance. In this case, we would reject the null hypothesis, even though it is true!</p>
+<p>If the null hypothesis is true, for example, if the true body temperature of healthy adults really is 98.6° F, sometimes we will get a very large or very small value of <span class="math inline">\(\bar{x}\)</span>. This will lead to a very extreme <span class="math inline">\(z\)</span>-score, strictly due to chance. In this case, we would reject the null hypothesis, even though it is true!</p>
 <p>Whenever we reject a true null hypothesis, we say that a <strong>Type I error</strong> was committed. Assuming the null hypothesis is true, the level of significance (<span class="math inline">\(\alpha\)</span>) is the probability of getting a value of the test statistic that is extreme enough that the null hypothesis will be rejected. In other words, the level of significance (<span class="math inline">\(\alpha\)</span>) is the probability of committing a Type I error.</p>
 <p>We choose <span class="math inline">\(\alpha\)</span> to be some small number so that the probability of committing a Type I error is low. The most common value for <span class="math inline">\(\alpha\)</span> is <span class="math inline">\(\alpha=0.05\)</span>. This is equal to <span class="math inline">\(\frac{1}{20}\)</span>. So, when the null hypothesis is true, there is a one-in-twenty chance that it will be rejected at the 0.05 level of significance. Other common choices for <span class="math inline">\(\alpha\)</span> include <span class="math inline">\(\alpha = 0.1\)</span> and <span class="math inline">\(\alpha=0.01\)</span>.</p>
-<p>If committing a Type I error is undesirable, why can’t we let <span class="math inline">\(\alpha=0\)</span>? This would make it impossible to commit a Type I error. Actually, this would also make it impossible to reject “any” null hypothesis! If <span class="math inline">\(\alpha=0\)</span>, no matter what test we do, not matter what the data show, we always fail to reject the null hypothesis. This would be pointless.</p>
-<p>A Type I error is committed when we reject a true null hypothesis. Another problem that can arise is to fail to reject a false null hypothesis.</p>
+<p>If committing a Type I error is undesirable, why can’t we let <span class="math inline">\(\alpha=0\)</span>? This would make it impossible to commit a Type I error. Actually, this would also make it impossible to reject “any” null hypothesis! If <span class="math inline">\(\alpha=0\)</span>, no matter what test we do, no matter what the data show, we always fail to reject the null hypothesis. This would be pointless.</p>
+<p>A Type I error is committed when we reject a true null hypothesis. Another problem that can arise is to fail to reject a false null hypothesis. This is called a Type II error. The probability of a Type II error is represented by <span class="math inline">\(\beta\)</span>.</p>
 <center>
-<table>
-<thead>
-<tr class="header">
-<th>
-</th>
-<th>
-<p>
-Truth
-</p>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>
-<p>
-Decision
-</p>
-</td>
-<td>
-<p>
-<span class="math inline">\(H_0\)</span> is true
-</p>
-</td>
-</tr>
-<tr class="even">
-<td>
-<p>
-Fail to<br /> reject <span class="math inline">\(H_0\)</span>
-</p>
-</td>
-<td>
-<p>
-Correct<br /> Decision
-</p>
-</td>
-</tr>
-<tr class="odd">
-<td>
-<p>
-Reject <span class="math inline">\(H_0\)</span>
-</p>
-</td>
-<td>
-<p>
-Type I<br /> Error
-</p>
-</td>
-</tr>
-</tbody>
-</table>
+<img src="Images/truth_table.PNG">
 </center>
-<!--
-<center>
-{| class="wikitable"
-! 
-! colspan="2" | Truth
-|-
-! Decision
-! $H_0$ is true
-! $H_0$ is false
-|- align="center"
-! Fail to <br> reject $H_0$
-| Correct <br> Decision
-| Type II <br> Error
-|- align="center"
-! Reject $H_0$
-| Type I <br> Error
-| Correct <br> Decision
-|}
-</center>
--->
+<!-- <center> -->
+<!-- <table border="1"> -->
+<!-- <thead> -->
+<!-- <tr class="header"> -->
+<!-- <th>Decision</th> -->
+<!-- <th colspan="2"><p>    Truth</p></th> -->
+<!-- </tr> -->
+<!-- </thead> -->
+<!-- <tbody> -->
+<!-- <tr class="odd"> -->
+<!-- <td><p></p></td> -->
+<!-- <td><p>$H_0$ is true</p></td> -->
+<!-- <td><p>$H_0$ is false</p></td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td><p>Fail to<br /> -->
+<!-- reject $H_0$</p></td> -->
+<!-- <td><p>Correct<br /> -->
+<!-- Decision</p></td> -->
+<!-- <td><p>Type II <br /> -->
+<!-- Error</p></td> -->
+<!-- </tr> -->
+<!-- <tr class="odd"> -->
+<!-- <td><p>Reject $H_0$</p></td> -->
+<!-- <td><p>Type I<br /> -->
+<!-- Error</p></td> -->
+<!-- <td><p>Correct<br /> -->
+<!-- Decision</p></td> -->
+<!-- </tr> -->
+<!-- </tbody> -->
+<!-- </table> -->
+<!-- </center> -->
 <p>We do not want to commit Type I errors, so why not choose a very small value for <span class="math inline">\(\alpha\)</span>? If we choose <span class="math inline">\(\alpha\)</span> to be so small that we rarely commit a Type I error, what would happen to the probability of committing a Type II error? (Think about it.)</p>
 <p>If the <span class="math inline">\(\alpha\)</span> value (the probability of committing a Type I error) is very small, the probability of committing a Type II error will be large. Conversely, if <span class="math inline">\(\alpha\)</span> is allowed to be very large, then the probability of committing a Type II error will be very small. A level of significance of <span class="math inline">\(\alpha=0.05\)</span> seems to strike a good balance between the probabilities of committing a Type I versus a Type II error. However, there may be instances where it will be important to choose a different value for <span class="math inline">\(\alpha\)</span>. The important thing is to choose <span class="math inline">\(\alpha\)</span> before you collect your data. Typical choices of <span class="math inline">\(\alpha\)</span> are <span class="math inline">\(0.05\)</span> (most common), <span class="math inline">\(0.1\)</span>, and <span class="math inline">\(0.01\)</span>.</p>
 <p>Read each of the following scenarios and answer the questions.</p>
@@ -1720,7 +1682,7 @@ Answer the following question:
 <div id="Q33" style="display:none;">
 <ul>
 <li>The problem here is that we assumed that <span class="math inline">\(1=2\)</span>, and then we attempted to use that requirement to prove itself. We cannot use a requirement as evidence of itself.</li>
-<li>However, if we start with an requirement and then find a contradiction, then we know that our original requirement is not true. Since this did not happen, we say that we did not get enough evidence against the requirement that <span class="math inline">\(1=2\)</span>.</li>
+<li>However, if we start with a requirement and then find a contradiction, then we know that our original requirement is not true. Since this did not happen, we say that we did not get enough evidence against the requirement that <span class="math inline">\(1=2\)</span>.</li>
 </ul>
 </div>
 <p> </p>
@@ -1744,7 +1706,7 @@ Answer the following question:
 <center>
 {| width=80%
 |-
-|Wherefore, beware lest ye are deceived; and that ye may not be deceived seek ye earnestly the best gifts, always remembering for what they are given; 
+|Wherefore, beware lest ye are deceived; and that ye may not be deceived seek ye earnestly the best gifts, always remembering for what they are given;
 For verily I say unto you, they are given for the benefit of those who love me and keep all my commandments, and him that seeketh so to do; that all may be benefited that seek or that ask of me, that ask and not for a sign that they may consume it upon their lusts.
 And again, verily I say unto you, I would that ye should always remember, and always retain in your minds what those gifts are, that are given unto the church.
 For all have not every gift given unto them; for there are many gifts, and to every man is given a gift by the Spirit of God.
@@ -1771,7 +1733,7 @@ Remember…
 <ul>
 <li><p>The <strong>null hypothesis (<span class="math inline">\(H_0\)</span>)</strong> is the foundational assumption about a population and represents the status quo. It is a statement of equality (<span class="math inline">\(=\)</span>). The <strong>alternative hypothesis (<span class="math inline">\(H_a\)</span>)</strong> is a different assumption about a population and is a statement of inequality (<span class="math inline">\(&lt;\)</span>, <span class="math inline">\(&gt;\)</span>, or <span class="math inline">\(\ne\)</span>). Using a <strong>hypothesis test</strong>, we determine whether it is more likely that the null hypothesis or the alternative hypothesis is true.</p></li>
 <li><p>The <strong><span class="math inline">\(P\)</span>-value</strong> is the probability of getting a test statistic at least as extreme as the one you got, assuming <span class="math inline">\(H_0\)</span> is true. A <span class="math inline">\(P\)</span>-value is calculated by finding the area under the normal distribution curve that is more extreme (farther away from the mean) than the z-score. The alternative hypothesis tells us whether we look at both tails or only one.</p></li>
-<li><p>The <strong>level of significance (<span class="math inline">\(\alpha\)</span>)</strong> is the standard for determining whether or not the null hypothesis should be rejected. Typical values for <span class="math inline">\(\alpha\)</span> are <span class="math inline">\(0.05\)</span>, <span class="math inline">\(0.10\)</span>, and <span class="math inline">\(0.01\)</span>. If the <span class="math inline">\(P\)</span>-value is less than <span class="math inline">\(\alpha\)</span> we reject the null. If the <span class="math inline">\(P\)</span>-value is not less than <span class="math inline">\(\alpha\)</span> we fail to reject the null.</p></li>
+<li><p>The <strong>level of significance (<span class="math inline">\(\alpha\)</span>)</strong> controls the probability of committing a Type I Error. It is the standard for determining whether or not the null hypothesis should be rejected. Typical values for <span class="math inline">\(\alpha\)</span> are <span class="math inline">\(0.05\)</span>, <span class="math inline">\(0.10\)</span>, and <span class="math inline">\(0.01\)</span>. If the <span class="math inline">\(P\)</span>-value is less than <span class="math inline">\(\alpha\)</span> we reject the null. If the <span class="math inline">\(P\)</span>-value is not less than <span class="math inline">\(\alpha\)</span> we fail to reject the null.</p></li>
 <li><p>A <strong>Type I error</strong> is committed when we reject a null hypothesis that is, in reality, true. A <strong>Type II error</strong> is committed when we fail to reject a null hypothesis that is, in reality, not true. The value of <span class="math inline">\(\alpha\)</span> is the probability of committing a Type I error.</p></li>
 </ul>
 </div>

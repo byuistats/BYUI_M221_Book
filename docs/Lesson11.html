@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -233,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -244,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -401,7 +389,7 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="./Data/Math221StatisticsToolbox.xltx">Toolbox</a>
+  <a href="./Data/Math221StatisticsToolbox.xlsx">Toolbox</a>
 </li>
 <li>
   <a href="Data.html">Data</a>
@@ -610,13 +598,18 @@ Excel Instructions
 </center>
 <p>Consider each of the following alternative hypotheses that could be used in a test for a single mean where the null hypothesis is <span class="math inline">\(H_0: \mu = 98.6\)</span>.</p>
 <ul>
-<li><span class="math inline">\(H_a: \mu \ne 98.6\)</span></li>
+<li><span class="math inline">\(H_a: \mu \ne 98.6\)</span>
+<ul>
 <li>Choose “Not Equal To” in the drop-down menu in cell L6.</li>
-<li><span class="math inline">\(H_a: \mu &lt; 98.6\)</span></li>
+</ul></li>
+<li><span class="math inline">\(H_a: \mu &lt; 98.6\)</span>
+<ul>
 <li>Choose “Less Than” in the drop-down menu in cell L6.</li>
-<li><span class="math inline">\(H_a: \mu &gt; 98.6\)</span><br />
-</li>
+</ul></li>
+<li><span class="math inline">\(H_a: \mu &gt; 98.6\)</span>
+<ul>
 <li>Choose “Greater Than” in the drop-down menu in cell L6.</li>
+</ul></li>
 </ul>
 <p>You will have opportunities to practice using each of these. <br></p>
 </div>
@@ -784,7 +777,7 @@ Excel Instructions
 <p>The summary statistics are:</p>
 <p><span class="math display">\[
 \begin{align}
-\bar x =&amp; 0.288 \\ 
+\bar x =&amp; 0.288 \\
 s =&amp; 0.026 \\
 n =&amp; 100
 \end{align}
@@ -822,7 +815,7 @@ Excel Instructions
 <p>If we want to create a 95% confidence interval for <span class="math inline">\(\mu\)</span>, with 99 degrees of freedom, then <span class="math inline">\(t^* = 1.9842\)</span>.</p>
 <p>Using the sample statistics: <span class="math display">\[
 \begin{align}
-\bar x =&amp; 0.2876 \\ 
+\bar x =&amp; 0.2876 \\
 s =&amp; 0.0264 \\
 n =&amp; 100
 \end{align}
@@ -906,11 +899,24 @@ Answer the following questions:
 </ol>
 <a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q8" style="display:none;">
-Use Excel to calculate the following summary statistics:
+<p>The following output was generated using the Excel file <a href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics Toolbox</a>:</p>
 <center>
+<img src="Images/EuroWeights-Histogram.PNG">
+</center>
+<ul>
+<li>Typically, we round our computations to one more decimal place of precision than was given in the original data. This means we need one more decimal place than is shown in the output above. We can increase the precision by selecting the cell we want to modify and then clicking on the following button in the “Home” menu ribbon in Excel:</li>
+</ul>
+<center>
+<img src="Images/Excel-IncreaseDecimals.png">
+</center>
+<p><br></p>
+<ul>
+<li>When we do this, we get the following summary statistics:
+<center></li>
+</ul>
 <span class="math display">\[
 \begin{align}
-\bar x =&amp; 7.521 \\ 
+\bar x =&amp; 7.521 \\
 s =&amp; 0.0344 \\
 n =&amp; 2000
 \end{align}
@@ -953,7 +959,7 @@ Answer the following question:
 <div id="Q10" style="display:none;">
 <center>
 <span class="math display">\[
-(7.519, ~ 7.523) 
+(7.519, ~ 7.523)
 \]</span>
 </center>
 </div>
@@ -996,11 +1002,11 @@ Remember…
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>
 <center>
-<table style="width:76%;">
+<table>
 <colgroup>
-<col width="29%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1040,6 +1046,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
