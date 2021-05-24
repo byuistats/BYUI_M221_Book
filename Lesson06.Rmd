@@ -293,7 +293,7 @@ $$
 
 <div class="myemphasis">
 
-**The Law of Large Numbers** states that the spread of the sampling distribution of the sample mean will *get smaller* as the sample size $n$ gets larger. In other words, $\bar{x}$ will become closer to $\mu$ as the sample size $n$ becomes larger.
+**The Law of Large Numbers** states that the sample mean, $\bar{x}$, will become closer to $\mu$ as the sample size $n$ becomes larger.
 
 </div>
 
@@ -317,11 +317,11 @@ $$
 </div>
 <br>
 
-The result you have discovered in the previous two questions is called the Law of Large Numbers.  The Law of Large Numbers states that if the sample size is large, then the sample mean will typically be close to the population mean, $\mu$.  This happens because the standard deviation $\sigma / \sqrt{n}$ will get smaller.  
+The result you have discovered in the previous two questions is called the Law of Large Numbers.  The Law of Large Numbers states that if the sample size is large, then the sample mean will typically be close to the population mean, $\mu$.  This happens because the standard deviation $\sigma / \sqrt{n}$ will get smaller as the sample size $n$ increases.  
 
 Notice that this is very different from the Central Limit Theorem.  The Central Limit Theorem states that if the sample size is large that $\bar x$ will be approximately normal.  The Law of Large numbers states that the sample mean $\bar x$ will be close to $\mu$.
 
-Take a moment to study the difference between the Central Limit Theorem and the Law of Large Numbers. They are very different, but students tend to confuse them.
+Take a moment to study the difference between the Central Limit Theorem and the Law of Large Numbers. They are very different, but it is easy to mix them up when you are first learning about them.
 
 <br>
 
