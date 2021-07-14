@@ -16,12 +16,12 @@ output:
 
 **Welcome to Math 221**
 
-Use the menus along the top, or the links in the table below to navigate to the desired lesson. Links to the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) and data files used in the book can also be found at the "Data" link on the far right of the header above.
+This textbook contains 24 lessons divided into four units. The first unit establishes the Statistical Process and some theoretical foundations for working with quantitative data. The second unit applies these theoretical concepts to real world data analysis with quantitative data. The third unit does the same, but with categorical data. The final unit takes a look at bivariate data by studying scatterplots, correlation, and simple linear regression.
 
 <br/>
 
 <div class="mboxfull">
-<a href="javascript:showhide('Unit1')"><div class="mbox usermessage">Unit 1: Quantitative Data</div></a>
+<a href="javascript:showhide('Unit1')"><div class="mbox usermessage">Unit 1: Quantitative Data <span style="font-size:8pt;float:right;padding:5px;">Click to Expand</span></div></a>
 
 <div id="Unit1" style="display:none;">
 
@@ -190,7 +190,7 @@ Unit 1 Review. The expectation on the Unit 1 Exam is that you should be able to 
 <br/>
 
 <div class="mboxfull">
-<a href="javascript:showhide('Unit2')"><div class="mbox usermessage">Unit 2: Quantitative Data</div></a>
+<a href="javascript:showhide('Unit2')"><div class="mbox usermessage">Unit 2: Quantitative Data <span style="font-size:8pt;float:right;padding:5px;">Click to Expand</span></div></a>
 
 <div id="Unit2" style="display:none;">
 
@@ -308,7 +308,7 @@ By the end of this lesson, you should be able to do the following.
 <br/>
 
 <div class="mboxfull">
-<a href="javascript:showhide('Unit3')"><div class="mbox usermessage mw-customtoggle-Unit02">Unit 3: Categorical Data</div></a>
+<a href="javascript:showhide('Unit3')"><div class="mbox usermessage mw-customtoggle-Unit02">Unit 3: Categorical Data <span style="font-size:8pt;float:right;padding:5px;">Click to Expand</span></div></a>
 
 <div id="Unit3" style="display:none;">
 
@@ -357,7 +357,7 @@ By the end of this lesson, you should be able to do the following.
 <br/>
 
 <div class="mboxfull">
-<a href="javascript:showhide('Unit4')"><div class="mbox usermessage mw-customtoggle-Unit02">Unit 4: Bivariate Data</div></a>
+<a href="javascript:showhide('Unit4')"><div class="mbox usermessage mw-customtoggle-Unit02">Unit 4: Bivariate Data <span style="font-size:8pt;float:right;padding:5px;">Click to Expand</span></div></a>
 
 <div id="Unit4" style="display:none;">
 
