@@ -66,7 +66,7 @@ navbar:
           href: Lesson24.html
   right:
     - text: "Toolbox"
-      href: ./Data/Math221StatisticsToolbox.xlsx
+      href: ./Data/Math221StatisticsToolbox.xltx
     - text: Data
       href: Data.html
 output:
