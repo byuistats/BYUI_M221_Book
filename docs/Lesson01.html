@@ -395,6 +395,13 @@ $(document).ready(function () {
 <li><a href="#course-materials">Course Materials</a></li>
 <li><a href="#course-resources">Course Resources</a></li>
 <li><a href="#plan-to-succeed">Plan to Succeed</a></li>
+<li><a href="#probability">Probability</a>
+<ul>
+<li><a href="#christopher-columbus-first-voyage">Christopher Columbus’ First Voyage</a></li>
+<li><a href="#probability-notation">Probability Notation</a></li>
+<li><a href="#rules-of-probability">Rules of Probability</a></li>
+<li><a href="#randomness">Randomness</a></li>
+</ul></li>
 <li><a href="#conclusion">Conclusion</a></li>
 <li><a href="#summary">Summary</a></li>
 <li><a href="#navigation">Navigation</a></li>
@@ -418,6 +425,7 @@ $(document).ready(function () {
 <li>Communicate with your instructor</li>
 <li>Obtain access to a spreadsheet program (Microsoft Excel)</li>
 <li>Discuss ways in which you will apply gospel principles to your work in this class</li>
+<li>State and apply the three rules of probability.</li>
 </ul>
 </div>
 <p><br></p>
@@ -511,10 +519,6 @@ $(document).ready(function () {
 <p>Please purchase a headset with a microphone and earphones. You will use these to participate via [[#Zoom Video Conferencing | Zoom]]. Make sure you arrive a little early to each session in order to have time to join the meeting and set up your microphone and headphones.</p>
 <p>As a group you will complete the practice problems provided in Part 2 of your Reading Notes and will submit your answers to the TAs for feedback. When you have successfully completed the practice problems and received feedback you may begin the Group Quiz. While you are encouraged to work together on this quiz, each member of the group must submit his or her own answers in order to receive credit. Attendance to Group Preparation is a requirement and will be reported to the TAs via the Group Leader. No credit will be given for the group assignment or quiz if you do not attend.</p>
 </div>
-<div id="class-meeting" class="section level4">
-<h4>Class Meeting</h4>
-<p>The day after Group Preparation, we will meet as a class. During the Class Meeting, you will work with students in your group to apply the principles of that lesson. Your instructor will address any questions that were communicated by the TAs from Group Preparation.</p>
-</div>
 <div id="homework" class="section level4">
 <h4>Homework</h4>
 <p>The homework is divided into two parts: the homework assignment and the homework quiz. Complete the homework assignment before beginning the quiz. This assignment comes with an answer key so that you may check your work. You are encouraged to collaborate with other students on the homework assignment, but it is important to the learning process that you do your own work. Before working with someone else on the assignment, you should attempt each problem on your own. After you have completed the homework assignment you may begin the homework quiz. You may use your notes, but you should complete the homework quiz without help from others. The quiz will have questions similar to the ones found in the homework assignment, so it is important that you understand well how to work through the problems in the homework assignment before beginning the quiz.</p>
@@ -606,9 +610,317 @@ Take a few minutes now to familiarize yourself with the <a href="http://byu-idah
 <p><br></p>
 </div>
 </div>
+<div id="probability" class="section level2">
+<h2>Probability</h2>
+<p>Probability is a way of numerically quantifying how likely an event is to happen or not happen. The following historical account demonstrates this idea and shows how fractions (like 1/2 or 3/4) or percentages (like 50% or 75%) can be used to represent probabilities.</p>
+<div id="christopher-columbus-first-voyage" class="section level3">
+<h3>Christopher Columbus’ First Voyage</h3>
+<p><img src="Images/Columbus_taking_possession_of_the_new_country.jpg"></p>
+<p>On August 3, 1492, Columbus set sail from Spain for his intended destination: the Indies (Caso, Adolph 1990). He was on the Santa Maria, which had a crew of approximately 41 men (“Cristobal colon” 1991; “Christopher Columbus”). Several other men were aboard the Nina and the Pinta (“Cristobal colon” 1991). On October 12, he landed on an island in the Bahamas he called San Salvador.</p>
+<p>The return trip was not without challenges. The Santa Maria ran aground on Christmas Day, 1492, and was abandoned on the island we now call Hispaniola (home to Haiti and the Dominican Republic). Following this incident, Columbus sailed for Spain. Severe storms made the journey difficult. A particularly bad storm on February 14, 1493 made the crew fear for their lives. By morning, the storm was even worse!</p>
+<p>Recognizing his dependence upon God, Columbus ordered that a pilgrimage should be made to a particular shrine upon their safe arrival in Spain. He decided that they would use random chance to determine who would make the pilgrimage. They took one chick pea for each man on board. A knife was used to mark one of the chick peas with a cross. The chick peas were placed in a hat and shaken up. Each man was to draw a chick pea, and the one who had the cross would make the pilgrimage.</p>
+<p>“The first who put in his hand was [Columbus,] and he drew out the bean with a cross, so the lot fell on him; and he was bound to go on the pilgrimage and fulfil the vow” (Caso, Adolph 1990).</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol style="list-style-type: decimal">
+<li>Remember, there were 41 men aboard his ship. What is the probability that Columbus would draw out the marked chick pea? Express your answer as a fraction, and then convert it to a decimal.</li>
+</ol>
+<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q1" style="display:none;">
+<ul>
+<li>There is only one marked chick pea in the hat, out of 41 chick peas total. <em>Out of</em> is expressed arithmetically by division. The probability is <span class="math inline">\(\frac{1}{41} = 0.0244\)</span>. (Note: this is about 2%.)</li>
+</ul>
+</div>
+<p></br></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Based on your answer to the previous question, how likely is it that Columbus would draw out the marked chick pea?</li>
+</ol>
+<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q2" style="display:none;">
+<ul>
+<li>There is only about a 2% chance that Columbus will draw out the marked Chick Pea. This is not very likely.<br />
+</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p></br></p>
+<p><strong>A Second Drawing</strong><br> Columbus’ promise to make the pilgrimage did not stop the storm. It was determined that there should be a pilgrimage to another site they held sacred. Again, chick peas representing each member of the crew were placed in a hat and shaken up. The lot fell on a sailor…named Pedro de Villa (Caso, Adolph 1990).</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="3" style="list-style-type: decimal">
+<li>What is the probability that Columbus would not draw out the marked chick pea? Express your answer as a fraction, and then covert it to a decimal?</li>
+</ol>
+<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q3" style="display:none;">
+<ul>
+<li>There are 40 other men on board plus Columbus. So, the probability that Columbus would not draw out the marked chick pea is: <span class="math inline">\(\frac{40}{41} = 0.9756\)</span>. (Note: this is almost 98%.)</li>
+</ul>
+</div>
+<p></br></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Based on your answer to the previous question, how likely is it that Columbus would not draw out the marked chick pea?</li>
+</ol>
+<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q4" style="display:none;">
+<ul>
+<li>It is very likely that Columbus would not draw out the marked chick pea. This result is not surprising.</li>
+</ul>
+</div>
+<p></br></p>
+<ol start="5" style="list-style-type: decimal">
+<li>In this second drawing, either Columbus would draw out the marked chick pea, or he would not. Add the probability that Columbus would draw out the marked chick pea and the probability that he would not draw out the marked chick pea. What is the value of this sum?</li>
+</ol>
+<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q5" style="display:none;">
+<ul>
+<li>The sum of the probabilities is 1:</li>
+</ul>
+<p><span class="math display">\[
+\frac{1}{41} + \frac{40}{41} = \frac{41}{41} = 1
+\]</span></p>
+</div>
+<p> </p>
+</div>
+<p></br></p>
+<p><strong>Additional Drawings</strong><br></p>
+<p>After the drawing in which Pedro de Villa was chosen to make a pilgrimage, two additional drawings were held. In both cases, Columbus drew out the marked chick pea (Caso, Adolph 1990). In all, Christopher Columbus drew the marked chick pea in three of the four drawings. It can be shown that the probability that this would occur due to chance is very small: 0.0000566. <a href="javascript:showhide('bonusprobabilitycalc')"><span style="font-size:8pt;">(Show/Hide Solution)</span></a></p>
+<div id="bonusprobabilitycalc" style="display:none;padding-left:50px;padding-right:50px;border:solid 1pt;border-color:orange;color:gray;">
+<p><strong>Bonus material. Read only if you are interested.</strong></p>
+<p>This calculation is more involved than the calculations you will be required to make in this course this semester. But if you are still interested, read on.</p>
+<p>In each individual drawing, there was a 1/41 chance of Columbus getting the marked chick pea. Similarly, there was a 40/41 chance of not getting it. Since there were four drawings total, and the goal is to measure the probability of “three of those drawings” resulting in Columbus getting the marked chick pea, it becomes important to think about all of the orders in which Columbus could have gotten 3 out of 4.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Possible Outcome</th>
+<th>First Drawing</th>
+<th>Second Drawing</th>
+<th>Third Drawing</th>
+<th>Fourth Drawing</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>What actually happened…</td>
+<td>Got it.</td>
+<td>Didn’t get it.</td>
+<td>Got it.</td>
+<td>Got it.</td>
+</tr>
+<tr class="even">
+<td>But he could have…</td>
+<td>Got it.</td>
+<td>Got it.</td>
+<td>Didn’t get it.</td>
+<td>Got it.</td>
+</tr>
+<tr class="odd">
+<td>Or he could have…</td>
+<td>Got it.</td>
+<td>Got it.</td>
+<td>Got it.</td>
+<td>Didn’t get it.</td>
+</tr>
+<tr class="even">
+<td>Or he could have…</td>
+<td>Didn’t get it.</td>
+<td>Got it.</td>
+<td>Got it.</td>
+<td>Got it.</td>
+</tr>
+</tbody>
+</table>
+<p>In each of the above cases, notice that Columbus <em>would have</em> gotten the marked chick pea a total of 3 out of 4 times. So, this tells us there are four diffent ways to get the chick pea 3 out of 4 times.</p>
+<p>The probability of what actually happened to Columbus <em>in the order in which it happened</em> would be computed by multiplying the individual probabilities of each drawing together.</p>
+<p><span class="math display">\[
+  \frac{1}{41} \cdot \frac{40}{41} \cdot \frac{1}{41} \cdot \frac{1}{41} \approx 0.00001415548
+\]</span></p>
+<p>But then, we must also add to this the other “possible” scenarios that would also lead to getting the chick pea 3 out of 4 times, but as shown below, because multiplication is commutative (the order doesn’t matter) these “different” situations result in the same probability as the first.</p>
+<p><span class="math display">\[
+  \frac{1}{41} \cdot \frac{1}{41} \cdot \frac{40}{41} \cdot \frac{1}{41} \approx 0.00001415548
+\]</span></p>
+<p><span class="math display">\[
+  \frac{1}{41} \cdot \frac{1}{41} \cdot \frac{1}{41} \cdot \frac{40}{41} \approx 0.00001415548
+\]</span></p>
+<p><span class="math display">\[
+  \frac{40}{41} \cdot \frac{1}{41} \cdot \frac{1}{41} \cdot \frac{1}{41} \approx 0.00001415548
+\]</span></p>
+<p>Thus, all that is needed is to multiply the first probability of roughly 0.00001415548 by 4 to get <span class="math inline">\(0.00001415548 \cdot 4 = 0.00005662192\)</span>.</p>
+<p><strong>End of Bonus Material.</strong></p>
+</div>
+<p>To put some perspective on this, a high school athlete in the United States is over 26 times more likely to play professional sports than Columbus was to draw the three marked peas! (Fields, Mike 2008) Consider how you might explain the occurrence of this extremely unlikely event. (While no response is required of you right now, this kind of question will be very important later, so take a little time to ponder it.) In fact, it is worth restating the question, “How might you explain the occurrence of this extremely unlikely event?”</p>
+<p>Now, take a moment to practice what you have read by answering the following questions.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="6" style="list-style-type: decimal">
+<li>If a fair, six-sided die* is rolled, what is the probability of rolling a 6?</li>
+</ol>
+<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q6" style="display:none;">
+<ul>
+<li>The probability of rolling a 6 on a die is <span class="math inline">\(\displaystyle{ \frac{1}{6}} = 0.1667\)</span>. This is because a six-sided die has 6 sides total and only 1 side that has a “6” on it. Thus, 1/6 represents the chance of getting a “six” divided by the “total number of possibilities on the die” in the denominator (6).</li>
+</ul>
+</div>
+<p></br></p>
+<ol start="7" style="list-style-type: decimal">
+<li>If a fair, six-sided die is rolled, what is the probability of not rolling a 6?</li>
+</ol>
+<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q7" style="display:none;">
+<ul>
+<li>The probability of not rolling a 6 on a die is <span class="math inline">\(\displaystyle{\frac{5}{6}} = 0.8333.\)</span> This is because there are five sides on the die that are “not a 6” (the sides representing 1, 2, 3, 4, and 5) and six total sides, so 5 out of 6 sides will yield something other than a “six.”</li>
+</ul>
+</div>
+<p></br></p>
+<ol start="8" style="list-style-type: decimal">
+<li>When a die is rolled, what is the sum of the probability of rolling a 6 and the probability of not rolling a six?</li>
+</ol>
+<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q8" style="display:none;">
+<ul>
+<li>The probability of rolling a six is <span class="math inline">\(\displaystyle{\frac{1}{6}}\)</span> and the probability of not rolling a six is <span class="math inline">\(\displaystyle{\frac{5}{6}}\)</span>. These things cannot happen at the same time, so the probability of either rolling a six or not rolling a six is <span class="math display">\[ \frac{1}{6} + \frac{5}{6} = \frac{6}{6} = 1 \]</span></li>
+</ul>
+<p>*The only possible outcomes in this case are that you either roll a six or that you do not roll a six. The probability that one of these will happen is 1. If we list all the possible outcomes, the probability that at least one of them will occur is 1.</p>
+</div>
+<p></br></p>
+<ol start="9" style="list-style-type: decimal">
+<li>In general, if we know the probability that a particular outcome will occur, how could we calculate the probability that it will not occur?</li>
+</ol>
+<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q9" style="display:none;">
+<ul>
+<li>If we know the probability that an event will occur, we can subtract this probability from 1 to find the probability that the event will not occur. This is because the sum of the probabilities that the event will occur and that the event will not occur must be 1.</li>
+</ul>
+</div>
+<p></br></p>
+<p><span class="math inline">\(*\)</span><em>Note: The word “die” is the singular form of the word “dice.” When we refer to a die, we are talking about a fair, six-sided die.</em></p>
+</div>
+<p></br></p>
+</div>
+<div id="probability-notation" class="section level3">
+<h3>Probability Notation</h3>
+<p>You may already have a good understanding of the basics of probability. It is worth noting that there is a special notation used to denote probabilities. The probability that an event, <span class="math inline">\(x\)</span>, will occur is written <span class="math inline">\(P(x)\)</span> and pronounced as “probability-of-event-x.” As an example, the probability that you will roll a 6 on a fair six-sided die can be written as</p>
+<p><span class="math display">\[
+P\text{(Roll a &quot;six&quot; on a fair six-sided die)}= \frac{1}{6} = \frac{\text{number of sides that show a &quot;six&quot;}}{\text{total number of sides on the die}}
+\]</span></p>
+</div>
+<div id="rules-of-probability" class="section level3">
+<h3>Rules of Probability</h3>
+<p>Probabilities follow patterns, called <strong>probability distributions,</strong> or just <em>distributions</em>, for short. There are three rules that a probability distribution must follow. Answer the following questions to explore what these three rules might be.</p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="10" style="list-style-type: decimal">
+<li>As an answer to a homework problem, a student reported, The probability of finding life on Mars is -0.35. What is wrong with this statement?</li>
+</ol>
+<a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q10" style="display:none;">
+<ul>
+<li>Probabilities cannot be negative because they represent the “number of ways something specific can happen” (like how many planets that are “just like” Mars and do have life on them) divided by “the total number of possibilities” (in this case, the total number of planets that exist that are “just like” Mars). The fewest planets there could be that are “just like” Mars and have life on them is zero. So the lowest a probability can go is zero.</li>
+</ul>
+</div>
+<p></br></p>
+<ol start="11" style="list-style-type: decimal">
+<li>A student in an introductory statistics class wrote the following statement on an exam: The probability that the event will occur is 1.25 (i.e. 125%). What is wrong with this statement?</li>
+</ol>
+<a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q11" style="display:none;">
+<ul>
+<li>Probabilities cannot be larger than 1 (or 100%). This is because probabilities represent frequencies of occurrence, and the most something can happen is “all the time” or 100% of the time.</li>
+</ul>
+</div>
+<p></br></p>
+<ol start="12" style="list-style-type: decimal">
+<li>A student estimated that the probability that he would finish his homework is 0.45 (i.e., 45%), and the probability that he would not finish his homework is 0.35 (i.e., 35%). What is wrong with this student’s statement?</li>
+</ol>
+<a href="javascript:showhide('Q12')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q12" style="display:none;">
+<p>This can be viewed as one of two problems:<br />
+</br></p>
+<ol style="list-style-type: decimal">
+<li><p>The probabilities for all the events do not add up to 1 (or 100%.)</p></li>
+<li><p>The probability that he does not finish his homework is actually 1 minus the probability that he will finish his homework or 0.55 (i.e., 55%).</p></li>
+</ol>
+</div>
+<p> </p>
+</div>
+<p></br></p>
+<p>In this course we are interested in experiments where the outcomes of the experiment are uncertain, yet they follow a pattern or <em>probabilitiy distribution.</em> As you read in the above questions and answers, these probability distributions follow three rules.</p>
+<div class="Emphasis">
+<p>  <strong>The three rules of probability are:</strong></p>
+<ul>
+<li><strong>Rule 1</strong>: The probability of an event <span class="math inline">\(X\)</span> is a number between 0 and 1.</li>
+</ul>
+<p><span class="math display">\[0 \leq P(X) \leq 1\]</span></p>
+<ul>
+<li><strong>Rule 2</strong>: If you list all the outcomes of an experiment (such as rolling a die) the probability that one of these outcomes will occur is 1. In other words, the sum of the probabilities of all the possible outcomes of any experiment is 1.</li>
+</ul>
+<p><span class="math display">\[\sum P(X) = 1\]</span></p>
+<ul>
+<li><strong>Rule 3</strong>: (Complement Rule) The probability that an event <span class="math inline">\(X\)</span> will not occur is 1 minus the probability that it will occur.</li>
+</ul>
+<p><span class="math display">\[P(\text{not}~X) = 1 - P(X)\]</span></p>
+<p>  You may have noticed that the Complement Rule is just a combination of the first two rules.</p>
+</div>
+<p><br></p>
+<div class="QuestionsHeading">
+Answer the following questions:
+</div>
+<div class="Questions">
+<ol start="13" style="list-style-type: decimal">
+<li>Which of the probability rules was violated by the statement in Question 10?</li>
+</ol>
+<a href="javascript:showhide('Q13')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q13" style="display:none;">
+<ul>
+<li>Rule 1</li>
+</ul>
+</div>
+<p></br></p>
+<ol start="14" style="list-style-type: decimal">
+<li>Which of the probability rules was violated by the statement in Question 11?</li>
+</ol>
+<a href="javascript:showhide('Q14')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q14" style="display:none;">
+<ul>
+<li>Rule 1</li>
+</ul>
+</div>
+<p></br></p>
+<ol start="15" style="list-style-type: decimal">
+<li>Which of the probability rules was violated by the statement in Question 12?</li>
+</ol>
+<a href="javascript:showhide('Q15')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<div id="Q15" style="display:none;">
+<ul>
+<li>Rule 2 or Rule 3</li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p></br></p>
+<p>Informally, a distribution can be thought of as being “all the possible outcomes of an experiment and how often they occur.”</p>
+</div>
+<div id="randomness" class="section level3">
+<h3>Randomness</h3>
+<p>A BYU-Idaho student was overhead saying, “I went shopping and bought some <em>random</em> items.” Did the person actually take a random sample of the items at the store? Did they write all the items down and randomly select the items for purchase? Of course not!</p>
+<p>What did the student mean? That the items they bought seemed unrelated. When we consciously or subconsciously choose a sample, it is not random.</p>
+<p>So, what does it mean to be random? When something is random, it is not just haphazard, with no pattern. A random process follows a very distinct pattern over time—the distribution of its outcomes. For example, if you roll a die thousands of times, about one-sixth of the time you will roll a four. This is a very clear pattern, or part of a pattern. The entire pattern (or, the entire distribution) is that each number on the die is rolled about one-sixth of the time.</p>
+<p>But there’s something different about the patterns followed by random processes than other kinds of patterns. Other kinds of patterns can be very predictable, such as a color pattern of the red, yellow, blue, red, yellow, blue, and so on. If you’re following this pattern and happen to see yellow, you know the next color will be blue. By contrast, you never know what you will get on the next roll of a six-sided die. You <em>do</em> know that in the long run you will roll fours about one-sixth of the time.</p>
+<p>When something is random, we can be sure that it follows a long-term pattern. This long-term pattern is called its <em>probability distribution</em>. However, what makes “randomness” interesting is that despite knowing the long-term pattern, or how often something will occur over time, we still never know what the outcome of the <em>next</em> experiment will be.</p>
+<p><br></p>
+</div>
+</div>
 <div id="conclusion" class="section level2">
 <h2>Conclusion</h2>
-<p>As with all the classes you take at BYU-Idaho, in the end it is up to you to decide what you want to get out of this class. If you choose to approach the things you study in class with an open mind, if you prepare diligently and work hard to complete all the learning activities, and if you humbly seek the Lord’s help to understand the intellectual and spiritual truths discussed in this course, you will have an outstanding educational experience that will be a blessing to you throughout your life.</p>
+<p>As with all the classes you take at BYU-Idaho, it is up to you to decide what you want to get out of this class. If you choose to approach the things you study in class with an open mind, if you prepare diligently and work hard to complete all the learning activities, and if you humbly seek the Lord’s help to understand the intellectual and spiritual truths discussed in this course and in other courses, you will have an outstanding educational experience that will be a blessing to you throughout your life. May you enjoy the journey this semester into statistics!</p>
 <p><br></p>
 </div>
 <div id="summary" class="section level2">
@@ -617,11 +929,16 @@ Take a few minutes now to familiarize yourself with the <a href="http://byu-idah
 Remember…
 </div>
 <div class="Summary">
-<!-- To edit this page, paste "Summary-L(lesson number goes here)" into the url bar after "title=" -->
 <ul>
-<li><p>Each lesson follows the same schedule: <strong>Individual and Group Preparation</strong>, <strong>Class Meeting</strong>, and <strong>Homework Assignment and Quiz</strong>. Understanding this layout will help you successfully manage the workload of this class.</p></li>
 <li><p>In this class you will use the online textbook that has been written for you by your statistics teachers. All of the assignments and quizzes will be based on the readings, so study it well.</p></li>
-<li><p>By doing the work, staying on schedule, and living the Honor Code you <em>can</em> succeed in this class!</p></li>
+<li><p>Most weeks will cover two lessons</p></li>
+<li><p>By doing the work, staying on schedule, and living the Honor Code you <em>will</em> succeed in this class!</p></li>
+<li><p>The three <strong>rules of probability</strong> are:</p>
+<ol style="list-style-type: decimal">
+<li>A probability is a number between 0 and 1. <span class="math display">\[0 \leq P(X) \leq 1\]</span></li>
+<li>If you list all the outcomes of a probability experiment (such as rolling a die) the probability that one of these outcomes will occur is 1. In other words, the sum of the probabilities in any probability is 1. <span class="math display">\[\sum P(X) = 1\]</span></li>
+<li>The probability that an outcome will not occur is 1 minus the probability that it will occur. <span class="math display">\[P(\text{not}~X) = 1 - P(X)\]</span></li>
+</ol></li>
 </ul>
 </div>
 <p><br></p>
