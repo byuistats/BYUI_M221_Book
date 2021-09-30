@@ -62,12 +62,12 @@ convert_M221 = function(
                                       keyname = paste(outname_keyi, j, sep = "_"),
                                       docname = paste(outname_assignmenti, j, sep = "_")))
       
-      rmarkdown::render(pathi, 
-                        output_dir = file.path(output_folder,
-                                               paste("L", lessonNumberi, sep = "")),
-                        output_file = paste(class_out_key, ".pdf", sep = ""),
-                        output_format = c("pdf_document"),
-                        params = list(key = TRUE))
+      # rmarkdown::render(pathi, 
+      #                   output_dir = file.path(output_folder,
+      #                                          paste("L", lessonNumberi, sep = "")),
+      #                   output_file = paste(class_out_key, ".pdf", sep = ""),
+      #                   output_format = c("pdf_document"),
+      #                   params = list(key = TRUE))
       
       rmarkdown::render(pathi, 
                         output_dir = file.path(output_folder,
@@ -87,12 +87,12 @@ convert_M221 = function(
                                       keyname = paste(outname_keyi, j, sep = "_"),
                                       docname = paste(outname_assignmenti, j, sep = "_")))
       
-      rmarkdown::render(pathi,
-                        output_dir = file.path(output_folder,
-                                               paste("L", lessonNumberi, sep = "")),
-                        output_file = paste(class_out_assignment, ".pdf", sep = ""),
-                        output_format = c("pdf_document"),
-                        params = list(key = FALSE))
+      # rmarkdown::render(pathi,
+      #                   output_dir = file.path(output_folder,
+      #                                          paste("L", lessonNumberi, sep = "")),
+      #                   output_file = paste(class_out_assignment, ".pdf", sep = ""),
+      #                   output_format = c("pdf_document"),
+      #                   params = list(key = FALSE))
       
       rmarkdown::render(pathi,
                         output_dir = file.path(output_folder,
