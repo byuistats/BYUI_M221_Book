@@ -45,21 +45,20 @@ source("../scripts/221_Interactive_Functions.R")
 
 **Instructions:  You are encouraged to collaborate with other students on the homework, but it is important that you do your own work.  Before working with someone else on the assignment, you should attempt each problem on your own.** 
 
-1.	Based on the following Q-Q plot, how would you classify the distribution of the data?
+1.	Based on the following histogram, how would you classify the distribution of the data?
    
     a.  We can conclude that the data are normal.
     b.	We can conclude that the data are not normal.
     
 ```{r, echo=FALSE,cache.vars=TRUE}
+set.seed(15)
 y <- rchisq(500, df = 3)
 ## Q-Q plot for Chi^2 data against true theoretical distribution:
-qqnorm(y=y,  main = "Q-Q plot for Normality Check")
-qqline(y, col = 2)
-
+hist(y,  main = "Histogram of data for Normality Check", col="darkgray")
 ```
 
 
-2.	Based on the following Q-Q plot, how would you classify the distribution of the data?
+2.	Based on the following histogram, how would you classify the distribution of the data?
   
     a.  We can conclude that the data are normal.
     b.	We can conclude that the data are not normal. 
@@ -67,38 +66,25 @@ qqline(y, col = 2)
 ```{r, echo=FALSE,cache.vars=TRUE}
 y <- rnorm(500)
 ## Q-Q plot for Chi^2 data against true theoretical distribution:
-qqnorm(y=y,  main = "Q-Q plot for Normality Check")
-qqline(y, col = 2)
+hist(y,  main = "Histogram for Normality Check")
 
 ``` 
 
 ```{r, include=FALSE}
-#Making the two qqPlots in order to show them in the answer key. So students can see that Volume is distinctly abnormal. 
+#Making the two histograms in order to show them in the answer key. So students can see that Volume is distinctly abnormal. 
 
 NASDAQ = read.csv(file = "https://raw.githubusercontent.com/byuistats/data/master/NASDAQ-PriceAndVolume/NASDAQ-PriceAndVolume.csv",header = TRUE,stringsAsFactors = FALSE)
-###QQ-Plot for Price
-QQp = ggplot(data = NASDAQ) + 
-  stat_qq(aes(sample=Price..US..),size=.05) 
+###Histogram for Price
+hist_price = ggplot(data = NASDAQ, aes(x=Price..US..)) + 
+  geom_histogram(binwidth = 8, fill="gray", color="black") 
 
-QQPlot_Q03_Price = ggQQline(QQp,size=.85)+
-  theme_bw(13)+
-  coord_flip()+
-  labs(x="",y="",title = "Price")+
-  theme(axis.text=element_blank(),axis.ticks=element_blank())
+ggsave(hist_price,filename = "../images/L5_Homework_Q03_QQPlot_Price.png",width = 3.75,height = 3.00)
 
-ggsave(QQPlot_Q03_Price,filename = "../images/L5_Homework_Q03_QQPlot_Price.png",width = 3.75,height = 3.00)
+###Histogram for Share Volume
+hist_share = ggplot(data = NASDAQ, aes(x=Share.Volume)) + 
+  geom_histogram(binwidth=1000000, fill="gray", color="black")  
 
-###Qqplot for Share Volume
-QQp = ggplot(data = NASDAQ) + 
-  stat_qq(aes(sample=Share.Volume),size=.05) 
-
-QQPlot_Q03_Volume = ggQQline(QQp,size=.85)+
-  theme_bw(13)+
-  coord_flip()+
-  labs(x="",y="",title = "Share Volume")+
-  theme(axis.text=element_blank(),axis.ticks=element_blank())
-
-ggsave(QQPlot_Q03_Volume,filename = "../images/L5_Homework_Q03_QQPlot_Volume.png",width = 3.75,height = 3.00)
+ggsave(hist_share,filename = "../images/L5_Homework_Q03_QQPlot_Volume.png",width = 3.75,height = 3.00)
 
 ```
 
@@ -153,20 +139,15 @@ percent1 = pnorm(z1, lower.tail = T) * 100
 
 9.	The time to complete a standardized exam in the BYU-Idaho Testing Center is approximately normal with a mean of `r mean1` minutes and a standard deviation of `r sd1` minutes. Using the 68-95-99.7 rule, approximately what percentage of students will complete the exam in less than one hour?  (Give your answer as a percent.) _________% 
 
-10. According to the Q-Q plot below, the data are ... (finish the sentence) 
+10. According to the histogram plot below, the data are ... (finish the sentence) 
 
 ```{r,echo=FALSE, results='asis',warning=FALSE,message=FALSE}
 Dentist = read.csv(file = "https://raw.githubusercontent.com/byuistats/data/master/DentistOfficeBills/DentistOfficeBills.csv",header = T,stringsAsFactors = F)
 Melt.Dentist = melt(Dentist)
 
-QQp = ggplot(data = Melt.Dentist) + 
-  stat_qq(aes(sample=value),size=.05) 
-
-ggQQline(QQp,size=.85)+
-  theme_bw(13)+
-  coord_flip()+
-  labs(x="",y="")+
-  theme(axis.text=element_blank(),axis.ticks=element_blank())
+ggplot(data = Melt.Dentist, aes(x=value)) +
+  geom_histogram(fill="blue",color="black",binwidth=50) +
+  labs("Bill Amount")
 
 #ggsave(QQPlot_Q10,filename = "../../images/L5_Homework_Q10_QQPlot.png",width = 3.75,height = 3.00)
 

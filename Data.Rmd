@@ -15,12 +15,6 @@ This page contains the data files that are used throughout the course: in the te
 
 <br/>
 
-<div style="padding-left:15px; color:gray;">
-You may download the old version of the toolbox here: [ExcelSpreadsheets.zip](./Data/ExcelSpreadsheets.zip)
-</div>
-
-Or download individual files:
-
 <div style="padding-left:15px;">
 
 [Admissions-BYU-Idaho.xlsx](./Data/Admissions-BYU-Idaho.xlsx)
