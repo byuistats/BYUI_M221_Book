@@ -178,7 +178,7 @@ QQPlot_Q08_C = ggplot(data = Normal, aes(x=Density.determined.from.underwater.we
 ggsave(QQPlot_Q08_C,filename = "../images/L5_Prep_PartII_Q8_PlotC.png",width = 3.75,height = 3.00)
 
 #Plot D-------------------------------------------------------------
-QQPlot_Q08_D = ggplot(data = Normal, x=X.Wrist.circumference..cm.) + 
+QQPlot_Q08_D = ggplot(data = Normal, aes(x=X.Wrist.circumference..cm.)) + 
   geom_histogram(fill="darkgray",col="black",bins = 12)
 
 ggsave(QQPlot_Q08_D,filename = "../images/L5_Prep_PartII_Q8_PlotD.png",width = 3.75,height = 3.00)
@@ -194,16 +194,22 @@ ggsave(QQPlot_Q08_F,filename = "../images/L5_Prep_PartII_Q8_PlotF.png",width = 3
 
 Plot A.    
 ![Plot A](../images/L5_Prep_PartII_Q8_PlotA.png)     
+
 Plot B.    
-![Plot B](../images/L5_Prep_PartII_Q8_PlotB.png)    
+![Plot B](../images/L5_Prep_PartII_Q8_PlotB.png)
+
 Plot C.    
-![Plot C](../images/L5_Prep_PartII_Q8_Plotc.png)    
+![Plot C](../images/L5_Prep_PartII_Q8_PlotC.png)    
+
 Plot D.    
-![Plot D](../images/L5_Prep_PartII_Q8_PlotD.png)    
+![Plot D](../images/L5_Prep_PartII_Q8_PlotD.png)
+
 Plot E.    
-![Plot E](../images/L5_Prep_PartII_Q8_PlotE.png)    
+![Plot E](../images/L5_Prep_PartII_Q8_PlotE.png)
+
 Plot F.    
-![Plot F](../images/L5_Prep_PartII_Q8_PlotF.png)    
+![Plot F](../images/L5_Prep_PartII_Q8_PlotF.png)
+
 
 
 ```{r,include=FALSE}
