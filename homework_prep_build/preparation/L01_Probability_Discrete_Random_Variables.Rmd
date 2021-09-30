@@ -50,7 +50,7 @@ source("../scripts/221_Interactive_Functions.R")
 
 3. What does it mean to be random?
 
-4. What does the phrase Discrete Random Variable mean?
+4. Which probability implies an event is certain to happen? Or, certain to not happen?
 
 **Part II:**  You will fill this part out during your Group Preparation session.
 
@@ -78,7 +78,7 @@ if(params$key==TRUE){
   
   Solution03 = data.frame(Part="-",Solution="When something is random, it follows a long term pattern, but we usually do not know the outcome of the next experiment.")
   
-  Solution04 = data.frame(Part="-",Solution="A discrete random variable is something that varies following a specific pattern or distribution over the long run.  They are discrete if they can be listed.")
+  Solution04 = data.frame(Part="-",Solution="A probability of 1 implies an event is certain to happen. A probability of 0 implies it is impossible to happen, or certain to not happen.")
   
   Solution05 = data.frame(Part = "-",Solution=paste("P(Roll Greater Than ",pip5,") = ",pipMax-pip5,"/",pipMax," or ",round((pipMax - pip5)/pipMax,3),sep = ""))
   
