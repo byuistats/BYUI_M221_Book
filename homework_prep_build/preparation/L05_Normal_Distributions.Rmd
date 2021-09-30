@@ -144,45 +144,27 @@ $\sigma$ = ________ m/s.
 
     f. What is the $`r quartile7_f`^{rd}$ quartile of the speeds of hydrogen at room temperature?
 
-8. Determine whether the data represented in these Q-Q plots are normally distributed or not. Record your answer for each graph.  Justify your answer.
+8. Determine whether the data represented in these histograms are normally distributed or not. Record your answer for each graph.  Justify your answer.
 
 ```{r,echo=FALSE,warning=FALSE,results='asis'}
-#This dataset will provide all our abnormal qqplots.
+#This dataset will provide all our abnormal histograms.
 NotNormal = read.csv("https://raw.githubusercontent.com/byuistats/data/master/ClassSurvey/ClassSurvey.csv",header = TRUE,stringsAsFactors = FALSE)  
 
 #Plot A-------------------------------------------------------------
-QQp = ggplot(data = NotNormal) + 
-  stat_qq(aes(sample=Wage),size=.05) 
+hist_wage = ggplot(data = NotNormal, aes(x=Wage)) + 
+  geom_histogram(fill="darkgray",col="black",bins = 12)
 
-QQPlot_Q08_A = ggQQline(QQp,size=.85)+
-  theme_bw(13)+
-  coord_flip()+
-  labs(x="",y="")+
-  theme(axis.text=element_blank(),axis.ticks=element_blank())
-
-ggsave(QQPlot_Q08_A,filename = "../images/L5_Prep_PartII_Q8_PlotA.png",width = 3.75,height = 3.00)
+ggsave(hist_wage,filename = "../images/L5_Prep_PartII_Q8_PlotA.png",width = 3.75,height = 3.00)
 
 #Plot B--------------------------------------------------------------
-QQp = ggplot(data = NotNormal) + 
-  stat_qq(aes(sample=Credits),size=.05) 
-
-QQPlot_Q08_B = ggQQline(QQp,size=.85)+
-  theme_bw(13)+
-  coord_flip()+
-  labs(x="",y="")+
-  theme(axis.text=element_blank(),axis.ticks=element_blank())
+QQPlot_Q08_B = ggplot(data = NotNormal, aes(x=Credits)) + 
+  geom_histogram(fill="darkgray",col="black",bins = 12)
 
 ggsave(QQPlot_Q08_B,filename = "../images/L5_Prep_PartII_Q8_PlotB.png",width = 3.75,height = 3.00)
 
 #Plot C--------------------------------------------------------------
-QQp = ggplot(data = NotNormal) + 
-  stat_qq(aes(sample=Age),size=.05) 
-
-QQPlot_Q08_E = ggQQline(QQp,size=.85)+
-  theme_bw(13)+
-  coord_flip()+
-  labs(x="",y="")+
-  theme(axis.text=element_blank(),axis.ticks=element_blank())
+QQPlot_Q08_E = ggplot(data = NotNormal, aes(x=Age)) + 
+  geom_histogram(fill="darkgray",col="black",bins = 12)
 
 ggsave(QQPlot_Q08_E,filename = "../images/L5_Prep_PartII_Q8_PlotE.png",width = 3.75,height = 3.00)
 
@@ -190,39 +172,21 @@ ggsave(QQPlot_Q08_E,filename = "../images/L5_Prep_PartII_Q8_PlotE.png",width = 3
 Normal = read.csv("https://raw.githubusercontent.com/byuistats/data/master/BodyMeasurements/BodyMeasurements.csv",header = TRUE,stringsAsFactors = FALSE)
 
 #Plot C------------------------------------------------------------
-QQp = ggplot(data = Normal) + 
-  stat_qq(aes(sample=Density.determined.from.underwater.weighing),size=.05) 
-
-QQPlot_Q08_C = ggQQline(QQp,size=.85)+
-  theme_bw(13)+
-  coord_flip()+
-  labs(x="",y="")+
-  theme(axis.text=element_blank(),axis.ticks=element_blank())
+QQPlot_Q08_C = ggplot(data = Normal, aes(x=Density.determined.from.underwater.weighing)) + 
+  geom_histogram(fill="darkgray",col="black",bins = 12)
 
 ggsave(QQPlot_Q08_C,filename = "../images/L5_Prep_PartII_Q8_PlotC.png",width = 3.75,height = 3.00)
 
 #Plot D-------------------------------------------------------------
-QQp = ggplot(data = Normal) + 
-  stat_qq(aes(sample=X.Wrist.circumference..cm.),size=.05) 
-
-QQPlot_Q08_D = ggQQline(QQp,size=.85)+
-  theme_bw(13)+
-  coord_flip()+
-  labs(x="",y="")+
-  theme(axis.text=element_blank(),axis.ticks=element_blank())
+QQPlot_Q08_D = ggplot(data = Normal, x=X.Wrist.circumference..cm.) + 
+  geom_histogram(fill="darkgray",col="black",bins = 12)
 
 ggsave(QQPlot_Q08_D,filename = "../images/L5_Prep_PartII_Q8_PlotD.png",width = 3.75,height = 3.00)
 
 #Plot F------------------------------------------------------------
 VeryNormal = data.frame(x = rnorm(400,2,5))
-QQp = ggplot(data = VeryNormal) + 
-  stat_qq(aes(sample=x),size=.05) 
-
-QQPlot_Q08_F = ggQQline(QQp,size=.85)+
-  theme_bw(13)+
-  coord_flip()+
-  labs(x="",y="")+
-  theme(axis.text=element_blank(),axis.ticks=element_blank())
+QQPlot_Q08_F = ggplot(data = VeryNormal, aes(x=x)) + 
+  geom_histogram(fill="darkgray",col="black",bins = 12)
 
 ggsave(QQPlot_Q08_F,filename = "../images/L5_Prep_PartII_Q8_PlotF.png",width = 3.75,height = 3.00)
 ```
