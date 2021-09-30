@@ -89,7 +89,7 @@ ggsave(hist_share,filename = "../images/L5_Homework_Q03_QQPlot_Volume.png",width
 ```
 
 
-The data set [NASDAQ Price and Volume](http://statistics.byuimath.com/index.php?title=Data) summarizes information on select companies that are traded on NASDAQ.  The table gives the symbol for the company, the company's name, the price of their stock and the number of shares that have been traded (the volume).  Use this information to answer question 3.
+The data set [NASDAQ Price and Volume](../../Data/NASDAQ-PriceAndVolume.xlsx) summarizes information on select companies that are traded on NASDAQ.  The table gives the symbol for the company, the company's name, the price of their stock and the number of shares that have been traded (the volume).  Use this information to answer question 3.
 
 3.	Which of the following statements is most correct?
 
