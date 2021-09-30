@@ -101,7 +101,7 @@ sampleE <- problem_6_CompE$n
 
 ```
 
-2. The following data set are data on stock performance of specific companies. Find the mean, median and mode for each of the companies A-E.  Click on the link to access this data set. ([MysteryInvestmentOpportunities](http://statistics.byuimath.com/index.php?title=Data))
+2. The following data set are data on stock performance of specific companies. Find the mean, median and mode for each of the companies A-E.  Click on the link to access this data set. ([MysteryInvestmentOpportunities](../../Data/MysteryInvestmentOpportunities.xlsx))
 
 3. Make a histogram of the stock performance data for each of the companies. Paste your graphs here.
 
