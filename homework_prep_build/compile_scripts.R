@@ -217,7 +217,11 @@ convert_M221(hw_files[20])
 
 # requires that your working directory setwd("homework_prep_build").
 R.utils::copyDirectory('current_files', '../hp', overwrite = TRUE) 
-R.utils::copyDirectory('../hp', "../docs/hp", overwrite = TRUE)
+
+#If you don't want to rebuild the entire book to update into the docs folder:
+#R.utils::copyDirectory('current_files', '../docs/hp', overwrite = TRUE) 
+
+#Or rebuild entire site to update docs folder
 # rmarkdown::render_site("../") 
 
 # for bug on 10/7/2016 with not reporting numbers for problem 10.
