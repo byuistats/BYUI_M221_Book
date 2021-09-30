@@ -110,7 +110,7 @@ sampleE <- problem_6_CompE$n
 
 ```
 
-6. If you were saving for retirement, which of these five companies would be the most attractive investment?  Justify your answer.
+6. If you were saving for retirement, which of these five companies would be the most attractive investment ([MysteryInvestmentOpportunities](http://statistics.byuimath.com/index.php?title=Data))?  Justify your answer.
 **Compared to your answer for this question in lesson 3 (question 5), did it make a difference to compare the spread of the data when making a decision for this problem **
 
 ```{r,include=FALSE}
@@ -132,7 +132,7 @@ Variance = var(Observation)
 SD = sd(Observation)
 ```
 
-7.	Create a table to compute the standard deviation "by hand" using the data Severe Bird Flu Data, available on this github page, [(Lesson 03 Describing Quantitative Data; Shape, Center and Spread)](https://byuistats.github.io/BYUI_M221_Book/Data). 
+7.	Create a table to compute the standard deviation "by hand" using the data Severe Bird Flu Data, available in Lesson 4 of the textbook, ([Lesson 4 of the textbook](https://byuistats.github.io/BYUI_M221_Book/Lesson04.html)). 
 
 ```{r, include = FALSE}
 MysteryMelt = melt(Mystery, na.rm = TRUE)
