@@ -105,7 +105,6 @@ A simple random sample of `r n3` two-month-old babies is obtained, and the mean 
 
 14.	Label the sample test statistic and shade the P-value on a sampling distribution curve.    
    
-**Note: You can either sketch the distribution curve and scan in your document or use the snipping tool to paste a picture of the distribution curve here.  [Click here](http://statistics.byuimath.com/index.php?title=Help:Snipping_Tool) for instructions on how to use the snipping tool.**
 
 15.	What decision do you make based on the P-value and the level of significance ($\alpha$)? 
 

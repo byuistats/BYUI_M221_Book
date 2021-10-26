@@ -81,7 +81,7 @@ pander(data.frame(Score = c(1:6), Description = c("Random guess (no clue)","Very
 ```
 
 Confidence ratings were not relayed to the instructor, and they did not affect the grade on the exam. The mean confidence rating marked by each student is given together with their score on the exam. (The maximum score possible on the exam was 100 points.)
-Open the data file [MathSelfEfficacy](http://statistics.byuimath.com/index.php?title=Data#MathSelfEfficacy). Use this information to answer questions 3 through 5.
+Open the data file [MathSelfEfficacy](https://byuistats.github.io/BYUI_M221_Book/Data/MathSelfEfficacy.xlsx). Use this information to answer questions 3 through 5.
 
 3. What is the mean score on the exam earned by the n = `r n2` students in the sample?
 

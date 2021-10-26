@@ -81,7 +81,7 @@ pValue1 = summary(results1)[[1]][1,5]
 
 ```
 
-ANOVA--According to William Butler Yeats, "She is the Gaelic muse, for she gives inspiration to those she persecutes. The Gaelic poets die young, for she is restless, and will not let them remain long on earth." One study designed to investigate this issue examined the age of death for writers from different cultures and genders.  Three categories of writers examined were novelists, poets, and nonfiction writers. The ages at death for female writers in these categories from North America are given in the [womenpoet.xls](http://statistics.byuimath.com/index.php?title=Data) / [womenpoet.sav](http://statistics.byuimath.com/index.php?title=Data) data.  You would like to determine if the mean age at death is different from any of the categories of writers.  Use $\alpha = `r alpha1`$ as a level of significance
+ANOVA--According to William Butler Yeats, "She is the Gaelic muse, for she gives inspiration to those she persecutes. The Gaelic poets die young, for she is restless, and will not let them remain long on earth." One study designed to investigate this issue examined the age of death for writers from different cultures and genders.  Three categories of writers examined were novelists, poets, and nonfiction writers. The ages at death for female writers in these categories from North America are given in the [womenpoet.xls](https://byuistats.github.io/BYUI_M221_Book/Data/womenpoet.xls) data.  Determine if the mean age at death is different for any of the categories of writers.  Use $\alpha = `r alpha1`$ as a level of significance.
 
 1. **Design the Study:**
 
@@ -130,41 +130,32 @@ Boxplot_Q06 = ggplot(WomanPoet, aes(x = Type, y = Age)) +
 
 ggsave(Boxplot_Q06,filename = "../images/L14_Prep_Q06_Boxplot.png",width = 2.75,height = 2.25)  
 #---------------------------------------
-#To make the QQplot for the novelists in question 7
+#To make the Histograms for the novelists in question 7
 
-QQp = ggplot(data = Novel) + 
-  stat_qq(aes(sample=Age),size=.05) 
-
-QQPlot_Q07_novel = ggQQline(QQp,size=.85)+
-  theme_bw(13)+
-  coord_flip()+
-  labs(x="",y="")+
-  theme(axis.text=element_blank(),axis.ticks=element_blank())
+QQPlot_Q07_novel = ggplot(data = Novel, aes(x=Age)) + 
+  geom_histogram(fill="gray",color="darkgray", bins=10)+
+  labs(x="Age",y="")+
+  theme(axis.text=element_blank(),axis.ticks=element_blank())+
+  theme_bw()
 ggsave(QQPlot_Q07_novel,filename = "../images/L14_Prep_Q07_QQ_Novel.png",width = 3.75,height = 3.00)
 #---------------------------------------
-#Makes the QQplot for the poets in question 7
+#Makes the Histogram for the poets in question 7
 
-QQp = ggplot(data = Poem) + 
-  stat_qq(aes(sample=Age),size=.05)
-
-QQPlot_Q07_poem = ggQQline(QQp,size=.85)+
-  theme_bw(13)+
-  coord_flip()+
-  labs(x="",y="")+
-  theme(axis.text=element_blank(),axis.ticks=element_blank())
+QQPlot_Q07_poem = ggplot(data = Poem, aes(x=Age)) + 
+  geom_histogram(fill="gray",color="darkgray", bins=10)+
+  labs(x="Age",y="")+
+  theme(axis.text=element_blank(),axis.ticks=element_blank())+
+  theme_bw()
 
 ggsave(QQPlot_Q07_poem,filename = "../images/L14_Prep_Q07_QQ_poem.png",width = 3.75,height = 3.00)
 #---------------------------------------
-#Makes the QQplot for the non fiction writers in question 7
+#Makes the Histogram for the non fiction writers in question 7
 
-QQp = ggplot(data = Nonfiction) + 
-  stat_qq(aes(sample=Age),size=.05)
-
-QQPlot_Q07_nonfiction = ggQQline(QQp,size=.85)+
-  theme_bw(13)+
-  coord_flip()+
-  labs(x="",y="")+
-  theme(axis.text=element_blank(),axis.ticks=element_blank())
+QQPlot_Q07_nonfiction = ggplot(data = Nonfiction, aes(x=Age)) + 
+  geom_histogram(fill="gray",color="darkgray", bins=10)+
+  labs(x="Age",y="")+
+  theme(axis.text=element_blank(),axis.ticks=element_blank())+
+  theme_bw()
 ggsave(QQPlot_Q07_nonfiction,filename = "../images/L14_Prep_Q07_QQ_nonfiction.png",width = 3.75,height = 3.00)
 
 #----------------------------------------------------
