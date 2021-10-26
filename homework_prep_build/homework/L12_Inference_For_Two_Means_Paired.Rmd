@@ -102,7 +102,7 @@ pvalue_q13_q14 = results_Zung$p.value
 ```
 
 
-The Zung Self-Rating Anxiety Scale (SAS) was developed by William W. K. Zung, a psychiatrist from Duke University, to quantify and compare anxiety levels (Wikipedia).  Many stress-relief courses use this scale to measure the change in participants' anxiety from before the course to after.  You want to determine if a particular course is effective at changing stress levels before you consider participating. *Define the differences as the individual's Zung SAS score after the course minus their score before the course*.  Open the data file [ZungSim](http://statistics.byuimath.com/index.php?title=Data). Use this information to answer questions 5 through 16.
+The Zung Self-Rating Anxiety Scale (SAS) was developed by William W. K. Zung, a psychiatrist from Duke University, to quantify and compare anxiety levels (Wikipedia).  Many stress-relief courses use this scale to measure the change in participants' anxiety from before the course to after.  You want to determine if a particular course is effective at changing stress levels before you consider participating. *Define the differences as the individual's Zung SAS score after the course minus their score before the course*.  Open the data file [ZungSim](https://byuistats.github.io/BYUI_M221_Book/Data/ZungSim.xlsx). Use this information to answer questions 5 through 16.
 
 5. Create and interpret a `r confLevel2`% confidence interval of the true mean difference of the before and after stress levels.
 
@@ -152,7 +152,7 @@ pvalue_q22_q23 = results_MLA$p.value
 ```
 
 
-A study was conducted to test retention in language learning. `r n3` psychologists were randomly selected from around the country to participate in the study. At the end of an intensive three day Spanish course the subjects completed the MLA listening test. One week later they were given the same test. Suppose that you are a researcher conducting this study. Conduct a hypothesis test to determine if there was a significant `r typeTest(test3)` between test scores from the end of the course to one week after the course.  Open the data file [MLA](http://statistics.byuimath.com/index.php?title=Data) Data.  *Define the differences as the Week Later minus Course End*. Use a level of significance of $\alpha =  `r alpha3`$. Use this information to answer questions 17 through 24.
+A study was conducted to test retention in language learning. `r n3` psychologists were randomly selected from around the country to participate in the study. At the end of an intensive three day Spanish course the subjects completed the MLA listening test. One week later they were given the same test. Suppose that you are a researcher conducting this study. Conduct a hypothesis test to determine if there was a significant `r typeTest(test3)` between test scores from the end of the course to one week after the course.  Open the data file [MLA_Data](https://byuistats.github.io/BYUI_M221_Book/Data/MLA_Data.xls) Data.  *Define the differences as the Week Later minus Course End*. Use a level of significance of $\alpha =  `r alpha3`$. Use this information to answer questions 17 through 24.
 
 
 17.	State the null and alternative hypotheses.
@@ -186,17 +186,12 @@ Question18_histogram = ggplot(data = MLA,aes(x=Difference)) +
                           theme_bw()
 ggsave(Question18_histogram,filename = "../images/L12_Homework_Q18_histogram.png",width = 2.75,height = 2.25)
 
-diff = data.frame(y=MLA$Difference)
-QQp = ggplot(data = diff) + 
-  stat_qq(aes(sample=y)) + 
-  theme_few(4) +
-  coord_flip()
+Question19_QQPlot = ggplot(MLA, aes(Difference)) + 
+  geom_histogram(fill="gray",color="darkgray", bins=10)+
+  labs(x="Age",y="")+
+  theme(axis.text=element_blank(),axis.ticks=element_blank())+
+  theme_bw()
 
-Question19_QQPlot = QQp +
-  geom_smooth(data = ggplot_build(QQp)$data[[1]],
-              aes(x=x,y=y),
-              method = "lm",
-              se = FALSE)
 ggsave(Question19_QQPlot,filename = "../images/L12_Homework_Q19_QQp.png",width = 2.75,height = 2.25)
 
 png(file="../images/tdistribution_L12_Q12.png",width=7.75,height=4.25,units="in",res=100)

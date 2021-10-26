@@ -73,7 +73,7 @@ resultsSurvey = t.test(SurveyM$Wage,SurveyF$Wage,paired=FALSE,mu=0,alternative="
 ```
 
 
-Independent Samples - One of the professors in the BYU-Idaho Math Department collected data from BYU-Idaho students to compare the mean wages of BYU-Idaho male students to BYU-Idaho female students.  The students from his classes completed a survey which he then used to analyze if there is difference in these wages. (Use the Class Survey Data to complete this problem: [Class Survey Data for SPSS](http://emp.byui.edu/johnsonc/data/ClassSurvey.sav), [Class Survey Data for Excel](http://emp.byui.edu/johnsonc/data/ClassSurvey.xlsx) )
+Independent Samples - One of the professors in the BYU-Idaho Math Department collected data from BYU-Idaho students to compare the mean wages of BYU-Idaho male students to BYU-Idaho female students.  The students from his classes completed a survey which he then used to analyze if there is difference in these wages. (Use the Class Survey Data to complete this problem: [Class Survey Data for Excel](https://byuistats.github.io/BYUI_M221_Book/Data/ClassSurvey.xlsx) )
 
 3.	Design the Study:
 

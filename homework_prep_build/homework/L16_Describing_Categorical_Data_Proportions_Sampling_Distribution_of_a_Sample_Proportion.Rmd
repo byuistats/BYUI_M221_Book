@@ -57,9 +57,9 @@ n1 = 10/min(trueP1,1-trueP1)
 ```
 
 
-Demographic data of Brother Johnson's statistics students were collected at the beginning of one semester. Open the data file [Survey Data](http://statistics.byuimath.com/index.php?title=Data). Use this information to answer questions 2 through 4.
+Demographic data of Brother Johnson's statistics students were collected at the beginning of one semester. Open the data file [Class Survey Data](https://byuistats.github.io/BYUI_M221_Book/Data/ClassSurvey.xlsx). Use this information to answer questions 2 through 4.
 
-2. Make and attach a pie chart showing the class rank of all Brother Johnson's students.  **You can either sketch the pie chart and scan in your document or use the snipping tool to paste a picture of the pie chart here.  Click [here](http://statistics.byuimath.com/index.php?title=Help:Snipping_Tool) for instructions on how to use the snipping tool.**
+2. Make and attach a pie chart showing the class rank of all Brother Johnson's students.
 
 3. Make and attach a bar chart of the class rank of all students in Brother Johnson's Class. 
 

@@ -76,7 +76,7 @@ results_Q06 = t.test(FactoryAssemblyTimes$Pre.Assembly.Change,FactoryAssemblyTim
 ```
 
 
-Matched Paired t Procedure - A manager at a factory feels that the amount of time that his workers spend doing their part in the assembly line is too long. He measures the amount of time (in minutes) `r n1` of his workers take to complete 100 products.  After implementing the new procedure, he again measures the amount of time (in minutes) the same `r n1` workers take to complete 100 products, and obtains the following data:  He wants to know if the mean assembly time is `r typeTest(test1)` and used the level of significance of $\alpha$ = `r alpha1`.  (Use Data link on I-Learn [FactoryAssemblyTimes-sim](http://statistics.byuimath.com/index.php?title=Data))
+Matched Paired t Procedure - A manager at a factory feels that the amount of time that his workers spend doing their part in the assembly line is too long. He measures the amount of time (in minutes) `r n1` of his workers take to complete 100 products.  After implementing the new procedure, he again measures the amount of time (in minutes) the same `r n1` workers take to complete 100 products, and obtains the following data:  He wants to know if the mean assembly time is `r typeTest(test1)` and used the level of significance of $\alpha$ = `r alpha1`.  (Use Data link on I-Learn [FactoryAssemblyTimes-sim](https://byuistats.github.io/BYUI_M221_Book/Data/FactoryAssemblyTimes-sim.xlsx))
 
 3.	Design the Study:
     
@@ -184,7 +184,7 @@ if(params$key==TRUE){
           
     Solution06 = data.frame(Part=LETTERS[1:9],Solution=c(paste("A ", tailTest(test1)," paired-sample t-test for means is the appropriate hypothesis test to perform.", sep = ""),
                                                          "That the sample mean of the differences comes from a normal distribution and we assume a simple random sample of the population.",     
-                                                         "We assume a simple random sample of the population. $n < 30$ so we would need to make a QQ plot in order to test the normality of the data. \\\n ![qqplot](../images/L12_Q06_QQp.png) \\\n The differences may not by normally distributed, it is hard to tell with so few samples. We will continue with our assumption of normality.",
+                                                         "We assume a simple random sample of the population. $n < 30$ so we would need to look back at the histogram to determine normality of the data. \\\n ![qqplot](../images/L12_Prep_PartII_Q5_diff_histogram.png) \\\n The differences may not by normally distributed, it is hard to tell with such a small sample size. We will continue with our assumption of normality.",
                                                          paste("$t=", round(results_Q06$statistic,3), "$ or $t=", -1 * round(results_Q06$statistic,3),"$", sep = ""),
                                                          paste("$df=", df1, "$",sep = ""),
                                                          paste("$\\text{P-value}=", round(results_Q06$p.value,3),"\\text{ P-value}>\\alpha$",sep = ""),

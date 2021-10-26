@@ -83,7 +83,7 @@ p1 = results1_D_v_P$p.value
 ```
 
 
-The data set [ToyotaPrius2005](http://statistics.byuimath.com/index.php?title=Data) gives the advertised selling prices for a random sample of used 2005 Toyota Prius cars that were listed for sale on cars.com.  You want to determine which variables affect the listing prices of cars. Two of the factors that you will explore are the type of seller listing the car and whether or not the car is certified. Use this information to answer questions 3 through 20.
+The data set [ToyotaPrius2005](https://byuistats.github.io/BYUI_M221_Book/Data/ToyotaPrius2005.xlsx) gives the advertised selling prices for a random sample of used 2005 Toyota Prius cars that were listed for sale on cars.com.  You want to determine which variables affect the listing prices of cars. Two of the factors that you will explore are the type of seller listing the car and whether or not the car is certified. Use this information to answer questions 3 through 20.
 
 The first variable you will look at is the type of seller who is listing the car.  The two types of sellers are "Dealer" and "Private".  You will create a confidence interval for the difference in the mean listing price between dealers and private sellers.
 
@@ -174,7 +174,7 @@ p3 = results3_D_v_N$p.value
 ```
 
 
-`r n3` patients who did not have a regular health care provider and who had an acute medical condition were randomly assigned to either a nurse practitioner or a physician. The patients were given an examination at the beginning of the study and again six months later. The researchers wanted to know if there was a difference in the level of satisfaction of the patients who were treated by a nurse practitioner compared to those treated by a doctor.  The data set [PatientSatisfactionDoctorVsNurse-Stacked](http://statistics.byuimath.com/index.php?title=Data) gives data representative of the satisfaction ratings reported by the patients. The satisfaction scores are based on a series of questions using a 5-point scale, where 5 is the most positive response. Conduct a hypothesis test to determine if there is a difference in the mean level of satisfaction for the patients in the two groups. Use a level of significance of $\alpha = `r alpha3`$. Use this information to answer questions 21 through 25.
+`r n3` patients who did not have a regular health care provider and who had an acute medical condition were randomly assigned to either a nurse practitioner or a physician. The patients were given an examination at the beginning of the study and again six months later. The researchers wanted to know if there was a difference in the level of satisfaction of the patients who were treated by a nurse practitioner compared to those treated by a doctor.  The data set [PatientSatisfactionDoctorVsNurse-Stacked](https://byuistats.github.io/BYUI_M221_Book/Data/PatientSatisfaction-DoctorVsNurse-Stacked.xlsx) gives data representative of the satisfaction ratings reported by the patients. The satisfaction scores are based on a series of questions using a 5-point scale, where 5 is the most positive response. Conduct a hypothesis test to determine if there is a difference in the mean level of satisfaction for the patients in the two groups. Use a level of significance of $\alpha = `r alpha3`$. Use this information to answer questions 21 through 25.
 
 21.	State the null and alternative hypotheses.
 
@@ -202,14 +202,11 @@ ggsave(Question03_Histogram,filename = "../images/L13_Homework_Q03_Histogram.png
 ## we don't need to create this new data set
             #price = data.frame(y=toyotaP$Price)
 # we can put the toyotaP data in.
-QQp = ggplot(data = toyotaP) + 
-  stat_qq(aes(sample=Price),size=.05) 
-
-Question05_QQPlot = ggQQline(QQp,size=.85)+
-  theme_bw(13)+
-  coord_flip()+
-  labs(x="",y="")+
-  theme(axis.text=element_blank(),axis.ticks=element_blank())
+Question05_QQPlot = ggplot(data = toyotaP, aes(x=Price)) + 
+  geom_histogram(fill="gray",color="darkgray", bins=10)+
+  labs(x="Age",y="")+
+  theme(axis.text=element_blank(),axis.ticks=element_blank())+
+  theme_bw()
 
 ggsave(Question05_QQPlot,filename = "../images/L13_Homework_Q05_QQp.png",width = 3.75,height = 3.00)
 
@@ -226,13 +223,11 @@ Question08_14_Histogram =
 ggsave(Question08_14_Histogram,filename = "../images/L13_Homework_Q08_Q14_Histogram.png",width = 3.25,height = 2.75)
 
 #QQPlot to check for normality of prices of certified vehicals. 
-QQp_price = ggplot(data = ToyotaYes) +  stat_qq(aes(sample=Price))
-
-Question10_QQPlot = ggQQline(QQp_price,size=.85)+
-  theme_bw(13)+
-  coord_flip()+
-  labs(x="",y="")+
-  theme(axis.text=element_blank(),axis.ticks=element_blank())
+Question10_QQPlot = ggplot(data = ToyotaYes, aes(x=Price))  + 
+  geom_histogram(fill="gray",color="darkgray", bins=10)+
+  labs(x="Age",y="")+
+  theme(axis.text=element_blank(),axis.ticks=element_blank())+
+  theme_bw()
 
 ggsave(Question10_QQPlot,filename = "../images/L13_Homework_Q10_QQp.png",width = 3.75,height = 3)
 ```

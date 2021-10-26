@@ -82,7 +82,7 @@ propOT = prop.table(table(ClassSurvey$Rank))[[3]]
 ```
 
 
-6. Open the file [Class Survey](http://statistics.byuimath.com/index.php?title=Data) using the file format for your class.   Create a pie chart for Class Rank.  Label it.  Post it here.
+6. Open the file [Class Survey](https://byuistats.github.io/BYUI_M221_Book/Data/ClassSurvey.xlsx) using the file format for your class.   Create a pie chart for Class Rank.  Label it.  Post it here.
 
 7. Next create a bar graph for Class Rank.  Label it.  Post it here.
 

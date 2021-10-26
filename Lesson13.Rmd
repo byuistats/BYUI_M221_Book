@@ -507,7 +507,7 @@ $$df = 106.429$$
 <div id="Q11" style="display:none;">
 <center>
 $$
-P\textrm{-value}=5.4636 \times 10^{-06}
+P\textrm{-value}=5.4685 \times 10^{-06}
 $$
 </center>
 </div>
