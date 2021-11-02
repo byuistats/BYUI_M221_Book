@@ -137,7 +137,7 @@ ConfInterval4_14 = confInterval(mean(OreoDoubleStuf$DoubleStuf),t_score4_14,sd(O
 ConfInterval4_14String = confIntervalString(mean(OreoDoubleStuf$DoubleStuf),t_score4_14,sd(OreoDoubleStuf$DoubleStuf),n4_14)
 ```
 
-A group of students carefully scraped the white filling (the "Stuf") from traditional and DoubleStuf Oreo cookies.  They took about 50 samples of each type of cookie and measured (in grams) the amount of stuffing in each cookie to determine if DoubleStuf Oreos really contain "double" the amount of filling. Open the data file [OreoDoubleStuf](http://statistics.byuimath.com/index.php?title=Data#OreoDoubleStuf). Use this information to answer questions 13 through 15.
+A group of students carefully scraped the white filling (the "Stuf") from traditional and DoubleStuf Oreo cookies.  They took about 50 samples of each type of cookie and measured (in grams) the amount of stuffing in each cookie to determine if DoubleStuf Oreos really contain "double" the amount of filling. Open the data file [OreoDoubleStuf](https://byuistats.github.io/BYUI_M221_Book/Data/OreoDoubleStuf.xlsx). Use this information to answer questions 13 through 15.
 
 13. Find and interpret a `r confInt4`% confidence interval, after calculating the margin of error, for the true mean weight of the filling in traditional Oreo cookies. 
 

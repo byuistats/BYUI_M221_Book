@@ -82,7 +82,7 @@ Using historical data, a market analyst forecasts that the probability is 0.30 t
 
 
 
-```{r, warning=FALSE, message=FALSE,cache.vars=TRUE}
+```{r, warning=FALSE, message=FALSE,cache.vars=TRUE, echo=FALSE}
 
 pander(table_forecasts)
 

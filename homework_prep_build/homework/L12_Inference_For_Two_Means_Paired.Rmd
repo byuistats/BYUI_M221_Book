@@ -248,7 +248,7 @@ difference is 0, meaning that the class could have no effect on stress levels. T
     
     Solution18 = data.frame(Part="-",Solution="![Hist](../images/L12_Homework_Q18_histogram.png) \\\n Note: This histogram should be of the differences, not the individual data sets.")
     
-    Solution19 = data.frame(Part="-",Solution="a. We are told that the data were collected using a simple random sample (SRS) \\\n b. We have a small sample (n = 20), so we need to create a Q-Q plot to be sure the distribution of sample means is normal: \\\n ![qqplot](../images/L12_Homework_Q19_QQp.png) \\\n The data appear to be normal")
+    Solution19 = data.frame(Part="-",Solution="a. We are told that the data were collected using a simple random sample (SRS) \\\n b. We have a small sample (n = 20), so we need to create a histogram to be sure the distribution of differences is normal in order to be able to claim that the distribution sample means is normal: \\\n ![qqplot](../images/L12_Homework_Q19_QQp.png) \\\n The differences appear to be normal")
     
     Solution20 = data.frame(Part="-",Solution=paste("-$\\bar{d} = ",round(meanD3,3),"$ \\\n- $s_d = ",round(sdD3,3),"$ \\\n- $n = ",n3,"$",sep = ""))
     

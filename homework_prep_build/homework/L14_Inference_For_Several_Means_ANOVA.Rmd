@@ -293,7 +293,7 @@ if(params$key==TRUE){
   Solution05 = data.frame(Part = "-",Solution="ANOVA")
   
   Solution06 = data.frame(Part = "-",Solution="Yes, the requirements are satisfied. The requirements that were checked were the following: \\\n
--The observations are normally distributed within each group. This was checked by creating Q-Q plots for each group. The sample sizes are small and this conclusion is subjective.\\\n
+-The observations are normally distributed within each group. This was checked by creating histograms for each group. The sample sizes are small and this conclusion is subjective.\\\n
                           ![QQEF](../images/L14H_problem_6_EF_qqplot.png) \\\n       
                           ![QQYF](../images/L14H_problem_6_YF_qqplot.png) \\\n
                           ![QQEM](../images/L14H_problem_6_EM_qqplot.png) \\\n
@@ -315,7 +315,7 @@ if(params$key==TRUE){
   Solution13 = data.frame(Part = "-",Solution=paste("**Control**: n = ",n2C,", mean = ",round(mean2C,3),", Std. Dev. = ",round(sd2C,3)," \\\n **MON**: n = ",n2M,", mean = ",round(mean2M,3),", Std. Dev. = ",round(sd2M,3)," \\\n **SAFF**: n = ",n2S,", mean = ",round(mean2S,3),", Std. Dev. = ",round(sd2S,3)," \\\n**SAFF/MON**: n = ",n2SM,", mean = ",round(mean2SM,3),", Std. Dev. = ",round(sd2SM,3),sep=""))
   
   Solution14 = data.frame(Part = "-",Solution="No, not all of the requirements are satisfied. The requirements that were checked were the following: \\\n 
--The observations are normally distributed within each group. This was checked by creating Q-Q plots for each group. The sample sizes are small and this conclusion is subjective. \\\n
+-The observations are normally distributed within each group. This was checked by creating histograms for each group. The sample sizes are small and this conclusion is subjective. \\\n
                           ![QQCON](../images/L14H_problem_6_CON_qqplot.png) \\\n       
                           ![QQMON](../images/L14H_problem_6_MON_qqplot.png) \\\n
                           ![QQSAFF](../images/L14H_problem_6_SAFF_qqplot.png) \\\n 
