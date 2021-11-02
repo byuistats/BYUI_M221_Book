@@ -83,40 +83,42 @@ pValue1 = summary(results1)[[1]][1,5]
 
 ANOVA--According to William Butler Yeats, "She is the Gaelic muse, for she gives inspiration to those she persecutes. The Gaelic poets die young, for she is restless, and will not let them remain long on earth." One study designed to investigate this issue examined the age of death for writers from different cultures and genders.  Three categories of writers examined were novelists, poets, and nonfiction writers. The ages at death for female writers in these categories from North America are given in the [womenpoet.xls](https://byuistats.github.io/BYUI_M221_Book/Data/womenpoet.xls) data.  Determine if the mean age at death is different for any of the categories of writers.  Use $\alpha = `r alpha1`$ as a level of significance.
 
-1. **Design the Study:**
+**Design the Study:**
 
-    a. What is the research question?
+4. What is the research question?
 
-    b. State the null and alternative hypothesis.
+5. State the null and alternative hypothesis.
 
-2. **Collect the Data**:
+**Collect the Data**:
 
-    a. Describe the data collection procedures.
+6. Describe the data collection procedures.
 
-3. **Describe the Data**:
+**Describe the Data**:
 
-    a. In a short paragraph use summary statistics to describe the data.  After the paragraph insert an appropriate and well labeled graph to illustrate the data.  
+7. In a short paragraph use summary statistics to describe the data.  After the paragraph insert an appropriate and well labeled graph to illustrate the data.  
 
-4. **Make Inferences:**
+**Make Inferences:**
 
-    a. What type of hypothesis test is appropriate?
+8. What type of hypothesis test is appropriate?
 
-    b. What are the requirements for this test?
+9. What are the requirements for this test?
 
-    c. Are the requirements met for this test?  Explain (this will require plots and simple calculations).
+10. Are the requirements met for this test?  Explain (this will require plots and simple calculations).
 
-    d. Compute the test statistic.
+11. Compute the test statistic.
 
-    e. State the degrees of Freedom.
+12. State the degrees of Freedom.
 
-    f. Compute the P-value and compare it to the alpha level.
+13. Compute the P-value and compare it to the alpha level.
 
-    g. Make a decision.  Do you reject the null hypothesis or fail to reject it?
+14. Make a decision.  Do you reject the null hypothesis or fail to reject it?
 
-    h. Present your conclusions in the form of an English statement.
+15. Present your conclusions in the form of an English statement.
 
 
-5. **Take Action:**  With further study we find the poets die earlier than the novelist and non-fiction writers.  What significance can you conclude from this?  
+**Take Action:**  With further study we find the poets die earlier than the novelist and non-fiction writers.  
+
+16. What significance can you conclude from this?  
 
 ```{r, echo=FALSE}
 #Boxplots and qqplots
@@ -178,22 +180,29 @@ if(params$key==TRUE){
     
     Solution03 = data.frame(Part="-",Solution="Answers may vary, but should include that we are now dealing with more than 2 means.")
     
-    Solution04 = data.frame(Part=LETTERS[1:2],Solution=c("Is the mean age at death different from any of the three categories of writers (novelists, poets, and nonfictions writers).",
-                                  "$H_o: \\text{All the means are equal}$ \\\n $H_a: \\text{One or more of the means differs from the others}$"))
+    Solution04 = data.frame(Part="-",Solution=c("Is the mean age at death different from any of the three categories of writers (novelists, poets, and nonfictions writers)."))
+                            
+    Solution05 = data.frame(Part="-", Solution=c("$H_o: \\text{All the means are equal}$ \\\n $H_a: \\text{One or more of the means differs from the others}$"))
     
-    Solution05 = data.frame(Part="-",Solution="We do not know exactly how the data was collected, we only know that they looked at the ages at death for female writers in North America.")
+    Solution06 = data.frame(Part="-",Solution="We do not know exactly how the data was collected, we only know that they looked at the ages at death for female writers in North America.")
     
-    Solution06 = data.frame(Part="-",Solution=paste("Students should have a paragraph that includes the following summary statistics. \\\n **Novelist:** $n = ",n1Novel,"$, $\\bar{x} = ",round(mean1Novel,3),"$, $s = ",round(sd1Novel,3),"$ \\\n **Poets:** $n = ",n1Poem,"$, $\\bar{x} = ",round(mean1Poem,3),"$, $s = ",round(sd1Poem,3),"$ \\\n **Nonfiction:** $n = ",n1Nonfiction,"$, $\\bar{x} = ",round(mean1Nonfiction,3),"$, $s = ",round(sd1Nonfiction,3),"$ \\\n They should also include boxplots for each sample as their graphs. \\\n ![boxplot](../images/L14_Prep_Q06_Boxplot.png)",sep = "")) 
+    Solution07 = data.frame(Part="-",Solution=paste("Students should have a paragraph that includes the following summary statistics. \\\n **Novelist:** $n = ",n1Novel,"$, $\\bar{x} = ",round(mean1Novel,3),"$, $s = ",round(sd1Novel,3),"$ \\\n **Poets:** $n = ",n1Poem,"$, $\\bar{x} = ",round(mean1Poem,3),"$, $s = ",round(sd1Poem,3),"$ \\\n **Nonfiction:** $n = ",n1Nonfiction,"$, $\\bar{x} = ",round(mean1Nonfiction,3),"$, $s = ",round(sd1Nonfiction,3),"$ \\\n They should also include boxplots for each sample as their graphs. \\\n ![boxplot](../images/L14_Prep_Q06_Boxplot.png)",sep = "")) 
     
-    Solution07 = data.frame(Part=LETTERS[1:7],Solution=c("ANOVA test of several means.",
-                                                         "The data are normally distributed for each group:  Note that the requirement is not that the sample means are normal, but that the data themselves are normal; so, the large sample size in groups 1 and 2 do not allow us to assume that the normality assumption is met. This means you need to do a qq-plot for each of the groups. The qq-plots show that the groups are not perfectly normal, but they are probably close enough to proceed with ANOVA. \\\n ![qqplot1](../images/L14_Prep_Q07_QQ_Novel.png) \\\n ![qqplot2](../images/L14_Prep_Q07_QQ_poem.png) \\\n ![qqplot3](../images/L14_Prep_Q07_QQ_nonfiction.png) \\\n The variances for each group are equal: 299.186 is not four times 170.354 so we assume that the variances are equal.",
-                                                         paste("$\\text{F statistic}=",round(fStat1,3),"$",sep = ""),
-                                                         paste("$df=",dfFirst1,", ",dfSecond1,"$",sep = ""),
-                                                         paste("$\\text{P-value} =", round(pValue1,3),"<",alpha1,"$",sep = ""),
-                                                         paste("We ",failOrNot(pValue1,alpha1),sep=""),
-                                                         paste("We have ",sufficientOrNot(failOrNot(pValue1,alpha1))," evidence to say that at least one of the mean ages of death of writers is different from the rest of the mean death ages for the other categories of writers.")))
+    Solution08 = data.frame(Part="-",Solution=c("ANOVA test of several means."))
     
-    Solution08 = data.frame(Part="",Solution="Answers may vary")
+    Solution09 = data.frame(Part="-",Solution="The data are normally distributed for each group:  Note that the requirement is not that the sample means are normal, but that the data themselves are normal; so, the large sample size in groups 1 and 2 do not allow us to assume that the normality assumption is met. This means you need to create a histogram for each of the groups. The histograms show that the groups are not perfectly normal, but they are probably close enough to proceed with ANOVA. \\\n ![qqplot1](../images/L14_Prep_Q07_QQ_Novel.png) \\\n ![qqplot2](../images/L14_Prep_Q07_QQ_poem.png) \\\n ![qqplot3](../images/L14_Prep_Q07_QQ_nonfiction.png) \\\n The variances for each group are equal: 299.186 is not four times 170.354 so we assume that the variances are equal.")
+    
+    Solution10 = data.frame(Part="-",Solution=paste("$\\text{F statistic}=",round(fStat1,3),"$",sep = ""))
+    
+    Solution11 = data.frame(Part="-",Solution=paste("$df=",dfFirst1,", ",dfSecond1,"$",sep = ""))
+
+    Solution12 = data.frame(Part="-",Solution=paste("$\\text{P-value} =", round(pValue1,3),"<",alpha1,"$",sep = ""))
+    
+    Solution13 = data.frame(Part="-",Solution=paste("We ",failOrNot(pValue1,alpha1),sep=""))
+    
+    Solution14 = data.frame(Part="-",Solution=paste("We have ",sufficientOrNot(failOrNot(pValue1,alpha1))," evidence to say that at least one of the mean ages of death of writers is different from the rest of the mean death ages for the other categories of writers."))
+    
+    Solution15 = data.frame(Part="-",Solution="Answers may vary")
     
 } # end params == TRUE.  We use this so it doesn't have to run for non answer key path. 
 ```    

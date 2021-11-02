@@ -164,10 +164,9 @@ annotation_custom(grob = tableGrob(pII2c_table,theme=mytheme,rows=NULL),  ### PI
   xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf)
 ggsave(pII_table,filename="../images/problem_2cII_summary.png",width=2,height=2)
 
-### II-2di  ## quantile quantile plot for normality
+### II-2di  ## histogram for normality
 rd = data.frame(y=realtor_age)
-QQp = ggplot(data=rd)+stat_qq(aes(sample=y))+theme_few(4)+coord_flip()
-QQp = QQp + geom_smooth(data=ggplot_build(QQp)$data[[1]],aes(x=x,y=y),method="lm",se=FALSE)
+QQp = ggplot(data=rd, aes(x=y)) + geom_histogram(bins=5)
 
 ggsave(plot=QQp,filename="../images/problem_2d_qqplot.png",width=2.25,height=1.25)
 }
