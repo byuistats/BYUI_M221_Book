@@ -211,8 +211,8 @@ Just like we did for one proportion, we will use the [Math 221 Statistics Toolbo
 
 
 <span class="Custom">Click on the link at right</span> for instructions on using this spreadsheet to perform hypothesis testing.
-<a href="javascript:showhide('ins')"><span style="font-size:8pt;">Show/Hide Instructions</span></a>
-<div id="ins" style="display:none;">
+<a href="javascript:showhide('excelinstructions')"><span style="font-size:8pt;">Show/Hide Instructions</span></a>
+<div id="excelinstructions" style="display:none;">
 
 For this example we will consider the "PTC" data above.
 
