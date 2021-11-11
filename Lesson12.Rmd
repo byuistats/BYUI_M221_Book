@@ -244,7 +244,7 @@ Fortunately, the "Paired Data t-test" tab in the [Math 221 Statistics Toolbox](.
 
 <br>
 
-3. What is the mean of the values in the *Difference* column? (Look in cell J7)
+3. What is the mean of the values in the *Difference* column? (Look in cell G7)
 
 <a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q3" style="display:none;">
