@@ -26,10 +26,17 @@ output:
 
 <br>
 
+<div style="width:50%;float:right;">
+
+#### Optional Video of this Lesson
+
+<iframe id="kaltura_player_1639176890" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/47306393/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1639176890&entry_id=1_u61hcosh" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+</div><div style="clear:both;"></div>
+
+
 ## Lesson Outcomes
 
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
-<div id="oc" style="display:none;">
 By the end of this lesson, you should be able to:
 
 * State the five steps of the Statistical Process
@@ -43,8 +50,9 @@ By the end of this lesson, you should be able to:
   + Stratified sampling
   + Convenience sampling
 * Explain the significance of using a random sample.
-</div>
+
 <br>
+
 
 ## Introduction
 
