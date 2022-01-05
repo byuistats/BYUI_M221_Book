@@ -14,23 +14,27 @@ output:
  }
 </script>
 
-<!--
+<div style="width:50%;float:right;">
 
-<div style="float:right;width=40%;">
-<br/>
-<div style="padding-left:10%;">**Optional Lesson Video**</div>
-<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC-a7rYECFUKhL6yMzvOIwCO" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
+#### Optional Videos for this Lesson {.tabset .tabset-pills}
 
--->
+##### Part 1
+
+<iframe id="kaltura_player_1639178944" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/47306393/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1639178944&entry_id=1_o1ym0xdl" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+##### Part 2
+
+<iframe id="kaltura_player_1639179016" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/47306393/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1639179016&entry_id=1_8iuzfzoa" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+##### Part 3
+
+<iframe id="kaltura_player_1639179054" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/47306393/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1639179054&entry_id=1_v40qfq8q" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+</div><div style="clear:both;"></div>
 
 <br>
 
-
 ## Lesson Outcomes
-
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
-<div id="oc" style="display:none;">
 
 By the end of this lesson, you should be able to:
 
@@ -42,7 +46,6 @@ By the end of this lesson, you should be able to:
 * Create a box-plot from quantitative data using Excel.
 * Determine the five-number summary visually from a box plot. * Explain the relationship between probabilities, percentiles, and percentages.
 
-</div>
 <br>
 
 
