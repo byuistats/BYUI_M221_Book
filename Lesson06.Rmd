@@ -14,24 +14,38 @@ output:
  }
 </script>
 
-<div style="float:right;width=40%;">
-<br/>
-<div style="padding-left:10%;">**Optional Lesson Video**</div>
-<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC8iq1dEGYTJ7Fjt_osnDmJp" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
+<div style="width:50%;float:right;">
+
+#### Optional Videos for this Lesson {.tabset .tabset-pills}
+
+##### Part 1
+
+<iframe id="kaltura_player_1641852198" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/47306393/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1641852198&entry_id=1_9kkl5ydc" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+##### Part 2
+
+<iframe id="kaltura_player_1641852323" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/47306393/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1641852323&entry_id=1_lzas38zd" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+##### Part 3
+
+<iframe id="kaltura_player_1641852432" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/47306393/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1641852432&entry_id=1_m1m7alp9" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+##### Part 4
+
+<iframe id="kaltura_player_1641852524" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/47306393/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1641852524&entry_id=1_n2j9bzze" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+</div><div style="clear:both;"></div>
+
 <br>
 
 ## Lesson Outcomes
-
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
-<div id="oc" style="display:none;">
 
 By the end of this lesson, you should be able to:
 
 *  Explain how a sampling distribution is created.
 *  Determine the mean, standard deviation and shape of a distribution of sample means.
 *  State and apply the Central Limit Theorem and the Law of Large Numbers.
-</div>
+
 <br>
 
 
