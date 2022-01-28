@@ -87,7 +87,6 @@ colnames(Anger) = c("Anger Frequency","High","Medium","Low")
 pander(Anger)
 ```
 
-**Note for 221B and 221C students** - You will need to input your data into SPSS as follows. Make sure to go to "Variable View" (found at the bottom of the screen) and change the width of the Religiosity variable to 6 and the Anger variable to 9 so that all of the letters for each category will be displayed.
 
 ```{r,include=FALSE}
 AngerSPSS = cbind(b = c(1:9),Religiosity = c("High","High","High","Medium","Medium","Medium","Low","Low","Low"), Anger = c("Never","Sometimes","Often","Never","Sometimes","Often","Never","Sometimes","Often"), Count = c(NeverHigh,SometimesHigh,OftenHigh,NeverMedium,SometimesMedium,OftenMedium,NeverLow,SometimesLow,OftenLow))
@@ -147,8 +146,6 @@ A sociologist wanted to discover whether family structure and whether or not gir
 ```{r, echo=FALSE}
 pander(College,split.cells = c(30,7,7,10,10))
 ```
-
-**Note for 221B and 221C students** - Be sure to input your data into SPSS following the example given in the first problem.
 
 Use this information to answer questions 8 through 14.
 

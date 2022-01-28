@@ -90,7 +90,7 @@ p2 = pnorm(z2,lower.tail = TRUE)
 
 Political candidates frequently conduct polls to assess what proportion of likely voters support them. Of course, until the ballots are counted, no one knows what the true proportion of voters who will support a given candidate is. Suppose you are campaigning for a particular candidate for the Senate.  Campaign headquarters decided to conduct a poll of `r n2` likely voters a few days before the election.  At that time, it is unknown to you, but your candidate will win with $p = `r trueP2`$% of the vote. This is the true value that will not be known until Election Day. Use this information to answer questions 7 through 10.
 
-7. Verify that $\hat{p}$ will be approximately normally distributed.
+7. Check the requirement that $\hat{p}$ will be approximately normally distributed.
 
 8. Describe the sampling distribution of the sample proportion, $\hat{p}$ which will be observed in the poll. Be sure to state the distribution, the mean, and the standard deviation. 
 9. You want to know the probability that the poll results will show that your candidate will get less than `r phat2`% of the vote. What z-score will be used?
@@ -122,7 +122,7 @@ p3 = pnorm(z3_1,lower.tail = FALSE) + pnorm(z3_2, lower.tail = TRUE)
 
 A coin that was assumed fair was tossed 4,040 times and observed heads on 2,048 tosses.  Use this information to answer questions 11 through 13.
 
-11. Verify that $\hat{p}$ will be approximately normally distributed.
+11. Check the requirement that $\hat{p}$ will be approximately normally distributed.
 
 12. Describe the sampling distribution of the sample proportion $\hat{p}$. Be sure to state the distribution, the mean, and the standard deviation. 
 

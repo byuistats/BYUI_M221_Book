@@ -94,7 +94,7 @@ UB = confint(results,'HeadLength',level = confInt/100)[2]
 ```
 
  
-**Part II:**  To answer the following questions, use the [Gharial Crocodiles Data](http://statistics.byuimath.com/index.php?title=Data) in the Wiki under the data link in Course Resources.
+**Part II:**  To answer the following questions, use the [Gharial Crocodiles Data](https://byuistats.github.io/BYUI_M221_Book/Data/GharialCrocodiles.xlsx).
 
 3. Check the five assumptions for conducting a linear regression on the data.  List the five assumptions below and explain how you checked the assumption.  Include charts/graphs where appropriate.  
 
@@ -104,7 +104,7 @@ UB = confint(results,'HeadLength',level = confInt/100)[2]
     
     b. Let alpha = `r alpha`
 
-    c. State the test static and value of test statistic
+    c. State the test statistic (Z, t, F, $\chi^2$) and value of test statistic
 
     d. Based on the P-value, do you reject or fail to reject the null.
 

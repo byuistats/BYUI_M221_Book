@@ -87,7 +87,7 @@ predictedValue2 = yint + slope * ExampleX
 ```
 
 
-**Part II:**  To answer the following questions, use the [Gharial Crocodiles Data](http://statistics.byuimath.com/index.php?title=Data) in the Wiki under the data link in Course Resources.
+**Part II:**  To answer the following questions, use the [Gharial Crocodiles Data](https://byuistats.github.io/BYUI_M221_Book/Data/GharialCrocodiles.xlsx)
 
 6. What is the Explanatory Variable? (You will need to review the section in the Wiki on the crocodiles to answer this question)
 
@@ -105,9 +105,9 @@ predictedValue2 = yint + slope * ExampleX
 
 13. For the observed head length of `r ExampleX` cm, what is the observed body length?  (Look in the data file to find this answer.)
 
-14. Use the regression line you obtained in #2 above to predict the body length based on a head length of `r ExampleX` cm.
+14. Use the regression line you obtained in Question 11 above to predict the body length based on a head length of `r ExampleX` cm.
 
-15. Why are the values you obtained in #8 and #9 different?  Explain.  
+15. Why are the values you obtained in Questions 13 and 14 for head length different?  Explain.  
 
 ```{r,include=FALSE}
 if(params$key==TRUE){

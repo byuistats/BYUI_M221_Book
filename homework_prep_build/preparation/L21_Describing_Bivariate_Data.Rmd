@@ -59,11 +59,11 @@ Covar1 = round(cov(HeadLength~BodyLength, data = Crocodiles),3) #This is wrong i
 ```
 
 
-**Part II:**  To answer the following questions, use the [Gharial Crocodiles Data.](http://statistics.byuimath.com/index.php?title=Data)
+**Part II:**  To answer the following questions, use the [Gharial Crocodiles Data.](https://byuistats.github.io/BYUI_M221_Book/Data/GharialCrocodiles.xlsx)
 
 3. The Correlation Coefficient between Head Length and Body Length of the Gharial Crocodiles is:
 	
-4. The Covariance of the Head Length and the Body Length of the Gharial Crocodiles is:
+4. Does this correlation show a strong, moderate, or weak relationship between Head Lenght and Body Length of the Gharial Crocodiles?
 
 5. Create a scatter plot representing the relationship between Head Length and Body Length of the Gharial Crocodiles.  Paste your scatter plot below:
 
@@ -90,7 +90,7 @@ if(params$key==TRUE){
   
   Solution03 = data.frame(Part = "-",Solution = paste("$r = ",r1,"$",sep = ""))
   
-  Solution04 = data.frame(Part = "-",Solution = paste("$\\text{Covariance} ",Covar1,"$",sep = ""))
+  Solution04 = data.frame(Part = "-",Solution = "This appears to be a strong positive correlation in looking at the graph and the value of the correlation, as the dots all fit very tightly to the line.")
   
   Solution05 = data.frame(Part = "-",Solution = "![scatter](../images/L21_Prep_Q5_Sketch.png)")
   
