@@ -117,7 +117,7 @@ Covar1 = round(cov(ListPrice~SQFT,data = Madison),3) #this is wrong in the histo
 ```
 
 
-Data was collected on homes for sale in Madison County as of January 2011.  Information on the listings such as price, size of the home, and style were recorded. Open the data file [MadisonCountyRealEstate](http://statistics.byuimath.com/index.php?title=Data). Use this data to answer questions 8 through 12. 
+Data was collected on homes for sale in Madison County as of January 2011.  Information on the listings such as price, size of the home, and style were recorded. Open the data file [MadisonCountyRealEstate](https://byuistats.github.io/BYUI_M221_Book/Data/MadisonCountyRealEstate.xlsx). Use this data to answer questions 8 through 12. 
 
 8. Create and attach a scatterplot of the price of homes (ListPrice) compared with square footage (SQFT).
 
@@ -131,8 +131,6 @@ Data was collected on homes for sale in Madison County as of January 2011.  Info
 11. Compare your description of the scatterplot from question 9 with the value of *r* that has been computed. Was your description correct or incorrect? What was clarified by seeing the correlation coefficient?
 
 
-12. Compute the sample covariance ($s_{xy}$) of this data.
-
 ```{r,include=FALSE}
 Saturn = read.csv(file = "https://raw.githubusercontent.com/byuistats/data/master/LASaturnWinter06/LASaturnWinter06.csv",header = TRUE,stringsAsFactors = FALSE)
 
@@ -143,26 +141,21 @@ dev.off()
 SaturnNoNA = na.omit(Saturn)
 r2 = round(cor(y=SaturnNoNA$Price,x=SaturnNoNA$Mileage),3)
 
-#Because there are NA values in Mileage, I have to calculate the covariance in more steps.
-Covar2 = cov(y=SaturnNoNA$Price,x=SaturnNoNA$Mileage)
 ```
 
 
-The website www.cars.com contains listings for automobiles. A sample of Saturn vehicles listed for sale in the Los Angeles area was collected from cars.com and saved as the data file [LASaturnWinter06](http://statistics.byuimath.com/index.php?title=Data). Among the variables given in the data set are the asking price (Price) and the number of miles shown on the odometer (Mileage) of each car. Use this data to answer questions 13 through 17.
+The website www.cars.com contains listings for automobiles. A sample of Saturn vehicles listed for sale in the Los Angeles area was collected from cars.com and saved as the data file [LASaturnWinter06](https://byuistats.github.io/BYUI_M221_Book/Data/LASaturnWinter06.xlsx). Among the variables given in the data set are the asking price (Price) and the number of miles shown on the odometer (Mileage) of each car. Use this data to answer questions 13 through 17.
 
-13. Create and attach a scatterplot of the Price compared with Mileage.
-
-
-14. Describe the data displayed on the scatterplot. Does it appear linear or nonlinear? Does it have a positive or negative association, or neither? Does the association appear weak, moderate, or strong?
+12. Create and attach a scatterplot of the Price compared with Mileage.
 
 
-15. Compute the sample correlation coefficient (*r*). 
+13. Describe the data displayed on the scatterplot. Does it appear linear or nonlinear? Does it have a positive or negative association, or neither? Does the association appear weak, moderate, or strong?
 
 
-16. Compare your description of the scatterplot from question 14 with the value of *r* that has been computed. Was your description correct or incorrect? What was clarified by seeing the correlation coefficient?
+14. Compute the sample correlation coefficient (*r*). 
 
 
-17. Compute the sample covariance ($s_{xy}$) of this data.
+15. Compare your description of the scatterplot from question 14 with the value of *r* that has been computed. Was your description correct or incorrect? What was clarified by seeing the correlation coefficient?
 
 
 ```{r,include=FALSE}
@@ -192,18 +185,16 @@ options(scipen = 999)
   
   Solution11 = data.frame(Part = "-",Solution = paste("If in answer to question 9 you said that the data appear to show a strong positive association that is supported by $r = ",r1,"$ because it is a positive number and it is close to 1.",sep = ""))
   
-  Solution12 = data.frame(Part = "-",Solution = paste("$S_{}xy = ",formatC(Covar1,big.mark = ",",format = "fg"),"$",sep = ""))
+
+  Solution12 = data.frame(Part = "-",Solution = "![scatter](../images/L21_Homework_Q13_Sketch.png)")
   
-  Solution13 = data.frame(Part = "-",Solution = "![scatter](../images/L21_Homework_Q13_Sketch.png)")
+  Solution13 = data.frame(Part = "-",Solution = "Answers will vary. One plausible answer is that it does appear to be linear, with a moderate negative association.")
   
-  Solution14 = data.frame(Part = "-",Solution = "Answers will vary. One plausible answer is that it does appear to be linear, with a moderate negative association.")
+  Solution14 = data.frame(Part = "-",Solution = paste("$r = ",r2,"$",sep = ""))
   
-  Solution15 = data.frame(Part = "-",Solution = paste("$r = ",r2,"$",sep = ""))
+  Solution15 = data.frame(Part = "-",Solution = paste("If in answer to question 14 you said that the data appear to show a moderate negative association that is supported by $r = ",r2,"$ because it is a negative number and it is right in between 0 and -1.",sep = ""))
   
-  Solution16 = data.frame(Part = "-",Solution = paste("If in answer to question 14 you said that the data appear to show a moderate negative association that is supported by $r = ",r2,"$ because it is a negative number and it is right in between 0 and -1.",sep = ""))
-  
-  Solution17 = data.frame(Part = "-",Solution = paste("$S_{}xy = ",formatC(Covar2,big.mark = ",",format = "fg"),"$",sep = ""))
-  
+
 } # end params == TRUE.  We use this so it doesn't have to run for non answer key path.
 ```
 

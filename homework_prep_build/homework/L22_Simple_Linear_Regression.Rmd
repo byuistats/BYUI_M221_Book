@@ -79,7 +79,7 @@ estimatedValue2Calculator = round(yint2,3) + round(slope2,3) * predictedValue2
 ```
 
 
-Researchers studying healthy body composition recorded various measurements of `r n2` male subjects. Height, weight, age, and other measurements were collected on each subject. Open the data file [BodyMeasurementsCorrected](http://statistics.byuimath.com/index.php?title=Data). For this exercise we will look at the height of the subjects compared with the weight.  Researchers want to predict the weight of a man given his height. Use this information to answer questions 4 through 8.
+Researchers studying healthy body composition recorded various measurements of `r n2` male subjects. Height, weight, age, and other measurements were collected on each subject. Open the data file [BodyMeasurementsCorrected](https://byuistats.github.io/BYUI_M221_Book/Data/BodyMeasurementsCorrected.xlsx). For this exercise we will look at the height of the subjects compared with the weight.  Researchers want to predict the weight of a man given his height. Use this information to answer questions 4 through 8.
 
 4. If we consider the relationship between the height and weight of these men, which variable should go on the X-axis? The Y-axis? Justify your answer.
 
@@ -109,7 +109,7 @@ estimatedValue3Software = yint3 + slope3 * predictedValue3
 estimatedValue3Calculator = round(yint3,3) + round(slope3,3) * predictedValue3
 ```
 
-A company in South Dakota manufactures hard hats used in the mining industry.  They record measurements on all the hats they produce for quality control and planning purposes. The measurements they collect include hat size, circumference of the hat, and lengths of the major and minor axes.  Meaning, the company wants to predict size of hat given the circumference. Open the data file [JSE-Hats (Modified)](http://statistics.byuimath.com/index.php?title=Data).  Use this information to answer questions 9 through 12. 
+A company in South Dakota manufactures hard hats used in the mining industry.  They record measurements on all the hats they produce for quality control and planning purposes. The measurements they collect include hat size, circumference of the hat, and lengths of the major and minor axes.  Meaning, the company wants to predict size of hat given the circumference. Open the data file [JSE-Hats (Modified)](https://byuistats.github.io/BYUI_M221_Book/Data/JSE-hats_(Modified).xlsx).  Use this information to answer questions 9 through 12. 
 
 9. Create and attach a scatterplot of these two variables. Include the linear regression line on your plot.
 
@@ -143,7 +143,7 @@ estimatedValue4Software = yint4 + slope4 * predictedValue4
 estimatedValue4Calculator = round(yint4,3) + round(slope4,3) * predictedValue4
 ```
 
-Data were collected on estuarine, or saltwater, crocodiles. Researchers measured the head length and body length of `r n4` crocodiles and were interested to know if there is a linear relationship between crocodile head length and body length. Researchers want to predict body length based on head length. Open the data file [EstuarineCrocodiles(Modified)](http://statistics.byuimath.com/index.php?title=Data). Use this information to answer questions 13 through 19.
+Data were collected on estuarine, or saltwater, crocodiles. Researchers measured the head length and body length of `r n4` crocodiles and were interested to know if there is a linear relationship between crocodile head length and body length. Researchers want to predict body length based on head length. Open the data file [EstuarineCrocodiles(Modified)](https://byuistats.github.io/BYUI_M221_Book/Data/Estuarine_Crocodile_(Modified).xlsx). Use this information to answer questions 13 through 19.
 
 13. Create and attach a scatterplot of the head length compared with body length. Include the linear regression line on your plot.
 
@@ -154,15 +154,12 @@ Data were collected on estuarine, or saltwater, crocodiles. Researchers measured
 15. Describe the data displayed on the scatterplot. Does it appear linear or nonlinear? Does it have a positive or negative association, or neither? Does the association appear weak, moderate, or strong?
 
 
-16. Compute the sample covariance ($s_{xy}$) of this data.
+16. Find the equation of the linear regression line used to predict the body length of an estuarine crocodile given its head length.
 
 
-17. Find the equation of the linear regression line used to predict the body length of an estuarine crocodile given its head length.
+17. Interpret the slope and intercept of the regression line, if appropriate. If it is not appropriate to make an interpretation, explain why not.
 
-
-18. Interpret the slope and intercept of the regression line, if appropriate. If it is not appropriate to make an interpretation, explain why not.
-
-19. Predict the body length of an estuarine crocodile that has a head length of `r predictedValue4` cm in two ways: using the equation for the regression line and a calculator AND using the software.
+18. Predict the body length of an estuarine crocodile that has a head length of `r predictedValue4` cm in two ways: using the equation for the regression line and a calculator AND using the software.
 
 ```{r,include=FALSE}
 if(params$key==TRUE){
@@ -200,13 +197,12 @@ his weight would increase by ",round(slope2,3)," pounds. \\\n \\\n Y-Intercept: 
   
   Solution15 = data.frame(Part = "-",Solution = "Answers will vary, but it appears to have a linear relationship with a strong positive association.")
   
-  Solution16 = data.frame(Part = "-",Solution = paste("$s_{xy} = ",round(Covar4,3),"$",sep = ""))
+
+  Solution16 = data.frame(Part = "-",Solution = paste("$Y = ",round(yint4,3)," + ",round(slope4,3),"X$",sep = ""))
   
-  Solution17 = data.frame(Part = "-",Solution = paste("$Y = ",round(yint4,3)," + ",round(slope4,3),"X$",sep = ""))
+  Solution17 = data.frame(Part = "-",Solution = paste("The slope is ",round(slope4,3),", so for every centimeter increased in head length the body length is increased by ",round(slope4,3)," centimeters. \\\n \\\n The Y -intercept is not interpretable. First of all, it is not possible to have a head length of zero centimeters. Secondly, it does not make sense for a length to be negative.",sep = ""))
   
-  Solution18 = data.frame(Part = "-",Solution = paste("The slope is ",round(slope4,3),", so for every centimeter increased in head length the body length is increased by ",round(slope4,3)," centimeters. \\\n \\\n The Y -intercept is not interpretable. First of all, it is not possible to have a head length of zero centimeters. Secondly, it does not make sense for a length to be negative.",sep = ""))
-  
-  Solution19 = data.frame(Part = "-",Solution = paste("$\\text{Calculator: } Y = ",round(estimatedValue4Calculator,3),"$ \\\n $\\text{Software: } Y = ",round(estimatedValue4Software,3),"$",sep = ""))
+  Solution18 = data.frame(Part = "-",Solution = paste("$\\text{Calculator: } Y = ",round(estimatedValue4Calculator,3),"$ \\\n $\\text{Software: } Y = ",round(estimatedValue4Software,3),"$",sep = ""))
   
 } # end params == TRUE.  We use this so it doesn't have to run for non answer key path.
 ```

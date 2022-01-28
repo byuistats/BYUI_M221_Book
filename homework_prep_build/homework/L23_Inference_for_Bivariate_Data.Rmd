@@ -69,9 +69,9 @@ png(filename = "../images/L23_Homework_Q3b_Sketch.png",width = 450,height=320)
 plot(results1, which = 1,pch = 20)
 dev.off()
 
-##QQplot of the residuals for question 3c. 
+##Histogram of the residuals for question 3c. 
 png(filename = "../images/L23_Homework_Q3c_Sketch.png",width = 450,height=320)
-plot(results1, which = 2,pch = 20)
+hist(results1$residuals)
 dev.off()
 
 r1 = cor(Taste~Lactic, data = Cheese)
@@ -91,7 +91,7 @@ p1 = summary(results1)[[4]][8]
 ```
 
 
-As cheese ages, various chemical processes take place that determine the taste of the final product. Concentrations of various chemicals were measured in `r n1` samples of mature cheddar cheese, and a subjective measure of taste was recorded for each sample. Higher values of Taste indicate a more desirable product. The variable Lactic gives the concentration of lactic acid in each sample. We want to know if there is a statistically significant linear relationship between the concentration of lactic acid in the cheese and the quality of the taste.  We want to predict quality of taste given its concentration of lactic acid. Open the data file [DASL-Cheese](http://statistics.byuimath.com/index.php?title=Data). Use this information to answer questions 3 through 12.
+As cheese ages, various chemical processes take place that determine the taste of the final product. Concentrations of various chemicals were measured in `r n1` samples of mature cheddar cheese, and a subjective measure of taste was recorded for each sample. Higher values of Taste indicate a more desirable product. The variable Lactic gives the concentration of lactic acid in each sample. We want to know if there is a statistically significant linear relationship between the concentration of lactic acid in the cheese and the quality of the taste.  We want to predict quality of taste given its concentration of lactic acid. Open the data file [DASL-Cheese](https://byuistats.github.io/BYUI_M221_Book/Data/DASL-Cheese.xlsx). Use this information to answer questions 3 through 12.
 
 3.	Check the requirements for simple linear regression with the variables Lactic and Taste. Complete the remainder of the problems even if the requirements are not all met.
 
@@ -141,7 +141,7 @@ dev.off()
 
 ##QQplot of the residuals for question 13c. 
 png(filename = "../images/L23_Homework_Q13c_Sketch.png",width = 450,height=320)
-plot(results2, which = 2,pch = 20)
+hist(results2$residuals)
 dev.off()
 
 yint2 = results2$coefficients[[1]]
@@ -160,7 +160,7 @@ p2 = summary(results2)[[4]][8]
 ```
 
 
-Data was collected from a sample of used 2005 Toyota Prius, including the advertised price, the mileage, and a description of each car.  You want to determine if there is a statistically significant linear relationship between the mileage of a used Prius and its price.  You want to predict price based off of mileage. Open the data set [ToyotaPrius2005](http://statistics.byuimath.com/index.php?title=Data). Use this information to answer questions 13 through 21. 
+Data was collected from a sample of used 2005 Toyota Prius, including the advertised price, the mileage, and a description of each car.  You want to determine if there is a statistically significant linear relationship between the mileage of a used Prius and its price.  You want to predict price based off of mileage. Open the data set [ToyotaPrius2005](https://byuistats.github.io/BYUI_M221_Book/Data/ToyotaPrius2005.xlsx). Use this information to answer questions 13 through 21. 
 
 13.	Check the requirements for simple linear regression with the variables Mileage and Price. Complete the remainder of the problems even if the requirements are not all met.
 
@@ -212,7 +212,7 @@ multChoice = 4.5
 ```
 
 
-Research was conducted to understand whether exposure to lead in children between the ages of 1 and 3 years old affected their behavior. Researchers measured the blood lead level of each child in $\mu_{mol/L}$. Researchers also assessed the behavior of each child using the Behavior Rating Scale (BRS). Higher scores indicate fewer behavioral problems. Imagine you are part of this research study. You want to determine if there is a statistically significant relationship between lead exposure (Lead) and children's behavior (BRS). Researchers want to predict BRS rating given blood lead level. Open the data file [LeadExposureandBehavior](http://statistics.byuimath.com/index.php?title=Data). Use this information to answer questions 22 through 31.
+Research was conducted to understand whether exposure to lead in children between the ages of 1 and 3 years old affected their behavior. Researchers measured the blood lead level of each child in $\mu_{mol/L}$. Researchers also assessed the behavior of each child using the Behavior Rating Scale (BRS). Higher scores indicate fewer behavioral problems. Imagine you are part of this research study. You want to determine if there is a statistically significant relationship between lead exposure (Lead) and children's behavior (BRS). Researchers want to predict BRS rating given blood lead level. Open the data file [LeadExposureandBehavior](https://byuistats.github.io/BYUI_M221_Book/Data/LeadExposureAndBehavior.xlsx). Use this information to answer questions 22 through 31.
 
 22.	Compute the sample correlation coefficient ($r$).
 
@@ -256,8 +256,8 @@ if(params$key==TRUE){
   Solution03 = data.frame(Part = LETTERS[1:3],Solution = c("![A](../images/L23_Homework_Q3a_Sketch.png) \\\n The appropriate graphs to check for a linear relationship are a scatterplot and a
 residual plot. The scatterplot seems to show a linear relationship and there is no pattern in the residual plot, so we can conclude that there is a linear relationship in the data.",
                                                            "![b](../images/L23_Homework_Q3b_Sketch.png) \\\n The appropriate graph to check for constant variance is a residual plot. There is no pattern in the residual plot, so we can conclude that there is a constant variance in the data.",
-"![c](../images/L23_Homework_Q3c_Sketch.png) \\\n The appropriate graph to check for a normal error term is a Q-Q plot of the residuals. The points in the plot are close to the line, so we can conclude that
-there is a normal error term in the data."))
+"![c](../images/L23_Homework_Q3c_Sketch.png) \\\n The appropriate graph to check for a normal error term is a histogram of the residuals. The shape of the histogram looks fairly bell-shaped and symmetric, so we can conclude that
+the error terms are normal."))
   
   Solution04 = data.frame(Part = "-",Solution = paste("$r = ",round(r1,3),"$",sep = ""))
   
@@ -280,8 +280,8 @@ there is a normal error term in the data."))
   Solution13 = data.frame(Part = LETTERS[1:3],Solution = c("![a](../images/L23_Homework_Q13a_Sketch.png) \\\n The appropriate graphs to check for a linear relationship are a scatterplot and a
 residual plot. The scatterplot does not seem to show a significant linear relationship, so we cannot conclude that there is a linear relationship in the data.",
 "![b](../images/L23_Homework_Q13b_Sketch.png) \\\n The appropriate graph to check for constant variance is a residual plot. There is no pattern in the residual plot, so we can conclude that there is a constant variance in the data.",
-"![c](../images/L23_Homework_Q13c_Sketch.png) \\\n The appropriate graph to check for a normal error term is a Q-Q plot of the residuals. The points in the plot are close to the line, so we can conclude that
-there is a normal error term in the data."))
+"![c](../images/L23_Homework_Q13c_Sketch.png) \\\n The appropriate graph to check for normal error terms is a histogram of the residuals. The distribution appears symmetric and bell-shaped, so we can conclude that
+the error terms are normal for the data."))
   
   Solution14 = data.frame(Part = "-",Solution = paste("$\\hat{Y} = ",formatC(yint2,digits = 3,big.mark = ',',format = 'f')," + ",round(slope2,3),"X$",sep = ""))
   
