@@ -30,7 +30,11 @@ This page contains the data files that are used throughout the course: in the te
 [AppointmentWaitTimes.xlsx](./Data/AppointmentWaitTimes.xlsx)
 
 
-[BabyBoom-JSE.xlsx](./Data/BabyBoom-JSE.xlsx)                                                          
+[BabyBoom-JSE.xlsx](./Data/BabyBoom-JSE.xlsx)                   
+
+
+[BalloonFloatTimes.xslx](./Data/BalloonFloatTimes.xlsx)
+
 
 [BattingAverages.xlsx](./Data/BattingAverages.xlsx)                                                    
 
@@ -66,6 +70,10 @@ This page contains the data files that are used throughout the course: in the te
 [CoinTossHeads.xlsx](./Data/CoinTossHeads.xlsx)                                                        
 
 [Comet-WaterProduction-Magnitude.xlsx](./Data/Comet-WaterProduction-Magnitude.xlsx)                    
+
+
+[ConferenceTalkLengths.xlsx](./Data/ConferenceTalkLengths.xlsx)
+
 
 [ConjugatedLinoleicAcid.xlsx](./Data/ConjugatedLinoleicAcid.xlsx)                                      
 
