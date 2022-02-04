@@ -1,5 +1,5 @@
 ---
-title: "Lesson 9: Inference for One Mean: Sigma Known (Hypothesis Test)"
+title: "Lesson 9: Inference for One Mean with Sigma Known (Hypothesis Test)"
 output:
   html_document:
     theme: cerulean

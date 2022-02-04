@@ -1,5 +1,5 @@
 ---
-title: "Lesson 12: Inference for Two Means: Paired Data"
+title: "Lesson 12: Inference for the Mean of Differences (Two Dependent Samples)"
 output:
   html_document:
     theme: cerulean
