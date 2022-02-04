@@ -1,5 +1,5 @@
 ---
-title: "Lesson 13: Inference for Two Means: Independent Samples"
+title: "Lesson 13: Inference for the Difference of Two Means (Two Independent Samples)"
 output: 
   html_document:
     theme: cerulean

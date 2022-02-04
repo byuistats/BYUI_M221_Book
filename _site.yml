@@ -34,11 +34,11 @@ navbar:
           href: Lesson10.html
         - text: "Lesson 11: Inference for One Mean (Sigma Unknown)"
           href: Lesson11.html
-        - text: "Lesson 12: Inference for Match Pairs"
+        - text: "Lesson 12: Inference for the Mean of Differences (Two Dependent Samples)"
           href: Lesson12.html
-        - text: "Lesson 13: Inference for Two Independent Samples"
+        - text: "Lesson 13: Inference for the Difference of Means (Two Independent Samples)"
           href: Lesson13.html
-        - text: "Lesson 14: Inference for Several Independent Samples"
+        - text: "Lesson 14: Inference using ANOVA (Several Independent Samples)"
           href: Lesson14.html
         - text: "Lesson 15: Unit 2 Review"
           href: Lesson15.html
