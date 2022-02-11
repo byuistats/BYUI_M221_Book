@@ -14,17 +14,42 @@ output:
  }
 </script>
 
-<div style="float:right;width=40%;">
-<br/>
-<div style="padding-left:10%;">**Optional Lesson Video**</div>
-<iframe width="400" height="300" src="https://www.youtube.com/embed/y3WTT43Ujs8?list=PLaZryQtbPQC8E_EF_nnT7x4EmCnEcvY9A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<br>
+
+<div style="width:50%;float:right;">
+
+#### Optional Videos for this Lesson {.tabset .tabset-pills}
+
+##### Part 1
+
+<iframe id="kaltura_player_1644542597" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/47306393/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1644542597&entry_id=1_bmffh72n" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+##### Part 2
+
+<iframe id="kaltura_player_1644542855" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/47306393/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1644542855&entry_id=1_q22ujikq" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+##### Part 3
+
+<iframe id="kaltura_player_1644543101" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/47306393/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1644543101&entry_id=1_gyupa4ce" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+##### Part 4
+
+<iframe id="kaltura_player_1644543358" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/47306393/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1644543358&entry_id=1_ytcv298k" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+##### Part 5
+
+<iframe id="kaltura_player_1644543549" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/47306393/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1644543549&entry_id=1_7n4z1h2g" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+##### Part 6
+
+<iframe id="kaltura_player_1644543853" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/47306393/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1644543853&entry_id=1_x7e49tmb" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+####
+
+</div><div style="clear:both;"></div>
+
 
 ## Lesson Outcomes
 
-<a href="javascript:showhide('out')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
-<div id="out"p style="display:none;">
 By the end of this lesson, you should be able to:
 
 * Calculate and interpret a confidence interval for a population mean given a confidence level.
@@ -33,7 +58,7 @@ By the end of this lesson, you should be able to:
 * Show the appropriate connections between the numerical and graphical summaries that support this confidence interval.
 * Check the requirements of the confidence interval.
 * Calculate a desired sample size given a level of confidence and margin of error.
-</div>
+
 <br>
 
 ## Political Polls
