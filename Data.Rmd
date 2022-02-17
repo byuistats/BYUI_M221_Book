@@ -123,9 +123,17 @@ This page contains the data files that are used throughout the course: in the te
 
 [ForcedExpiratoryVolume.xlsx](./Data/ForcedExpiratoryVolume.xlsx)                                      
 
-[FreshmenDinner.xlsx](./Data/FreshmenDinner.xlsx)                                                      
+[FreshmenDinner.xlsx](./Data/FreshmenDinner.xlsx)               
 
-[GharialCrocodiles.xlsx](./Data/GharialCrocodiles.xlsx)                                                
+
+[GasPrices.xlsx](./Data/GasPrices.xlsx)
+
+
+[GharialCrocodiles.xlsx](./Data/GharialCrocodiles.xlsx)         
+
+
+[GingkoMemory.xlsx](./Data/GingkoMemory.xlsx)
+
 
 [Gratitude.xlsx](./Data/Gratitude.xlsx)                                                                
 
@@ -156,6 +164,9 @@ This page contains the data files that are used throughout the course: in the te
 [Mahon.xlsx](./Data/Mahon.xlsx)                                                                        
 
 [Manatees.xlsx](./Data/Manatees.xlsx)                                                                  
+
+[MarriageAges.xlsx](./Data/MarriageAges.xlsx)
+
 
 [MathSelfEfficacy.xlsx](./Data/MathSelfEfficacy.xlsx)                                                  
 
@@ -215,7 +226,11 @@ This page contains the data files that are used throughout the course: in the te
 
 [SurveyData.xlsx](./Data/SurveyData.xlsx)                                                              
 
-[ToyotaPrius2005.xlsx](./Data/ToyotaPrius2005.xlsx)                                                    
+[ToyotaPrius2005.xlsx](./Data/ToyotaPrius2005.xlsx)             
+
+
+[ToyPrices.xlsx](./Data/ToyPrices.xlsx)
+
 
 [TwinsDiabetes.xlsx](./Data/TwinsDiabetes.xlsx)
 
