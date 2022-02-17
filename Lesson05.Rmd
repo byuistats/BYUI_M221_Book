@@ -599,7 +599,7 @@ Or?amento e Gest?o Minist?rio do Planejamento. Pesquisa de or?amentos familiars 
 <center>
 | **Previous Reading** | **This Reading** | **Next Reading** |
 | :------------------: | :--------------: | :--------------: |
-| [Lesson 4: Describing Quantitative Data  (Spread)](Lesson04.html) | Lesson 05: <br> Normal Distributions | [Lesson 6: <br> Distribution of Sample Means & The Central Limit Theorem](Lesson06.html) |
+| [Lesson 4: Describing Quantitative Data  (Spread)](Lesson04.html) | Lesson 05: <br> Normal Distributions | [Lesson 6: <br> The Sampling Distribution of Sample Mean & The Central Limit Theorem](Lesson06.html) |
 </center>
 
 

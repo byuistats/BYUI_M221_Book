@@ -1,5 +1,5 @@
 ---
-title: "Lesson 6: Distribution of Sample Means & The Central Limit Theorem"
+title: "Lesson 6: The Sampling Distribution of the Sample Mean & The Central Limit Theorem"
 output: 
   html_document:
     theme: cerulean
@@ -181,13 +181,13 @@ Hopefully you noticed that the "mean of the distribution of means" is equal to t
 
 <div class="myemphasis">
 
-**The Mean of the Distribution of Sample Means**
+**The Mean of the Sampling Distribution of the Sample Mean**
 
 $$
 \underbrace{\mu_{\bar{x}}}_\text{The mean of the sample means} = \underbrace{\mu}_\text{The mean of the population}
 $$
 
-**The Standard Deviation of the Distribution of Sample Means**
+**The Standard Deviation of the Sampling Distribution of the Sample Mean**
 
 $$
 \underbrace{\sigma_{\bar{x}}}_\text{The st. dev. of the sample means} = \frac{\overbrace{\sigma}^\text{The st. dev. of the population}}{\underbrace{\sqrt{n}}_\text{sample size of each sample}}
@@ -195,9 +195,9 @@ $$
 
 </div>
 
-**The Shape of the Distribution of Sample Means**
+**The Shape of the Sampling Distribution of the Sample Mean**
 
-Notice that the shape of the distribution of sample means is normal in the experiment we just performed in the above applet. This is an important result because (as you will see in [Lesson 7](Lesson07.html)) we will be able to use the Normal Probability Applet to make probability calculations about sample means whenever the distribution of sample means is normal. Unfortunately, there are some situations where the distribution of sample means is not normal. This ruins our ability to make inference about the parent population. Let's look at one such situation.
+Notice that the shape of the sampling distribution of the sample mean is normal in the experiment we just performed in the above applet. This is an important result because (as you will see in [Lesson 7](Lesson07.html)) we will be able to use the Normal Probability Applet to make probability calculations about sample means whenever the distribution of sample means is normal. Unfortunately, there are some situations where the distribution of sample means is not normal. This ruins our ability to make inference about the parent population. Let's look at one such situation.
 
 - **Step 7:** Press the [Clear Lower 3] button.  This will erase your data and reset the applet. Then, use the drop-down menu below the [Clear Lower 3] button to **change** the distribution from a **normal distribution** to a **skewed distribution**. The applet should now show a right-skewed distribution for the "Parent Population" data graph.
 
@@ -222,7 +222,7 @@ However, when it comes to the shape of the distribution of means, you should not
 
 <br>
 
-### What is the Distribution of Sample Means?
+### What is the Sampling Distribution of Sample Mean?
 
 The sampling distribution of the sample mean is the set of all possible values of $\bar x$ that could occur.  You have seen several examples of sampling distributions as you have plotted many means in the simulations and observed the approximately normal distribution that occurs.  In the real world, you only observe *your* sample mean.  You do not get to view the distribution.  However, the fact that you sample randomly means that you could easily have drawn a different sample and had a different sample mean, $\bar x$.  There are *many* possible sample means!
 
@@ -379,5 +379,5 @@ The mean and standard deviation of $\bar{x}$ are:
 <center>
 | **Previous Reading** | **This Reading** | **Next Reading** |
 | :------------------: | :--------------: | :--------------: |
-| [Lesson 5: <br> Normal Distributions](Lesson05.html) | Lesson 06: <br> Distribution of Sample Means & The Central Limit Theorem | [Lesson 7: <br> Probability Calculations involving a Mean Response](Lesson07.html) |
+| [Lesson 5: <br> Normal Distributions](Lesson05.html) | Lesson 06: <br> The Sampling Distribution of the Sample Mean & The Central Limit Theorem | [Lesson 7: <br> Probability Calculations involving a Mean Response](Lesson07.html) |
 </center>

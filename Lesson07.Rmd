@@ -301,5 +301,5 @@ There is sufficient evidence to suggest that the mean lead level is less than 50
 <center>
 | **Previous Reading** | **This Reading** | **Next Reading** |
 | :------------------: | :--------------: | :--------------: |
-| [Lesson 6: <br> Distribution of Sample Means & The Central Limit Theorem](Lesson06.html) | Lesson 07: <br> Probability Calculations involving a Mean Response | [Lesson 8: <br> Review for Exam 1](Lesson08.html) |
+| [Lesson 6: <br> The Sampling Distribution of The Sample Mean & The Central Limit Theorem](Lesson06.html) | Lesson 07: <br> Probability Calculations involving a Mean Response | [Lesson 8: <br> Review for Exam 1](Lesson08.html) |
 </center>
