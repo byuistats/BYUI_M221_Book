@@ -132,10 +132,10 @@ This page contains the data files that are used throughout the course: in the te
 [GharialCrocodiles.xlsx](./Data/GharialCrocodiles.xlsx)         
 
 
-[GingkoMemory.xlsx](./Data/GingkoMemory.xlsx)
-
-
 [Gratitude.xlsx](./Data/Gratitude.xlsx)                                                                
+
+[GroundhogDay.xlsx](./Data/GroundhogDay.xlsx)
+
 
 [HubblesConstant-HubblesData.xlsx](./Data/HubblesConstant-HubblesData.xlsx)                            
 
@@ -190,13 +190,19 @@ This page contains the data files that are used throughout the course: in the te
 
 [OreoDoubleStuf.xlsx](./Data/OreoDoubleStuf.xlsx)                                                      
 
+[PaperTowels.xslx](./Data/PaperTowels.xlsx)
+
+
 [PatientSatisfaction-DoctorVsNurse-Stacked.xlsx](./Data/PatientSatisfaction-DoctorVsNurse-Stacked.xlsx)
+
 
 [PineBeetle.xlsx](./Data/PineBeetle.xlsx)                                                              
 
 [ProteinRequirement-Campbell.xlsx](./Data/ProteinRequirement-Campbell.xlsx)              
 
+
 [Prozac.xlsx](./Data/Prozac.xlsx)
+
 
 [PTCtasting.xlsx](./Data/PTCtasting.xlsx)                                                              
 
