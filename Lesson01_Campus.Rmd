@@ -163,15 +163,8 @@ The Tutoring Center provides many services to help students succeed:
 -  Walk-in tutoring in the Math Study Center (McKay 266 & 270)
 -  Virtual tutoring
 
-<<<<<<< HEAD
 Please take 5 minutes to explore the [Study Skills/Tutoring Center web site](https://www.byui.edu/academic-support-centers/math/math-help-for-on-campus-students).
-=======
-Please take a moment to explore the [Study Skills/Tutoring Center web site](https://www.byui.edu/academic-support-centers/math/math-help-for-on-campus-students).
 
-**TA Support**
-
-In addition to the faculty who teach this course, specially trained teaching assistants (TAs) will help you through the course.  The Guided Practice sessions will be led by TAs, under the direction of the faculty. The TAs will work with you on specific discovery activities in the Guided Practice sessions.
->>>>>>> 347aa3c247591875e775ffc5b4a6942cf601c62e
 
 **Faculty Support**
 
