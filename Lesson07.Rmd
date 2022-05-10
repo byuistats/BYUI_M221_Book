@@ -184,7 +184,7 @@ In environmental testing, we always assume the site is dirty.  That is, our null
 
 **Step 2: Collect Data**
 
-Scientists collected $n = 61$ measurements of the lead concentration in the soil, measured in mg/kg.  The data are given in the file [Uranium Plant Data-Lead](http://statistics.byuimath.com/index.php?title=Data){target="_blank}.
+Scientists collected $n = 61$ measurements of the lead concentration in the soil, measured in mg/kg.  The data are given in the file [Uranium Plant Data-Lead](./Data/UraniumPlantData-Lead.xlsx){target="_blank}.
 
 
 <br>
