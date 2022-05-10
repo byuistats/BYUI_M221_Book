@@ -220,16 +220,13 @@ To use this applet, follow these instructions:
 *Type a $z$-score into one of the bottom input boxes and hit "Enter" to get an area.
 *Type in an area and hit "Enter" to get a $z$-score.
 
-<br>
 <center>
 <div width="90%">
-
-
-```{r, echo=FALSE}
-htmltools::includeHTML("https://byuimath.com/apps/normprob.html")
-```
+<iframe src="https://byuimath.com/apps/normprob.html?width=600&z=1&height=400&left=1&mid=0&right=1&area=a&static=0&title=1&border=0" frameborder="0" width="650" height="450" data-external="1"></iframe>
 </div>
 </center>
+
+
 ### Converting a $z$-score to a Probability
 
 Using this applet we can calculate proportions and probabilities based on the area under the normal curve. For the following examples, please open the [Normal Probability Applet](https://byuimath.com/apps/normprob.html){target="_blank"} and practice using it to find areas under the curve.
@@ -248,7 +245,11 @@ To find the area under a normal curve corresponding to a $z$-score of $2.041$, d
 - Click on the areas under the curve until only the areas left of the $z$-score are shaded blue.
 - The total shaded area under the normal distribution, 0.979\*, is given above the graph. This is the proportion of young Ghanaian women who are shorter than Serwa.
 
-<img src="./Images/Serwa_z-score.PNG">
+<center>
+<div width="90%">
+<iframe src="https://byuimath.com/apps/normprob.html?width=600&z=2.041&height=400&left=1&mid=1&right=0&area=a&static=1&title=1&border=0" frameborder="0" width="650" height="450" data-external="1"></iframe>
+</div>
+</center>
 
 The area to the left of our chosen $z$-score is also the probability that a randomly selected woman will be shorter than Serwa. The probability that a randomly selected Ghanaian woman will be shorter than Serwa is $0.979$, or $97.9\%$.
 
