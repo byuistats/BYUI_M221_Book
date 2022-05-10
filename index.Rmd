@@ -18,6 +18,7 @@ output:
 
 This textbook contains 24 lessons divided into four units. The first unit establishes the Statistical Process and some theoretical foundations for working with quantitative data. The second unit applies these theoretical concepts to real world data analysis with quantitative data. The third unit does the same, but with categorical data. The final unit takes a look at bivariate data by studying scatterplots, correlation, and simple linear regression.
 
+
 <br/>
 
 <div class="mboxfull">
