@@ -79,6 +79,9 @@ This page contains the data files that are used throughout the course: in the te
 
 [COPD-Rehab.xlsx](./Data/COPD-Rehab.xlsx)                                                              
 
+[CricketTemp.xlsx](./Data/CricketTemp.xlsx)
+
+
 [CrossroadsPurchases.xlsx](./Data/CrossroadsPurchases.xlsx)                                            
 
 [CuckooEggs.xlsx](./Data/CuckooEggs.xlsx)                                                              
@@ -126,6 +129,9 @@ This page contains the data files that are used throughout the course: in the te
 [FreshmenDinner.xlsx](./Data/FreshmenDinner.xlsx)               
 
 
+[FuelEfficiency.xlsx](./Data/FuelEfficiency.xlsx)
+
+
 [GasPrices.xlsx](./Data/GasPrices.xlsx)
 
 
@@ -158,6 +164,9 @@ This page contains the data files that are used throughout the course: in the te
 [LASaturnWinter06.xlsx](./Data/LASaturnWinter06.xlsx)                                                  
 
 [LeadExposureAndBehavior.xlsx](./Data/LeadExposureAndBehavior.xlsx)                                    
+
+[LEGO.xlsx](./Data/LEGO.xlsx)
+
 
 [MadisonCountyRealEstate.xlsx](./Data/MadisonCountyRealEstate.xlsx)                                    
 
@@ -217,6 +226,9 @@ This page contains the data files that are used throughout the course: in the te
 [RedboxDecisionTimes.xlsx](./Data/RedboxDecisionTimes.xlsx)                                            
 
 [REE-ClassicalMusic.xlsx](./Data/REE-ClassicalMusic.xlsx)                                              
+
+[RollerCoasters.xlsx](./Data/RollerCoasters.xlsx)
+
 
 [SingerHeights.xlsx](./Data/SingerHeights.xlsx)                                                        
 
