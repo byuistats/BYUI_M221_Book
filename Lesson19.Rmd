@@ -29,11 +29,11 @@ output:
 
 ##### Part 3
 
-<iframe id="kaltura_player_1653055644" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/47306393/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1653055644&entry_id=1_h5n62et1" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+<iframe id="kaltura_player_1655822214" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/42438262/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1655822214&entry_id=1_g5fcvzoh" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
 
 ##### Part 4
 
-<iframe id="kaltura_player_1653056121" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/47306393/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1653056121&entry_id=1_shgb0pp9" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+<iframe id="kaltura_player_1655823027" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/42438262/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1655823027&entry_id=1_7jli2y0e" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
 
 </div><div style="clear:both;"></div>
 
