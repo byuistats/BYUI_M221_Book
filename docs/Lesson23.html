@@ -13,8 +13,8 @@
 
 <title>Lesson 23: Inference for Bivariate Data</title>
 
-<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -57,6 +57,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -81,6 +82,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -233,7 +237,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -246,7 +250,7 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 1
      
     <span class="caret"></span>
@@ -282,7 +286,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 2
      
     <span class="caret"></span>
@@ -312,7 +316,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 3
      
     <span class="caret"></span>
@@ -336,7 +340,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 4
      
     <span class="caret"></span>
@@ -410,19 +414,39 @@ $(document).ready(function () {
     e.style.display = (e.style.display == 'block') ? 'none' : 'block';
  }
 </script>
-<div style="float:right;width=40%;">
-<br/>
-<div style="padding-left:10%;">
-<strong>Optional Lesson Video</strong>
-</div>
-<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC8-A6W3DcLXUyoR8x0dpTgs" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen>
+<div id="optional-videos-for-this-lesson" class="section level4 tabset tabset-pills" style="width:50%;float:right;">
+<h4 class="tabset tabset-pills">Optional Videos for this Lesson</h4>
+<div id="part-1" class="section level5">
+<h5>Part 1</h5>
+<iframe id="kaltura_player_1657035963" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/42438262/partner_id/1157612?iframeembed=true&amp;playerId=kaltura_player_1657035963&amp;entry_id=1_2ejy5b0k" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0">
 </iframe>
 </div>
-<p><br></p>
+<div id="part-2" class="section level5">
+<h5>Part 2</h5>
+<iframe id="kaltura_player_1657036689" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/42438262/partner_id/1157612?iframeembed=true&amp;playerId=kaltura_player_1657036689&amp;entry_id=1_36bz6qtv" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0">
+</iframe>
+</div>
+<div id="part-3" class="section level5">
+<h5>Part 3</h5>
+<iframe id="kaltura_player_1657037756" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/42438262/partner_id/1157612?iframeembed=true&amp;playerId=kaltura_player_1657037756&amp;entry_id=1_gi0es9iw" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0">
+</iframe>
+</div>
+<div id="part-4" class="section level5">
+<h5>Part 4</h5>
+<iframe id="kaltura_player_1657038095" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/42438262/partner_id/1157612?iframeembed=true&amp;playerId=kaltura_player_1657038095&amp;entry_id=1_90q9qt82" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0">
+</iframe>
+</div>
+<div id="part-5" class="section level5">
+<h5>Part 5</h5>
+<iframe id="kaltura_player_1657039270" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/42438262/partner_id/1157612?iframeembed=true&amp;playerId=kaltura_player_1657039270&amp;entry_id=1_v4140z66" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0">
+</iframe>
+</div>
+</div>
+<div style="clear:both;">
+
+</div>
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
-<div id="oc" style="display:none;">
 <p>By the end of this lesson, you should be able to:</p>
 <ul>
 <li>Confidence Intervals for the slope of the regression line:
@@ -442,7 +466,6 @@ $(document).ready(function () {
 <li>Draw a correct conclusion for the hypothesis test.</li>
 </ul></li>
 </ul>
-</div>
 <p><br></p>
 </div>
 <div id="theory-of-simple-linear-regression" class="section level2">

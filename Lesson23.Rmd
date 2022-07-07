@@ -14,17 +14,36 @@ output:
  }
 </script>
 
-<div style="float:right;width=40%;">
-<br/>
-<div style="padding-left:10%;">**Optional Lesson Video**</div>
-<iframe width="90%" align="right" src="https://www.youtube.com/embed/videoseries?list=PLaZryQtbPQC8-A6W3DcLXUyoR8x0dpTgs" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
-<br>
+
+<div style="width:50%;float:right;">
+
+#### Optional Videos for this Lesson {.tabset .tabset-pills}
+
+##### Part 1
+
+<iframe id="kaltura_player_1657035963" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/42438262/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1657035963&entry_id=1_2ejy5b0k" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+##### Part 2
+
+<iframe id="kaltura_player_1657036689" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/42438262/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1657036689&entry_id=1_36bz6qtv" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+##### Part 3
+
+<iframe id="kaltura_player_1657037756" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/42438262/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1657037756&entry_id=1_gi0es9iw" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+##### Part 4
+
+<iframe id="kaltura_player_1657038095" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/42438262/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1657038095&entry_id=1_90q9qt82" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+##### Part 5
+
+<iframe id="kaltura_player_1657039270" src="https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/42438262/partner_id/1157612?iframeembed=true&playerId=kaltura_player_1657039270&entry_id=1_v4140z66" width="480" height="270" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+
+</div><div style="clear:both;"></div>
+
 
 ## Lesson Outcomes
 
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
-<div id="oc" style="display:none;">
 By the end of this lesson, you should be able to:
 
 - Confidence Intervals for the slope of the regression line: 
@@ -39,7 +58,7 @@ By the end of this lesson, you should be able to:
     + Check the requirements for the hypothesis test.
     + Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test. 
     + Draw a correct conclusion for the hypothesis test.
-</div>
+
 <br>
 
 ## Theory of Simple Linear Regression
