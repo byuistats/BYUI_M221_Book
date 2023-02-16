@@ -13,8 +13,8 @@
 
 <title>Translation Guide</title>
 
-<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -60,6 +60,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -84,6 +85,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -296,12 +300,12 @@ div.tocify {
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row">
-<div class="col-sm-12 col-md-4 col-lg-3">
+<div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
 </div>
 
-<div class="toc-content col-sm-12 col-md-8 col-lg-9">
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -309,7 +313,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -322,17 +326,25 @@ div.tocify {
   <a href="index.html">Home</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 1
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
-    </li>
-    <li>
-      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lesson 1: Course Intro &amp; Probability</a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="Lesson01_Campus.html">Campus Student Version</a>
+        </li>
+        <li>
+          <a href="Lesson01.html">Online Student Version</a>
+        </li>
+        <li>
+          <a href="Lesson01_WWB.html">World Wide Block Student Version</a>
+        </li>
+      </ul>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -358,7 +370,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 2
      
     <span class="caret"></span>
@@ -388,7 +400,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 3
      
     <span class="caret"></span>
@@ -412,7 +424,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 4
      
     <span class="caret"></span>
@@ -455,6 +467,10 @@ div.tocify {
 
 
 <table>
+<colgroup>
+<col width="45%" />
+<col width="54%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Wiki Code</th>
@@ -480,7 +496,8 @@ div.tocify {
 </tr>
 <tr class="odd">
 <td><code>[[File:somefile.png|center|link=]]</code></td>
-<td><code>&lt;img src="./Images/somefile.png"&gt;</code><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></td>
+<td><code>&lt;img src="./Images/somefile.png"&gt;</code><a href="#fn1"
+class="footnote-ref" id="fnref1"><sup>1</sup></a></td>
 </tr>
 <tr class="even">
 <td><code>'''</code></td>
@@ -492,7 +509,8 @@ div.tocify {
 </tr>
 </tbody>
 </table>
-<div id="translating-the-green-problem-showhide-solution-boxes" class="section level2">
+<div id="translating-the-green-problem-showhide-solution-boxes"
+class="section level2">
 <h2>Translating the Green Problem Show/Hide Solution Boxes:</h2>
 <pre><code>## Wiki Code:
 &lt;div style=&quot;clear:both&quot;&gt;&lt;/div&gt;
@@ -508,13 +526,16 @@ div.tocify {
 <h3>Regular Expressions</h3>
 <p>Beginning of file source =</p>
 <p>End of file source = <code>\|(link).*\]\]$</code></p>
-<p><code>[[File:StepsAll.png|link=|center]]</code> <code>\[\[(File):\w*\.\w{3}\|\w*\=\|\w*\]\]</code></p>
+<p><code>[[File:StepsAll.png|link=|center]]</code>
+<code>\[\[(File):\w*\.\w{3}\|\w*\=\|\w*\]\]</code></p>
 </div>
 </div>
-<div class="footnotes">
+<div class="footnotes footnotes-end-of-document">
 <hr />
 <ol>
-<li id="fn1"><p>Go to wiki, right click on corresponding “somefile.png” image, Save As, Choose the “Images” folder of the “Current Math 221 Wiki” folder.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>Go to wiki, right click on corresponding “somefile.png”
+image, Save As, Choose the “Images” folder of the “Current Math 221
+Wiki” folder.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 
@@ -559,6 +580,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

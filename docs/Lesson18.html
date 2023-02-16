@@ -256,11 +256,19 @@ $(document).ready(function () {
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
-    </li>
-    <li>
-      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lesson 1: Course Intro &amp; Probability</a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="Lesson01_Campus.html">Campus Student Version</a>
+        </li>
+        <li>
+          <a href="Lesson01.html">Online Student Version</a>
+        </li>
+        <li>
+          <a href="Lesson01_WWB.html">World Wide Block Student Version</a>
+        </li>
+      </ul>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -377,26 +385,40 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Lesson 18: Inference for Two Proportions</h1>
+<h1 class="title toc-ignore">Lesson 18: Inference for Two
+Proportions</h1>
 
 </div>
 
 <div id="TOC">
 <ul>
-<li><a href="#lesson-outcomes">Lesson Outcomes</a></li>
-<li><a href="#hypothesis-tests">Hypothesis Tests</a>
+<li><a href="#lesson-outcomes" id="toc-lesson-outcomes">Lesson
+Outcomes</a></li>
+<li><a href="#hypothesis-tests" id="toc-hypothesis-tests">Hypothesis
+Tests</a>
 <ul>
-<li><a href="#another-taste-of-ptc">Another Taste of PTC</a></li>
-<li><a href="#using-excel-to-perform-these-calculations">Using Excel to perform these calculations</a></li>
-<li><a href="#mortality-rates-and-day-of-admission-aortic-aneurysms">Mortality Rates and Day of Admission: Aortic Aneurysms</a></li>
-<li><a href="#mortality-rates-and-day-of-admission-heart-attacks">Mortality Rates and Day of Admission: Heart Attacks</a></li>
+<li><a href="#another-taste-of-ptc"
+id="toc-another-taste-of-ptc">Another Taste of PTC</a></li>
+<li><a href="#using-excel-to-perform-these-calculations"
+id="toc-using-excel-to-perform-these-calculations">Using Excel to
+perform these calculations</a></li>
+<li><a href="#mortality-rates-and-day-of-admission-aortic-aneurysms"
+id="toc-mortality-rates-and-day-of-admission-aortic-aneurysms">Mortality
+Rates and Day of Admission: Aortic Aneurysms</a></li>
+<li><a href="#mortality-rates-and-day-of-admission-heart-attacks"
+id="toc-mortality-rates-and-day-of-admission-heart-attacks">Mortality
+Rates and Day of Admission: Heart Attacks</a></li>
 </ul></li>
-<li><a href="#confidence-intervals-managing-fox-populations">Confidence Intervals: Managing Fox Populations</a>
+<li><a href="#confidence-intervals-managing-fox-populations"
+id="toc-confidence-intervals-managing-fox-populations">Confidence
+Intervals: Managing Fox Populations</a>
 <ul>
-<li><a href="#checking-requirements-for-a-confidence-interval">Checking Requirements for a Confidence Interval</a></li>
+<li><a href="#checking-requirements-for-a-confidence-interval"
+id="toc-checking-requirements-for-a-confidence-interval">Checking
+Requirements for a Confidence Interval</a></li>
 </ul></li>
-<li><a href="#summary">Summary</a></li>
-<li><a href="#navigation">Navigation</a></li>
+<li><a href="#summary" id="toc-summary">Summary</a></li>
+<li><a href="#navigation" id="toc-navigation">Navigation</a></li>
 </ul>
 </div>
 
@@ -406,7 +428,9 @@ $(document).ready(function () {
     e.style.display = (e.style.display == 'block') ? 'none' : 'block';
  }
 </script>
-<div id="optional-videos-for-this-lesson" class="section level4 tabset tabset-pills" style="width:50%;float:right;">
+<div id="optional-videos-for-this-lesson"
+class="section level4 tabset tabset-pills"
+style="width:50%;float:right;">
 <h4 class="tabset tabset-pills">Optional Videos for this Lesson</h4>
 <div id="part-1" class="section level5">
 <h5>Part 1</h5>
@@ -439,21 +463,30 @@ $(document).ready(function () {
 </div>
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
-<p>By the end of this lesson, you should be able to do the following.</p>
-<p><strong>Regarding Confidence Intervals for a comparison of two proportions: </strong></p>
+<p>By the end of this lesson, you should be able to do the
+following.</p>
+<p><strong>Regarding Confidence Intervals for a comparison of two
+proportions: </strong></p>
 <ul>
-<li>Calculate and interpret a confidence interval for a comparison of two proportions given a confidence level.</li>
-<li>Identify a point estimate and margin of error for the confidence interval.</li>
-<li>Show the appropriate connections between the numerical and graphical summaries that support the confidence interval.</li>
+<li>Calculate and interpret a confidence interval for a comparison of
+two proportions given a confidence level.</li>
+<li>Identify a point estimate and margin of error for the confidence
+interval.</li>
+<li>Show the appropriate connections between the numerical and graphical
+summaries that support the confidence interval.</li>
 <li>Check the requirements for the confidence interval.</li>
 </ul>
-<p><strong>Regarding Hypothesis Testing for a comparison of two proportions:</strong></p>
+<p><strong>Regarding Hypothesis Testing for a comparison of two
+proportions:</strong></p>
 <ul>
 <li>State the null and alternative hypothesis for the chosen test.</li>
-<li>Calculate the test-statistic and p-value of the hypothesis test.</li>
-<li>Assess the statistical significance by comparing the p-value to the α-level.</li>
+<li>Calculate the test-statistic and p-value of the hypothesis
+test.</li>
+<li>Assess the statistical significance by comparing the p-value to the
+α-level.</li>
 <li>Check the requirements for the hypothesis test.</li>
-<li>Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test.</li>
+<li>Show the appropriate connections between the numerical and graphical
+summaries that support the hypothesis test.</li>
 <li>Draw a correct conclusion for the hypothesis test.</li>
 </ul>
 <p><br></p>
@@ -465,8 +498,15 @@ $(document).ready(function () {
 <h3>Another Taste of PTC</h3>
 <p><img src="Images/Step1.png"></p>
 <p><img src="Images/Phenylthiocarbamide-3D-balls.png"></p>
-<p>The ability to taste the chemical Phenylthiocarbamide (PTC) is hereditary. Some people can taste it, while others cannot. Even though the ability to taste PTC was observed in all age, race, and sex groups, this does not address the issue about whether men or women are more likely to be able taste PTC.</p>
-<p>Further exploration of the PTC data allows us to investigate if there is a difference in the proportion of men and women who can taste PTC. The following contingency table summarizes Elise Johnson’s results<!--<cite>Johnson06</cite>-->:</p>
+<p>The ability to taste the chemical Phenylthiocarbamide (PTC) is
+hereditary. Some people can taste it, while others cannot. Even though
+the ability to taste PTC was observed in all age, race, and sex groups,
+this does not address the issue about whether men or women are more
+likely to be able taste PTC.</p>
+<p>Further exploration of the PTC data allows us to investigate if there
+is a difference in the proportion of men and women who can taste PTC.
+The following contingency table summarizes Elise Johnson’s
+results<!--<cite>Johnson06</cite>-->:</p>
 <table>
 <caption><strong>Gender Data Table</strong></caption>
 <thead>
@@ -513,19 +553,44 @@ $(document).ready(function () {
 <!-- | 66 || 52 || 118 -->
 <!-- |- -->
 <!-- |} -->
-<p>These data are available in the file <a href="./Data/PTCtasting.xlsx">PTCTasting</a>. Note the way the data are organized in the file. One column gives the gender, another column indicates if the individual can taste PTC, and a third column gives counts for each group.</p>
-<p>Researchers want to know if the ability to taste PTC is a sex-linked trait. This can be summarized in the following research question: Is there a difference in the proportion of men and the proportion of women who can taste PTC? The hypothesis is that there is no difference in the the true proportion of men who can taste PTC compared to the true proportion of women who can taste PTC.</p>
+<p>These data are available in the file <a
+href="./Data/PTCtasting.xlsx">PTCTasting</a>. Note the way the data are
+organized in the file. One column gives the gender, another column
+indicates if the individual can taste PTC, and a third column gives
+counts for each group.</p>
+<p>Researchers want to know if the ability to taste PTC is a sex-linked
+trait. This can be summarized in the following research question: Is
+there a difference in the proportion of men and the proportion of women
+who can taste PTC? The hypothesis is that there is no difference in the
+the true proportion of men who can taste PTC compared to the true
+proportion of women who can taste PTC.</p>
 <p><img src="Images/Step2.png"></p>
-<p>A sample of 66 females and 52 males were provided with PTC strips and asked to indicate if they could taste the chemical or not. (This research was approved by the BYU-Idaho Institutional Review Board.)</p>
+<p>A sample of 66 females and 52 males were provided with PTC strips and
+asked to indicate if they could taste the chemical or not. (This
+research was approved by the BYU-Idaho Institutional Review Board.)</p>
 <p><img src="Images/Step3.png"></p>
-<p>When working with categorical data, it is natural to summarize the data by computing proportions. If someone has the ability to taste PTC, we will call this a success. The sample proportion is defined as the number of successes observed divided by the total number of observations. For the females, the proportion of the sample who could taste the PTC was: <span class="math display">\[
+<p>When working with categorical data, it is natural to summarize the
+data by computing proportions. If someone has the ability to taste PTC,
+we will call this a success. The sample proportion is defined as the
+number of successes observed divided by the total number of
+observations. For the females, the proportion of the sample who could
+taste the PTC was: <span class="math display">\[
 \hat p_1 = \frac{x_1}{n_1} = \frac{51}{66}
-\]</span> This is approximately 77.3% of the people who were surveyed. For the males, the proportion who could taste PTC was: <span class="math display">\[
+\]</span> This is approximately 77.3% of the people who were surveyed.
+For the males, the proportion who could taste PTC was: <span
+class="math display">\[
 \hat p_2 = \frac{x_2}{n_2} = \frac{38}{52}
 \]</span> This works out to be about 73.1%.</p>
-<p>When working with data for two proportions, graphically displaying the data can help us compare each proportion. Pie charts and bar charts are essential tools for describing our data. The Math221 Statistics Toolbox automatically creates a side-by-side 100% stacked bar chart when you input the data into the “Two Proportions” tab.</p>
+<p>When working with data for two proportions, graphically displaying
+the data can help us compare each proportion. Pie charts and bar charts
+are essential tools for describing our data. The Math221 Statistics
+Toolbox automatically creates a side-by-side 100% stacked bar chart when
+you input the data into the “Two Proportions” tab.</p>
 <p><img src="Images/PTC_Stacked_Bar_Toolbox.PNG"></p>
-Click on the link at right if you would like to learn how to create a side-by-side 100% stacked bar chart on your own in Excel. <a href="javascript:showhide('ins')"><span style="font-size:8pt;">Show/Hide Instructions</span></a>
+Click on the link at right if you would like to learn how to create a
+side-by-side 100% stacked bar chart on your own in Excel.
+<a href="javascript:showhide('ins')"><span
+style="font-size:8pt;">Show/Hide Instructions</span></a>
 <div id="ins" style="display:none;">
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <!-- {{Software_Filter | PageName=SideBySidePieCharts}} -->
@@ -533,16 +598,21 @@ Click on the link at right if you would like to learn how to create a side-by-si
 Excel Instructions
 </div>
 <div class="Summary">
-<p><strong>To create 100% Stacked Bar Charts in Excel, do the following:</strong></p>
+<p><strong>To create 100% Stacked Bar Charts in Excel, do the
+following:</strong></p>
 <p>For this example we will continue to use the PTCTasting data set.</p>
 <ul>
-<li>First, re-arrange the summary of the data so that it looks like the table above, but without a row and column for total.</li>
-<li>Highlight the counts and the row and column headings. Now click on the “Insert” tab and select the 3rd option under the “2D Column” heading.</li>
+<li>First, re-arrange the summary of the data so that it looks like the
+table above, but without a row and column for total.</li>
+<li>Highlight the counts and the row and column headings. Now click on
+the “Insert” tab and select the 3rd option under the “2D Column”
+heading.</li>
 </ul>
 <center>
 <img src="Images/PTC_Stacked_Bar_Creation.png">
 </center>
-<p><br> - Your graph would look like the image below. You can further customize it by adding data labels, titles, changing colors, etc.</p>
+<p><br> - Your graph would look like the image below. You can further
+customize it by adding data labels, titles, changing colors, etc.</p>
 <center>
 <p><img src="Images/PTC_Stacked_bar.PNG"></p>
 </center>
@@ -552,93 +622,177 @@ Excel Instructions
 </div>
 <p><br></p>
 <p><img src="Images/Step4.png"></p>
-<p>The null and alternative hypotheses for a test of equality of two proportions is: <span class="math display">\[
+<p>The null and alternative hypotheses for a test of equality of two
+proportions is: <span class="math display">\[
 \begin{array}{rl}
 H_0: &amp; p_1 = p_2 \\
 H_a: &amp; p_1 \ne p_2 \\
 \end{array}
 \]</span></p>
-<p>If the null hypothesis is true, then the proportion of females who can taste PTC is the same as the proportion of males who can taste PTC.</p>
-<p><span id="Equation"></span> The test statistic is a <span class="math inline">\(z\)</span>, and is given by: <span class="math display">\[
-z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) } }
+<p>If the null hypothesis is true, then the proportion of females who
+can taste PTC is the same as the proportion of males who can taste
+PTC.</p>
+<p><span id="Equation"></span> The test statistic is a <span
+class="math inline">\(z\)</span>, and is given by: <span
+class="math display">\[
+z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right)
+}{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} +
+\frac{1}{n_2} \right) } }
 \]</span> where <span class="math display">\[
 \begin{array}{lll}
-n_1= \text{sample size for group 1:}    &amp; n_1 = 66  &amp; \text{(number of females)} \\
-n_2= \text{sample size for group 2:}    &amp; n_2 = 52  &amp; \text{(number of males)} \\
-\hat p_1= \text{sample proportion for group 1:} &amp; \hat p_1 = \frac{x_1}{n_1} = \frac{51}{66} &amp; \text{(proportion of females who can taste PTC)}\\
-\hat p_2= \text{sample proportion for group 2:} ~ &amp; \hat p_2 = \frac{x_2}{n_2} = \frac{38}{52} &amp; \text{(proportion of males who can taste PTC)}\\
-\hat p= \text{overall sample proportion:}   &amp; \hat p = \frac{x_1+x_2}{n_1+n_2} = \frac{89}{118} &amp; \text{(overall proportion who can taste PTC)}\\
+n_1= \text{sample size for group 1:}    &amp; n_1 = 66  &amp;
+\text{(number of females)} \\
+n_2= \text{sample size for group 2:}    &amp; n_2 = 52  &amp;
+\text{(number of males)} \\
+\hat p_1= \text{sample proportion for group 1:} &amp; \hat p_1 =
+\frac{x_1}{n_1} = \frac{51}{66} &amp; \text{(proportion of females who
+can taste PTC)}\\
+\hat p_2= \text{sample proportion for group 2:} ~ &amp; \hat p_2 =
+\frac{x_2}{n_2} = \frac{38}{52} &amp; \text{(proportion of males who can
+taste PTC)}\\
+\hat p= \text{overall sample proportion:}   &amp; \hat p =
+\frac{x_1+x_2}{n_1+n_2} = \frac{89}{118} &amp; \text{(overall proportion
+who can taste PTC)}\\
 \end{array}
 \]</span></p>
-<p>Substituting these values into the equation for the test statistic, <span class="math inline">\(z\)</span>, we get: <span class="math display">\[
+<p>Substituting these values into the equation for the test statistic,
+<span class="math inline">\(z\)</span>, we get: <span
+class="math display">\[
 \begin{align}
-z &amp; = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) } }
+z &amp; = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2
+\right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} +
+\frac{1}{n_2} \right) } }
 \\
-&amp; = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( 0 \right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) } } \\
-&amp; ~ ~ ~ ~ ~ \textrm{In the null hypothesis, we assumed that} ~ p_1=p_2. \\
+&amp; = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( 0 \right) }{
+\sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} +
+\frac{1}{n_2} \right) } } \\
+&amp; ~ ~ ~ ~ ~ \textrm{In the null hypothesis, we assumed that} ~
+p_1=p_2. \\
 &amp; ~ ~ ~ ~ ~ \textrm{Or after subtracting,} ~ p_1-p_2=0 \\
-&amp; ~ ~ ~ ~ ~ \textrm{So, we substituted} ~ 0 ~ \textrm{for} ~ p_1-p_2 ~ \text{in the previous step.} \\
-&amp; = \frac{ \left( \frac{51}{66} - \frac{38}{52} \right) - (0) }{ \sqrt{\frac{89}{118} \left( 1-\frac{89}{118} \right) \left( \frac{1}{66} + \frac{1}{52} \right) } } \\
+&amp; ~ ~ ~ ~ ~ \textrm{So, we substituted} ~ 0 ~ \textrm{for} ~ p_1-p_2
+~ \text{in the previous step.} \\
+&amp; = \frac{ \left( \frac{51}{66} - \frac{38}{52} \right) - (0) }{
+\sqrt{\frac{89}{118} \left( 1-\frac{89}{118} \right) \left( \frac{1}{66}
++ \frac{1}{52} \right) } } \\
 &amp; = 0.526 \\
 \end{align}
 \]</span></p>
-The test statistic is <span class="math inline">\(z=0.526\)</span>. Under the null hypothesis, this follows a standard normal distribution. So, we can use the Normal Probability applet to compute the <span class="math inline">\(P\)</span>-value. We are conducting a two-sided test, so we will shade both tails in the applet.
+The test statistic is <span class="math inline">\(z=0.526\)</span>.
+Under the null hypothesis, this follows a standard normal distribution.
+So, we can use the Normal Probability applet to compute the <span
+class="math inline">\(P\)</span>-value. We are conducting a two-sided
+test, so we will shade both tails in the applet.
 <center>
 <img src="Images/ShadeBothZ-0-5256.png">
 </center>
-<p>Since <span class="math inline">\(P\textrm{-value} = 0.599 &gt; 0.05 = \alpha\)</span>, we fail to reject the null hypothesis. In English we say, there is insufficient evidence to suggest that the true proportion of males who can taste PTC is different from the true proportion of females who can taste PTC.</p>
+<p>Since <span class="math inline">\(P\textrm{-value} = 0.599 &gt; 0.05
+= \alpha\)</span>, we fail to reject the null hypothesis. In English we
+say, there is insufficient evidence to suggest that the true proportion
+of males who can taste PTC is different from the true proportion of
+females who can taste PTC.</p>
 <p><img src="Images/Step5.png"></p>
-<p>Men and women appear to be able to taste PTC in equal proportions. There is not enough evidence to say that one gender is able to taste PTC more than the other. It appears that the ability to taste PTC is not a sex-linked trait.</p>
+<p>Men and women appear to be able to taste PTC in equal proportions.
+There is not enough evidence to say that one gender is able to taste PTC
+more than the other. It appears that the ability to taste PTC is not a
+sex-linked trait.</p>
 </div>
-<div id="using-excel-to-perform-these-calculations" class="section level3">
+<div id="using-excel-to-perform-these-calculations"
+class="section level3">
 <h3>Using Excel to perform these calculations</h3>
 <!-- {{Content:Excel/SPSS-Two Proportion HT}} -->
-<p>Just like we did for one proportion, we will use the <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> to perform hypothesis tests for two proportions.</p>
-<span class="Custom">Click on the link at right</span> for instructions on using this spreadsheet to perform hypothesis testing. <a href="javascript:showhide('excelinstructions')"><span style="font-size:8pt;">Show/Hide Instructions</span></a>
+<p>Just like we did for one proportion, we will use the <a
+href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics
+Toolbox</a> to perform hypothesis tests for two proportions.</p>
+<span class="Custom">Click on the link at right</span> for instructions
+on using this spreadsheet to perform hypothesis testing.
+<a href="javascript:showhide('excelinstructions')"><span
+style="font-size:8pt;">Show/Hide Instructions</span></a>
 <div id="excelinstructions" style="display:none;">
 <p>For this example we will consider the “PTC” data above.</p>
 <ul>
-<li><strong>Step 1</strong>: Open the Excel file Math221 Statistics Toolbox and click on the “Two Proportions” tab at the bottom of the spreadsheet. Find the group of cells labeled “Numerical Summary”. Here we will input the values of <span class="math inline">\(x_1\)</span>, <span class="math inline">\(n_1\)</span>, <span class="math inline">\(x_2\)</span>, and <span class="math inline">\(n_2\)</span> from the PTC tasting data above.</li>
+<li><strong>Step 1</strong>: Open the Excel file Math221 Statistics
+Toolbox and click on the “Two Proportions” tab at the bottom of the
+spreadsheet. Find the group of cells labeled “Numerical Summary”. Here
+we will input the values of <span class="math inline">\(x_1\)</span>,
+<span class="math inline">\(n_1\)</span>, <span
+class="math inline">\(x_2\)</span>, and <span
+class="math inline">\(n_2\)</span> from the PTC tasting data above.</li>
 </ul>
 <center>
 <img src="Images/Lesson_18_pic_1.PNG">
 </center>
 <ul>
-<li><p>The yellow boxes indicate the input spaces. These are the only cells into which you will enter data.</p></li>
-<li><p><strong>Confidence Interval</strong>: Next, we indicate our desired level of confidence for our confidence interval. Down and to the right of where we entered in our counts is a block of cells labeled “Confidence Interval”. There is a yellow cell there, I12, where we can choose a confidence level. By default the cell contains the value 95%. The confidence interval bounds are shown as well as the sample proportion, <span class="math inline">\(\hat{p}\)</span> and the margin of error.</p></li>
+<li><p>The yellow boxes indicate the input spaces. These are the only
+cells into which you will enter data.</p></li>
+<li><p><strong>Confidence Interval</strong>: Next, we indicate our
+desired level of confidence for our confidence interval. Down and to the
+right of where we entered in our counts is a block of cells labeled
+“Confidence Interval”. There is a yellow cell there, I12, where we can
+choose a confidence level. By default the cell contains the value 95%.
+The confidence interval bounds are shown as well as the sample
+proportion, <span class="math inline">\(\hat{p}\)</span> and the margin
+of error.</p></li>
 </ul>
 <center>
 <img src="Images/Lesson_18_pic_2.PNG">
 </center>
 <p><br></p>
 <ul>
-<li><strong>Hypothesis Test</strong>: To conduct a hypothesis test we must define our null and alternative hypotheses. To the right of the “Numerical Summary” cells is a block of cells labeled “Hypothesis Test”. The null hypothesis is always the same and does not need to be updated. For the alternative hypothesis we can change the yellow cell, K6, to select the type of alternative hypothesis we wish to test, i.e. “Greater Than”, “Less Than”, or “Not Equal To.”</li>
+<li><strong>Hypothesis Test</strong>: To conduct a hypothesis test we
+must define our null and alternative hypotheses. To the right of the
+“Numerical Summary” cells is a block of cells labeled “Hypothesis Test”.
+The null hypothesis is always the same and does not need to be updated.
+For the alternative hypothesis we can change the yellow cell, K6, to
+select the type of alternative hypothesis we wish to test, i.e. “Greater
+Than”, “Less Than”, or “Not Equal To.”</li>
 </ul>
-<p>The results of the hypothesis test are given immediately below where we define the hypotheses:</p>
+<p>The results of the hypothesis test are given immediately below where
+we define the hypotheses:</p>
 <center>
 <img src="Images/Lesson_18_pic_3.PNG">
 </center>
 <p><br></p>
 <ul>
-<li>Compare the z-score and <span class="math inline">\(P\)</span>-value with the one you calculated by hand. They’re the same! <br></li>
+<li>Compare the z-score and <span class="math inline">\(P\)</span>-value
+with the one you calculated by hand. They’re the same! <br></li>
 </ul>
 </div>
 <p><br></p>
 <p><img src="Images/StepsAll.png"></p>
 </div>
-<div id="mortality-rates-and-day-of-admission-aortic-aneurysms" class="section level3">
+<div id="mortality-rates-and-day-of-admission-aortic-aneurysms"
+class="section level3">
 <h3>Mortality Rates and Day of Admission: Aortic Aneurysms</h3>
-<p>Some people have claimed that mortality (death) rates are higher for patients admitted to a hospital on a weekend compared to patients admitted on a weekday. Researchers Chaim Bell and Donald Redelmeier analyzed admission data from hospital emergency rooms in Ontario, Canada <!--<cite>Bell01</cite>-->.</p>
+<p>Some people have claimed that mortality (death) rates are higher for
+patients admitted to a hospital on a weekend compared to patients
+admitted on a weekday. Researchers Chaim Bell and Donald Redelmeier
+analyzed admission data from hospital emergency rooms in Ontario, Canada
+<!--<cite>Bell01</cite>-->.</p>
 <center>
 <img src="Images/AneurysmAorta-marked.png">
 </center>
-<p>The aorta is a major artery that takes oxygen-rich blood from the heart to the entire body. In some patients, this artery can swell like a balloon and burst. If this occurs in the abdomen, the technical term for the event is a ruptured abdominal aortic aneurysm. Although this condition is treatable, it requires immediate action, or the patient will die rapidly.</p>
+<p>The aorta is a major artery that takes oxygen-rich blood from the
+heart to the entire body. In some patients, this artery can swell like a
+balloon and burst. If this occurs in the abdomen, the technical term for
+the event is a ruptured abdominal aortic aneurysm. Although this
+condition is treatable, it requires immediate action, or the patient
+will die rapidly.</p>
 <p><img src="Images/Step1.png"></p>
-<p>The problem is that the quality of care in an emergency care facility may differ at different times of the week. Doctors Bell and Redelmeier hypothesized that the probability that a patient with an aortic aneurysm will die is greater if they are admitted to a hospital on a weekend compared to a weekday.</p>
-<p><strong>Hypothesis:</strong> The proportion of patients with a ruptured abdominal aortic aneurysm who will die is greater on the weekends than on weekdays.</p>
+<p>The problem is that the quality of care in an emergency care facility
+may differ at different times of the week. Doctors Bell and Redelmeier
+hypothesized that the probability that a patient with an aortic aneurysm
+will die is greater if they are admitted to a hospital on a weekend
+compared to a weekday.</p>
+<p><strong>Hypothesis:</strong> The proportion of patients with a
+ruptured abdominal aortic aneurysm who will die is greater on the
+weekends than on weekdays.</p>
 <p><img src="Images/Step2.png"></p>
-<p>To test this claim, the researchers accessed medical records for several patients admitted to the emergency department of the hospitals in Ontario, Canada. They recorded the number of patients admitted with an aortic aneurysm on weekdays compared to weekends.</p>
-<p>Data representative of their results are given below <!--<cite>Bell01</cite>-->.</p>
+<p>To test this claim, the researchers accessed medical records for
+several patients admitted to the emergency department of the hospitals
+in Ontario, Canada. They recorded the number of patients admitted with
+an aortic aneurysm on weekdays compared to weekends.</p>
+<p>Data representative of their results are given below
+<!--<cite>Bell01</cite>-->.</p>
 <table>
 <caption><strong>Aortic Aneurysm Outcomes</strong></caption>
 <thead>
@@ -690,9 +844,12 @@ Answer the following questions:
 </div>
 <div class="Questions">
 <ol style="list-style-type: decimal">
-<li>Use the data above to find the estimated proportion of patients admitted with an aortic aneurysm on a weekday who will die, <span class="math inline">\(\hat p_1\)</span>.</li>
+<li>Use the data above to find the estimated proportion of patients
+admitted with an aortic aneurysm on a weekday who will die, <span
+class="math inline">\(\hat p_1\)</span>.</li>
 </ol>
-<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q1')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
 <center>
 <span class="math inline">\(\hat p_1 = 0.3561\)</span>
@@ -700,9 +857,12 @@ Answer the following questions:
 </div>
 <p><br></p>
 <ol start="2" style="list-style-type: decimal">
-<li>Use the data to compute the estimated proportion of the patients admitted on a weekend that will die, <span class="math inline">\(\hat p_2\)</span>.</li>
+<li>Use the data to compute the estimated proportion of the patients
+admitted on a weekend that will die, <span class="math inline">\(\hat
+p_2\)</span>.</li>
 </ol>
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q2')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
 <center>
 <span class="math inline">\(\hat p_2 = 0.4225\)</span>
@@ -710,9 +870,11 @@ Answer the following questions:
 </div>
 <p><br></p>
 <ol start="3" style="list-style-type: decimal">
-<li>What do you notice about <span class="math inline">\(\hat p_1\)</span> and <span class="math inline">\(\hat p_2\)</span>?</li>
+<li>What do you notice about <span class="math inline">\(\hat
+p_1\)</span> and <span class="math inline">\(\hat p_2\)</span>?</li>
 </ol>
-<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q3')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q3" style="display:none;">
 <center>
 <span class="math inline">\(\hat p_2~&gt;~\hat p_1\)</span>
@@ -720,12 +882,19 @@ Answer the following questions:
 </div>
 <p><br></p>
 <ol start="4" style="list-style-type: decimal">
-<li>Without doing any more calculations, do you think that there is a significant increase in the death rates of patients admitted on a weekend compared to those admitted on a weekday? Justify your answer.</li>
+<li>Without doing any more calculations, do you think that there is a
+significant increase in the death rates of patients admitted on a
+weekend compared to those admitted on a weekday? Justify your
+answer.</li>
 </ol>
-<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q4')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q4" style="display:none;">
 <ul>
-<li>It appears that those admitted on a weekend have a greater death rate than those who are admitted on a weekday, but we do not know if it is a statistically significant difference until we do a hypothesis test.</li>
+<li>It appears that those admitted on a weekend have a greater death
+rate than those who are admitted on a weekday, but we do not know if it
+is a statistically significant difference until we do a hypothesis
+test.</li>
 </ul>
 </div>
 <p> </p>
@@ -735,7 +904,9 @@ Answer the following questions:
 <!-- #### Side-by-side Bar Charts -->
 <!-- If the data are considered counts, then a side-by-side bar chart is usually the preferred plot. -->
 <!-- <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-<p>–&gt; <!-- <!-- {{Software_Filter | PageName=SideBySideBarCharts }} --> –&gt;</p>
+<p>–&gt;
+<!-- <!-- {{Software_Filter | PageName=SideBySideBarCharts }} -->
+–&gt;</p>
 <!-- <div class="SoftwareHeading">Excel Instructions</div> -->
 <!-- <div class="Summary"> -->
 <!-- **To create side-by-side bar charts in Excel, do the following:** -->
@@ -751,46 +922,87 @@ Answer the following questions:
 <p><img src="Images/Step4.png"></p>
 <br>
 <div class="message Tip">
-<span class="math inline">\(p_1\)</span> is the true proportion of deaths in group 1, the weekday group. <span class="math inline">\(p_2\)</span> is the true proportion of deaths in the weekend group.
+<span class="math inline">\(p_1\)</span> is the true proportion of
+deaths in group 1, the weekday group. <span
+class="math inline">\(p_2\)</span> is the true proportion of deaths in
+the weekend group.
 </div>
 <p><br> <br></p>
-<p>We now conduct a formal hypothesis test to determine if the mortality (death) rate is greater on a weekend compared to a weekday. First, we state the null and alternative hypotheses: <span class="math display">\[
+<p>We now conduct a formal hypothesis test to determine if the mortality
+(death) rate is greater on a weekend compared to a weekday. First, we
+state the null and alternative hypotheses: <span class="math display">\[
 \begin{align}
 H_0: &amp;  p_1 = p_2 \\
 H_a: &amp;  p_1 &lt; p_2
 \end{align}
-\]</span> where group 1 represents the patients admitted on a weekday and group 2 represents patients admitted on a weekend. Note that if <span class="math inline">\(p_1 &lt; p_2\)</span>, then the risk of death is greater in group 2 than in group 1. We will use the 0.05 level of significance.</p>
-<div id="checking-requirements-for-the-hypothesis-test" class="section level4">
+\]</span> where group 1 represents the patients admitted on a weekday
+and group 2 represents patients admitted on a weekend. Note that if
+<span class="math inline">\(p_1 &lt; p_2\)</span>, then the risk of
+death is greater in group 2 than in group 1. We will use the 0.05 level
+of significance.</p>
+<div id="checking-requirements-for-the-hypothesis-test"
+class="section level4">
 <h4>Checking Requirements for the Hypothesis Test</h4>
 <br>
 <div class="message Tip">
-When you check the requirements for this procedure, you are actually checking that you have at least 10 successes and 10 failures in both Group 1 and Group 2. All four conditions must be true in order to conduct the test.
+When you check the requirements for this procedure, you are actually
+checking that you have at least 10 successes and 10 failures in both
+Group 1 and Group 2. All four conditions must be true in order to
+conduct the test.
 </div>
 <p><br> <br></p>
-<p>If the sample size is large in both groups, then we can use the normal distribution to compute the <span class="math inline">\(P\)</span>-value. To check if the sample size is large enough, we need to check the following requirements: <span class="math display">\[
+<p>If the sample size is large in both groups, then we can use the
+normal distribution to compute the <span
+class="math inline">\(P\)</span>-value. To check if the sample size is
+large enough, we need to check the following requirements: <span
+class="math display">\[
 \begin{array}{rrr}
-n_1 \cdot \hat p_1 \ge 10                 &amp;&amp; n_2 \cdot \hat p_2 \ge 10 \\
-n_1 \cdot \left(1-\hat p_1\right) \ge 10  &amp;&amp; n_2 \cdot \left(1-\hat p_2\right) \ge 10
+n_1 \cdot \hat p_1 \ge 10                 &amp;&amp; n_2 \cdot \hat p_2
+\ge 10 \\
+n_1 \cdot \left(1-\hat p_1\right) \ge 10  &amp;&amp; n_2 \cdot
+\left(1-\hat p_2\right) \ge 10
 \end{array}
-\]</span> If these requirements are satisfied, the <span class="math inline">\(z\)</span>-statistic can be used to compute to assess whether the true population proportions are equal or if the risk of death is greater on weekends.</p>
-<p>Note that the requirements are all satisfied: <span class="math display">\[
+\]</span> If these requirements are satisfied, the <span
+class="math inline">\(z\)</span>-statistic can be used to compute to
+assess whether the true population proportions are equal or if the risk
+of death is greater on weekends.</p>
+<p>Note that the requirements are all satisfied: <span
+class="math display">\[
 \begin{array}{rr}
-n_1 \cdot \hat p_1  = 4145 \cdot 0.3561 = 1476 \ge 10           &amp; n_2 \cdot \hat p_2  = 1309 \cdot 0.4225 = 553 \ge 10  \\
-n_1 \cdot \left(1-\hat p_1\right) = 4145 \cdot 0.6439 = 2669 \ge 10     &amp; n_2 \cdot \left(1-\hat p_2\right) = 1309 \cdot 0.5775 = 756 \ge 10
+n_1 \cdot \hat p_1  = 4145 \cdot 0.3561 = 1476 \ge 10           &amp;
+n_2 \cdot \hat p_2  = 1309 \cdot 0.4225 = 553 \ge 10  \\
+n_1 \cdot \left(1-\hat p_1\right) = 4145 \cdot 0.6439 = 2669 \ge
+10     &amp; n_2 \cdot \left(1-\hat p_2\right) = 1309 \cdot 0.5775 = 756
+\ge 10
 \end{array}
 \]</span></p>
-<p><strong>Reminder:</strong> <span class="math inline">\(~ x_1 = 1476,~x_2 =553\)</span>, <span class="math inline">\(n_1=4145,~n_2 = 1309\)</span>, <span class="math inline">\(\hat p_1 = \frac{x_1}{n_1},~\hat p_2 = \frac{x_2}{n_2}\)</span>, and <span class="math inline">\(\hat p = \frac{x_1+x_2}{n_1+n_2}\)</span>.</p>
+<p><strong>Reminder:</strong> <span class="math inline">\(~ x_1 =
+1476,~x_2 =553\)</span>, <span class="math inline">\(n_1=4145,~n_2 =
+1309\)</span>, <span class="math inline">\(\hat p_1 =
+\frac{x_1}{n_1},~\hat p_2 = \frac{x_2}{n_2}\)</span>, and <span
+class="math inline">\(\hat p = \frac{x_1+x_2}{n_1+n_2}\)</span>.</p>
 <p>The test statistic can be computed by following these steps:</p>
 <ul>
-<li>First, find the combined proportion of “successes.” This is computed as: <span class="math display">\[
-\hat p = \frac{x_1+x_2}{n_1+n_2} = \frac{1476+553}{4145+1309} = \frac{2029}{5454}
+<li>First, find the combined proportion of “successes.” This is computed
+as: <span class="math display">\[
+\hat p = \frac{x_1+x_2}{n_1+n_2} = \frac{1476+553}{4145+1309} =
+\frac{2029}{5454}
 \]</span></li>
-<li>Next, enter the appropriate values into the equation for the <span class="math inline">\(z\)</span>-score. <span class="math display">\[
+<li>Next, enter the appropriate values into the equation for the <span
+class="math inline">\(z\)</span>-score. <span class="math display">\[
 \begin{array}{rcll}
-z &amp;=&amp; \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) } } \\
-&amp;=&amp; \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( 0 \right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) } } &amp; \text{We assumed } p_1=p_2. \\
-&amp;=&amp; \frac{ \left( \hat p_1 - \hat p_2 \right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) } } \\
-&amp;=&amp; \frac{ \left( \frac{1476}{4145} - \frac{553}{1309} \right) }{ \sqrt{\frac{2029}{5454} \left( 1-\frac{2029}{5454} \right) \left( \frac{1}{4145} + \frac{1}{1309} \right) } } \\
+z &amp;=&amp; \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 -
+p_2 \right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1}
++ \frac{1}{n_2} \right) } } \\
+&amp;=&amp; \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( 0 \right)
+}{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} +
+\frac{1}{n_2} \right) } } &amp; \text{We assumed } p_1=p_2. \\
+&amp;=&amp; \frac{ \left( \hat p_1 - \hat p_2 \right) }{ \sqrt{\hat p
+\left( 1-\hat p \right) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) } }
+\\
+&amp;=&amp; \frac{ \left( \frac{1476}{4145} - \frac{553}{1309} \right)
+}{ \sqrt{\frac{2029}{5454} \left( 1-\frac{2029}{5454} \right) \left(
+\frac{1}{4145} + \frac{1}{1309} \right) } } \\
 &amp;=&amp; -4.331
 \end{array}
 \]</span></li>
@@ -800,29 +1012,54 @@ z &amp;=&amp; \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \righ
 <ul>
 <li><strong>Remember…</strong></li>
 </ul>
-<p>The alternative hypothesis determines which area in the tails of the <span class="math inline">\(z\)</span>-distribution will be shaded as you calculated the <span class="math inline">\(P\)</span>-value.</p>
-<p>If the alternative hypothesis is <span class="math inline">\(\ldots\)</span></p>
+<p>The alternative hypothesis determines which area in the tails of the
+<span class="math inline">\(z\)</span>-distribution will be shaded as
+you calculated the <span class="math inline">\(P\)</span>-value.</p>
+<p>If the alternative hypothesis is <span
+class="math inline">\(\ldots\)</span></p>
 <ul>
-<li><p><span class="math inline">\(p_1 \ne p_2\)</span>, shade both tails.</p></li>
-<li><p><span class="math inline">\(p_1 &lt; p_2\)</span>, shade the left tail.</p></li>
-<li><p><span class="math inline">\(p_1 &gt; p_2\)</span>, shade the right tail. <br></p></li>
+<li><p><span class="math inline">\(p_1 \ne p_2\)</span>, shade both
+tails.</p></li>
+<li><p><span class="math inline">\(p_1 &lt; p_2\)</span>, shade the left
+tail.</p></li>
+<li><p><span class="math inline">\(p_1 &gt; p_2\)</span>, shade the
+right tail. <br></p></li>
 </ul>
 </div>
 <p><br></p>
-This <span class="math inline">\(z\)</span>-score can be substituted into the Normal Probability applet to find the <span class="math inline">\(P\)</span>-value. Since the alternative hypothesis is that <span class="math inline">\(p_1 &lt; p_2\)</span>, we consider only the area to the left of <span class="math inline">\(z=-4.331\)</span>. The applet gives this area (our <span class="math inline">\(P\)</span>-value) as <span class="math inline">\(7.42 \times 10^{-6} = 0.00000742\)</span>.
+This <span class="math inline">\(z\)</span>-score can be substituted
+into the Normal Probability applet to find the <span
+class="math inline">\(P\)</span>-value. Since the alternative hypothesis
+is that <span class="math inline">\(p_1 &lt; p_2\)</span>, we consider
+only the area to the left of <span
+class="math inline">\(z=-4.331\)</span>. The applet gives this area (our
+<span class="math inline">\(P\)</span>-value) as <span
+class="math inline">\(7.42 \times 10^{-6} = 0.00000742\)</span>.
 <center>
 <img src="Images/ShadeLeftZ-4-331.png">
 </center>
-<p>Note that <span class="math inline">\(P\)</span>-value<span class="math inline">\(= 0.00000742 &lt; 0.05 = \alpha\)</span>, so we reject the null hypothesis.</p>
+<p>Note that <span class="math inline">\(P\)</span>-value<span
+class="math inline">\(= 0.00000742 &lt; 0.05 = \alpha\)</span>, so we
+reject the null hypothesis.</p>
 <p><img src="Images/Step5.png"></p>
-<p>There is sufficient evidence to suggest that the true proportion of patients who die from an aortic aneurysm is greater on the weekends than on the weekdays. It appears that there are substantial differences in the quality of care available to patients on the weekends compared to patients on weekdays.</p>
+<p>There is sufficient evidence to suggest that the true proportion of
+patients who die from an aortic aneurysm is greater on the weekends than
+on the weekdays. It appears that there are substantial differences in
+the quality of care available to patients on the weekends compared to
+patients on weekdays.</p>
 <p><img src="Images/StepsAll.png"></p>
 </div>
 </div>
-<div id="mortality-rates-and-day-of-admission-heart-attacks" class="section level3">
+<div id="mortality-rates-and-day-of-admission-heart-attacks"
+class="section level3">
 <h3>Mortality Rates and Day of Admission: Heart Attacks</h3>
 <p><img src="Images/Acute_myocardial_infarction_with_contraction_band_necrosis.png"></p>
-<p>Heart attacks are a leading cause of death in many areas of the world. The study by Doctors Bell and Redelmeier included an analysis of the risk of dying of a heart attack, after admission to a hospital. The researchers reported the following death rates, depending on whether the heart attack occurred on a weekday or a weekend <!--<cite>Bell01</cite>-->.</p>
+<p>Heart attacks are a leading cause of death in many areas of the
+world. The study by Doctors Bell and Redelmeier included an analysis of
+the risk of dying of a heart attack, after admission to a hospital. The
+researchers reported the following death rates, depending on whether the
+heart attack occurred on a weekday or a weekend
+<!--<cite>Bell01</cite>-->.</p>
 <table>
 <caption><strong>Heart Attack Outcomes</strong></caption>
 <thead>
@@ -864,7 +1101,9 @@ This <span class="math inline">\(z\)</span>-score can be substituted into the No
 <!-- | 117,709 || 42,511 -->
 <!-- |- -->
 <!-- |} -->
-<p>In this section, you will conduct a hypothesis test to determine if the proportion of patients who die of a heart attack is greater on weekends than on weekdays. Use the 0.05 level of significance.</p>
+<p>In this section, you will conduct a hypothesis test to determine if
+the proportion of patients who die of a heart attack is greater on
+weekends than on weekdays. Use the 0.05 level of significance.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
@@ -873,10 +1112,14 @@ Answer the following questions:
 <ol start="5" style="list-style-type: decimal">
 <li>Summarize the relevant background information</li>
 </ol>
-<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q5')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q5" style="display:none;">
 <ul>
-<li>This was a study conducted by Doctors Bell and Redelmeier in which they analyzed the death rates depending on which day (weekday or weekend) the heart attack occurred and when the patients were admitted into the hospital.</li>
+<li>This was a study conducted by Doctors Bell and Redelmeier in which
+they analyzed the death rates depending on which day (weekday or
+weekend) the heart attack occurred and when the patients were admitted
+into the hospital.</li>
 </ul>
 </div>
 <p><br></p>
@@ -884,44 +1127,61 @@ Answer the following questions:
 <ol start="6" style="list-style-type: decimal">
 <li>Describe the data collection process.</li>
 </ol>
-<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q6')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q6" style="display:none;">
 <ul>
-<li>The researchers collected data on patients admitted to hospitals for heart attacks and whether or not they died. Separate data was kept for weekday hospital admissions and weekend hospital admissions.</li>
+<li>The researchers collected data on patients admitted to hospitals for
+heart attacks and whether or not they died. Separate data was kept for
+weekday hospital admissions and weekend hospital admissions.</li>
 </ul>
 </div>
 <p><br></p>
 <p><img src="Images/Step3.png"></p>
 <ol start="7" style="list-style-type: decimal">
-<li>The value of <span class="math inline">\(\hat p_1\)</span>, the sample proportion of patients who died of a heart attack on a weekday, is <span class="math inline">\(\hat p_1 = \frac{17113}{117709} = 0.14538\)</span>. Find the value of <span class="math inline">\(\hat p_2\)</span>.</li>
+<li>The value of <span class="math inline">\(\hat p_1\)</span>, the
+sample proportion of patients who died of a heart attack on a weekday,
+is <span class="math inline">\(\hat p_1 = \frac{17113}{117709} =
+0.14538\)</span>. Find the value of <span class="math inline">\(\hat
+p_2\)</span>.</li>
 </ol>
-<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q7')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q7" style="display:none;">
 <center>
-<span class="math inline">\(\displaystyle{\hat p_2 = \frac{6289}{42511}=0.14794}\)</span>
+<span class="math inline">\(\displaystyle{\hat p_2 =
+\frac{6289}{42511}=0.14794}\)</span>
 </center>
 </div>
 <p><br></p>
 <ol start="8" style="list-style-type: decimal">
 <li>Create a chart illustrating the data.</li>
 </ol>
-<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q8')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q8" style="display:none;">
 <p><img src="Images/Lesson_18_heart_attack_weekend_graph.PNG"></p>
 </div>
 <p><br></p>
 <ol start="9" style="list-style-type: decimal">
-<li>Based on your answers to questions 7 and 8, does it appear that the risk of dying is greater if a heart attack occurs on a weekend than on a weekday?</li>
+<li>Based on your answers to questions 7 and 8, does it appear that the
+risk of dying is greater if a heart attack occurs on a weekend than on a
+weekday?</li>
 </ol>
-<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q9')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q9" style="display:none;">
 <ul>
-<li>The sample proportions, <span class="math inline">\(\hat p_1\)</span> and <span class="math inline">\(\hat p_2\)</span> are very close. Visually, there does not appear to be a difference.</li>
+<li>The sample proportions, <span class="math inline">\(\hat
+p_1\)</span> and <span class="math inline">\(\hat p_2\)</span> are very
+close. Visually, there does not appear to be a difference.</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="10" style="list-style-type: decimal">
-<li>If the proportion of patients who die of a heart attack is greater on weekends than on weekdays, which of the following would best describe the relationship?</li>
+<li>If the proportion of patients who die of a heart attack is greater
+on weekends than on weekdays, which of the following would best describe
+the relationship?</li>
 </ol>
 <ul>
 <li>A. <span class="math inline">\(p_1 = p_2\)</span></li>
@@ -929,16 +1189,21 @@ Answer the following questions:
 <li>C. <span class="math inline">\(p_1 &lt; p_2\)</span></li>
 <li>D. <span class="math inline">\(p_1 \ne p_2\)</span></li>
 </ul>
-<a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q10')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q10" style="display:none;">
 <ul>
-<li><span class="math inline">\(p_1 &lt; p_2\)</span> is correct. Note that group 1 is the weekday group and group 2 is the weekend group.</li>
+<li><span class="math inline">\(p_1 &lt; p_2\)</span> is correct. Note
+that group 1 is the weekday group and group 2 is the weekend group.</li>
 </ul>
 </div>
 <p><br></p>
 <p><img src="Images/Step4.png"></p>
 <ol start="11" style="list-style-type: decimal">
-<li>Replace the circles (<span class="math inline">\(\bigcirc\)</span>) in the following null and alternative hypotheses with two of the following symbols: <span class="math inline">\(=&gt;&lt;\ne\)</span>.</li>
+<li>Replace the circles (<span class="math inline">\(\bigcirc\)</span>)
+in the following null and alternative hypotheses with two of the
+following symbols: <span
+class="math inline">\(=&gt;&lt;\ne\)</span>.</li>
 </ol>
 <p><span class="math display">\[
 \begin{array}{rl}
@@ -946,7 +1211,8 @@ H_0: &amp;  p_1 \bigcirc p_2 \\
 H_a: &amp;  p_1 \bigcirc p_2
 \end{array}
 \]</span></p>
-<a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q11')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q11" style="display:none;">
 <center>
 <span class="math display">\[
@@ -961,44 +1227,55 @@ H_a: &amp;  p_1 &lt; p_2
 <ol start="12" style="list-style-type: decimal">
 <li>What are the requirements for this test?</li>
 </ol>
-<a href="javascript:showhide('Q12')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q12')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q12" style="display:none;">
 <center>
 <span class="math display">\[
 \begin{array}{rrr}
 n_1 \cdot \hat p_1 \ge 10 &amp;&amp; n_2 \cdot \hat p_2 \ge 10 \\
-n_1 \cdot \left(1-\hat p_1\right) \ge 10 &amp;&amp; n_2 \cdot \left(1-\hat p_2\right) \ge 10
+n_1 \cdot \left(1-\hat p_1\right) \ge 10 &amp;&amp; n_2 \cdot
+\left(1-\hat p_2\right) \ge 10
 \end{array}
 \]</span>
 </center>
 </div>
 <p><br></p>
 <ol start="13" style="list-style-type: decimal">
-<li>Are the requirements for this hypothesis test satisfied? Justify your answer.</li>
+<li>Are the requirements for this hypothesis test satisfied? Justify
+your answer.</li>
 </ol>
-<a href="javascript:showhide('Q13')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q13')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q13" style="display:none;">
 <center>
 <span class="math display">\[
 \begin{array}{rrr}
-n_1 \cdot \hat p_1 = 17113 \ge 10 &amp;&amp; n_2 \cdot \hat p_2 = 6289 \ge 10 \\
-n_1 \cdot \left(1-\hat p_1\right) = 100596 \ge 10 &amp;&amp; n_2 \cdot \left(1-\hat p_2\right) = 36222 \ge 10
+n_1 \cdot \hat p_1 = 17113 \ge 10 &amp;&amp; n_2 \cdot \hat p_2 = 6289
+\ge 10 \\
+n_1 \cdot \left(1-\hat p_1\right) = 100596 \ge 10 &amp;&amp; n_2 \cdot
+\left(1-\hat p_2\right) = 36222 \ge 10
 \end{array}
 \]</span>
 </center>
 <ul>
-<li>Yes, all of the calculated quantities from the previous question are at least 10.</li>
+<li>Yes, all of the calculated quantities from the previous question are
+at least 10.</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="14" style="list-style-type: decimal">
-<li>Write the equation for the test statistic, <span class="math inline">\(z\)</span>.</li>
+<li>Write the equation for the test statistic, <span
+class="math inline">\(z\)</span>.</li>
 </ol>
-<a href="javascript:showhide('Q14')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q14')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q14" style="display:none;">
 <center>
 <span class="math display">\[
-z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) }}
+z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right)
+}{ \sqrt{\hat p \left( 1-\hat p \right) \left( \frac{1}{n_1} +
+\frac{1}{n_2} \right) }}
 \]</span>
 </center>
 </div>
@@ -1006,7 +1283,8 @@ z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqr
 <ol start="15" style="list-style-type: decimal">
 <li>Compute the value of the test statistic.</li>
 </ol>
-<a href="javascript:showhide('Q15')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q15')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q15" style="display:none;">
 <center>
 <span class="math inline">\(z=-1.278\)</span>
@@ -1014,9 +1292,11 @@ z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqr
 </div>
 <p><br></p>
 <ol start="16" style="list-style-type: decimal">
-<li>Present a sketch of the sampling distribution, showing the test statistic and the <span class="math inline">\(P\)</span>-value.</li>
+<li>Present a sketch of the sampling distribution, showing the test
+statistic and the <span class="math inline">\(P\)</span>-value.</li>
 </ol>
-<a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q16')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q16" style="display:none;">
 <p><img src="Images/SamplingDistributionHeartAttack-Applet.png"></p>
 </div>
@@ -1024,7 +1304,8 @@ z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqr
 <ol start="17" style="list-style-type: decimal">
 <li>Find the <span class="math inline">\(P\)</span>-value.</li>
 </ol>
-<a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q17')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q17" style="display:none;">
 <center>
 <span class="math inline">\(P\textrm{-value} = 0.1006\)</span>
@@ -1032,22 +1313,29 @@ z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqr
 </div>
 <p><br></p>
 <ol start="18" style="list-style-type: decimal">
-<li>Compare the <span class="math inline">\(P\)</span>-value to the level of significance. Which is smaller? Will you reject, or fail to reject, the null hypothesis?</li>
+<li>Compare the <span class="math inline">\(P\)</span>-value to the
+level of significance. Which is smaller? Will you reject, or fail to
+reject, the null hypothesis?</li>
 </ol>
-<a href="javascript:showhide('Q18')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q18')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q18" style="display:none;">
 <center>
-<span class="math inline">\(P\textrm{-value} = 0.1006 &gt; 0.05 = \alpha\)</span>
+<span class="math inline">\(P\textrm{-value} = 0.1006 &gt; 0.05 =
+\alpha\)</span>
 </center>
 </div>
 <p><br></p>
 <ol start="19" style="list-style-type: decimal">
 <li>What is your decision?</li>
 </ol>
-<a href="javascript:showhide('Q19')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q19')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q19" style="display:none;">
 <ul>
-<li>Since the <span class="math inline">\(P\)</span>-value is greater than <span class="math inline">\(\alpha\)</span>, we fail to reject the null hypothesis.</li>
+<li>Since the <span class="math inline">\(P\)</span>-value is greater
+than <span class="math inline">\(\alpha\)</span>, we fail to reject the
+null hypothesis.</li>
 </ul>
 </div>
 <p><br></p>
@@ -1055,23 +1343,32 @@ z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqr
 <li>Fill in the blanks in the following sentence:</li>
 </ol>
 <ul>
-<li>There is <span class="math inline">\(\text{____________}\)</span> evidence to suggest that the true proportion of patients who die of a heart attack is <span class="math inline">\(\text{__________}\)</span> on weekends than on weekdays.*</li>
+<li>There is <span class="math inline">\(\text{____________}\)</span>
+evidence to suggest that the true proportion of patients who die of a
+heart attack is <span class="math inline">\(\text{__________}\)</span>
+on weekends than on weekdays.*</li>
 </ul>
-<a href="javascript:showhide('Q20')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q20')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q20" style="display:none;">
 <ul>
-<li>There is <strong>insufficient</strong> evidence to suggest that the true proportion of patients who die of a heart attack is <strong>greater</strong> on weekends than on weekdays.</li>
+<li>There is <strong>insufficient</strong> evidence to suggest that the
+true proportion of patients who die of a heart attack is
+<strong>greater</strong> on weekends than on weekdays.</li>
 </ul>
 </div>
 <p><br></p>
 <p><img src="Images/Step5.png"></p>
 <ol start="21" style="list-style-type: decimal">
-<li>If you were to have a heart attack, would you be more concerned if it occurred on a weekend than on a weekday?</li>
+<li>If you were to have a heart attack, would you be more concerned if
+it occurred on a weekend than on a weekday?</li>
 </ol>
-<a href="javascript:showhide('Q21')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q21')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q21" style="display:none;">
 <ul>
-<li>No, the evidence suggests that the probability of dying of a heart attack is not greater on the weekends.</li>
+<li>No, the evidence suggests that the probability of dying of a heart
+attack is not greater on the weekends.</li>
 </ul>
 </div>
 <p> </p>
@@ -1081,21 +1378,54 @@ z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqr
 <p><br></p>
 </div>
 </div>
-<div id="confidence-intervals-managing-fox-populations" class="section level2">
+<div id="confidence-intervals-managing-fox-populations"
+class="section level2">
 <h2>Confidence Intervals: Managing Fox Populations</h2>
-<p>During the mid 1800’s, European foxes were introduced to the Australian mainland. These predators have been responsible for the reduction or extinction of several species of native wildlife. <!--(Coates08)--></p>
+<p>During the mid 1800’s, European foxes were introduced to the
+Australian mainland. These predators have been responsible for the
+reduction or extinction of several species of native wildlife.
+<!--(Coates08)--></p>
 <center>
 <img src="Images/RoyalBotanicGardensCranbourne-Flikr-flipsockgrrl.png" width=80%>
 </center>
 <p><br/></p>
-<p>The Royal Botanic Gardens Cranbourne is a 914 acre (370 ha) conservation reserve outside Melbourne, Australia. Predation by foxes has been an ongoing problem in the gardens. To reduce the risk to native species, a systematic program of killing foxes was implemented.</p>
-<p>One way to monitor the presence of foxes is to look for fox tracks in specific sandy areas, called sand-pads. Before beginning a systematic effort to reduce the fox population, ecologists observed fox tracks in the sand-pads 576 out of the 950 times the sand-pads were observed. After eliminating some of the foxes, the ecologists observed fox tracks in the sand-pads 268 times out of the 1359 times they checked the sand-pads <!--<cite>Coates08</cite>-->. The ecologists want to know if there is a difference in the proportion of times fox tracks are observed before versus after the intervention to reduce the fox population.</p>
-<p>One way to compare two proportions is to make a confidence interval for the difference in the proportions.</p>
-<p>The equation for the confidence interval for the difference of two proportions may look a little daunting at first, but with some practice, it is not too difficult.</p>
-<p>Before we compute the confidence interval, we first organize our data and calculate some statistics that will be useful later. We divide the data into two groups: before foxes were targeted (Group 1) and after (Group 2). For each group, let <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> represent the number of times fox prints were observed in the sand-pads before and after the ecologists began systematically eliminating the foxes, respectively. Similarly, Let <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span> be the number of times the ecologists checked the sand-pads in the before and after periods, respectively.</p>
+<p>The Royal Botanic Gardens Cranbourne is a 914 acre (370 ha)
+conservation reserve outside Melbourne, Australia. Predation by foxes
+has been an ongoing problem in the gardens. To reduce the risk to native
+species, a systematic program of killing foxes was implemented.</p>
+<p>One way to monitor the presence of foxes is to look for fox tracks in
+specific sandy areas, called sand-pads. Before beginning a systematic
+effort to reduce the fox population, ecologists observed fox tracks in
+the sand-pads 576 out of the 950 times the sand-pads were observed.
+After eliminating some of the foxes, the ecologists observed fox tracks
+in the sand-pads 268 times out of the 1359 times they checked the
+sand-pads <!--<cite>Coates08</cite>-->. The ecologists want to know if
+there is a difference in the proportion of times fox tracks are observed
+before versus after the intervention to reduce the fox population.</p>
+<p>One way to compare two proportions is to make a confidence interval
+for the difference in the proportions.</p>
+<p>The equation for the confidence interval for the difference of two
+proportions may look a little daunting at first, but with some practice,
+it is not too difficult.</p>
+<p>Before we compute the confidence interval, we first organize our data
+and calculate some statistics that will be useful later. We divide the
+data into two groups: before foxes were targeted (Group 1) and after
+(Group 2). For each group, let <span class="math inline">\(x_1\)</span>
+and <span class="math inline">\(x_2\)</span> represent the number of
+times fox prints were observed in the sand-pads before and after the
+ecologists began systematically eliminating the foxes, respectively.
+Similarly, Let <span class="math inline">\(n_1\)</span> and <span
+class="math inline">\(n_2\)</span> be the number of times the ecologists
+checked the sand-pads in the before and after periods, respectively.</p>
 <center>
 <p><strong>Fox Tracks Data</strong></p>
 <table>
+<colgroup>
+<col width="12%" />
+<col width="32%" />
+<col width="31%" />
+<col width="23%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th> </th>
@@ -1109,25 +1439,31 @@ z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqr
 <td><strong>Fox Tracks Observed</strong></td>
 <td><span class="math inline">\(x_1 = 576\)</span></td>
 <td><span class="math inline">\(x_2 = 268\)</span></td>
-<td><span class="math inline">\(x_1 + x_2 = 576 + 268 = 844\)</span></td>
+<td><span class="math inline">\(x_1 + x_2 = 576 + 268 =
+844\)</span></td>
 </tr>
 <tr class="even">
 <td><strong>Total Observations</strong></td>
 <td><span class="math inline">\(n_1 = 950\)</span></td>
 <td><span class="math inline">\(n_2 = 1359\)</span></td>
-<td><span class="math inline">\(n_1 + n_2 = 950 + 1359 = 2309\)</span></td>
+<td><span class="math inline">\(n_1 + n_2 = 950 + 1359 =
+2309\)</span></td>
 </tr>
 </tbody>
 </table>
 </center>
-<p>Similar to what we did in the lesson for <a href="Lesson17.html">Lesson 17: Inference for One Proportion</a>, we compute <span class="math inline">\(\hat p\)</span> for each group.</p>
+<p>Similar to what we did in the lesson for <a
+href="Lesson17.html">Lesson 17: Inference for One Proportion</a>, we
+compute <span class="math inline">\(\hat p\)</span> for each group.</p>
 <p>For group 1: <span class="math display">\[
 \hat p_1 = \frac{x_1}{n_1} = \frac{576}{950}
 \]</span></p>
 <p>For group 2: <span class="math display">\[
 \hat p_2 = \frac{x_2}{n_2} = \frac{268}{1359}
 \]</span></p>
-<p>An equation of the confidence interval for the difference between two proportions is computed by combining all the information above: <span class="math display">\[
+<p>An equation of the confidence interval for the difference between two
+proportions is computed by combining all the information above: <span
+class="math display">\[
 \left(
 \left( \hat p_1 -\hat p_2 \right)
 - z^*
@@ -1148,9 +1484,14 @@ z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqr
 \right)
 \]</span></p>
 <div class="note">
-<p>If you need to review how to find the value of <span class="math inline">\(z^*\)</span> for other confidence levels, see page <a href="Lesson10.html#a-little-more-precision">Lesson 10: Inference for One Mean: Sigma Known (Confidence Interval)</a>.</p>
+<p>If you need to review how to find the value of <span
+class="math inline">\(z^*\)</span> for other confidence levels, see page
+<a href="Lesson10.html#a-little-more-precision">Lesson 10: Inference for
+One Mean: Sigma Known (Confidence Interval)</a>.</p>
 </div>
-<p>The lower bound for a 95% confidence interval for the difference of the proportions of times fox prints are observed in the sand-pads is:</p>
+<p>The lower bound for a 95% confidence interval for the difference of
+the proportions of times fox prints are observed in the sand-pads
+is:</p>
 <p><span class="math display">\[
 \displaystyle{
 \left( \hat p_1 -\hat p_2 \right)
@@ -1211,32 +1552,55 @@ z = \frac{ \left( \hat p_1 - \hat p_2 \right) - \left( p_1 - p_2 \right) }{ \sqr
 }
 \]</span></p>
 <div class="note">
-<p>Make sure you can compute these confidence intervals before reading on.</p>
+<p>Make sure you can compute these confidence intervals before reading
+on.</p>
 </div>
-<p>So, the 95% confidence interval for the difference in the proportions is:</p>
+<p>So, the 95% confidence interval for the difference in the proportions
+is:</p>
 <p><span class="math display">\[
 (0.372, 0.447)
 \]</span></p>
 <div class="tip">
-<p>If we switch the way we label group 1 and group 2, then our confidence interval would have the opposite signs: <span class="math inline">\((-0.447, -0.372)\)</span>.</p>
+<p>If we switch the way we label group 1 and group 2, then our
+confidence interval would have the opposite signs: <span
+class="math inline">\((-0.447, -0.372)\)</span>.</p>
 </div>
-<p>To interpret this confidence interval, we say, “We are 95% confident that the true <em>difference</em> in the proportions of times fox prints will appear in the sand-pads is between 0.372 and 0.447.”</p>
-<p>Notice that zero is not in this confidence interval, so zero is not a plausible value for <span class="math inline">\(p_1 - p_2\)</span>. Based on this result, it is reasonable to conclude that the proportion of times foxes are observed in the sand-pads is not the same before and after the effort to reduce their population. It seems that the work to reduce the number of foxes is having an effect on their presence in the reserve.</p>
-<p>As you may have guessed, the <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> can be used to calculate confidence intervals for the difference of two proportions.</p>
-<div id="checking-requirements-for-a-confidence-interval" class="section level3">
+<p>To interpret this confidence interval, we say, “We are 95% confident
+that the true <em>difference</em> in the proportions of times fox prints
+will appear in the sand-pads is between 0.372 and 0.447.”</p>
+<p>Notice that zero is not in this confidence interval, so zero is not a
+plausible value for <span class="math inline">\(p_1 - p_2\)</span>.
+Based on this result, it is reasonable to conclude that the proportion
+of times foxes are observed in the sand-pads is not the same before and
+after the effort to reduce their population. It seems that the work to
+reduce the number of foxes is having an effect on their presence in the
+reserve.</p>
+<p>As you may have guessed, the <a
+href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics
+Toolbox</a> can be used to calculate confidence intervals for the
+difference of two proportions.</p>
+<div id="checking-requirements-for-a-confidence-interval"
+class="section level3">
 <h3>Checking Requirements for a Confidence Interval</h3>
-<p>The requirements for computing a confidence interval for two proportions are the same as the requirements for doing a hypothesis test.</p>
+<p>The requirements for computing a confidence interval for two
+proportions are the same as the requirements for doing a hypothesis
+test.</p>
 <p><span class="math display">\[
 \begin{array}{rrr}
-n_1 \cdot \hat p_1 \ge 10                 &amp;&amp; n_2 \cdot \hat p_2 \ge 10 \\
-n_1 \cdot \left(1-\hat p_1\right) \ge 10  &amp;&amp; n_2 \cdot \left(1-\hat p_2\right) \ge 10
+n_1 \cdot \hat p_1 \ge 10                 &amp;&amp; n_2 \cdot \hat p_2
+\ge 10 \\
+n_1 \cdot \left(1-\hat p_1\right) \ge 10  &amp;&amp; n_2 \cdot
+\left(1-\hat p_2\right) \ge 10
 \end{array}
 \]</span></p>
 <p>In this example, all of the requirements are satisfied:</p>
 <p><span class="math display">\[
 \begin{array}{rr}
-n_1 \cdot \hat p_1  = 950 \cdot 0.606 = 576 \ge 10              &amp; n_2 \cdot \hat p_2  = 1359 \cdot 0.197 = 268 \ge 10  \\
-n_1 \cdot \left(1-\hat p_1\right) = 950 \cdot (1-0.606) = 374 \ge 10    &amp; n_2 \cdot \left(1-\hat p_2\right) = 1359 \cdot (1-0.197) = 1091 \ge 10
+n_1 \cdot \hat p_1  = 950 \cdot 0.606 = 576 \ge 10              &amp;
+n_2 \cdot \hat p_2  = 1359 \cdot 0.197 = 268 \ge 10  \\
+n_1 \cdot \left(1-\hat p_1\right) = 950 \cdot (1-0.606) = 374 \ge
+10    &amp; n_2 \cdot \left(1-\hat p_2\right) = 1359 \cdot (1-0.197) =
+1091 \ge 10
 \end{array}
 \]</span></p>
 <div class="QuestionsHeading">
@@ -1244,9 +1608,11 @@ Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="22" style="list-style-type: decimal">
-<li>What is the value of <span class="math inline">\(z^*\)</span> for a 93% confidence interval?</li>
+<li>What is the value of <span class="math inline">\(z^*\)</span> for a
+93% confidence interval?</li>
 </ol>
-<a href="javascript:showhide('Q22')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q22')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q22" style="display:none;">
 <center>
 <span class="math inline">\(z^* = 1.8119\)</span>
@@ -1254,9 +1620,12 @@ Answer the following questions:
 </div>
 <p><br></p>
 <ol start="23" style="list-style-type: decimal">
-<li>Find the 93% confidence interval for the difference in the proprotions of the times fox prints are observed in the sand-pads before and after the effort to reduce the fox population.</li>
+<li>Find the 93% confidence interval for the difference in the
+proprotions of the times fox prints are observed in the sand-pads before
+and after the effort to reduce the fox population.</li>
 </ol>
-<a href="javascript:showhide('Q23')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q23')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q23" style="display:none;">
 <center>
 <span class="math inline">\((0.374, 0.444)\)</span>
@@ -1273,23 +1642,39 @@ Remember…
 </div>
 <div class="Summary">
 <ul>
-<li><p>When conducting hypothesis tests using two proportions, the null hypothesis is always <span class="math inline">\(p_1=p_2\)</span>, indicating that there is no difference between the two proportions. The alternative hypothesis can be left-tailed (<span class="math inline">\(&lt;\)</span>), right-tailed(<span class="math inline">\(&gt;\)</span>), or two-tailed(<span class="math inline">\(\ne\)</span>).</p></li>
-<li><p>For a hypothesis test and confidence interval of two proportions, we use the following symbols: <span class="math display">\[
+<li><p>When conducting hypothesis tests using two proportions, the null
+hypothesis is always <span class="math inline">\(p_1=p_2\)</span>,
+indicating that there is no difference between the two proportions. The
+alternative hypothesis can be left-tailed (<span
+class="math inline">\(&lt;\)</span>), right-tailed(<span
+class="math inline">\(&gt;\)</span>), or two-tailed(<span
+class="math inline">\(\ne\)</span>).</p></li>
+<li><p>For a hypothesis test and confidence interval of two proportions,
+we use the following symbols: <span class="math display">\[
 \begin{array}{lcl}
-\text{Sample proportion for group 1:} &amp; \hat p_1 = \displaystyle{\frac{x_1}{n_1}} \\
-\text{Sample proportion for group 2:} &amp; \hat p_2 = \displaystyle{\frac{x_2}{n_2}}
+\text{Sample proportion for group 1:} &amp; \hat p_1 =
+\displaystyle{\frac{x_1}{n_1}} \\
+\text{Sample proportion for group 2:} &amp; \hat p_2 =
+\displaystyle{\frac{x_2}{n_2}}
 \end{array}
 \]</span></p></li>
-<li><p>For a hypothesis test only, we use the following symbols:</p></li>
+<li><p>For a hypothesis test only, we use the following
+symbols:</p></li>
 </ul>
 <p><span class="math display">\[
 \begin{array}{lcl}
-\text{Overall sample proportion:} &amp; \hat p = \displaystyle{\frac{x_1+x_2}{n_1+n_2}}
+\text{Overall sample proportion:} &amp; \hat p =
+\displaystyle{\frac{x_1+x_2}{n_1+n_2}}
 \end{array}
 \]</span></p>
 <ul>
-<li><p>Whenever zero is contained in the confidence interval of the difference of the true proportions we conclude that there is no significant difference between the two proportions.</p></li>
-<li><p>You will use the Excel spreadsheet <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> to perform hypothesis testing and calculate confidence intervals for problems involving two proportions. <br></p></li>
+<li><p>Whenever zero is contained in the confidence interval of the
+difference of the true proportions we conclude that there is no
+significant difference between the two proportions.</p></li>
+<li><p>You will use the Excel spreadsheet <a
+href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics
+Toolbox</a> to perform hypothesis testing and calculate confidence
+intervals for problems involving two proportions. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -1312,9 +1697,11 @@ Remember…
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center"><a href="Lesson17.html">Lesson 17: <br> Inference for One Proportion</a></td>
+<td align="center"><a href="Lesson17.html">Lesson 17: <br> Inference for
+One Proportion</a></td>
 <td align="center">Lesson 18: <br> Inference for Two Proportion</td>
-<td align="center"><a href="Lesson19.html">Lesson 19: <br> Inference for Independence of Categorical Data</a></td>
+<td align="center"><a href="Lesson19.html">Lesson 19: <br> Inference for
+Independence of Categorical Data</a></td>
 </tr>
 </tbody>
 </table>

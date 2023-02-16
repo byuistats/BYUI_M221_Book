@@ -13,8 +13,8 @@
 
 <title>Lesson 6: The Sampling Distribution of the Sample Mean &amp; The Central Limit Theorem</title>
 
-<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -57,6 +57,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -81,6 +82,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -233,7 +237,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -246,17 +250,25 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 1
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
-    </li>
-    <li>
-      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lesson 1: Course Intro &amp; Probability</a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="Lesson01_Campus.html">Campus Student Version</a>
+        </li>
+        <li>
+          <a href="Lesson01.html">Online Student Version</a>
+        </li>
+        <li>
+          <a href="Lesson01_WWB.html">World Wide Block Student Version</a>
+        </li>
+      </ul>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -282,7 +294,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 2
      
     <span class="caret"></span>
@@ -312,7 +324,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 3
      
     <span class="caret"></span>
@@ -336,7 +348,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 4
      
     <span class="caret"></span>
@@ -373,29 +385,46 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Lesson 6: The Sampling Distribution of the Sample Mean &amp; The Central Limit Theorem</h1>
+<h1 class="title toc-ignore">Lesson 6: The Sampling Distribution of the
+Sample Mean &amp; The Central Limit Theorem</h1>
 
 </div>
 
 <div id="TOC">
 <ul>
-<li><a href="#lesson-outcomes">Lesson Outcomes</a></li>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#case-study-ddts-negative-impact-on-pregnant-women">Case Study: DDT’s Negative Impact on Pregnant Women</a></li>
-<li><a href="#introduction-to-sampling-distributions">Introduction to Sampling Distributions</a>
+<li><a href="#lesson-outcomes" id="toc-lesson-outcomes">Lesson
+Outcomes</a></li>
+<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+<li><a href="#case-study-ddts-negative-impact-on-pregnant-women"
+id="toc-case-study-ddts-negative-impact-on-pregnant-women">Case Study:
+DDT’s Negative Impact on Pregnant Women</a></li>
+<li><a href="#introduction-to-sampling-distributions"
+id="toc-introduction-to-sampling-distributions">Introduction to Sampling
+Distributions</a>
 <ul>
-<li><a href="#a-tutorial-on-sampling-distributions">A Tutorial on Sampling Distributions</a></li>
-<li><a href="#what-is-the-sampling-distribution-of-sample-mean">What is the Sampling Distribution of Sample Mean?</a></li>
+<li><a href="#a-tutorial-on-sampling-distributions"
+id="toc-a-tutorial-on-sampling-distributions">A Tutorial on Sampling
+Distributions</a></li>
+<li><a href="#what-is-the-sampling-distribution-of-sample-mean"
+id="toc-what-is-the-sampling-distribution-of-sample-mean">What is the
+Sampling Distribution of Sample Mean?</a></li>
 </ul></li>
-<li><a href="#the-central-limit-theorem">The Central Limit Theorem</a>
+<li><a href="#the-central-limit-theorem"
+id="toc-the-central-limit-theorem">The Central Limit Theorem</a>
 <ul>
-<li><a href="#when-is-bar-x-normal">When is <span class="math inline">\(\bar x\)</span> Normal?</a></li>
+<li><a href="#when-is-bar-x-normal" id="toc-when-is-bar-x-normal">When
+is <span class="math inline">\(\bar x\)</span> Normal?</a></li>
 </ul></li>
-<li><a href="#mean-and-standard-deviation-of-the-distribution-of-sample-means">Mean and Standard Deviation of the Distribution of Sample Means</a></li>
-<li><a href="#the-law-of-large-numbers">The Law of Large Numbers</a></li>
-<li><a href="#review-of-key-concepts">Review of Key Concepts</a></li>
-<li><a href="#summary">Summary</a></li>
-<li><a href="#navigation">Navigation</a></li>
+<li><a
+href="#mean-and-standard-deviation-of-the-distribution-of-sample-means"
+id="toc-mean-and-standard-deviation-of-the-distribution-of-sample-means">Mean
+and Standard Deviation of the Distribution of Sample Means</a></li>
+<li><a href="#the-law-of-large-numbers"
+id="toc-the-law-of-large-numbers">The Law of Large Numbers</a></li>
+<li><a href="#review-of-key-concepts"
+id="toc-review-of-key-concepts">Review of Key Concepts</a></li>
+<li><a href="#summary" id="toc-summary">Summary</a></li>
+<li><a href="#navigation" id="toc-navigation">Navigation</a></li>
 </ul>
 </div>
 
@@ -405,7 +434,9 @@ $(document).ready(function () {
     e.style.display = (e.style.display == 'block') ? 'none' : 'block';
  }
 </script>
-<div id="optional-videos-for-this-lesson" class="section level4 tabset tabset-pills" style="width:50%;float:right;">
+<div id="optional-videos-for-this-lesson"
+class="section level4 tabset tabset-pills"
+style="width:50%;float:right;">
 <h4 class="tabset tabset-pills">Optional Videos for this Lesson</h4>
 <div id="part-1" class="section level5">
 <h5>Part 1</h5>
@@ -437,65 +468,137 @@ $(document).ready(function () {
 <p>By the end of this lesson, you should be able to:</p>
 <ul>
 <li>Explain how a sampling distribution is created.</li>
-<li>Determine the mean, standard deviation and shape of a distribution of sample means.</li>
-<li>State and apply the Central Limit Theorem and the Law of Large Numbers.</li>
+<li>Determine the mean, standard deviation and shape of a distribution
+of sample means.</li>
+<li>State and apply the Central Limit Theorem and the Law of Large
+Numbers.</li>
 </ul>
 <p><br></p>
 <p><img src="Images/StepsAll.png"> <br></p>
 </div>
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>This lesson introduces three important concepts of statistical theory:</p>
+<p>This lesson introduces three important concepts of statistical
+theory:</p>
 <ol style="list-style-type: decimal">
 <li>The Sampling Distribution of the Sample Mean</li>
 <li>The Central Limit Theorem</li>
 <li>The Law of Large Numbers</li>
 </ol>
-<p>In practice, a single sample of data is obtained from a population of interest in order to <em>make inference</em> about the entire population. However, even though only one sample is obtained, there are many, many random samples that are <em>possible</em> to obtain from a population. Understanding what <em>could happen</em> from a theoretical perspective is important in knowing how to use the single sample of data appropriately when making inference about a population. Let’s look at an example.</p>
+<p>In practice, a single sample of data is obtained from a population of
+interest in order to <em>make inference</em> about the entire
+population. However, even though only one sample is obtained, there are
+many, many random samples that are <em>possible</em> to obtain from a
+population. Understanding what <em>could happen</em> from a theoretical
+perspective is important in knowing how to use the single sample of data
+appropriately when making inference about a population. Let’s look at an
+example.</p>
 </div>
-<div id="case-study-ddts-negative-impact-on-pregnant-women" class="section level2">
+<div id="case-study-ddts-negative-impact-on-pregnant-women"
+class="section level2">
 <h2>Case Study: DDT’s Negative Impact on Pregnant Women</h2>
 <p><img src="Images/Cropduster_spraying_pesticides.jpg"></p>
 <p><img src="Images/Step1.png"></p>
 <p><strong>Step 1: Design the Study</strong></p>
-<p>Mosquitoes and other biting insects carry malaria. In an attempt to curb the spread of malaria and save lives, the pesticide DDT was used for many years to control the insect population, even indoors. Unfortunately, this pesticide does not break down quickly in nature and is very harmful to humans.</p>
-<p>A metabolite of DDT (called DDE) is also very dangerous. A metabolite is the byproduct that occurs when our body breaks down a substance. When DDT is broken down in humans, DDE is one of the metabolites that remains from the original DDT.</p>
-<p>Scientists have shown that DDT and its metabolites cause reproductive problems in humans and other animals. When a pregnant woman has a contamination level as low as 10 mg/kg of DDE in her body, she is much more likely to give birth to an underweight baby or to deliver prematurely (Wells &amp; Leonard, 2006).</p>
-<p>A study of 45 pregnant women who have been exposed to DDT / DDE was conducted using a convenience sample (Bornman, MS. 2005). Global Solutions Unlimited (GSU) will analyze the data from this study. These data will be used to assess the prevalence of DDT in drinking water.</p>
+<p>Mosquitoes and other biting insects carry malaria. In an attempt to
+curb the spread of malaria and save lives, the pesticide DDT was used
+for many years to control the insect population, even indoors.
+Unfortunately, this pesticide does not break down quickly in nature and
+is very harmful to humans.</p>
+<p>A metabolite of DDT (called DDE) is also very dangerous. A metabolite
+is the byproduct that occurs when our body breaks down a substance. When
+DDT is broken down in humans, DDE is one of the metabolites that remains
+from the original DDT.</p>
+<p>Scientists have shown that DDT and its metabolites cause reproductive
+problems in humans and other animals. When a pregnant woman has a
+contamination level as low as 10 mg/kg of DDE in her body, she is much
+more likely to give birth to an underweight baby or to deliver
+prematurely (Wells &amp; Leonard, 2006).</p>
+<p>A study of 45 pregnant women who have been exposed to DDT / DDE was
+conducted using a convenience sample (Bornman, MS. 2005). Global
+Solutions Unlimited (GSU) will analyze the data from this study. These
+data will be used to assess the prevalence of DDT in drinking water.</p>
 <p><img src="Images/Step2.png"></p>
 <p><strong>Step 2: Collect Data</strong></p>
-<p>After selecting specific women to be sampled, researchers measured the level of DDE contamination for each of these randomly selected women.</p>
+<p>After selecting specific women to be sampled, researchers measured
+the level of DDE contamination for each of these randomly selected
+women.</p>
 <p><img src="Images/Step3.png"></p>
 <p><strong>Step 3: Describe the Data</strong></p>
-<p>The researchers computed the mean and standard deviation of the observed levels of exposure for the 45 women. They found the mean observed contamination level was 24.75 mg/kg, and the highest level of contamination was 419.91 mg/kg! (Bornman, MS. 2005)</p>
+<p>The researchers computed the mean and standard deviation of the
+observed levels of exposure for the 45 women. They found the mean
+observed contamination level was 24.75 mg/kg, and the highest level of
+contamination was 419.91 mg/kg! (Bornman, MS. 2005)</p>
 <p><img src="Images/Step4.png"></p>
 <p><strong>Step 4: Make Inferences</strong></p>
-<p>The researchers only obtained one sample mean, <span class="math inline">\(\bar x\)</span>. They do not get to see any other data. They only had enough time, funding, and other resources to survey the 45 women in their sample. An important question to ask at this point is whether or not the results of this sample show evidence that the mean DDE contamination in the full population of South American women was greater than 10 mg/kg.</p>
-<p>If the researchers had selected a different random sample of pregnant women, the mean contamination of the women in the sample would undoubtedly be different. However, this did not happen. The researchers do not get to see the contamination levels for any other women. They only collected this one sample.</p>
-<p>This is how research is often conducted…repeated samples are not typically drawn, so we do not get to know what might have happened had we gathered data from a different sample. Were it not for statistical theory, the results from our single sample would essentially be worthless. But the good news is that statistical theory provides us with just the tools we need to be able to use our single sample in a meaningful way to make inference about the full population.</p>
+<p>The researchers only obtained one sample mean, <span
+class="math inline">\(\bar x\)</span>. They do not get to see any other
+data. They only had enough time, funding, and other resources to survey
+the 45 women in their sample. An important question to ask at this point
+is whether or not the results of this sample show evidence that the mean
+DDE contamination in the full population of South American women was
+greater than 10 mg/kg.</p>
+<p>If the researchers had selected a different random sample of pregnant
+women, the mean contamination of the women in the sample would
+undoubtedly be different. However, this did not happen. The researchers
+do not get to see the contamination levels for any other women. They
+only collected this one sample.</p>
+<p>This is how research is often conducted…repeated samples are not
+typically drawn, so we do not get to know what might have happened had
+we gathered data from a different sample. Were it not for statistical
+theory, the results from our single sample would essentially be
+worthless. But the good news is that statistical theory provides us with
+just the tools we need to be able to use our single sample in a
+meaningful way to make inference about the full population.</p>
 <p><img src="Images/Step5.png"></p>
 <p><strong>Step 5: Take Action</strong></p>
-<p>In this study, there was a lot of evidence that the mean DDE contamination in the pregnant women was greater than 10 mg/kg. The probability of the DDE contamination in the women’s bodies exceeding 10 mg/kg (if there were no contamination) is approximately 0.02. This probability is low enough that there is reason for concern. Statistically speaking, there is sufficient evidence to suggest that the levels of DDE contamination are too high among South African women.</p>
+<p>In this study, there was a lot of evidence that the mean DDE
+contamination in the pregnant women was greater than 10 mg/kg. The
+probability of the DDE contamination in the women’s bodies exceeding 10
+mg/kg (if there were no contamination) is approximately 0.02. This
+probability is low enough that there is reason for concern.
+Statistically speaking, there is sufficient evidence to suggest that the
+levels of DDE contamination are too high among South African women.</p>
 <p><br></p>
 </div>
 <div id="introduction-to-sampling-distributions" class="section level2">
 <h2>Introduction to Sampling Distributions</h2>
-<p>Now let’s take a look behind the scenes to explore how statistical theory is used to create what is called a <em>sampling distribution of the sample mean.</em> This distribution becomes the key in making inference about a full population based on just the limited information in a single sample of data. To come to understand just what the phrase “sampling distribution of a sample mean” is describing, there are three items worth remembering.</p>
+<p>Now let’s take a look behind the scenes to explore how statistical
+theory is used to create what is called a <em>sampling distribution of
+the sample mean.</em> This distribution becomes the key in making
+inference about a full population based on just the limited information
+in a single sample of data. To come to understand just what the phrase
+“sampling distribution of a sample mean” is describing, there are three
+items worth remembering.</p>
 <ul>
-<li>First, recall that a <em>distribution</em> is a graph (like a histogram) showing how data is spread out. In <a href="Lesson03.html">Lesson 3</a> we considered three main types of distributions of data:</li>
+<li>First, recall that a <em>distribution</em> is a graph (like a
+histogram) showing how data is spread out. In <a
+href="Lesson03.html">Lesson 3</a> we considered three main types of
+distributions of data:</li>
 </ul>
 <p><img src="Images/Lesson_2_Activity_2-3.JPG" width=130%></p>
 <ul>
-<li><p>Second, recall that the sample mean is denoted by the symbol <span class="math inline">\(\bar{x}\)</span>. The mean is computed by adding up all of the values in the sample and dividing by the number of things in the sample.</p></li>
-<li><p>Third, recall that the true mean of the full population is denoted by the symbol <span class="math inline">\(\mu\)</span> and that the standard deviation of the population is denoted by <span class="math inline">\(\sigma\)</span>.</p></li>
+<li><p>Second, recall that the sample mean is denoted by the symbol
+<span class="math inline">\(\bar{x}\)</span>. The mean is computed by
+adding up all of the values in the sample and dividing by the number of
+things in the sample.</p></li>
+<li><p>Third, recall that the true mean of the full population is
+denoted by the symbol <span class="math inline">\(\mu\)</span> and that
+the standard deviation of the population is denoted by <span
+class="math inline">\(\sigma\)</span>.</p></li>
 </ul>
-<p>Now, with those reminders in place, you will need to <strong>work through the following tutorial</strong> to come to understand the idea of a “sampling distribution of a sample mean.”</p>
+<p>Now, with those reminders in place, you will need to <strong>work
+through the following tutorial</strong> to come to understand the idea
+of a “sampling distribution of a sample mean.”</p>
 <div id="a-tutorial-on-sampling-distributions" class="section level3">
 <h3>A Tutorial on Sampling Distributions</h3>
 <ul>
-<li><p><strong>Step 1</strong>: Open <a href="http://onlinestatbook.com/stat_sim/sampling_dist/index.html">this applet</a> and click on “Begin”<br />
+<li><p><strong>Step 1</strong>: Open <a
+href="http://onlinestatbook.com/stat_sim/sampling_dist/index.html">this
+applet</a> and click on “Begin”<br />
 <a href="http://onlinestatbook.com/stat_sim/sampling_dist/index.html"><img src="Images/samplingDistTutorial_Step1.png" width=400px;></a></p></li>
-<li><p><strong>Step 2</strong>: Ensure your internet browser window is wide enough to show all of the applet controls.</p></li>
+<li><p><strong>Step 2</strong>: Ensure your internet browser window is
+wide enough to show all of the applet controls.</p></li>
 </ul>
 <table>
 <tr>
@@ -516,80 +619,226 @@ Internet browser window large enough to see all controls. (Good)
 </tr>
 </table>
 <ul>
-<li><strong>Step 3:</strong> Press the “Animated” button on the right of the applet. It will drop down a single random sample of N=5 data points (i.e., black boxes) from the parent population. (Because the sample is random, your sample will possibly land in a different place than what is shown here.)</li>
+<li><strong>Step 3:</strong> Press the “Animated” button on the right of
+the applet. It will drop down a single random sample of N=5 data points
+(i.e., black boxes) from the parent population. (Because the sample is
+random, your sample will possibly land in a different place than what is
+shown here.)</li>
 </ul>
 <p><img src="Images/samplingDistTutorial_Step3.png"></p>
 <ul>
-<li><strong>Step 4:</strong> Notice that a little blue box dropped down from your “Sample Data” of N=5 black boxes (data points). This little blue box represents the mean, <span class="math inline">\(\bar{x}\)</span>, of your single sample of N=5 boxes.</li>
+<li><strong>Step 4:</strong> Notice that a little blue box dropped down
+from your “Sample Data” of N=5 black boxes (data points). This little
+blue box represents the mean, <span
+class="math inline">\(\bar{x}\)</span>, of your single sample of N=5
+boxes.</li>
 </ul>
 <p><img src="Images/samplingDistTutorial_Step4.png"></p>
-<p>Now is where things get interesting. In real life, all we would use is the single sample of N=5 values and the sample mean, <span class="math inline">\(\bar{x}\)</span>, to make inferece (make our guess) about the mean, <span class="math inline">\(\mu\)</span>, of the full population. (The full population in this applet is shown in the top black graph.) However, the purpose of this applet is to allow us to explore how our answer would change if we used a different sample of N=5 data points. A different sample will result in a different sample mean <span class="math inline">\(\bar{x}\)</span>. So the question is, what values are possible for the sample mean? Are some values of the sample mean more likely than others?</p>
+<p>Now is where things get interesting. In real life, all we would use
+is the single sample of N=5 values and the sample mean, <span
+class="math inline">\(\bar{x}\)</span>, to make inferece (make our
+guess) about the mean, <span class="math inline">\(\mu\)</span>, of the
+full population. (The full population in this applet is shown in the top
+black graph.) However, the purpose of this applet is to allow us to
+explore how our answer would change if we used a different sample of N=5
+data points. A different sample will result in a different sample mean
+<span class="math inline">\(\bar{x}\)</span>. So the question is, what
+values are possible for the sample mean? Are some values of the sample
+mean more likely than others?</p>
 <ul>
-<li><strong>Step 5:</strong> <strong>Click the Animated</strong> button several more times. Each time, watch how a new random sample of N=5 data points is generated for the “Sample Data” graph, and then the mean of that sample is plotted in the bottom “Distribution of Means, N=5” graph. The following image shows the results after clicking the “Animated” button 10 times.</li>
+<li><strong>Step 5:</strong> <strong>Click the Animated</strong> button
+several more times. Each time, watch how a new random sample of N=5 data
+points is generated for the “Sample Data” graph, and then the mean of
+that sample is plotted in the bottom “Distribution of Means, N=5” graph.
+The following image shows the results after clicking the “Animated”
+button 10 times.</li>
 </ul>
 <p><img src="Images/samplingDistTutorial_Step5.png"></p>
 <ul>
-<li><strong>Step 6:</strong> Now, let’s get the number of sample means (blue boxes) up to a million! To save time, there are buttons below the “Animated” button labeled “5”, “10,000”, and “100,000”. Clicking the “100,000” button 10 times will quickly get us up to one million sample means. Keep in mind that by doing this, you are essentially clicking the “Animated” button 1,000,000 times! (To actually click the “Animated” button one million times it would take you roughly 26 days of constantly clicking the “Animated” button over and over again!)</li>
+<li><strong>Step 6:</strong> Now, let’s get the number of sample means
+(blue boxes) up to a million! To save time, there are buttons below the
+“Animated” button labeled “5”, “10,000”, and “100,000”. Clicking the
+“100,000” button 10 times will quickly get us up to one million sample
+means. Keep in mind that by doing this, you are essentially clicking the
+“Animated” button 1,000,000 times! (To actually click the “Animated”
+button one million times it would take you roughly 26 days of constantly
+clicking the “Animated” button over and over again!)</li>
 </ul>
-<p>Now study the arrows in the image below. As you do, you should notice that to the left of the “Distribution of Means, N=5” graph, the mean of the distribution of sample means (which is equal to 16) and standard deviation of the distribution of sample means (which is equal to 2.24) are given. Compare these values to the mean and standard deviation shown for the Parent Population graph.</p>
+<p>Now study the arrows in the image below. As you do, you should notice
+that to the left of the “Distribution of Means, N=5” graph, the mean of
+the distribution of sample means (which is equal to 16) and standard
+deviation of the distribution of sample means (which is equal to 2.24)
+are given. Compare these values to the mean and standard deviation shown
+for the Parent Population graph.</p>
 <p><img src="Images/samplingDistTutorial_Step6.png"></p>
-<p>Hopefully you noticed that the “mean of the distribution of means” is equal to the “mean of the population.” The mean of the means is the mean! Let’s say that again. The <em>mean of all possible sample means is equal to the mean of the population.</em> In short, the mean of the means is the mean. As for the standard deviation though, notice that the “standard deviation of the sample means” is smaller than the “standard deviation of the population.” It turns out that these two results hold true for any parent population and any sample size. There are two mathematical formulas that summarize these truths.</p>
+<p>Hopefully you noticed that the “mean of the distribution of means” is
+equal to the “mean of the population.” The mean of the means is the
+mean! Let’s say that again. The <em>mean of all possible sample means is
+equal to the mean of the population.</em> In short, the mean of the
+means is the mean. As for the standard deviation though, notice that the
+“standard deviation of the sample means” is smaller than the “standard
+deviation of the population.” It turns out that these two results hold
+true for any parent population and any sample size. There are two
+mathematical formulas that summarize these truths.</p>
 <div class="myemphasis">
-<p><strong>The Mean of the Sampling Distribution of the Sample Mean</strong></p>
+<p><strong>The Mean of the Sampling Distribution of the Sample
+Mean</strong></p>
 <p><span class="math display">\[
-\underbrace{\mu_{\bar{x}}}_\text{The mean of the sample means} = \underbrace{\mu}_\text{The mean of the population}
+\underbrace{\mu_{\bar{x}}}_\text{The mean of the sample means} =
+\underbrace{\mu}_\text{The mean of the population}
 \]</span></p>
-<p><strong>The Standard Deviation of the Sampling Distribution of the Sample Mean</strong></p>
+<p><strong>The Standard Deviation of the Sampling Distribution of the
+Sample Mean</strong></p>
 <p><span class="math display">\[
-\underbrace{\sigma_{\bar{x}}}_\text{The st. dev. of the sample means} = \frac{\overbrace{\sigma}^\text{The st. dev. of the population}}{\underbrace{\sqrt{n}}_\text{sample size of each sample}}
+\underbrace{\sigma_{\bar{x}}}_\text{The st. dev. of the sample means} =
+\frac{\overbrace{\sigma}^\text{The st. dev. of the
+population}}{\underbrace{\sqrt{n}}_\text{sample size of each sample}}
 \]</span></p>
 </div>
-<p><strong>The Shape of the Sampling Distribution of the Sample Mean</strong></p>
-<p>Notice that the shape of the sampling distribution of the sample mean is normal in the experiment we just performed in the above applet. This is an important result because (as you will see in <a href="Lesson07.html">Lesson 7</a>) we will be able to use the Normal Probability Applet to make probability calculations about sample means whenever the distribution of sample means is normal. Unfortunately, there are some situations where the distribution of sample means is not normal. This ruins our ability to make inference about the parent population. Let’s look at one such situation.</p>
+<p><strong>The Shape of the Sampling Distribution of the Sample
+Mean</strong></p>
+<p>Notice that the shape of the sampling distribution of the sample mean
+is normal in the experiment we just performed in the above applet. This
+is an important result because (as you will see in <a
+href="Lesson07.html">Lesson 7</a>) we will be able to use the Normal
+Probability Applet to make probability calculations about sample means
+whenever the distribution of sample means is normal. Unfortunately,
+there are some situations where the distribution of sample means is not
+normal. This ruins our ability to make inference about the parent
+population. Let’s look at one such situation.</p>
 <ul>
-<li><strong>Step 7:</strong> Press the [Clear Lower 3] button. This will erase your data and reset the applet. Then, use the drop-down menu below the [Clear Lower 3] button to <strong>change</strong> the distribution from a <strong>normal distribution</strong> to a <strong>skewed distribution</strong>. The applet should now show a right-skewed distribution for the “Parent Population” data graph.</li>
+<li><strong>Step 7:</strong> Press the [Clear Lower 3] button. This will
+erase your data and reset the applet. Then, use the drop-down menu below
+the [Clear Lower 3] button to <strong>change</strong> the distribution
+from a <strong>normal distribution</strong> to a <strong>skewed
+distribution</strong>. The applet should now show a right-skewed
+distribution for the “Parent Population” data graph.</li>
 </ul>
 <p><img src="Images/samplingDistTutorial_Step7.png"></p>
 <ul>
-<li><strong>Step 8:</strong> Change the sample size to a very small sample size by selecting “N=2”. Then press the “Animated” button a few times to get a feel for what a sample of N=2 data points looks like from this right-skewed population.</li>
+<li><strong>Step 8:</strong> Change the sample size to a very small
+sample size by selecting “N=2”. Then press the “Animated” button a few
+times to get a feel for what a sample of N=2 data points looks like from
+this right-skewed population.</li>
 </ul>
 <p><img src="Images/samplingDistTutorial_Step8.png"></p>
 <ul>
-<li><strong>Step 9:</strong> Then, get a million such samples by clicking the “100,000” button ten times. You should get something similar to what is shown below. (Notice that the mean of the “Distribution of Means” is still equal to the mean of the “Parent population.” Also note that the standard deviation of the “Distribution of Means” is equal to <span class="math inline">\(6.22/\sqrt(2) = 4.40\)</span>, which is <span class="math inline">\(\sigma/\sqrt(n)\)</span>, as shown by our formula stated previously for the “Standard deviation of the Sample Means.”)</li>
+<li><strong>Step 9:</strong> Then, get a million such samples by
+clicking the “100,000” button ten times. You should get something
+similar to what is shown below. (Notice that the mean of the
+“Distribution of Means” is still equal to the mean of the “Parent
+population.” Also note that the standard deviation of the “Distribution
+of Means” is equal to <span class="math inline">\(6.22/\sqrt(2) =
+4.40\)</span>, which is <span
+class="math inline">\(\sigma/\sqrt(n)\)</span>, as shown by our formula
+stated previously for the “Standard deviation of the Sample
+Means.”)</li>
 </ul>
 <p><img src="Images/samplingDistTutorial_Step9.png"></p>
-<p>However, when it comes to the shape of the distribution of means, you should notice that the blue graph showing the “Distribution of Means, N=2” is not normally distributed. Like the distribution of the “Parent population” it is also right-skewed. This is problematic when it comes to trying to perform statistical analysis on a small sample (like N=2) from a population of skewed data because we can’t use the normal probability applet for things that are skewed. But there is a beautiful promise in statistical theory called the <strong>Central Limit Theorem</strong> that solves this problem. All we need is a larger sample size and the skewed distribution of means will magically “go away.” We will state this result formally in a moment. For now, see it happen yourself by doing the following.</p>
+<p>However, when it comes to the shape of the distribution of means, you
+should notice that the blue graph showing the “Distribution of Means,
+N=2” is not normally distributed. Like the distribution of the “Parent
+population” it is also right-skewed. This is problematic when it comes
+to trying to perform statistical analysis on a small sample (like N=2)
+from a population of skewed data because we can’t use the normal
+probability applet for things that are skewed. But there is a beautiful
+promise in statistical theory called the <strong>Central Limit
+Theorem</strong> that solves this problem. All we need is a larger
+sample size and the skewed distribution of means will magically “go
+away.” We will state this result formally in a moment. For now, see it
+happen yourself by doing the following.</p>
 <ul>
-<li><strong>Step 10:</strong> Change the sample size from “N=2” (a small sample) to “N=25” (a much larger sample). Then, click the “Animated” button a few times to get a feel for what is happening. Finally, click the “100,000” button ten times to get a million sample means from a million different samples of “N=25” data points in each sample. Look at how beautifully normal the distribution of sample means (the blue graph) is becoming! The “Parent population” data is still skewed. Even the “Sample Data” is still skewed. But the “Distribution of Means” is becoming normal! This is the <strong>Central Limit Theorem</strong> in action.</li>
+<li><strong>Step 10:</strong> Change the sample size from “N=2” (a small
+sample) to “N=25” (a much larger sample). Then, click the “Animated”
+button a few times to get a feel for what is happening. Finally, click
+the “100,000” button ten times to get a million sample means from a
+million different samples of “N=25” data points in each sample. Look at
+how beautifully normal the distribution of sample means (the blue graph)
+is becoming! The “Parent population” data is still skewed. Even the
+“Sample Data” is still skewed. But the “Distribution of Means” is
+becoming normal! This is the <strong>Central Limit Theorem</strong> in
+action.</li>
 </ul>
 <p><img src="Images/samplingDistTutorial_Step10.png"></p>
 <p><br></p>
 </div>
-<div id="what-is-the-sampling-distribution-of-sample-mean" class="section level3">
+<div id="what-is-the-sampling-distribution-of-sample-mean"
+class="section level3">
 <h3>What is the Sampling Distribution of Sample Mean?</h3>
-<p>The sampling distribution of the sample mean is the set of all possible values of <span class="math inline">\(\bar x\)</span> that could occur. You have seen several examples of sampling distributions as you have plotted many means in the simulations and observed the approximately normal distribution that occurs. In the real world, you only observe <em>your</em> sample mean. You do not get to view the distribution. However, the fact that you sample randomly means that you could easily have drawn a different sample and had a different sample mean, <span class="math inline">\(\bar x\)</span>. There are <em>many</em> possible sample means!</p>
+<p>The sampling distribution of the sample mean is the set of all
+possible values of <span class="math inline">\(\bar x\)</span> that
+could occur. You have seen several examples of sampling distributions as
+you have plotted many means in the simulations and observed the
+approximately normal distribution that occurs. In the real world, you
+only observe <em>your</em> sample mean. You do not get to view the
+distribution. However, the fact that you sample randomly means that you
+could easily have drawn a different sample and had a different sample
+mean, <span class="math inline">\(\bar x\)</span>. There are
+<em>many</em> possible sample means!</p>
 <p><br></p>
 </div>
 </div>
 <div id="the-central-limit-theorem" class="section level2">
 <h2>The Central Limit Theorem</h2>
 <div class="myemphasis">
-<p><strong>The Central Limit Theorem</strong> states that the sampling distribution of the sample mean will be <em>approximately normal</em> if the sample size <span class="math inline">\(n\)</span> of a sample is sufficiently large.</p>
+<p><strong>The Central Limit Theorem</strong> states that the sampling
+distribution of the sample mean will be <em>approximately normal</em> if
+the sample size <span class="math inline">\(n\)</span> of a sample is
+sufficiently large.</p>
 </div>
-<p>In the study of DDE levels in the South African women, we never saw the distribution of sample means. We only observed one sample mean, <span class="math inline">\(\bar x\)</span>. Even though we do not get to see the distribution of all possible sample means, since the sample size (<span class="math inline">\(n = 45\)</span>) was large, we can be assured that the sample mean <span class="math inline">\(\bar x\)</span> can be considered as one drawn from a normally distributed population of possible sample means. This allows us to make powerful statistical inference about the data as you will learn in <a href="Lesson07.html">Lesson 7</a>.</p>
-<p>You have observed in the simulations that if the sample size is large, the random variable <span class="math inline">\(\bar x\)</span> will be approximately normally distributed. In other words, the sampling distribution of the sample mean will be approximately normal if the sample size is sufficiently large. This important result is called the <strong>Central Limit Theorem</strong>. This is arguably the most important concept in all of Statistics.</p>
-<p>The Central Limit Theorem works for every population where the standard deviation is defined (is not infinite). In other words, it will work for any distribution you find in the real world.</p>
+<p>In the study of DDE levels in the South African women, we never saw
+the distribution of sample means. We only observed one sample mean,
+<span class="math inline">\(\bar x\)</span>. Even though we do not get
+to see the distribution of all possible sample means, since the sample
+size (<span class="math inline">\(n = 45\)</span>) was large, we can be
+assured that the sample mean <span class="math inline">\(\bar x\)</span>
+can be considered as one drawn from a normally distributed population of
+possible sample means. This allows us to make powerful statistical
+inference about the data as you will learn in <a
+href="Lesson07.html">Lesson 7</a>.</p>
+<p>You have observed in the simulations that if the sample size is
+large, the random variable <span class="math inline">\(\bar x\)</span>
+will be approximately normally distributed. In other words, the sampling
+distribution of the sample mean will be approximately normal if the
+sample size is sufficiently large. This important result is called the
+<strong>Central Limit Theorem</strong>. This is arguably the most
+important concept in all of Statistics.</p>
+<p>The Central Limit Theorem works for every population where the
+standard deviation is defined (is not infinite). In other words, it will
+work for any distribution you find in the real world.</p>
 <p><br></p>
 <div id="when-is-bar-x-normal" class="section level3">
 <h3>When is <span class="math inline">\(\bar x\)</span> Normal?</h3>
-<p>How many observations are required so that the Central Limit Theorem will assure that the distribution of sample means will be approximately normal? The answer is, “it depends.”</p>
+<p>How many observations are required so that the Central Limit Theorem
+will assure that the distribution of sample means will be approximately
+normal? The answer is, “it depends.”</p>
 <ul>
-<li>If the parent population is normal, then the sampling distribution of <span class="math inline">\(\bar x\)</span> will always be normally distributed, no matter how many observations are selected.</li>
-<li>If the parent population is not normal, then the sampling distribution <span class="math inline">\(\bar x\)</span> will be approximately normally distributed, if the sample size is large enough.
+<li>If the parent population is normal, then the sampling distribution
+of <span class="math inline">\(\bar x\)</span> will always be normally
+distributed, no matter how many observations are selected.</li>
+<li>If the parent population is not normal, then the sampling
+distribution <span class="math inline">\(\bar x\)</span> will be
+approximately normally distributed, if the sample size is large enough.
 <ul>
-<li>If the parent population is almost normal (e.g. mound-shaped and nearly symmetrical), then a sample of size n = 5 will probably be sufficient to assure that <span class="math inline">\(\bar x\)</span> will be approximately normally distributed.</li>
-<li>If the parent population is heavily skewed, then it will require a larger sample size to be assured that <span class="math inline">\(\bar x\)</span> will be normally distributed. For most moderately skewed distributions, a sample size of around 30 is traditionally thought to be sufficiently large to assure that <span class="math inline">\(\bar x\)</span> will be approximately normally distributed. This is not a definitive number but is a rule of thumb.</li>
-<li>For tremendously skewed distributions (e.g., the distribution of lottery payouts), a much larger sample will be required before the distribution of sample means is approximately normal. This may require billions of observations. Simulation can be used to determine if a particular sample size is sufficient. For this course, if the sample size is at least 30, we will conclude that the sampling distribution of <span class="math inline">\(\bar x\)</span> will be approximately normal.</li>
+<li>If the parent population is almost normal (e.g. mound-shaped and
+nearly symmetrical), then a sample of size n = 5 will probably be
+sufficient to assure that <span class="math inline">\(\bar x\)</span>
+will be approximately normally distributed.</li>
+<li>If the parent population is heavily skewed, then it will require a
+larger sample size to be assured that <span class="math inline">\(\bar
+x\)</span> will be normally distributed. For most moderately skewed
+distributions, a sample size of around 30 is traditionally thought to be
+sufficiently large to assure that <span class="math inline">\(\bar
+x\)</span> will be approximately normally distributed. This is not a
+definitive number but is a rule of thumb.</li>
+<li>For tremendously skewed distributions (e.g., the distribution of
+lottery payouts), a much larger sample will be required before the
+distribution of sample means is approximately normal. This may require
+billions of observations. Simulation can be used to determine if a
+particular sample size is sufficient. For this course, if the sample
+size is at least 30, we will conclude that the sampling distribution of
+<span class="math inline">\(\bar x\)</span> will be approximately
+normal.</li>
 </ul></li>
 </ul>
 <div class="QuestionsHeading">
@@ -597,13 +846,17 @@ Answer the following question:
 </div>
 <div class="Questions">
 <ol style="list-style-type: decimal">
-<li>There are two ways that <span class="math inline">\(\bar x\)</span> can be (approximately) normally distributed. What are they?</li>
+<li>There are two ways that <span class="math inline">\(\bar x\)</span>
+can be (approximately) normally distributed. What are they?</li>
 </ol>
-<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q1')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
 <ul>
-<li><span class="math inline">\(\bar x\)</span> will be normally distributed if the data were drawn from a normal population.</li>
-<li><span class="math inline">\(\bar x\)</span> will be approximately normally distributed if the sample size is sufficiently large.</li>
+<li><span class="math inline">\(\bar x\)</span> will be normally
+distributed if the data were drawn from a normal population.</li>
+<li><span class="math inline">\(\bar x\)</span> will be approximately
+normally distributed if the sample size is sufficiently large.</li>
 </ul>
 </div>
 <p> </p>
@@ -611,36 +864,65 @@ Answer the following question:
 <p><br></p>
 </div>
 </div>
-<div id="mean-and-standard-deviation-of-the-distribution-of-sample-means" class="section level2">
+<div
+id="mean-and-standard-deviation-of-the-distribution-of-sample-means"
+class="section level2">
 <h2>Mean and Standard Deviation of the Distribution of Sample Means</h2>
-<p>The following facts are always true. They do not depend on the Central Limit Theorem. They do not depend on the sample size. These facts hold for the sample mean <span class="math inline">\(\bar x\)</span> of any simple random sample of size <span class="math inline">\(n\)</span> drawn from a population with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>.</p>
+<p>The following facts are always true. They do not depend on the
+Central Limit Theorem. They do not depend on the sample size. These
+facts hold for the sample mean <span class="math inline">\(\bar
+x\)</span> of any simple random sample of size <span
+class="math inline">\(n\)</span> drawn from a population with mean <span
+class="math inline">\(\mu\)</span> and standard deviation <span
+class="math inline">\(\sigma\)</span>.</p>
 <ul>
-<li>The mean of the sample means is <span class="math inline">\(\mu\)</span></li>
-<li>The standard deviation of the sample means is <span class="math inline">\(\sigma / \sqrt{n}\)</span></li>
+<li>The mean of the sample means is <span
+class="math inline">\(\mu\)</span></li>
+<li>The standard deviation of the sample means is <span
+class="math inline">\(\sigma / \sqrt{n}\)</span></li>
 </ul>
-<p>Remember, these facts are always true. They do not depend on normality or the sample size. So, even though these facts are often used in conjunction with the Central Limit Theorem, they do not depend on it.</p>
-<p>Think about the simulations you have observed. The mean of the sample means was always aligned with <span class="math inline">\(\mu\)</span>. Also, if you took samples larger than <span class="math inline">\(n = 1\)</span>, the standard deviation of sample means was always smaller than <span class="math inline">\(\sigma\)</span>.</p>
+<p>Remember, these facts are always true. They do not depend on
+normality or the sample size. So, even though these facts are often used
+in conjunction with the Central Limit Theorem, they do not depend on
+it.</p>
+<p>Think about the simulations you have observed. The mean of the sample
+means was always aligned with <span class="math inline">\(\mu\)</span>.
+Also, if you took samples larger than <span class="math inline">\(n =
+1\)</span>, the standard deviation of sample means was always smaller
+than <span class="math inline">\(\sigma\)</span>.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="2" style="list-style-type: decimal">
-<li>The amount of time passengers spend waiting for a bus on a particular urban route follows a distribution that has a mean of 8.7 minutes with a standard deviation of 2.2 minutes. Transportation officials observed the waiting times for a random sample of <span class="math inline">\(n=121\)</span> individual passengers and recorded the sample mean, <span class="math inline">\(\bar x\)</span>. We can think of this sample mean as one value observed out of all the possible sample means that could have been observed. What is the mean of the distribution of all possible sample means?</li>
+<li>The amount of time passengers spend waiting for a bus on a
+particular urban route follows a distribution that has a mean of 8.7
+minutes with a standard deviation of 2.2 minutes. Transportation
+officials observed the waiting times for a random sample of <span
+class="math inline">\(n=121\)</span> individual passengers and recorded
+the sample mean, <span class="math inline">\(\bar x\)</span>. We can
+think of this sample mean as one value observed out of all the possible
+sample means that could have been observed. What is the mean of the
+distribution of all possible sample means?</li>
 </ol>
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q2')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
 <p><span class="math display">\[
-\mu = 8.7~\text{minutes} 
+\mu = 8.7~\text{minutes}
 \]</span></p>
 </div>
 <p><br></p>
 <ol start="3" style="list-style-type: decimal">
-<li>Use the information in the previous problem to answer this question: What is the standard deviation of the distribution of all possible sample means?</li>
+<li>Use the information in the previous problem to answer this question:
+What is the standard deviation of the distribution of all possible
+sample means?</li>
 </ol>
-<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q3')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q3" style="display:none;">
 <p><span class="math display">\[
-\frac{\sigma}{\sqrt{n}} = \frac{2.2}{\sqrt{121}} = 0.2~\text{minutes} 
+\frac{\sigma}{\sqrt{n}} = \frac{2.2}{\sqrt{121}} = 0.2~\text{minutes}
 \]</span></p>
 </div>
 <p> </p>
@@ -650,50 +932,105 @@ Answer the following questions:
 <div id="the-law-of-large-numbers" class="section level2">
 <h2>The Law of Large Numbers</h2>
 <div class="myemphasis">
-<p><strong>The Law of Large Numbers</strong> states that the sample mean, <span class="math inline">\(\bar{x}\)</span>, will become closer to <span class="math inline">\(\mu\)</span> as the sample size <span class="math inline">\(n\)</span> becomes larger.</p>
+<p><strong>The Law of Large Numbers</strong> states that the sample
+mean, <span class="math inline">\(\bar{x}\)</span>, will become closer
+to <span class="math inline">\(\mu\)</span> as the sample size <span
+class="math inline">\(n\)</span> becomes larger.</p>
 </div>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="4" style="list-style-type: decimal">
-<li>We just learned that the standard deviation of sample means is <span class="math inline">\(\displaystyle{ \sigma \over \sqrt{n} }\)</span>. What happens to the standard deviation of sample means when the sample size is increased?</li>
+<li>We just learned that the standard deviation of sample means is <span
+class="math inline">\(\displaystyle{ \sigma \over \sqrt{n} }\)</span>.
+What happens to the standard deviation of sample means when the sample
+size is increased?</li>
 </ol>
-<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q4')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q4" style="display:none;">
 <ul>
-<li>If the sample size, <span class="math inline">\(n\)</span>, is increased, then the standard deviation of the sample mean will decrease. The fraction will get smaller.</li>
+<li>If the sample size, <span class="math inline">\(n\)</span>, is
+increased, then the standard deviation of the sample mean will decrease.
+The fraction will get smaller.</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="5" style="list-style-type: decimal">
-<li>If the standard deviation of the sample mean gets smaller, what happens to the values of <span class="math inline">\(\bar x\)</span>?</li>
+<li>If the standard deviation of the sample mean gets smaller, what
+happens to the values of <span class="math inline">\(\bar
+x\)</span>?</li>
 </ol>
-<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q5')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q5" style="display:none;">
 <ul>
-<li>The values that will be observed will be very close to each other and therefore close to <span class="math inline">\(\mu\)</span>, if the sample size is large.</li>
+<li>The values that will be observed will be very close to each other
+and therefore close to <span class="math inline">\(\mu\)</span>, if the
+sample size is large.</li>
 </ul>
 </div>
 <p> </p>
 </div>
 <p><br></p>
-<p>The result you have discovered in the previous two questions is called the Law of Large Numbers. The Law of Large Numbers states that if the sample size is large, then the sample mean will typically be close to the population mean, <span class="math inline">\(\mu\)</span>. This happens because the standard deviation <span class="math inline">\(\sigma / \sqrt{n}\)</span> will get smaller as the sample size <span class="math inline">\(n\)</span> increases.</p>
-<p>Notice that this is very different from the Central Limit Theorem. The Central Limit Theorem states that if the sample size is large that <span class="math inline">\(\bar x\)</span> will be approximately normal. The Law of Large numbers states that the sample mean <span class="math inline">\(\bar x\)</span> will be close to <span class="math inline">\(\mu\)</span>.</p>
-<p>Take a moment to study the difference between the Central Limit Theorem and the Law of Large Numbers. They are very different, but it is easy to mix them up when you are first learning about them.</p>
+<p>The result you have discovered in the previous two questions is
+called the Law of Large Numbers. The Law of Large Numbers states that if
+the sample size is large, then the sample mean will typically be close
+to the population mean, <span class="math inline">\(\mu\)</span>. This
+happens because the standard deviation <span
+class="math inline">\(\sigma / \sqrt{n}\)</span> will get smaller as the
+sample size <span class="math inline">\(n\)</span> increases.</p>
+<p>Notice that this is very different from the Central Limit Theorem.
+The Central Limit Theorem states that if the sample size is large that
+<span class="math inline">\(\bar x\)</span> will be approximately
+normal. The Law of Large numbers states that the sample mean <span
+class="math inline">\(\bar x\)</span> will be close to <span
+class="math inline">\(\mu\)</span>.</p>
+<p>Take a moment to study the difference between the Central Limit
+Theorem and the Law of Large Numbers. They are very different, but it is
+easy to mix them up when you are first learning about them.</p>
 <p><br></p>
 </div>
 <div id="review-of-key-concepts" class="section level2">
 <h2>Review of Key Concepts</h2>
-<p>In order to “do statistics” we need to compute probabilities. This requires we know the distribution of the population of interest. The most important distributions in this course are the normal distributions, which were introduced in <a href="Lesson05.html">Lesson 5</a>. In this lesson, we are interested in another very important distribution: the distribution of all the sample means, <span class="math inline">\(\bar{x}\)</span>. In order to do statistics with <span class="math inline">\(\bar{x}\)</span> we need the sampling distribution of <span class="math inline">\(\bar{x}\)</span> to be normal. There are two situations when the distribution of <span class="math inline">\(\bar{x}\)</span> is guaranteed to be normal (or at least very close to normal). They are:</p>
+<p>In order to “do statistics” we need to compute probabilities. This
+requires we know the distribution of the population of interest. The
+most important distributions in this course are the normal
+distributions, which were introduced in <a href="Lesson05.html">Lesson
+5</a>. In this lesson, we are interested in another very important
+distribution: the distribution of all the sample means, <span
+class="math inline">\(\bar{x}\)</span>. In order to do statistics with
+<span class="math inline">\(\bar{x}\)</span> we need the sampling
+distribution of <span class="math inline">\(\bar{x}\)</span> to be
+normal. There are two situations when the distribution of <span
+class="math inline">\(\bar{x}\)</span> is guaranteed to be normal (or at
+least very close to normal). They are:</p>
 <ul>
-<li>If the parent population is normal, the distribution of the sample means <span class="math inline">\(\bar{x}\)</span> will be normal, for every sample size <span class="math inline">\(n\)</span>.</li>
-<li>Even if the parent population is not normal, the Central Limit Theorem guarantees that the distribution of the sample mean <span class="math inline">\(\bar{x}\)</span> will be approximately normal if the sample size <span class="math inline">\(n\)</span> is large enough. <strong>For this course, if</strong> <span class="math inline">\(n \geq 30\)</span>, <strong>we will say the distribution of the sample means will be approximately normal</strong> (even if the parent population is not normal).</li>
+<li>If the parent population is normal, the distribution of the sample
+means <span class="math inline">\(\bar{x}\)</span> will be normal, for
+every sample size <span class="math inline">\(n\)</span>.</li>
+<li>Even if the parent population is not normal, the Central Limit
+Theorem guarantees that the distribution of the sample mean <span
+class="math inline">\(\bar{x}\)</span> will be approximately normal if
+the sample size <span class="math inline">\(n\)</span> is large enough.
+<strong>For this course, if</strong> <span class="math inline">\(n \geq
+30\)</span>, <strong>we will say the distribution of the sample means
+will be approximately normal</strong> (even if the parent population is
+not normal).</li>
 </ul>
-<p>The mean and standard deviation of <span class="math inline">\(\bar{x}\)</span> are:</p>
+<p>The mean and standard deviation of <span
+class="math inline">\(\bar{x}\)</span> are:</p>
 <ul>
-<li>The mean <span class="math inline">\(\mu_{\bar{x}}\)</span> of the sample means is the population mean <span class="math inline">\(\mu\)</span>.</li>
-<li>The standard deviation <span class="math inline">\(\sigma_{\bar{x}}\)</span> of the sample means is the population standard deviation <span class="math inline">\(\sigma\)</span> divided by the square root of <span class="math inline">\(n\)</span>, <span class="math inline">\(\sigma / \sqrt{n}\)</span></li>
+<li>The mean <span class="math inline">\(\mu_{\bar{x}}\)</span> of the
+sample means is the population mean <span
+class="math inline">\(\mu\)</span>.</li>
+<li>The standard deviation <span
+class="math inline">\(\sigma_{\bar{x}}\)</span> of the sample means is
+the population standard deviation <span
+class="math inline">\(\sigma\)</span> divided by the square root of
+<span class="math inline">\(n\)</span>, <span
+class="math inline">\(\sigma / \sqrt{n}\)</span></li>
 </ul>
 <p><br></p>
 </div>
@@ -704,11 +1041,33 @@ Remember…
 </div>
 <div class="Summary">
 <ul>
-<li><p>The <strong>distribution of sample means</strong> is a distribution of all possible sample means (<span class="math inline">\(\bar x\)</span>) for a particular sample size.</p></li>
-<li><p>The <strong>mean</strong> of the distribution of sample means is the mean <span class="math inline">\(\mu\)</span> of the population: <span class="math inline">\(\mu_{\bar{x}} = \mu\)</span>.</p></li>
-<li><p>The <strong>standard deviation</strong> of the distribution of sample means is the standard deviation <span class="math inline">\(\sigma\)</span> of the population divided by the square root of <span class="math inline">\(n\)</span>: <span class="math inline">\(\sigma_{\bar{x}} = \sigma/\sqrt{n}\)</span>.</p></li>
-<li><p>The distribution of sample means is <strong>normal</strong> in either of two situations: (1) when the data is normally distributed <strong>or</strong> (2) when, thanks to the <strong>Central Limit Theorem (CLT)</strong>, our sample size (<span class="math inline">\(n\)</span>) is large.</p></li>
-<li><p>The <strong>Law of Large Numbers</strong> states that as the sample size (<span class="math inline">\(n\)</span>) gets larger, the sample mean (<span class="math inline">\(\bar x\)</span>) will get closer to the population mean (<span class="math inline">\(\mu\)</span>). This can be seen in the equation for <span class="math inline">\(\sigma_{\bar{x}} = \sigma/\sqrt{n}\)</span>. Notice as <span class="math inline">\(n\)</span> increases, then <span class="math inline">\(\sigma_\bar{x}\)</span> will get smaller.</p></li>
+<li><p>The <strong>distribution of sample means</strong> is a
+distribution of all possible sample means (<span
+class="math inline">\(\bar x\)</span>) for a particular sample
+size.</p></li>
+<li><p>The <strong>mean</strong> of the distribution of sample means is
+the mean <span class="math inline">\(\mu\)</span> of the population:
+<span class="math inline">\(\mu_{\bar{x}} = \mu\)</span>.</p></li>
+<li><p>The <strong>standard deviation</strong> of the distribution of
+sample means is the standard deviation <span
+class="math inline">\(\sigma\)</span> of the population divided by the
+square root of <span class="math inline">\(n\)</span>: <span
+class="math inline">\(\sigma_{\bar{x}} =
+\sigma/\sqrt{n}\)</span>.</p></li>
+<li><p>The distribution of sample means is <strong>normal</strong> in
+either of two situations: (1) when the data is normally distributed
+<strong>or</strong> (2) when, thanks to the <strong>Central Limit
+Theorem (CLT)</strong>, our sample size (<span
+class="math inline">\(n\)</span>) is large.</p></li>
+<li><p>The <strong>Law of Large Numbers</strong> states that as the
+sample size (<span class="math inline">\(n\)</span>) gets larger, the
+sample mean (<span class="math inline">\(\bar x\)</span>) will get
+closer to the population mean (<span
+class="math inline">\(\mu\)</span>). This can be seen in the equation
+for <span class="math inline">\(\sigma_{\bar{x}} =
+\sigma/\sqrt{n}\)</span>. Notice as <span
+class="math inline">\(n\)</span> increases, then <span
+class="math inline">\(\sigma_\bar{x}\)</span> will get smaller.</p></li>
 </ul>
 </div>
 <p><br></p>
@@ -731,9 +1090,12 @@ Remember…
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center"><a href="Lesson05.html">Lesson 5: <br> Normal Distributions</a></td>
-<td align="center">Lesson 06: <br> The Sampling Distribution of the Sample Mean &amp; The Central Limit Theorem</td>
-<td align="center"><a href="Lesson07.html">Lesson 7: <br> Probability Calculations involving a Mean Response</a></td>
+<td align="center"><a href="Lesson05.html">Lesson 5: <br> Normal
+Distributions</a></td>
+<td align="center">Lesson 06: <br> The Sampling Distribution of the
+Sample Mean &amp; The Central Limit Theorem</td>
+<td align="center"><a href="Lesson07.html">Lesson 7: <br> Probability
+Calculations involving a Mean Response</a></td>
 </tr>
 </tbody>
 </table>

@@ -62,7 +62,6 @@ Here are the summaries for each lesson in unit 4. Reviewing these key points fro
 
 - The **correlation coefficient ($r$)** is a number between $-1$ and $1$ that tells us the direction and strength of the linear association between two variables. A positive $r$ corresponds to a **positive association** while a negative $r$ corresponds to a **negative association**. A value of $r$ closer to $-1$ or $1$ indicates a stronger association than a value of $r$ closer to zero.
 
-- The **covariance** is a measure of how two variables vary together. The formula for the covariance is $s_{xy}=r \cdot s_x \cdot s_y$.
 <br>
 </div>
 <br>

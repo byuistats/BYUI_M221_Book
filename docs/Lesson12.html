@@ -13,8 +13,8 @@
 
 <title>Lesson 12: Inference for the Mean of Differences (Two Dependent Samples)</title>
 
-<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -57,6 +57,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -81,6 +82,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -233,7 +237,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -246,17 +250,25 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 1
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
-    </li>
-    <li>
-      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lesson 1: Course Intro &amp; Probability</a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="Lesson01_Campus.html">Campus Student Version</a>
+        </li>
+        <li>
+          <a href="Lesson01.html">Online Student Version</a>
+        </li>
+        <li>
+          <a href="Lesson01_WWB.html">World Wide Block Student Version</a>
+        </li>
+      </ul>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -282,7 +294,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 2
      
     <span class="caret"></span>
@@ -312,7 +324,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 3
      
     <span class="caret"></span>
@@ -336,7 +348,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 4
      
     <span class="caret"></span>
@@ -373,27 +385,39 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Lesson 12: Inference for the Mean of Differences (Two Dependent Samples)</h1>
+<h1 class="title toc-ignore">Lesson 12: Inference for the Mean of
+Differences (Two Dependent Samples)</h1>
 
 </div>
 
 <div id="TOC">
 <ul>
-<li><a href="#lesson-outcomes">Lesson Outcomes</a></li>
-<li><a href="#example-of-paired-data-pre--and-post-test-scores">Example of Paired Data: Pre- and Post-test Scores</a></li>
-<li><a href="#hypothesis-tests">Hypothesis Tests</a>
+<li><a href="#lesson-outcomes" id="toc-lesson-outcomes">Lesson
+Outcomes</a></li>
+<li><a href="#example-of-paired-data-pre--and-post-test-scores"
+id="toc-example-of-paired-data-pre--and-post-test-scores">Example of
+Paired Data: Pre- and Post-test Scores</a></li>
+<li><a href="#hypothesis-tests" id="toc-hypothesis-tests">Hypothesis
+Tests</a>
 <ul>
-<li><a href="#mahons-weight-loss-study">Mahon’s Weight Loss Study</a></li>
-<li><a href="#nosocomial-infections">Nosocomial Infections</a></li>
-<li><a href="#additional-worked-examples">Additional Worked Examples</a></li>
+<li><a href="#mahons-weight-loss-study"
+id="toc-mahons-weight-loss-study">Mahon’s Weight Loss Study</a></li>
+<li><a href="#nosocomial-infections"
+id="toc-nosocomial-infections">Nosocomial Infections</a></li>
+<li><a href="#additional-worked-examples"
+id="toc-additional-worked-examples">Additional Worked Examples</a></li>
 </ul></li>
-<li><a href="#confidence-intervals">Confidence Intervals</a>
+<li><a href="#confidence-intervals"
+id="toc-confidence-intervals">Confidence Intervals</a>
 <ul>
-<li><a href="#mountain-pine-beetle-attacks">Mountain Pine Beetle Attacks</a></li>
-<li><a href="#sleep-inducing-drugs">Sleep Inducing Drugs</a></li>
+<li><a href="#mountain-pine-beetle-attacks"
+id="toc-mountain-pine-beetle-attacks">Mountain Pine Beetle
+Attacks</a></li>
+<li><a href="#sleep-inducing-drugs" id="toc-sleep-inducing-drugs">Sleep
+Inducing Drugs</a></li>
 </ul></li>
-<li><a href="#summary">Summary</a></li>
-<li><a href="#navigation">Navigation</a></li>
+<li><a href="#summary" id="toc-summary">Summary</a></li>
+<li><a href="#navigation" id="toc-navigation">Navigation</a></li>
 </ul>
 </div>
 
@@ -404,7 +428,8 @@ $(document).ready(function () {
  }
 </script>
 <div style="width:50%;float:right;">
-<div id="optional-videos-for-this-lesson" class="section level4 tabset tabset-pills">
+<div id="optional-videos-for-this-lesson"
+class="section level4 tabset tabset-pills">
 <h4 class="tabset tabset-pills">Optional Videos for this Lesson</h4>
 <div id="part-1" class="section level5">
 <h5>Part 1</h5>
@@ -431,33 +456,78 @@ $(document).ready(function () {
 </div>
 <div id="lesson-outcomes" class="section level2">
 <h2>Lesson Outcomes</h2>
-<p>By the end of this lesson, you should be able to do the following.</p>
-<p><strong>Regarding Confidence Intervals for the mean of differences with dependent samples: </strong></p>
+<p>By the end of this lesson, you should be able to do the
+following.</p>
+<p><strong>Regarding Confidence Intervals for the mean of differences
+with dependent samples: </strong></p>
 <ul>
-<li>Calculate and interpret a confidence interval for the mean of differences given a confidence level.</li>
-<li>Identify a point estimate and margin of error for the confidence interval.</li>
-<li>Show the appropriate connections between the numerical and graphical summaries that support the confidence interval.</li>
+<li>Calculate and interpret a confidence interval for the mean of
+differences given a confidence level.</li>
+<li>Identify a point estimate and margin of error for the confidence
+interval.</li>
+<li>Show the appropriate connections between the numerical and graphical
+summaries that support the confidence interval.</li>
 <li>Check the requirements for the confidence interval.</li>
 </ul>
-<p><strong>Regarding Hypothesis Testing for the mean of differences with dependent samples:</strong></p>
+<p><strong>Regarding Hypothesis Testing for the mean of differences with
+dependent samples:</strong></p>
 <ul>
 <li>State the null and alternative hypothesis.</li>
-<li>Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.</li>
-<li>Assess the statistical significance by comparing the p-value to the α-level.</li>
+<li>Calculate the test-statistic, degrees of freedom and p-value of the
+hypothesis test.</li>
+<li>Assess the statistical significance by comparing the p-value to the
+α-level.</li>
 <li>Check the requirements for the hypothesis test.</li>
-<li>Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test.</li>
+<li>Show the appropriate connections between the numerical and graphical
+summaries that support the hypothesis test.</li>
 <li>Draw a correct conclusion for the hypothesis test.</li>
 </ul>
 <p><br></p>
 </div>
-<div id="example-of-paired-data-pre--and-post-test-scores" class="section level2">
+<div id="example-of-paired-data-pre--and-post-test-scores"
+class="section level2">
 <h2>Example of Paired Data: Pre- and Post-test Scores</h2>
-<p>In education, it is very common for researchers to conduct studies in which they administer a pre-test, provide some instruction, and then give a post-test. The difference between the post- and pre-test scores is a measure of the student’s progress. In this case, it would not make much sense to only look at the mean score on the pre-test and compare it to the mean score on the post-test.</p>
-<p>This is called a <strong>matched-pairs</strong> design or we say we have <strong>dependent samples</strong>. Matched-pairs (or <strong>paired-data</strong>) designs typically involve only one population, and a pair of observations is drawn on the individuals selected for the sample. In the context of the educational study, the two observations are student’s scores on (1) the pre-test and (2) the post-test. If a student is selected to participate in the pre-test (i.e., they are selected to be part of group 1), they are automatically selected to participate in the post-test (i.e., they are chosen to be in group 2 automatically.)</p>
-<p>There is a lot of merit in subtracting the individual scores and looking at the mean <em>gain</em>. The researchers are not really interested in the students knowledge before the instruction. This is used as a baseline to measure how much was gained during the instruction. There is great value in looking at the difference. This removes the effect of the individual students’ ability, and it measures their learning during the unit.</p>
-<p>To analyze the data, the researchers first find the difference in the post- and pre-test scores. At that point, the data have been reduced to a list of numbers (representing the increase in scores). Now, the researchers can conduct inference on the mean of these values. In other words, they can do a hypothesis test for the mean of the difference in the post- and pre-test scores.</p>
-<p>A hypothesis test for two means with paired data (dependent samples) is conducted in the same way as a hypothesis test for a single mean with <span class="math inline">\(\sigma\)</span> unknown. The only exception is that the pairs of data must be subtracted before you start any computations. From a practical perspective, after you subtract, then you apply the one-sample procedures you have already learned. So, there is nothing new that you need to learn to compute a confidence interval for two means with paired data; just that we will be using a different sheet in the Math221 Statistics Toolbox that automatically calculates the differences.</p>
-<p>We will first explore an application of pre- and post-testing in a weight loss study.</p>
+<p>In education, it is very common for researchers to conduct studies in
+which they administer a pre-test, provide some instruction, and then
+give a post-test. The difference between the post- and pre-test scores
+is a measure of the student’s progress. In this case, it would not make
+much sense to only look at the mean score on the pre-test and compare it
+to the mean score on the post-test.</p>
+<p>This is called a <strong>matched-pairs</strong> design or we say we
+have <strong>dependent samples</strong>. Matched-pairs (or
+<strong>paired-data</strong>) designs typically involve only one
+population, and a pair of observations is drawn on the individuals
+selected for the sample. In the context of the educational study, the
+two observations are student’s scores on (1) the pre-test and (2) the
+post-test. If a student is selected to participate in the pre-test
+(i.e., they are selected to be part of group 1), they are automatically
+selected to participate in the post-test (i.e., they are chosen to be in
+group 2 automatically.)</p>
+<p>There is a lot of merit in subtracting the individual scores and
+looking at the mean <em>gain</em>. The researchers are not really
+interested in the students knowledge before the instruction. This is
+used as a baseline to measure how much was gained during the
+instruction. There is great value in looking at the difference. This
+removes the effect of the individual students’ ability, and it measures
+their learning during the unit.</p>
+<p>To analyze the data, the researchers first find the difference in the
+post- and pre-test scores. At that point, the data have been reduced to
+a list of numbers (representing the increase in scores). Now, the
+researchers can conduct inference on the mean of these values. In other
+words, they can do a hypothesis test for the mean of the difference in
+the post- and pre-test scores.</p>
+<p>A hypothesis test for two means with paired data (dependent samples)
+is conducted in the same way as a hypothesis test for a single mean with
+<span class="math inline">\(\sigma\)</span> unknown. The only exception
+is that the pairs of data must be subtracted before you start any
+computations. From a practical perspective, after you subtract, then you
+apply the one-sample procedures you have already learned. So, there is
+nothing new that you need to learn to compute a confidence interval for
+two means with paired data; just that we will be using a different sheet
+in the Math221 Statistics Toolbox that automatically calculates the
+differences.</p>
+<p>We will first explore an application of pre- and post-testing in a
+weight loss study.</p>
 </div>
 <div id="hypothesis-tests" class="section level2">
 <h2>Hypothesis Tests</h2>
@@ -465,7 +535,14 @@ $(document).ready(function () {
 <div id="mahons-weight-loss-study" class="section level3">
 <h3>Mahon’s Weight Loss Study</h3>
 <p><strong>Background</strong></p>
-<p>Annie Mahon and other researchers in Wayne Campbell’s nutrition lab studied the weight loss of <span class="math inline">\(n=27\)</span> middle aged women who consumed a prescribed low-calorie diet. <!--<cite>Mahon07</cite>--> The women’s weights were recorded (in kilograms) at the beginning of the study and after the nine-week diet period. The data are given in the file <a href="./Data/Mahon.xlsx">Mahon.xlsx</a>. An excerpt of the data is given below.</p>
+<p>Annie Mahon and other researchers in Wayne Campbell’s nutrition lab
+studied the weight loss of <span class="math inline">\(n=27\)</span>
+middle aged women who consumed a prescribed low-calorie diet.
+<!--<cite>Mahon07</cite>--> The women’s weights were recorded (in
+kilograms) at the beginning of the study and after the nine-week diet
+period. The data are given in the file <a
+href="./Data/Mahon.xlsx">Mahon.xlsx</a>. An excerpt of the data is given
+below.</p>
 <table>
 <thead>
 <tr class="header">
@@ -617,25 +694,45 @@ Post
 |-
 |}
 -->
-<p>Notice the structure of the data. The weight of each subject was measured before the study and at the conclusion of the study. Each person provided a pre-study weight and a post-study weight. Stated differently, the pre-study weights and the post-study weights are paired. For each row of data, both of these numbers came from the same person. When we collect two observations of the same measurement on each subject, we call it <strong>paired data</strong>. Sometimes paired data are called <strong>dependent samples</strong>.</p>
+<p>Notice the structure of the data. The weight of each subject was
+measured before the study and at the conclusion of the study. Each
+person provided a pre-study weight and a post-study weight. Stated
+differently, the pre-study weights and the post-study weights are
+paired. For each row of data, both of these numbers came from the same
+person. When we collect two observations of the same measurement on each
+subject, we call it <strong>paired data</strong>. Sometimes paired data
+are called <strong>dependent samples</strong>.</p>
 <div class="QuestionsHeading">
 Answer the following question:
 </div>
 <div class="Questions">
 <ol style="list-style-type: decimal">
-<li>The researchers measured the initial weights of the women prior to the study, even though they were not particularly interested in this value. What was the purpose of measuring the pre-study weights?</li>
+<li>The researchers measured the initial weights of the women prior to
+the study, even though they were not particularly interested in this
+value. What was the purpose of measuring the pre-study weights?</li>
 </ol>
-<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q1')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
 <ul>
-<li>The goal of the study is to determine how much the women’s weight change as as result of the study. The researchers must measure the women’s weights at the beginning of the study, so they can subtract the initial (pre-study) weight of each woman from her final (post-study) weight.</li>
+<li>The goal of the study is to determine how much the women’s weight
+change as as result of the study. The researchers must measure the
+women’s weights at the beginning of the study, so they can subtract the
+initial (pre-study) weight of each woman from her final (post-study)
+weight.</li>
 </ul>
 </div>
 <p> </p>
 </div>
 <p><br></p>
 <p><strong>Computing New Variables in Excel</strong></p>
-<p>The researchers are not interested in the weights of the women, they are more interested in the <em>change</em> in the women’s weights. This will give them a measure of the effectiveness of the low-calorie diet. In other words, they are interested in the difference of the weights after the study compared with before: <span class="math display">\[\text{Difference} = \text{Post} - \text{Pre}\]</span></p>
+<p>The researchers are not interested in the weights of the women, they
+are more interested in the <em>change</em> in the women’s weights. This
+will give them a measure of the effectiveness of the low-calorie diet.
+In other words, they are interested in the difference of the weights
+after the study compared with before: <span
+class="math display">\[\text{Difference} = \text{Post} -
+\text{Pre}\]</span></p>
 <p>We can calculate the difference for each woman in the study:</p>
 <table>
 <thead>
@@ -812,17 +909,28 @@ Difference
 <!-- |-                          -->
 <!-- | 27 || 77.9 || 82.1 || 77.9 $-$ 82.1 = -4.2 -->
 <!-- |} -->
-<a name="SubtractDifferences"></a> <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
+<a name="SubtractDifferences"></a>
+<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <div class="SoftwareHeading">
 Excel Instructions
 </div>
 <div class="Summary">
-<p>Fortunately, the “Paired Data t-test” tab in the <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a> will automatically compute the differences when you paste in the data. <strong>The Toolbox always takes the data in column A - data in column B.</strong> Because we want to take Post - Pre, you will need to swap the order of the columns when pasting the data into the Math221 Statistics Toolbox. Follow this process:</p>
+<p>Fortunately, the “Paired Data t-test” tab in the <a
+href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics
+Toolbox</a> will automatically compute the differences when you paste in
+the data. <strong>The Toolbox always takes the data in column A - data
+in column B.</strong> Because we want to take Post - Pre, you will need
+to swap the order of the columns when pasting the data into the Math221
+Statistics Toolbox. Follow this process:</p>
 <ul>
-<li>Copy the “Pre” column and paste it into column B, labeled “Data2” of the Toolbox.</li>
-<li>Copy the “Post” column and paste it into column A, labeled “Data1” of the Toolbox.</li>
-<li>Notice in column C the differences are automatically calculated.</li>
-<li>A excerpt of how the data looks in the Math221 Statistics Toolbox is shown below:</li>
+<li>Copy the “Pre” column and paste it into column B, labeled “Data2” of
+the Toolbox.</li>
+<li>Copy the “Post” column and paste it into column A, labeled “Data1”
+of the Toolbox.</li>
+<li>Notice in column C the differences are automatically
+calculated.</li>
+<li>A excerpt of how the data looks in the Math221 Statistics Toolbox is
+shown below:</li>
 </ul>
 <p><img src="Images/Mahon-Differences_Excel_Toolbox.PNG"></p>
 </div>
@@ -832,13 +940,17 @@ Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="2" style="list-style-type: decimal">
-<li>Following the directions above, compute the difference in the women’s weights by pasting the data in the Math221 Statistics Toolbox.</li>
+<li>Following the directions above, compute the difference in the
+women’s weights by pasting the data in the Math221 Statistics
+Toolbox.</li>
 </ol>
 <p><br></p>
 <ol start="3" style="list-style-type: decimal">
-<li>What is the mean of the values in the <em>Difference</em> column? (Look in cell G7)</li>
+<li>What is the mean of the values in the <em>Difference</em> column?
+(Look in cell G7)</li>
 </ol>
-<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q3')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q3" style="display:none;">
 <center>
 <span class="math display">\[
@@ -850,10 +962,16 @@ Answer the following questions:
 <ol start="4" style="list-style-type: decimal">
 <li>Interpret the value you calculated in Question 3.</li>
 </ol>
-<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q4')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q4" style="display:none;">
 <ul>
-<li>The mean weight change experienced by the women in the study was <span class="math inline">\(-6.80\)</span> kg. It can be tricky to know if this means they gained or lost weight. Remember, we calculated Post-Pre. A negative difference indicates the Pre weight was higher than the Post weight. In other words, there was a mean weight loss of <span class="math inline">\(6.80\)</span> kg.</li>
+<li>The mean weight change experienced by the women in the study was
+<span class="math inline">\(-6.80\)</span> kg. It can be tricky to know
+if this means they gained or lost weight. Remember, we calculated
+Post-Pre. A negative difference indicates the Pre weight was higher than
+the Post weight. In other words, there was a mean weight loss of <span
+class="math inline">\(6.80\)</span> kg.</li>
 </ul>
 </div>
 <p> </p>
@@ -862,31 +980,73 @@ Answer the following questions:
 </div>
 <p><br></p>
 <p><strong>Relationship to a One Sample t-test</strong></p>
-<p>After you have subtracted the pre-study weights from the post-study weights, you are left with a column of differences. We will denote the pre-study weights by <span class="math inline">\(x_1\)</span> and the post-study weights by <span class="math inline">\(x_2\)</span>. Then, the differences can be denoted as <span class="math inline">\(d = x_2 - x_1\)</span>. The difference, <span class="math inline">\(d\)</span>, is defined as the change in the volunteer’s weight during the study.</p>
-<p>After computing the differences, we do not use the data for the individual groups at all. The researchers are not interested in the values of the women’s weights at the beginning of the study or at the end of the study. They are mostly interested in the difference in the weights after the participants complete the study.</p>
-<p>After we subtract, we can conduct a hypothesis test to determine if the mean of the differences is less than zero. We use the symbol <span class="math inline">\(\mu_d\)</span> to represent the true mean difference in the weights of the women who follow the diet prescribed in this study. The null hypotheses is that the true mean difference is zero (<span class="math inline">\(\mu_d = 0\)</span>). The alternative hypothesis is that there is a decrease in the weights, in other words, that the true mean difference is less than zero (<span class="math inline">\(\mu_d &lt; 0\)</span>).</p>
-<p>Notice that this is essentially a one-sample t-test where the data are the differences in the women’s weights. We have one column of data, the differences. We are testing whether the true mean difference is less than zero. After subtracting, a test for a difference of two means with paired data is just like a test for one mean with <span class="math inline">\(\sigma\)</span> unknown.</p>
-<p>In the hypothesis test, we will refer to the variable representing the differences as <span class="math inline">\(d\)</span>. We will use this notation throughout the hypothesis test. For example, the true population mean will be labeled <span class="math inline">\(\mu_d\)</span> and the sample mean will be labeled <span class="math inline">\(\bar d\)</span>. The sample standard deviation of the differences is denoted <span class="math inline">\(s_d\)</span>.</p>
+<p>After you have subtracted the pre-study weights from the post-study
+weights, you are left with a column of differences. We will denote the
+pre-study weights by <span class="math inline">\(x_1\)</span> and the
+post-study weights by <span class="math inline">\(x_2\)</span>. Then,
+the differences can be denoted as <span class="math inline">\(d = x_2 -
+x_1\)</span>. The difference, <span class="math inline">\(d\)</span>, is
+defined as the change in the volunteer’s weight during the study.</p>
+<p>After computing the differences, we do not use the data for the
+individual groups at all. The researchers are not interested in the
+values of the women’s weights at the beginning of the study or at the
+end of the study. They are mostly interested in the difference in the
+weights after the participants complete the study.</p>
+<p>After we subtract, we can conduct a hypothesis test to determine if
+the mean of the differences is less than zero. We use the symbol <span
+class="math inline">\(\mu_d\)</span> to represent the true mean
+difference in the weights of the women who follow the diet prescribed in
+this study. The null hypotheses is that the true mean difference is zero
+(<span class="math inline">\(\mu_d = 0\)</span>). The alternative
+hypothesis is that there is a decrease in the weights, in other words,
+that the true mean difference is less than zero (<span
+class="math inline">\(\mu_d &lt; 0\)</span>).</p>
+<p>Notice that this is essentially a one-sample t-test where the data
+are the differences in the women’s weights. We have one column of data,
+the differences. We are testing whether the true mean difference is less
+than zero. After subtracting, a test for a difference of two means with
+paired data is just like a test for one mean with <span
+class="math inline">\(\sigma\)</span> unknown.</p>
+<p>In the hypothesis test, we will refer to the variable representing
+the differences as <span class="math inline">\(d\)</span>. We will use
+this notation throughout the hypothesis test. For example, the true
+population mean will be labeled <span
+class="math inline">\(\mu_d\)</span> and the sample mean will be labeled
+<span class="math inline">\(\bar d\)</span>. The sample standard
+deviation of the differences is denoted <span
+class="math inline">\(s_d\)</span>.</p>
 <p><strong>Hypothesis Test for Mahon’s Weight Loss Data</strong></p>
 <p><img src="Images/Step1.png"></p>
 <p><strong>Summarize the relevant background information</strong></p>
-<p>Twenty-seven women participated in a nine week weight loss study. During the study period, the participants were provided a reduced calorie diet. Their weights were recorded at the beginning of the study and nine weeks later. The difference of the weights is defined as the post-study weights minus the pre-study weights. The researchers expected that the mean difference in the weights would be negative–in other words, that the women would tend to lose weight.</p>
-<p><strong>State the null and alternative hypotheses and the level of significance</strong></p>
+<p>Twenty-seven women participated in a nine week weight loss study.
+During the study period, the participants were provided a reduced
+calorie diet. Their weights were recorded at the beginning of the study
+and nine weeks later. The difference of the weights is defined as the
+post-study weights minus the pre-study weights. The researchers expected
+that the mean difference in the weights would be negative–in other
+words, that the women would tend to lose weight.</p>
+<p><strong>State the null and alternative hypotheses and the level of
+significance</strong></p>
 <p><span class="math display">\[
 \begin{align}
 H_0: &amp;~~ \mu_d=0 \\
 H_a: &amp;~~ \mu_d &lt; 0
 \end{align}
 \]</span></p>
-<p>We will use the <span class="math inline">\(\alpha = 0.05\)</span> level of significance.</p>
+<p>We will use the <span class="math inline">\(\alpha = 0.05\)</span>
+level of significance.</p>
 <p><img src="Images/Step2.png"></p>
 <p><strong>Describe the data collection procedures</strong></p>
-<p>The women’s weights were recorded at the beginning of the study. The women were provided a reduced calorie diet for nine weeks. Then, their weights were measured again at the end of the study. A calibrated scale was used to provide an accurate weight.</p>
+<p>The women’s weights were recorded at the beginning of the study. The
+women were provided a reduced calorie diet for nine weeks. Then, their
+weights were measured again at the end of the study. A calibrated scale
+was used to provide an accurate weight.</p>
 <p><img src="Images/Step3.png"></p>
 <p><strong>Give the relevant summary statistics</strong></p>
 <p>Here is the Excel output:</p>
 <p><img src="Images/Mahon_Paired_t-test_Excel_Toolbox.PNG"></p>
-<p>From the Excel output illustrated above, we can see a histogram of the data and get the following numerical summaries:</p>
+<p>From the Excel output illustrated above, we can see a histogram of
+the data and get the following numerical summaries:</p>
 <p><span class="math display">\[
 \begin{align}
 \bar d &amp;= -6.80 \\
@@ -894,64 +1054,142 @@ s_d &amp;= 3.17 \\
 n &amp;= 27
 \end{align}
 \]</span></p>
-<p>The mean and standard deviation are rounded to one decimal place more than the original data.</p>
+<p>The mean and standard deviation are rounded to one decimal place more
+than the original data.</p>
 <p><img src="Images/Step4.png"></p>
 <p><strong>Verify the requirements have been met</strong></p>
-<p>Like the one-sample t-test, this procedure is robust, meaning that it is not very sensitive to the requirements. If they are violated, it will probably still give reasonably good results.</p>
-<p>The requirements for this procedure are the same as the requirements for a one-sample t-test:</p>
+<p>Like the one-sample t-test, this procedure is robust, meaning that it
+is not very sensitive to the requirements. If they are violated, it will
+probably still give reasonably good results.</p>
+<p>The requirements for this procedure are the same as the requirements
+for a one-sample t-test:</p>
 <ul>
 <li>the data represent a simple random sample from the population</li>
 <li>the mean of the differences follows a normal distribution</li>
 </ul>
-<p>The subjects were recruited via advertisements for a research study. The participants volunteered to participate. It is not a simple random sample of all middle-aged women, but there is nothing about the selection of the sample that would invalidate the results.</p>
-<p>From a practical perspective, it is impossible to get a simple random sample of people in the general population. When research trials are conducted, people must volunteer to participate. This can lead to a selection bias, but it is usually negligible.</p>
-<p>The requirement of normality is satisfied for Mahon’s data. Though the sample size (n=27) is not quite up to 30, it is still fairly large. Furthermore, the histogram of differences indicates very little skew, so <span class="math inline">\(\bar d\)</span> will be approximately normal.</p>
+<p>The subjects were recruited via advertisements for a research study.
+The participants volunteered to participate. It is not a simple random
+sample of all middle-aged women, but there is nothing about the
+selection of the sample that would invalidate the results.</p>
+<p>From a practical perspective, it is impossible to get a simple random
+sample of people in the general population. When research trials are
+conducted, people must volunteer to participate. This can lead to a
+selection bias, but it is usually negligible.</p>
+<p>The requirement of normality is satisfied for Mahon’s data. Though
+the sample size (n=27) is not quite up to 30, it is still fairly large.
+Furthermore, the histogram of differences indicates very little skew, so
+<span class="math inline">\(\bar d\)</span> will be approximately
+normal.</p>
 <center>
 <img src="Images/Mahon-Differences-Histogram.PNG">
 </center>
-<p>Even with a sample size less than 30, we can still conduct this test.</p>
+<p>Even with a sample size less than 30, we can still conduct this
+test.</p>
 <p><strong>Give the test statistic and its value</strong></p>
-<p>The test statistic for a test involving paired data when <span class="math inline">\(\sigma\)</span> is unknown is a <span class="math inline">\(t\)</span>. For this situation, the value is: <span class="math display">\[t= \frac{-6.8 - 0}{3.17/\sqrt{27}} =-11.145\]</span> See that this calculation matches the test statistic given in the Excel output. The degrees of freedom and p-value can also be found in the Excel output.</p>
+<p>The test statistic for a test involving paired data when <span
+class="math inline">\(\sigma\)</span> is unknown is a <span
+class="math inline">\(t\)</span>. For this situation, the value is:
+<span class="math display">\[t= \frac{-6.8 - 0}{3.17/\sqrt{27}}
+=-11.145\]</span> See that this calculation matches the test statistic
+given in the Excel output. The degrees of freedom and p-value can also
+be found in the Excel output.</p>
 <p><strong>State the degrees of freedom</strong></p>
 <p><span class="math display">\[df = 26\]</span></p>
-<p><strong>Mark the test statistic and <span class="math inline">\(P\)</span>-value on a graph of the sampling distribution</strong></p>
-<p>The test statistic and p-value can be found in the Excel output. The following calculations show conceptually how the p-value is calculated:</p>
-<p>The test statistic, <span class="math inline">\(t\)</span>, is labeled on the horizontal axis. The <span class="math inline">\(P\)</span>-value is the area to the left of <span class="math inline">\(t\)</span> under the curve. This area is so small, it is hiding out on the edges (not actuall visible) on this plot.</p>
+<p><strong>Mark the test statistic and <span
+class="math inline">\(P\)</span>-value on a graph of the sampling
+distribution</strong></p>
+<p>The test statistic and p-value can be found in the Excel output. The
+following calculations show conceptually how the p-value is
+calculated:</p>
+<p>The test statistic, <span class="math inline">\(t\)</span>, is
+labeled on the horizontal axis. The <span
+class="math inline">\(P\)</span>-value is the area to the left of <span
+class="math inline">\(t\)</span> under the curve. This area is so small,
+it is hiding out on the edges (not actuall visible) on this plot.</p>
 <p><img src="Images/Mahon-Applet.png"></p>
-<p>It is important to note that only the left tail is shaded, even though we cannot see it in this illustration.</p>
-<p><strong>Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance</strong></p>
+<p>It is important to note that only the left tail is shaded, even
+though we cannot see it in this illustration.</p>
+<p><strong>Find the <span class="math inline">\(P\)</span>-value and
+compare it to the level of significance</strong></p>
 <p><span class="math display">\[
 P\text{-value} = 1.06 \times 10^{-11} &lt; 0.05 = \alpha
 \]</span></p>
 <p><strong>State your decision</strong></p>
-<p>Since the <span class="math inline">\(P\)</span>-value is less than the level of significance, we reject the null hypothesis.</p>
+<p>Since the <span class="math inline">\(P\)</span>-value is less than
+the level of significance, we reject the null hypothesis.</p>
 <p><img src="Images/Step5.png"></p>
-<p><strong>Present your conclusion in an English sentence, relating the result to the context of the problem</strong></p>
-<p>There is sufficient evidence to suggest that the reduced calorie diet used in this study results in weight loss for middle-aged women. <br></p>
+<p><strong>Present your conclusion in an English sentence, relating the
+result to the context of the problem</strong></p>
+<p>There is sufficient evidence to suggest that the reduced calorie diet
+used in this study results in weight loss for middle-aged women.
+<br></p>
 <p><img src="Images/StepsAll.png"></p>
 </div>
 <div id="nosocomial-infections" class="section level3">
 <h3>Nosocomial Infections</h3>
-<p><span id="17:IntroToNosocomialInfections"></span></p>
+<p><span id="id_17:IntroToNosocomialInfections"></span></p>
 <p><img src="Images/Step1.png"></p>
 <p><strong>Summarize the relevant background information</strong></p>
-<p>Matched-pairs designs are not just used in pre- and post-test situations. They are often used in situations where it is not possible to randomly assign subjects to groups (for example, by a coin toss.) Nosocomial (pronounced: NO-suh-KOH-MEE-uhl) infections are infections that occur in hospitals, but are not a result of the original condition. An example of a nosocomial infection is when a heart attack patient develops a staph infection at the site of an IV injection. The infection was not caused by the heart attack, but it was acquired in the hospital. Nosocomial infections are very dangerous and may result in longer recovery times or increased death rates.</p>
+<p>Matched-pairs designs are not just used in pre- and post-test
+situations. They are often used in situations where it is not possible
+to randomly assign subjects to groups (for example, by a coin toss.)
+Nosocomial (pronounced: NO-suh-KOH-MEE-uhl) infections are infections
+that occur in hospitals, but are not a result of the original condition.
+An example of a nosocomial infection is when a heart attack patient
+develops a staph infection at the site of an IV injection. The infection
+was not caused by the heart attack, but it was acquired in the hospital.
+Nosocomial infections are very dangerous and may result in longer
+recovery times or increased death rates.</p>
 <p><img src="Images/Pneumonia-CDC-5803.png"></p>
-<p>Health care providers suspect that nosocomial infections increase the amount of time required to recover from an illness or injury. In controlled experiments, subjects (e.g., patients) are randomly assigned to treatments. However, it is not ethical to give patients a nosocomial infection in order to determine if it increases the duration of their hospital stay! At best, we can collect information on the duration of hospital stays for patients who acquire nosocomial infections and compare them to the duration of the stays for patients who do not.</p>
-<p>There are many factors that affect the amount of time that a patient will need to stay in the hospital, including: nature of illness, types of procedures conducted, overall health, gender, age, etc. How can health care practitioners assess the effect of a nosocomial infection in the presence of so many other variables?</p>
-<p>One way is to match a patient who develops a nosocomial infection with another one who has similar characteristics (illness, procedures, health, gender, age group, etc.) but does not develop a nosocomial infection. Now, the patients are matched into pairs with similar characteristics, where the principle difference between the members of each pair is whether or not they acquired a nosocomial infection.</p>
-<p>By pairing the patients according to specific characteristics, the researchers can now subtract to observe a difference in their recovery times. In this way, it is possible to assess if nosocomial infections increase the mean duration of a hospital stay. Some researchers conducted such a study in which 52 pairs of patients were matched based on clinical characteristics. A patient with a nosocomial infection was matched as closely as possible to a similar case where there was no nosocomial infection. Patients who died were excluded from the study <!--<cite>Vegas93</cite>-->. The lengths of the hospital stays (in days) for these patients are given in the file <a href="./Data/NosocomialInfections.xlsx">NosocomialInfections.xlsx</a>.</p>
-<p>The difference, <span class="math inline">\(d\)</span>, is defined as the duration of the hospital stay of the individual in the pair with the nosocomial infection minus the duration of the stay for the individual who did not get a nosocomial infection: <span class="math display">\[
+<p>Health care providers suspect that nosocomial infections increase the
+amount of time required to recover from an illness or injury. In
+controlled experiments, subjects (e.g., patients) are randomly assigned
+to treatments. However, it is not ethical to give patients a nosocomial
+infection in order to determine if it increases the duration of their
+hospital stay! At best, we can collect information on the duration of
+hospital stays for patients who acquire nosocomial infections and
+compare them to the duration of the stays for patients who do not.</p>
+<p>There are many factors that affect the amount of time that a patient
+will need to stay in the hospital, including: nature of illness, types
+of procedures conducted, overall health, gender, age, etc. How can
+health care practitioners assess the effect of a nosocomial infection in
+the presence of so many other variables?</p>
+<p>One way is to match a patient who develops a nosocomial infection
+with another one who has similar characteristics (illness, procedures,
+health, gender, age group, etc.) but does not develop a nosocomial
+infection. Now, the patients are matched into pairs with similar
+characteristics, where the principle difference between the members of
+each pair is whether or not they acquired a nosocomial infection.</p>
+<p>By pairing the patients according to specific characteristics, the
+researchers can now subtract to observe a difference in their recovery
+times. In this way, it is possible to assess if nosocomial infections
+increase the mean duration of a hospital stay. Some researchers
+conducted such a study in which 52 pairs of patients were matched based
+on clinical characteristics. A patient with a nosocomial infection was
+matched as closely as possible to a similar case where there was no
+nosocomial infection. Patients who died were excluded from the study
+<!--<cite>Vegas93</cite>-->. The lengths of the hospital stays (in days)
+for these patients are given in the file <a
+href="./Data/NosocomialInfections.xlsx">NosocomialInfections.xlsx</a>.</p>
+<p>The difference, <span class="math inline">\(d\)</span>, is defined as
+the duration of the hospital stay of the individual in the pair with the
+nosocomial infection minus the duration of the stay for the individual
+who did not get a nosocomial infection: <span class="math display">\[
 Difference=Infected - NotInfected
-\]</span> After computing the differences, we do not use the data for the individual groups at all. In fact, after we subtract, the hypothesis test is conducted (essentially) like a one-sample test for a single mean with <span class="math inline">\(\sigma\)</span> unknown.</p>
+\]</span> After computing the differences, we do not use the data for
+the individual groups at all. In fact, after we subtract, the hypothesis
+test is conducted (essentially) like a one-sample test for a single mean
+with <span class="math inline">\(\sigma\)</span> unknown.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="5" style="list-style-type: decimal">
-<li><strong>State the null and alternative hypotheses and the level of significance</strong></li>
+<li><strong>State the null and alternative hypotheses and the level of
+significance</strong></li>
 </ol>
-<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q5')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q5" style="display:none;">
 <center>
 <span class="math display">\[
@@ -962,12 +1200,18 @@ H_a: &amp;~~ \mu_d &gt; 0 \\
 \]</span>
 </center>
 <ul>
-<li>The level of significance was not specified in the problem. You can choose any value you wish. The most common choices are 0.05, 0.01 and 0.1. We will illustrate this example with <span class="math inline">\(\alpha = 0.05\)</span>.</li>
+<li>The level of significance was not specified in the problem. You can
+choose any value you wish. The most common choices are 0.05, 0.01 and
+0.1. We will illustrate this example with <span
+class="math inline">\(\alpha = 0.05\)</span>.</li>
 </ul>
 </div>
 <p> </p>
 </div>
-<p><br> In order to get the correct <span class="math inline">\(P\)</span>-value, we need to indicate the proper alternative hypothesis in Excel. In cell N6 be sure the “Greater Than” symbol is selected in the drop-down menu.</p>
+<p><br> In order to get the correct <span
+class="math inline">\(P\)</span>-value, we need to indicate the proper
+alternative hypothesis in Excel. In cell N6 be sure the “Greater Than”
+symbol is selected in the drop-down menu.</p>
 <p><img src="Images/TypeOfTest-GreaterThan-Excel.png"></p>
 <p><br></p>
 <p><img src="Images/Step2.png"></p>
@@ -978,10 +1222,17 @@ Answer the following questions:
 <ol start="6" style="list-style-type: decimal">
 <li><strong>Describe the data collection procedures</strong></li>
 </ol>
-<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q6')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q6" style="display:none;">
 <ul>
-<li>Data were collected by matching hospital records of individuals who were admitted to the hospital. Patient records were matched based on their overall health and the reason they were admitted to the hospital. In each pair, one patient developed a nosocomial infection and one did not. Since the characteristics of the patients in the first group determined which patients would be paired with them in the second group, the data represent dependent samples.</li>
+<li>Data were collected by matching hospital records of individuals who
+were admitted to the hospital. Patient records were matched based on
+their overall health and the reason they were admitted to the hospital.
+In each pair, one patient developed a nosocomial infection and one did
+not. Since the characteristics of the patients in the first group
+determined which patients would be paired with them in the second group,
+the data represent dependent samples.</li>
 </ul>
 </div>
 <p> </p>
@@ -995,7 +1246,8 @@ Answer the following questions:
 <ol start="7" style="list-style-type: decimal">
 <li><strong>Give the relevant summary statistics</strong></li>
 </ol>
-<a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q7')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q7" style="display:none;">
 <center>
 <span class="math display">\[
@@ -1009,9 +1261,11 @@ n &amp;= 52
 </div>
 <p><br></p>
 <ol start="8" style="list-style-type: decimal">
-<li><strong>Make an appropriate graph to illustrate the data</strong></li>
+<li><strong>Make an appropriate graph to illustrate the
+data</strong></li>
 </ol>
-<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q8')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q8" style="display:none;">
 <ul>
 <li>Present a graph showing the differences.
@@ -1031,20 +1285,27 @@ Answer the following questions:
 <ol start="9" style="list-style-type: decimal">
 <li><strong>Verify the requirements have been met</strong></li>
 </ol>
-<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q9')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q9" style="display:none;">
 <ul>
-<li>The data represent a random sample of patients, who have been matched based on their overall health and their current ailment. The sample size is large, so the mean of the differences <span class="math inline">\(\bar d\)</span> will be approximately normally distributed.</li>
+<li>The data represent a random sample of patients, who have been
+matched based on their overall health and their current ailment. The
+sample size is large, so the mean of the differences <span
+class="math inline">\(\bar d\)</span> will be approximately normally
+distributed.</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="10" style="list-style-type: decimal">
 <li><strong>Give the test statistic and its value</strong></li>
 </ol>
-<a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q10')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q10" style="display:none;">
 <ul>
-<li>The test statistic for a test for two means with paired data is a <span class="math inline">\(t\)</span>.</li>
+<li>The test statistic for a test for two means with paired data is a
+<span class="math inline">\(t\)</span>.</li>
 </ul>
 <p><span class="math display">\[t = 5.935\]</span></p>
 </div>
@@ -1052,7 +1313,8 @@ Answer the following questions:
 <ol start="11" style="list-style-type: decimal">
 <li><strong>State the degrees of freedom</strong></li>
 </ol>
-<a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q11')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q11" style="display:none;">
 <center>
 <span class="math display">\[
@@ -1062,24 +1324,35 @@ df = 51
 </div>
 <p><br></p>
 <ol start="12" style="list-style-type: decimal">
-<li><strong>Mark the test statistic and <span class="math inline">\(P\)</span>-value on a graph of the sampling distribution</strong></li>
+<li><strong>Mark the test statistic and <span
+class="math inline">\(P\)</span>-value on a graph of the sampling
+distribution</strong></li>
 </ol>
-<a href="javascript:showhide('Q12')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q12')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q12" style="display:none;">
 <ul>
-<li>The test statistic and p-value can be found in the Excel output and you should not need to calculate it by hand. Your sketch should show the value of <span class="math inline">\(t=5.935\)</span> on the horizontal axis, with only the tiny area to the right of 5.935 shaded.</li>
+<li>The test statistic and p-value can be found in the Excel output and
+you should not need to calculate it by hand. Your sketch should show the
+value of <span class="math inline">\(t=5.935\)</span> on the horizontal
+axis, with only the tiny area to the right of 5.935 shaded.</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="13" style="list-style-type: decimal">
-<li><strong>Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance</strong></li>
+<li><strong>Find the <span class="math inline">\(P\)</span>-value and
+compare it to the level of significance</strong></li>
 </ol>
-<a href="javascript:showhide('Q13')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q13')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q13" style="display:none;">
-The p-value can be found in the Excel output and you should not need to calculate it by hand. The calculation below shows how the p-value in Excel is being calculated:
+The p-value can be found in the Excel output and you should not need to
+calculate it by hand. The calculation below shows how the p-value in
+Excel is being calculated:
 <center>
 <span class="math display">\[
-P\textrm{-value}=\frac{\textrm{Sig. (2-tailed)}}{2}=\frac{2.592\times 10^{-7}}{2}=1.296 \times 16^{-7} = 0.0000001296 &lt; 0.05 = \alpha
+P\textrm{-value}=\frac{\textrm{Sig. (2-tailed)}}{2}=\frac{2.592\times
+10^{-7}}{2}=1.296 \times 16^{-7} = 0.0000001296 &lt; 0.05 = \alpha
 \]</span>
 </center>
 </div>
@@ -1087,10 +1360,12 @@ P\textrm{-value}=\frac{\textrm{Sig. (2-tailed)}}{2}=\frac{2.592\times 10^{-7}}{2
 <ol start="14" style="list-style-type: decimal">
 <li><strong>State your decision</strong></li>
 </ol>
-<a href="javascript:showhide('Q14')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q14')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q14" style="display:none;">
 <ul>
-<li>Since the <span class="math inline">\(P\)</span>-value is less than the level of significance, we reject the null hypothesis.</li>
+<li>Since the <span class="math inline">\(P\)</span>-value is less than
+the level of significance, we reject the null hypothesis.</li>
 </ul>
 </div>
 <p> </p>
@@ -1102,12 +1377,16 @@ Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="15" style="list-style-type: decimal">
-<li><strong>Present your conclusion in an English sentence, relating the result to the context of the problem</strong></li>
+<li><strong>Present your conclusion in an English sentence, relating the
+result to the context of the problem</strong></li>
 </ol>
-<a href="javascript:showhide('Q15')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q15')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q15" style="display:none;">
 <ul>
-<li>There is sufficient evidence to suggest that the mean duration of hospital stays is increased when a patient develops a nosocomial infection.</li>
+<li>There is sufficient evidence to suggest that the mean duration of
+hospital stays is increased when a patient develops a nosocomial
+infection.</li>
 </ul>
 </div>
 <p> </p>
@@ -1116,45 +1395,90 @@ Answer the following questions:
 </div>
 <div id="additional-worked-examples" class="section level3">
 <h3>Additional Worked Examples</h3>
-<p>Viewing additional examples can help your understanding. Click on the link below to see two more examples of hypothesis tests.</p>
-<a href="javascript:showhide('ae')"><span style="font-size:8pt;">Show/Hide Additional Examples</span></a>
+<p>Viewing additional examples can help your understanding. Click on the
+link below to see two more examples of hypothesis tests.</p>
+<a href="javascript:showhide('ae')"><span
+style="font-size:8pt;">Show/Hide Additional Examples</span></a>
 <div id="ae" style="display:none;">
 
 
 <p><img src="Images/StepsAll.png"></p>
-<div id="effect-of-stressful-classical-music-on-your-metabolism" class="section level4">
+<div id="effect-of-stressful-classical-music-on-your-metabolism"
+class="section level4">
 <h4>Effect of Stressful Classical Music on Your Metabolism</h4>
 <p><img src="Images/Step1.png"></p>
 <p><strong>Summarize the relevant background information</strong></p>
-<p>Obesity is a growing problem worldwide. Many scientists are seeking creative solutions to trim down this epidemic. Reduced energy expenditure is a potential cause of obesity.</p>
-<p>Resting Energy Expenditure (REE) is defined as the amount of energy a person would use if resting for 24 hours. In essence, this is the amount of energy that a person’s body will consume if they do not do any physical activity. REE is measured in terms of kilo-Joules per day (kJ/d).</p>
-<p>REE accounts for approximately 70 to 80% of all energy that a person will expend in a day. <!--<cite>Carlsson05</cite>--> If researchers can find simple, enjoyable activities that will increase REE, it may be possible to minimize the spread of obesity around the world.</p>
-<p>Ebba Carlsson and other researchers in Sweden investigated whether listening to stressful classical music increases a person’s REE. <!--<cite>Carlsson05</cite>--> Each subject’s REE was measuring during silence and again while listening to stressful classical music. Data representing their results are given in the file <a href="./Data/REE-ClassicalMusic.xlsx">REE-ClassicalMusic</a>.</p>
-<p>Notice that this is not a pre- and post-test, but it is still a test involving paired data. Two REE measurements were made for each subject: (1) in silence (<span class="math inline">\(REE_1\)</span>) and (2) while listening to stressful classical music (<span class="math inline">\(REE_2\)</span>).</p>
-<p><strong>State the null and alternative hypotheses and the level of significance</strong></p>
-<p>Since we are testing for an increase in the mean REE, we let <span class="math inline">\(d = REE_2 - REE_1\)</span>. Our alternative hypothesis will be that <span class="math inline">\(\mu_d &gt; 0\)</span>. The null and alternative hypotheses are: <span class="math display">\[
+<p>Obesity is a growing problem worldwide. Many scientists are seeking
+creative solutions to trim down this epidemic. Reduced energy
+expenditure is a potential cause of obesity.</p>
+<p>Resting Energy Expenditure (REE) is defined as the amount of energy a
+person would use if resting for 24 hours. In essence, this is the amount
+of energy that a person’s body will consume if they do not do any
+physical activity. REE is measured in terms of kilo-Joules per day
+(kJ/d).</p>
+<p>REE accounts for approximately 70 to 80% of all energy that a person
+will expend in a day. <!--<cite>Carlsson05</cite>--> If researchers can
+find simple, enjoyable activities that will increase REE, it may be
+possible to minimize the spread of obesity around the world.</p>
+<p>Ebba Carlsson and other researchers in Sweden investigated whether
+listening to stressful classical music increases a person’s REE.
+<!--<cite>Carlsson05</cite>--> Each subject’s REE was measuring during
+silence and again while listening to stressful classical music. Data
+representing their results are given in the file <a
+href="./Data/REE-ClassicalMusic.xlsx">REE-ClassicalMusic</a>.</p>
+<p>Notice that this is not a pre- and post-test, but it is still a test
+involving paired data. Two REE measurements were made for each subject:
+(1) in silence (<span class="math inline">\(REE_1\)</span>) and (2)
+while listening to stressful classical music (<span
+class="math inline">\(REE_2\)</span>).</p>
+<p><strong>State the null and alternative hypotheses and the level of
+significance</strong></p>
+<p>Since we are testing for an increase in the mean REE, we let <span
+class="math inline">\(d = REE_2 - REE_1\)</span>. Our alternative
+hypothesis will be that <span class="math inline">\(\mu_d &gt;
+0\)</span>. The null and alternative hypotheses are: <span
+class="math display">\[
 \begin{align}
 H_0: &amp;~~ \mu_d = 0 \\
 H_a: &amp;~~ \mu_d &gt; 0
 \end{align}
 \]</span></p>
-<p>Note that the data set has the columns listed with <span class="math inline">\(d = REE_1\)</span> in the first column and <span class="math inline">\(d = REE_2\)</span> in the second column. You will need to switch the order of the columns when pasting them into the Excel Toolbox.</p>
-<p>We will use the <span class="math inline">\(\alpha = 0.1\)</span> level of significance.</p>
+<p>Note that the data set has the columns listed with <span
+class="math inline">\(d = REE_1\)</span> in the first column and <span
+class="math inline">\(d = REE_2\)</span> in the second column. You will
+need to switch the order of the columns when pasting them into the Excel
+Toolbox.</p>
+<p>We will use the <span class="math inline">\(\alpha = 0.1\)</span>
+level of significance.</p>
 <p><img src="Images/Step2.png"></p>
 <p><strong>Describe the data collection procedures</strong></p>
-<p>The REE was measured by a technique called “indirect calorimetry” using a Deltatrac II Metabolic Monitor. <!--<cite>Carlsson05</cite>--> The REE was measured twice for each person: while the person was (1) resting in silence or (2) resting while listening to stressful classical music. These trials were conducted in random order. Some of the subjects had the “silence” treatment first, and others had the “stressful” treatment first.</p>
+<p>The REE was measured by a technique called “indirect calorimetry”
+using a Deltatrac II Metabolic Monitor. <!--<cite>Carlsson05</cite>-->
+The REE was measured twice for each person: while the person was (1)
+resting in silence or (2) resting while listening to stressful classical
+music. These trials were conducted in random order. Some of the subjects
+had the “silence” treatment first, and others had the “stressful”
+treatment first.</p>
 <p><img src="Images/Step3.png"></p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="16" style="list-style-type: decimal">
-<li>We will define the difference in REE by subtracting the REE in silence from the REE while listening to stressful classical music. If listening to stressful classical music actually increases the mean REE, would you expect the value of the difference to be typically positive or negative?</li>
+<li>We will define the difference in REE by subtracting the REE in
+silence from the REE while listening to stressful classical music. If
+listening to stressful classical music actually increases the mean REE,
+would you expect the value of the difference to be typically positive or
+negative?</li>
 </ol>
-<a href="javascript:showhide('Q16')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q16')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q16" style="display:none;">
 <ul>
-<li>If the REE is higher while listening to classical music than while resting in silence, we would expect the value of the difference to be positive. In other words the following difference would tend to be positive:</li>
+<li>If the REE is higher while listening to classical music than while
+resting in silence, we would expect the value of the difference to be
+positive. In other words the following difference would tend to be
+positive:</li>
 </ul>
 <p><span class="math display">\[
 Difference = Stressful - Silence
@@ -1162,9 +1486,11 @@ Difference = Stressful - Silence
 </div>
 <p><br></p>
 <ol start="17" style="list-style-type: decimal">
-<li>Compute the difference in REE for each person. What is the value of the difference for the first person listed in the data file?</li>
+<li>Compute the difference in REE for each person. What is the value of
+the difference for the first person listed in the data file?</li>
 </ol>
-<a href="javascript:showhide('Q17')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q17')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q17" style="display:none;">
 <ul>
 <li><p>50 kJ/d</p></li>
@@ -1177,11 +1503,16 @@ Difference = Stressful - Silence
 <p><br></p>
 <p><strong>Give the relevant summary statistics</strong></p>
 <ol start="18" style="list-style-type: decimal">
-<li>Report the number of subjects (<span class="math inline">\(n\)</span>), the mean difference (<span class="math inline">\(\bar d\)</span>), and the standard deviation of the differences (<span class="math inline">\(s_d\)</span>).</li>
+<li>Report the number of subjects (<span
+class="math inline">\(n\)</span>), the mean difference (<span
+class="math inline">\(\bar d\)</span>), and the standard deviation of
+the differences (<span class="math inline">\(s_d\)</span>).</li>
 </ol>
-<a href="javascript:showhide('Q18')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q18')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q18" style="display:none;">
-The following image illustrates the Excel file used to get the summary statistics.
+The following image illustrates the Excel file used to get the summary
+statistics.
 <center>
 <img src="Images/REE-Output-Excel_Toolbox.png">
 </center>
@@ -1201,7 +1532,10 @@ s_d &amp;= 160~\text{kJ}
 <p><br></p>
 <p><img src="Images/Step4.png"></p>
 <p><strong>Verify the requirements have been met</strong></p>
-<p>We can consider the sample representative of the population. Because our sample size (n=40) of differences is greater than 30, we can be sure the sampling distribution of <span class="math inline">\(\bar d\)</span> will be normal.</p>
+<p>We can consider the sample representative of the population. Because
+our sample size (n=40) of differences is greater than 30, we can be sure
+the sampling distribution of <span class="math inline">\(\bar d\)</span>
+will be normal.</p>
 <p>The requirements for this test appear to have been satisfied.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
@@ -1210,10 +1544,12 @@ Answer the following questions:
 <ol start="20" style="list-style-type: decimal">
 <li><strong>Give the test statistic and its value</strong></li>
 </ol>
-<a href="javascript:showhide('Q20')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q20')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q20" style="display:none;">
 <ul>
-<li>The test statistic for a test for two means with paired data is a <span class="math inline">\(t\)</span>.</li>
+<li>The test statistic for a test for two means with paired data is a
+<span class="math inline">\(t\)</span>.</li>
 </ul>
 <p><span class="math display">\[t=0.793\]</span></p>
 </div>
@@ -1221,7 +1557,8 @@ Answer the following questions:
 <ol start="21" style="list-style-type: decimal">
 <li><strong>State the degrees of freedom</strong></li>
 </ol>
-<a href="javascript:showhide('Q21')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q21')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q21" style="display:none;">
 <center>
 <span class="math display">\[
@@ -1230,12 +1567,17 @@ df = 39
 </center>
 </div>
 <ol start="22" style="list-style-type: decimal">
-<li><strong>Mark the test statistic and <span class="math inline">\(P\)</span>-value on a graph of the sampling distribution</strong></li>
+<li><strong>Mark the test statistic and <span
+class="math inline">\(P\)</span>-value on a graph of the sampling
+distribution</strong></li>
 </ol>
-<a href="javascript:showhide('Q22')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q22')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q22" style="display:none;">
 <ul>
-<li>The test statistic is plotted on the horizontal axis. The <span class="math inline">\(P\)</span>-value is shaded in green. The same value can be found on the Excel output in cell O10.</li>
+<li>The test statistic is plotted on the horizontal axis. The <span
+class="math inline">\(P\)</span>-value is shaded in green. The same
+value can be found on the Excel output in cell O10.</li>
 </ul>
 <center>
 <img src="Images/REE-Applet.png">
@@ -1243,26 +1585,36 @@ df = 39
 </div>
 <p><br></p>
 <ol start="23" style="list-style-type: decimal">
-<li><strong>Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance</strong></li>
+<li><strong>Find the <span class="math inline">\(P\)</span>-value and
+compare it to the level of significance</strong></li>
 </ol>
-<a href="javascript:showhide('Q23')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q23')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q23" style="display:none;">
 <center>
 <!--$$ P\textrm{-value}=\frac{0.433}{2}=0.216$$-->
-<span class="math inline">\(P\textrm{-value}=0.2163 &gt; 0.1 = \alpha\)</span>
+<span class="math inline">\(P\textrm{-value}=0.2163 &gt; 0.1 =
+\alpha\)</span>
 </center>
 <ul>
-<li>Notice that the <span class="math inline">\(P\)</span>-value is half as large for a one-tailed test as it would have been for a two-tailed test. Since we have a one-sided alternative hypothesis, we are only interested in the right tail of the <span class="math inline">\(t\)</span>-distribution.</li>
+<li>Notice that the <span class="math inline">\(P\)</span>-value is half
+as large for a one-tailed test as it would have been for a two-tailed
+test. Since we have a one-sided alternative hypothesis, we are only
+interested in the right tail of the <span
+class="math inline">\(t\)</span>-distribution.</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="24" style="list-style-type: decimal">
 <li><strong>State your decision</strong></li>
 </ol>
-<a href="javascript:showhide('Q24')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q24')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q24" style="display:none;">
 <ul>
-<li>Since the <span class="math inline">\(P\)</span>-value is greater than the level of significance, we fail to reject the null hypothesis.</li>
+<li>Since the <span class="math inline">\(P\)</span>-value is greater
+than the level of significance, we fail to reject the null
+hypothesis.</li>
 </ul>
 </div>
 <p> </p>
@@ -1274,36 +1626,66 @@ Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="25" style="list-style-type: decimal">
-<li><strong>Present your conclusion in an English sentence, relating the result to the context of the problem</strong></li>
+<li><strong>Present your conclusion in an English sentence, relating the
+result to the context of the problem</strong></li>
 </ol>
-<a href="javascript:showhide('Q25')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q25')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q25" style="display:none;">
 <ul>
-<li>There is insufficient evidence to suggest that the mean REE is <em>increased</em> by listening to stressful classical music. Lying still and listening to stressful classical music is probably not the best way to increase your metabolism!</li>
+<li>There is insufficient evidence to suggest that the mean REE is
+<em>increased</em> by listening to stressful classical music. Lying
+still and listening to stressful classical music is probably not the
+best way to increase your metabolism!</li>
 </ul>
 </div>
 <p> </p>
 </div>
 <p><br></p>
-<p>Note that we did not say we “accept” the null hypothesis. We do not know that listening to stressful classical music has no effect on a person’s REE. Based on the data available to us, we were not able to reject the assertion that this type of music does not increase the mean REE.   <br></p>
+<p>Note that we did not say we “accept” the null hypothesis. We do not
+know that listening to stressful classical music has no effect on a
+person’s REE. Based on the data available to us, we were not able to
+reject the assertion that this type of music does not increase the mean
+REE.   <br></p>
 <p><img src="Images/StepsAll.png"></p>
 </div>
 <div id="cost-of-airline-tickets" class="section level4">
 <h4>Cost of Airline Tickets</h4>
 <p><img src="Images/Step1.png"></p>
 <p><strong>Summarize the relevant background information</strong></p>
-<p>Pressures of supply and demand act directly on the prices for an airline ticket. As the seats available on the plane begin to fill, airlines raise the price. If seats on a flight do not sell well, an airline may discount the tickets or even cancel the flight. Business travelers frequently demand travel booked on short notice. They must pay the current price. Typically, tourists book their flights well in advance, hoping to buy tickets before the price rises. We will consider the cost of a one-way ticket from London’s Heathrow Airport to a variety of destinations in Europe.</p>
-<p>Allie Henrich, a BYU-Idaho student, compared the lowest published ticket prices of one-way flights from Heathrow to various destinations in Europe. Using Travelocity.com, she recorded the lowest published fares for nonstop midweek flights booked either 14 days in advance or 90 days in advance. The prices (in US dollars) are given in the file <a href="./Data/DirectFlightCosts.xlsx">DirectFlightCosts.xlsx</a>. Notice that for some destinations, flights were not available.</p>
-<p>The data are paired, because we are measuring the costs twice for each city. The 14-day ticket price is paired with the 90-day price for each city.</p>
-<p>We will conduct a hypothesis test to determine if there is a difference in the cost of the nonstop flights when tickets are purchased 14 days in advance compared to 90 days in advance. We will use the 0.01 level of significance.</p>
+<p>Pressures of supply and demand act directly on the prices for an
+airline ticket. As the seats available on the plane begin to fill,
+airlines raise the price. If seats on a flight do not sell well, an
+airline may discount the tickets or even cancel the flight. Business
+travelers frequently demand travel booked on short notice. They must pay
+the current price. Typically, tourists book their flights well in
+advance, hoping to buy tickets before the price rises. We will consider
+the cost of a one-way ticket from London’s Heathrow Airport to a variety
+of destinations in Europe.</p>
+<p>Allie Henrich, a BYU-Idaho student, compared the lowest published
+ticket prices of one-way flights from Heathrow to various destinations
+in Europe. Using Travelocity.com, she recorded the lowest published
+fares for nonstop midweek flights booked either 14 days in advance or 90
+days in advance. The prices (in US dollars) are given in the file <a
+href="./Data/DirectFlightCosts.xlsx">DirectFlightCosts.xlsx</a>. Notice
+that for some destinations, flights were not available.</p>
+<p>The data are paired, because we are measuring the costs twice for
+each city. The 14-day ticket price is paired with the 90-day price for
+each city.</p>
+<p>We will conduct a hypothesis test to determine if there is a
+difference in the cost of the nonstop flights when tickets are purchased
+14 days in advance compared to 90 days in advance. We will use the 0.01
+level of significance.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="26" style="list-style-type: decimal">
-<li><strong>State the null and alternative hypotheses and the level of significance</strong></li>
+<li><strong>State the null and alternative hypotheses and the level of
+significance</strong></li>
 </ol>
-<a href="javascript:showhide('Q26')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q26')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q26" style="display:none;">
 <center>
 <span class="math display">\[
@@ -1326,11 +1708,19 @@ Answer the following questions:
 <ol start="27" style="list-style-type: decimal">
 <li><strong>Describe the data collection procedures</strong></li>
 </ol>
-<a href="javascript:showhide('Q27')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q27')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q27" style="display:none;">
 <ul>
-<li>The data were collected using the website Travelocity.com. The lowest advertized ticket prices were recorded for nonstop flights from Heathrow Airport. All prices were recorded in US dollars. Data are provided on the cost of a nonstop ticket purchased with 14 days notice compared to 90 days notice.</li>
-<li>We will compute the difference in the costs for each destination. Some destinations did not include both flight options. In this case, the difference is not computed and the data are omitted from the analysis.</li>
+<li>The data were collected using the website Travelocity.com. The
+lowest advertized ticket prices were recorded for nonstop flights from
+Heathrow Airport. All prices were recorded in US dollars. Data are
+provided on the cost of a nonstop ticket purchased with 14 days notice
+compared to 90 days notice.</li>
+<li>We will compute the difference in the costs for each destination.
+Some destinations did not include both flight options. In this case, the
+difference is not computed and the data are omitted from the
+analysis.</li>
 </ul>
 </div>
 <p> </p>
@@ -1344,14 +1734,19 @@ Answer the following questions:
 <ol start="28" style="list-style-type: decimal">
 <li><strong>Give the relevant summary statistics</strong></li>
 </ol>
-<a href="javascript:showhide('Q28')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q28')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q28" style="display:none;">
 <ul>
-<li>The differences were computed by subtracting the 90-day price from the 14-day price. For example, for the Adnan Menderes Airport, we have</li>
+<li>The differences were computed by subtracting the 90-day price from
+the 14-day price. For example, for the Adnan Menderes Airport, we
+have</li>
 </ul>
 <p><span class="math display">\[202.09 - 234.19 = -32.10\]</span></p>
 <ul>
-<li>You may have chosen to subtract in the opposite order. If so, you would have obtained a value of <span class="math inline">\(32.10\)</span> dollars.</li>
+<li>You may have chosen to subtract in the opposite order. If so, you
+would have obtained a value of <span
+class="math inline">\(32.10\)</span> dollars.</li>
 </ul>
 <p><span class="math display">\[
 \begin{align}
@@ -1362,21 +1757,30 @@ s_d &amp;= 136.267
 \]</span></p>
 <br>
 <div class="message Note">
-If you defined your difference as the 90-day price minus the 14-day price, then you would have observed a value of <span class="math inline">\(\bar d = -24.612\)</span> dollars for the mean of the differences. You were not instructed on the order in which to subtract, so this is a correct response. The value for the standard deviation of the difference and the number of observations (pairs) will be the same as is given above.
+If you defined your difference as the 90-day price minus the 14-day
+price, then you would have observed a value of <span
+class="math inline">\(\bar d = -24.612\)</span> dollars for the mean of
+the differences. You were not instructed on the order in which to
+subtract, so this is a correct response. The value for the standard
+deviation of the difference and the number of observations (pairs) will
+be the same as is given above.
 </div>
 <p><br> <br></p>
 </div>
 <p><br></p>
 <ol start="29" style="list-style-type: decimal">
-<li><strong>Make an appropriate graph to illustrate the data</strong></li>
+<li><strong>Make an appropriate graph to illustrate the
+data</strong></li>
 </ol>
-<a href="javascript:showhide('Q29')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q29')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q29" style="display:none;">
 <center>
 <img src="Images/DirectFlightCosts-Histogram1-Excel.png">
 </center>
 <ul>
-<li>If you defined your difference as the 90-day price minus the 14-day price, then you would have the following histogram:
+<li>If you defined your difference as the 90-day price minus the 14-day
+price, then you would have the following histogram:
 <center>
 <img src="Images/DirectFlightCosts-Histogram2-Excel.png">
 </center></li>
@@ -1393,32 +1797,40 @@ Answer the following questions:
 <ol start="30" style="list-style-type: decimal">
 <li><strong>Verify the requirements have been met</strong></li>
 </ol>
-<a href="javascript:showhide('Q30')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q30')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q30" style="display:none;">
 <!-- This is not a simple random sample of airports.  Rather, the sample was chosen from the list of the busiest airports in Europe.  However, we are not making an inference on the airports but on the difference in the cost of the flights. -->
 <ul>
-<li>The sample size is large, so we can conclude that the sample mean, <span class="math inline">\(\bar d\)</span> is normally distributed.</li>
+<li>The sample size is large, so we can conclude that the sample mean,
+<span class="math inline">\(\bar d\)</span> is normally
+distributed.</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="31" style="list-style-type: decimal">
 <li><strong>Give the test statistic and its value</strong></li>
 </ol>
-<a href="javascript:showhide('Q31')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q31')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q31" style="display:none;">
 <ul>
-<li>The test statistic for a test for two means with paired data is a <span class="math inline">\(t\)</span>.</li>
+<li>The test statistic for a test for two means with paired data is a
+<span class="math inline">\(t\)</span>.</li>
 </ul>
 <p><span class="math display">\[t=1.685\]</span></p>
 <ul>
-<li>If you computed the difference as the 90-day price minus the 14-day price, the value of your test statistic is <span class="math inline">\(-1.685\)</span>.</li>
+<li>If you computed the difference as the 90-day price minus the 14-day
+price, the value of your test statistic is <span
+class="math inline">\(-1.685\)</span>.</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="32" style="list-style-type: decimal">
 <li><strong>State the degrees of freedom</strong></li>
 </ol>
-<a href="javascript:showhide('Q32')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q32')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q32" style="display:none;">
 <center>
 <span class="math display">\[
@@ -1428,12 +1840,16 @@ df = 86
 </div>
 <p><br></p>
 <ol start="33" style="list-style-type: decimal">
-<li><strong>Mark the test statistic and <span class="math inline">\(P\)</span>-value on a graph of the sampling distribution</strong></li>
+<li><strong>Mark the test statistic and <span
+class="math inline">\(P\)</span>-value on a graph of the sampling
+distribution</strong></li>
 </ol>
-<a href="javascript:showhide('Q33')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q33')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q33" style="display:none;">
 <ul>
-<li>The test statistic is plotted on the horizontal axis. The <span class="math inline">\(P\)</span>-value is shaded in green:
+<li>The test statistic is plotted on the horizontal axis. The <span
+class="math inline">\(P\)</span>-value is shaded in green:
 <center>
 <img src="Images/DirectFlightCosts-Applet.png">
 </center></li>
@@ -1441,24 +1857,30 @@ df = 86
 </div>
 <p><br></p>
 <ol start="34" style="list-style-type: decimal">
-<li><strong>Find the <span class="math inline">\(P\)</span>-value and compare it to the level of significance</strong></li>
+<li><strong>Find the <span class="math inline">\(P\)</span>-value and
+compare it to the level of significance</strong></li>
 </ol>
-<a href="javascript:showhide('Q34')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q34')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q34" style="display:none;">
 <center>
 <span class="math display">\[
 P\textrm{-value}= 0.096 &gt; 0.01 = \alpha
 \]</span>
 </center>
-<p>The <span class="math inline">\(P\)</span>-value will be 0.096, no matter what order you subtracted the values.</p>
+<p>The <span class="math inline">\(P\)</span>-value will be 0.096, no
+matter what order you subtracted the values.</p>
 </div>
 <p><br></p>
 <ol start="35" style="list-style-type: decimal">
 <li><strong>State your decision</strong></li>
 </ol>
-<a href="javascript:showhide('Q35')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q35')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q35" style="display:none;">
-<p>Since the <span class="math inline">\(P\)</span>-value is greater than the level of significance, we fail to reject the null hypothesis.</p>
+<p>Since the <span class="math inline">\(P\)</span>-value is greater
+than the level of significance, we fail to reject the null
+hypothesis.</p>
 </div>
 <p> </p>
 </div>
@@ -1469,12 +1891,16 @@ Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="36" style="list-style-type: decimal">
-<li><strong>Present your conclusion in an English sentence, relating the result to the context of the problem</strong></li>
+<li><strong>Present your conclusion in an English sentence, relating the
+result to the context of the problem</strong></li>
 </ol>
-<a href="javascript:showhide('Q36')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q36')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q36" style="display:none;">
 <ul>
-<li>There is insufficient evidence to suggest that there is a difference in the mean cost of airline tickets 14-days versus 90-days in advance.</li>
+<li>There is insufficient evidence to suggest that there is a difference
+in the mean cost of airline tickets 14-days versus 90-days in
+advance.</li>
 </ul>
 </div>
 <p> </p>
@@ -1485,21 +1911,31 @@ Answer the following questions:
 </div>
 <div id="confidence-intervals" class="section level2">
 <h2>Confidence Intervals</h2>
-<p>We can compute a confidence interval for the true mean of the differences for paired data. After the differences between two paired data sets have been calculated, we can create a confidence interval for the true mean of the differences. To do this, we follow the instructions for creating a confidence interval for a one mean with <span class="math inline">\(\sigma\)</span> unknown, but we use the column of differences as the data set.</p>
+<p>We can compute a confidence interval for the true mean of the
+differences for paired data. After the differences between two paired
+data sets have been calculated, we can create a confidence interval for
+the true mean of the differences. To do this, we follow the instructions
+for creating a confidence interval for a one mean with <span
+class="math inline">\(\sigma\)</span> unknown, but we use the column of
+differences as the data set.</p>
 <div class="SoftwareHeading">
 Excel Instructions
 </div>
 <div class="Summary">
-<p><strong>To calculate confidence intervals for the true mean of the difference in Excel, do the following</strong>:</p>
+<p><strong>To calculate confidence intervals for the true mean of the
+difference in Excel, do the following</strong>:</p>
 <ul>
-<li>Open the file <a href="./Data/Math221StatisticsToolbox.xltx">Math 221 Statistics Toolbox</a></li>
+<li>Open the file <a href="./Data/Math221StatisticsToolbox.xltx">Math
+221 Statistics Toolbox</a></li>
 <li>Click on the tab labeled “Paired Data t-test”</li>
 <li>Enter the columns of paired data into column A and B</li>
 <li>Set the desired confidence level. <br></li>
 </ul>
 </div>
 <p><br></p>
-<p>The requirements for creating a confidence interval for the difference of means are the same as the requirements for the hypothesis test. We assume:</p>
+<p>The requirements for creating a confidence interval for the
+difference of means are the same as the requirements for the hypothesis
+test. We assume:</p>
 <ul>
 <li>A simple random sample was drawn from the population</li>
 <li>The mean of the differences is normally distributed</li>
@@ -1510,20 +1946,34 @@ Excel Instructions
 <h3>Mountain Pine Beetle Attacks</h3>
 <p><img src="Images/Step1.png"></p>
 <p><strong>Summarize the relevant background information</strong></p>
-<p>Mountain pine beetles are small insects that bore into the bark of trees. The female beetles that first infest the tree emit pheromones to attract other beetles. In response to the pheromones, many beetles bore into the tree and ultimately kill it. The insects can destroy large tree stands within one year.</p>
-<p>Lodgepole pine (<em>Pinus contorta</em> Dougl.ex Loud.) are particularly susceptible to mountain pine beetle (<em>Dendroctonus ponderosae</em> Hopkins) outbreaks. The image above shows the destruction that can be caused by these insects. The large brown patches are pines that have been killed by the beetles.</p>
+<p>Mountain pine beetles are small insects that bore into the bark of
+trees. The female beetles that first infest the tree emit pheromones to
+attract other beetles. In response to the pheromones, many beetles bore
+into the tree and ultimately kill it. The insects can destroy large tree
+stands within one year.</p>
+<p>Lodgepole pine (<em>Pinus contorta</em> Dougl.ex Loud.) are
+particularly susceptible to mountain pine beetle (<em>Dendroctonus
+ponderosae</em> Hopkins) outbreaks. The image above shows the
+destruction that can be caused by these insects. The large brown patches
+are pines that have been killed by the beetles.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="37" style="list-style-type: decimal">
-<li>The mountain pine beetle threatens many forests in the United States. These tiny insects are only 0.5 cm long–about the size of a grain of rice. This photo of a mountain pine beetle is magnified greatly. These little creatures can destroy a large, healthy forest. Can you think of a spiritual parallel?</li>
+<li>The mountain pine beetle threatens many forests in the United
+States. These tiny insects are only 0.5 cm long–about the size of a
+grain of rice. This photo of a mountain pine beetle is magnified
+greatly. These little creatures can destroy a large, healthy forest. Can
+you think of a spiritual parallel?</li>
 </ol>
 <p><img src="Images/MountainPineBeetle2-1306004.png"></p>
-<a href="javascript:showhide('Q37')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q37')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q37" style="display:none;">
 <ul>
-<li>There are many great diverse answers that could be presented. Please share your thoughts with someone in your group.</li>
+<li>There are many great diverse answers that could be presented. Please
+share your thoughts with someone in your group.</li>
 </ul>
 <!--: The story of President Hinckley’s axe head in the notch of a tree provides a similar analogy.-->
 </div>
@@ -1532,7 +1982,14 @@ Answer the following questions:
 <p><br></p>
 <p><img src="Images/Step2.png"></p>
 <p><strong>Describe the data collection procedures</strong></p>
-<p>In a study conducted in the Arapaho National Forest in Colorado, researchers from the USDA Forest Service studied the effect of pine beetle outbreaks on the average number of trees in an area. <!--<cite>Klutsch09</cite>--> The researchers counted the number of established trees per hectare before a pine beetle outbreak and seven years after an outbreak. (One hectare is an area of 100 meters by 100 meters.) Data representative of their observations are given in the file <a href="./Data/PineBeetle.xlsx">PineBeetle.xlsx</a>.</p>
+<p>In a study conducted in the Arapaho National Forest in Colorado,
+researchers from the USDA Forest Service studied the effect of pine
+beetle outbreaks on the average number of trees in an area.
+<!--<cite>Klutsch09</cite>--> The researchers counted the number of
+established trees per hectare before a pine beetle outbreak and seven
+years after an outbreak. (One hectare is an area of 100 meters by 100
+meters.) Data representative of their observations are given in the file
+<a href="./Data/PineBeetle.xlsx">PineBeetle.xlsx</a>.</p>
 <p><img src="Images/Step3.png"></p>
 <div class="QuestionsHeading">
 Answer the following questions:
@@ -1540,37 +1997,62 @@ Answer the following questions:
 <div class="Questions">
 <p><strong>Give the relevant summary statistics</strong></p>
 <ol start="38" style="list-style-type: decimal">
-<li>Find the mean and standard deviation of the number of trees per hectare <em>before</em> the pine beetle outbreak. How would you describe the density of the trees in this forest? Express this in terms that make sense to you.</li>
+<li>Find the mean and standard deviation of the number of trees per
+hectare <em>before</em> the pine beetle outbreak. How would you describe
+the density of the trees in this forest? Express this in terms that make
+sense to you.</li>
 </ol>
-<a href="javascript:showhide('Q38')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q38')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q38" style="display:none;">
 <ul>
-<li>The mean was 1028.41 trees per hectare and the standard deviation was 57.03 trees per hectare. Note that the values were rounded to two decimal places, since the data were given to one decimal place.</li>
-<li>Answers will vary regarding the description of the density. Here is one possible response.</li>
-<li>There is roughly one tree every <span class="math inline">\(\frac{100 \times 100}{1028.41} = 9.7\)</span> square meters. In other words, on average, each tree would have a space of about <span class="math inline">\(\sqrt{9.7} = 3.1\)</span> meters long and 3.1 meters wide in which to grow.</li>
+<li>The mean was 1028.41 trees per hectare and the standard deviation
+was 57.03 trees per hectare. Note that the values were rounded to two
+decimal places, since the data were given to one decimal place.</li>
+<li>Answers will vary regarding the description of the density. Here is
+one possible response.</li>
+<li>There is roughly one tree every <span
+class="math inline">\(\frac{100 \times 100}{1028.41} = 9.7\)</span>
+square meters. In other words, on average, each tree would have a space
+of about <span class="math inline">\(\sqrt{9.7} = 3.1\)</span> meters
+long and 3.1 meters wide in which to grow.</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="39" style="list-style-type: decimal">
-<li>Repeat question 38 for the number of trees per hectare <em>after</em> the outbreak.</li>
+<li>Repeat question 38 for the number of trees per hectare
+<em>after</em> the outbreak.</li>
 </ol>
-<a href="javascript:showhide('Q39')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q39')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q39" style="display:none;">
 <ul>
-<li>The mean was 592.87 trees per hectare and the standard deviation was 45.31 trees per hectare.</li>
-<li>Answers will vary regarding the description of the density. Here is one possible response.</li>
-<li>The trees are about half as dense as they were before the pine beetle infestation. About <span class="math inline">\(\frac{592.87}{1028.41} = 0.58 = 58\%\)</span> of the trees remained, so <span class="math inline">\(100\% - 58\% = 42\%\)</span> of the trees were killed by the pine beetles!</li>
+<li>The mean was 592.87 trees per hectare and the standard deviation was
+45.31 trees per hectare.</li>
+<li>Answers will vary regarding the description of the density. Here is
+one possible response.</li>
+<li>The trees are about half as dense as they were before the pine
+beetle infestation. About <span
+class="math inline">\(\frac{592.87}{1028.41} = 0.58 = 58\%\)</span> of
+the trees remained, so <span class="math inline">\(100\% - 58\% =
+42\%\)</span> of the trees were killed by the pine beetles!</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="40" style="list-style-type: decimal">
-<li>Find the differences by subtracting the “before” counts from the “after” counts:</li>
+<li>Find the differences by subtracting the “before” counts from the
+“after” counts:</li>
 </ol>
-<p><span class="math display">\[Difference = After - Before\]</span> <strong>You will need to change the order of the columns so that “after” is in column A, and “before” is in column B in the Math221 Statistics Toolbox.</strong> The differences are located in column C.</p>
+<p><span class="math display">\[Difference = After - Before\]</span>
+<strong>You will need to change the order of the columns so that “after”
+is in column A, and “before” is in column B in the Math221 Statistics
+Toolbox.</strong> The differences are located in column C.</p>
 <ul>
-<li>For these differences, report the mean, the standard deviation, and the sample size.</li>
+<li>For these differences, report the mean, the standard deviation, and
+the sample size.</li>
 </ul>
-<a href="javascript:showhide('Q40')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q40')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q40" style="display:none;">
 <center>
 <strong>Summary Statistics:</strong>
@@ -1585,11 +2067,13 @@ Answer the following questions:
 <tbody>
 <tr class="odd">
 <td align="center">Mean:</td>
-<td align="center"><span class="math inline">\(\bar d = -435.535\)</span></td>
+<td align="center"><span class="math inline">\(\bar d =
+-435.535\)</span></td>
 </tr>
 <tr class="even">
 <td align="center">Standard Deviation:</td>
-<td align="center"><span class="math inline">\(s_d = 17.082\)</span></td>
+<td align="center"><span class="math inline">\(s_d =
+17.082\)</span></td>
 </tr>
 <tr class="odd">
 <td align="center">Sample Size:</td>
@@ -1616,9 +2100,11 @@ Answer the following questions:
 <p><br></p>
 <p><strong>Make an appropriate graph to illustrate the data</strong></p>
 <ol start="41" style="list-style-type: decimal">
-<li>Create a histogram of the differences in the density of the trees.</li>
+<li>Create a histogram of the differences in the density of the
+trees.</li>
 </ol>
-<a href="javascript:showhide('Q41')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q41')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q41" style="display:none;">
 <p><img src="Images/PineBeetleDiff-Histogram-Excel.png"></p>
 </div>
@@ -1633,23 +2119,31 @@ Answer the following questions:
 <ol start="42" style="list-style-type: decimal">
 <li><strong>Verify the requirements have been met.</strong></li>
 </ol>
-<a href="javascript:showhide('Q42')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q42')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q42" style="display:none;">
 <ul>
 <li><ol style="list-style-type: lower-alpha">
-<li>It is not explicitly stated, but we assume the plots of land were selected at random.</li>
+<li>It is not explicitly stated, but we assume the plots of land were
+selected at random.</li>
 </ol></li>
 <li><ol start="2" style="list-style-type: lower-alpha">
-<li>For the pine beetle data, the histogram indicates that the data are not normally distributed. However, since the sample size is large (<span class="math inline">\(n = 170\)</span>), we can know the sample mean is normally distributed.</li>
+<li>For the pine beetle data, the histogram indicates that the data are
+not normally distributed. However, since the sample size is large (<span
+class="math inline">\(n = 170\)</span>), we can know the sample mean is
+normally distributed.</li>
 </ol></li>
-<li>The requirements for creating the confidence interval seem to be satisfied.</li>
+<li>The requirements for creating the confidence interval seem to be
+satisfied.</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="43" style="list-style-type: decimal">
-<li><strong>Find the confidence interval</strong>. Use the 95% level of confidence.</li>
+<li><strong>Find the confidence interval</strong>. Use the 95% level of
+confidence.</li>
 </ol>
-<a href="javascript:showhide('Q43')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q43')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q43" style="display:none;">
 <center>
 <span class="math inline">\((-438.121,~ -432.948)\)</span>
@@ -1659,8 +2153,17 @@ Answer the following questions:
 </div>
 <p><br></p>
 <p><img src="Images/Step5.png"></p>
-<p><strong>Present your observations in an English sentence, relating the result to the context of the problem</strong></p>
-<p>Interpret the confidence interval we created. We are 95% confident that the true mean change in the number of trees per hectare after a pine beetle outbreak is between <span class="math inline">\(-438.121\)</span> and <span class="math inline">\(-432.948\)</span> trees per hectare. Stated differently, we are 95% confident that the true mean <em>decrease</em> in the number of trees per hectare after a pine beetle outbreak is between <span class="math inline">\(432.948\)</span> and <span class="math inline">\(438.121\)</span> trees per hectare.</p>
+<p><strong>Present your observations in an English sentence, relating
+the result to the context of the problem</strong></p>
+<p>Interpret the confidence interval we created. We are 95% confident
+that the true mean change in the number of trees per hectare after a
+pine beetle outbreak is between <span
+class="math inline">\(-438.121\)</span> and <span
+class="math inline">\(-432.948\)</span> trees per hectare. Stated
+differently, we are 95% confident that the true mean <em>decrease</em>
+in the number of trees per hectare after a pine beetle outbreak is
+between <span class="math inline">\(432.948\)</span> and <span
+class="math inline">\(438.121\)</span> trees per hectare.</p>
 <p> </p>
 <p><img src="Images/StepsAll.png"></p>
 </div>
@@ -1668,11 +2171,26 @@ Answer the following questions:
 <h3>Sleep Inducing Drugs</h3>
 <p><img src="Images/Step1.png"></p>
 <p><strong>Summarize the relevant background information</strong></p>
-<p>In William Sealy Gosset’s landmark paper on the <span class="math inline">\(t\)</span>-distribution, he cites data on a sleep-inducing drug. In a paper published in 1905, Arthur R. Cushny and A. Roy Peebles reported the effect of Laevorotatory Hyoscyamine Hydrobromate (L-Hyoscyamine) on the length of time that people sleep before waking. <!-- cite{Cushny05} --> The primary research question is: does L-Hyoscyamine impact the mean amount of time that people sleep? We will compute a 90% confidence for the true mean difference in the times.</p>
+<p>In William Sealy Gosset’s landmark paper on the <span
+class="math inline">\(t\)</span>-distribution, he cites data on a
+sleep-inducing drug. In a paper published in 1905, Arthur R. Cushny and
+A. Roy Peebles reported the effect of Laevorotatory Hyoscyamine
+Hydrobromate (L-Hyoscyamine) on the length of time that people sleep
+before waking. <!-- cite{Cushny05} --> The primary research question is:
+does L-Hyoscyamine impact the mean amount of time that people sleep? We
+will compute a 90% confidence for the true mean difference in the
+times.</p>
 <p><img src="Images/Step2.png"></p>
 <p><strong>Describe the data collection procedures</strong></p>
-<p>Eleven subjects were included in the study. At the start of the study, the researchers observed the average length of time that each of the participants slept before waking. Later, each subject was given 0.6 mg of L-Hyoscyamine and the duration of uninterrupted sleep was again measured.</p>
-<p>The difference in the amount of time each person slept was computed by subtracting the amount of time the subjects slept when taking the drug minus the sleep duration with no drug. The data are summarized in the table below.</p>
+<p>Eleven subjects were included in the study. At the start of the
+study, the researchers observed the average length of time that each of
+the participants slept before waking. Later, each subject was given 0.6
+mg of L-Hyoscyamine and the duration of uninterrupted sleep was again
+measured.</p>
+<p>The difference in the amount of time each person slept was computed
+by subtracting the amount of time the subjects slept when taking the
+drug minus the sleep duration with no drug. The data are summarized in
+the table below.</p>
 <center>
 <strong>Mean hours of sleep</strong>
 </center>
@@ -1781,8 +2299,12 @@ Answer the following questions:
 <!-- |- align="center" -->
 <!-- | 11 || - || 6.3 || - -->
 <!-- |} -->
-<p>Notice that the “control” data for Subject #11 is missing. It is not possible to compute a difference for this person, so their data will be omitted from our analysis. For this analysis, we will use the remaining <span class="math inline">\(n=10\)</span> observations.</p>
-<p>You may find it easier to copy and paste the data from the following table. The last row has been omitted.</p>
+<p>Notice that the “control” data for Subject #11 is missing. It is not
+possible to compute a difference for this person, so their data will be
+omitted from our analysis. For this analysis, we will use the remaining
+<span class="math inline">\(n=10\)</span> observations.</p>
+<p>You may find it easier to copy and paste the data from the following
+table. The last row has been omitted.</p>
 <table>
 <thead>
 <tr class="header">
@@ -1853,9 +2375,11 @@ Answer the following questions:
 <div class="Questions">
 <p><strong>Give the relevant summary statistics</strong></p>
 <ol start="44" style="list-style-type: decimal">
-<li>Report the mean, standard deviation, and sample size for the differences.</li>
+<li>Report the mean, standard deviation, and sample size for the
+differences.</li>
 </ol>
-<a href="javascript:showhide('Q44')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q44')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q44" style="display:none;">
 <center>
 <strong>Summary Statistics:</strong>
@@ -1870,11 +2394,13 @@ Answer the following questions:
 <tbody>
 <tr class="odd">
 <td align="center">Mean:</td>
-<td align="center"><span class="math inline">\(\bar d = 0.75\)</span> hours</td>
+<td align="center"><span class="math inline">\(\bar d = 0.75\)</span>
+hours</td>
 </tr>
 <tr class="even">
 <td align="center">Standard Deviation:</td>
-<td align="center"><span class="math inline">\(s_d = 1.79\)</span> hours</td>
+<td align="center"><span class="math inline">\(s_d = 1.79\)</span>
+hours</td>
 </tr>
 <tr class="odd">
 <td align="center">Sample Size:</td>
@@ -1902,7 +2428,8 @@ Answer the following questions:
 <ol start="45" style="list-style-type: decimal">
 <li>Create a graph of the differences in the hours of sleep.</li>
 </ol>
-<a href="javascript:showhide('Q45')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q45')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q45" style="display:none;">
 Here is a boxplot of the data:
 <center>
@@ -1920,22 +2447,34 @@ Answer the following questions:
 <ol start="46" style="list-style-type: decimal">
 <li><strong>Verify the requirements have been met.</strong></li>
 </ol>
-<a href="javascript:showhide('Q46')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q46')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q46" style="display:none;">
 <ul>
 <li><ol style="list-style-type: lower-alpha">
-<li>We assume the subjects represent a random sample from the population.</li>
+<li>We assume the subjects represent a random sample from the
+population.</li>
 </ol></li>
 <li><ol start="2" style="list-style-type: lower-alpha">
-<li>Remember, just like the hypothesis test, this confidence interval for a mean of differences is robust. That means it is not very sensitive to the requirements. If they are violated, this interval estimate will probably still give reasonably good results. Because the sample size is small, with only 10 values, it is hard to see a shape in a histogram of the data, regardless of the number of bins chosen. However, it is clear that the data is not strongly skewed. We will move forward, assuming the requirement of a normal sampling distribution of <span class="math inline">\(\bar d\)</span> is not violated.</li>
+<li>Remember, just like the hypothesis test, this confidence interval
+for a mean of differences is robust. That means it is not very sensitive
+to the requirements. If they are violated, this interval estimate will
+probably still give reasonably good results. Because the sample size is
+small, with only 10 values, it is hard to see a shape in a histogram of
+the data, regardless of the number of bins chosen. However, it is clear
+that the data is not strongly skewed. We will move forward, assuming the
+requirement of a normal sampling distribution of <span
+class="math inline">\(\bar d\)</span> is not violated.</li>
 </ol></li>
 </ul>
 </div>
 <p><br></p>
 <ol start="47" style="list-style-type: decimal">
-<li><strong>Find the confidence interval</strong>. Use the 90% level of confidence.</li>
+<li><strong>Find the confidence interval</strong>. Use the 90% level of
+confidence.</li>
 </ol>
-<a href="javascript:showhide('Q47')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q47')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q47" style="display:none;">
 <center>
 <span class="math inline">\((-0.287, 1.787)\)</span>
@@ -1950,13 +2489,22 @@ Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="48" style="list-style-type: decimal">
-<li><strong>Present your observations in an English sentence, relating the result to the context of the problem</strong></li>
+<li><strong>Present your observations in an English sentence, relating
+the result to the context of the problem</strong></li>
 </ol>
-<a href="javascript:showhide('Q48')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q48')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q48" style="display:none;">
 <ul>
-<li>We are 90% confident that the true mean difference in the amount of time people sleep by taking this drug compared to not taking the drug is between <span class="math inline">\(-0.287\)</span> hours and <span class="math inline">\(1.787\)</span> hours.</li>
-<li>Notice that 0 is in the confidence interval. This suggests that 0 is a plausible value for the mean difference in the times. In other words, the drug does not seem to affect the amount of time people sleep. L-Hyoscyamine is not an effective sleep aid–at least at these dosage levels.</li>
+<li>We are 90% confident that the true mean difference in the amount of
+time people sleep by taking this drug compared to not taking the drug is
+between <span class="math inline">\(-0.287\)</span> hours and <span
+class="math inline">\(1.787\)</span> hours.</li>
+<li>Notice that 0 is in the confidence interval. This suggests that 0 is
+a plausible value for the mean difference in the times. In other words,
+the drug does not seem to affect the amount of time people sleep.
+L-Hyoscyamine is not an effective sleep aid–at least at these dosage
+levels.</li>
 </ul>
 </div>
 <p> </p>
@@ -1971,10 +2519,24 @@ Remember…
 </div>
 <div class="Summary">
 <ul>
-<li><p>The key characteristic of <strong>dependent samples</strong> (or <strong>matched pairs</strong>) is that knowing which subjects will be in group 1 determines which subjects will be in group 2.</p></li>
-<li><p>We use slightly different variables when conducting inference using dependent samples:</p>
-<p>Group 1 values: <span class="math inline">\(x_1\)</span>  Group 2 values: <span class="math inline">\(x_2\)</span>  Differences: <span class="math inline">\(d\)</span>  Population mean: <span class="math inline">\(\mu_d\)</span>  Sample mean: <span class="math inline">\(\bar d\)</span>  Sample standard deviation: <span class="math inline">\(s_d\)</span></p></li>
-<li><p>When conducting hypothesis tests using dependent samples, the null hypothesis is always <span class="math inline">\(\mu_d=0\)</span>, indicating that there is no change between the first population and the second population. The alternative hypothesis can be left-tailed (<span class="math inline">\(&lt;\)</span>), right-tailed(<span class="math inline">\(&gt;\)</span>), or two-tailed(<span class="math inline">\(\ne\)</span>). <br></p></li>
+<li><p>The key characteristic of <strong>dependent samples</strong> (or
+<strong>matched pairs</strong>) is that knowing which subjects will be
+in group 1 determines which subjects will be in group 2.</p></li>
+<li><p>We use slightly different variables when conducting inference
+using dependent samples:</p>
+<p>Group 1 values: <span class="math inline">\(x_1\)</span>  Group 2
+values: <span class="math inline">\(x_2\)</span>  Differences: <span
+class="math inline">\(d\)</span>  Population mean: <span
+class="math inline">\(\mu_d\)</span>  Sample mean: <span
+class="math inline">\(\bar d\)</span>  Sample standard deviation: <span
+class="math inline">\(s_d\)</span></p></li>
+<li><p>When conducting hypothesis tests using dependent samples, the
+null hypothesis is always <span class="math inline">\(\mu_d=0\)</span>,
+indicating that there is no change between the first population and the
+second population. The alternative hypothesis can be left-tailed (<span
+class="math inline">\(&lt;\)</span>), right-tailed(<span
+class="math inline">\(&gt;\)</span>), or two-tailed(<span
+class="math inline">\(\ne\)</span>). <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -1997,9 +2559,12 @@ Remember…
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center"><a href="Lesson11.html">Lesson 11: <br> Inference for One Mean: Sigma Unknown</a></td>
-<td align="center">Lesson 12: <br> Inference for Two Means: Paired Data</td>
-<td align="center"><a href="Lesson13.html">Lesson 13: <br> Inference for Two Means: Independent Samples</a></td>
+<td align="center"><a href="Lesson11.html">Lesson 11: <br> Inference for
+One Mean: Sigma Unknown</a></td>
+<td align="center">Lesson 12: <br> Inference for Two Means: Paired
+Data</td>
+<td align="center"><a href="Lesson13.html">Lesson 13: <br> Inference for
+Two Means: Independent Samples</a></td>
 </tr>
 </tbody>
 </table>
