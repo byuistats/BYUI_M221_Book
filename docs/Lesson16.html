@@ -256,11 +256,19 @@ $(document).ready(function () {
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
-    </li>
-    <li>
-      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lesson 1: Course Intro &amp; Probability</a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="Lesson01_Campus.html">Campus Student Version</a>
+        </li>
+        <li>
+          <a href="Lesson01.html">Online Student Version</a>
+        </li>
+        <li>
+          <a href="Lesson01_WWB.html">World Wide Block Student Version</a>
+        </li>
+      </ul>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -377,27 +385,40 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Lesson 16: Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion</h1>
+<h1 class="title toc-ignore">Lesson 16: Describing Categorical Data:
+Proportions; Sampling Distribution of a Sample Proportion</h1>
 
 </div>
 
 <div id="TOC">
 <ul>
-<li><a href="#lesson-outcomes">Lesson Outcomes</a></li>
-<li><a href="#numerical-and-graphical-summaries-of-categorical-data">Numerical and Graphical Summaries of Categorical Data</a>
+<li><a href="#lesson-outcomes" id="toc-lesson-outcomes">Lesson
+Outcomes</a></li>
+<li><a href="#numerical-and-graphical-summaries-of-categorical-data"
+id="toc-numerical-and-graphical-summaries-of-categorical-data">Numerical
+and Graphical Summaries of Categorical Data</a>
 <ul>
-<li><a href="#proportions">Proportions</a></li>
-<li><a href="#pie-charts">Pie charts</a></li>
-<li><a href="#bar-charts-and-pareto-charts">Bar charts and Pareto charts</a></li>
+<li><a href="#proportions" id="toc-proportions">Proportions</a></li>
+<li><a href="#pie-charts" id="toc-pie-charts">Pie charts</a></li>
+<li><a href="#bar-charts-and-pareto-charts"
+id="toc-bar-charts-and-pareto-charts">Bar charts and Pareto
+charts</a></li>
 </ul></li>
-<li><a href="#sampling-distribution-of-the-sample-proportion">Sampling Distribution of the Sample Proportion</a>
+<li><a href="#sampling-distribution-of-the-sample-proportion"
+id="toc-sampling-distribution-of-the-sample-proportion">Sampling
+Distribution of the Sample Proportion</a>
 <ul>
-<li><a href="#example-tossing-a-coin">Example: Tossing a Coin</a></li>
-<li><a href="#sampling-distribution-of-the-sample-proportion-1">Sampling Distribution of the Sample Proportion</a></li>
-<li><a href="#probability-calculations-for-a-sample-proportion">Probability Calculations for a Sample Proportion</a></li>
+<li><a href="#example-tossing-a-coin"
+id="toc-example-tossing-a-coin">Example: Tossing a Coin</a></li>
+<li><a href="#sampling-distribution-of-the-sample-proportion-1"
+id="toc-sampling-distribution-of-the-sample-proportion-1">Sampling
+Distribution of the Sample Proportion</a></li>
+<li><a href="#probability-calculations-for-a-sample-proportion"
+id="toc-probability-calculations-for-a-sample-proportion">Probability
+Calculations for a Sample Proportion</a></li>
 </ul></li>
-<li><a href="#summary">Summary</a></li>
-<li><a href="#navigation">Navigation</a></li>
+<li><a href="#summary" id="toc-summary">Summary</a></li>
+<li><a href="#navigation" id="toc-navigation">Navigation</a></li>
 </ul>
 </div>
 
@@ -407,7 +428,9 @@ $(document).ready(function () {
     e.style.display = (e.style.display == 'block') ? 'none' : 'block';
  }
 </script>
-<div id="optional-videos-for-this-lesson" class="section level4 tabset tabset-pills" style="width:50%;float:right;">
+<div id="optional-videos-for-this-lesson"
+class="section level4 tabset tabset-pills"
+style="width:50%;float:right;">
 <h4 class="tabset tabset-pills">Optional Videos for this Lesson</h4>
 <div id="part-1" class="section level5">
 <h5>Part 1</h5>
@@ -444,33 +467,68 @@ $(document).ready(function () {
 <ul>
 <li>Calculate and interpret a sample proportion.</li>
 <li>Summarize categorical data with a bar or pie chart.</li>
-<li>Determine the mean, standard deviation and shape of a distribution of sample proportions.</li>
-<li>Calculate probabilities using a distribution of sample proportions.</li>
+<li>Determine the mean, standard deviation and shape of a distribution
+of sample proportions.</li>
+<li>Calculate probabilities using a distribution of sample
+proportions.</li>
 </ul>
 <p><br></p>
 </div>
-<div id="numerical-and-graphical-summaries-of-categorical-data" class="section level2">
+<div id="numerical-and-graphical-summaries-of-categorical-data"
+class="section level2">
 <h2>Numerical and Graphical Summaries of Categorical Data</h2>
-<p><span id="21:Proportions"></span></p>
+<p><span id="id_21:Proportions"></span></p>
 <div id="proportions" class="section level3">
 <h3>Proportions</h3>
 <div id="political-polls" class="section level4">
 <h4>Political Polls</h4>
-<p>During political elections in the United States, residents are inundated with polls. Many people conduct polls to estimate the proportion of the population that will vote for each candidate. The pollsters report the number of people who were contacted and the proportion who said they would favor a particular candidate. The poll results are a prediction of the future election results.</p>
-<p>In these polls, individuals are asked the question, “If the election were held today, which candidate would you most likely support?” In one survey, <span class="math inline">\(n=1024\)</span> people were polled, and <span class="math inline">\(x=565\)</span> of the respondents said that they would vote for the Republican candidate. In this case, the “proportion” of people who favored the Republican candidate was: <span class="math display">\[
+<p>During political elections in the United States, residents are
+inundated with polls. Many people conduct polls to estimate the
+proportion of the population that will vote for each candidate. The
+pollsters report the number of people who were contacted and the
+proportion who said they would favor a particular candidate. The poll
+results are a prediction of the future election results.</p>
+<p>In these polls, individuals are asked the question, “If the election
+were held today, which candidate would you most likely support?” In one
+survey, <span class="math inline">\(n=1024\)</span> people were polled,
+and <span class="math inline">\(x=565\)</span> of the respondents said
+that they would vote for the Republican candidate. In this case, the
+“proportion” of people who favored the Republican candidate was: <span
+class="math display">\[
 \widehat p = \frac{x}{n} = \frac{565}{1024} = 0.552
-\]</span> That suggests that 55.2% of the people polled plan to vote for the Republican. This does not mean that this candidate will win the election. However, it looks like they might be in the lead at this point.</p>
+\]</span> That suggests that 55.2% of the people polled plan to vote for
+the Republican. This does not mean that this candidate will win the
+election. However, it looks like they might be in the lead at this
+point.</p>
 </div>
 <div id="web-searches" class="section level4">
 <h4>Web Searches</h4>
-<p>A study was conducted on web searches of computer science students. If these students did not click on one of the links that came up in the search, the researchers asked them to record the reason. 908 trials conducted and there were 116 searches in which the students did not click on any links. The reasons the students gave for not clicking on any links are summarized in the data file <a href="./Data/NoClickQuery.xlsx">NoClickQuery.xlsx</a>.</p>
-<p>Note that the data taken for this study are categorical. Each of the student’s responses is a categorization of their reason for not clicking on any of the links. Even though we can summarize the data by counting the number of each type of response, the individual responses are categorical, not quantitative. Up to this point in the course we have discussed methods for describing and understanding only quantitative data. In this unit we will learn how to describe categorical data and make inferences from it.</p>
+<p>A study was conducted on web searches of computer science students.
+If these students did not click on one of the links that came up in the
+search, the researchers asked them to record the reason. 908 trials
+conducted and there were 116 searches in which the students did not
+click on any links. The reasons the students gave for not clicking on
+any links are summarized in the data file <a
+href="./Data/NoClickQuery.xlsx">NoClickQuery.xlsx</a>.</p>
+<p>Note that the data taken for this study are categorical. Each of the
+student’s responses is a categorization of their reason for not clicking
+on any of the links. Even though we can summarize the data by counting
+the number of each type of response, the individual responses are
+categorical, not quantitative. Up to this point in the course we have
+discussed methods for describing and understanding only quantitative
+data. In this unit we will learn how to describe categorical data and
+make inferences from it.</p>
 </div>
 </div>
 <div id="pie-charts" class="section level3">
 <h3>Pie charts</h3>
-<p>Pie charts are a popular way to display categorical data. These are used extensively in practice. Typically, pie charts are used when you want to represent the observations as part of a whole, where each slice (sector) of the pie chart represents a proportion or percentage of the whole.</p>
-<p>We can represent the reasons the students did not click in their searches using a pie chart.</p>
+<p>Pie charts are a popular way to display categorical data. These are
+used extensively in practice. Typically, pie charts are used when you
+want to represent the observations as part of a whole, where each slice
+(sector) of the pie chart represents a proportion or percentage of the
+whole.</p>
+<p>We can represent the reasons the students did not click in their
+searches using a pie chart.</p>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <!-- {{Software_Filter | PageName=PieCharts }} -->
 <div class="SoftwareHeading">
@@ -479,9 +537,16 @@ Excel Instructions
 <div class="Summary">
 <p><strong>To make a pie chart in Excel:</strong></p>
 <ul>
-<li>Open the data file <a href="./Data/NoClickQuery-Summary.xlsx">NoClickQuery-Summary.xlsx</a>. This file contains a summary of the NoClickQuery data. Notice that each row in this data file represents the responses of several individuals. The <em>Count</em> column tells how many times each response was given. The data in this file have been summarized.<br />
+<li>Open the data file <a
+href="./Data/NoClickQuery-Summary.xlsx">NoClickQuery-Summary.xlsx</a>.
+This file contains a summary of the NoClickQuery data. Notice that each
+row in this data file represents the responses of several individuals.
+The <em>Count</em> column tells how many times each response was given.
+The data in this file have been summarized.<br />
 </li>
-<li>Make sure the categorical column (Reason) and the Count column are next to each other with the Count column on the right and highlight both of them.</li>
+<li>Make sure the categorical column (Reason) and the Count column are
+next to each other with the Count column on the right and highlight both
+of them.</li>
 <li>Click on the Insert tab, then click on the Pie chart button.</li>
 <li>Please choose the basic 2D pie.</li>
 </ul>
@@ -492,7 +557,11 @@ Excel Instructions
 </div>
 <div id="bar-charts-and-pareto-charts" class="section level3">
 <h3>Bar charts and Pareto charts</h3>
-<p>Bar charts can be considered a companion plot to the pie chart. They present the same basic information but are not, however, interchangeable. We typically use bar charts if our data represent counts. In contrast, pie charts are used to represent parts of a whole.</p>
+<p>Bar charts can be considered a companion plot to the pie chart. They
+present the same basic information but are not, however,
+interchangeable. We typically use bar charts if our data represent
+counts. In contrast, pie charts are used to represent parts of a
+whole.</p>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <!-- {{Software_Filter | PageName=BarCharts }} -->
 <div class="SoftwareHeading">
@@ -509,7 +578,8 @@ Excel Instructions
 <p><img src="Images/NoClickQuery-Bar-Excel.png"> <br></p>
 </div>
 <p><br></p>
-<p>A Pareto chart is a bar chart where the bars are presented in descending order.</p>
+<p>A Pareto chart is a bar chart where the bars are presented in
+descending order.</p>
 <!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
 <!-- {{Software_Filter | PageName=ParetoCharts }} -->
 <div class="SoftwareHeading">
@@ -518,47 +588,76 @@ Excel Instructions
 <div class="Summary">
 <p><strong>To make a Pareto chart in Excel:</strong></p>
 <ul>
-<li>Begin by creating a bar chart. You can use the one you created above.</li>
+<li>Begin by creating a bar chart. You can use the one you created
+above.</li>
 <li>Highlight the “Count” column.</li>
-<li>Click on the Sort and Filter tab in the right hand corner of the screen.</li>
-<li>Click on Sort Largest to Smallest (A little window will pop up, select “Expand the Selection” then “Sort”.)</li>
-<li>The bars in your chart should now be resorted to create a Pareto chart.</li>
+<li>Click on the Sort and Filter tab in the right hand corner of the
+screen.</li>
+<li>Click on Sort Largest to Smallest (A little window will pop up,
+select “Expand the Selection” then “Sort”.)</li>
+<li>The bars in your chart should now be resorted to create a Pareto
+chart.</li>
 </ul>
 <p>Your Pareto chart will look like this:</p>
 <p><img src="Images/NoClickQuery-Pareto-Excel.png"> <br></p>
 </div>
 <p><br></p>
-<p>We conclude that the main reason that people do not click on any of the search results is that the results were not relevant. The next two most common reasons were that they did not find any new results or they made a spelling error in their search query.</p>
-<p>Pareto charts are often used to display causes of problems in an industry. For example, in health care administration, it may be causes of patient deaths. In business, it may be used to display common reasons employees are terminated.</p>
-<p>There is an idea, called the Pareto Principle, which states that 80% of your problems come from 20% of the causes. Many Pareto charts display a few very tall columns with several much shorter ones. This can give you an idea of where you should focus your energy in your business or organization.</p>
+<p>We conclude that the main reason that people do not click on any of
+the search results is that the results were not relevant. The next two
+most common reasons were that they did not find any new results or they
+made a spelling error in their search query.</p>
+<p>Pareto charts are often used to display causes of problems in an
+industry. For example, in health care administration, it may be causes
+of patient deaths. In business, it may be used to display common reasons
+employees are terminated.</p>
+<p>There is an idea, called the Pareto Principle, which states that 80%
+of your problems come from 20% of the causes. Many Pareto charts display
+a few very tall columns with several much shorter ones. This can give
+you an idea of where you should focus your energy in your business or
+organization.</p>
 </div>
 </div>
-<div id="sampling-distribution-of-the-sample-proportion" class="section level2">
+<div id="sampling-distribution-of-the-sample-proportion"
+class="section level2">
 <h2>Sampling Distribution of the Sample Proportion</h2>
 <div id="example-tossing-a-coin" class="section level3">
 <h3>Example: Tossing a Coin</h3>
-<p>Answer the following questions. For this exercise, you will need a coin.</p>
+<p>Answer the following questions. For this exercise, you will need a
+coin.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
 <div class="Questions">
 <ol style="list-style-type: decimal">
-<li>Toss a coin <span class="math inline">\(n=25\)</span> times. Keep track of the proportion of heads you observe. Please complete this before continuing.</li>
+<li>Toss a coin <span class="math inline">\(n=25\)</span> times. Keep
+track of the proportion of heads you observe. Please complete this
+before continuing.</li>
 </ol>
-<a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q1')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
 <ul>
-<li>In this example, we tossed heads 12/25 times, which is equivalent to a <span class="math inline">\(\widehat{p} = 0.48\)</span> proportion. Your proportion may vary.</li>
+<li>In this example, we tossed heads 12/25 times, which is equivalent to
+a <span class="math inline">\(\widehat{p} = 0.48\)</span> proportion.
+Your proportion may vary.</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="2" style="list-style-type: decimal">
-<li>The data file <a href="./Data/CoinTossHeads.xlsx">CoinTossHeads.xlsx</a> contains data representing a collection of 900 students’ results, where each tossed a coin <span class="math inline">\(n=25\)</span> times and calculated the proportion of heads. The following histogram illustrates these data. How would you describe the shape of the distribution of the observed proportions?</li>
+<li>The data file <a
+href="./Data/CoinTossHeads.xlsx">CoinTossHeads.xlsx</a> contains data
+representing a collection of 900 students’ results, where each tossed a
+coin <span class="math inline">\(n=25\)</span> times and calculated the
+proportion of heads. The following histogram illustrates these data. How
+would you describe the shape of the distribution of the observed
+proportions?</li>
 </ol>
-<a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q2')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
 <ul>
-<li>Judging just from the histogram it shows that the observed sample proportions are normally distributed.</li>
+<li>Judging just from the histogram it shows that the observed sample
+proportions are normally distributed.</li>
 </ul>
 </div>
 <p> </p>
@@ -570,65 +669,101 @@ Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="3" style="list-style-type: decimal">
-<li>Find the spot on the horizontal axis of the histogram indicating the proportion of heads (<span class="math inline">\(\widehat{p}\)</span>) that <em>you</em> observed in Question 1. Based on your visual observation, would you say your proportion of heads is unusual?</li>
+<li>Find the spot on the horizontal axis of the histogram indicating the
+proportion of heads (<span class="math inline">\(\widehat{p}\)</span>)
+that <em>you</em> observed in Question 1. Based on your visual
+observation, would you say your proportion of heads is unusual?</li>
 </ol>
-<a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q3')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q3" style="display:none;">
 <ul>
-<li>Answers will vary. This depends on your proportion of heads. If the observed value is far to the right or left, then you would say that it was unusual. Most students will observe values in the middle of the distribution.</li>
+<li>Answers will vary. This depends on your proportion of heads. If the
+observed value is far to the right or left, then you would say that it
+was unusual. Most students will observe values in the middle of the
+distribution.</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="4" style="list-style-type: decimal">
-<li>Visually, estimate the mean and standard deviation of the observed sample proportions. Please write your answer to this question before continuing.</li>
+<li>Visually, estimate the mean and standard deviation of the observed
+sample proportions. Please write your answer to this question before
+continuing.</li>
 </ol>
-<a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q4')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q4" style="display:none;">
 <ul>
-<li>We estimate the mean of the sample proportions at 0.5 and the standard deviation of all of these sample proportions at 0.1. Almost all the sample proportions are found between .2 and .8, which represents the mean plus or minus three standard deviations of the mean. Your answers may vary.</li>
+<li>We estimate the mean of the sample proportions at 0.5 and the
+standard deviation of all of these sample proportions at 0.1. Almost all
+the sample proportions are found between .2 and .8, which represents the
+mean plus or minus three standard deviations of the mean. Your answers
+may vary.</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="5" style="list-style-type: decimal">
-<li>The proportion of heads that you will observe in <span class="math inline">\(n=25\)</span> tosses of a fair coin, <span class="math inline">\(\widehat p\)</span>, is a random variable. The true theoretical mean for this random variable is <span class="math inline">\(p=0.5\)</span>. Explain why this value would make sense.</li>
+<li>The proportion of heads that you will observe in <span
+class="math inline">\(n=25\)</span> tosses of a fair coin, <span
+class="math inline">\(\widehat p\)</span>, is a random variable. The
+true theoretical mean for this random variable is <span
+class="math inline">\(p=0.5\)</span>. Explain why this value would make
+sense.</li>
 </ol>
-<a href="javascript:showhide('Q5')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q5')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q5" style="display:none;">
 <ul>
-<li>Since getting a “heads” is just as likely as getting a “tails”, you should end up with half your flips landing as “tails”. The theoretical proportion of <span class="math inline">\(p=0.5\)</span> is logical.</li>
+<li>Since getting a “heads” is just as likely as getting a “tails”, you
+should end up with half your flips landing as “tails”. The theoretical
+proportion of <span class="math inline">\(p=0.5\)</span> is
+logical.</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="6" style="list-style-type: decimal">
-<li>The true theoretical standard deviation of <span class="math inline">\(\widehat p\)</span> in this case is <span class="math inline">\(\sigma_{\widehat{p}} = 0.1\)</span>. This can be obtained using the formula
+<li>The true theoretical standard deviation of <span
+class="math inline">\(\widehat p\)</span> in this case is <span
+class="math inline">\(\sigma_{\widehat{p}} = 0.1\)</span>. This can be
+obtained using the formula
 <center>
 <span class="math display">\[
-\displaystyle{\text{Standard deviation of}~\widehat{p} = \sigma_{\widehat{p}} = \sqrt{ \frac{p(1-p)}{n} } }
+\displaystyle{\text{Standard deviation of}~\widehat{p} =
+\sigma_{\widehat{p}} = \sqrt{ \frac{p(1-p)}{n} } }
 \]</span>
 </center>
-where <span class="math inline">\(p\)</span> is the true population proportion, which is also the mean of the distribution of <span class="math inline">\(\widehat{p}\)</span>.</li>
+where <span class="math inline">\(p\)</span> is the true population
+proportion, which is also the mean of the distribution of <span
+class="math inline">\(\widehat{p}\)</span>.</li>
 </ol>
-<a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q6')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q6" style="display:none;">
 <center>
 <span class="math display">\[
-\text{Standard deviation of}~\widehat{p} = \sqrt{ \frac{p(1-p)}{n} } = \sqrt{ \frac{0.5(1-0.5)}{25} } = 0.1
+\text{Standard deviation of}~\widehat{p} = \sqrt{ \frac{p(1-p)}{n} } =
+\sqrt{ \frac{0.5(1-0.5)}{25} } = 0.1
 \]</span>
 </center>
 </div>
 <p><br></p>
 <ol start="7" style="list-style-type: decimal">
-<li>Remember that the <span class="math inline">\(z\)</span>-score for an observed data value can be computed as:</li>
+<li>Remember that the <span class="math inline">\(z\)</span>-score for
+an observed data value can be computed as:</li>
 </ol>
 <center>
 <span class="math display">\[
-\displaystyle { z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}} }
+\displaystyle { z = \frac{\textrm{value} -
+\textrm{mean}}{\textrm{standard deviation}} }
 \]</span>
 </center>
 <ul>
-<li>Use the mean and standard deviation given in question 6, to find the <span class="math inline">\(z\)</span>-score corresponding to <em>your</em> sample proportion.</li>
+<li>Use the mean and standard deviation given in question 6, to find the
+<span class="math inline">\(z\)</span>-score corresponding to
+<em>your</em> sample proportion.</li>
 </ul>
-<p><a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a></p>
+<p><a href="javascript:showhide('Q7')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a></p>
 <div id="Q7" style="display:none;">
 <center>
 <span class="math display">\[
@@ -638,63 +773,108 @@ where <span class="math inline">\(p\)</span> is the true population proportion, 
 </div>
 <p><br></p>
 <ol start="8" style="list-style-type: decimal">
-<li>Based on the <span class="math inline">\(z\)</span>-score you computed in question 7, is your observed proportion considered unusual?</li>
+<li>Based on the <span class="math inline">\(z\)</span>-score you
+computed in question 7, is your observed proportion considered
+unusual?</li>
 </ol>
-<a href="javascript:showhide('Q8')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q8')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q8" style="display:none;">
 <ul>
-<li>Answers will vary. <span class="math inline">\(z\)</span>-scores between -2 and 2 are not unusual. If your <span class="math inline">\(z\)</span>-score is less than -2 or greater than 2, then it is considered unusual.</li>
+<li>Answers will vary. <span class="math inline">\(z\)</span>-scores
+between -2 and 2 are not unusual. If your <span
+class="math inline">\(z\)</span>-score is less than -2 or greater than
+2, then it is considered unusual.</li>
 </ul>
 </div>
 <p> </p>
 </div>
 <br> <br>
 <div class="message Tip">
-You may want to refresh your memory on our definition of “unusual events” in the <a href="Lesson05.html" target="_blank">Normal Distributions</a> lesson
+You may want to refresh your memory on our definition of “unusual
+events” in the <a href="Lesson05.html" target="_blank">Normal
+Distributions</a> lesson
 </div>
 <p><br> <br></p>
 </div>
-<div id="sampling-distribution-of-the-sample-proportion-1" class="section level3">
+<div id="sampling-distribution-of-the-sample-proportion-1"
+class="section level3">
 <h3>Sampling Distribution of the Sample Proportion</h3>
-<p>If the sample size is large, the sample proportion, <span class="math inline">\(\widehat p\)</span>, will be approximately normally distributed. This is a direct consequence of the Central Limit Theorem.</p>
+<p>If the sample size is large, the sample proportion, <span
+class="math inline">\(\widehat p\)</span>, will be approximately
+normally distributed. This is a direct consequence of the Central Limit
+Theorem.</p>
 <div id="how-large-is-large-enough" class="section level4">
 <h4>How Large is Large Enough?</h4>
-<p>We can apply the Central Limit Theorem to a sample proportion (and conclude that <span class="math inline">\(\widehat p\)</span> follows a normal distribution) if both of the following conditions are satisfied:</p>
+<p>We can apply the Central Limit Theorem to a sample proportion (and
+conclude that <span class="math inline">\(\widehat p\)</span> follows a
+normal distribution) if both of the following conditions are
+satisfied:</p>
 <ul>
 <li><span class="math inline">\(np \ge 10\)</span></li>
 <li><span class="math inline">\(n(1-p) \ge 10\)</span></li>
 </ul>
-<p>It is important to check both conditions. If one of them is not satisfied, we cannot conclude that <span class="math inline">\(\widehat p\)</span> follows a normal distribution. Observe that the effect of these two conditions is that if <span class="math inline">\(p\)</span> is very close to 0 or 1, then <span class="math inline">\(\widehat{p}\)</span> isn’t close to normal unless <span class="math inline">\(n\)</span> is very large.</p>
+<p>It is important to check both conditions. If one of them is not
+satisfied, we cannot conclude that <span class="math inline">\(\widehat
+p\)</span> follows a normal distribution. Observe that the effect of
+these two conditions is that if <span class="math inline">\(p\)</span>
+is very close to 0 or 1, then <span
+class="math inline">\(\widehat{p}\)</span> isn’t close to normal unless
+<span class="math inline">\(n\)</span> is very large.</p>
 </div>
 <div id="mean-and-standard-deviation" class="section level4">
 <h4>Mean and Standard Deviation</h4>
-<p>The sample proportion, <span class="math inline">\(\widehat p\)</span>, is normally distributed if <span class="math inline">\(n\)</span> is large. The true population mean of the random variable <span class="math inline">\(\widehat p\)</span> is: <span class="math display">\[
+<p>The sample proportion, <span class="math inline">\(\widehat
+p\)</span>, is normally distributed if <span
+class="math inline">\(n\)</span> is large. The true population mean of
+the random variable <span class="math inline">\(\widehat p\)</span> is:
+<span class="math display">\[
 \underbrace{\mu_\widehat{p}}_{\textrm{Mean of}~\widehat{p}} = p
-\]</span> and the true population standard deviation is: <span class="math display">\[
-\underbrace{\sigma_\widehat{p}}_{\textrm{Standard Deviation of}~\widehat p} = \sqrt{\frac{p \cdot (1-p)}{n}}
+\]</span> and the true population standard deviation is: <span
+class="math display">\[
+\underbrace{\sigma_\widehat{p}}_{\textrm{Standard Deviation of}~\widehat
+p} = \sqrt{\frac{p \cdot (1-p)}{n}}
 \]</span></p>
-<p>Answer the following questions. Consider exercise 1, in which you tossed a coin <span class="math inline">\(n=25\)</span> times and recorded the proportion of heads.</p>
+<p>Answer the following questions. Consider exercise 1, in which you
+tossed a coin <span class="math inline">\(n=25\)</span> times and
+recorded the proportion of heads.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="9" style="list-style-type: decimal">
-<li>What is the true proportion of heads that would be expected to occur if a coin was tossed many, many times? (This is the mean, <span class="math inline">\(p\)</span>.)</li>
+<li>What is the true proportion of heads that would be expected to occur
+if a coin was tossed many, many times? (This is the mean, <span
+class="math inline">\(p\)</span>.)</li>
 </ol>
-<a href="javascript:showhide('Q9')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q9')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q9" style="display:none;">
 <ul>
-<li>If we tossed a coin many, many times, we would expect to see 0.5 as the proportion of heads. We can convince ourselvses of this by thinking about the mean of the sample proportion <span class="math inline">\(\mu_\widehat{p}\)</span>, which is given by <span class="math inline">\(\mu_{\widehat p} = p\)</span>, and <span class="math inline">\(p\)</span> was shown earlier to be 0.5.</li>
+<li>If we tossed a coin many, many times, we would expect to see 0.5 as
+the proportion of heads. We can convince ourselvses of this by thinking
+about the mean of the sample proportion <span
+class="math inline">\(\mu_\widehat{p}\)</span>, which is given by <span
+class="math inline">\(\mu_{\widehat p} = p\)</span>, and <span
+class="math inline">\(p\)</span> was shown earlier to be 0.5.</li>
 </ul>
 </div>
 <p><br></p>
 <ol start="10" style="list-style-type: decimal">
-<li>Use the equation for the standard deviation (given above) to verify that the true population standard deviation for the proportion of heads that will occur when a coin is tossed <span class="math inline">\(n=25\)</span> times is 0.1.</li>
+<li>Use the equation for the standard deviation (given above) to verify
+that the true population standard deviation for the proportion of heads
+that will occur when a coin is tossed <span
+class="math inline">\(n=25\)</span> times is 0.1.</li>
 </ol>
-<a href="javascript:showhide('Q10')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q10')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q10" style="display:none;">
 <ul>
-<li>The standard deviation of the sample proportion (<span class="math inline">\(\sigma_\widehat{p}\)</span>) is given by <span class="math inline">\(\displaystyle { \sigma_{ \widehat p } = \sqrt{\frac{0.5 \cdot (0.5)}{25}} = \sqrt{\frac{.25}{25}} = \sqrt{.01} =.1}\)</span></li>
+<li>The standard deviation of the sample proportion (<span
+class="math inline">\(\sigma_\widehat{p}\)</span>) is given by <span
+class="math inline">\(\displaystyle { \sigma_{ \widehat p } =
+\sqrt{\frac{0.5 \cdot (0.5)}{25}} = \sqrt{\frac{.25}{25}} = \sqrt{.01}
+=.1}\)</span></li>
 </ul>
 </div>
 <p> </p>
@@ -702,23 +882,45 @@ Answer the following questions:
 <p><br></p>
 </div>
 </div>
-<div id="probability-calculations-for-a-sample-proportion" class="section level3">
+<div id="probability-calculations-for-a-sample-proportion"
+class="section level3">
 <h3>Probability Calculations for a Sample Proportion</h3>
 <br>
 <div class="message Note">
-<strong>Remember:</strong> We can use the Normal Probability Applet to find probabilities associated with any normally distributed random variable with known mean and standard deviation.
+<strong>Remember:</strong> We can use the Normal Probability Applet to
+find probabilities associated with any normally distributed random
+variable with known mean and standard deviation.
 </div>
 <p><br> <br></p>
-<p>If the sample size is sufficiently large, we can use the Normal Probability Applet to make probability calculations for proportions, just as we did for means. First, we need to find the <span class="math inline">\(z\)</span>-score. This can be done with the equation:</p>
+<p>If the sample size is sufficiently large, we can use the Normal
+Probability Applet to make probability calculations for proportions,
+just as we did for means. First, we need to find the <span
+class="math inline">\(z\)</span>-score. This can be done with the
+equation:</p>
 <p><span class="math display">\[
 z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}}
 = \frac{\widehat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}
 \]</span></p>
-<p>Then, we can enter this <span class="math inline">\(z\)</span>-score in the Normal Probability Applet to find the area more extreme than the <span class="math inline">\(z\)</span>-score.</p>
+<p>Then, we can enter this <span class="math inline">\(z\)</span>-score
+in the Normal Probability Applet to find the area more extreme than the
+<span class="math inline">\(z\)</span>-score.</p>
 <div id="worked-example" class="section level4">
 <h4>Worked Example</h4>
-<p>If a coin is tossed <span class="math inline">\(n=25\)</span> times, and heads is observed 17 times, the sample proportion of heads is <span class="math inline">\(\displaystyle{\widehat p = \frac{x}{n} = \frac{17}{25} = 0.68}\)</span> The proportion of heads tossed by the first student in the file <a href="./Data/CoinTossHeads.xlsx">CoinTossHeads.xlsx</a> is <span class="math inline">\(\widehat p = 0.68\)</span>. We will find the probability that a sample proportion will exceed 0.68.</p>
-<p>First, we compute the <span class="math inline">\(z\)</span>-score corresponding to <span class="math inline">\(\widehat p = 0.68\)</span>. We can use the mean and standard deviation, which were given in questions 9 and 10, or simply substitute the values of <span class="math inline">\(p=0.5\)</span> and <span class="math inline">\(n=25\)</span> in the equation for the <span class="math inline">\(z\)</span>-score.</p>
+<p>If a coin is tossed <span class="math inline">\(n=25\)</span> times,
+and heads is observed 17 times, the sample proportion of heads is <span
+class="math inline">\(\displaystyle{\widehat p = \frac{x}{n} =
+\frac{17}{25} = 0.68}\)</span> The proportion of heads tossed by the
+first student in the file <a
+href="./Data/CoinTossHeads.xlsx">CoinTossHeads.xlsx</a> is <span
+class="math inline">\(\widehat p = 0.68\)</span>. We will find the
+probability that a sample proportion will exceed 0.68.</p>
+<p>First, we compute the <span class="math inline">\(z\)</span>-score
+corresponding to <span class="math inline">\(\widehat p = 0.68\)</span>.
+We can use the mean and standard deviation, which were given in
+questions 9 and 10, or simply substitute the values of <span
+class="math inline">\(p=0.5\)</span> and <span
+class="math inline">\(n=25\)</span> in the equation for the <span
+class="math inline">\(z\)</span>-score.</p>
 <p><span class="math display">\[
 z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}}
 = \frac{\widehat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}
@@ -726,37 +928,56 @@ z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}}
 = \frac{0.18}{0.1}
 = 1.800
 \]</span></p>
-<p>Next, we enter the <span class="math inline">\(z\)</span>-score (1.800) in the Normal Probability Applet and shade the area to the right of this value.</p>
+<p>Next, we enter the <span class="math inline">\(z\)</span>-score
+(1.800) in the Normal Probability Applet and shade the area to the right
+of this value.</p>
 <p><img src="Images/SampDist-25CoinTosses-Applet.png"></p>
-<p>The area to the right of <span class="math inline">\(z=1.800\)</span> is <span class="math inline">\(0.0359\)</span>.</p>
+<p>The area to the right of <span class="math inline">\(z=1.800\)</span>
+is <span class="math inline">\(0.0359\)</span>.</p>
 <div class="QuestionsHeading">
 Answer the following questions:
 </div>
 <div class="Questions">
 <ol start="11" style="list-style-type: decimal">
-<li>The second student with data listed in the file <a href="./Data/CoinTossHeads.xlsx">CoinTossHeads.xlsx</a> had <span class="math inline">\(\widehat p = 0.44\)</span>, or 44% of their coin tosses resulted in heads. Find the <span class="math inline">\(z\)</span>-score corresponding to this value.</li>
+<li>The second student with data listed in the file <a
+href="./Data/CoinTossHeads.xlsx">CoinTossHeads.xlsx</a> had <span
+class="math inline">\(\widehat p = 0.44\)</span>, or 44% of their coin
+tosses resulted in heads. Find the <span
+class="math inline">\(z\)</span>-score corresponding to this value.</li>
 </ol>
-<a href="javascript:showhide('Q11')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q11')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q11" style="display:none;">
 <ul>
-<li><span class="math inline">\(z\)</span>-score = <span class="math inline">\(-0.60\)</span></li>
+<li><span class="math inline">\(z\)</span>-score = <span
+class="math inline">\(-0.60\)</span></li>
 </ul>
 </div>
 <p><br></p>
 <ol start="12" style="list-style-type: decimal">
-<li>Use the <span class="math inline">\(z\)</span>-score you computed in question 11 to find the probability that the proportion of successes, <span class="math inline">\(\widehat p\)</span>, will be greater than 0.44 if a coin is tossed <span class="math inline">\(n=25\)</span> times. In other words, find <span class="math inline">\(P(\widehat p &gt; 0.44)\)</span>.</li>
+<li>Use the <span class="math inline">\(z\)</span>-score you computed in
+question 11 to find the probability that the proportion of successes,
+<span class="math inline">\(\widehat p\)</span>, will be greater than
+0.44 if a coin is tossed <span class="math inline">\(n=25\)</span>
+times. In other words, find <span class="math inline">\(P(\widehat p
+&gt; 0.44)\)</span>.</li>
 </ol>
-<a href="javascript:showhide('Q12')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q12')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q12" style="display:none;">
 <ul>
-<li><span class="math inline">\(P(\widehat p &gt; 0.44)= 0.7257\)</span></li>
+<li><span class="math inline">\(P(\widehat p &gt; 0.44)=
+0.7257\)</span></li>
 </ul>
 </div>
 <p><br></p>
 <ol start="13" style="list-style-type: decimal">
-<li>For <span class="math inline">\(n=25\)</span> coin tosses, find the probability that <span class="math inline">\(P(0.44 &lt; \widehat p &lt; 0.68)\)</span>.</li>
+<li>For <span class="math inline">\(n=25\)</span> coin tosses, find the
+probability that <span class="math inline">\(P(0.44 &lt; \widehat p &lt;
+0.68)\)</span>.</li>
 </ol>
-<a href="javascript:showhide('Q13')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
+<a href="javascript:showhide('Q13')"><span
+style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q13" style="display:none;">
 <ul>
 <li><span class="math inline">\(0.7257 - 0.0359 = 0.6898\)</span></li>
@@ -770,13 +991,30 @@ Answer the following questions:
 <div id="example-political-elections" class="section level4">
 <h4>Example: Political Elections</h4>
 <p>Consider the following question:</p>
-<p>“If the true proportion of people who support a particular political candidate is <span class="math inline">\(p=0.48\)</span>, and if <span class="math inline">\(n=1041\)</span> people are surveyed, what is the probability that the results of the survey will suggest that the candidate will win the election?”</p>
-<p>To address this question, we first note that the survey will suggest that the candidate will win if more than 50% of the people surveyed favor the candidate. So, we need to find the following probability: <span class="math inline">\(P(\widehat p &gt; 0.5)\)</span>. First we find the <span class="math inline">\(z\)</span> score:</p>
+<p>“If the true proportion of people who support a particular political
+candidate is <span class="math inline">\(p=0.48\)</span>, and if <span
+class="math inline">\(n=1041\)</span> people are surveyed, what is the
+probability that the results of the survey will suggest that the
+candidate will win the election?”</p>
+<p>To address this question, we first note that the survey will suggest
+that the candidate will win if more than 50% of the people surveyed
+favor the candidate. So, we need to find the following probability:
+<span class="math inline">\(P(\widehat p &gt; 0.5)\)</span>. First we
+find the <span class="math inline">\(z\)</span> score:</p>
 <p><span class="math display">\[
-z = \frac{\widehat p - p}{\sqrt{\frac{p(1-p)}{n}}} = \frac{0.5-0.48}{\sqrt{\frac{0.48(1-0.48)}{1041}}} = 1.292
+z = \frac{\widehat p - p}{\sqrt{\frac{p(1-p)}{n}}} =
+\frac{0.5-0.48}{\sqrt{\frac{0.48(1-0.48)}{1041}}} = 1.292
 \]</span></p>
-<p>Now, we look up this value using the Normal Probability Applet and find the area to the right. Using the Normal Probability Applet, we find that <span class="math inline">\(P(\widehat p &gt; 0.5)=0.0982\)</span>. So, even though this candidate is actually behind in the popular vote, there is a chance of 0.0982 that they will appear to be winning!</p>
-<p>This calculation was done in the same way we have done normal calculations in the past. The only difference is that instead of using <span class="math inline">\(\bar x\)</span> and its mean and standard deviation, we used <span class="math inline">\(\widehat p\)</span> and its mean and standard deviation. Otherwise, they are the same.</p>
+<p>Now, we look up this value using the Normal Probability Applet and
+find the area to the right. Using the Normal Probability Applet, we find
+that <span class="math inline">\(P(\widehat p &gt; 0.5)=0.0982\)</span>.
+So, even though this candidate is actually behind in the popular vote,
+there is a chance of 0.0982 that they will appear to be winning!</p>
+<p>This calculation was done in the same way we have done normal
+calculations in the past. The only difference is that instead of using
+<span class="math inline">\(\bar x\)</span> and its mean and standard
+deviation, we used <span class="math inline">\(\widehat p\)</span> and
+its mean and standard deviation. Otherwise, they are the same.</p>
 <p><br></p>
 </div>
 </div>
@@ -788,12 +1026,28 @@ Remember…
 </div>
 <div class="Summary">
 <ul>
-<li><p><strong>Pie charts</strong> are used when you want to represent the observations as part of a whole, where each slice (sector) of the pie chart represents a proportion or percentage of the whole.</p></li>
-<li><p><strong>Bar charts</strong> present the same information as pie charts and are used when our data represent counts. A <strong>Pareto chart</strong> is a bar chart where the height of the bars is presented in descending order.</p></li>
-<li><p><span class="math inline">\(\widehat p\)</span> is a point estimator for true proportion <span class="math inline">\(p\)</span>. <span class="math inline">\(\displaystyle{\widehat p = \frac{x}{n}}\)</span></p></li>
-<li><p>The sampling distribution of <span class="math inline">\(\widehat p\)</span> has a mean of <span class="math inline">\(\mu_{\widehat{p}} = p\)</span> and a standard deviation of <span class="math inline">\(\sigma_{\widehat{p}} = \displaystyle{\sqrt{\frac{p\cdot(1-p)}{n}}}\)</span></p></li>
-<li><p>If <span class="math inline">\(np \ge 10\)</span> and <span class="math inline">\(n(1-p) \ge 10\)</span>, you can conduct <strong>probability calculations</strong> using the Normal Probability Applet. <span class="math display">\[
-\displaystyle {z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}}
+<li><p><strong>Pie charts</strong> are used when you want to represent
+the observations as part of a whole, where each slice (sector) of the
+pie chart represents a proportion or percentage of the whole.</p></li>
+<li><p><strong>Bar charts</strong> present the same information as pie
+charts and are used when our data represent counts. A <strong>Pareto
+chart</strong> is a bar chart where the height of the bars is presented
+in descending order.</p></li>
+<li><p><span class="math inline">\(\widehat p\)</span> is a point
+estimator for true proportion <span class="math inline">\(p\)</span>.
+<span class="math inline">\(\displaystyle{\widehat p =
+\frac{x}{n}}\)</span></p></li>
+<li><p>The sampling distribution of <span class="math inline">\(\widehat
+p\)</span> has a mean of <span class="math inline">\(\mu_{\widehat{p}} =
+p\)</span> and a standard deviation of <span
+class="math inline">\(\sigma_{\widehat{p}} =
+\displaystyle{\sqrt{\frac{p\cdot(1-p)}{n}}}\)</span></p></li>
+<li><p>If <span class="math inline">\(np \ge 10\)</span> and <span
+class="math inline">\(n(1-p) \ge 10\)</span>, you can conduct
+<strong>probability calculations</strong> using the Normal Probability
+Applet. <span class="math display">\[
+\displaystyle {z = \frac{\textrm{value} -
+\textrm{mean}}{\textrm{standard deviation}}
 = \frac{\widehat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}}
 \]</span> <br></p></li>
 </ul>
@@ -818,9 +1072,12 @@ Remember…
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center"><a href="Lesson15.html">Lesson 15: <br> Review for Exam 2</a></td>
-<td align="center">Lesson 16: <br> Describing Categorical Data: Proportions; <br> Sampling Distribution of a Sample Proportion</td>
-<td align="center"><a href="Lesson17.html">Lesson 17: <br> Inference for One Proportion</a></td>
+<td align="center"><a href="Lesson15.html">Lesson 15: <br> Review for
+Exam 2</a></td>
+<td align="center">Lesson 16: <br> Describing Categorical Data:
+Proportions; <br> Sampling Distribution of a Sample Proportion</td>
+<td align="center"><a href="Lesson17.html">Lesson 17: <br> Inference for
+One Proportion</a></td>
 </tr>
 </tbody>
 </table>

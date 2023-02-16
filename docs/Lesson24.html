@@ -13,8 +13,8 @@
 
 <title>Lesson 24: Review for Exam 4</title>
 
-<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -57,6 +57,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -81,6 +82,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -233,7 +237,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -246,17 +250,25 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 1
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
-    </li>
-    <li>
-      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lesson 1: Course Intro &amp; Probability</a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="Lesson01_Campus.html">Campus Student Version</a>
+        </li>
+        <li>
+          <a href="Lesson01.html">Online Student Version</a>
+        </li>
+        <li>
+          <a href="Lesson01_WWB.html">World Wide Block Student Version</a>
+        </li>
+      </ul>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -282,7 +294,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 2
      
     <span class="caret"></span>
@@ -312,7 +324,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 3
      
     <span class="caret"></span>
@@ -336,7 +348,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 4
      
     <span class="caret"></span>
@@ -379,9 +391,11 @@ $(document).ready(function () {
 
 <div id="TOC">
 <ul>
-<li><a href="#unit-4-lesson-outcomes">Unit 4 Lesson Outcomes</a></li>
-<li><a href="#unit-4-lesson-summaries">Unit 4 Lesson Summaries</a></li>
-<li><a href="#navigation">Navigation</a></li>
+<li><a href="#unit-4-lesson-outcomes"
+id="toc-unit-4-lesson-outcomes">Unit 4 Lesson Outcomes</a></li>
+<li><a href="#unit-4-lesson-summaries"
+id="toc-unit-4-lesson-summaries">Unit 4 Lesson Summaries</a></li>
+<li><a href="#navigation" id="toc-navigation">Navigation</a></li>
 </ul>
 </div>
 
@@ -394,33 +408,46 @@ $(document).ready(function () {
 <p><br /></p>
 <div id="unit-4-lesson-outcomes" class="section level2">
 <h2>Unit 4 Lesson Outcomes</h2>
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
+<a href="javascript:showhide('oc')"><span
+style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
-<p>The expectation on the exam is the following outcomes. You should be able to do:</p>
+<p>The expectation on the exam is the following outcomes. You should be
+able to do:</p>
 <ul>
-<li>All of the Outcomes from <a href="Lesson08.html">Lesson 08 (Unit 1)</a>, <a href="Lesson15.html">Lesson 15 (Unit 2)</a>, and <a href="Lesson20.html">Lesson 20 (Unit 3)</a></li>
+<li>All of the Outcomes from <a href="Lesson08.html">Lesson 08 (Unit
+1)</a>, <a href="Lesson15.html">Lesson 15 (Unit 2)</a>, and <a
+href="Lesson20.html">Lesson 20 (Unit 3)</a></li>
 <li>Create a scatterplot of bivariate data.</li>
-<li>Interpret the overall pattern in a scatter plot to assess linearity and direction.</li>
+<li>Interpret the overall pattern in a scatter plot to assess linearity
+and direction.</li>
 <li>Calculate the correlation coefficient.</li>
-<li>Interpret the correlation coefficient, <span class="math inline">\(r\)</span>, as a measure of strength and direction of a linear relationship between two variables.</li>
+<li>Interpret the correlation coefficient, <span
+class="math inline">\(r\)</span>, as a measure of strength and direction
+of a linear relationship between two variables.</li>
 <li>Identify the explanatory and response variable in a study.</li>
 <li>Calculate the slope and intercept of a regression model.</li>
 <li>Interpret the slope of the regression model.</li>
 <li>Make predictions using a regression model</li>
 <li>Confidence Intervals for the slope of the regression line:
 <ul>
-<li>Calculate and interpret a confidence interval for the slope of the regression line given a confidence level.</li>
-<li>Identify a point estimate and margin of error for the confidence interval.</li>
-<li>Show the appropriate connections between the numerical and graphical summaries that support the confidence interval.</li>
+<li>Calculate and interpret a confidence interval for the slope of the
+regression line given a confidence level.</li>
+<li>Identify a point estimate and margin of error for the confidence
+interval.</li>
+<li>Show the appropriate connections between the numerical and graphical
+summaries that support the confidence interval.</li>
 <li>Check the requirements for the confidence interval.</li>
 </ul></li>
 <li>Hypothesis Testing for the slope of the regression line:
 <ul>
 <li>State the null and alternative hypothesis.</li>
-<li>Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.</li>
-<li>Assess the statistical significance by comparing the p-value to the <span class="math inline">\(\alpha\)</span>-level.</li>
+<li>Calculate the test-statistic, degrees of freedom and p-value of the
+hypothesis test.</li>
+<li>Assess the statistical significance by comparing the p-value to the
+<span class="math inline">\(\alpha\)</span>-level.</li>
 <li>Check the requirements for the hypothesis test.</li>
-<li>Show the appropriate connections between the numerical and graphical summaries that support the hypothesis test.</li>
+<li>Show the appropriate connections between the numerical and graphical
+summaries that support the hypothesis test.</li>
 <li>Draw a correct conclusion for the hypothesis test.</li>
 </ul></li>
 </ul>
@@ -429,18 +456,36 @@ $(document).ready(function () {
 </div>
 <div id="unit-4-lesson-summaries" class="section level2">
 <h2>Unit 4 Lesson Summaries</h2>
-<p>Here are the summaries for each lesson in unit 4. Reviewing these key points from each lesson will help you in your preparation for the exam.</p>
-<a href="javascript:showhide('su')"><span style="font-size:8pt;">Show/Hide Summaries</span></a>
+<p>Here are the summaries for each lesson in unit 4. Reviewing these key
+points from each lesson will help you in your preparation for the
+exam.</p>
+<a href="javascript:showhide('su')"><span
+style="font-size:8pt;">Show/Hide Summaries</span></a>
 <div id="su">
 <div class="RecapHeading">
 Lesson 21 Recap
 </div>
 <div class="Summary">
 <ul>
-<li><p>Creating <strong>scatterplots</strong> of bivariate data allows us to visualize the data by helping us understand its <strong>shape</strong> (linear or nonlinear), <strong>direction</strong> (positive, negative, or neither), and <strong>strength</strong> (strong, moderate, or weak).</p></li>
-<li><p>The <strong>correlation coefficient (<span class="math inline">\(r\)</span>)</strong> is a number between <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span> that tells us the direction and strength of the linear association between two variables. A positive <span class="math inline">\(r\)</span> corresponds to a <strong>positive association</strong> while a negative <span class="math inline">\(r\)</span> corresponds to a <strong>negative association</strong>. A value of <span class="math inline">\(r\)</span> closer to <span class="math inline">\(-1\)</span> or <span class="math inline">\(1\)</span> indicates a stronger association than a value of <span class="math inline">\(r\)</span> closer to zero.</p></li>
-<li><p>The <strong>covariance</strong> is a measure of how two variables vary together. The formula for the covariance is <span class="math inline">\(s_{xy}=r \cdot s_x \cdot s_y\)</span>. <br></p></li>
+<li><p>Creating <strong>scatterplots</strong> of bivariate data allows
+us to visualize the data by helping us understand its
+<strong>shape</strong> (linear or nonlinear), <strong>direction</strong>
+(positive, negative, or neither), and <strong>strength</strong> (strong,
+moderate, or weak).</p></li>
+<li><p>The <strong>correlation coefficient (<span
+class="math inline">\(r\)</span>)</strong> is a number between <span
+class="math inline">\(-1\)</span> and <span
+class="math inline">\(1\)</span> that tells us the direction and
+strength of the linear association between two variables. A positive
+<span class="math inline">\(r\)</span> corresponds to a <strong>positive
+association</strong> while a negative <span
+class="math inline">\(r\)</span> corresponds to a <strong>negative
+association</strong>. A value of <span class="math inline">\(r\)</span>
+closer to <span class="math inline">\(-1\)</span> or <span
+class="math inline">\(1\)</span> indicates a stronger association than a
+value of <span class="math inline">\(r\)</span> closer to zero.</p></li>
 </ul>
+<p><br></p>
 </div>
 <p><br></p>
 <div class="RecapHeading">
@@ -448,9 +493,33 @@ Lesson 22 Recap
 </div>
 <div class="Summary">
 <ul>
-<li><p>In statistics, we write the <strong>linear regression equation</strong> as <span class="math inline">\(\hat Y=b_0+b_1X\)</span> where <span class="math inline">\(b_0\)</span> is the <strong>Y-intercept</strong> of the line and <span class="math inline">\(b_1\)</span> is the <strong>slope</strong> of the line. The values of <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> are calculated using software.</p></li>
-<li><p>Linear regression allows us to predict values of <span class="math inline">\(Y\)</span> for a given <span class="math inline">\(X\)</span>. This is done by first calculating the coefficients <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> and then plugging in the desired value of <span class="math inline">\(X\)</span> and solving for <span class="math inline">\(Y\)</span>.</p></li>
-<li><p>The <strong>independent (or explanatory) variable (<span class="math inline">\(X\)</span>)</strong> is the variable which is <em>not</em> affected by what happens to the other variable. The <strong>dependent (or response) variable (<span class="math inline">\(Y\)</span>)</strong> is the variable which <em>is</em> affected by what happens to the other variable. For example, in the correlation between number of powerboats and number of manatee deaths, the number of deaths is affected by the number of powerboats in the water, but not the other way around. So, we would assign <span class="math inline">\(X\)</span> to represent the number of powerboats and <span class="math inline">\(Y\)</span> to represent the number of manatee deaths. <br></p></li>
+<li><p>In statistics, we write the <strong>linear regression
+equation</strong> as <span class="math inline">\(\hat
+Y=b_0+b_1X\)</span> where <span class="math inline">\(b_0\)</span> is
+the <strong>Y-intercept</strong> of the line and <span
+class="math inline">\(b_1\)</span> is the <strong>slope</strong> of the
+line. The values of <span class="math inline">\(b_0\)</span> and <span
+class="math inline">\(b_1\)</span> are calculated using
+software.</p></li>
+<li><p>Linear regression allows us to predict values of <span
+class="math inline">\(Y\)</span> for a given <span
+class="math inline">\(X\)</span>. This is done by first calculating the
+coefficients <span class="math inline">\(b_0\)</span> and <span
+class="math inline">\(b_1\)</span> and then plugging in the desired
+value of <span class="math inline">\(X\)</span> and solving for <span
+class="math inline">\(Y\)</span>.</p></li>
+<li><p>The <strong>independent (or explanatory) variable (<span
+class="math inline">\(X\)</span>)</strong> is the variable which is
+<em>not</em> affected by what happens to the other variable. The
+<strong>dependent (or response) variable (<span
+class="math inline">\(Y\)</span>)</strong> is the variable which
+<em>is</em> affected by what happens to the other variable. For example,
+in the correlation between number of powerboats and number of manatee
+deaths, the number of deaths is affected by the number of powerboats in
+the water, but not the other way around. So, we would assign <span
+class="math inline">\(X\)</span> to represent the number of powerboats
+and <span class="math inline">\(Y\)</span> to represent the number of
+manatee deaths. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -459,18 +528,38 @@ Lesson 23 Recap
 </div>
 <div class="Summary">
 <ul>
-<li><p>The unknown <strong>true linear regression line</strong> is <span class="math inline">\(Y=\beta_0+\beta_1X\)</span> where <span class="math inline">\(\beta_0\)</span> is the true y-intercept of the line and <span class="math inline">\(\beta_1\)</span> is the true slope of the line.</p></li>
-<li><p>A <strong>residual</strong> is the difference between the observed value of <span class="math inline">\(Y\)</span> for a given <span class="math inline">\(X\)</span> and the predicted value of <span class="math inline">\(Y\)</span> on the regression line for the same <span class="math inline">\(X\)</span>. It can be expressed as: <span class="math display">\[
+<li><p>The unknown <strong>true linear regression line</strong> is <span
+class="math inline">\(Y=\beta_0+\beta_1X\)</span> where <span
+class="math inline">\(\beta_0\)</span> is the true y-intercept of the
+line and <span class="math inline">\(\beta_1\)</span> is the true slope
+of the line.</p></li>
+<li><p>A <strong>residual</strong> is the difference between the
+observed value of <span class="math inline">\(Y\)</span> for a given
+<span class="math inline">\(X\)</span> and the predicted value of <span
+class="math inline">\(Y\)</span> on the regression line for the same
+<span class="math inline">\(X\)</span>. It can be expressed as: <span
+class="math display">\[
 Residual = Y - \hat Y = Y - (b_0 + b_1 X)
 \]</span></p></li>
-<li><p>To check all the requirements for bivariate inference you will need to create a <strong>scatterplot</strong> of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, a <strong>residual plot</strong>, and a <strong>histogram of the residuals</strong>.</p></li>
-<li><p>We conduct a hypothesis test on bivariate data to know if there is a linear relationship between the two variables. To determine this, we test the slope (<span class="math inline">\(\beta_1\)</span>) on whether or not it equals zero. The appropriate hypotheses for this test are: <span class="math display">\[
+<li><p>To check all the requirements for bivariate inference you will
+need to create a <strong>scatterplot</strong> of <span
+class="math inline">\(X\)</span> and <span
+class="math inline">\(Y\)</span>, a <strong>residual plot</strong>, and
+a <strong>histogram of the residuals</strong>.</p></li>
+<li><p>We conduct a hypothesis test on bivariate data to know if there
+is a linear relationship between the two variables. To determine this,
+we test the slope (<span class="math inline">\(\beta_1\)</span>) on
+whether or not it equals zero. The appropriate hypotheses for this test
+are: <span class="math display">\[
 \begin{array}{1cl}
 H_0: &amp; \beta_1=0 \\
 H_a: &amp; \beta_1\ne0
 \end{array}
 \]</span></p></li>
-<li><p>For bivariate inference we use software to calculate the sample coefficients, residuals, test statistic, <span class="math inline">\(P\)</span>-value, and confidence intervals of the true linear regression coefficients. <br></p></li>
+<li><p>For bivariate inference we use software to calculate the sample
+coefficients, residuals, test statistic, <span
+class="math inline">\(P\)</span>-value, and confidence intervals of the
+true linear regression coefficients. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -482,6 +571,10 @@ H_a: &amp; \beta_1\ne0
 <h2>Navigation</h2>
 <center>
 <table>
+<colgroup>
+<col width="55%" />
+<col width="44%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="center"><strong>Previous Reading</strong></th>
@@ -490,7 +583,8 @@ H_a: &amp; \beta_1\ne0
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center"><a href="Lesson23.html">Lesson 23: <br> Inference for Bivariate Data</a></td>
+<td align="center"><a href="Lesson23.html">Lesson 23: <br> Inference for
+Bivariate Data</a></td>
 <td align="center">Lesson 24: <br> Review for Exam 4</td>
 </tr>
 </tbody>

@@ -13,8 +13,8 @@
 
 <title>Lesson 15: Review for Exam 2</title>
 
-<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -57,6 +57,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -81,6 +82,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -233,7 +237,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -246,17 +250,25 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 1
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="Lesson01_Campus.html">Lesson 1: (On Campus) Course Intro &amp; Probability</a>
-    </li>
-    <li>
-      <a href="Lesson01.html">Lesson 1: (Online) Course Intro &amp; Probability</a>
+    <li class="dropdown-submenu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lesson 1: Course Intro &amp; Probability</a>
+      <ul class="dropdown-menu" role="menu">
+        <li>
+          <a href="Lesson01_Campus.html">Campus Student Version</a>
+        </li>
+        <li>
+          <a href="Lesson01.html">Online Student Version</a>
+        </li>
+        <li>
+          <a href="Lesson01_WWB.html">World Wide Block Student Version</a>
+        </li>
+      </ul>
     </li>
     <li>
       <a href="Lesson02.html">Lesson 2: The Statistical Process</a>
@@ -282,7 +294,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 2
      
     <span class="caret"></span>
@@ -312,7 +324,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 3
      
     <span class="caret"></span>
@@ -336,7 +348,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Unit 4
      
     <span class="caret"></span>
@@ -379,9 +391,11 @@ $(document).ready(function () {
 
 <div id="TOC">
 <ul>
-<li><a href="#unit-2-lesson-outcomes">Unit 2 Lesson Outcomes</a></li>
-<li><a href="#unit-2-lesson-summaries">Unit 2 Lesson Summaries</a></li>
-<li><a href="#navigation">Navigation</a></li>
+<li><a href="#unit-2-lesson-outcomes"
+id="toc-unit-2-lesson-outcomes">Unit 2 Lesson Outcomes</a></li>
+<li><a href="#unit-2-lesson-summaries"
+id="toc-unit-2-lesson-summaries">Unit 2 Lesson Summaries</a></li>
+<li><a href="#navigation" id="toc-navigation">Navigation</a></li>
 </ul>
 </div>
 
@@ -391,40 +405,58 @@ $(document).ready(function () {
     e.style.display = (e.style.display == 'block') ? 'none' : 'block';
  }
 </script>
-<p>This is not designed to be a comprehensive review. There may be items on the exam that are not covered in this review. Similarly, there may be items in this review that are not tested on this exam. You are strongly encouraged to review the readings, homework exercises, and other activities from Units 1 and 2 as you prepare for the exam. In particular, you should go over the <a href="Lesson08.html">Lesson 8: Review for Exam 1</a>.</p>
+<p>This is not designed to be a comprehensive review. There may be items
+on the exam that are not covered in this review. Similarly, there may be
+items in this review that are not tested on this exam. You are strongly
+encouraged to review the readings, homework exercises, and other
+activities from Units 1 and 2 as you prepare for the exam. In
+particular, you should go over the <a href="Lesson08.html">Lesson 8:
+Review for Exam 1</a>.</p>
 <!-- Use the <span style="font-variant:small-caps"> -->
 <!-- [[Index]]</span> to review definitions of important terms. 
 Needs to be built-->
 <div id="unit-2-lesson-outcomes" class="section level2">
 <h2>Unit 2 Lesson Outcomes</h2>
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
+<a href="javascript:showhide('oc')"><span
+style="font-size:8pt;">Show/Hide Outcomes</span></a>
 <div id="oc" style="display:none;">
-<p>The expectation on the exam is the following outcomes. You should be able to do:</p>
+<p>The expectation on the exam is the following outcomes. You should be
+able to do:</p>
 <ul>
-<li><p>All of the Outcomes from <a href="Lesson08.html">Lesson 08 (Unit 1)</a></p></li>
+<li><p>All of the Outcomes from <a href="Lesson08.html">Lesson 08 (Unit
+1)</a></p></li>
 <li><p>Confidence Intervals:</p>
 <ul>
-<li>Calculate and interpret a confidence interval given a confidence level and a given parameter.</li>
-<li>Explain how the margin of error changes with the sample size and the level of confidence.</li>
-<li>Identify a point estimate and margin of error for a given confidence interval.</li>
-<li>Show the appropriate connections between the numerical and graphical summaries that support a confidence interval.</li>
+<li>Calculate and interpret a confidence interval given a confidence
+level and a given parameter.</li>
+<li>Explain how the margin of error changes with the sample size and the
+level of confidence.</li>
+<li>Identify a point estimate and margin of error for a given confidence
+interval.</li>
+<li>Show the appropriate connections between the numerical and graphical
+summaries that support a confidence interval.</li>
 <li>Check the requirements for a confidence interval.</li>
 <li>Determining correct confidence interval for a given scenario</li>
 </ul></li>
 <li><p>Calculate a confidence interval for</p>
 <ul>
-<li>A single mean with <span class="math inline">\(\sigma\)</span> known.</li>
-<li>A single mean with <span class="math inline">\(\sigma\)</span> unknown.</li>
+<li>A single mean with <span class="math inline">\(\sigma\)</span>
+known.</li>
+<li>A single mean with <span class="math inline">\(\sigma\)</span>
+unknown.</li>
 <li>The mean of differences with dependent samples.</li>
 <li>Difference of two means of independent samples.</li>
 </ul></li>
 <li><p>Hypothesis Testing</p>
 <ul>
 <li>State the null and alternative hypothesis for the chosen test.</li>
-<li>Calculate the test-statistic, degrees of freedom and p-value of the hypothesis test.</li>
-<li>Assess the statistical significance by comparing the p-value to the α-level.</li>
+<li>Calculate the test-statistic, degrees of freedom and p-value of the
+hypothesis test.</li>
+<li>Assess the statistical significance by comparing the p-value to the
+α-level.</li>
 <li>Check the requirements for the hypothesis test.</li>
-<li>Show the appropriate connections between the numerical and graphical summaries that support a hypothesis test.</li>
+<li>Show the appropriate connections between the numerical and graphical
+summaries that support a hypothesis test.</li>
 <li>Draw a correct conclusion for a hypothesis test.</li>
 <li>Interpret a Type I and II error.</li>
 <li>Determining correct hypothesis test for a given scenario.</li>
@@ -443,8 +475,11 @@ Needs to be built-->
 </div>
 <div id="unit-2-lesson-summaries" class="section level2">
 <h2>Unit 2 Lesson Summaries</h2>
-<p>Here are the summaries for each lesson in Unit 2. Reviewing these key points from each lesson will help you in your preparation for the exam.</p>
-<a href="javascript:showhide('ls')"><span style="font-size:8pt;">Show/Hide Summaries</span></a>
+<p>Here are the summaries for each lesson in Unit 2. Reviewing these key
+points from each lesson will help you in your preparation for the
+exam.</p>
+<a href="javascript:showhide('ls')"><span
+style="font-size:8pt;">Show/Hide Summaries</span></a>
 <div id="ls">
 <br>
 <div class="RecapHeading">
@@ -452,10 +487,43 @@ Lesson 09 Recap
 </div>
 <div class="Summary">
 <ul>
-<li><p>The <strong>null hypothesis (<span class="math inline">\(H_0\)</span>)</strong> is the foundational assumption about a population and represents the status quo. It is a statement of equality (<span class="math inline">\(=\)</span>). The <strong>alternative hypothesis (<span class="math inline">\(H_a\)</span>)</strong> is a different assumption about a population and is a statement of inequality (<span class="math inline">\(&lt;\)</span>, <span class="math inline">\(&gt;\)</span>, or <span class="math inline">\(\ne\)</span>). Using a <strong>hypothesis test</strong>, we determine whether it is more likely that the null hypothesis or the alternative hypothesis is true.</p></li>
-<li><p>The <strong><span class="math inline">\(P\)</span>-value</strong> is the probability of getting a test statistic at least as extreme as the one you got, assuming <span class="math inline">\(H_0\)</span> is true. A <span class="math inline">\(P\)</span>-value is calculated by finding the area under the normal distribution curve that is more extreme (farther away from the mean) than the z-score. The alternative hypothesis tells us whether we look at both tails or only one.</p></li>
-<li><p>The <strong>level of significance (<span class="math inline">\(\alpha\)</span>)</strong> is the standard for determining whether or not the null hypothesis should be rejected. Typical values for <span class="math inline">\(\alpha\)</span> are <span class="math inline">\(0.05\)</span>, <span class="math inline">\(0.10\)</span>, and <span class="math inline">\(0.01\)</span>. If the <span class="math inline">\(P\)</span>-value is less than <span class="math inline">\(\alpha\)</span> we reject the null. If the <span class="math inline">\(P\)</span>-value is not less than <span class="math inline">\(\alpha\)</span> we fail to reject the null.</p></li>
-<li><p>A <strong>Type I error</strong> is committed when we reject a null hypothesis that is, in reality, true. A <strong>Type II error</strong> is committed when we fail to reject a null hypothesis that is, in reality, not true. The value of <span class="math inline">\(\alpha\)</span> is the probability of committing a Type I error. <br></p></li>
+<li><p>The <strong>null hypothesis (<span
+class="math inline">\(H_0\)</span>)</strong> is the foundational
+assumption about a population and represents the status quo. It is a
+statement of equality (<span class="math inline">\(=\)</span>). The
+<strong>alternative hypothesis (<span
+class="math inline">\(H_a\)</span>)</strong> is a different assumption
+about a population and is a statement of inequality (<span
+class="math inline">\(&lt;\)</span>, <span
+class="math inline">\(&gt;\)</span>, or <span
+class="math inline">\(\ne\)</span>). Using a <strong>hypothesis
+test</strong>, we determine whether it is more likely that the null
+hypothesis or the alternative hypothesis is true.</p></li>
+<li><p>The <strong><span class="math inline">\(P\)</span>-value</strong>
+is the probability of getting a test statistic at least as extreme as
+the one you got, assuming <span class="math inline">\(H_0\)</span> is
+true. A <span class="math inline">\(P\)</span>-value is calculated by
+finding the area under the normal distribution curve that is more
+extreme (farther away from the mean) than the z-score. The alternative
+hypothesis tells us whether we look at both tails or only one.</p></li>
+<li><p>The <strong>level of significance (<span
+class="math inline">\(\alpha\)</span>)</strong> is the standard for
+determining whether or not the null hypothesis should be rejected.
+Typical values for <span class="math inline">\(\alpha\)</span> are <span
+class="math inline">\(0.05\)</span>, <span
+class="math inline">\(0.10\)</span>, and <span
+class="math inline">\(0.01\)</span>. If the <span
+class="math inline">\(P\)</span>-value is less than <span
+class="math inline">\(\alpha\)</span> we reject the null. If the <span
+class="math inline">\(P\)</span>-value is not less than <span
+class="math inline">\(\alpha\)</span> we fail to reject the
+null.</p></li>
+<li><p>A <strong>Type I error</strong> is committed when we reject a
+null hypothesis that is, in reality, true. A <strong>Type II
+error</strong> is committed when we fail to reject a null hypothesis
+that is, in reality, not true. The value of <span
+class="math inline">\(\alpha\)</span> is the probability of committing a
+Type I error. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -464,9 +532,25 @@ Lesson 10 Recap
 </div>
 <div class="Summary">
 <ul>
-<li><p>The <strong>margin of error</strong> gives an estimate of the variability of responses. It is calculated as <span class="math inline">\(\displaystyle{m=z^*\frac{\sigma}{\sqrt{n}}}\)</span> where <span class="math inline">\(z^*\)</span> represents a calculated z-score corresponding to a particular confidence level.</p></li>
-<li><p>A <strong>confidence interval</strong> is an interval estimator used to give a range of plausible values for a parameter. The width of a confidence interval depends on the chosen confidence level (and its corresponding value of <span class="math inline">\(z^*\)</span>) as well as the sample size (<span class="math inline">\(n\)</span>). This is the equation for calculating confidence intervals: <span class="math display">\[\displaystyle{\left(\bar x-z^*\frac{\sigma}{\sqrt{n}},~\bar x+z^*\frac{\sigma}{\sqrt{n}}\right)}\]</span></p></li>
-<li><p>The <strong>sample size formula</strong> allows us to estimate the number of observations required to obtain a specific margin of error. <span class="math inline">\(\displaystyle{n=\left(\frac{z^*\sigma}{m}\right)^2}\)</span> <br></p></li>
+<li><p>The <strong>margin of error</strong> gives an estimate of the
+variability of responses. It is calculated as <span
+class="math inline">\(\displaystyle{m=z^*\frac{\sigma}{\sqrt{n}}}\)</span>
+where <span class="math inline">\(z^*\)</span> represents a calculated
+z-score corresponding to a particular confidence level.</p></li>
+<li><p>A <strong>confidence interval</strong> is an interval estimator
+used to give a range of plausible values for a parameter. The width of a
+confidence interval depends on the chosen confidence level (and its
+corresponding value of <span class="math inline">\(z^*\)</span>) as well
+as the sample size (<span class="math inline">\(n\)</span>). This is the
+equation for calculating confidence intervals: <span
+class="math display">\[\displaystyle{\left(\bar
+x-z^*\frac{\sigma}{\sqrt{n}},~\bar
+x+z^*\frac{\sigma}{\sqrt{n}}\right)}\]</span></p></li>
+<li><p>The <strong>sample size formula</strong> allows us to estimate
+the number of observations required to obtain a specific margin of
+error. <span
+class="math inline">\(\displaystyle{n=\left(\frac{z^*\sigma}{m}\right)^2}\)</span>
+<br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -475,9 +559,24 @@ Lesson 11 Recap
 </div>
 <div class="Summary">
 <ul>
-<li><p>In practice we rarely know the true standard deviation <span class="math inline">\(\sigma\)</span> and will therefore be unable to calculate a z-score. <strong>Student’s t-distribution</strong> gives us a new test statistic, <span class="math inline">\(t\)</span>, that is calculated using the sample standard deviation (<span class="math inline">\(s\)</span>) instead. <span class="math display">\[ \displaystyle{ t = \frac {\bar x - \mu} {s / \sqrt{n}} } \]</span></p></li>
-<li><p>The <span class="math inline">\(t\)</span>-distribution is similar to a normal distribution in that it is bell-shaped and symmetrical, but the exact shape of the <span class="math inline">\(t\)</span>-distribution depends on the <strong>degrees of freedom (<span class="math inline">\(df\)</span>)</strong>. <span class="math display">\[df=n-1\]</span></p></li>
-<li><p>You will use Excel to carry out hypothesis testing and create confidence intervals involving <span class="math inline">\(t\)</span>-distributions. <br></p></li>
+<li><p>In practice we rarely know the true standard deviation <span
+class="math inline">\(\sigma\)</span> and will therefore be unable to
+calculate a z-score. <strong>Student’s t-distribution</strong> gives us
+a new test statistic, <span class="math inline">\(t\)</span>, that is
+calculated using the sample standard deviation (<span
+class="math inline">\(s\)</span>) instead. <span class="math display">\[
+\displaystyle{ t = \frac {\bar x - \mu} {s / \sqrt{n}} }
+\]</span></p></li>
+<li><p>The <span class="math inline">\(t\)</span>-distribution is
+similar to a normal distribution in that it is bell-shaped and
+symmetrical, but the exact shape of the <span
+class="math inline">\(t\)</span>-distribution depends on the
+<strong>degrees of freedom (<span
+class="math inline">\(df\)</span>)</strong>. <span
+class="math display">\[df=n-1\]</span></p></li>
+<li><p>You will use Excel to carry out hypothesis testing and create
+confidence intervals involving <span
+class="math inline">\(t\)</span>-distributions. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -486,10 +585,24 @@ Lesson 12 Recap
 </div>
 <div class="Summary">
 <ul>
-<li><p>The key characteristic of <strong>dependent samples</strong> (or <strong>matched pairs</strong>) is that knowing which subjects will be in group 1 determines which subjects will be in group 2.</p></li>
-<li><p>We use slightly different variables when conducting inference using dependent samples:</p>
-<p>Group 1 values: <span class="math inline">\(x_1\)</span>  Group 2 values: <span class="math inline">\(x_2\)</span>  Differences: <span class="math inline">\(d\)</span>  Population mean: <span class="math inline">\(\mu_d\)</span>  Sample mean: <span class="math inline">\(\bar d\)</span>  Sample standard deviation: <span class="math inline">\(s_d\)</span></p></li>
-<li><p>When conducting hypothesis tests using dependent samples, the null hypothesis is always <span class="math inline">\(\mu_d=0\)</span>, indicating that there is no change between the first population and the second population. The alternative hypothesis can be left-tailed (<span class="math inline">\(&lt;\)</span>), right-tailed(<span class="math inline">\(&gt;\)</span>), or two-tailed(<span class="math inline">\(\ne\)</span>). <br></p></li>
+<li><p>The key characteristic of <strong>dependent samples</strong> (or
+<strong>matched pairs</strong>) is that knowing which subjects will be
+in group 1 determines which subjects will be in group 2.</p></li>
+<li><p>We use slightly different variables when conducting inference
+using dependent samples:</p>
+<p>Group 1 values: <span class="math inline">\(x_1\)</span>  Group 2
+values: <span class="math inline">\(x_2\)</span>  Differences: <span
+class="math inline">\(d\)</span>  Population mean: <span
+class="math inline">\(\mu_d\)</span>  Sample mean: <span
+class="math inline">\(\bar d\)</span>  Sample standard deviation: <span
+class="math inline">\(s_d\)</span></p></li>
+<li><p>When conducting hypothesis tests using dependent samples, the
+null hypothesis is always <span class="math inline">\(\mu_d=0\)</span>,
+indicating that there is no change between the first population and the
+second population. The alternative hypothesis can be left-tailed (<span
+class="math inline">\(&lt;\)</span>), right-tailed(<span
+class="math inline">\(&gt;\)</span>), or two-tailed(<span
+class="math inline">\(\ne\)</span>). <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -498,11 +611,31 @@ Lesson 13 Recap
 </div>
 <div class="Summary">
 <ul>
-<li><p>In contrast to dependent samples, two samples are independent if knowing which subjects are in group 1 tells you nothing about which subjects will be in group 2. With <strong>independent samples</strong>, there is no pairing between the groups.</p></li>
-<li><p>When conducting inference using independent samples we use <span class="math inline">\(\bar x_1\)</span>, <span class="math inline">\(s_1\)</span>, and <span class="math inline">\(n_1\)</span> for the mean, standard deviation, and sample size, respectively, of group 1. We use the symbols <span class="math inline">\(\bar x_2\)</span>, <span class="math inline">\(s_2\)</span>, and <span class="math inline">\(n_2\)</span> for group 2.</p></li>
-<li><p>When working with independent samples it is important to graphically illustrate each sample separately. Combining the groups to create a single graph is not appropriate.</p></li>
-<li><p>When conducting hypothesis tests using independent samples, the null hypothesis is always <span class="math inline">\(\mu_1=\mu_2\)</span>, indicating that there is no difference between the two populations. The alternative hypothesis can be left-tailed (<span class="math inline">\(&lt;\)</span>), right-tailed(<span class="math inline">\(&gt;\)</span>), or two-tailed(<span class="math inline">\(\ne\)</span>).</p></li>
-<li><p>Whenever zero is contained in the confidence interval of the difference of the true means we conclude that there is no significant difference between the two populations. <br></p></li>
+<li><p>In contrast to dependent samples, two samples are independent if
+knowing which subjects are in group 1 tells you nothing about which
+subjects will be in group 2. With <strong>independent samples</strong>,
+there is no pairing between the groups.</p></li>
+<li><p>When conducting inference using independent samples we use <span
+class="math inline">\(\bar x_1\)</span>, <span
+class="math inline">\(s_1\)</span>, and <span
+class="math inline">\(n_1\)</span> for the mean, standard deviation, and
+sample size, respectively, of group 1. We use the symbols <span
+class="math inline">\(\bar x_2\)</span>, <span
+class="math inline">\(s_2\)</span>, and <span
+class="math inline">\(n_2\)</span> for group 2.</p></li>
+<li><p>When working with independent samples it is important to
+graphically illustrate each sample separately. Combining the groups to
+create a single graph is not appropriate.</p></li>
+<li><p>When conducting hypothesis tests using independent samples, the
+null hypothesis is always <span
+class="math inline">\(\mu_1=\mu_2\)</span>, indicating that there is no
+difference between the two populations. The alternative hypothesis can
+be left-tailed (<span class="math inline">\(&lt;\)</span>),
+right-tailed(<span class="math inline">\(&gt;\)</span>), or
+two-tailed(<span class="math inline">\(\ne\)</span>).</p></li>
+<li><p>Whenever zero is contained in the confidence interval of the
+difference of the true means we conclude that there is no significant
+difference between the two populations. <br></p></li>
 </ul>
 </div>
 <p><br></p>
@@ -510,24 +643,33 @@ Lesson 13 Recap
 Lesson 14 Recap
 </div>
 <div class="Summary">
-<p><strong>ANOVA</strong> is used to compare the means for several groups. The hypotheses for the test are always: <span class="math display">\[
+<p><strong>ANOVA</strong> is used to compare the means for several
+groups. The hypotheses for the test are always: <span
+class="math display">\[
 \begin{align}
 H_0: &amp; ~ \textrm{All the means are equal} \\
 H_a: &amp; ~ \textrm{At least one of the means differs}
 \end{align}
 \]</span></p>
 <ul>
-<li><p>For ANOVA testing we use an <strong><span class="math inline">\(F\)</span>-distribution</strong>, which is right-skewed. The <span class="math inline">\(P\)</span>-value of an ANOVA test is always the area to the right of the <span class="math inline">\(F\)</span>-statistic.</p></li>
-<li><p>We can conduct ANOVA testing when the following three requirements are satisfied:</p>
+<li><p>For ANOVA testing we use an <strong><span
+class="math inline">\(F\)</span>-distribution</strong>, which is
+right-skewed. The <span class="math inline">\(P\)</span>-value of an
+ANOVA test is always the area to the right of the <span
+class="math inline">\(F\)</span>-statistic.</p></li>
+<li><p>We can conduct ANOVA testing when the following three
+requirements are satisfied:</p>
 <ol style="list-style-type: decimal">
 <li>The data come from a simple random sample.</li>
 <li>The data are normally distributed within each group.
 <ul>
-<li>This is considered met unless one or more of the groups has a <em>strongly</em> skewed distribution.</li>
+<li>This is considered met unless one or more of the groups has a
+<em>strongly</em> skewed distribution.</li>
 </ul></li>
 <li>The variance is constant.
 <ul>
-<li>This is satisfied when the largest variance is not more than four times the smallest variance. <br></li>
+<li>This is satisfied when the largest variance is not more than four
+times the smallest variance. <br></li>
 </ul></li>
 </ol></li>
 </ul>
@@ -554,9 +696,12 @@ H_a: &amp; ~ \textrm{At least one of the means differs}
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center"><a href="Lesson14.html">Lesson 14: <br> Inference for Several Means (ANOVA)</a></td>
+<td align="center"><a href="Lesson14.html">Lesson 14: <br> Inference for
+Several Means (ANOVA)</a></td>
 <td align="center">Lesson 15: <br> Review for Exam 2</td>
-<td align="center"><a href="Lesson16.html">Lesson 16: <br> Describing Categorical Data: Proportions; Sampling Distribution of a Sample Proportion</a></td>
+<td align="center"><a href="Lesson16.html">Lesson 16: <br> Describing
+Categorical Data: Proportions; Sampling Distribution of a Sample
+Proportion</a></td>
 </tr>
 </tbody>
 </table>

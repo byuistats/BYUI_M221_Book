@@ -8,10 +8,14 @@ navbar:
       href: index.html
     - text: "Unit 1"
       menu:
-        - text: "Lesson 1: (On Campus) Course Intro & Probability"
-          href: Lesson01_Campus.html
-        - text: "Lesson 1: (Online) Course Intro & Probability"
-          href: Lesson01.html
+        - text: "Lesson 1: Course Intro & Probability"
+          menu:
+            - text: "Campus Student Version"
+              href: Lesson01_Campus.html
+            - text: "Online Student Version"
+              href: Lesson01.html
+            - text: "World Wide Block Student Version"
+              href: Lesson01_WWB.html
         - text: "Lesson 2: The Statistical Process"
           href: Lesson02.html
         - text: "Lesson 3: Describing Quantitative Data (Shape & Center)"
