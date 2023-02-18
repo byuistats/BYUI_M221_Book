@@ -54,8 +54,8 @@ By the end of this lesson, you should be able to:
 </div>
 </p></td>
 </tr>
-<td><p>[Lesson 1: (World Wide Block) Course Intro & Probability](Lesson01.html) <a href="javascript:showhide('lesson01_Online_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
-<div id="lesson01_Online_Outcomes" style="display:none;">
+<td><p>[Lesson 1: (World Wide Block) Course Intro & Probability](Lesson01_WWB.html) <a href="javascript:showhide('lesson01_WWB_Outcomes')"><span style="font-size:8pt;float:right;">Show Outcomes</span></a>
+<div id="lesson01_WWB_Outcomes" style="display:none;">
 By the end of this lesson, you should be able to:
 
 * Understand and explain the course policies
