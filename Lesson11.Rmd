@@ -233,7 +233,7 @@ We will need to conduct the analysis using software, so we can report this value
 <div class="Summary">
 Here are the instructions for conducting the one sample t-test in Excel:
 
-The Excel file needed for this analysis is [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx).  We will use this Excel file to conduct the hypothesis tests for a single mean with $\sigma$ unknown.
+The Excel file needed for this analysis is [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx).  We will use this Excel file to conduct the hypothesis tests for a single mean with $\sigma$ unknown.
 
   +  After opening the file, please click on the tab labeled "One-sample t-test".  
   +  Paste the data in the appropriate place in Column A.
@@ -342,7 +342,7 @@ Using this data set, test the hypothesis that the mean weight of babies born in 
 <div id="Q1" style="display:none;">
 
 When the data are entered into the file
-[Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx), the following output is generated:
+[Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx), the following output is generated:
 
 <img src="./Images/BabyBoom-Ttest-Excel_Toolbox.PNG">
 <br>
@@ -481,7 +481,7 @@ Koehn wants to find an estimate of the true mean BLEU score for text translated 
 Copying the
 [BLEU-Scores](./Data/BLEU-Scores.xlsx)
 data into the
-[Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx)
+[Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx)
 file in Excel, we get the following:
 
 <center><img src="./Images/BLEUscores-Excel_Toolbox.PNG"></center>
@@ -518,7 +518,7 @@ We will use Excel to find the confidence intervals for the mean.
 
 Do the following:
 
-- Open the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx)
+- Open the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx)
 - Click on the tab labeled "One-sample t-test"
 - Enter the data, and
 - Set the confidence level.  

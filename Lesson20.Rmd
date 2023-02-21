@@ -92,7 +92,7 @@ $$
 
 - The **estimator** of $p$ is $\hat p$. $\displaystyle{ \hat p = \frac {x}{n}}$ and is used for both confidence intervals and hypothesis testing.
 
-- You will use the Excel spreadsheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx), to perform hypothesis testing and calculate confidence intervals for problems involving one proportion.
+- You will use the Excel spreadsheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx), to perform hypothesis testing and calculate confidence intervals for problems involving one proportion.
 
 - The requirements for a confidence interval are $n \hat p \ge 10$ and $n(1-\hat p) \ge 10$. The requirements for hypothesis tests involving one proportion are $np\ge10$ and $n(1-p)\ge10$.
 
@@ -124,7 +124,7 @@ $$
 
 - Whenever zero is contained in the confidence interval of the difference of the true proportions we conclude that there is no significant difference between the two proportions.
 
-- You will use the Excel spreadsheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) to perform hypothesis testing and calculate confidence intervals for problems involving two proportions.
+- You will use the Excel spreadsheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) to perform hypothesis testing and calculate confidence intervals for problems involving two proportions.
 <br>
 </div>
 <br>

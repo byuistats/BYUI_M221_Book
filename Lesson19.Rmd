@@ -175,7 +175,7 @@ The research question was whether people's motivation for seeking chiropractic c
 <div class="SoftwareHeading">Excel Instructions</div>
 <div class="Summary">
 
-- In the Excel sheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx), go to the tab labeled "Chi Squared".  This tab will allow you to perform tests for independence.  Excel allows us to enter data in the same way as the table above, so enter the data in the following manner on the excel sheet:
+- In the Excel sheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx), go to the tab labeled "Chi Squared".  This tab will allow you to perform tests for independence.  Excel allows us to enter data in the same way as the table above, so enter the data in the following manner on the excel sheet:
 
 <img src="./Images/Excel-Chi-Square-Filled-Out.png">
 

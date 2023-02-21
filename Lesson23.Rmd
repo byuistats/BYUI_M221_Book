@@ -121,7 +121,7 @@ It is tedious to calculate the residuals by hand, but software can be used to fi
 <div class="Summary">
 **To find the residuals in Excel, do the following:**
 
-- Open [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) and click on the "Linear Regression" tab
+- Open [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) and click on the "Linear Regression" tab
 - Copy and Paste the dependent (or response) variable into the "Y" column (Column B).  The dependent variable (or response variable) is the thing you are trying to predict.  Often it is the more difficult/expensive variable to measure.
 - Copy and paste the independent (or explanatory) variable into the "X" column (Column A).
 - Your residuals will then be calculated in column Y of the Excel Spreadsheet.
@@ -139,7 +139,7 @@ The residual is calculated for each data point, so you have one residual for eve
 <div class="Summary">
 **To make a residual plot in Excel do the following:**
 
-- Once the explanatory and response variables are entered into the correct columns in the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) spreadsheet, you are given a scatter plot of residuals starting in cell S4, to the right of the hypothesis testing section.  
+- Once the explanatory and response variables are entered into the correct columns in the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) spreadsheet, you are given a scatter plot of residuals starting in cell S4, to the right of the hypothesis testing section.  
 
 - To create a residual plot on your own, you can highlight columns X and Y, then click on the Insert Ribbon, and then click on "Scatter" (or the icon that looks like a scatter plot).  You want the first choice (Scatter with only markers), so select the first scatter plot choice.
 <br>
@@ -411,7 +411,7 @@ We are often interested in the range of plausible values for the true regression
 <div class="Summary">
 **To find the residuals in Excel, do the following:**
 
-- Open [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) and click on the "Linear Regression" tab
+- Open [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) and click on the "Linear Regression" tab
 - Copy and Paste the dependent (or response) variable into the "Y" column (Column B).  The dependent variable is also known as the response variable.  It is the thing you are trying to predict.  Often it is the more difficult/expensive variable to measure.
 - Copy and paste the independent (or explanatory) variable into the "X" column (Column A).
 - You can change the confidence level in cell N12.    

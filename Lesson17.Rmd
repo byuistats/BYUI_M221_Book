@@ -122,7 +122,7 @@ The confidence intervals are valid whenever $n \widehat p \ge 10$ and $n(1-\wide
 
 Finding confidence intervals for one proportion using only a calculator is tedious. An Excel spreadsheet has been created to help you quickly and accurately perform these calculations. You will use this spreadsheet throughout this and other lessons.
 
-To download this file, click here: [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx)
+To download this file, click here: [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx)
 
 <span class="Custom">Click on the link at right</span> for instructions on using this spreadsheet to calculate confidence intervals.
 <a href="javascript:showhide('ins')"><span style="font-size:8pt;">Show/Hide Instructions</span></a>
@@ -387,7 +387,7 @@ There is no reason to revise existing perspectives on the prevalence of the abil
 
 The Math 221 Statistics Toolbox in Excel can also be used to perform hypothesis tests for one proportion.
 
-To download this file, click here: [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx)
+To download this file, click here: [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx)
 
 <span class="Custom">Click on the link at right</span> for instructions on using this spreadsheet to perform hypothesis testing.
 <a href="javascript:showhide('ins2')"><span style="font-size:8pt;">Show/Hide Instructions</span></a>
@@ -547,7 +547,7 @@ Even though the proportion of indicators that suggested good health was less tha
 
 - The **estimator** of $p$ is $\widehat p$. $\displaystyle{ \widehat p = \frac {x}{n}}$ and is used for both confidence intervals and hypothesis testing.
 
-- You will use the Excel spreadsheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) to perform hypothesis testing and calculate confidence intervals for problems involving one proportion.
+- You will use the Excel spreadsheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) to perform hypothesis testing and calculate confidence intervals for problems involving one proportion.
 
 - The requirements for a confidence interval are $n \widehat p \ge 10$ and $n(1-\widehat p) \ge 10$. The requirements for hypothesis tests involving one proportion are $np\ge10$ and $n(1-p)\ge10$.
 
