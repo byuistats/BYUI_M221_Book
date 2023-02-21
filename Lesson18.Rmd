@@ -225,7 +225,7 @@ It appears that the ability to taste PTC is not a sex-linked trait.
 
 <!-- {{Content:Excel/SPSS-Two Proportion HT}} -->
 
-Just like we did for one proportion, we will use the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) to perform hypothesis tests for two proportions. 
+Just like we did for one proportion, we will use the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) to perform hypothesis tests for two proportions. 
 
 
 <span class="Custom">Click on the link at right</span> for instructions on using this spreadsheet to perform hypothesis testing.
@@ -869,7 +869,7 @@ To interpret this confidence interval, we say, "We are 95% confident that the tr
 
 Notice that zero is not in this confidence interval, so zero is not a plausible value for $p_1 - p_2$.  Based on this result, it is reasonable to conclude that the proportion of times foxes are observed in the sand-pads is not the same before and after the effort to reduce their population.  It seems that the work to reduce the number of foxes is having an effect on their presence in the reserve.
 
-As you may have guessed, the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) can be used to calculate confidence intervals for the difference of two proportions.
+As you may have guessed, the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) can be used to calculate confidence intervals for the difference of two proportions.
 
 
 ### Checking Requirements for a Confidence Interval
@@ -944,7 +944,7 @@ $$
 
 - Whenever zero is contained in the confidence interval of the difference of the true proportions we conclude that there is no significant difference between the two proportions.
 
-- You will use the Excel spreadsheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) to perform hypothesis testing and calculate confidence intervals for problems involving two proportions.
+- You will use the Excel spreadsheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) to perform hypothesis testing and calculate confidence intervals for problems involving two proportions.
 <br>
 </div>
 <br>

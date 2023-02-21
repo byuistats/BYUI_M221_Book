@@ -183,7 +183,7 @@ where $\widehat Y$ represents the predicted body length of an estuarine crocodil
 <div class="Summary">
 **To find the estimated regression coefficients ($b_0$ and $b_1$) in Excel, do the following:**
 
-- Open the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) file.
+- Open the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) file.
 - Click on the "Linear Regression" tab.
 - Paste your data for the explanatory variable (x) in the first column.  For this example, this is the head lengths.
 - The data for the response variable (y) is pasted in the second column.  This is the variable you want to predict based upon the value of (x).  Our response variable is the body length of the crocodiles.

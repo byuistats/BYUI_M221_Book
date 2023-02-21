@@ -181,7 +181,7 @@ If done by hand, the calculations for one simple ANOVA problem can easily requir
 
 To conduct a test for several means (ANOVA) in Excel, do the following: 
 
-Open the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx) and do the following:
+Open the file [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) and do the following:
 
 - Click on the tab labeled "ANOVA"
 - Paste the data from each group into their own column
@@ -252,7 +252,7 @@ Follow these instructions to apply the ANOVA procedure using Excel:
 
 Data representative of the values reported by Emmons and McCullough are given in the file [Gratitude.xlsx](./Data/Gratitude.xlsx).  The data is divided up into three columns which represent Grateful, Hassels, and Events.  
 
-The summary statistics can be obtained using the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xltx).  Paste the three columns of data into the appropriate areas of column A, B, and C.  The summary statistics will appear in the table to the right labeled "Numerical Summary of the Data".
+The summary statistics can be obtained using the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx).  Paste the three columns of data into the appropriate areas of column A, B, and C.  The summary statistics will appear in the table to the right labeled "Numerical Summary of the Data".
 
 
 <br>
