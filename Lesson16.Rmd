@@ -51,147 +51,237 @@ By the end of this lesson, you should be able to:
 
 <br>
 
+
+## Case Study: Eating Habits of College Students
+
+<div style="float:right;padding:10px;">
+<img src="./Images/byui_crossroads.jpeg" width="300px">
+</div>
+
+<img src="./Images/Step1.png">
+
+
+Chances are that as a college student you have probably thought to yourself, "It takes too much time to prepare healthy food." In fact, the American College Health Association estimates that only 6% of college students across the U.S. are eating the recommended "five or more servings of fruits and vegetables" daily.[^1] In an effort to better understand the barriers that were keeping college students from eating healthy, a team of researchers from the Department of Psychology at BYU-Idaho undertook a study.[^2] 
+
+<br/>
+
+<img src="./Images/Step2.png">
+
+
+The team of researchers obtained a convenience sample of $n=517$ college students from General Psychology courses over three different semesters. <a href="javascript:showhide('articledetails')"><span style="font-size:8pt;">Click to Show/Hide More Sampling Details</span></a>
+
+<div id="articledetails" style="display:none;padding-left:30px;padding-right:30px;">
+As reported in their article, "Participation in this study was a required experiential component of the course, but students’ grades were based on participation rather than performance and alternate assignments were available." Further, use of the data for research purposes was approved by the university’s Institutional Review Board.
+</div>
+
+The survey contained many questions for the students to answer and found some fantastic conclusions about what keeps students from eating healthy. (If you are interested, [click here](https://byuiscroll.org/psychology-students-did-the-research-for-you/) to read an news article highlighting their findings.) One important question on the survey asked  each student whether or not they (the student) ate fresh fruits and vegetables as part of their daily diet. They were allowed to answer with either of
+
+* Yes
+* No
+
+Unfortunately, not all students out of the 517 that were surveyed answered the question. We will summarize the results of the answers below as we also present details on how to describe categorical data.
+
+<img src="./Images/Step3.png">
+
 ## Numerical and Graphical Summaries of Categorical Data
-<span id='21:Proportions'></span>
 
-### Proportions
+To describe categorical data, we need a different approach than what we used for quantitative data. Instead of discussing means (like $\mu$ or $\bar{x}$) we will work with proportions. A proportion is a number between 0 and 1 that measures the relative size of a part of something to the whole of that thing. In the current eating habits study, the researchers are interested in knowing the proportion of students who experience barriers to healthy eating. This proportion probably isn't 0 (which would imply no students experience barriers to healthy eating) and probably isn't 1 (which would imply all students experience barriers to healthy eating) but is likely somewhere in between.
 
-#### Political Polls
+<div class="myemphasis">
+**Proportions**: A number between 0 and 1 that measures the size of a part to the whole.
 
-During political elections in the United States, residents are inundated with polls.  Many people conduct polls to estimate the proportion of the population that will vote for each candidate.  The pollsters report the number of people who were contacted and the proportion who said they would favor a particular candidate.  The poll results are a prediction of the future election results.
+The **sample proportion** is a sample statistic. It is written as $\hat{p}$. It is computed by taking the number of "successes" in the data, called $x$, and dividing by the total number of individuals in the sample, $n$ (the sample size).
 
-In these polls, individuals are asked the question, "If the election were held today, which candidate would you most likely support?"  In one survey, $n=1024$ people were polled, and $x=565$ of the respondents said that they would vote for the Republican candidate. In this case, the "proportion" of people who favored the Republican candidate was:
 $$
-\widehat p = \frac{x}{n} = \frac{565}{1024} = 0.552
+\text{Sample Proportion:} \quad \hat{p} = \frac{x}{n}
 $$
-That suggests that 55.2% of the people polled plan to vote for the Republican.  This does not mean that this candidate will win the election.  However, it looks like they might be in the lead at this point.
 
-#### Web Searches
+The theoretical **true proportion** for a population is written as just $p$. It is a population parameter. To compute the *true proportion* we must know the total size of the population (or total possible outcomes) $N$, as well as the number of possible *successes* $X$. We rarely know $p$. But we can usually hypothesize a reasonable value for $p$ using a null hypothesis.
 
-A study was conducted on web searches of computer science students.  If these students did not click on one of the links that came up in the search, the researchers asked them to record the reason.  908 trials conducted and there were 116 searches in which the students did not click on any links.  The reasons the students gave for not clicking on any links are summarized in the data file [NoClickQuery.xlsx](./Data/NoClickQuery.xlsx).
+$$
+ \text{True Proportion:} \quad p = \frac{X}{N} \quad \text{(Usually unknown)}
+$$
+</div>
 
-Note that the data taken for this study are categorical.  Each of the student's responses is a categorization of their reason for not clicking on any of the links.  Even though we can summarize the data by counting the number of each type of response, the individual responses are categorical, not quantitative. Up to this point in the course we have discussed methods for describing and understanding only quantitative data. In this unit we will learn how to describe categorical data and make inferences from it.
+Let's take a quick glance at the data for one of the questions from the eating habits study.
+
+| Student | Do you regularly eat fresh fruits and vegetables? | 
+|:--------|:-------------------------------------------------:|
+| 1  | (No Answer) |
+| 2  | (No Answer) |
+| 3  | (No Answer) |
+| 4  |  Yes |
+| 5  |  No  |
+| 6  |  No  |
+| $\vdots$ | $\vdots$ |
+| 515 | Yes |
+| 516 | No |
+| 517 | No |
+
+Notice that in this data, some students chose not to answer this question, i.e., "No Answer". Other students answered "Yes" and other students answered "No". Our first step to computing the **proportion** of students who answered "Yes" (what we will call successes in this case) is to count up two numbers.
+
+* First, we count how many students said "Yes". This turns out to give $x = 245$.
+* Second, we count how many students answered the question. This gives our sample size as $n = 399$.
+* Third, we divide to get
+
+$$
+ \hat{p\ } = \frac{x}{n} = \frac{245}{399} \approx 0.614
+$$
+
+This shows that 61.4% of students in our sample (who answered this question) claim to regularly eat fresh fruits and vegetables as part of their daily diet. That implies that 38.6% (1 - 0.614 = 0.386) of students in our sample who answered the question, which is a little more than 1 out of every 3 students, *are not* regularly eating fresh fruits and vegetables as part of their daily diet. 
+
 
 ### Pie charts
 
 Pie charts are a popular way to display categorical data.  These are used extensively in practice.  Typically, pie charts are used when you want to represent the observations as part of a whole, where each slice (sector) of the pie chart represents a proportion or percentage of the whole.
-
-We can represent the reasons the students did not click in their searches using a pie chart.
-
-<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-<!-- {{Software_Filter | PageName=PieCharts }} -->
 
 <div class="SoftwareHeading">Excel Instructions</div>
 <div class="Summary">
 
 **To make a pie chart in Excel:**
 
-- Open the data file [NoClickQuery-Summary.xlsx](./Data/NoClickQuery-Summary.xlsx).  This file contains a summary of the NoClickQuery data.  Notice that each row in this data file represents the responses of several individuals.  The *Count* column tells how many times each response was given.  The data in this file have been summarized.  
-- Make sure the categorical column (Reason) and the Count column are next to each other with the Count column on the right and highlight both of them.
+- Open a blank file in Excel.   
+- Create a counts table after counting up how many times each response occurred in the data by inputting the category labels in one column and the counts in another column, like this: 
+
+| Eat Fresh Fruits and Vegetables |  Count |
+|---------------------------------|--------|
+| Yes      |  245    |
+| No       |  154    |
+| Didn't Answer | 118 |
+
+- Make sure the categorical column and the count column are next to each other with the count column on the right. Then, highlight the entire table.
 - Click on the Insert tab, then click on the Pie chart button.
 - Please choose the basic 2D pie.
 
 The pie chart will look like this:
 
-<img src="./Images/NoClickQuery-Pie-Excel.png">
+
+<img src="./Images/fruitsveggies_Pie_Excel.png">
 <br>
 </div>
 <br>
 
 
-### Bar charts and Pareto charts
+### Bar charts
 
-Bar charts can be considered a companion plot to the pie chart. They present the same basic information but are not, however, interchangeable. We typically use bar charts if our data represent counts. In contrast, pie charts are used to represent parts of a whole.
+Bar charts are another a powerful way to quickly display categorical data.  They provide a bar for each category in the data, and the height of the bar shows the number of observations from the sample that landed in that particular category.
 
-<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-<!-- {{Software_Filter | PageName=BarCharts }} -->
+We can represent the various answers of the students concerning whether or not they "regularly eat fresh fruits and vegetables" with a bar chart. 
 
 <div class="SoftwareHeading">Excel Instructions</div>
 <div class="Summary">
 
 **To make a bar chart in Excel:**
 
-- Highlight the categorical column and the count column.
+- Create a counts table after counting up how many times each response occurred in the data by inputting the category labels in one column and the counts in another column, like this: 
+
+| Eat Fresh Fruits and Vegetables |  Count |
+|---------------------------------|--------|
+| Yes      |  245    |
+| No       |  154    |
+| Didn't Answer | 118 |
+
+- Highlight both the categorical column and the count column.
 - Click on the Insert tab and then click on column chart button.
 - Again, please choose the simple 2D column chart.
 
 
 Your bar chart will look like this:
 
-<img src="./Images/NoClickQuery-Bar-Excel.png">
+<img src="./Images/fruitsveggies_Bar_Excel.png">
 <br>
+
 </div>
+
 <br>
 
-A Pareto chart is a bar chart where the bars are presented in descending order.
-
-<!-- To access this content, scroll to the bottom of the editing page and click on the link "Software:(Excel or SPSS)-(PageName)" -->
-<!-- {{Software_Filter | PageName=ParetoCharts }} -->
-
-<div class="SoftwareHeading">Excel Instructions</div>
-<div class="Summary">
-
-**To make a Pareto chart in Excel:**
-
-- Begin by creating a bar chart.  You can use the one you created above.
-- Highlight the "Count" column.
-- Click on the Sort and Filter tab in the right hand corner of the screen.
-- Click on Sort Largest to Smallest (A little window will pop up, select "Expand the Selection" then "Sort".)
-- The bars in your chart should now be resorted to create a Pareto chart.
-
-Your Pareto chart will look like this:
-
-<img src="./Images/NoClickQuery-Pareto-Excel.png">
-<br>
-</div>
-<br>
-
-We conclude that the main reason that people do not click on any of the search results is that the results were not relevant.  The next two most common reasons were that they did not find any new results or they made a spelling error in their search query.
-
-Pareto charts are often used to display causes of problems in an industry.  For example, in health care administration, it may be causes of patient deaths.  In business, it may be used to display common reasons employees are terminated.
-
-There is an idea, called the Pareto Principle, which states that 80% of your problems come from 20% of the causes.  Many Pareto charts display a few very tall columns with several much shorter ones.  This can give you an idea of where you should focus your energy in your business or organization.
+The above chart shows that the 118 students that did not respond to this question represent a substantial portion of the total students surveyed. That could be leading to some bias in the results because we don't know if the "NA" responses would land in the "Yes" or "No" group. But, if we consider just those that answered the question, it seems that many students (61.4% of those that answered the question) are doing a great job eating fresh fruits and vegetables as part of their diet.
 
 ## Sampling Distribution of the Sample Proportion
 
 ### Example: Tossing a Coin
 
-Answer the following questions. For this exercise, you will need a coin.
+<div style="float:right;padding:10px;">
+<img src="./Images/coinflip.jpeg" width="200px">
+</div>
+
+If you were asked the question, "What is the probability of flipping a head with a fair coin?" you would likely correctly answer by stating that there is a 50% chance of getting a head. You know this because there are $N=2$ possibilities (a head on one side and a tail on the other) and only one side, $X=1$, can give a head. That gives the true proportion of heads to be $p=X/N=1/2 = 0.5$. However, if you have ever flipped a coin several times and recorded your results, you would know that you don't usually get exactly 50% heads. 
+
+To demonstrate, we actually flipped a coin $n=25$ times and recorded our results. We got $x=12$ heads. That comes out to a sample proportion of $\hat{p} = x/n = 12/25 = 0.48$. While not exactly 50%, it is fairly close. We can represent the results in a simple bar chart.
+
+```{r, echo=FALSE}
+mytable <- c(`Heads`=12, `Tails`=13)
+barplot(mytable, 
+        col=c("skyblue","gray"), 
+        ylab="Number of Flips",
+        main="My Coin Flip Results")
+```
+
+
+Now it's your turn.
+
+<div style="clear:both;"></div>
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
-1. Toss a coin $n=25$ times.  Keep track of the proportion of heads you observe. Please complete this before continuing.
+1. Toss a coin $n=25$ times.  Keep track of the number of heads you observe in your $n=25$ flips. What is your sample proportion for the number of heads you flipped? 
 
 <a href="javascript:showhide('Q1')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q1" style="display:none;">
-* In this example, we tossed heads 12/25 times, which is equivalent to a $\widehat{p} = 0.48$ proportion. Your proportion may vary.
+* All answers will vary in this question. When we tossed the coin 25 times, we got 12 heads. 
+
+This gives our proportion of heads as $\hat{p} = 12/25 = 0.48$. Your proportion will likely be different, but it would be *very*, *very* unlikely for you to get 0/25 or 25/25 heads.
+
 </div>
 <br>
 
-2. The data file [CoinTossHeads.xlsx](./Data/CoinTossHeads.xlsx) contains data representing a collection of 900 students' results, where each tossed a coin $n=25$ times and calculated the proportion of heads.  The following histogram illustrates these data.  How would you describe the shape of the distribution of the observed proportions?
+2. What does a bar chart showing your results of heads and tails look like?
 
 <a href="javascript:showhide('Q2')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q2" style="display:none;">
-* Judging just from the histogram it shows that the observed sample proportions are normally distributed.
+
+To create a bar chart of our heads and tails counts, use the instructions from above: [Excel Instructions for Making a Bar Chart](#bar-charts)
+
 </div>
 &nbsp;
 </div>
 <br>
 
-<img src="./Images/Histogram-PropHeadsIn25CoinTosses.png">
+If you just completed the two questions above, you likely got a different answer than what we got for the proportion of heads in your $n=25$ flips. (Although it is somewhat likely, 13.3% chance, that you would have also gotten 12/25 heads.) So why is it that if the true proportion is $p=0.5$, we all can get different answers for $\hat{p}$ when we each flip a coin $n=25$ times? As you likely already know, the reason that answers for $\hat{p}$ can vary from $p$ is because the coin flips are random. This is the very idea behind a *random sample* of data. In fact, this means that we should expect the sample proportion $\hat{p}$ to vary randomly from the true proportion $p$ anytime we take a sample of data. The only way to really know $p$ for sure would be to take a census and survey the entire population! That is typically too much work. And fortunately, thanks to statistical theory about the *sampling distribution of the sample proportion*, we can actually quantify how far away from the true proportion our sample proportion will be, say 95% of the time. Let's see how this work.
+
+### Creating a Sampling Distribution
+
+A true sampling distribution of a sample proportion is obtained by plotting the results from *all possible* samples from a population of size $n$. It isn't reasonable to try to create such a distribution in its entirety, but we can look at a quick example using the data file [CoinTossHeads.xlsx](./Data/CoinTossHeads.xlsx). This data file contains data representing a collection of 900 students' results, where each student tossed a coin $n=25$ times and calculated their proportion of heads. These 900 different sample proportions $\hat{p}$ represent 900 different samples (of $n=25$ coin flips in each sample) from the population of all coin flip possibilities. The goal of the sampling distribution of the sample proportion is to consider the set of all possible sample proportions that could be obtained when getting a sample from a population, and where those sample proportions would land, i.e., how they would be distributed.
+
+The following histogram shows the distribution of the sample proportions $\hat{p}$ for each of the 900 students that participated in the coin flip experiment. It turns out that there were 134 students in the sample of $n=900$ that also flipped 12/25 heads like we did. However, there were also 137 students that flipped 13/25 heads. But notice that very few students (only 5) got as few as 5/25 heads and very few students (only 7) got as many as 19/25 heads. And no one (out of all 900 students that participated) got more than 19 heads (19/25 = 0.76) or fewer than 5 heads (5/25 = 0.2).
+
+```{r, echo=FALSE}
+library(readxl)
+CoinTossHeads <- read_excel("./Data/CoinTossHeads.xlsx")
+
+hist(CoinTossHeads$ProportionHeads,
+     col="wheat3",
+     main="Resulting Sample Proportions from 900 Students \n Each Student Flipped a Coin 25 Times",
+     ylab="Number of Students who Got the Given Proportion",
+     xlab="Resulting Sample Proportion",
+     breaks=seq(0.02,1,0.04),
+     xlim=c(0,1), xaxt='n')
+axis(1, at=seq(0,1,.1))
+curve(dnorm(x, 0.5, 0.1)*35, add=TRUE, n=1000)
+```
 
 <div class="QuestionsHeading">Answer the following questions:</div>
 <div class="Questions">
 
-3. Find the spot on the horizontal axis of the histogram indicating the proportion of heads ($\widehat{p}$) that *you* observed in Question 1.  Based on your visual observation, would you say your proportion of heads is unusual?
+3. Find the spot on the horizontal axis of the histogram indicating the proportion of heads ($\widehat{p}$) that *you* observed in Question 1.  Based on your visual observation, would you say your proportion of heads is unusual or typical?
 
 <a href="javascript:showhide('Q3')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q3" style="display:none;">
-* Answers will vary.  This depends on your proportion of heads.  If the observed value is far to the right or left, then you would say that it was unusual.  Most students will observe values in the middle of the distribution.
+* Answers will vary.  This depends on your proportion of heads.  If the observed value is far to the right or left, then you would say that it was unusual.  Most students will observe values in the middle of the distribution, which are more typical.
 </div>
 <br>
 
-4. Visually, estimate the mean and standard deviation of the observed sample proportions. Please write your answer to this question before continuing.
+4. Visually, estimate the mean and standard deviation of the observed sample proportions shown in the histogram. Please write your answer to this question before continuing.
 
 <a href="javascript:showhide('Q4')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q4" style="display:none;">
@@ -207,33 +297,64 @@ Answer the following questions. For this exercise, you will need a coin.
 </div>
 <br>
 
-6. The true theoretical standard deviation of $\widehat p$ in this case is $\sigma_{\widehat{p}} = 0.1$.  This can be obtained using the formula
-<center>
+</div>
+
+<br/>
+
+### Mean and Standard Deviation of the Sample Proportion
+
+<div class="myemphasis">
+The symbol $\mu_{\hat{p}}$ represents the mean of the distribution of all possible sample proportions, and this mean is equal to $p$, the true proportion.
+
 $$
-\displaystyle{\text{Standard deviation of}~\widehat{p} = \sigma_{\widehat{p}} = \sqrt{ \frac{p(1-p)}{n} } }
+\underbrace{\mu_\widehat{p}}_{\textrm{Mean of } \widehat{p}} = p
 $$
-</center>
-where $p$ is the true population proportion, which is also the mean of the distribution of $\widehat{p}$.
+The symbol $\sigma_{\hat{p}}$ represents the standard deviation of all possible sample proportions, and is equal to $\sqrt{p\cdot(1-p)/n}$.
+
+$$
+\underbrace{\sigma_\widehat{p}}_{\textrm{Standard Deviation of}~\widehat p} = \sqrt{\frac{p \cdot (1-p)}{n}}
+$$
+</div>
+
+Both of the above results are visible in the previous histogram that was drawn of the 900 different sample proportions obtained from 900 different students who each flipped a coin 25 times and recorded the proportion of heads they flipped. The value of $\mu_{\hat{p}}$ being equal to $p$ tells us that the many possible sample proportions we could obtain from our sample are centered around the true proportion $p$. The value of $\sigma_{\hat{p}}$ tells us how far away from $p$ our particular sample proportion $\hat{p}$ may have landed. (Remember the idea that 95% of all possible values are within 1.96 standard deviations of the true mean?)
+
+<div class="QuestionsHeading">Answer the following questions:</div>
+<div class="Questions">
+
+6. What is the mean and standard deviation of the sample proportion $\hat{p}$ when sampling $n=25$ coin flips?
 
 <a href="javascript:showhide('Q6')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 <div id="Q6" style="display:none;">
-<center>
+The mean of all possible sample proportions is $p$ according to the statements made above. For a coin, the true proportion of heads is $p=0.5$. So, the mean of the sample proportion $\hat{p}$ when sampling $n=25$ coin flips is also 0.5.
+
+$$
+ \mu_{\hat{p}} = 0.5
+$$
+
+
+The true theoretical standard deviation of $\widehat p$ in this case is $\sigma_{\widehat{p}} = 0.1$.  This can be obtained using the formula
+
+$$
+\displaystyle{\text{Standard deviation of}~\widehat{p} = \sigma_{\widehat{p}} = \sqrt{ \frac{p(1-p)}{n} } }
+$$
+
+where $p$ is the true population proportion, which is also the mean of the distribution of $\widehat{p}$, which is 0.5 for this coin flip scenario.
+
+
 $$
 \text{Standard deviation of}~\widehat{p} = \sqrt{ \frac{p(1-p)}{n} } = \sqrt{ \frac{0.5(1-0.5)}{25} } = 0.1
 $$
-</center>
+
 </div>
 <br>
 
-7. Remember that the $z$-score for an observed data value can be computed as:
+7. In [Lesson 5](Lesson05.html) the $z$-score for an observed data value was shown to be computed using the formula:
 
-
-<center>
 $$
 \displaystyle { z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}} }
 $$
-</center>
-* Use the mean and standard deviation given in question 6, to find the $z$-score corresponding to *your* sample proportion.
+
+Use the mean and standard deviation you came up with in your answer to Question 6 (above), to find the $z$-score corresponding to *your* sample proportion.
 
 <a href="javascript:showhide('Q7')"><span style="font-size:8pt;">Show/Hide Solution</span></a>
 
@@ -261,7 +382,7 @@ $$
 <br>
 <br>
 
-### Sampling Distribution of the Sample Proportion
+### Central Limit Theorem for the Sample Proportion
 
 If the sample size is large, the sample proportion, $\widehat p$, will be approximately normally distributed.  This is a direct consequence of the Central Limit Theorem.
 
@@ -274,16 +395,6 @@ We can apply the Central Limit Theorem to a sample proportion (and conclude that
 
 It is important to check both conditions.  If one of them is not satisfied, we cannot conclude that $\widehat p$ follows a normal distribution. Observe that the effect of these two conditions is that if $p$ is very close to 0 or 1, then $\widehat{p}$ isn't close to normal unless $n$ is very large.
 
-#### Mean and Standard Deviation
-
-The sample proportion, $\widehat p$, is normally distributed if $n$ is large.  The true population mean of the random variable $\widehat p$ is:
-$$
-\underbrace{\mu_\widehat{p}}_{\textrm{Mean of}~\widehat{p}} = p
-$$
-and the true population standard deviation is:
-$$
-\underbrace{\sigma_\widehat{p}}_{\textrm{Standard Deviation of}~\widehat p} = \sqrt{\frac{p \cdot (1-p)}{n}}
-$$
 
 Answer the following questions.  Consider exercise 1, in which you tossed a coin $n=25$ times and recorded the proportion of heads.
 
@@ -402,7 +513,7 @@ This calculation was done in the same way we have done normal calculations in th
 
 - **Pie charts** are used when you want to represent the observations as part of a whole, where each slice (sector) of the pie chart represents a proportion or percentage of the whole.
 
-- **Bar charts** present the same information as pie charts and are used when our data represent counts. A **Pareto chart** is a bar chart where the height of the bars is presented in descending order.
+- **Bar charts** present the same information as pie charts and are used when our data represent counts. 
 
 - $\widehat p$ is a point estimator for true proportion $p$. $\displaystyle{\widehat p = \frac{x}{n}}$
 
