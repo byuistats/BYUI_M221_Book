@@ -147,13 +147,12 @@ Pie charts are a popular way to display categorical data.  These are used extens
 |---------------------------------|--------|
 | Yes      |  245    |
 | No       |  154    |
-| Didn't Answer | 118 |
 
 - Make sure the categorical column and the count column are next to each other with the count column on the right. Then, highlight the entire table.
 - Click on the Insert tab, then click on the Pie chart button.
 - Please choose the basic 2D pie.
 
-The pie chart will look like this:
+After adding a title to the plot, and some optional data labels, the pie chart will look like this:
 
 
 <img src="./Images/fruitsveggies_Pie_Excel.png">
@@ -179,14 +178,13 @@ We can represent the various answers of the students concerning whether or not t
 |---------------------------------|--------|
 | Yes      |  245    |
 | No       |  154    |
-| Didn't Answer | 118 |
 
 - Highlight both the categorical column and the count column.
 - Click on the Insert tab and then click on column chart button.
 - Again, please choose the simple 2D column chart.
 
 
-Your bar chart will look like this:
+After editing the title of the plot, and adding optional data labels, your bar chart will look like this:
 
 <img src="./Images/fruitsveggies_Bar_Excel.png">
 <br>
@@ -535,3 +533,9 @@ $$
 | :------------------: | :--------------: | :--------------: |
 | [Lesson 15: <br> Review for Exam 2](Lesson15.html) | Lesson 16: <br> Describing Categorical Data: Proportions; <br> Sampling Distribution of a Sample Proportion | [Lesson 17: <br> Inference for One Proportion](Lesson17.html) |
 </center>
+
+
+
+[^1]: American College Health Association (2014). American College Health Association-National College Health Assessment II: Undergraduate students reference group executive summary spring 2014. Hanover, MD: American College Health Association.
+
+[^2]: Robert R. Wright, Jack Shuai, Yovanny Maldonado, and Caleb Nelson, all originally from the Department of Psychology at BYU-Idaho, published their study results under the title "The CENTS Program" which is currently under review.
