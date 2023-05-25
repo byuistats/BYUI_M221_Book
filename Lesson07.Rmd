@@ -32,7 +32,8 @@ output:
 
 By the end of this lesson, you should be able to:
 
-*  Calculate probabilities using a distribution of sample means.
+1. Calculate the z-score for a sample mean, given the population mean and standard deviation
+2. Use the normal distribution to calculate probabilities for a sample mean
 
 <br>
 
