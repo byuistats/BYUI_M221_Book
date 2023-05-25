@@ -44,10 +44,15 @@ output:
 
 By the end of this lesson, you should be able to:
 
-- Calculate and interpret a sample proportion.
-- Summarize categorical data with a bar or pie chart.
-- Determine the mean, standard deviation and shape of a distribution of sample proportions.
-- Calculate probabilities using a distribution of sample proportions.
+1. Calculate a sample proportion
+2. Interpret a sample proportion
+3. Summarize categorical data with graphical summaries
+4. Identify when a sample proportion will follow a normal distribution
+5. Determine the mean of the sampling distribution of the sample proportion for a given parent population
+6. Determine the standard deviation of the sampling distribution of the sample proportion for a given parent population
+7. Determine the shape of the sampling distribution of the sample proportion for a given parent population
+8. Calculate the z-score for a sample proportion, given the population proportion and sample size
+9. Calculate probabilities of a sample proportion using the normal distribution.
 
 <br>
 

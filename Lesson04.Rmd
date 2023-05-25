@@ -38,13 +38,14 @@ output:
 
 By the end of this lesson, you should be able to:
 
-* Approximate the standard deviation of a distribution visually from a bell-shaped histogram.
-* Calculate the standard deviation from quantitative data using Excel.
-* Interpret the standard deviation for symmetric distributions.
-* Properly apply the Excel functions STDEV.S, PERCENTILE.INC, QUARTILE.INC, MIN, and MAX to quantitative data.
-* Interpret the five-number summary for quantitative data.
-* Create a box-plot from quantitative data using Excel.
-* Determine the five-number summary visually from a box plot. * Explain the relationship between probabilities, percentiles, and percentages.
+1. Calculate a percentile from data
+2. Interpret a percentile
+3. Calculate the standard deviation from data
+4. Interpret the standard deviation
+5. Calculate the five-number summary using software
+6. Interpret the five-number summary
+7. Create a box plot using software
+8. Determine the five-number summary visually from a box plot
 
 <br>
 

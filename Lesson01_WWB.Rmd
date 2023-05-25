@@ -27,12 +27,12 @@ output:
 
 By the end of this lesson, you should be able to:
 
-- Understand and explain the course policies
-- Access course resources (course outline, lesson schedule, preparation activities, reading quizzes, homework assignments, assessments, Zoom, etc.)
-- Communicate with your instructor
-- Obtain access to a spreadsheet program (Microsoft Excel)
-- Discuss ways in which you will apply gospel principles to your work in this class
-- State and apply the three rules of probability.
+1. Explain the course policies
+2. Access course resources (course outline, lesson schedule, preparation activities, reading quizzes, homework assignments, assessments, etc.)
+3. Communicate with the instructor and group members
+4. Access statistical analysis software tools for class quizzes, assignments, and exams
+5. Apply principles of the gospel of Jesus Christ in this class
+6. Apply the three rules of probability for different probability scenarios
 
 <br>
 

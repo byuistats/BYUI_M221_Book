@@ -38,11 +38,12 @@ output:
 
 By the end of this lesson, you should be able to:
 
-* State the properties of a normal density curve.
-* Calculate the z-score of an individual observation, given the mean and standard deviation.
-* Interpret a z-score.
-* Calculate probability as area under a normal density curve.
-* Calculate a percentile using the normal distribution.
+1. State the properties of a normal distribution
+2. Calculate the z-score for an individual observation, given the population mean and standard deviation
+3. Interpret a z-score
+4. Use the normal distribution to calculate probabilities for one observation
+5. Approximate probabilities from a normal distribution using the 68-95-99.7 rule 
+6. Calculate a percentile using the normal distribution
 
 <br>
 

@@ -60,14 +60,16 @@ Data files used in the videos:
 
 By the end of this lesson, you should be able to:
 
-- Conduct a Hypothesis Test for a single mean with σ known:
-  + State the null and alternative hypothesis.
-  + Calculate the test-statistic and p-value of the hypothesis test.
-  + Assess the statistical significance by comparing the p-value to the α-level.
-  + Check the requirements for the hypothesis test.
-  + Show the appropriate connections between the numerical and graphical summaries that support this hypothesis test.
-  + Draw a correct conclusion for the hypothesis test.
-  + Interpret a Type I and II error.
+1. Recognize when a one mean (sigma known) hypothesis test is appropriate
+2. Define a P-value (one-sided and two-sided)
+3. Perform a hypothesis test for a single mean with σ known using the following steps:
+    a. State the null and alternative hypotheses
+    b. Calculate the test-statistic by hand
+    c. Determine the P-value using the normal distribution
+    d. Assess statistical significance in order to state the appropriate conclusion for the hypothesis test
+    e. Check the requirements for the hypothesis test
+4. Interpret Type I and II errors in the context of a hypothesis test
+5. Explain the meaning of the level of significance ($\alpha$)
 
 <br>
 

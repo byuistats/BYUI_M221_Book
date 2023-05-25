@@ -34,10 +34,11 @@ output:
 
 By the end of this lesson, you should be able to:
 
-- Identify the explanatory and response variable in a study.
-- Calculate the slope and intercept of a regression model.
-- Interpret the slope of the regression model.
-- Make predictions using a regression model.
+1. Identify the explanatory and response variables in a study
+2. Calculate the slope and intercept of a regression model
+3. Interpret the slope of the regression model
+4. When practical, interpret the y-intercept of the regression model
+5. Predict the response given the value of an explanatory variable for a regression model
 
 <br>
 

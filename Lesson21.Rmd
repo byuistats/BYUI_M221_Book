@@ -41,10 +41,11 @@ output:
 
 By the end of this lesson, you should be able to:
 
-- Create a scatterplot of bivariate data.
-- Interpret the overall pattern in a scatter plot to assess linearity and direction.
-- Calculate the correlation coefficient.
-- Interpret the correlation coefficient, $r$, as a measure of strength and direction of a linear relationship between two variables.
+1. Create a scatterplot of bivariate data
+2. Interpret the overall pattern in a scatter plot to assess linearity and direction
+3. Calculate the correlation coefficient, $r$
+4. Identify the properties of the correlation coefficient 
+5. Interpret the correlation coefficient as a measure of the strength and direction of the linear relationship between two variables
 
 <br>
 
