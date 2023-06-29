@@ -33,6 +33,7 @@ if(params$key!=TRUE){
 ```
 
 ```{r,include=FALSE}
+library(readxl)
 library(ggplot2)
 library(ggthemes)
 library(pander)
@@ -73,15 +74,15 @@ hist(y,  main = "Histogram for Normality Check")
 ```{r, include=FALSE}
 #Making the two histograms in order to show them in the answer key. So students can see that Volume is distinctly abnormal. 
 
-NASDAQ = read.csv(file = "https://raw.githubusercontent.com/byuistats/data/master/NASDAQ-PriceAndVolume/NASDAQ-PriceAndVolume.csv",header = TRUE,stringsAsFactors = FALSE)
+NASDAQ =  read_xlsx("../../Data/NASDAQ-PriceAndVolume.xlsx")
 ###Histogram for Price
-hist_price = ggplot(data = NASDAQ, aes(x=Price..US..)) + 
+hist_price = ggplot(data = NASDAQ, aes(x=`Price (US$)`)) + 
   geom_histogram(binwidth = 8, fill="gray", color="black") 
 
 ggsave(hist_price,filename = "../images/L5_Homework_Q03_QQPlot_Price.png",width = 3.75,height = 3.00)
 
 ###Histogram for Share Volume
-hist_share = ggplot(data = NASDAQ, aes(x=Share.Volume)) + 
+hist_share = ggplot(data = NASDAQ, aes(x=`Share Volume`)) + 
   geom_histogram(binwidth=1000000, fill="gray", color="black")  
 
 ggsave(hist_share,filename = "../images/L5_Homework_Q03_QQPlot_Volume.png",width = 3.75,height = 3.00)
@@ -139,10 +140,14 @@ percent1 = pnorm(z1, lower.tail = T) * 100
 
 9.	The time to complete a standardized exam in the BYU-Idaho Testing Center is approximately normal with a mean of `r mean1` minutes and a standard deviation of `r sd1` minutes. Using the 68-95-99.7 rule, approximately what percentage of students will complete the exam in less than one hour?  (Give your answer as a percent.) _________% 
 
-10. According to the histogram plot below, the data are ... (finish the sentence) 
+10. According to the histogram shown below, the distribution of the data could be described as...
+
+a. Right skewed
+b. Left skewed
+c. Normal
 
 ```{r,echo=FALSE, results='asis',warning=FALSE,message=FALSE}
-Dentist = read.csv(file = "https://raw.githubusercontent.com/byuistats/data/master/DentistOfficeBills/DentistOfficeBills.csv",header = T,stringsAsFactors = F)
+Dentist = read_xlsx("../../Data/DentistOfficeBills.xlsx")
 Melt.Dentist = melt(Dentist)
 
 ggplot(data = Melt.Dentist, aes(x=value)) +
@@ -254,7 +259,7 @@ if(params$key==TRUE){
     
     Solution09 = data.frame(Part="-",Solution=paste(round(percent1),"%",sep = ""))
     
-    Solution10 = data.frame(Part = "-",Solution = "d. does not follow a normal distribution.")
+    Solution10 = data.frame(Part = "-",Solution = "a. Right skewed")
       
     Solution11 = data.frame(Part="-",Solution=paste("$z = ",round(z2,3),"$",sep = ""))
     

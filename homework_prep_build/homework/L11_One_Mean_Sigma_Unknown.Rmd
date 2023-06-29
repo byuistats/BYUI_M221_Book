@@ -58,7 +58,7 @@ t1 = zScore(sampleMean1, trueMean1, sampleSD1,n1)
 
 ```{r, echo=FALSE}
 
-MathSelfEfficacy = read.csv("https://raw.githubusercontent.com/byuistats/data/master/MathSelfEfficacy/MathSelfEfficacy.csv", header = TRUE)
+MathSelfEfficacy = read_xlsx("../../Data/MathSelfEfficacy.xlsx")
 n2 = nrow(MathSelfEfficacy)
 confInt2 = 95
 df2 = n2 - 1
@@ -112,14 +112,14 @@ Two years ago in a similar study, the mean student confidence rating (on a scale
 
 9. State the degrees of freedom.
 
-10. Find the P-value and compare it to the level of significance. Sketch the t-distribution using the t-distribution applet. 
+10. Find the P-value and compare it to the level of significance. 
 
 11. State your decision.  Do we reject the null hypothesis or fail to reject it? 
 
 12. State your conclusion in an English sentence, relating the result to the context of the problem. 
 
 ```{r, echo=FALSE}
-OreoDoubleStuf = read.csv("https://raw.githubusercontent.com/byuistats/data/master/OreoDoubleStuf/OreoDoubleStuf.csv",header=TRUE)
+OreoDoubleStuf = read_xlsx("../../Data/OreoDoubleStuf.xlsx")
 OreoDoubleStuf_na = na.omit(OreoDoubleStuf)
 confInt4 = 90
 n4_13 = nrow(OreoDoubleStuf_na)
