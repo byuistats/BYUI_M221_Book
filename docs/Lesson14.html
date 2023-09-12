@@ -626,8 +626,10 @@ the tail.</li>
 </div>
 <div id="requirements-of-anova" class="section level3">
 <h3>Requirements of ANOVA</h3>
-<p>There are two requirements of ANOVA that must be checked:</p>
+<p>There are three requirements of ANOVA that must be checked:</p>
 <ul>
+<li><p>Each group of data used in the ANOVA test need to be simple
+random samples from their respective populations.</p></li>
 <li><p>The data are normally distributed in each group.</p>
 <p>We can check this by creating a histogram for each group
 (separately). Unless one (or more) of the group’s histograms provide
@@ -636,18 +638,14 @@ data are sufficiently normal to proceed with the analysis. We can take
 this approach because ANOVA is robust to violations of requirements. In
 other words, results from ANOVA tests are reasonably good even if there
 are mild to moderate violations of the requirements.</p></li>
+<li><p>The population variances are equal for each group.</p>
+<p>This requirement is checked by examining the sample variances. The
+rule we will use is: <em>if the largest sample variance is less than or
+equal to four times the smallest sample variance, then we will conclude
+that the population variances are equal.</em></p></li>
 </ul>
-<!-- **[[Lesson 3: Describing_Quantitative_Data:_Shape,_Center_%26_Spread#Variance|variances]]** 
-I don't know how to reference specific header in other lesson-->
-<ul>
-<li><p>The variances are equal for each group.</p>
-<p>This requirement is checked by examining the variances. The rule we
-will use is: <em>if the largest variance is less than or equal to four
-times the smallest variance, then we will conclude that the variances
-are equal.</em></p></li>
-</ul>
-<p>If done by hand, the calculations for one simple ANOVA problem can
-easily require an hour of hard work. We will use software to do these
+<p>If done by hand, the calculations for one ANOVA problem can easily
+require an hour of hard work. We will use software to do these
 calculations quickly and accurately.</p>
 <br>
 <div class="message Tip">

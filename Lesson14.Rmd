@@ -152,20 +152,19 @@ Here is a brief summary of the characteristics of the $F$-distribution:
 
 ### Requirements of ANOVA
 
-There are two requirements of ANOVA that must be checked:
+There are three requirements of ANOVA that must be checked:
+
+- Each group of data used in the ANOVA test need to be simple random samples from their respective populations.
 
 - The data are normally distributed in each group.
 
     We can check this by creating a histogram for each group (separately).  Unless one (or more) of the group's histograms provide strong evidence to the contrary, it is reasonable to conclude that the data are sufficiently normal to proceed with the analysis. We can take this approach because ANOVA is robust to violations of requirements. In other words, results from ANOVA tests are reasonably good even if there are mild to moderate violations of the requirements. 
 
-<!-- **[[Lesson 3: Describing_Quantitative_Data:_Shape,_Center_%26_Spread#Variance|variances]]** 
-I don't know how to reference specific header in other lesson-->
+- The population variances are equal for each group.
 
-- The variances are equal for each group.
+    This requirement is checked by examining the sample variances.  The rule we will use is: *if the largest sample variance is less than or equal to four times the smallest sample variance, then we will conclude that the population variances are equal.*
 
-    This requirement is checked by examining the variances.  The rule we will use is: *if the largest variance is less than or equal to four times the smallest variance, then we will conclude that the variances are equal.*
-
-If done by hand, the calculations for one simple ANOVA problem can easily require an hour of hard work.  We will use software to do these calculations quickly and accurately.
+If done by hand, the calculations for one ANOVA problem can easily require an hour of hard work.  We will use software to do these calculations quickly and accurately.
 
 <br>
 <div class="message Tip">The variance is the square of the standard deviation.  The sample variance is denoted by the symbol $s^2$.</div>
