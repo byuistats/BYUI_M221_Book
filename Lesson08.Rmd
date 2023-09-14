@@ -13,55 +13,24 @@ output:
  }
 </script>
 
-This is not designed to be a comprehensive review.  There may be items on the exam that are not covered in this review.  Similarly, there may be items in this review that are not tested on this exam.  You are strongly encouraged to review the readings, homework exercises, and other activities from Unit 1 as you prepare for the exam. 
+Unit 1 introduced you to some foundational ideas in statistical theory. A firm grasp of these concepts will allow you to connect deeply with the statistical tools that you will be presented with in Units 2, 3, and 4. Use this page to review the Lesson Outcomes and Summaries in preparation for the Unit 1 Exam. If there are any lesson outcomes that you are not confident with, return to that lesson and review those outcomes in detail.
+
 
 <br>
 
-## Unit 1 Lesson Outcomes
+## Lesson 1 {.tabset .tabset-pills}
 
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
+### Outcomes
 
-<div id="oc" style="display:none;">
-The expectation on the exam is that you should be able to do the following:
+1. Explain the course policies
+2. Access course resources (course outline, lesson schedule, preparation activities, reading quizzes, homework assignments, assessments, etc.)
+3. Communicate with the instructor and group members
+4. Access statistical analysis software tools for class quizzes, assignments, and exams
+5. Apply principles of the gospel of Jesus Christ in this class
+6. Apply the three rules of probability for different probability scenarios
 
-- Distinguish between a categorical and a quantitative variable.
-- Distinguish between an observational study and an experiment.
-- Distinguish between a population and a sample.
-- Distinguish between a parameter and a statistic.
-- Distinguish and give an example of each of the following sampling schemes:
+### Summary
 
-  + Simple random sampling
-  + Systematic sampling
-  + Cluster sampling
-  + Stratified sampling
-  + Convenience sampling
-
-- Explain the significance of using a random sample.
-- Determine the shape of a distribution using a histogram and/or boxplot.
-- Determine the centers of a given histogram and/or boxplot. 
-- Identify the mean, median and standard deviation in skewed or normal histograms.
-- Calculate the mean, median and standard deviation from quantitative data.
-- Calculate a percentile from a quantitative data set.
-- Calculate a five-number summary from quantitative data with Excel, or by hand.
-- Create a histogram and a boxplot from quantitative data. 
-- State and apply the three axioms of probability.
-- State the properties of a normal density curve.
-- Calculate the z-score of an individual observation, given the mean and standard deviation.
-- Interpret a z-score.
-- Calculate probability as area under a normal density curve.
-- Assess normality using a histogram.
-- Explain how a sampling distribution is created.
-- Determine the mean, standard deviation, and shape of a distribution of sample means.
-- State and apply the Central Limit Theorem and the Law of Large numbers.
-- Calculate probabilities using a distribution of sample means.
-</div>
-<br>
-
-## Unit 1 Lesson Summaries
-
-<a href="javascript:showhide('su')"><span style="font-size:8pt;">Show/Hide Summaries</span></a>
-<div id="su">
-<br>
 <div class="RecapHeading">Lesson 01 Recap</div>
 <div class="Summary">
 
@@ -79,6 +48,25 @@ $$P(\text{not}~X) = 1 - P(X)$$
 
 </div>
 <br>
+
+
+## Lesson 2 {.tabset .tabset-pills}
+
+### Outcomes
+
+1. Describe the five steps of the Statistical Process
+2. Distinguish between an observational study and an experiment
+3. Differentiate between a population and a sample
+4. Describe each of the following sampling schemes:
+    a. Simple random sampling
+    b. Stratified sampling
+    c. Systematic sampling
+    d. Cluster sampling
+    e. Convenience sampling
+5. Explain the importance of using random sampling
+6. Distinguish between a quantitative and a categorical variable
+
+### Summary
 
 <div class="RecapHeading">Lesson 02 Recap</div>
 <div class="Summary">
@@ -100,6 +88,20 @@ $$P(\text{not}~X) = 1 - P(X)$$
 <br>
 
 
+## Lesson 3 {.tabset .tabset-pills}
+
+### Outcomes
+
+1. Create a histogram from data
+2. Interpret data presented in a histogram
+3. Identify left-skewed, right-skewed, and symmetric distributions from histograms
+4. Calculate the mean, median, and mode for quantitative data using software
+5. Compare the centers of distributions using graphical and numerical summaries
+6. Describe the effects that skewness or outliers have on the relationship between the mean and median
+7. Distinguish between a parameter and a statistic 
+
+### Summary
+
 <div class="RecapHeading">Lesson 03 Recap</div>
 <div class="Summary">
 
@@ -114,6 +116,21 @@ $$P(\text{not}~X) = 1 - P(X)$$
 <br>
 
 
+## Lesson 4 {.tabset .tabset-pills}
+
+### Outcomes
+
+1. Calculate a percentile from data
+2. Interpret a percentile
+3. Calculate the standard deviation from data
+4. Interpret the standard deviation
+5. Calculate the five-number summary using software
+6. Interpret the five-number summary
+7. Create a box plot using software
+8. Determine the five-number summary visually from a box plot
+
+### Summary
+
 <div class="RecapHeading">Lesson 04 Recap</div>
 <div class="Summary">
 
@@ -125,6 +142,19 @@ $$P(\text{not}~X) = 1 - P(X)$$
 <br>
 
 
+
+## Lesson 5 {.tabset .tabset-pills}
+
+### Outcomes
+
+1. State the properties of a normal distribution
+2. Calculate the z-score for an individual observation, given the population mean and standard deviation
+3. Interpret a z-score
+4. Use the normal distribution to calculate probabilities for one observation
+5. Approximate probabilities from a normal distribution using the 68-95-99.7 rule 
+6. Calculate a percentile using the normal distribution
+
+### Summary
 
 <div class="RecapHeading">Lesson 05 Recap</div>
 <div class="Summary">
@@ -145,6 +175,19 @@ $$P(\text{not}~X) = 1 - P(X)$$
 
 
 
+## Lesson 6 {.tabset .tabset-pills}
+
+### Outcomes
+
+1. Describe the concept of a sampling distribution of the sample mean
+2. State the Central Limit Theorem 
+3. Determine the mean of the sampling distribution of the sample mean for a given parent population
+4. Determine the standard deviation of the sampling distribution of the sample mean for a given parent population
+5. Determine the shape of the sampling distribution of the sample mean for a given parent population
+6. State the Law of Large Numbers
+
+### Summary
+
 <div class="RecapHeading">Lesson 06 Recap</div>
 <div class="Summary">
 
@@ -162,6 +205,15 @@ $$P(\text{not}~X) = 1 - P(X)$$
 
 
 
+## Lesson 7 {.tabset .tabset-pills}
+
+### Outcomes
+
+1. Calculate the z-score for a sample mean, given the population mean and standard deviation
+2. Use the normal distribution to calculate probabilities for a sample mean
+
+### Summary
+
 <div class="RecapHeading">Lesson 07 Recap</div>
 <div class="Summary">
 
@@ -170,6 +222,20 @@ $$P(\text{not}~X) = 1 - P(X)$$
 - The **$P$-value** is the probability of getting a test statistic at least as extreme as the one you got, assuming $H_0$ is true. A $P$-value is calculated by finding the area under the normal distribution curve that is more extreme (farther away from the mean) than the z-score.
 </div>
 <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Navigation
