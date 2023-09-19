@@ -364,15 +364,18 @@ The mean and standard deviation of $\bar{x}$ are:
 <div class="SummaryHeading">Remember...</div>
 <div class="Summary">
 
-- The **distribution of sample means** is a distribution of all possible sample means ($\bar x$) for a particular sample size. 
+1. The **distribution of sample means** is a distribution of all possible sample means ($\bar x$) for a particular sample size. 
 
-- The **mean** of the distribution of sample means is the mean $\mu$ of the population: $\mu_{\bar{x}} = \mu$.
+2. The **Central Limit Theorem** states that the sampling distribution of the sample mean will be approximately normal if the sample size $n$ of a sample is sufficiently large. In this class, $n\ge 30$ is considered to be sufficiently large.
 
-- The **standard deviation** of the distribution of sample means is the standard deviation $\sigma$ of the population divided by the square root of $n$: $\sigma_{\bar{x}} = \sigma/\sqrt{n}$.
+3. The **mean** of the distribution of sample means is the mean $\mu$ of the population: $\mu_{\bar{x}} = \mu$.
 
-- The distribution of sample means is **normal** in either of two situations: (1) when the data is normally distributed **or** (2) when, thanks to the **Central Limit Theorem (CLT)**, our sample size ($n$) is large. 
+4. The **standard deviation** of the distribution of sample means is the standard deviation $\sigma$ of the population divided by the square root of $n$: $\sigma_{\bar{x}} = \sigma/\sqrt{n}$.
 
-- The **Law of Large Numbers** states that as the sample size ($n$) gets larger, the sample mean ($\bar x$) will get closer to the population mean ($\mu$). This can be seen in the equation for $\sigma_{\bar{x}} = \sigma/\sqrt{n}$. Notice as $n$ increases, then $\sigma_\bar{x}$ will get smaller.
+5. The distribution of sample means is **normal** in either of two situations: (1) when the data is normally distributed **or** (2) when, thanks to the **Central Limit Theorem (CLT)**, our sample size ($n$) is large. 
+
+6. The **Law of Large Numbers** states that as the sample size ($n$) gets larger, the sample mean ($\bar x$) will get closer to the population mean ($\mu$). This can be seen in the equation for $\sigma_{\bar{x}} = \sigma/\sqrt{n}$. Notice as $n$ increases, then $\sigma_\bar{x}$ will get smaller.
+
 </div>
 <br>
 

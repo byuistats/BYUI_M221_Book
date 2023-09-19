@@ -1317,9 +1317,21 @@ Additional formatting can be applied to further improve the appearance of the ch
 <div class="SummaryHeading">Remember...</div>
 <div class="Summary">
 
-- The **standard deviation** is a number that describes how spread out the data are. A larger standard deviation means the data are more spread out than data with a smaller standard deviation.
+1. A **percentile** is calculated in Excel using `=PERCENTILE(..., 0.#)` where the `0.#` is the percentile written as a decimal number. So the 20th percentile would be written as 0.2.
 
-- **Quartiles/percentiles**, **Five-Number Summaries**, and **Boxplots** are tools that help us understand data. The five-number summary of a data set contains the minimum value, the first quartile, the median, the third quartile, and the maximum value. A boxplot is a graphical representation of the five-number summary.
+2. A **percentile** is a number such that a specified percentage of the data are at or below this number. For example, if say 80% of college students were shorter than (or equal to) 70 inches tall in height, then the 80th percentile of heights of college students would be 70 inches.
+
+3. **Standard deviation** is calculated in Excel for a sample of data using `=STDEV.S(...)`.
+
+4. The **standard deviation** is a number that describes how spread out the data typically are from the mean of that data. A larger standard deviation means the data are more spread out from their mean than data with a smaller standard deviation. The standard deviation is never negative. A standard deviation of zero implies all values in the data set are exactly the same.
+
+5. To compute any of the **five-number summary** values in Excel, use the Excel function `=QUARTILE.INC(..., #)` where `#` is either a 0 (gives the minimum), 1 (gives the first quartile), 2 (gives the second quartile, i.e., median), 3 (gives the third quartile), or 4 (gives the maximum).
+
+6. The **five-number summary** consists of (1) the minimum value in the data, (2) the first quartile (25th percentile) of the data, (3) the median of the data (50th percentile), (4) the third quartile (75th percentile) of the data, and (5) the maximum value occurring in the data.
+
+7. To create a **boxplot** in Excel, highlight the data, go to *Insert* on the menu ribbon, choose the *histogram icon*, select the *Boxplot* option from the menu that appears.
+
+8. **Boxplots** are a visualization of the five-number summary of a data set.
 
 </div>
 <br>

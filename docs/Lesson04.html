@@ -2876,18 +2876,41 @@ appearance of the chart.</p>
 Remember…
 </div>
 <div class="Summary">
-<ul>
+<ol style="list-style-type: decimal">
+<li><p>A <strong>percentile</strong> is calculated in Excel using
+<code>=PERCENTILE(..., 0.#)</code> where the <code>0.#</code> is the
+percentile written as a decimal number. So the 20th percentile would be
+written as 0.2.</p></li>
+<li><p>A <strong>percentile</strong> is a number such that a specified
+percentage of the data are at or below this number. For example, if say
+80% of college students were shorter than (or equal to) 70 inches tall
+in height, then the 80th percentile of heights of college students would
+be 70 inches.</p></li>
+<li><p><strong>Standard deviation</strong> is calculated in Excel for a
+sample of data using <code>=STDEV.S(...)</code>.</p></li>
 <li><p>The <strong>standard deviation</strong> is a number that
-describes how spread out the data are. A larger standard deviation means
-the data are more spread out than data with a smaller standard
-deviation.</p></li>
-<li><p><strong>Quartiles/percentiles</strong>, <strong>Five-Number
-Summaries</strong>, and <strong>Boxplots</strong> are tools that help us
-understand data. The five-number summary of a data set contains the
-minimum value, the first quartile, the median, the third quartile, and
-the maximum value. A boxplot is a graphical representation of the
-five-number summary.</p></li>
-</ul>
+describes how spread out the data typically are from the mean of that
+data. A larger standard deviation means the data are more spread out
+from their mean than data with a smaller standard deviation. The
+standard deviation is never negative. A standard deviation of zero
+implies all values in the data set are exactly the same.</p></li>
+<li><p>To compute any of the <strong>five-number summary</strong> values
+in Excel, use the Excel function <code>=QUARTILE.INC(..., #)</code>
+where <code>#</code> is either a 0 (gives the minimum), 1 (gives the
+first quartile), 2 (gives the second quartile, i.e., median), 3 (gives
+the third quartile), or 4 (gives the maximum).</p></li>
+<li><p>The <strong>five-number summary</strong> consists of (1) the
+minimum value in the data, (2) the first quartile (25th percentile) of
+the data, (3) the median of the data (50th percentile), (4) the third
+quartile (75th percentile) of the data, and (5) the maximum value
+occurring in the data.</p></li>
+<li><p>To create a <strong>boxplot</strong> in Excel, highlight the
+data, go to <em>Insert</em> on the menu ribbon, choose the <em>histogram
+icon</em>, select the <em>Boxplot</em> option from the menu that
+appears.</p></li>
+<li><p><strong>Boxplots</strong> are a visualization of the five-number
+summary of a data set.</p></li>
+</ol>
 </div>
 <p><br></p>
 </div>
