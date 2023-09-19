@@ -718,15 +718,15 @@ At least 30,000 and less than 35,000
 </tbody>
 </table>
 </center>
-<p>For each of these intervals, we draw a bar on the histogram. The
-width of the bars is determined by the width of the interval (5000 in
-this example). The height of the bars is equal to the number of
-observations that fall in each interval. As we look at the histogram
-shown below, we see bars ranging from $0 to $35,000. We also see higher
-bars in the middle between $10,000 to $20,000 show that these values are
-more commonly occurring than the other values. If we computed the
-average of the values contained in our histogram, we would compute the
-number <span class="math display">\[
+<p>For each of these intervals, called <em>bins</em>, we draw a bar on
+the histogram. The width of the bars is determined by the width of the
+bin (5000 in this example). The height of the bars is equal to the
+number of observations that fall in each bin. As we look at the
+histogram shown below, we see bars ranging from $0 to $35,000. We also
+see higher bars in the middle between $10,000 to $20,000 show that these
+values are more commonly occurring than the other values. If we computed
+the average of the values contained in our histogram, we would compute
+the number <span class="math display">\[
   \frac{15,100 + 19,000 + 4,800 + 6,500 + 14,900 + 600 + 23,500 + 11,500
 + 12,900 + 32,200}{10} = 14,100
 \]</span> showing that the <em>center</em> of the histogram (or average)
@@ -1211,20 +1211,44 @@ histogram.</p>
 Remember…
 </div>
 <div class="Summary">
-<ul>
-<li><p>A <strong>histogram</strong> allows us to visually interpret
-data. Histograms can be left-skewed, right-skewed, or symmetrical and
-bell-shaped.</p></li>
+<ol style="list-style-type: decimal">
+<li><p>Histograms are created by dividing the number line into several
+equal parts, starting at or below the minimum value occurring in the
+data and ending at or above the maximum value in the data. The number of
+data points occurring in each interval (called a bin) are counted. A bar
+is then drawn for each bin so that the height of the bar shows the
+number of data points contained in that bin.</p></li>
+<li><p>A <strong>histogram</strong> allows us to visually interpret data
+to quickly recognize which values are most common and which values are
+least common in the data.</p></li>
+<li><p>Histograms can be <strong>left-skewed</strong> (the majority of
+the data is on the right of the histogram, less common values stretch to
+the left side), <strong>right-skewed</strong> (majority of the data is
+on the left side with less common values stretching to the right), or
+<strong>symmetrical and bell-shaped</strong> (most data is in the middle
+with less common values stretching out to either side).</p></li>
 <li><p>The <strong>mean</strong>, <strong>median</strong>, and
 <strong>mode</strong> are measures of the center of a distribution. The
 mean is the most common measure of center and is computed by adding up
 the observed data and dividing by the number of observations in the data
-set.</p></li>
+set. The median represents the 50th percentile in the data. The mean can
+be calculated in Excel using <code>=AVERAGE(...)</code>, the median by
+using <code>=MEDIAN(...)</code>, and the mode by <code>=MODE(...)</code>
+where the <code>...</code> in each case consists of the cell references
+that highlight the data.</p></li>
+<li></li>
+<li><p>In a symmetrical and bell-shaped distribution of data, the mean,
+median, and mode are all roughly the same in value. However, in a skewed
+distribution, the mean is strongly influenced by outliers and tends to
+be pulled in the direction of the skew. In a left-skewed distribution,
+the mean will tend to be to the left of the median. In a right-skewed
+distribution, the mean will tend to be to the right of the
+median.</p></li>
 <li><p>A <strong>parameter</strong> is a true (but usually unknown)
 number that describes a population. A <strong>statistic</strong> is an
 estimate of a parameter obtained from a sample of the
 population.</p></li>
-</ul>
+</ol>
 </div>
 <p><br></p>
 </div>

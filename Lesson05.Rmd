@@ -536,16 +536,19 @@ One way to get the Format Axis menu to appear is to right-click anywhere on the 
 <div class="SummaryHeading">Remember...</div>
 <div class="Summary">
 
-- A **normal density curve** is symmetric and bell-shaped. The curve lies above the horizontal axis and the total area under the curve is equal to 1. 
+1. A **normal density curve** is symmetric and bell-shaped with a mean of $\mu$ and a standard deviation of $\sigma$. The curve lies above the horizontal axis and the total area under the curve is equal to 1. A **standard normal distribution** has a mean of 0 and a standard deviation of 1. 
 
-- A **standard normal distribution** has a mean of 0 and a standard deviation of 1. The **68-95-99.7% rule** states that when data are normally distributed, approximately 68% of the data lie within $z=1$ standard deviation ($\sigma$) from the mean, approximately 95% of the data lie within $z=2$ standard deviations from the mean, and approximately 99.7% of the data lie within $z=3$ standard deviations from the mean. 
+2. A **z-score** is calculated as: $\displaystyle{z = \frac{\text{value}-\text{mean}}{\text{standard deviation}} = \frac{x-\mu}{\sigma}}$
 
-- A **z-score** tells us how many standard deviations away from the mean a given value is. It is calculated as: $\displaystyle{z = \frac{\text{value}-\text{mean}}{\text{standard deviation}} = \frac{x-\mu}{\sigma}}$
+3. A **z-score** tells us how many standard deviations above ($+Z$) or below ($-Z$) the mean ($\mu$) a given value ($x$) is.
 
-- The [**Normal Probability Applet**](https://byuimath.com/apps/normprob.html) allows us to use z-scores to calculate proportions, probabilities, and percentiles of being "above," "below," or "between" certain values.
+4. To calculate probabilities for an observation $x$, calculate the $z$-score using $\mu$, $\sigma$, and $x$ and then use the [Normal Probability Applet](https://byuimath.com/apps/normprob.html) to shade the appropriate area of the distribution for the desired probability. The area shaded depends on both the direction of interest (above, below, between) and the sign of the z-score as depicted in the images below. In every case, the **probability is** given by the **Area** box at the top of the applet.
 
-- Percentiles can be calculated using the [**Normal Probability Applet**](https://byuimath.com/apps/normprob.html) by (1) shading the left tail only, (2) entering the desired percentile in the "Area" box, and (3) using the z-score from where the blue shaded region ends solve for $x$ in the equation $z=\frac{x-\mu}{\sigma}$.
+<img src="./Images/normalShadingSituations.png">
 
+5. The **68-95-99.7% rule** states that when data are normally distributed, approximately 68% of the data lie within $z=1$ standard deviation ($\sigma$) from the mean, approximately 95% of the data lie within $z=2$ standard deviations from the mean, and approximately 99.7% of the data lie within $z=3$ standard deviations from the mean. For example, this rule approximates that 2.5% of observations will be less than a z-score of $z=-2$.
+
+6. Percentiles can be calculated using the [**Normal Probability Applet**](https://byuimath.com/apps/normprob.html) by (1) shading the left tail only, (2) entering the desired percentile in the "Area" box, and (3) using the z-score from where the blue shaded region ends solve for $x$ in the equation $z=\frac{x-\mu}{\sigma}$.
 <br/>
 
 <!-- - A **Q-Q plot** is used to assess whether or not a set of data is normally distributed. -->

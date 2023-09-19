@@ -468,7 +468,7 @@ As an example of a convenience sample, an auditor could haphazardly select items
 
 <br>
 
-### Types of Variables
+### Types of Data
 
 Whenever we collect data, we record information about the things we are studying. There are two basic types of data that can be recorded: quantitative measurements and categorical labels. We will call these types of data simply "quantitative" or "categorical" variables. We use the word "variable" to denote the idea that the quantitative measurements or categorical labels can vary from person to person, or item to item, in our study.
 
@@ -562,18 +562,22 @@ Since there was not enough evidence to suggest that ImmunAvance's financial stat
 <div class="SummaryHeading">Remember...</div>
 <div class="Summary">
 
-- The **Statistical Process** has five steps: **D**esign the study, **C**ollect the data, **D**escribe the data, **M**ake inferences, **T**ake action.
+1. The **Statistical Process** has five steps: **D**esign the study, **C**ollect the data, **D**escribe the data, **M**ake inference, **T**ake action. These can be remembered by the pneumonic "**D**aniel **C**an **D**iscern **M**ore **T**ruth."
 
-- In a **designed experiment**, researchers control the conditions of the study. In an **observational study**, researchers don't control the conditions but only observe what happens.
+2. In a **designed experiment**, researchers control the conditions of the study, typically with a treatment group and a control group, and then observe how the treatments impact the subjects. In a purely **observational study**, researchers don't control the conditions but only observe what happens.
 
-- There are many sampling methods used to obtain a **sample** from a **population**:
-  + A **simple random sample (SRS)** is a random selection taken from a population
-  + A **systematic sample** is every ***k***<sup>th</sup> item in the population, beginning at a random starting point
-  + A **cluster sample** is all items in one or more randomly selected clusters, or blocks
-  + A **stratified sample** divides data into similar groups and an **SRS** is taken from each group
-  + A **convenience sample** is one easily obtained in a less-than-systematic way and should be avoided whenever possible
+3. The **population** is the entire group of all possible subjects that could be included in the study. The **sample** is the subset of the population that is actually selected to participate in the study. Statistics use information from the sample to make claims about what is true about the entire population.
 
-- **Quantitative variables** represent things that are numeric in nature, such as the value of a car or the number of students in a classroom. **Categorical variables** represent non-numerical data that can only be considered as labels, such as colors or brands of shoes.
+4. There are many sampling methods used to obtain a **sample** from a **population**. The best methods use some sort of randomness (like pulling names out of a hat, rolling dice, flipping coins, or using a computer generated list of random numbers) to avoid bias. 
+  a. A **simple random sample (SRS)** is a random sample taken from the full list of the population. This is the least biased (best) sampling method, but can only be implemented when a full list of the population is accessible.
+  b. A **stratified sample** divides the population into similar groups and then takes an **SRS** from each group. The main reason to use this sampling method is when a study wants to compare and contrast certain groups within the population, say to compare freshman, sophomores, juniors, and seniors at a university.
+  c. A **systematic sample** samples every ***k***<sup>th</sup> item in the population, beginning at a random starting point. This is best applied when subjects are lined up in some way, like at a fast food restaurant, an airport security line, or an assembly line in a factory.
+  d. A **cluster sample** consists of taking all items in one or more randomly selected clusters, or blocks. For example, ecologists could draw grids on a map of a forest to create small sampling regions and then sample all trees they find in a few randomly selected regions. Note that this differs from a stratified sample in that only a few sub-groups (clusters) are selected and that all subjects within the selected clusters are included in the study.
+  e. A **convenience sample** involves selecting items that are relatively easy to obtain and *does not use random selection* to choose the sample. This method of sampling can be assumed to *always bring bias* into the sample.
+
+5. The best way to avoid bias when trying to make conclusions about a population from a single sample of that population is to use a random sampling method to obtain the sample. 
+
+6. **Quantitative variables** represent things that are numeric in nature, such as the value of a car or the number of students in a classroom. **Categorical variables** represent non-numerical data that can only be considered as labels, such as colors or brands of shoes.
 
 </div>
 <br>
