@@ -622,3 +622,27 @@ a.NavToggle {
 .client-js .NavFrame.collapsed > .NavContent {
 	display: none;
 }
+
+
+
+
+
+#fancytable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#fancytable td, #fancytable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#fancytable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #5FA8E2;
+  color: white;
+}
+

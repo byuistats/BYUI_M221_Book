@@ -292,7 +292,49 @@ A distribution is symmetric if both the left and right side of the distribution 
 
 A distribution is right-skewed if a histogram of the distribution shows a long right tail. This can occur if there are some very large outliers on the right-hand side of the distribution. A distribution is left-skewed if a histogram shows that it has a long tail to the left.
 
-<img src="./Images/Lesson_2_Activity_2-3.JPG" width=130%>
+
+<table id="fancytable">
+<tr>
+  <th>
+    Right-skewed
+  </th><th>
+    Symmetric & Bell-shaped
+  </th><th>
+    Left-skewed
+  </th>
+</tr><tr>
+  <td>
+    <img src="./Images/Lesson03_shape_wageshist.png" width=130%>
+  </td><td>
+    <img src="./Images/Lesson03_shape_maleheightshist.png" width=130%>
+  <td>
+    <img src="./Images/Lesson03_shape_gpahist.png" width=130%>
+  </td>
+</tr><tr>
+  <td>
+    Mean: \$10.45
+    
+    Median: \$9.04
+    
+    Mean is to the right of the median.
+  </td><td>
+    Mean: 71.1 inches
+    
+    Median: 71 inches
+    
+    Mean and median are roughly equal.
+  </td><td>
+    Mean: 3.42
+    
+    Median: 3.45
+    
+    Mean is to the left of the median.
+  </td>
+</tr>
+</table>
+
+<br/>
+
 
 If a distribution has only one peak, it is said to be **unimodal**. The three distributions illustrated above are all unimodal distributions. Some people might argue that there are several peaks in the GPA data, so it should not be considered unimodal. Even though there are jagged bumps in the histogram, it is important to visualize the overall shape in the data. When interpreting a histogram, it can be helpful to blur your eyes and imagine the overall shape after smoothing out the bumps. If the overall trend indicates that there is more than one bump, then we do not consider the distribution to be unimodal. We will usually only work with unimodal data sets in this course.
 
@@ -520,7 +562,49 @@ Even though measures of center are important, we need to consider the shape, cen
 
 4. The **mean**, **median**, and **mode** are measures of the center of a distribution. The mean is the most common measure of center and is computed by adding up the observed data and dividing by the number of observations in the data set. The median represents the 50th percentile in the data. The mean can be calculated in Excel using `=AVERAGE(...)`, the median by using `=MEDIAN(...)`, and the mode by `=MODE(...)` where the `...` in each case consists of the cell references that highlight the data.
 
-5. 
+5. When comparing the centers of distributions using graphical and numerical summaries, the direction of the skew showing in the histogram will generally correspond with the mean being pulled in that direction.
+
+<table id="fancytable">
+<tr>
+  <th>
+    Right-skewed
+  </th><th>
+    Symmetric & Bell-shaped
+  </th><th>
+    Left-skewed
+  </th>
+</tr><tr>
+  <td>
+    <img src="./Images/Lesson03_shape_wageshist.png" width=130%>
+  </td><td>
+    <img src="./Images/Lesson03_shape_maleheightshist.png" width=130%>
+  <td>
+    <img src="./Images/Lesson03_shape_gpahist.png" width=130%>
+  </td>
+</tr><tr>
+  <td>
+    Mean: \$10.45
+    
+    Median: \$9.04
+    
+    Mean is to the right of the median.
+  </td><td>
+    Mean: 71.1 inches
+    
+    Median: 71 inches
+    
+    Mean and median are roughly equal.
+  </td><td>
+    Mean: 3.42
+    
+    Median: 3.45
+    
+    Mean is to the left of the median.
+  </td>
+</tr>
+</table>
+
+<br/>
 
 6. In a symmetrical and bell-shaped distribution of data, the mean, median, and mode are all roughly the same in value. However, in a skewed distribution, the mean is strongly influenced by outliers and tends to be pulled in the direction of the skew. In a left-skewed distribution, the mean will tend to be to the left of the median. In a right-skewed distribution, the mean will tend to be to the right of the median.
 
