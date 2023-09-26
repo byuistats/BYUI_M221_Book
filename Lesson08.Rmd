@@ -119,7 +119,49 @@ $$P(\text{not}~X) = 1 - P(X)$$
 
 4. The **mean**, **median**, and **mode** are measures of the center of a distribution. The mean is the most common measure of center and is computed by adding up the observed data and dividing by the number of observations in the data set. The median represents the 50th percentile in the data. The mean can be calculated in Excel using `=AVERAGE(...)`, the median by using `=MEDIAN(...)`, and the mode by `=MODE(...)` where the `...` in each case consists of the cell references that highlight the data.
 
-5. 
+5. When comparing the centers of distributions using graphical and numerical summaries, the direction of the skew showing in the histogram will generally correspond with the mean being pulled in that direction.
+
+<table id="fancytable">
+<tr>
+  <th>
+    Right-skewed
+  </th><th>
+    Symmetric & Bell-shaped
+  </th><th>
+    Left-skewed
+  </th>
+</tr><tr>
+  <td>
+    <img src="./Images/Lesson03_shape_wageshist.png" width=130%>
+  </td><td>
+    <img src="./Images/Lesson03_shape_maleheightshist.png" width=130%>
+  <td>
+    <img src="./Images/Lesson03_shape_gpahist.png" width=130%>
+  </td>
+</tr><tr>
+  <td>
+    Mean: \$10.45
+    
+    Median: \$9.04
+    
+    Mean is to the right of the median.
+  </td><td>
+    Mean: 71.1 inches
+    
+    Median: 71 inches
+    
+    Mean and median are roughly equal.
+  </td><td>
+    Mean: 3.42
+    
+    Median: 3.45
+    
+    Mean is to the left of the median.
+  </td>
+</tr>
+</table>
+
+<br/>
 
 6. In a symmetrical and bell-shaped distribution of data, the mean, median, and mode are all roughly the same in value. However, in a skewed distribution, the mean is strongly influenced by outliers and tends to be pulled in the direction of the skew. In a left-skewed distribution, the mean will tend to be to the left of the median. In a right-skewed distribution, the mean will tend to be to the right of the median.
 
