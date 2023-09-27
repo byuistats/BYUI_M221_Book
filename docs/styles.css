@@ -393,7 +393,7 @@ margin-left:auto;
 margin-right:auto;
 padding-top:5px;
 width:80%;
-background-color:#cadfc6;
+background-color:#c0c744;
 text-align:center;
 border-top-left-radius: 12px 20px;
 border-top-right-radius: 12px 20px;
@@ -410,7 +410,7 @@ padding-bottom:10px;
 padding-left:15px;
 width:80%;
 font-size:.95em;
-background-color: #edf9f9;
+background-color: #f2f3d9;
 border-bottom-left-radius: 3px;
 border-bottom-right-radius: 3px;
 box-shadow: 4px 4px 5px #888888;
@@ -485,7 +485,8 @@ padding-top:5px;
         margin-right:auto;
 padding-top:5px;
         width:80%;
-        background-color:#7F9FC6;
+        background-color:#3D724B;
+        color:#E8F2FC;
         text-align:center;
         border-top-left-radius: 12px 20px;
         border-top-right-radius: 12px 20px;
@@ -642,7 +643,7 @@ a.NavToggle {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #5FA8E2;
+  background-color: #4489C7;
   color: white;
 }
 

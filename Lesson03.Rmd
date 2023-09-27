@@ -474,7 +474,7 @@ e. A, B, and C can all occur.
 #### Excel Instructions for Mean, Median, and Mode
 
 <div class="SoftwareHeading">Excel Instructions</div>
-<div class="Summary" style="padding:10px;">
+<div class="Software" style="padding:10px;">
 
 **To calculate most numerical summaries** (such as the mean, median, and mode) in Excel, follow these general steps:
 
