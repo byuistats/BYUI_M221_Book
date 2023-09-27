@@ -3,8 +3,7 @@ title: "Lesson 8: Review for Exam 1"
 output: 
   html_document:
     theme: cerulean
-    toc: true
-    toc_float: false
+    toc: false
 ---
 <script type="text/javascript">
  function showhide(id) {

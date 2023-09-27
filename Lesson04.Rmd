@@ -128,7 +128,7 @@ We are working with a sample. To be explicit, we call $0.742 ^\circ \text{C}$ th
 At this point, you probably do not have much intuition regarding the standard deviation. We will use this statistic frequently. By the end of the semester you can expect to become very comfortable with this idea. For now, all you need to know is that if two variables are measured on the same scale, the variable with values that are further apart will have the larger standard deviation.
 
 <div class="SoftwareHeading">Excel Instructions</div>
-<div class="Summary">
+<div class="Software">
 &nbsp;&nbsp;**To calculate the sample standard deviation in Excel, follow these steps:**
 &nbsp;&nbsp;
 
@@ -794,7 +794,7 @@ The variance is the square of the standard deviation.  The sample variance is de
 <br>
 
 <div class="SoftwareHeading">Excel Instructions</div>
-<div class="Summary">
+<div class="Software">
 &nbsp;&nbsp;**To calculate the sample variance in Excel:**
 &nbsp;&nbsp;
 
@@ -1019,7 +1019,7 @@ The home values are representative of data.  If we have a list of data, sorted i
 Percentiles can be used to describe the center and spread of any distribution and are particularly useful when the distribution is skewed or has outliers.  To explore this issue, you will use software to calculate percentiles of data on costs incurred by hospitals due to certain lawsuits. The lawsuits in question were about surgeries performed on the wrong patient, or on the right patient but the wrong part of the patient's body (the wrong site).
 
 <div class="SoftwareHeading">Excel Instructions</div>
-<div class="Summary">
+<div class="Software">
 
 &nbsp;&nbsp;**To calculate percentiles and quartiles in Excel, do the following**
 
@@ -1131,7 +1131,7 @@ Statistical packages can give different results for some computations.  This is 
 <!--Please be sure to use the values that you calculate using the software designated for your particular class ({{Course_Filter|course=A|content=Excel}}{{Course_Filter|course=B C|content=SPSS}}-->
 
 <div class="SoftwareHeading">Excel Instructions</div>
-<div class="Summary">
+<div class="Software">
 
 &nbsp;&nbsp;**To find the values for a five-number summary in Excel, do the following**
 
@@ -1211,7 +1211,7 @@ Follow the steps below to learn how a boxplot relates to the five-number summary
 <br>
 
 <div class="SoftwareHeading">Excel Instructions</div>
-<div class="Summary" style="padding:10px;">
+<div class="Software" style="padding:10px;">
 
 **To create a boxplot in Excel, do the following**
 
@@ -1270,7 +1270,7 @@ Side-by-side boxplots are a powerful way to compare data from different samples 
 In the plot we can quickly see that a wrong-patient lawsuit resulted in the largest cost to the hospital, more than $1.2 million. However, in general, wrong-patient lawsuits tend to result in a lower cost to the hospital than wrong-site lawsuits.
 
 <div class="SoftwareHeading">Excel Instructions</div>
-<div class="Summary" style="padding:10px;">
+<div class="Software" style="padding:10px;">
 
 **To create side-by-side boxplots in Excel, do the following**
 
