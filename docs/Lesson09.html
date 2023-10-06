@@ -2572,26 +2572,78 @@ testimony using the scientific method.</p>
 Remember…
 </div>
 <div class="Summary">
-<ul>
-<li><p>The <strong>null hypothesis (<span
+<ol style="list-style-type: decimal">
+<li><p>A one mean (sigma known) hypothesis test is appropriate for
+testing a hypothesized value of the mean of a population for
+quantitative data where <span class="math inline">\(\sigma\)</span>, the
+population standard deviation, can reasonably be assumed to be known
+exactly.</p></li>
+<li><p>A <span class="math inline">\(P\)</span>-value gives the
+probability of observing a test statistic at least as extreme as the one
+observed, assuming the null hypothesis is true.</p></li>
+<li><p>The steps to perform a hypothesis test for one mean when sigma is
+known are:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>First, state the hypotheses. The <strong>null hypothesis (<span
 class="math inline">\(H_0\)</span>)</strong> is the foundational
-assumption about a population and represents the status quo. It is a
-statement of equality (<span class="math inline">\(=\)</span>). The
-<strong>alternative hypothesis (<span
-class="math inline">\(H_a\)</span>)</strong> is a different assumption
-about a population and is a statement of inequality (<span
+assumption about a population and represents the status quo that we
+assume to be true. It is a statement of equality (<span
+class="math inline">\(=\)</span>). The <strong>alternative hypothesis
+(<span class="math inline">\(H_a\)</span>)</strong> is a different
+assumption about a population and is a statement of inequality (<span
 class="math inline">\(&lt;\)</span>, <span
 class="math inline">\(&gt;\)</span>, or <span
-class="math inline">\(\ne\)</span>). Using a <strong>hypothesis
-test</strong>, we determine whether it is more likely that the null
-hypothesis or the alternative hypothesis is true.</p></li>
-<li><p>The <strong><span class="math inline">\(P\)</span>-value</strong>
-is the probability of getting a test statistic at least as extreme as
-the one you got, assuming <span class="math inline">\(H_0\)</span> is
-true. A <span class="math inline">\(P\)</span>-value is calculated by
+class="math inline">\(\ne\)</span>). The alternative hypothesis is
+believed to be true only in the case that sufficient evidence is
+presented.</p></li>
+<li><p>The test statistic for the one mean (sigma known) hypothesis test
+is given by the equation <span class="math display">\[
+  z = \frac{\bar{x} - \mu}{\frac{\sigma}{\sqrt{n}}}
+\]</span></p></li>
+<li><p>The <span class="math inline">\(P\)</span>-value is calculated by
 finding the area under the normal distribution curve that is more
 extreme (farther away from the mean) than the z-score. The alternative
-hypothesis tells us whether we look at both tails or only one.</p></li>
+hypothesis tells us whether we look at both tails or only one. The
+possible scenarios are depicted below.</p>
+<div style="padding-right:3%;">
+<table id="fancytable">
+<tr>
+<th>
+Left-tailed <br/> <span class="math inline">\(H_a: \mu &lt; 0\)</span>
+</th>
+<th>
+Two-tailed <br/> <span class="math inline">\(H_a: \mu \neq 0\)</span>
+</th>
+<th>
+Right-tailed<br/> <span class="math inline">\(H_a: \mu &gt; 0\)</span>
+</th>
+</tr>
+<tr>
+<td>
+<img src="Images/pvalue_left_tail.png" width="200">
+</td>
+<td>
+<img src="Images/pvalue_two_tail.png" width="200"><br />
+
+</td>
+<td>
+<img src="Images/pvalue_right_tail.png" width="200"><br />
+
+</td>
+</tr>
+<tr>
+<td>
+<img src="Images/pvalue_left_tail_posz.png" width="200">
+</td>
+<td>
+</td>
+<td>
+<img src="Images/pvalue_right_tail_negz.png" width="200"><br />
+
+</td>
+</tr>
+</table>
+</div></li>
 <li><p>The <strong>level of significance (<span
 class="math inline">\(\alpha\)</span>)</strong> controls the probability
 of committing a Type I Error. It is the standard for determining whether
@@ -2605,13 +2657,29 @@ class="math inline">\(\alpha\)</span> we reject the null. If the <span
 class="math inline">\(P\)</span>-value is not less than <span
 class="math inline">\(\alpha\)</span> we fail to reject the
 null.</p></li>
+<li><p>The results of a one mean (sigma known) test are meaningful when
+(1) the sample of data can be considered to be representative of the
+population and (2) the sampling distribution of the sample mean can be
+considered to be normal. Recall from <a href="Lesson06.html">Lesson
+6</a> that the sampling distribution of the sample mean can be
+considered normal whenever the population data is normal or when the
+sample size is sufficiently large, i.e., <span
+class="math inline">\(n\ge 30\)</span>.</p></li>
+</ol></li>
 <li><p>A <strong>Type I error</strong> is committed when we reject a
 null hypothesis that is, in reality, true. A <strong>Type II
 error</strong> is committed when we fail to reject a null hypothesis
-that is, in reality, not true. The value of <span
-class="math inline">\(\alpha\)</span> is the probability of committing a
-Type I error.</p></li>
-</ul>
+that is, in reality, false.</p></li>
+<li><p>The level of significance, <span
+class="math inline">\(\alpha\)</span>, gives the probability of
+committing a Type I error. The probability of a Type II Error is called
+<span class="math inline">\(\beta\)</span>, but <span
+class="math inline">\(\beta\)</span> is not discussed in this course.
+However, the probabilities of a Type I Error (<span
+class="math inline">\(\alpha\)</span>) and a Type II Error (<span
+class="math inline">\(\beta\)</span>) are inversely related, in other
+words, as one increases the other is decreased.</p></li>
+</ol>
 </div>
 <p><br></p>
 </div>
