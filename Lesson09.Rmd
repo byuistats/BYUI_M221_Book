@@ -1383,14 +1383,61 @@ When a testimony is given, the truth is planted in the heart.  The testimony fro
 <div class="SummaryHeading">Remember...</div>
 <div class="Summary">
 
-- The **null hypothesis ($H_0$)** is the foundational assumption about a population and represents the status quo. It is a statement of equality ($=$). The **alternative hypothesis ($H_a$)** is a different assumption about a population and is a statement of inequality ($<$, $>$, or $\ne$). Using a **hypothesis test**, we determine whether it is more likely that the null hypothesis or the alternative hypothesis is true.
+1. A one mean (sigma known) hypothesis test is appropriate for testing a hypothesized value of the mean of a population for quantitative data where $\sigma$, the population standard deviation, can reasonably be assumed to be known exactly.
 
-- The **$P$-value** is the probability of getting a test statistic at least as extreme as the one you got, assuming $H_0$ is true. A $P$-value is calculated by finding the area under the normal distribution curve that is more extreme (farther away from the mean) than the z-score. The alternative hypothesis tells us whether we look at both tails or only one.
+2. A $P$-value gives the probability of observing a test statistic at least as extreme as the one observed, assuming the null hypothesis is true.
 
-- The **level of significance ($\alpha$)** controls the probability of committing a Type I Error. It is the standard for determining whether or not the null hypothesis should be rejected. Typical values for $\alpha$ are $0.05$, $0.10$, and $0.01$. If the $P$-value is less than $\alpha$ we reject the null. If the $P$-value is not less than $\alpha$ we fail to reject the null.
+3. The steps to perform a hypothesis test for one mean when sigma is known are:
 
-- A **Type I error** is committed when we reject a null hypothesis that is, in reality, true. A **Type II error** is committed when we fail to reject a null hypothesis that is, in reality, not true. The value of $\alpha$ is the probability of committing a Type I error.
+    a. First, state the hypotheses. The **null hypothesis ($H_0$)** is the foundational assumption about a population and represents the status quo that we assume to be true. It is a statement of equality ($=$). The **alternative hypothesis ($H_a$)** is a different assumption about a population and is a statement of inequality ($<$, $>$, or $\ne$). The alternative hypothesis is believed to be true only in the case that sufficient evidence is presented. 
+    
+    b. The test statistic for the one mean (sigma known) hypothesis test is given by the equation 
+    $$
+     z = \frac{\bar{x} - \mu}{\frac{\sigma}{\sqrt{n}}}
+    $$
+    
+    c. The $P$-value is calculated by finding the area under the normal distribution curve that is more extreme (farther away from the mean) than the z-score. The alternative hypothesis tells us whether we look at both tails or only one. The possible scenarios are depicted below.
+    <div style="padding-right:3%;">
+    <table id="fancytable">
+    <tr>
+      <th>
+      Left-tailed <br/>
+      $H_a: \mu < 0$
+      </th><th>
+      Two-tailed <br/> 
+      $H_a: \mu \neq 0$
+      </th><th>
+      Right-tailed<br/>
+      $H_a: \mu > 0$
+      </th>
+    </tr><tr>
+      <td>
+        <img src="./Images/pvalue_left_tail.png" width="200">
+      </td><td>
+        <img src="./Images/pvalue_two_tail.png" width="200">      
+      </td><td>
+        <img src="./Images/pvalue_right_tail.png" width="200">      
+      </td>
+    </tr><tr>
+      <td>
+        <img src="./Images/pvalue_left_tail_posz.png" width="200">
+      </td><td>
+      </td><td>
+        <img src="./Images/pvalue_right_tail_negz.png" width="200">      
+      </td>
+    </tr>
+    </table>
+    </div>
+    
+    d. The **level of significance ($\alpha$)** controls the probability of committing a Type I Error. It is the standard for determining whether or not the null hypothesis should be rejected. Typical values for $\alpha$ are $0.05$, $0.10$, and $0.01$. If the $P$-value is less than $\alpha$ we reject the null. If the $P$-value is not less than $\alpha$ we fail to reject the null.
+    
+    e. The results of a one mean (sigma known) test are meaningful when (1) the sample of data can be considered to be representative of the population and (2) the sampling distribution of the sample mean can be considered to be normal. Recall from [Lesson 6](Lesson06.html) that the sampling distribution of the sample mean can be considered normal whenever the population data is normal or when the sample size is sufficiently large, i.e., $n\ge 30$.
+
+4. A **Type I error** is committed when we reject a null hypothesis that is, in reality, true. A **Type II error** is committed when we fail to reject a null hypothesis that is, in reality, false. 
+
+5. The level of significance, $\alpha$, gives the probability of committing a Type I error. The probability of a Type II Error is called $\beta$, but $\beta$ is not discussed in this course. However, the probabilities of a Type I Error ($\alpha$) and a Type II Error ($\beta$) are inversely related, in other words, as one increases the other is decreased.
 </div>
+
 <br>
 
 
