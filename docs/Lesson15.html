@@ -490,6 +490,18 @@ Right-tailed<br/> <span class="math inline">\(H_a: \mu &gt; 0\)</span>
 
 </td>
 </tr>
+</table>
+<table id="fancytable">
+<tr>
+<th>
+Left-tailed <br/> <span class="math inline">\(H_a: \mu &lt; 0\)</span>
+</th>
+<th style="width:33%">
+</th>
+<th>
+Right-tailed<br/> <span class="math inline">\(H_a: \mu &gt; 0\)</span>
+</th>
+</tr>
 <tr>
 <td>
 <img src="Images/pvalue_left_tail_posz.png" width="200">
@@ -512,10 +524,12 @@ class="math inline">\(0.05\)</span>, <span
 class="math inline">\(0.10\)</span>, and <span
 class="math inline">\(0.01\)</span>. If the <span
 class="math inline">\(P\)</span>-value is less than <span
-class="math inline">\(\alpha\)</span> we reject the null. If the <span
-class="math inline">\(P\)</span>-value is not less than <span
-class="math inline">\(\alpha\)</span> we fail to reject the
-null.</p></li>
+class="math inline">\(\alpha\)</span> we reject the null and have
+sufficient evidence to believe the alternative hypothesis is true. If
+the <span class="math inline">\(P\)</span>-value is greater than <span
+class="math inline">\(\alpha\)</span> we fail to reject the null and
+have insufficient evidence to believe the alternative hypothesis is
+true.</p></li>
 <li><p>The results of a one mean (sigma known) test are meaningful when
 (1) the sample of data can be considered to be representative of the
 population and (2) the sampling distribution of the sample mean can be
@@ -572,26 +586,113 @@ level of confidence</li>
 Remember…
 </div>
 <div class="Summary">
-<ul>
-<li><p>The <strong>margin of error</strong> gives an estimate of the
-variability of responses. It is calculated as <span
-class="math inline">\(\displaystyle{m=z^*\frac{\sigma}{\sqrt{n}}}\)</span>
-where <span class="math inline">\(z^*\)</span> represents a calculated
-z-score corresponding to a particular confidence level.</p></li>
-<li><p>A <strong>confidence interval</strong> is an interval estimator
-used to give a range of plausible values for a parameter. The width of a
-confidence interval depends on the chosen confidence level (and its
-corresponding value of <span class="math inline">\(z^*\)</span>) as well
-as the sample size (<span class="math inline">\(n\)</span>). This is the
-equation for calculating confidence intervals: <span
-class="math display">\[\displaystyle{\left(\bar
-x-z^*\frac{\sigma}{\sqrt{n}},~\bar
-x+z^*\frac{\sigma}{\sqrt{n}}\right)}\]</span></p></li>
-<li><p>The <strong>sample size formula</strong> allows us to estimate
-the number of observations required to obtain a specific margin of
-error. <span
-class="math inline">\(\displaystyle{n=\left(\frac{z^*\sigma}{m}\right)^2}\)</span></p></li>
-</ul>
+<ol style="list-style-type: decimal">
+<li><p>A confidence interval for the true mean <span
+class="math inline">\(\mu\)</span> can be created whenever there is one
+sample of quantitative data and the population standard deviation <span
+class="math inline">\(\sigma\)</span> is known.</p></li>
+<li><p>To calculate the sample size required to achieve a specified
+margin of error, given a chosen level of confidence, we use the
+equation<br />
+<span class="math display">\[
+n = \left(\frac{z^*\sigma}{m}\right)^2 \quad
+\]</span> where <span class="math inline">\(m\)</span> is the desired
+margin of error (measured in the same units of measurement as the data),
+and <span class="math inline">\(z^*\)</span> (see the next bullet point
+for details about <span class="math inline">\(z^*\)</span>) is the
+critical value for the given level of confidence.</p></li>
+<li><p>The <em>confidence level</em> is a choice that we make of either
+90%, 95%, or 99% that determines how often we would expect our
+confidence intervals to capture the true population parameter, <span
+class="math inline">\(\mu\)</span>. The confidence level is a central
+region on the normal applet equal to <span
+class="math inline">\(1-\alpha\)</span>. This central region represents
+the specified proportion (0.9, 0.95, or 0.99) of the distribution all
+possible sample means that are contained within a specified distance of
+<span class="math inline">\(\mu\)</span>. This distance from <span
+class="math inline">\(\mu\)</span> is called <span
+class="math inline">\(z^*\)</span>, or <em>the critical value</em>. This
+<span class="math inline">\(z^*\)</span> is the z-score that bounds the
+central area corresponding to our chosen level of confidence on the
+normal distribution.</p></li>
+</ol>
+<table id="fancytable">
+<tr>
+<th>
+90% Confidence Level <br/> <span class="math inline">\(z^* =
+1.645\)</span>
+</th>
+<th>
+95% Confidence Level<br/> <span class="math inline">\(z^* =
+1.960\)</span>
+</th>
+<th>
+99% Confidence Level<br/> <span class="math inline">\(z^* =
+2.576\)</span>
+</th>
+</tr>
+<tr>
+<td>
+<img src="Images/criticalvalue_90.png" width="200">
+</td>
+<td>
+<img src="Images/criticalvalue_95.png" width="200">
+</td>
+<td>
+<img src="Images/criticalvalue_99.png" width="200">
+</td>
+</tr>
+</table>
+<p><br/></p>
+<ol start="4" style="list-style-type: decimal">
+<li>To create a confidence interval for a single mean with <span
+class="math inline">\(\sigma\)</span> known we use the equation: <span
+class="math display">\[
+  \underbrace{\bar{x}}_\stackrel{\text{Point}}{\text{Estimate}} \pm
+\underbrace{z^* \frac{\sigma}{\sqrt{n}}}_\text{Margin of Error}
+\]</span>
+<ol style="list-style-type: lower-alpha">
+<li><p>To use this equation, we first calculate the point estimate of
+<span class="math inline">\(\mu\)</span>, which is <span
+class="math inline">\(\bar{x}\)</span>, the sample mean.</p></li>
+<li><p>We then calculate the margin of error using the <span
+class="math inline">\(z^*\)</span> corresponding to our chosen level of
+significance (usually 95%, in which case <span class="math inline">\(z^*
+= 1.960\)</span>), the known value of <span
+class="math inline">\(\sigma\)</span>, and the square root of the sample
+size <span class="math inline">\(n\)</span>.</p></li>
+<li><p>The lower-bound of the confidence interval is obtained by <span
+class="math inline">\(\bar{x} - z^*\sigma/\sqrt{n}\)</span> and the
+upper-bound of the confidence interval is obtained by <span
+class="math inline">\(\bar{x} + z^*\sigma/\sqrt{n}\)</span>.</p></li>
+<li><p>We then claim we are 95% confident that the true mean <span
+class="math inline">\(\mu\)</span> lives inside the region specified
+between the lower-bound and the upper-bound on the number line. Using
+this approach, we expect to be correct in our conclusions 95% of the
+time. But keep in mind there is no “chance” or “probability” that we are
+correct as our resulting interval has either captured the true mean or
+it has not.</p></li>
+<li><p>To ensure the confidence interval is meaningful and appropriate
+for a set of data, we need to ensure that (1) our sample was
+representative of the population, and (2) the distribution of <span
+class="math inline">\(\bar{x}\)</span> can be considered normal by
+either the virtue of the data being normal itself, or the sample size
+being sufficiently large to invoke the Central Limit Theorem.</p></li>
+</ol></li>
+<li>The <strong>margin of error</strong> gives an estimate of the
+variability of responses. As shown by its equation, <span
+class="math inline">\(\displaystyle{m=z^*\frac{\sigma}{\sqrt{n}}}\)</span>,
+there are two values directly under our control (<span
+class="math inline">\(z^*\)</span> and <span
+class="math inline">\(n\)</span>) which impact the size of the margin of
+error. The larger the value of <span class="math inline">\(z^*\)</span>,
+the greater our confidence level, and the larger the margin of error
+becomes. The larger the sample size <span
+class="math inline">\(n\)</span>, the smaller the margin of error will
+become. A smaller margin of error gives greater insight about the true
+value of <span class="math inline">\(\mu\)</span>.</li>
+</ol>
+<p><br/></p>
 </div>
 </div>
 </div>
@@ -630,26 +731,90 @@ using software</li>
 Remember…
 </div>
 <div class="Summary">
-<ul>
+<ol style="list-style-type: decimal">
 <li><p>In practice we rarely know the true standard deviation <span
-class="math inline">\(\sigma\)</span> and will therefore be unable to
-calculate a z-score. <strong>Student’s t-distribution</strong> gives us
-a new test statistic, <span class="math inline">\(t\)</span>, that is
-calculated using the sample standard deviation (<span
-class="math inline">\(s\)</span>) instead. <span
-class="math display">\[\displaystyle{ t = \frac {\bar x - \mu} {s /
-\sqrt{n}} }\]</span></p></li>
+class="math inline">\(\sigma\)</span>. Thus, when we have one sample of
+quantitative data without knowledge of <span
+class="math inline">\(\sigma\)</span> we will use a one sample t
+inferential procedure for <span
+class="math inline">\(\mu\)</span>.</p></li>
+<li><p>Appropriate ways of <em>Describing the Data</em> for one sample
+of quantitative data where <span class="math inline">\(\sigma\)</span>
+is unknown include making either a histogram or boxplot of the sample
+data, along with calculating the sample mean <span
+class="math inline">\(\bar{x}\)</span>, the sample standard deviation
+<span class="math inline">\(s\)</span>, and the sample size <span
+class="math inline">\(n\)</span>.</p></li>
+<li><p>To perform a hypothesis test for one mean (sigma unknown) use the
+following steps:</p>
+<ol style="list-style-type: lower-alpha">
+<li>State the null and alternative hypothesis in the form of <span
+class="math inline">\(H_0: \mu = \text{some number}\)</span> and <span
+class="math inline">\(H_a: \mu \ne \text{some number}\)</span>. A
+one-sided alternative (<span class="math inline">\(&lt;\)</span> or
+<span class="math inline">\(&gt;\)</span>) can be used in place of the
+two-sided <span class="math inline">\(\ne\)</span> when
+appropriate.</li>
+<li>The <strong>student’s t-distribution</strong> gives us a new test
+statistic, <span class="math inline">\(t\)</span>, that measures how far
+the sample mean has landed from our hypothesized value of <span
+class="math inline">\(\mu\)</span> using the sample standard deviation
+(<span class="math inline">\(s\)</span>) and the sample size <span
+class="math inline">\(n\)</span> by the equation <span
+class="math display">\[
+t = \frac {\bar x - \mu} {s / \sqrt{n}}
+\]</span> The degrees of freedom corresponding to this test statistic
+are <span class="math inline">\(df = n-1\)</span>, and the <span
+class="math inline">\(P\)</span>-value is obtained by shading the
+appropriate tails (as specified in the alternative hypothesis) of the
+<span class="math inline">\(t\)</span>-distribution with <span
+class="math inline">\(n-1\)</span> degrees of freedom.</li>
+<li>The results of the test are based on how the <span
+class="math inline">\(P\)</span>-value compares to the significance
+level <span class="math inline">\(\alpha\)</span>. As before, if the
+<span class="math inline">\(P\)</span>-value is less than <span
+class="math inline">\(\alpha\)</span>, the null hypothesis is rejected
+and there is sufficient evidence to believe the alternative hypothesis
+is true. If the <span class="math inline">\(P\)</span>-value is greater
+than <span class="math inline">\(\alpha\)</span>, the null hypothesis is
+not rejected and there is insufficient evidence to believe the
+alternative hypothesis is true.</li>
+<li>In order for the results of the one sample t test to be considered
+valid, it must be the case that (1) the sample is representative of the
+population and (2) the distribution of <span
+class="math inline">\(\bar{x}\)</span> can be considered to be normally
+distributed.</li>
+</ol></li>
+<li><p>To create a confidence interval for one mean (sigma unknown)
+we</p>
+<ol style="list-style-type: lower-alpha">
+<li>Use software to evaluate the following expression in order to obtain
+the lower-bound and upper-bound of the confidence interval. <span
+class="math display">\[
+  \underbrace{\bar{x}}_\stackrel{\text{Point}}{\text{Estimate}} \pm
+\underbrace{t^* \frac{s}{\sqrt{n}}}_\text{Margin of Error}
+\]</span></li>
+<li>Interpret the confidence interval by stating that we are 95% (or 90%
+or 99%) confident that the true mean <span
+class="math inline">\(\mu\)</span> is contained in the confidence
+interval. We expect to be correct 95% (or 90% or 99%) of the time when
+using such a confidence interval to make claims about the true value of
+<span class="math inline">\(\mu\)</span>.</li>
+<li>In order for the confidence interval to be considered valid, it must
+be the case that (1) the sample is representative of the population and
+(2) the distribution of <span class="math inline">\(\bar{x}\)</span> can
+be considered to be normally distributed.</li>
+</ol></li>
 <li><p>The <span class="math inline">\(t\)</span>-distribution is
 similar to a normal distribution in that it is bell-shaped and
 symmetrical, but the exact shape of the <span
 class="math inline">\(t\)</span>-distribution depends on the
-<strong>degrees of freedom (<span
-class="math inline">\(df\)</span>)</strong>. <span
-class="math display">\[df=n-1\]</span></p></li>
-</ul>
-<p>*You will use Excel to carry out hypothesis testing and create
-confidence intervals involving <span
-class="math inline">\(t\)</span>-distributions.</p>
+<strong>degrees of freedom (<span class="math inline">\(df =
+n-1\)</span>)</strong>. As the degrees of freedom grow larger, the <span
+class="math inline">\(t\)</span>-distribution becomes more and more
+normal in shape.</p></li>
+</ol>
+<p><br/></p>
 </div>
 </div>
 </div>
@@ -686,26 +851,83 @@ dependent samples) using the following steps:
 Remember…
 </div>
 <div class="Summary">
-<ul>
+<ol style="list-style-type: decimal">
 <li><p>The key characteristic of <strong>dependent samples</strong> (or
 <strong>matched pairs</strong>) is that knowing which subjects will be
-in group 1 determines which subjects will be in group 2.</p></li>
-<li><p>We use slightly different variables when conducting inference
-using dependent samples:</p>
-<p>Group 1 values: <span class="math inline">\(x_1\)</span>  Group 2
-values: <span class="math inline">\(x_2\)</span>  Differences: <span
-class="math inline">\(d\)</span>  Population mean: <span
-class="math inline">\(\mu_d\)</span>  Sample mean: <span
-class="math inline">\(\bar d\)</span>  Sample standard deviation: <span
-class="math inline">\(s_d\)</span></p></li>
-<li><p>When conducting hypothesis tests using dependent samples, the
-null hypothesis is always <span class="math inline">\(\mu_d=0\)</span>,
-indicating that there is no change between the first population and the
-second population. The alternative hypothesis can be left-tailed (<span
-class="math inline">\(&lt;\)</span>), right-tailed(<span
-class="math inline">\(&gt;\)</span>), or two-tailed(<span
-class="math inline">\(\ne\)</span>). <br></p></li>
-</ul>
+in group 1 determines which subjects will be in group 2. Examples
+include pre and post testing situations where the same subjects are
+measured twice, or matched pair situations with married couples,
+identical twins, or other situations where subjects from one group are
+carefully matched with subjects from another group.</p></li>
+<li><p>Appropriate ways of <em>Describing the Data</em> for dependent
+samples is with either a histogram or boxplot of the computed
+differences (of each pair of values), and computing the sample size
+<span class="math inline">\(n\)</span>, the sample mean of the
+differences <span class="math inline">\(\bar{d}\)</span>, and the sample
+standard deviation of the differences <span
+class="math inline">\(s_d\)</span>.</p></li>
+<li><p>To perform a hypothesis test for the true mean of the differences
+(two dependent samples) use the following steps:</p>
+<ol style="list-style-type: lower-alpha">
+<li>State the null and alternative hypotheses in the form <span
+class="math inline">\(H_0: \mu_d = 0\)</span> and <span
+class="math inline">\(H_a: \mu_d \neq 0\)</span>. Use the one-sided
+alternatives of <span class="math inline">\(\mu_d &lt; 0\)</span> or
+<span class="math inline">\(\mu_d &gt; 0\)</span> when appropriate.</li>
+<li>Before describing the data or making inference, we first compute the
+differences <span class="math inline">\(d\)</span> using the equation
+<strong>differences = Data 1 values - Data 2 values</strong>. Then the
+test statistic is found using the equation <span class="math display">\[
+   t = \frac{\bar{d} - \mu_d}{\frac{s_d}{\sqrt{n}}}
+\]</span> The degrees of freedom of this test statistic are <span
+class="math inline">\(df=n-1\)</span>. The <span
+class="math inline">\(P\)</span>-value is obtained by shading the
+appropriate tails of the <span
+class="math inline">\(t\)</span>-distribution with <span
+class="math inline">\(n-1\)</span> degrees of freedom. The Math 221
+Statistics Toolbox will provide each of these values.</li>
+<li>The <span class="math inline">\(P\)</span>-value is compared to the
+significance level in the usual way to determine if the null hypothesis
+should be rejected (<span class="math inline">\(P\)</span>-value <span
+class="math inline">\(&lt; \alpha\)</span>) and sufficient evidence
+obtained to believe the alternative hypothesis is true.</li>
+<li>The results of the hypothesis test are considered valid if (1) the
+sample differences are representative of the population and (2) the mean
+of the sample differences <span class="math inline">\(\bar{d}\)</span>
+can be considered to be normal. (This last assumption is true if the
+differences themselves appear to be normal, or if the sample size is
+large enough to invoke the Central Limit Theorem.)</li>
+</ol></li>
+<li><p>To create a confidence interval for the true mean of the
+differences (two dependent samples) use the following steps:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Use the Math 221 Statistics Toolbox to compute the lower and upper
+bounds of the confidence interval with the equation <span
+class="math display">\[
+  \underbrace{\bar{d}}_\stackrel{\text{Point}}{\text{Estimate}} \pm
+\underbrace{t^* \frac{s_d}{\sqrt{n}}}_\text{Margin of Error}
+\]</span></li>
+<li>We are then 95% confident that the true mean of the differences is
+some value within the resulting interval. If the confidence interval
+contains zero, then it is possible that <span
+class="math inline">\(\mu_d = 0\)</span> and we claim there is no
+overall mean difference, i.e., no change on average in the subjects. If
+both the lower-bound and the upper-bound are positive, then we are
+confident the <strong>Data~1</strong> group of values is tending to be
+larger than the <strong>Data~2</strong> values by anywhere from the
+lower-bound to the upper-bound in value. Conversely, if both bounds are
+negative, we are confident that the <strong>Data~1</strong> group of
+values is tending to be smaller than the <strong>Data~2</strong> values
+by anywhere from the upper-bound to the lower-bound in value.</li>
+<li>The confidence interval is considered valid so long as (1) the
+sample differences are representative of the population and (2) the mean
+of the sample differences <span class="math inline">\(\bar{d}\)</span>
+can be considered to be normal. (This last assumption is true if the
+differences themselves appear to be normal, or if the sample size is
+large enough to invoke the Central Limit Theorem.)</li>
+</ol></li>
+</ol>
+<p><br></p>
 </div>
 </div>
 </div>
