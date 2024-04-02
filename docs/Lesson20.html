@@ -389,22 +389,7 @@ $(document).ready(function () {
 
 </div>
 
-<div id="TOC">
-<ul>
-<li><a href="#unit-3-lesson-outcomes"
-id="toc-unit-3-lesson-outcomes">Unit 3 Lesson Outcomes</a></li>
-<li><a href="#unit-3-lesson-summaries"
-id="toc-unit-3-lesson-summaries">Unit 3 Lesson Summaries</a></li>
-<li><a href="#navigation" id="toc-navigation">Navigation</a></li>
-</ul>
-</div>
 
-<script type="text/javascript">
- function showhide(id) {
-    var e = document.getElementById(id);
-    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
- }
-</script>
 <p>This is not designed to be a comprehensive review. There may be items
 on the exam that are not covered in this review. Similarly, there may be
 items in this review that are not tested on this exam. You are strongly
@@ -413,124 +398,141 @@ activities from Units 1-3 as you prepare for the exam. In particular,
 you should go over the <a href="Lesson08.html" target="_blank">Review
 for Exam 1</a> and the <a href="Lesson15.html" target="_blank">Review
 for Exam 2</a>.</p>
-<!-- Use the <span style="font-variant:small-caps"> -->
-<!-- [[Index]]</span> to review definitions of important terms. 
-Index needs to be built-->
-<div id="unit-3-lesson-outcomes" class="section level2">
-<h2>Unit 3 Lesson Outcomes</h2>
-<a href="javascript:showhide('oc')"><span
-style="font-size:8pt;">Show/Hide Outcomes</span></a>
-<div id="oc" style="display:none;">
-<p>The expectation on the exam is the following outcomes. You should be
-able to do all of the following.</p>
-<ul>
-<li>All of the Outcomes from <a href="Lesson08.html">Lesson 08 (Unit
-1)</a> and <a href="Lesson15.html">Lesson 15 (Unit 2)</a></li>
-<li>Calculate and interpret a sample proportion.</li>
-<li>Summarize categorical data with a bar or pie chart.</li>
-<li>Determine the mean, standard deviation and shape of a distribution
-of sample proportions.</li>
-<li>Calculate probabilities using a distribution of sample
-proportions.</li>
-<li>Confidence Intervals:
-<ul>
-<li>Determining correct confidence interval for a given scenario.</li>
-<li>Calculate and interpret a confidence interval given a confidence
-level and a given parameter.</li>
-<li>Identify a point estimate and margin of error for a given confidence
-interval.</li>
-<li>Show the appropriate connections between the numerical and graphical
-summaries that support a confidence interval.</li>
-<li>Check the requirements for a confidence interval.</li>
-<li>Calculate a confidence interval for a comparison of two
-proportions.</li>
-</ul></li>
-<li>Conduct a Hypothesis Test for
-<ul>
-<li>A single mean with σ known.</li>
-<li>A single mean with σ unknown.</li>
-<li>Difference of two means with dependent samples.</li>
-<li>The mean of differences with dependent samples.</li>
-<li>Several means (ANOVA).</li>
-<li>A single proportion.</li>
-<li>A comparison of two proportions.</li>
-<li>Test of Independence for categorical data.</li>
-<li>A goodness of fitness test.</li>
-</ul></li>
-<li>Hypothesis Testing
-<ul>
-<li>Determining correct hypothesis test for a given scenario</li>
-<li>State the null and alternative hypothesis for the chosen test.</li>
-<li>Calculate the test-statistic and p-value of the hypothesis
-test.</li>
-<li>Assess the statistical significance by comparing the p-value to the
-α-level.</li>
-<li>Check the requirements for the hypothesis test.</li>
-<li>Show the appropriate connections between the numerical and graphical
-summaries that support a hypothesis test.</li>
-<li>Draw a correct conclusion for a hypothesis test.</li>
-</ul></li>
-</ul>
+<div id="lesson-16" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills">Lesson 16</h2>
+<div id="outcomes" class="section level3">
+<h3>Outcomes</h3>
+<p>By the end of this lesson, you should be able to:</p>
+<ol style="list-style-type: decimal">
+<li>Calculate a sample proportion</li>
+<li>Interpret a sample proportion</li>
+<li>Summarize categorical data with graphical summaries</li>
+<li>Identify when a sample proportion will follow a normal
+distribution</li>
+<li>Determine the mean of the sampling distribution of the sample
+proportion for a given parent population</li>
+<li>Determine the standard deviation of the sampling distribution of the
+sample proportion for a given parent population</li>
+<li>Calculate the z-score for a sample proportion, given the population
+proportion and sample size</li>
+<li>Calculate probabilities of a sample proportion using the normal
+distribution.</li>
+</ol>
 </div>
-<p><br></p>
-</div>
-<div id="unit-3-lesson-summaries" class="section level2">
-<h2>Unit 3 Lesson Summaries</h2>
-<p>Here are the summaries for each lesson in Unit 3. Reviewing these key
-points from each lesson will help you in your preparation for the
-exam.</p>
-<a href="javascript:showhide('ls')"><span
-style="font-size:8pt;">Show/Hide Summaries</span></a>
-<div id="ls">
-<div class="RecapHeading">
-Lesson 16 Recap
+<div id="summary" class="section level3">
+<h3>Summary</h3>
+<div class="SummaryHeading">
+Remember…
 </div>
 <div class="Summary">
+<ol style="list-style-type: decimal">
+<li><p>The sample proportion <span
+class="math inline">\(\hat{p}\)</span> is computed by dividing the
+number of successes (<span class="math inline">\(x\)</span>) found in a
+sample by the sample size (<span class="math inline">\(n\)</span>),
+<span class="math display">\[
+\text{Sample Proportion} \quad \widehat{p} = \frac{x}{n}
+\]</span></p></li>
+<li><p>The sample proportion <span
+class="math inline">\(\widehat{p}\)</span> is interpreted as the
+probability of a success occurring in the sample. It is a point estimate
+of the true proportion, <span class="math inline">\(p\)</span>.</p></li>
+<li><p>Two graphical summaries are typically used to show sample
+proportions.</p>
 <ul>
-<li><p><strong>Pie charts</strong> are used when you want to represent
-the observations as part of a whole, where each slice (sector) of the
-pie chart represents a proportion or percentage of the whole.</p></li>
-<li><p><strong>Bar charts</strong> present the same information as pie
-charts and are used when our data represent counts. A <strong>Pareto
-chart</strong> is a bar chart where the height of the bars is presented
-in descending order.</p></li>
-<li><p><span class="math inline">\(\hat p\)</span> is a point estimator
-for true proportion <span class="math inline">\(p\)</span>. <span
-class="math inline">\(\displaystyle{\hat p =
-\frac{x}{n}}\)</span></p></li>
-<li><p>The sampling distribution of <span class="math inline">\(\hat
-p\)</span> has a mean of <span class="math inline">\(p\)</span> and a
-standard deviation of <span
-class="math inline">\(\displaystyle{\sqrt{\frac{p\cdot(1-p)}{n}}}\)</span></p></li>
+<li><strong>Pie charts</strong> are used when you want to represent the
+observations as part of a whole, where each slice (sector) of the pie
+chart represents a proportion or percentage of the whole.</li>
+<li><strong>Bar charts</strong> are used when representing counts of how
+many times each category has been observed in the data.</li>
+</ul></li>
+<li><p>The sampling distribution of the sample proportion can be
+considered to be normally distributed when both <span
+class="math inline">\(np \ge 10\)</span> and <span
+class="math inline">\(n(1-p) \ge 10\)</span>. The value of <span
+class="math inline">\(np\)</span> gives the expected number of successes
+for our sample, while the value of <span
+class="math inline">\(n(1-p)\)</span> gives the expected number of
+failures for our sample.</p></li>
+<li><p>The mean of the sampling distribution of the sample proportion is
+<span class="math inline">\(\mu_{\widehat{p}} = p\)</span>. In other
+words, sample proportions are centered around the true
+proportion.</p></li>
+<li><p>The standard deviation of the sampling distribution of the sample
+proportion is given by <span class="math inline">\(\sigma_{\widehat{p}}
+= \displaystyle{\sqrt{\frac{p\cdot(1-p)}{n}}}\)</span>. This quantifies
+how far sample proportions spread away from the true
+proportion.</p></li>
 <li><p>If <span class="math inline">\(np \ge 10\)</span> and <span
-class="math inline">\(n(1-p) \ge 10\)</span>, you can conduct
-<strong>probability calculations</strong> using the Normal Probability
-Applet. <span class="math display">\[
+class="math inline">\(n(1-p) \ge 10\)</span>, <strong>probability
+calculations</strong> using the Normal Probability Applet can be
+computed using the equation <span class="math display">\[
 \displaystyle {z = \frac{\textrm{value} -
 \textrm{mean}}{\textrm{standard deviation}}
-= \frac{\hat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}}
-\]</span> <br></p></li>
-</ul>
+= \frac{\widehat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}}
+\]</span></p></li>
+<li><p>To convert a z-score into a probability, we enter the z-score
+into the Normal Probability Applet and shade in the typical
+way.</p></li>
+</ol>
+<div style="padding-left:2%;padding-right:2%;">
+<p><img src="Images/normalShadingSituations2.png"></p>
 </div>
 <p><br></p>
-<div class="RecapHeading">
-Lesson 17 Recap
+</div>
+<p><br></p>
+</div>
+</div>
+<div id="lesson-17" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills">Lesson 17</h2>
+<div id="outcomes-1" class="section level3">
+<h3>Outcomes</h3>
+<p>By the end of this lesson you should be able to do the following.</p>
+<ol style="list-style-type: decimal">
+<li>Recognize when a one proportion inferential procedure is
+appropriate</li>
+<li>Create numerical and graphical summaries of the data</li>
+<li>Perform a hypothesis test for one proportion using the following
+steps:
+<ol style="list-style-type: lower-alpha">
+<li>State the null and alternative hypotheses</li>
+<li>Calculate the test-statistic and P-value of the test using
+software</li>
+<li>Assess statistical significance in order to state the appropriate
+conclusion for the hypothesis test</li>
+<li>Check the requirements for the hypothesis test</li>
+</ol></li>
+<li>Create a confidence interval for one proportion using the following
+steps:
+<ol style="list-style-type: lower-alpha">
+<li>Calculate a confidence interval using software</li>
+<li>Interpret the confidence interval</li>
+<li>Check the requirements of the confidence interval</li>
+</ol></li>
+<li>Calculate the sample size required to achieve a specified margin of
+error and level of confidence</li>
+</ol>
+</div>
+<div id="summary-1" class="section level3">
+<h3>Summary</h3>
+<div class="SummaryHeading">
+Remember…
 </div>
 <div class="Summary">
 <ul>
 <li><p>The <strong>estimator</strong> of <span
-class="math inline">\(p\)</span> is <span class="math inline">\(\hat
-p\)</span>. <span class="math inline">\(\displaystyle{ \hat p = \frac
-{x}{n}}\)</span> and is used for both confidence intervals and
+class="math inline">\(p\)</span> is <span class="math inline">\(\widehat
+p\)</span>. <span class="math inline">\(\displaystyle{ \widehat p =
+\frac {x}{n}}\)</span> and is used for both confidence intervals and
 hypothesis testing.</p></li>
 <li><p>You will use the Excel spreadsheet <a
 href="./Data/Math221StatisticsToolbox.xlsx">Math 221 Statistics
-Toolbox</a>, to perform hypothesis testing and calculate confidence
+Toolbox</a> to perform hypothesis testing and calculate confidence
 intervals for problems involving one proportion.</p></li>
 <li><p>The requirements for a confidence interval are <span
-class="math inline">\(n \hat p \ge 10\)</span> and <span
-class="math inline">\(n(1-\hat p) \ge 10\)</span>. The requirements for
-hypothesis tests involving one proportion are <span
+class="math inline">\(n \widehat p \ge 10\)</span> and <span
+class="math inline">\(n(1-\widehat p) \ge 10\)</span>. The requirements
+for hypothesis tests involving one proportion are <span
 class="math inline">\(np\ge10\)</span> and <span
 class="math inline">\(n(1-p)\ge10\)</span>.</p></li>
 <li><p>We can determine the sample size we need to obtain a desired
@@ -544,8 +546,41 @@ formula <span class="math inline">\(\displaystyle{
 </ul>
 </div>
 <p><br></p>
-<div class="RecapHeading">
-Lesson 18 Recap
+</div>
+</div>
+<div id="lesson-18" class="section level2 tabset tabset-pills">
+<h2 class="tabset tabset-pills">Lesson 18</h2>
+<div id="outcomes-2" class="section level3">
+<h3>Outcomes</h3>
+<p>By the end of this lesson, you should be able to do the
+following.</p>
+<ol style="list-style-type: decimal">
+<li>Recognize when a difference of two proportions inferential procedure
+is appropriate</li>
+<li>Create numerical and graphical summaries of the data</li>
+<li>Perform a hypothesis test for the difference of two proportions
+using the following steps:
+<ol style="list-style-type: lower-alpha">
+<li>State the null and alternative hypotheses</li>
+<li>Calculate the test-statistic and P-value of the test using
+software</li>
+<li>Assess statistical significance in order to state the appropriate
+conclusion for the hypothesis test</li>
+<li>Check the requirements for the hypothesis test</li>
+</ol></li>
+<li>Create a confidence interval for the difference of two proportions
+using the following steps:
+<ol style="list-style-type: lower-alpha">
+<li>Calculate a confidence interval using software</li>
+<li>Interpret the confidence interval</li>
+<li>Check the requirements of the confidence interval</li>
+</ol></li>
+</ol>
+</div>
+<div id="summary-2" class="section level3">
+<h3>Summary</h3>
+<div class="SummaryHeading">
+Remember…
 </div>
 <div class="Summary">
 <ul>
@@ -585,38 +620,7 @@ intervals for problems involving two proportions. <br></p></li>
 </ul>
 </div>
 <p><br></p>
-<div class="RecapHeading">
-Lesson 19 Recap
 </div>
-<div class="Summary">
-<ul>
-<li><p>The <strong><span class="math inline">\(\chi^2\)</span>
-hypothesis test</strong> is a test of independence between two
-variables. These variables are either associated or they are not.
-Therefore, the null and alternative hypotheses are the same for every
-test: <span class="math display">\[
-\begin{array}{1cl}
-H_0: &amp; \text{The (first variable) and the (second variable) are
-independent.} \\
-H_a: &amp; \text{The (first variable) and the (second variable) are not
-independent.}
-\end{array}
-\]</span></p></li>
-<li><p>The <strong>degrees of freedom (<span
-class="math inline">\(df\)</span>)</strong> for a <span
-class="math inline">\(\chi^2\)</span> test of independence are
-calculated using the formula <span
-class="math inline">\(df=(\text{number of rows}-1)(\text{number of
-columns}-1)\)</span></p></li>
-<li><p>In our hypothesis testing for <span
-class="math inline">\(\chi^2\)</span> we never conclude that two
-variables are <em>dependent</em>. Instead, we say that two variables are
-<em>not independent</em>. <br></p></li>
-</ul>
-</div>
-<p><br></p>
-</div>
-<p><br></p>
 </div>
 <div id="navigation" class="section level2">
 <h2>Navigation</h2>

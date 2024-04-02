@@ -3,105 +3,128 @@ title: "Lesson 20: Review for Exam 3"
 output: 
   html_document:
     theme: cerulean
-    toc: true
-    toc_float: false
+    toc: false
 ---
-
-<script type="text/javascript">
- function showhide(id) {
-    var e = document.getElementById(id);
-    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
- }
-</script>
-
 
 This is not designed to be a comprehensive review.  There may be items on the exam that are not covered in this review.  Similarly, there may be items in this review that are not tested on this exam.  You are strongly encouraged to review the readings, homework exercises, and other activities from Units 1-3 as you prepare for the exam. In particular, you should go over the [Review for Exam 1](Lesson08.html){target="_blank"} and the [Review for Exam 2](Lesson15.html){target="_blank"}. 
 
-<!-- Use the <span style="font-variant:small-caps"> -->
-<!-- [[Index]]</span> to review definitions of important terms. 
-Index needs to be built-->
 
-## Unit 3 Lesson Outcomes
+## Lesson 16 {.tabset .tabset-pills}
 
-<a href="javascript:showhide('oc')"><span style="font-size:8pt;">Show/Hide Outcomes</span></a>
-<div id="oc" style="display:none;">
-The expectation on the exam is the following outcomes. You should be able to do all of the following.
+### Outcomes
 
-- All of the Outcomes from [Lesson 08 (Unit 1)](Lesson08.html) and [Lesson 15 (Unit 2)](Lesson15.html)
-- Calculate and interpret a sample proportion.
-- Summarize categorical data with a bar or pie chart. 
-- Determine the mean, standard deviation and shape of a distribution of sample proportions.
-- Calculate probabilities using a distribution of sample proportions.
-- Confidence Intervals: 
-    + Determining correct confidence interval for a given scenario. 
-    + Calculate and interpret a confidence interval given a confidence level and a given parameter.
-    + Identify a point estimate and margin of error for a given confidence interval.
-    + Show the appropriate connections between the numerical and graphical summaries that support a confidence interval. 
-    + Check the requirements for a confidence interval.
-    + Calculate a confidence interval for a comparison of two proportions. 
-- Conduct a Hypothesis Test for
-    + A single mean with σ known.
-    + A single mean with σ unknown.
-    + Difference of two means with dependent samples.
-    + The mean of differences with dependent samples.
-    + Several means (ANOVA).
-    + A single proportion.
-    + A comparison of two proportions.
-    + Test of Independence for categorical data.
-    + A goodness of fitness test.
-- Hypothesis Testing
-    + Determining correct hypothesis test for a given scenario
-    + State the null and alternative hypothesis for the chosen test. 
-    + Calculate the test-statistic and p-value of the hypothesis test.
-    + Assess the statistical significance by comparing the p-value to the α-level.
-    + Check the requirements for the hypothesis test.
-    + Show the appropriate connections between the numerical and graphical summaries that support a hypothesis test. 
-    + Draw a correct conclusion for a hypothesis test.
-</div>
-<br>
+By the end of this lesson, you should be able to:
 
-## Unit 3 Lesson Summaries
+1. Calculate a sample proportion
+2. Interpret a sample proportion
+3. Summarize categorical data with graphical summaries
+4. Identify when a sample proportion will follow a normal distribution
+5. Determine the mean of the sampling distribution of the sample proportion for a given parent population
+6. Determine the standard deviation of the sampling distribution of the sample proportion for a given parent population
+7. Calculate the z-score for a sample proportion, given the population proportion and sample size
+8. Calculate probabilities of a sample proportion using the normal distribution.
 
-Here are the summaries for each lesson in Unit 3. Reviewing these key points from each lesson will help you in your preparation for the exam.
+### Summary
 
-<a href="javascript:showhide('ls')"><span style="font-size:8pt;">Show/Hide Summaries</span></a>
-<div id="ls" >
-
-<div class="RecapHeading">Lesson 16 Recap</div>
+<div class="SummaryHeading">Remember...</div>
 <div class="Summary">
 
-- **Pie charts** are used when you want to represent the observations as part of a whole, where each slice (sector) of the pie chart represents a proportion or percentage of the whole.
+1. The sample proportion $\hat{p}$ is computed by dividing the number of successes ($x$) found in a sample by the sample size ($n$),
+$$
+\text{Sample Proportion} \quad \widehat{p} = \frac{x}{n}
+$$
 
-- **Bar charts** present the same information as pie charts and are used when our data represent counts. A **Pareto chart** is a bar chart where the height of the bars is presented in descending order.
+2. The sample proportion $\widehat{p}$ is interpreted as the probability of a success occurring in the sample. It is a point estimate of the true proportion, $p$.
 
-- $\hat p$ is a point estimator for true proportion $p$. $\displaystyle{\hat p = \frac{x}{n}}$
+3. Two graphical summaries are typically used to show sample proportions.
+    - **Pie charts** are used when you want to represent the observations as part of a whole, where each slice (sector) of the pie chart represents a proportion or percentage of the whole.
+    - **Bar charts** are used when representing counts of how many times each category has been observed in the data. 
 
-- The sampling distribution of $\hat p$ has a mean of $p$ and a standard deviation of $\displaystyle{\sqrt{\frac{p\cdot(1-p)}{n}}}$
+4. The sampling distribution of the sample proportion can be considered to be normally distributed when both $np \ge 10$ and $n(1-p) \ge 10$. The value of $np$ gives the expected number of successes for our sample, while the value of $n(1-p)$ gives the expected number of failures for our sample.
 
-- If $np \ge 10$ and $n(1-p) \ge 10$, you can conduct **probability calculations** using the Normal Probability Applet.
+5. The mean of the sampling distribution of the sample proportion is $\mu_{\widehat{p}} = p$. In other words, sample proportions are centered around the true proportion.
+
+6. The standard deviation of the sampling distribution of the sample proportion is given by $\sigma_{\widehat{p}} = \displaystyle{\sqrt{\frac{p\cdot(1-p)}{n}}}$. This quantifies how far sample proportions spread away from the true proportion.
+
+7. If $np \ge 10$ and $n(1-p) \ge 10$, **probability calculations** using the Normal Probability Applet can be computed using the equation
 $$
 \displaystyle {z = \frac{\textrm{value} - \textrm{mean}}{\textrm{standard deviation}}
-= \frac{\hat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}}
+= \frac{\widehat p - p}{\sqrt{\frac{p \cdot (1-p)}{n}}}}
 $$
+
+8. To convert a z-score into a probability, we enter the z-score into the Normal Probability Applet and shade in the typical way.
+
+<div style="padding-left:2%;padding-right:2%;">
+<img src="./Images/normalShadingSituations2.png">
+</div>
+
 <br>
 </div>
 <br>
 
-<div class="RecapHeading">Lesson 17 Recap</div>
+## Lesson 17 {.tabset .tabset-pills}
+
+### Outcomes
+
+By the end of this lesson you should be able to do the following.
+
+1. Recognize when a one proportion inferential procedure is appropriate
+2. Create numerical and graphical summaries of the data
+3. Perform a hypothesis test for one proportion using the following steps:
+    a. State the null and alternative hypotheses
+    b. Calculate the test-statistic and P-value of the test using software
+    c. Assess statistical significance in order to state the appropriate conclusion for the hypothesis test
+    d. Check the requirements for the hypothesis test
+4. Create a confidence interval for one proportion using the following steps:
+    a. Calculate a confidence interval using software
+    b. Interpret the confidence interval 
+    c. Check the requirements of the confidence interval
+5. Calculate the sample size required to achieve a specified margin of error and level of confidence
+
+### Summary
+
+<div class="SummaryHeading">Remember...</div>
 <div class="Summary">
 
-- The **estimator** of $p$ is $\hat p$. $\displaystyle{ \hat p = \frac {x}{n}}$ and is used for both confidence intervals and hypothesis testing.
+1. Use the [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx) to perform hypothesis testing and calculate confidence intervals for problems involving one proportion. One proportion situations arise whenever there is a single sample of categorical data consisting of just *successes* and *failures*. This is like heads and tails on a coin, or yes/no type questions, or various other situations where there are only two possible categories.
 
-- You will use the Excel spreadsheet [Math 221 Statistics Toolbox](./Data/Math221StatisticsToolbox.xlsx), to perform hypothesis testing and calculate confidence intervals for problems involving one proportion.
+2. Numerical Summaries for a one proportion analysis include the sample size $n$, number of successes $x$, and sample proportion $\widehat{p}$. Graphical Summaries consist of either a bar chart or pie chart, with either one being acceptable.
 
-- The requirements for a confidence interval are $n \hat p \ge 10$ and $n(1-\hat p) \ge 10$. The requirements for hypothesis tests involving one proportion are $np\ge10$ and $n(1-p)\ge10$.
+3. To perform a hypothesis test for one proportion use the following steps:
+    a. State the null hypothesis in the form of $H_0: p = 0.#$ where $0.#$ is some value between 0 and 1, and the alternative hypothesis is of the form $H_a: p \ne 0.#$, $H_a: p > 0.#$ or $H_a: p < 0.#$.
+    b. 
+
+- The **estimator** of $p$ is $\widehat p$. $\displaystyle{ \widehat p = \frac {x}{n}}$ and is used for both confidence intervals and hypothesis testing.
+
+
+- The requirements for a confidence interval are $n \widehat p \ge 10$ and $n(1-\widehat p) \ge 10$. The requirements for hypothesis tests involving one proportion are $np\ge10$ and $n(1-p)\ge10$.
 
 - We can determine the sample size we need to obtain a desired margin of error using the formula $\displaystyle{ n=\left(\frac{z^*}{m}\right)^2 p^*(1-p^*)}$ where $p^*$ is a **prior estimate** of $p$. If no prior estimate is available, the formula $\displaystyle{ \left(\frac{z^*}{2m}\right)^2}$ is used.
 <br>
 </div>
 <br>
 
-<div class="RecapHeading">Lesson 18 Recap</div>
+## Lesson 18 {.tabset .tabset-pills}
+
+### Outcomes
+
+By the end of this lesson, you should be able to do the following.
+
+1. Recognize when a difference of two proportions inferential procedure is appropriate
+2. Create numerical and graphical summaries of the data
+3. Perform a hypothesis test for the difference of two proportions using the following steps:
+    a. State the null and alternative hypotheses
+    b. Calculate the test-statistic and P-value of the test using software
+    c. Assess statistical significance in order to state the appropriate conclusion for the hypothesis test
+    d. Check the requirements for the hypothesis test
+4. Create a confidence interval for the difference of two proportions using the following steps:
+    a. Calculate a confidence interval using software
+    b. Interpret the confidence interval
+    c. Check the requirements of the confidence interval
+
+### Summary
+
+<div class="SummaryHeading">Remember...</div>
 <div class="Summary">
 
 - When conducting hypothesis tests using two proportions, the null hypothesis is always $p_1=p_2$, indicating that there is no difference between the two proportions. The alternative hypothesis can be left-tailed ($<$), right-tailed($>$), or two-tailed($\ne$).
@@ -129,25 +152,8 @@ $$
 </div>
 <br>
 
-<div class="RecapHeading">Lesson 19 Recap</div>
-<div class="Summary">
 
-- The **$\chi^2$ hypothesis test** is a test of independence between two variables. These variables are either associated or they are not. Therefore, the null and alternative hypotheses are the same for every test:
-$$
-\begin{array}{1cl}
-H_0: & \text{The (first variable) and the (second variable) are independent.} \\
-H_a: & \text{The (first variable) and the (second variable) are not independent.}
-\end{array}
-$$
 
-- The **degrees of freedom ($df$)** for a $\chi^2$ test of independence are calculated using the formula $df=(\text{number of rows}-1)(\text{number of columns}-1)$
-
-- In our hypothesis testing for $\chi^2$ we never conclude that two variables are *dependent*. Instead, we say that two variables are *not independent*.
-<br>
-</div>
-<br>
-</div>
-<br>
 
 
 ## Navigation
