@@ -250,7 +250,7 @@ Most research projects can be classified into one of two basic categories: obser
 
 ### Designed Experiments
 
-In a **designed experiment**, researchers manipulate the conditions that the participants experience. They often do this by randomly assigning subjects to one of two groups, a "treatment" group and a "control" group. The experiment is conducted by applying some kind of treatment to the subjects in the treatment group and observing the effect of the treatment. Those in the control group do not receive the treatment and are also observed. In this way researchers can determine the effects of the treatment. The following example illustrates the use of these two groups.
+In a **designed experiment**, researchers manipulate the conditions that the participants experience. They often do this by randomly assigning subjects to one of two groups, a "treatment" group (sometimes called the *experimental group*) and a "control" group (though this could be second treatment group instead of a control group). The experiment is typically conducted by applying some kind of treatment to the subjects in the treatment group and observing the effect of the treatment. Those in the control group do not receive the treatment and are also observed. In this way researchers can determine the effects of the treatment by comparing the treatment group results to the control group results. The following example illustrates the use of these two groups.
 
 **Jonas Salk's First Polio Vaccine Trial**
 
