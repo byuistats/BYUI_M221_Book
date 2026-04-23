@@ -14,8 +14,6 @@ navbar:
               href: Lesson01_Campus.html
             - text: "Online Student Version"
               href: Lesson01.html
-            - text: "World Wide Block Student Version"
-              href: Lesson01_WWB.html
         - text: "Lesson 2: The Statistical Process"
           href: Lesson02.html
         - text: "Lesson 3: Describing Quantitative Data (Shape & Center)"
