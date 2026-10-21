@@ -1349,6 +1349,7 @@ $(-0.287, 1.787)$
 </div>
 &nbsp;
 </div>
+</div>
 <br>
 
 ## Summary
