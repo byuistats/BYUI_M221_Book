@@ -143,6 +143,9 @@ This page contains the data files that are used throughout the course: in the te
 [GroundhogDay.xlsx](./Data/GroundhogDay.xlsx)
 
 
+[HollywoodMovies-2019-2023.xlsx](./Data/HollywoodMovies-2019-2023.xlsx)
+
+
 [HubblesConstant-HubblesData.xlsx](./Data/HubblesConstant-HubblesData.xlsx)                            
 
 [HubblesConstant-Supernovas.xlsx](./Data/HubblesConstant-Supernovas.xlsx)                              
@@ -159,7 +162,11 @@ This page contains the data files that are used throughout the course: in the te
 
 [JSE-hats_(Modified).xlsx](./Data/JSE-hats_(Modified).xlsx)                                            
 
-[JunkFood.xlsx](./Data/JunkFood.xlsx)                                                                  
+[JunkFood.xlsx](./Data/JunkFood.xlsx)                                  
+
+
+[L1-PatientData.xlsx](./Data/L1-PatientData.xlsx)
+
 
 [LASaturnWinter06.xlsx](./Data/LASaturnWinter06.xlsx)                                                  
 
